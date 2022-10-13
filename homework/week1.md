@@ -12,6 +12,8 @@
 
 > **例 1.1.12** (可测函数等价类空间) 对于有限区间 $\left[a,b\right]$，记 $\mathfrak G=\left\{\left[a,b\right]\text{ 上几乎处处有限的勒贝格可测函数}\right\}$. $\mathfrak G$ 中两个函数 $f,g$ 是**等价**的，是指它们满足 $f\underset{m}{\doteq}g$. 仍以 $f$ 来表示勒贝格可测函数 $f$ 在 $\mathcal S=\mathfrak G/\sim$ 中对应的等价类. 对于 $f,g\in\mathcal S$，定义 $$d\left(f,g\right)=\int_{\left[a,b\right]}\frac{\left|f\left(t\right)-g\left(t\right)\right|}{1+\left|f\left(t\right)-g\left(t\right)\right|}\mathrm dm\left(t\right),$$ 容易验证这是一个度量，进而 $\left(\mathcal S,d\right)$ 是完备的度量空间.
 
+> **预备 (关键引理)** 记 $\varphi\left(t\right)=\frac{t}{1+t}$, $\psi\left(t\right)=\ln\left(1+t\right)$, $t\ge0$. 则 $\varphi,\psi$ 在 $\left[0,\infty\right)$ 上都是**凹函数**且 $\varphi\left(0\right)=\psi\left(0\right)=0$. 求其二阶导易证.
+
 ## 1.1-2
 
 设 $\left(X,d\right)$ 是度量空间, 在 $X$ 上定义
@@ -30,35 +32,53 @@ $$
 
 ### 解答 1.1-2
 
-本题即**例 1.1.11** 所断言的结论, 下面给出证明.
+**第一步: 验证 $d'$ 是 $X$ 上的度量.**
 
-**$d'$ 是 $X$ 上的度量**. 依据**定义 1.1.1 (度量空间)**, (i) (ii) 显然. (iii) 由三角不等式及函数 $t\mapsto\frac{t}{1+t}$ 在 $\left[0,\infty\right)$ 上单调递增得
+依据**定义 1.1.1 (度量空间)**, 需逐条验证 $d'$ 满足 (i)(ii)(iii).
+
+**(i) 非负性与正定性.** 由 $d$ 是度量, 对任意 $x,y\in X$ 有 $d\left(x,y\right)\ge0$, 且 $d\left(x,y\right)=0\Leftrightarrow x=y$ (**定义 1.1.1 (i)**). 又因为 $\varphi\left(t\right)\ge0$ 对所有 $t\ge0$ 成立, 且 $\varphi$ 在 $\left[0,\infty\right)$ 严格递增且 $\varphi\left(0\right)=0$, 则 $\varphi\left(t\right)=0\Leftrightarrow t=0$. 于是 $d'\left(x,y\right)=\varphi\left(d\left(x,y\right)\right)\ge0$, 且 $d'\left(x,y\right)=0\Leftrightarrow\varphi\left(d\left(x,y\right)\right)=0\Leftrightarrow d\left(x,y\right)=0\Leftrightarrow x=y$. 故 (i) 成立.
+
+**(ii) 对称性.** 由 $d$ 的对称性 (**定义 1.1.1 (ii)**), $d\left(x,y\right)=d\left(y,x\right)$.于是 $d'\left(x,y\right)=\varphi\left(d\left(x,y\right)\right)=\varphi\left(d\left(y,x\right)\right)=d'\left(y,x\right)$. 故 (ii) 成立.
+
+**(iii) 三角不等式.** 由 $d$ 满足三角不等式 (**定义 1.1.1 (iii)**), $d\left(x,y\right)\le d\left(x,z\right)+d\left(z,y\right)$. 因 $\varphi$ 在 $\left[0,\infty\right)$ 单调递增, 上式两边作用 $\varphi$ 得 $d'\left(x,y\right)=\varphi\left(d\left(x,y\right)\right)\le\varphi\left(d\left(x,z\right)+d\left(z,y\right)\right)$. 由预备引理, $\varphi\left(d\left(x,z\right)+d\left(z,y\right)\right)\le\varphi\left(d\left(x,z\right)\right)+\varphi\left(d\left(z,y\right)\right)=d'\left(x,z\right)+d'\left(z,y\right)$. 故 $d'\left(x,y\right)\le d'\left(x,z\right)+d'\left(z,y\right)$, (iii) 成立.
+
+由 (i)(ii)(iii) 全部成立, 依据**定义 1.1.1 (度量空间)**, $d'$ 是 $X$ 上的度量. $\blacksquare$
+
+**第二步: 验证 $d''$ 是 $X$ 上的度量.**
+
+依据**定义 1.1.1 (度量空间)**, 同样逐条验证.
+
+**(i) 非负性与正定性.** 因 $d\left(x,y\right)\ge0$, $\ln$ 严格递增且 $\psi\left(0\right)=0$, $\psi\left(t\right)=\ln\left(1+t\right)\ge0$, $\psi\left(t\right)=0\Leftrightarrow t=0$, 于是 $d''\left(x,y\right)=\psi\left(d\left(x,y\right)\right)\ge0$, 且 $d''\left(x,y\right)=0\Leftrightarrow d\left(x,y\right)=0\Leftrightarrow x=y$. 故 (i) 成立.
+
+**(ii) 对称性.**
+
+$d''\left(x,y\right)=\psi\left(d\left(x,y\right)\right)=\psi\left(d\left(y,x\right)\right)=d''\left(y,x\right)$. 故 (ii) 成立.
+
+**(iii) 三角不等式.** 由 $d\left(x,y\right)\le d\left(x,z\right)+d\left(z,y\right)$ 及 $\psi$ 单调递增, $d''\left(x,y\right)=\psi\left(d\left(x,y\right)\right)\le\psi\left(d\left(x,z\right)+d\left(z,y\right)\right)$. 由 $\psi$ 的次可加性, $\psi\left(d\left(x,z\right)+d\left(z,y\right)\right)\le\psi\left(d\left(x,z\right)\right)+\psi\left(d\left(z,y\right)\right)=d''\left(x,z\right)+d''\left(z,y\right)$. 故 (iii) 成立.
+
+故 $d''$ 也是 $X$ 上的度量. $\blacksquare$
+
+**第三步: 三种度量下收敛性一致.**
+
+依据**定义 1.1.2 (极限)**, 设 $\epsilon_n=d\left(x_n,x_0\right)$, 则
 
 $$
-\frac{d\left(x,y\right)}{1+d\left(x,y\right)}\le\frac{d\left(x,z\right)+d\left(z,y\right)}{1+d\left(x,z\right)+d\left(z,y\right)}\le\frac{d\left(x,z\right)}{1+d\left(x,z\right)}+\frac{d\left(z,y\right)}{1+d\left(z,y\right)}.
+x_n\overset d\to x_0\Leftrightarrow\epsilon_n\to0.
 $$
 
-故 $d'$ 是度量.
+只需证 $\epsilon_n\to0\Leftrightarrow d'\left(x_n,x_0\right)\to0\Leftrightarrow d''\left(x_n,x_0\right)\to0$.
 
-**$d''$ 是 $X$ 上的度量**. 依据**定义 1.1.1 (度量空间)**, (i) (ii) 显然. (iii) 由三角不等式及 $\ln$ 的单调性得
+**(a) $d'$ 与 $d$.** 由定义 $d'\left(x_n,x_0\right)=\varphi\left(\epsilon_n\right)=\frac{\epsilon_n}{1+\epsilon_n}$. 若 $\epsilon_n\to0$, 则 $\epsilon_n\ge0$ 且 $0\le\frac{\epsilon_n}{1+\epsilon_n}\le\epsilon_n$, 由夹逼定理 $\frac{\epsilon_n}{1+\epsilon_n}\to0$, 即 $d'\left(x_n,x_0\right)\to0$. 反之若 $d'\left(x_n,x_0\right)=\frac{\epsilon_n}{1+\epsilon_n}\to0$, 注意到 $\epsilon_n=\frac{\epsilon_n/\left(1+\epsilon_n\right)}{1-\epsilon_n/\left(1+\epsilon_n\right)}$, 而 $\frac{\epsilon_n}{1+\epsilon_n}\to0\implies1-\frac{\epsilon_n}{1+\epsilon_n}\to1\ne0$, 故 $\epsilon_n\to0$. 于是 $x_n\overset d\to x_0\Leftrightarrow x_n\overset{d'}\to x_0$.
 
-$$
-\ln\left(1+d\left(x,y\right)\right)\le\ln\left(1+d\left(x,z\right)+d\left(z,y\right)\right)\le\ln\left(1+d\left(x,z\right)\right)+\ln\left(1+d\left(z,y\right)\right).
-$$
+**(b) $d''$ 与 $d$.** 由定义 $d''\left(x_n,x_0\right)=\psi\left(\epsilon_n\right)=\ln\left(1+\epsilon_n\right)$. 因 $\ln$ 在 $\left(0,\infty\right)$ 严格递增且连续, $\ln\left(1+\epsilon_n\right)\to0\Leftrightarrow\epsilon_n\to0$ (用 $\epsilon_n=\mathrm e^{\ln\left(1+\epsilon_n\right)}-1$, 及 $\epsilon_n\ge0$). 故 $x_n\overset d\to x_0\Leftrightarrow x_n\overset{d''}\to x_0$.
 
-故 $d''$ 是度量.
-
-**收敛性一致.** 依据**定义 1.1.2 (极限)**, $x_n\overset d\to x_0\iff\epsilon_n\to0$, 故只需证 $\epsilon_n\to0\iff d'\left(x_n,x_0\right)\to0\iff d''\left(x_n,x_0\right)\to0$. 即证: 对于空间 $X$ 中的点列 $\left\{x_n\right\}$,
+综上, 由 (a)(b) 得
 
 $$
-\lim_{n\to\infty}x_n\stackrel{d}{=}x_0\Leftrightarrow\lim_{n\to\infty} x_n\stackrel{d'}{=}x_0\Leftrightarrow\lim_{n\to\infty}x_n\stackrel{d''}{=}x_0.
+\lim_{n\to\infty}x_n\overset d=x_0\Leftrightarrow\lim_{n\to\infty}x_n\overset{d'}=x_0\Leftrightarrow\lim_{n\to\infty}x_n\overset{d''}=x_0.
 $$
 
-**$\Rightarrow$ 方向**: 若 $x_n\overset d\to x_0$, 即 $\epsilon_n\to0$, 则 $d'\left(x_n,x_0\right)=\frac{\epsilon_n}{1+\epsilon_n}\to0$, $d''\left(x_n,x_0\right)=\ln\left(1+\epsilon_n\right)\to0$, 故 $x_n\overset{d'}\to x_0$, $x_n\overset{d''}\to x_0$.
-
-**$\Leftarrow$ 方向**: 若 $d'\left(x_n,x_0\right)\to0$, 即 $\frac{\epsilon_n}{1+\epsilon_n}\to0$. 若 $\epsilon_n\not\to0$, 则存在子列 $\epsilon_{n_k}\ge\delta>0$, 于是 $\frac{\epsilon_{n_k}}{1+\epsilon_{n_k}}\ge\frac{\delta}{1+\delta}>0$, 矛盾, 故 $\epsilon_n\to0$. 若 $d''\left(x_n,x_0\right)=\ln\left(1+\epsilon_n\right)\to0$, 同样得 $\epsilon_n\to0$.
-
-综上, 三种度量下的收敛性是等价的.
+即 $\left(X,d'\right)$, $\left(X,d''\right)$ 中点列的收敛性和在 $\left(X,d\right)$ 中是一致的. $\blacksquare$
 
 ## 1.1-4
 
@@ -80,53 +100,73 @@ $$
 
 ### 解答 1.1-4
 
-(1) **$d_1$ 是度量**. 依据**定义 1.1.1 (度量空间)**, (i) (ii) 显然. (iii) 对任意 $R\in X$ 与 $x\in\left[0,1\right]$,
+**(1) $d_1$ 是 $X$ 上的度量.**
+
+依据**定义 1.1.1 (度量空间)**, 逐条验证.
+
+**(i) 非负性与正定性.** 对任意 $x\in\left[0,1\right]$, $\left|P\left(x\right)-Q\left(x\right)\right|\ge0$, 故 $d_1\left(P,Q\right)\ge0$. 且 $d_1\left(P,Q\right)=0\Leftrightarrow\max_{x\in\left[0,1\right]}\left|P\left(x\right)-Q\left(x\right)\right|=0\Leftrightarrow\left|P\left(x\right)-Q\left(x\right)\right|=0\ \left(\forall x\in\left[0,1\right]\right)\Leftrightarrow P\left(x\right)-Q\left(x\right)\equiv0\Leftrightarrow P=Q$. 故 (i) 成立.
+
+**(ii) 对称性.** $\left|P\left(x\right)-Q\left(x\right)\right|=\left|Q\left(x\right)-P\left(x\right)\right|$ 对任意 $x$ 成立, 故 $d_1\left(P,Q\right)=\max\left|P-Q\right|=\max\left|Q-P\right|=d_1\left(Q,P\right)$. 故 (ii) 成立.
+
+**(iii) 三角不等式.** 由实数绝对值的三角不等式, 对任意 $R\in X$ 与 $x\in\left[0,1\right]$,
 
 $$
 \left|P\left(x\right)-Q\left(x\right)\right|\le\left|P\left(x\right)-R\left(x\right)\right|+\left|R\left(x\right)-Q\left(x\right)\right|\le d_1\left(P,R\right)+d_1\left(R,Q\right).
 $$
 
-对 $x$ 取最大值即得 $d_1\left(P,Q\right)\le d_1\left(P,R\right)+d_1\left(R,Q\right)$.
+对 $x$ 取最大值 (第一个不等式对一切 $x$ 成立, 右端与 $x$ 无关), 得 $d_1\left(P,Q\right)\le d_1\left(P,R\right)+d_1\left(R,Q\right)$. 故 (iii) 成立.
 
-**$d_2$ 是度量**. 依据**定义 1.1.1 (度量空间)**, (i) (ii) 显然. (iii) 设 $P-R=\sum_{i=0}^{n}a_ix^i$, $R-Q=\sum_{i=0}^{n}b_ix^i$, 则 $P-Q=\sum_{i=0}^{n}\left(a_i+b_i\right)x^i$, 于是
+由 (i)(ii)(iii), $d_1$ 是 $X$ 上的度量. $\blacksquare$
+
+**(1) $d_2$ 是 $X$ 上的度量.**
+
+依据**定义 1.1.1 (度量空间)**, 逐条验证.
+
+**(i) 非负性与正定性.** $\left|a_i\right|\ge0$ 对每个 $i$, 故 $d_2\left(P,Q\right)=\sum_{i=0}^{n}\left|a_i\right|\ge0$. 且 $d_2\left(P,Q\right)=0\Leftrightarrow\sum_{i=0}^{n}\left|a_i\right|=0\Leftrightarrow a_i=0\ \left(\forall i\right)\Leftrightarrow P-Q\equiv0\Leftrightarrow P=Q$. 故 (i) 成立.
+
+**(ii) 对称性.** 若 $P-Q=\sum a_ix^i$, 则 $Q-P=\sum\left(-a_i\right)x^i$, 且 $\left|-a_i\right|=\left|a_i\right|$, 故 $d_2\left(P,Q\right)=\sum\left|a_i\right|=\sum\left|-a_i\right|=d_2\left(Q,P\right)$. 故 (ii) 成立.
+
+**(iii) 三角不等式.** 设 $P-R=\sum_{i=0}^{n}a_ix^i$, $R-Q=\sum_{i=0}^{n}b_ix^i$, 则 $P-Q=\left(P-R\right)+\left(R-Q\right)=\sum_{i=0}^{n}\left(a_i+b_i\right)x^i$. 由实数绝对值的三角不等式, $\left|a_i+b_i\right|\le\left|a_i\right|+\left|b_i\right|$ 对每个 $i$ 成立, 求和得
 
 $$
 d_2\left(P,Q\right)=\sum_{i=0}^{n}\left|a_i+b_i\right|\le\sum_{i=0}^{n}\left|a_i\right|+\sum_{i=0}^{n}\left|b_i\right|=d_2\left(P,R\right)+d_2\left(R,Q\right).
 $$
 
-故 $d_1,d_2$ 都是 $X$ 上的度量. $\blacksquare$
+故 (iii) 成立.
 
-(2) 由题设 $d_1$ 的定义,
+由 (i)(ii)(iii), $d_2$ 也是 $X$ 上的度量. $\blacksquare$
 
-$$
-d_1\left(P_k,P\right)\to0\Leftrightarrow\max_{x\in\left[0,1\right]}\left|P_k\left(x\right)-P\left(x\right)\right|\to0.
-$$
+**(2) 按 $d_1$ 收敛 $\Leftrightarrow$ 在 $\left[0,1\right]$ 上一致收敛.**
 
-这正是 $\left\{P_k\right\}$ 在 $\left[0,1\right]$ 上一致收敛于多项式 $P$ 的定义, 两者等价. (此即**例 1.1.10** 的结论在多项式子空间上的情形: $C\left[a,b\right]$ 中点列按度量 $d$ 收敛等价于函数列一致收敛.) $\blacksquare$
-
-(3) **$d_1$ 推出 $d_2$**. 设 $d_2\left(P_k,Q\right)\to0$, 记 $P_k-Q=\sum_{i=0}^{n_k}a_i^{\left(k\right)}x^i$, 则 $\sum_{i=0}^{n_k}\left|a_i^{\left(k\right)}\right|\to0$. 对一切 $x\in\left[0,1\right]$ 有 $x^i\le1$, 故
+依据**定义 1.1.2 (极限)** 与 $d_1$ 的定义,
 
 $$
-\left|P_k\left(x\right)-Q\left(x\right)\right|\le\sum_{i=0}^{n_k}\left|a_i^{\left(k\right)}\right|x^i\le\sum_{i=0}^{n_k}\left|a_i^{\left(k\right)}\right|=d_2\left(P_k,Q\right)\to0.
+P_k\overset{d_1}\to P\Leftrightarrow d_1\left(P_k,P\right)=\max_{x\in\left[0,1\right]}\left|P_k\left(x\right)-P\left(x\right)\right|\to0.
 $$
 
-上式对 $x$ 一致成立, 故 $d_1\left(P_k,Q\right)\to0$.
+而 $\max_{x\in\left[0,1\right]}\left|P_k\left(x\right)-P\left(x\right)\right|\to0$ 正是 $\left\{P_k\right\}$ 在 $\left[0,1\right]$ 上一致收敛于 $P$ 的定义 (即**例 1.1.10** 在多项式子空间上的情形). 故 (2) 成立. $\blacksquare$
 
-**反之不真**. 取 $P_k\left(x\right)=x^k\left(1-x\right)^k=\sum_{j=0}^{k}\binom{k}{j}\left(-1\right)^jx^{k+j}$. 则
+**(3) 按 $d_2$ 收敛推出按 $d_1$ 收敛.**
 
-$$
-d_1\left(P_k,0\right)=\max_{x\in\left[0,1\right]}\left[x\left(1-x\right)\right]^k=\left(\frac14\right)^k\to0.
-$$
-
-而
+设 $P_k\overset{d_2}\to Q$, 记 $P_k-Q=\sum_{i=0}^{n_k}a_i^{\left(k\right)}x^i$, 则由定义 $d_2\left(P_k,Q\right)=\sum_{i=0}^{n_k}\left|a_i^{\left(k\right)}\right|\to0$. 对任意 $x\in\left[0,1\right]$, 有 $x^i\le1$ 对每个 $i$ 成立, 故由三角不等式
 
 $$
-d_2\left(P_k,0\right)=\sum_{j=0}^{k}\binom{k}{j}=2^k\to\infty.
+\left|P_k\left(x\right)-Q\left(x\right)\right|=\left|\sum_{i=0}^{n_k}a_i^{\left(k\right)}x^i\right|\le\sum_{i=0}^{n_k}\left|a_i^{\left(k\right)}\right|x^i\le\sum_{i=0}^{n_k}\left|a_i^{\left(k\right)}\right|=d_2\left(P_k,Q\right)\to0.
 $$
 
-故存在 $d_1\left(P_k,0\right)\to0$ 而 $d_2\left(P_k,0\right)\not\to0$ 的多项式列. $\blacksquare$
+上式对一切 $x\in\left[0,1\right]$ 一致成立, 故 $d_1\left(P_k,Q\right)=\max_{x}\left|P_k\left(x\right)-Q\left(x\right)\right|\to0$, 即 $P_k\overset{d_1}\to Q$. $\blacksquare$
 
-> **反之不真** 的构造思路: 要找一个函数, 函数值很小但是系数很大, 因此联想到要找能够包含大量正负抵消的函数——要是函数中出现了 $\left(-1\right)^n$ 就很合适. 而二项式天然适配这种需求, 因此尝试构造 $x^k\left(1-x\right)^k$, 其写作二项式后系数为 $2^k$, 果然无穷大.
+**(3) 反之不真 (存在反例).**
+
+取 $P_k\left(x\right)=x^k\left(1-x\right)^k=\sum_{j=0}^{k}\binom{k}{j}\left(-1\right)^jx^{k+j}$ (用二项式定理展开). 一方面,
+
+$$
+d_1\left(P_k,0\right)=\max_{x\in\left[0,1\right]}\left|P_k\left(x\right)\right|=\max_{x\in\left[0,1\right]}\left[x\left(1-x\right)\right]^k=\left(\max_{x\in\left[0,1\right]}x\left(1-x\right)\right)^k=\left(\frac14\right)^k\to0,
+$$
+
+其中 $\max_{x\in\left[0,1\right]}x\left(1-x\right)=\frac14$ 在 $x=\frac12$ 取到. 另一方面, $d_2\left(P_k,0\right)=\sum_{j=0}^{k}\binom{k}{j}=2^k\to\infty\not\to0$. 故存在多项式列 $\left\{P_k\right\}$ 使 $d_1\left(P_k,0\right)\to0$ 而 $d_2\left(P_k,0\right)\not\to0$. $\blacksquare$
+
+> **构造思路** 要找一个函数值很小但系数很大的多项式: 需函数中含大量正负抵消项, 而 $\left(-1\right)^n$ 天然合适, 二项式展开恰好提供交错系数, 故取 $x^k\left(1-x\right)^k$, 其 $d_2$-系数和恰为 $2^k$.
 
 ## 1.1-5
 
@@ -146,27 +186,31 @@ $$
 
 ### 解答 1.1-5
 
-(1) 不妨设 $a\le b$. 易知 $\left(1+t\right)^p\le1+t^p$ ($t\ge0$). 于是
+**(1) 对 $a,b>0$, $\left(a+b\right)^p\le a^p+b^p$.**
+
+因 $0<p<1$, 函数 $t\mapsto t^p$ 在 $\left(0,\infty\right)$ 上是**凹函数** ($\left(t^p\right)''=p\left(p-1\right)t^{p-2}<0$), 且 $\left(t^p\right)$ 在 $t=0$ 处取值为 $0$, 故它是次可加的. 于是对任意 $a,b\ge0$, $\left(a+b\right)^p\le a^p+b^p$. 特别对 $a,b>0$ 成立. $\blacksquare$
+
+**(2) $d$ 是伪度量.**
+
+依据**定义 1.1.1 (度量空间)**, 验证非负性、对称性 (ii) 与三角不等式 (iii).
+
+**(非负性)**. 对任意 $f,g$, 逐点有 $\left|f\left(t\right)-g\left(t\right)\right|^p\ge0$, 故 $d\left(f,g\right)=\int_0^1\left|f-g\right|^p\mathrm dt\ge0$.
+
+**(对称性 (ii))**. $\left|f\left(t\right)-g\left(t\right)\right|=\left|g\left(t\right)-f\left(t\right)\right|$ 逐点成立, 故 $d\left(f,g\right)=d\left(g,f\right)$.
+
+**(三角不等式 (iii))**. 对任意可测函数 $h$ 与每个 $t$, 由实数三角不等式 $\left|f\left(t\right)-g\left(t\right)\right|\le\left|f\left(t\right)-h\left(t\right)\right|+\left|h\left(t\right)-g\left(t\right)\right|$. 因 $u\mapsto u^p$ 在 $\left[0,\infty\right)$ 单调递增, 上式两边取 $p$ 次方得
 
 $$
-\left(a+b\right)^p=b^p\left(1+\frac{a}{b}\right)^p\le b^p\left[1+\left(\frac{a}{b}\right)^p\right]=a^p+b^p\quad\blacksquare
+\left|f\left(t\right)-g\left(t\right)\right|^p\le\left(\left|f\left(t\right)-h\left(t\right)\right|+\left|h\left(t\right)-g\left(t\right)\right|\right)^p.
 $$
 
-(2) 依据**定义 1.1.1 (度量空间)**, (i) 非负性、(ii) 对称性显然. (iii) 对任意可测函数 $h$, 由 (1) 逐点地有
+由 (1) 的次可加性, 右端 $\le\left|f\left(t\right)-h\left(t\right)\right|^p+\left|h\left(t\right)-g\left(t\right)\right|^p$ 逐点成立. 逐点积分即得 $d\left(f,g\right)\le d\left(f,h\right)+d\left(h,g\right)$. 故 (iii) 成立.
 
-$$
-\left|f\left(t\right)-g\left(t\right)\right|^p\le\left(\left|f\left(t\right)-h\left(t\right)\right|+\left|h\left(t\right)-g\left(t\right)\right|\right)^p\le\left|f\left(t\right)-h\left(t\right)\right|^p+\left|h\left(t\right)-g\left(t\right)\right|^p.
-$$
+故 $d$ 是非负的且满足 (ii)(iii), 即 $d$ 是伪度量. $\blacksquare$
 
-积分即得 $d\left(f,g\right)\le d\left(f,h\right)+d\left(h,g\right)$. 故 $d$ 是伪度量. $\blacksquare$
+**(3) 商空间 $\left(L^p\left[0,1\right]/\sim,d\right)$ 是度量空间.**
 
-(3) 依据**定义 1.1.1 (度量空间)**, 由 (2) 已知非负性、对称性与三角不等式成立, 只需再验证正定性 (商空间构造方式同**例 1.1.12**). 若 $d\left(f,g\right)=0$, 即 $\int_{0}^{1}\left|f-g\right|^p\mathrm dt=0$. 因被积函数 $\left|f-g\right|^p\ge0$ 且可测, 由积分的性质,
-
-$$
-\int_{0}^{1}\left|f-g\right|^p\mathrm dt=0\Leftrightarrow\left|f-g\right|^p=0\text{ a.e.}\Leftrightarrow f=g\text{ a.e.}\Leftrightarrow f\sim g.
-$$
-
-故在等价类空间 $L^p\left[0,1\right]/\sim$ 上, $d\left(\left[f\right],\left[g\right]\right)=0\Leftrightarrow\left[f\right]=\left[g\right]$, 因此 $\left(L^p\left[0,1\right]/\sim,d\right)$ 是度量空间. $\blacksquare$
+依据**定义 1.1.1 (度量空间)**, 由 (2) 已知非负性、对称性与三角不等式在商空间上仍成立, 只需验证**正定性** (构造方式同**例 1.1.12**). 在商空间 $L^p\left[0,1\right]/\sim$ 上, $d\left(\left[f\right],\left[g\right]\right)=0$ 当且仅当 $\int_0^1\left|f-g\right|^p\mathrm dt=0$. 因被积函数 $\left|f-g\right|^p\ge0$ 且可测, 由积分的性质, $\int_0^1\left|f-g\right|^p\mathrm dt=0\Leftrightarrow\left|f-g\right|^p=0$ a.e. $\Leftrightarrow f=g$ a.e. $\Leftrightarrow f\sim g\Leftrightarrow\left[f\right]=\left[g\right]$. 故正定性成立, 于是 $\left(L^p\left[0,1\right]/\sim,d\right)$ 是度量空间. $\blacksquare$
 
 ## 1.1-7
 
@@ -190,46 +234,46 @@ $$
 
 ### 解答 1.1-7
 
-(1) 易知
+**(1) 计算 $d\left(\left(1,0,0\right),\left(x_1,x_2,0\right)\right)$.**
 
-$$
-d\left(\left(1,0,0\right),\left(x_1,x_2,0\right)\right)=\arccos x_1=\arcsin x_2\quad\blacksquare
-$$
+设 $\theta$ 为两点在赤道大圆上的中心角, 则由球面距离定义 $d=\theta$. 因 $\left(1,0,0\right)\cdot\left(x_1,x_2,0\right)=x_1=\cos\theta$, 且 $x_1\in\left[-1,1\right]$, 故 $\theta=\arccos x_1$. 又由 $x_1^2+x_2^2=1$ 得 $x_1=\pm\sqrt{1-x_2^2}$, 且 $\theta=\arcsin x_2$ 在 $x_2\ge0$ 时成立. 故 $d\left(\left(1,0,0\right),\left(x_1,x_2,0\right)\right)=\arccos x_1=\arcsin x_2$. $\blacksquare$
 
-(2) **左边** (其中 $\rho$ 为**例 1.1.2** 的欧氏度量):
+**(2) 证明 $\rho\left(x,y\right)\le d\left(x,y\right)\le\frac{\pi}{2}\rho\left(x,y\right)$.**
 
-设 $\theta=d\left(x,y\right)\in\left[0,\pi\right]$ 为 $x,y$ 的中心角, 则 $\rho\left(x,y\right)=\left\|x-y\right\|=2\sin\frac{\theta}{2}\le\theta=d\left(x,y\right)$.
+设 $\theta=d\left(x,y\right)\in\left[0,\pi\right]$ 为 $x,y$ 的中心角, 则弦长 $\rho\left(x,y\right)=\left\|x-y\right\|=2\sin\frac{\theta}{2}$.
 
-**右边**:
+**左边.** 因 $\sin$ 在 $\left[0,\frac{\pi}{2}\right]$ 上凹且 $\sin0=0$, 图像在弦之下, 但更直接地由 $\sin u\le u$ ($u\ge0$) 得 $2\sin\frac{\theta}{2}\le2\cdot\frac{\theta}{2}=\theta$. 于是 $\rho\left(x,y\right)=2\sin\frac{\theta}{2}\le\theta=d\left(x,y\right)$. 左边得证.
 
-$u=\frac{\theta}{2}\in\left[0,\frac{\pi}{2}\right]$. $\sin$ 在 $\left[0,\frac{\pi}{2}\right]$ 上是凹函数, 其图像位于连接 $\left(0,0\right)$ 与 $\left(\frac{\pi}{2},1\right)$ 的弦 $y=\frac{2}{\pi}u$ 之上方, 即 $\sin u\ge\frac{2}{\pi}u$, 故
+**右边.** 令 $u=\frac{\theta}{2}\in\left[0,\frac{\pi}{2}\right]$. 因 $\sin$ 在 $\left[0,\frac{\pi}{2}\right]$ 上是凹函数, 其图像位于连接 $\left(0,0\right)$ 与 $\left(\frac{\pi}{2},1\right)$ 的弦 $y=\frac{2}{\pi}u$ 之上方, 即 $\sin u\ge\frac{2}{\pi}u$. 于是 $d\left(x,y\right)=\theta=2u\le\pi\sin u=\frac{\pi}{2}\cdot2\sin\frac{\theta}{2}=\frac{\pi}{2}\rho\left(x,y\right)$. 右边得证.
 
-$$
-d\left(x,y\right)=\theta=2u\le\pi\sin u=\frac{\pi}{2}\cdot2\sin\frac{\theta}{2}=\frac{\pi}{2}\rho\left(x,y\right).
-$$
+合并得 $\rho\left(x,y\right)\le d\left(x,y\right)\le\frac{\pi}{2}\rho\left(x,y\right)$. $\blacksquare$
 
-合并即得 $\rho\left(x,y\right)\le d\left(x,y\right)\le\frac{\pi}{2}\rho\left(x,y\right)$. $\blacksquare$
+**(3) $d$ 是 $S^2$ 上的度量.**
 
-(3) 依据**定义 1.1.1 (度量空间)**, (i) (ii) 显然. (iii) 设 $\alpha=d\left(x,y\right)$, $\beta=d\left(y,z\right)$, $\gamma=d\left(x,z\right)\in\left[0,\pi\right]$.
+依据**定义 1.1.1 (度量空间)**, 逐条验证.
 
-若 $\alpha+\beta\ge\pi$, 则 $\gamma\le\pi\le\alpha+\beta$, 不等式显然成立.
+**(i) 非负性与正定性.** 弧长非负, 故 $d\left(x,y\right)\ge0$; 且 $d\left(x,y\right)=0\Leftrightarrow$ 两端点重合的劣弧长为 $0\Leftrightarrow x=y$. 故 (i) 成立.
+
+**(ii) 对称性.** $x$ 到 $y$ 的劣弧与 $y$ 到 $x$ 的劣弧长度相同, 故 $d\left(x,y\right)=d\left(y,x\right)$. 故 (ii) 成立.
+
+**(iii) 三角不等式.** 设 $\alpha=d\left(x,y\right)$, $\beta=d\left(y,z\right)$, $\gamma=d\left(x,z\right)\in\left[0,\pi\right]$.
+
+若 $\alpha+\beta\ge\pi$, 则因 $\gamma\le\pi$, 有 $\gamma\le\pi\le\alpha+\beta$, 不等式 $d\left(x,z\right)\le d\left(x,y\right)+d\left(y,z\right)$ 成立.
 
 若 $\alpha+\beta<\pi$: 取单位向量 $u,v\perp y$ 使得
 
 $$
-\begin{aligned}x&=\cos\alpha y+\sin\alpha u,\\
-z&=\cos\beta y+\sin\beta v.
-\end{aligned}
+x=\cos\alpha\, y+\sin\alpha\, u,\qquad z=\cos\beta\, y+\sin\beta\, v.
 $$
 
-则
+即: 将 $x,z$ 沿 $y$ 正交分解为平行与垂直两部分, 垂直部分单位化得 $u,v$. 则由内积及 $u,v\perp y$, $\left\|u\right\|=\left\|v\right\|=1$:
 
 $$
-\begin{aligned}\cos\gamma=x\cdot z&=\cos\alpha\cos\beta+\sin\alpha\sin\beta\left(u\cdot v\right)\\
-&\ge\cos\alpha\cos\beta-\sin\alpha\sin\beta=\cos\left(\alpha+\beta\right).
-\end{aligned}
+\cos\gamma=x\cdot z=\cos\alpha\cos\beta+\sin\alpha\sin\beta\left(u\cdot v\right)\ge\cos\alpha\cos\beta-\sin\alpha\sin\beta=\cos\left(\alpha+\beta\right),
 $$
 
-由于 $\gamma,\alpha+\beta\in\left[0,\pi\right]$ 且 $\cos$ 在 $\left[0,\pi\right]$ 上严格递减, 得 $\gamma\le\alpha+\beta$. 故三角不等式成立, $d$ 是 $S^2$ 上的度量. $\blacksquare$
+其中用了柯西-施瓦茨不等式: $u\cdot v\ge-\left\|u\right\|\left\|v\right\|=-1$. 由于 $\gamma,\alpha+\beta\in\left[0,\pi\right]$ 且 $\cos$ 在 $\left[0,\pi\right]$ 上严格递减, 由 $\cos\gamma\ge\cos\left(\alpha+\beta\right)$ 得 $\gamma\le\alpha+\beta$, 即 $d\left(x,z\right)\le d\left(x,y\right)+d\left(y,z\right)$.
 
-> **证明技巧**: 把 $x$, $z$ 沿 $y$ 正交分解, 拆成平行于 $y$ 的和垂直于 $y$ 的部分, 而 $x$ 与 $z$ 各自垂直于 $y$ 的那部分分量的内积必然 $\ge-1$, 由此放缩证毕.
+故三角不等式成立, 由 (i)(ii)(iii), $d$ 是 $S^2$ 上的度量. $\blacksquare$
+
+> **证明技巧** 将 $x,z$ 沿 $y$ 正交分解: 平行于 $y$ 与垂直于 $y$ 的部分, 而 $x,z$ 各自垂直于 $y$ 的分量内积必然 $\ge-1$, 由此放缩证得三角不等式.
