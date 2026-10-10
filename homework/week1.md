@@ -65,8 +65,7 @@ $$
 设 $X$ 是 $\left[0,1\right]$ 上多项式全体. 对于 $P,Q\in X$, $P\left(x\right)-Q\left(x\right)=\sum_{i=0}^{n}a_ix^i$, 令
 
 $$
-\begin{aligned}
-d_1\left(P,Q\right)&=\max_{x\in\left[0,1\right]}\left|P\left(x\right)-Q\left(x\right)\right|,\\
+\begin{aligned}d_1\left(P,Q\right)&=\max_{x\in\left[0,1\right]}\left|P\left(x\right)-Q\left(x\right)\right|,\\
 d_2\left(P,Q\right)&=\sum_{i=0}^{n}\left|a_i\right|.
 \end{aligned}
 $$
@@ -218,8 +217,7 @@ $$
 若 $\alpha+\beta<\pi$: 取单位向量 $u,v\perp y$ 使得
 
 $$
-\begin{aligned}
-x&=\cos\alpha y+\sin\alpha u,\\
+\begin{aligned}x&=\cos\alpha y+\sin\alpha u,\\
 z&=\cos\beta y+\sin\beta v.
 \end{aligned}
 $$
@@ -227,8 +225,7 @@ $$
 则
 
 $$
-\begin{aligned}
-\cos\gamma=x\cdot z&=\cos\alpha\cos\beta+\sin\alpha\sin\beta\left(u\cdot v\right)\\
+\begin{aligned}\cos\gamma=x\cdot z&=\cos\alpha\cos\beta+\sin\alpha\sin\beta\left(u\cdot v\right)\\
 &\ge\cos\alpha\cos\beta-\sin\alpha\sin\beta=\cos\left(\alpha+\beta\right).
 \end{aligned}
 $$

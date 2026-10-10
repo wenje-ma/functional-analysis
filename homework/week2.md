@@ -49,8 +49,7 @@
 (1) 由实变函数知识, 对任意 $f\in L^p\left(\mathbb R^n\right)$, 可取简单函数列 $\left\{\Phi_n\right\}$ 点态收敛于 $f$, 且 $\left|\Phi_n\right|\le\left|f\right|$ ($\forall n$), 由勒贝格控制收敛定理得
 
 $$
-\begin{aligned}
-&\quad\;\lim_{n\to\infty}\left\|f-\Phi_n\right\|_p\propto\lim_{n\to\infty}\int_{\mathbb R^n}\left|f-\Phi_n\right|^p\,\mathrm dm\\
+\begin{aligned}&\quad\;\lim_{n\to\infty}\left\|f-\Phi_n\right\|_p\propto\lim_{n\to\infty}\int_{\mathbb R^n}\left|f-\Phi_n\right|^p\,\mathrm dm\\
 &=\int_{\mathbb R^n}\lim_{n\to\infty}\left|f-\Phi_n\right|^p\,\mathrm dm=\int_{\mathbb R^n}\lim_{n\to\infty}0\,\mathrm dm=0.
 \end{aligned}
 $$
@@ -108,8 +107,7 @@ $$
 三角不等式:
 
 $$
-\begin{aligned}
-&\quad\;\left\|\left(x,y\right)+\left(x',y'\right)\right\|_1\\
+\begin{aligned}&\quad\;\left\|\left(x,y\right)+\left(x',y'\right)\right\|_1\\
 &=\sqrt{\left\|x+x'\right\|^2+\left\|y+y'\right\|^2}\\
 &\le\sqrt{\left(\left\|x\right\|+\left\|x'\right\|\right)^2+\left(\left\|y\right\|+\left\|y'\right\|\right)^2}\\
 &\le\sqrt{\left\|x\right\|^2+\left\|y\right\|^2}+\sqrt{\left\|x'\right\|^2+\left\|y'\right\|^2},
@@ -133,8 +131,7 @@ $$
 三角不等式:
 
 $$
-\begin{aligned}
-&\quad\;\left\|\left(x,y\right)+\left(x',y'\right)\right\|_2\\
+\begin{aligned}&\quad\;\left\|\left(x,y\right)+\left(x',y'\right)\right\|_2\\
 &=\max\left\{\left\|x+x'\right\|,\left\|y+y'\right\|\right\}\\
 &\le\max\left\{\left\|x\right\|+\left\|x'\right\|,\left\|y\right\|+\left\|y'\right\|\right\}\\
 &\le\max\left\{\left\|x\right\|,\left\|y\right\|\right\}+\max\left\{\left\|x'\right\|,\left\|y'\right\|\right\}.
@@ -150,8 +147,7 @@ $$
 再证 **$\varphi$ 连续**. 设 $\left(x_n,y_n\right)\to\left(x,y\right)$ 按 $\left\|\cdot\right\|_1$, 即 $\left\|x_n-x\right\|\to0$, $\left\|y_n-y\right\|\to0$. 由**定义 1.2.2 (半范数与范数)** 的三角不等式与齐性,
 
 $$
-\begin{aligned}
-&\quad\;\left\|\varphi\left(x_n,y_n\right)-\varphi\left(x,y\right)\right\|_2\\
+\begin{aligned}&\quad\;\left\|\varphi\left(x_n,y_n\right)-\varphi\left(x,y\right)\right\|_2\\
 &=\max\left\{\left\|a\left(x_n-x\right)+b\left(y_n-y\right)\right\|,\left\|c\left(x_n-x\right)+d\left(y_n-y\right)\right\|\right\}\\
 &\le\max\left\{\left(\left|a\right|+\left|b\right|\right)\delta_n,\left(\left|c\right|+\left|d\right|\right)\delta_n\right\}\to0,
 \end{aligned}
@@ -270,8 +266,7 @@ $$
 (v) $L=\operatorname{span}\left(M\cup N\right)$ 由 $M,N$ 中元素的有限线性组合构成. 由内积对第一变元的线性性, 对任意 $z\in H$,
 
 $$
-\begin{aligned}
-&\quad\;z\in L^\perp\Leftrightarrow\left\langle z,w\right\rangle=0,\quad\forall w\in L\\
+\begin{aligned}&\quad\;z\in L^\perp\Leftrightarrow\left\langle z,w\right\rangle=0,\quad\forall w\in L\\
 &\Leftrightarrow\left\langle z,m\right\rangle=0,\quad\forall m\in M\text{ 且 }\left\langle z,n\right\rangle=0,\quad\forall n\in N\\
 &\Leftrightarrow z\in M^\perp\text{ 且 }z\in N^\perp.
 \end{aligned}
@@ -320,8 +315,7 @@ $$
 **标准正交性.** 对任意 $m,n,m',n'\in\mathbb Z$, 乘积测度下，若二重积分的被积函数绝对值可积, 则可使用富比尼定理:
 
 $$
-\begin{aligned}
-&\quad\;\left\langle \mathrm{e}^{\mathrm{i}mx}\mathrm{e}^{\mathrm{i}ny},\mathrm{e}^{\mathrm{i}m'x}\mathrm{e}^{\mathrm{i}n'y}\right\rangle\\
+\begin{aligned}&\quad\;\left\langle \mathrm{e}^{\mathrm{i}mx}\mathrm{e}^{\mathrm{i}ny},\mathrm{e}^{\mathrm{i}m'x}\mathrm{e}^{\mathrm{i}n'y}\right\rangle\\
 &=\frac{1}{4\pi^2}\iint \mathrm{e}^{\mathrm{i}\left(m-m'\right)x}\mathrm{e}^{\mathrm{i}\left(n-n'\right)y}\,\mathrm dx\mathrm dy\\
 &=\left(\frac{1}{2\pi}\int_0^{2\pi}\mathrm{e}^{\mathrm{i}\left(m-m'\right)x}\,\mathrm dx\right)\left(\frac{1}{2\pi}\int_0^{2\pi}\mathrm{e}^{\mathrm{i}\left(n-n'\right)y}\mathrm dy\right)=\delta_{mm'}\delta_{nn'},
 \end{aligned}
@@ -422,8 +416,7 @@ $$
 (iii) 正定性: $\left\langle f,f\right\rangle=\int\left|f\right|^2\omega\ge0$, 且
 
 $$
-\begin{aligned}
-&\quad\;\left\langle f,f\right\rangle=0\\
+\begin{aligned}&\quad\;\left\langle f,f\right\rangle=0\\
 &\Leftrightarrow\int\left|f\right|^2\omega=0\\
 &\Leftrightarrow \left|f\right|^2\omega=0\text{ a.e.}\\
 &\Leftrightarrow f=0\text{ a.e.}\\
@@ -516,8 +509,7 @@ $$
 计算傅里叶系数:
 
 $$
-\begin{aligned}
-\left\langle f_0,\cos kx\right\rangle=\frac{1}{k}\left\langle\cos kx,\cos kx\right\rangle&=\frac{1}{2k},\\
+\begin{aligned}\left\langle f_0,\cos kx\right\rangle=\frac{1}{k}\left\langle\cos kx,\cos kx\right\rangle&=\frac{1}{2k},\\
 \left\langle\cos kx,\cos kx\right\rangle&=\frac12,
 \end{aligned}
 $$
