@@ -4,13 +4,13 @@
 
 > **定义 1.1.2** (极限) 设 $\left(X,d\right)$ 是度量空间, $\left\{x_n\right\}_{n=1}^\infty$ 是 $X$ 中点列, $x_0\in X$, 若 $$\lim_{n\to\infty}d\left(x_n,x_0\right)=0,$$ 则称**点列 $\left\{x_n\right\}_{n=1}^\infty$ 按照度量 $d$ 收敛于 $x_0$**, 记为 $\lim_{n\to\infty}x_n=x_0$.
 
-> **例 1.1.2** (n 维 Euclid 空间) 在 $n$ 个有序实数组 $x=\left(x_1,x_2,\cdots,x_n\right)$ 全体组成的集合 $X$ 中，定义 $$d\left(x,y\right)=\sqrt{\sum_{i=1}^{n}\left(x_i-y_i\right)^2},$$ 则 $\left(X,d\right)$ 是度量空间，称为 $n$ 维 Euclid（欧几里得）空间，通常记为 $\mathbb R^n$.
+> **例 1.1.2** (n 维欧几里得空间) 在 $n$ 个有序实数组 $x=\left(x_1,x_2,\cdots,x_n\right)$ 全体组成的集合 $X$ 中，定义 $$d\left(x,y\right)=\sqrt{\sum_{i=1}^{n}\left(x_i-y_i\right)^2},$$ 则 $\left(X,d\right)$ 是度量空间，称为 $n$ 维欧几里得空间，通常记为 $\mathbb R^n$.
 
 > **例 1.1.10** (一致收敛与度量收敛) 由例 1.1.10 的讨论可知，$C\left[a,b\right]$ 中点列按度量 $d$ 收敛等价于区间 $\left[a,b\right]$ 上的函数列一致收敛.
 
 > **例 1.1.11** (等价度量) 设 $\left(X,d\right)$ 是度量空间，我们还可以在 $X$ 上定义新的度量 $$d'\left(x,y\right)=\frac{d\left(x,y\right)}{1+d\left(x,y\right)},\quad d''\left(x,y\right)=\ln\left(1+d\left(x,y\right)\right),\quad\forall x,y\in X,$$ 它们是不同的度量. 但是容易验证，对于空间 $X$ 中的点列 $\left\{x_n\right\}$，$$\lim_{n\to\infty}x_n\overset d=x_0\Leftrightarrow\lim_{n\to\infty}x_n\overset{d'}=x_0\Leftrightarrow\lim_{n\to\infty}x_n\overset{d''}=x_0.$$
 
-> **例 1.1.12** (可测函数等价类空间) 对于有限区间 $\left[a,b\right]$，记 $\mathfrak G=\left\{\left[a,b\right]\text{ 上几乎处处有限的 Lebesgue 可测函数}\right\}$. $\mathfrak G$ 中两个函数 $f,g$ 是**等价**的，是指它们满足 $f\underset{m}{\doteq}g$. 仍以 $f$ 来表示 Lebesgue 可测函数 $f$ 在 $\mathcal S=\mathfrak G/\sim$ 中对应的等价类. 对于 $f,g\in\mathcal S$，定义 $$d\left(f,g\right)=\int_{\left[a,b\right]}\frac{\left|f\left(t\right)-g\left(t\right)\right|}{1+\left|f\left(t\right)-g\left(t\right)\right|}\mathrm dm\left(t\right),$$ 容易验证这是一个度量，进而 $\left(\mathcal S,d\right)$ 是完备的度量空间.
+> **例 1.1.12** (可测函数等价类空间) 对于有限区间 $\left[a,b\right]$，记 $\mathfrak G=\left\{\left[a,b\right]\text{ 上几乎处处有限的勒贝格可测函数}\right\}$. $\mathfrak G$ 中两个函数 $f,g$ 是**等价**的，是指它们满足 $f\underset{m}{\doteq}g$. 仍以 $f$ 来表示勒贝格可测函数 $f$ 在 $\mathcal S=\mathfrak G/\sim$ 中对应的等价类. 对于 $f,g\in\mathcal S$，定义 $$d\left(f,g\right)=\int_{\left[a,b\right]}\frac{\left|f\left(t\right)-g\left(t\right)\right|}{1+\left|f\left(t\right)-g\left(t\right)\right|}\mathrm dm\left(t\right),$$ 容易验证这是一个度量，进而 $\left(\mathcal S,d\right)$ 是完备的度量空间.
 
 ## 1.1-2
 
