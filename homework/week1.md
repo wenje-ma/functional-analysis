@@ -1,16 +1,18 @@
-# week 1
+# 第 1 周
 
-> **定义 1.1.1** (度量空间) 设 $X$ 是一个非空集合，若对于 $X$ 中任意两个元素 $x,y$, 有一个实数 $d\left(x,y\right)$ 与它们对应，而且满足下面条件:<br>(i) **(非负性与正定性)** 对任意 $x,y\in X$, $d\left(x,y\right)\ge0$, 并且 $d\left(x,y\right)=0$ 的充要条件是 $x=y$;<br>(ii) **(对称性)** 对任意 $x,y\in X$, $d\left(x,y\right)=d\left(y,x\right)$;<br>(iii) **(三角不等式)** 对任意 $x,y,z\in X$, $d\left(x,y\right)\le d\left(x,z\right)+d\left(z,y\right)$,<br>则称 $\left(X,d\right)$ 是一个**度量空间** (或**距离空间**), $d$ 为 $X$ 上的**度量** (或**距离**), $d\left(x,y\right)$ 为**点 $x,y$ 之间的距离**.
+> **定义 1.1.1** (度量空间) 设 $X$ 是一个非空集合, 若对于 $X$ 中任意两个元素 $x,y$, 有一个实数 $d\left(x,y\right)$ 与它们对应, 而且满足下面条件:<br>(i) **(非负性与正定性)** 对任意 $x,y\in X$, $d\left(x,y\right)\ge0$, 并且 $d\left(x,y\right)=0$ 的充要条件是 $x=y$;<br>(ii) **(对称性)** 对任意 $x,y\in X$, $d\left(x,y\right)=d\left(y,x\right)$;<br>(iii) **(三角不等式)** 对任意 $x,y,z\in X$, $d\left(x,y\right)\le d\left(x,z\right)+d\left(z,y\right)$,<br>则称 $\left(X,d\right)$ 是一个**度量空间** (或**距离空间**), $d$ 为 $X$ 上的**度量** (或**距离**), $d\left(x,y\right)$ 为**点 $x,y$ 之间的距离**.
 
 > **定义 1.1.2** (极限) 设 $\left(X,d\right)$ 是度量空间, $\left\{x_n\right\}_{n=1}^\infty$ 是 $X$ 中点列, $x_0\in X$, 若 $$\lim_{n\to\infty}d\left(x_n,x_0\right)=0,$$ 则称**点列 $\left\{x_n\right\}_{n=1}^\infty$ 按照度量 $d$ 收敛于 $x_0$**, 记为 $\lim_{n\to\infty}x_n=x_0$.
 
-> **例 1.1.2** (n 维欧几里得空间) 在 $n$ 个有序实数组 $x=\left(x_1,x_2,\cdots,x_n\right)$ 全体组成的集合 $X$ 中，定义 $$d\left(x,y\right)=\sqrt{\sum_{i=1}^{n}\left(x_i-y_i\right)^2},$$ 则 $\left(X,d\right)$ 是度量空间，称为 $n$ 维欧几里得空间，通常记为 $\mathbb R^n$.
+> **例 1.1.2** ($n$ 维欧几里得空间) 在 $n$ 个有序实数组 $x=\left(x_1,x_2,\cdots,x_n\right)$ 全体组成的集合 $X$ 中, 定义 $$d\left(x,y\right)=\sqrt{\sum_{i=1}^{n}\left(x_i-y_i\right)^2},$$ 则 $\left(X,d\right)$ 是度量空间, 称为 $n$ 维欧几里得空间, 通常记为 $\mathbb R^n$.
 
-> **例 1.1.10** (一致收敛与度量收敛) 由例 1.1.10 的讨论可知，$C\left[a,b\right]$ 中点列按度量 $d$ 收敛等价于区间 $\left[a,b\right]$ 上的函数列一致收敛.
+> **例 1.1.10** (一致收敛与度量收敛) 由例 1.1.10 的讨论可知, $C\left[a,b\right]$ 中点列按度量 $d$ 收敛等价于区间 $\left[a,b\right]$ 上的函数列一致收敛.
 
-> **例 1.1.11** (等价度量) 设 $\left(X,d\right)$ 是度量空间，我们还可以在 $X$ 上定义新的度量 $$d'\left(x,y\right)=\frac{d\left(x,y\right)}{1+d\left(x,y\right)},\quad d''\left(x,y\right)=\ln\left(1+d\left(x,y\right)\right),\quad\forall x,y\in X,$$ 它们是不同的度量. 但是容易验证，对于空间 $X$ 中的点列 $\left\{x_n\right\}$，$$\lim_{n\to\infty}x_n\overset d=x_0\Leftrightarrow\lim_{n\to\infty}x_n\overset{d'}=x_0\Leftrightarrow\lim_{n\to\infty}x_n\overset{d''}=x_0.$$
+> **例 1.1.11** (等价度量) 设 $\left(X,d\right)$ 是度量空间, 我们还可以在 $X$ 上定义新的度量 $$d'\left(x,y\right)=\frac{d\left(x,y\right)}{1+d\left(x,y\right)},\quad d''\left(x,y\right)=\ln\left(1+d\left(x,y\right)\right),\quad\forall x,y\in X,$$ 它们是不同的度量. 但是容易验证, 对于空间 $X$ 中的点列 $\left\{x_n\right\}$, $$\lim_{n\to\infty}x_n\overset d=x_0\Leftrightarrow\lim_{n\to\infty}x_n\overset{d'}=x_0\Leftrightarrow\lim_{n\to\infty}x_n\overset{d''}=x_0.$$
 
-> **例 1.1.12** (可测函数等价类空间) 对于有限区间 $\left[a,b\right]$，记 $\mathfrak G=\left\{\left[a,b\right]\text{ 上几乎处处有限的勒贝格可测函数}\right\}$. $\mathfrak G$ 中两个函数 $f,g$ 是**等价**的，是指它们满足 $f\underset{m}{\doteq}g$. 仍以 $f$ 来表示勒贝格可测函数 $f$ 在 $\mathcal S=\mathfrak G/\sim$ 中对应的等价类. 对于 $f,g\in\mathcal S$，定义 $$d\left(f,g\right)=\int_{\left[a,b\right]}\frac{\left|f\left(t\right)-g\left(t\right)\right|}{1+\left|f\left(t\right)-g\left(t\right)\right|}\mathrm dm\left(t\right),$$ 容易验证这是一个度量，进而 $\left(\mathcal S,d\right)$ 是完备的度量空间.
+> **例 1.1.12** (可测函数等价类空间) 对于有限区间 $\left[a,b\right]$, 记 $\mathfrak G=\left\{\left[a,b\right]\text{ 上几乎处处有限的勒贝格可测函数}\right\}$. $\mathfrak G$ 中两个函数 $f,g$ 是**等价**的, 是指它们满足 $f\underset{m}{\doteq}g$. 仍以 $f$ 来表示勒贝格可测函数 $f$ 在 $\mathcal S=\mathfrak G/\sim$ 中对应的等价类. 对于 $f,g\in\mathcal S$, 定义 $$d\left(f,g\right)=\int_{\left[a,b\right]}\frac{\left|f\left(t\right)-g\left(t\right)\right|}{1+\left|f\left(t\right)-g\left(t\right)\right|}\mathrm dm\left(t\right),$$ 容易验证这是一个度量, 进而 $\left(\mathcal S,d\right)$ 是完备的度量空间.
+
+> **引理 1.2.3** (柯西-施瓦茨不等式) 设 $x,y\in H$, 则成立不等式 $$ \left|\left\langle x,y\right\rangle\right|^2\le\left\langle x,x\right\rangle\left\langle y,y\right\rangle. $$
 
 > **预备 (关键引理)** 记 $\varphi\left(t\right)=\frac{t}{1+t}$, $\psi\left(t\right)=\ln\left(1+t\right)$, $t\ge0$. 则 $\varphi,\psi$ 在 $\left[0,\infty\right)$ 上都是**凹函数**且 $\varphi\left(0\right)=\psi\left(0\right)=0$. 求其二阶导易证.
 
@@ -36,11 +38,11 @@ $$
 
 依据**定义 1.1.1 (度量空间)**, 需逐条验证 $d'$ 满足 (i)(ii)(iii).
 
-**(i) 非负性与正定性.** 由 $d$ 是度量, 对任意 $x,y\in X$ 有 $d\left(x,y\right)\ge0$, 且 $d\left(x,y\right)=0\Leftrightarrow x=y$ (**定义 1.1.1 (i)**). 又因为 $\varphi\left(t\right)\ge0$ 对所有 $t\ge0$ 成立, 且 $\varphi$ 在 $\left[0,\infty\right)$ 严格递增且 $\varphi\left(0\right)=0$, 则 $\varphi\left(t\right)=0\Leftrightarrow t=0$. 于是 $d'\left(x,y\right)=\varphi\left(d\left(x,y\right)\right)\ge0$, 且 $d'\left(x,y\right)=0\Leftrightarrow\varphi\left(d\left(x,y\right)\right)=0\Leftrightarrow d\left(x,y\right)=0\Leftrightarrow x=y$. 故 (i) 成立.
+**(i) 非负性与正定性.** 由 $d$ 是度量, 对任意 $x,y\in X$ 有 $d\left(x,y\right)\ge0$, 且 $d\left(x,y\right)=0\Leftrightarrow x=y$ (**定义 1.1.1 (i)** (度量空间)). 又因为 $\varphi\left(t\right)\ge0$ 对所有 $t\ge0$ 成立, 且 $\varphi$ 在 $\left[0,\infty\right)$ 严格递增且 $\varphi\left(0\right)=0$, 则 $\varphi\left(t\right)=0\Leftrightarrow t=0$. 于是 $d'\left(x,y\right)=\varphi\left(d\left(x,y\right)\right)\ge0$, 且 $d'\left(x,y\right)=0\Leftrightarrow\varphi\left(d\left(x,y\right)\right)=0\Leftrightarrow d\left(x,y\right)=0\Leftrightarrow x=y$. 故 (i) 成立.
 
-**(ii) 对称性.** 由 $d$ 的对称性 (**定义 1.1.1 (ii)**), $d\left(x,y\right)=d\left(y,x\right)$.于是 $d'\left(x,y\right)=\varphi\left(d\left(x,y\right)\right)=\varphi\left(d\left(y,x\right)\right)=d'\left(y,x\right)$. 故 (ii) 成立.
+**(ii) 对称性.** 由 $d$ 的对称性 (**定义 1.1.1 (ii)** (度量空间)), $d\left(x,y\right)=d\left(y,x\right)$.于是 $d'\left(x,y\right)=\varphi\left(d\left(x,y\right)\right)=\varphi\left(d\left(y,x\right)\right)=d'\left(y,x\right)$. 故 (ii) 成立.
 
-**(iii) 三角不等式.** 由 $d$ 满足三角不等式 (**定义 1.1.1 (iii)**), $d\left(x,y\right)\le d\left(x,z\right)+d\left(z,y\right)$. 因 $\varphi$ 在 $\left[0,\infty\right)$ 单调递增, 上式两边作用 $\varphi$ 得 $d'\left(x,y\right)=\varphi\left(d\left(x,y\right)\right)\le\varphi\left(d\left(x,z\right)+d\left(z,y\right)\right)$. 由预备引理, $\varphi\left(d\left(x,z\right)+d\left(z,y\right)\right)\le\varphi\left(d\left(x,z\right)\right)+\varphi\left(d\left(z,y\right)\right)=d'\left(x,z\right)+d'\left(z,y\right)$. 故 $d'\left(x,y\right)\le d'\left(x,z\right)+d'\left(z,y\right)$, (iii) 成立.
+**(iii) 三角不等式.** 由 $d$ 满足三角不等式 (**定义 1.1.1 (iii)** (度量空间)), $d\left(x,y\right)\le d\left(x,z\right)+d\left(z,y\right)$. 因 $\varphi$ 在 $\left[0,\infty\right)$ 单调递增, 上式两边作用 $\varphi$ 得 $d'\left(x,y\right)=\varphi\left(d\left(x,y\right)\right)\le\varphi\left(d\left(x,z\right)+d\left(z,y\right)\right)$. 由**预备** (关键引理), $\varphi\left(d\left(x,z\right)+d\left(z,y\right)\right)\le\varphi\left(d\left(x,z\right)\right)+\varphi\left(d\left(z,y\right)\right)=d'\left(x,z\right)+d'\left(z,y\right)$. 故 $d'\left(x,y\right)\le d'\left(x,z\right)+d'\left(z,y\right)$, (iii) 成立.
 
 由 (i)(ii)(iii) 全部成立, 依据**定义 1.1.1 (度量空间)**, $d'$ 是 $X$ 上的度量. $\blacksquare$
 
@@ -54,7 +56,7 @@ $$
 
 $d''\left(x,y\right)=\psi\left(d\left(x,y\right)\right)=\psi\left(d\left(y,x\right)\right)=d''\left(y,x\right)$. 故 (ii) 成立.
 
-**(iii) 三角不等式.** 由 $d\left(x,y\right)\le d\left(x,z\right)+d\left(z,y\right)$ 及 $\psi$ 单调递增, $d''\left(x,y\right)=\psi\left(d\left(x,y\right)\right)\le\psi\left(d\left(x,z\right)+d\left(z,y\right)\right)$. 由 $\psi$ 的次可加性, $\psi\left(d\left(x,z\right)+d\left(z,y\right)\right)\le\psi\left(d\left(x,z\right)\right)+\psi\left(d\left(z,y\right)\right)=d''\left(x,z\right)+d''\left(z,y\right)$. 故 (iii) 成立.
+**(iii) 三角不等式.** 由 $d\left(x,y\right)\le d\left(x,z\right)+d\left(z,y\right)$ 及 $\psi$ 单调递增, $d''\left(x,y\right)=\psi\left(d\left(x,y\right)\right)\le\psi\left(d\left(x,z\right)+d\left(z,y\right)\right)$. 由**预备** (关键引理) 中 $\psi$ 的次可加性, $\psi\left(d\left(x,z\right)+d\left(z,y\right)\right)\le\psi\left(d\left(x,z\right)\right)+\psi\left(d\left(z,y\right)\right)=d''\left(x,z\right)+d''\left(z,y\right)$. 故 (iii) 成立.
 
 故 $d''$ 也是 $X$ 上的度量. $\blacksquare$
 
@@ -144,7 +146,7 @@ $$
 P_k\overset{d_1}\to P\Leftrightarrow d_1\left(P_k,P\right)=\max_{x\in\left[0,1\right]}\left|P_k\left(x\right)-P\left(x\right)\right|\to0.
 $$
 
-而 $\max_{x\in\left[0,1\right]}\left|P_k\left(x\right)-P\left(x\right)\right|\to0$ 正是 $\left\{P_k\right\}$ 在 $\left[0,1\right]$ 上一致收敛于 $P$ 的定义 (即**例 1.1.10** 在多项式子空间上的情形). 故 (2) 成立. $\blacksquare$
+而 $\max_{x\in\left[0,1\right]}\left|P_k\left(x\right)-P\left(x\right)\right|\to0$ 正是 $\left\{P_k\right\}$ 在 $\left[0,1\right]$ 上一致收敛于 $P$ 的定义 (即**例 1.1.10** (一致收敛与度量收敛) 在多项式子空间上的情形). 故 (2) 成立. $\blacksquare$
 
 **(3) 按 $d_2$ 收敛推出按 $d_1$ 收敛.**
 
@@ -192,7 +194,7 @@ $$
 
 **(2) $d$ 是伪度量.**
 
-依据**定义 1.1.1 (度量空间)**, 验证非负性、对称性 (ii) 与三角不等式 (iii).
+依据**定义 1.1.1 (度量空间)**, 验证非负性, 对称性 (ii) 与三角不等式 (iii).
 
 **(非负性)**. 对任意 $f,g$, 逐点有 $\left|f\left(t\right)-g\left(t\right)\right|^p\ge0$, 故 $d\left(f,g\right)=\int_0^1\left|f-g\right|^p\mathrm dt\ge0$.
 
@@ -210,7 +212,7 @@ $$
 
 **(3) 商空间 $\left(L^p\left[0,1\right]/\sim,d\right)$ 是度量空间.**
 
-依据**定义 1.1.1 (度量空间)**, 由 (2) 已知非负性、对称性与三角不等式在商空间上仍成立, 只需验证**正定性** (构造方式同**例 1.1.12**). 在商空间 $L^p\left[0,1\right]/\sim$ 上, $d\left(\left[f\right],\left[g\right]\right)=0$ 当且仅当 $\int_0^1\left|f-g\right|^p\mathrm dt=0$. 因被积函数 $\left|f-g\right|^p\ge0$ 且可测, 由积分的性质, $\int_0^1\left|f-g\right|^p\mathrm dt=0\Leftrightarrow\left|f-g\right|^p=0$ a.e. $\Leftrightarrow f=g$ a.e. $\Leftrightarrow f\sim g\Leftrightarrow\left[f\right]=\left[g\right]$. 故正定性成立, 于是 $\left(L^p\left[0,1\right]/\sim,d\right)$ 是度量空间. $\blacksquare$
+依据**定义 1.1.1 (度量空间)**, 由 (2) 已知非负性, 对称性与三角不等式在商空间上仍成立, 只需验证**正定性** (构造方式同**例 1.1.12** (可测函数等价类空间)). 在商空间 $L^p\left[0,1\right]/\sim$ 上, $d\left(\left[f\right],\left[g\right]\right)=0$ 当且仅当 $\int_0^1\left|f-g\right|^p\mathrm dt=0$. 因被积函数 $\left|f-g\right|^p\ge0$ 且可测, 由积分的性质, $\int_0^1\left|f-g\right|^p\mathrm dt=0\Leftrightarrow\left|f-g\right|^p=0$ a.e. $\Leftrightarrow f=g$ a.e. $\Leftrightarrow f\sim g\Leftrightarrow\left[f\right]=\left[g\right]$. 故正定性成立, 于是 $\left(L^p\left[0,1\right]/\sim,d\right)$ 是度量空间. $\blacksquare$
 
 ## 1.1-7
 
@@ -272,7 +274,7 @@ $$
 \cos\gamma=x\cdot z=\cos\alpha\cos\beta+\sin\alpha\sin\beta\left(u\cdot v\right)\ge\cos\alpha\cos\beta-\sin\alpha\sin\beta=\cos\left(\alpha+\beta\right),
 $$
 
-其中用了柯西-施瓦茨不等式: $u\cdot v\ge-\left\|u\right\|\left\|v\right\|=-1$. 由于 $\gamma,\alpha+\beta\in\left[0,\pi\right]$ 且 $\cos$ 在 $\left[0,\pi\right]$ 上严格递减, 由 $\cos\gamma\ge\cos\left(\alpha+\beta\right)$ 得 $\gamma\le\alpha+\beta$, 即 $d\left(x,z\right)\le d\left(x,y\right)+d\left(y,z\right)$.
+其中用了**引理 1.2.3** (柯西-施瓦茨不等式): $u\cdot v\ge-\left\|u\right\|\left\|v\right\|=-1$. 由于 $\gamma,\alpha+\beta\in\left[0,\pi\right]$ 且 $\cos$ 在 $\left[0,\pi\right]$ 上严格递减, 由 $\cos\gamma\ge\cos\left(\alpha+\beta\right)$ 得 $\gamma\le\alpha+\beta$, 即 $d\left(x,z\right)\le d\left(x,y\right)+d\left(y,z\right)$.
 
 故三角不等式成立, 由 (i)(ii)(iii), $d$ 是 $S^2$ 上的度量. $\blacksquare$
 

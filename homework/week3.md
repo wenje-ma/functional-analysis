@@ -1,5 +1,9 @@
 # 第 3 周
 
+> **定义** (弱导数) 设 $g,h\in L_{\mathrm{loc}}^2\left(\mathbb R\right)$. 若对一切 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 成立 $$ \int_{\mathbb R}g\varphi'\mathrm dt=-\int_{\mathbb R}h\varphi\mathrm dt, $$ 则称 $h$ 是 $g$ 的弱导数, 记为 $g'=h$.
+
+> **基本事实** (弱导数绝对连续) 设 $g\in L_{\mathrm{loc}}^2\left(\mathbb R\right)$, $h\in L^2\left(\mathbb R\right)$, 若 $h$ 是 $g$ 的弱导数, 即对一切 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 成立 $$ \int_{\mathbb R}g\varphi'\mathrm dt=-\int_{\mathbb R}h\varphi\mathrm dt, $$ 则 $g$ 绝对连续, 且 $g'=h$ 几乎处处成立.
+
 > **定义 1.1.1** (度量空间) 设 $X$ 是一个非空集合, 若对于 $X$ 中任意两个元素 $x,y$, 有一个实数 $d\left(x,y\right)$ 与它们对应, 而且满足下面条件:<br>(i) **(非负性与正定性)** 对任意 $x,y\in X$, $d\left(x,y\right)\ge0$, 并且 $d\left(x,y\right)=0$ 的充要条件是 $x=y$;<br>(ii) **(对称性)** 对任意 $x,y\in X$, $d\left(x,y\right)=d\left(y,x\right)$;<br>(iii) **(三角不等式)** 对任意 $x,y,z\in X$, $d\left(x,y\right)\le d\left(x,z\right)+d\left(z,y\right)$,<br>则称 $\left(X,d\right)$ 是一个**度量空间**(或**距离空间**), $d$ 为 $X$ 上的**度量**(或**距离**), $d\left(x,y\right)$ 为**点 $x,y$ 之间的距离**.
 
 > **定义 1.1.2** (极限) 设 $\left(X,d\right)$ 是度量空间, $\left\{x_n\right\}_{n=1}^\infty$ 是 $X$ 中点列, $x_0\in X$, 若 $$\lim_{n\to\infty}d\left(x_n,x_0\right)=0,$$ 则称**点列 $\left\{x_n\right\}_{n=1}^\infty$ 按照度量 $d$ 收敛于 $x_0$**, 记为 $\lim_{n\to\infty}x_n=x_0$.
@@ -93,10 +97,6 @@
 > **闵可夫斯基不等式** 对于勒贝格测度空间 $\left(\mathbb R^n,\mathrm dm\right)$ 中的可测集 $E$ 和其上的勒贝格可测函数 $f,g$, 若 $f,g$ 是 $p$ 次可积的, 其中 $p\ge1$, 则 $$ \left(\int_E \left|f\left(t\right)+g\left(t\right)\right|^p \mathrm dm\left(t\right)\right)^{\frac1p}\le\left(\int_E \left|f\left(t\right)\right|^p \mathrm dm\left(t\right)\right)^{\frac1p}+\left(\int_E \left|g\left(t\right)\right|^p \mathrm dm\left(t\right)\right)^{\frac1p}. \quad \left(1.6\right) $$
 
 > **定义** (巴拿赫空间) 若赋范线性空间 $X$ 在诱导度量 $d\left(x,y\right)=\left\|x-y\right\|$ 下是完备的, 则称 $X$ 是**巴拿赫空间**.
-
-> **定义** (弱导数) 设 $g,h\in L_{\mathrm{loc}}^2\left(\mathbb R\right)$. 若对一切 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 成立 $$ \int_{\mathbb R}g\varphi'\mathrm dt=-\int_{\mathbb R}h\varphi\mathrm dt, $$ 则称 $h$ 是 $g$ 的弱导数, 记为 $g'=h$.
-
-> **基本事实** (弱导数绝对连续) 设 $g\in L_{\mathrm{loc}}^2\left(\mathbb R\right)$, $h\in L^2\left(\mathbb R\right)$, 若 $h$ 是 $g$ 的弱导数, 即对一切 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 成立 $$ \int_{\mathbb R}g\varphi'\mathrm dt=-\int_{\mathbb R}h\varphi\mathrm dt, $$ 则 $g$ 绝对连续, 且 $g'=h$ 几乎处处成立.
 
 ---
 
