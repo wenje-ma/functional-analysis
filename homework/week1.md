@@ -265,7 +265,7 @@ $$
 若 $\alpha+\beta<\pi$: 取单位向量 $u,v\perp y$ 使得
 
 $$
-x=\cos\alpha\, y+\sin\alpha\, u,\qquad z=\cos\beta\, y+\sin\beta\, v.
+x=\cos\alpha\, y+\sin\alpha\, u,\quad z=\cos\beta\, y+\sin\beta\, v.
 $$
 
 即: 将 $x,z$ 沿 $y$ 正交分解为平行与垂直两部分, 垂直部分单位化得 $u,v$. 则由内积及 $u,v\perp y$, $\left\|u\right\|=\left\|v\right\|=1$:
