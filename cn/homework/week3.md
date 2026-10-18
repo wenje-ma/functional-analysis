@@ -566,7 +566,7 @@ $$
 d\left(x_m,x_n\right)\le\sum_{k=n}^{m-1}d\left(x_{k+1},x_k\right)\le d\left(x_1,x_0\right)\sum_{k=n}^{m-1}\alpha_k\le d\left(x_1,x_0\right)\sum_{k=n}^{\infty}\alpha_k\to0\quad\left(n\to\infty\right),
 $$
 
-故 $\left\{x_n\right\}$ 是基本点列 (**定义 1.4.7 (i)** (完备性)). 因 $X$ 完备, $x_n\to y\in X$. 又由 $\alpha_1$ 有限, $d\left(\varphi(x),\varphi(x')\right)\le\alpha_1 d\left(x,x'\right)$, $\varphi$ 连续, 故极限与函数可以交换顺序:
+故 $\left\{x_n\right\}$ 是基本点列 (**定义 1.4.7 (i)** (完备性)). 因 $X$ 完备, $x_n\to y\in X$. 又由 $\alpha_1$ 有限, $d\left(\varphi\left(x\right),\varphi\left(x'\right)\right)\le\alpha_1 d\left(x,x'\right)$, $\varphi$ 连续, 故极限与函数可以交换顺序:
 
 $$
 \varphi\left(y\right)=\varphi\left(\lim x_n\right)=\lim\varphi\left(x_n\right)=\lim x_{n+1}=y,
@@ -694,7 +694,7 @@ $$
 
 故当 $\alpha<1-\theta$ 时, $T$ 在 $O\left(x_0,r\right)$ 内有唯一不动点. $\blacksquare$
 
-> 为什么是 $1-\theta$? 为了 (1) $T$ 能把闭球映到自己里面; (2) 闭球在 $O(x_0,r)$ 内, 我们希望有 $\theta\rho+\alpha r\le\rho<r$, 因此解得 $\alpha<1-\theta$.
+> 为什么是 $1-\theta$? 为了 (1) $T$ 能把闭球映到自己里面; (2) 闭球在 $O\left(x_0,r\right)$ 内, 我们希望有 $\theta\rho+\alpha r\le\rho<r$, 因此解得 $\alpha<1-\theta$.
 
 **(ii) 当 $\alpha\le1-\theta$, $T$ 在 $B\left(x_0,r\right)$ 上连续时, $T$ 在 $B\left(x_0,r\right)$ 内有不动点, 且唯一性成立.**
 

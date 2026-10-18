@@ -2,7 +2,7 @@
 
 > **富比尼定理** 设 $f$ 在乘积空间 $\mathbb R^m\times\mathbb R^n$ 上勒贝格可积. 则对几乎处处的 $x\in\mathbb R^m$, $f\left(x,\cdot\right)$ 关于 $\mathbb R^n$ 可积, 且 $$ \int_{\mathbb R^m\times\mathbb R^n}f\,\mathrm dm\left(x,y\right)=\int_{\mathbb R^m}\left(\int_{\mathbb R^n}f\left(x,y\right)\,\mathrm dn\left(y\right)\right)\mathrm dm\left(x\right). $$
 
-> **勒贝格控制收敛定理** 设 $\left\{f_n\right\}$ 是勒贝格可测函数列, 点态收敛于可测函数 $f$, 且存在可积函数 $g$ 使得 $|f_n\left(t\right)|\le g\left(t\right)$ 对几乎处处的 $t$ 和一切 $n$ 成立. 则 $f$ 可积, 且 $$ \lim_{n\to\infty}\int f_n\,\mathrm dm=\int f\,\mathrm dm. $$
+> **勒贝格控制收敛定理** 设 $\left\{f_n\right\}$ 是勒贝格可测函数列, 点态收敛于可测函数 $f$, 且存在可积函数 $g$ 使得 $\left|f_n\left(t\right)\right|\le g\left(t\right)$ 对几乎处处的 $t$ 和一切 $n$ 成立. 则 $f$ 可积, 且 $$ \lim_{n\to\infty}\int f_n\,\mathrm dm=\int f\,\mathrm dm. $$
 
 > **定义 1.1.2** (极限) 设 $\left(X,d\right)$ 是度量空间, $\left\{x_n\right\}_{n=1}^\infty$ 是 $X$ 中点列, $x_0\in X$, 若 $$\lim_{n\to\infty}d\left(x_n,x_0\right)=0,$$ 则称**点列 $\left\{x_n\right\}_{n=1}^\infty$ 按照度量 $d$ 收敛于 $x_0$**, 记为 $\lim_{n\to\infty}x_n=x_0$.
 
