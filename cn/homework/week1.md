@@ -1,4 +1,4 @@
-# 第 1 周
+# week1
 
 > **定义 1.1.1** (度量空间) 设 $X$ 是一个非空集合, 若对于 $X$ 中任意两个元素 $x,y$, 有一个实数 $d\left(x,y\right)$ 与它们对应, 而且满足下面条件:<br>(i) **(非负性与正定性)** 对任意 $x,y\in X$, $d\left(x,y\right)\ge0$, 并且 $d\left(x,y\right)=0$ 的充要条件是 $x=y$;<br>(ii) **(对称性)** 对任意 $x,y\in X$, $d\left(x,y\right)=d\left(y,x\right)$;<br>(iii) **(三角不等式)** 对任意 $x,y,z\in X$, $d\left(x,y\right)\le d\left(x,z\right)+d\left(z,y\right)$,<br>则称 $\left(X,d\right)$ 是一个**度量空间** (或**距离空间**), $d$ 为 $X$ 上的**度量** (或**距离**), $d\left(x,y\right)$ 为**点 $x,y$ 之间的距离**.
 

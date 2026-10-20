@@ -1,4 +1,4 @@
-# 第 3 周
+# week4
 
 > **定义** (弱导数) 设 $g,h\in L_{\mathrm{loc}}^2\left(\mathbb R\right)$. 若对一切 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 成立 $$ \int_{\mathbb R}g\varphi'\mathrm dt=-\int_{\mathbb R}h\varphi\mathrm dt, $$ 则称 $h$ 是 $g$ 的弱导数, 记为 $g'=h$.
 

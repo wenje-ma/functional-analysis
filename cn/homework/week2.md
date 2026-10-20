@@ -1,4 +1,4 @@
-# 第 2 周
+# week2
 
 > **富比尼定理** 设 $f$ 在乘积空间 $\mathbb R^m\times\mathbb R^n$ 上勒贝格可积. 则对几乎处处的 $x\in\mathbb R^m$, $f\left(x,\cdot\right)$ 关于 $\mathbb R^n$ 可积, 且 $$ \int_{\mathbb R^m\times\mathbb R^n}f\,\mathrm dm\left(x,y\right)=\int_{\mathbb R^m}\left(\int_{\mathbb R^n}f\left(x,y\right)\,\mathrm dn\left(y\right)\right)\mathrm dm\left(x\right). $$
 
