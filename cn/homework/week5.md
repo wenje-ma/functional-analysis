@@ -14,9 +14,9 @@
 
 > **定义 1.5.1 (不动点)**<br>设 $T$ 是集合 $X$ 到自身的映射. 若存在 $x\in X$ 使得 $Tx=x$, 则称 $x$ 是 $T$ 的不动点.
 
-> **定义 1.5.2 (压缩映射)**<br>设 $X$ 是度量空间, $T:X\to X$. 若存在 $0<\theta<1$, 使得 $d\left(Tx,Ty\right)\le \theta d\left(x,y\right)$ ($\forall x,y\in X$), 则称 $T$ 是 $X$ 上的压缩映射, $\theta$ 称为压缩系数.
-
 > **定理 1.5.1 (巴拿赫不动点定理)**<br>设 $X$ 是完备的度量空间, $T:X\to X$ 是压缩映射, 则 $T$ 在 $X$ 中存在唯一的不动点 $x$; 且对任意的 $x_0\in X$, 迭代序列 $x_n=T^{n}x_0$ 收敛于 $x$, 误差估计 $d\left(x_n,x\right)\le \frac{\theta^{n}}{1-\theta}d\left(x_0,Tx_0\right)$.
+
+> **定义 1.5.2 (压缩映射)**<br>设 $X$ 是度量空间, $T:X\to X$. 若存在 $0<\theta<1$, 使得 $d\left(Tx,Ty\right)\le \theta d\left(x,y\right)$ ($\forall x,y\in X$), 则称 $T$ 是 $X$ 上的压缩映射, $\theta$ 称为压缩系数.
 
 > **定义 1.6.1 (相对列紧集)**<br>设 $A$ 是度量空间 $X$ 的子集. 若 $A$ 的闭包 $\overline{A}$ 是紧集, 则称 $A$ 是相对列紧集.
 
@@ -54,7 +54,7 @@ $$
 F\left(x_0,y_0\right)=0,\quad \det\left(\frac{\partial F}{\partial y}\right)\left(x_0,y_0\right)\neq 0,
 $$
 
-其中 $\frac{\partial F}{\partial y}$ 是 $F$ 关于 $y$ 的 Jacobi 矩阵. 对于 $r>0$, 令 $C\left(B\left(x_0,r\right),\mathbb{R}^{m}\right)$ 表示定义在闭球 $B\left(x_0,r\right)$ 上、取值在 $\mathbb{R}^{m}$ 中的向量值连续函数空间, 它按范数
+其中 $\frac{\partial F}{\partial y}$ 是 $F$ 关于 $y$ 的雅可比矩阵. 对于 $r>0$, 令 $C\left(B\left(x_0,r\right),\mathbb{R}^{m}\right)$ 表示定义在闭球 $B\left(x_0,r\right)$ 上, 取值在 $\mathbb{R}^{m}$ 中的向量值连续函数空间, 它按范数
 
 $$
 \left\|\varphi\right\|=\max_{x\in B\left(x_0,r\right),\,1\le i\le m}\left|\varphi_i\left(x\right)\right|,\quad \varphi=\left(\varphi_1,\dots,\varphi_m\right),
@@ -78,15 +78,15 @@ $$
 
 ### 解答 1.5-8
 
-记 $A=\left(\frac{\partial F}{\partial y}\right)\left(x_0,y_0\right)$. 由线性代数知识, $\det A\neq0$ 蕴含 $A$ 是可逆矩阵; 于是 $A^{-1}$ 存在且按算子范数有界, 记其范数为 $\left\|A^{-1}\right\|$.
+(i) 记 $A=\left(\frac{\partial F}{\partial y}\right)\left(x_0,y_0\right)$. 由线性代数知识, $\det A\neq0$ 蕴含 $A$ 是可逆矩阵; 于是 $A^{-1}$ 存在且按算子范数有界, 记其范数为 $\left\|A^{-1}\right\|$.
 
-由于 $F\left(x_0,y_0\right)=0$ 且 $F$ 在 $U\times V$ 中连续, 故对任意 $\epsilon>0$, 存在 $r_1>0$、$\delta_1>0$, 使得 $B\left(x_0,r_1\right)\subset U$、$B\left(y_0,\delta_1\right)\subset V$, 并且当 $\left|x-x_0\right|\le r_1$、$\left|y-y_0\right|\le\delta_1$ 时有 $\left|F\left(x,y\right)\right|<\epsilon$. 取 $\epsilon=\frac{\delta_1}{2\left\|A^{-1}\right\|}$, 可找到 $r_1,\delta_1>0$ 使
+由于 $F\left(x_0,y_0\right)=0$ 且 $F$ 在 $U\times V$ 中连续, 故对任意 $\epsilon>0$, 存在 $r_1>0$, $\delta_1>0$, 使得 $B\left(x_0,r_1\right)\subset U$, $B\left(y_0,\delta_1\right)\subset V$, 并且当 $\left|x-x_0\right|\le r_1$, $\left|y-y_0\right|\le\delta_1$ 时有 $\left|F\left(x,y\right)\right|<\epsilon$. 取 $\epsilon=\frac{\delta_1}{2\left\|A^{-1}\right\|}$, 可找到 $r_1,\delta_1>0$ 使
 
 $$
 \left\|A^{-1}\right\|\cdot\left|F\left(x,y\right)\right|<\frac{\delta_1}{2},\quad \left|x-x_0\right|\le r_1,\ \left|y-y_0\right|\le\delta_1. \tag{1}
 $$
 
-另一方面, 由于 $F\left(x,\cdot\right)$ 对每个 $x\in U$ 连续可微, $\frac{\partial F}{\partial y}$ 在 $U\times V$ 上连续, 且 $\frac{\partial F}{\partial y}\left(x_0,y_0\right)=A$, 故存在 $0<r\le r_1$、$0<\delta\le\delta_1$, 使得当 $\left|x-x_0\right|\le r$、$\left|y-y_0\right|\le\delta$ 时有
+另一方面, 由于 $F\left(x,\cdot\right)$ 对每个 $x\in U$ 连续可微, $\frac{\partial F}{\partial y}$ 在 $U\times V$ 上连续, 且 $\frac{\partial F}{\partial y}\left(x_0,y_0\right)=A$, 故存在 $0<r\le r_1$, $0<\delta\le\delta_1$, 使得当 $\left|x-x_0\right|\le r$, $\left|y-y_0\right|\le\delta$ 时有
 
 $$
 \left\|A^{-1}\frac{\partial F}{\partial y}\left(x,y\right)-I\right\|<\theta<1 \tag{2}
@@ -94,7 +94,7 @@ $$
 
 对某个 $0<\theta<1$ 成立 (例如取 $\theta=\frac12$).
 
-现在验证 $T$ 良定义. 取 $\varphi\in E$. 因 $F$ 连续、$\varphi$ 连续, 故 $T\varphi=\varphi-A^{-1}F\left(\cdot,\varphi\left(\cdot\right)\right)$ 是 $B\left(x_0,r\right)$ 上的连续函数, 即 $T\varphi\in C\left(B\left(x_0,r\right),\mathbb{R}^{m}\right)$. 又因 $F\left(x_0,y_0\right)=0$, 故
+现在验证 $T$ 良定义. 取 $\varphi\in E$. 因 $F$ 连续, $\varphi$ 连续, 故 $T\varphi=\varphi-A^{-1}F\left(\cdot,\varphi\left(\cdot\right)\right)$ 是 $B\left(x_0,r\right)$ 上的连续函数, 即 $T\varphi\in C\left(B\left(x_0,r\right),\mathbb{R}^{m}\right)$. 又因 $F\left(x_0,y_0\right)=0$, 故
 
 $$
 \left(T\varphi\right)\left(x_0\right)=\varphi\left(x_0\right)-A^{-1}F\left(x_0,\varphi\left(x_0\right)\right)=y_0-A^{-1}F\left(x_0,y_0\right)=y_0.
@@ -110,18 +110,24 @@ $$
 
 因为 $\varphi_1,\varphi_2\in E$, 故 $\varphi_2\left(x\right)+t\left(\varphi_1\left(x\right)-\varphi_2\left(x\right)\right)\in B\left(y_0,\delta\right)$, 故由 (2),
 
-$$\left|\left(T\varphi_1\right)\left(x\right)-\left(T\varphi_2\right)\left(x\right)\right|=\left|\left(I-A^{-1}\int_0^{1}\frac{\partial F}{\partial y}\left(x,\varphi_2\left(x\right)+t\left(\varphi_1\left(x\right)-\varphi_2\left(x\right)\right)\right)\,\mathrm dt\right)\left(\varphi_1\left(x\right)-\varphi_2\left(x\right)\right)\right|\le\theta\left|\varphi_1\left(x\right)-\varphi_2\left(x\right)\right|.
+$$
+\begin{aligned}
+\left|\left(T\varphi_1\right)\left(x\right)-\left(T\varphi_2\right)\left(x\right)\right|&=\left|\left(I-A^{-1}\int_0^{1}\frac{\partial F}{\partial y}\left(x,\varphi_2\left(x\right)t\left(\varphi_1\left(x\right)-\varphi_2\left(x\right)\right)\right)\,\mathrm dt\right)\left(\varphi_1\left(x\right)-\varphi_2\left(x\right)\right)\right|\\
+&\le\theta\left|\varphi_1\left(x\right)-\varphi_2\left(x\right)\right|.
+\end{aligned}
 $$
 
-对 $x$ 取最大值, 得到 $\left\|T\varphi_1-T\varphi_2\right\|\le\theta\left\|\varphi_1-\varphi_2\right\|$, 其中 $0<\theta<1$. 故 $T$ 是 $E$ 上的压缩映射. 而 $E$ 关于条件 $\varphi\left(x_0\right)=y_0$、$\left|\varphi\left(x\right)-y_0\right|\le\delta$ ($\forall x$) 是闭集, 故 $E$ 是巴拿赫空间 $C\left(B\left(x_0,r\right),\mathbb{R}^{m}\right)$ 的闭子集, 由**引理 1.4.1 (基本点列与完备性)(iii)**, $E$ 是完备的. 由**定理 1.5.1 (巴拿赫不动点定理)**, $T$ 在 $E$ 中存在唯一的不动点 $\varphi$, 即 $T\varphi=\varphi$. 于是对一切 $x\in B\left(x_0,r\right)$,
+对 $x$ 取最大值, 得到 $\left\|T\varphi_1-T\varphi_2\right\|\le\theta\left\|\varphi_1-\varphi_2\right\|$, 其中 $0<\theta<1$. 故 $T$ 是 $E$ 上的压缩映射.
+
+(ii) 已知 $E$ 关于条件 $\varphi\left(x_0\right)=y_0$, $\left|\varphi\left(x\right)-y_0\right|\le\delta$ ($\forall x$) 是闭集, 故 $E$ 是巴拿赫空间 $C\left(B\left(x_0,r\right),\mathbb{R}^{m}\right)$ 的闭子集, 由**引理 1.4.1 (基本点列与完备性)(iii)**, $E$ 是完备的. 由**定理 1.5.1 (巴拿赫不动点定理)**, $T$ 在 $E$ 中存在唯一的不动点 $\varphi$, 即 $T\varphi=\varphi$. 于是对一切 $x\in B\left(x_0,r\right)$,
 
 $$
-\varphi\left(x\right)-A^{-1}F\left(x,\varphi\left(x\right)\right)=\varphi\left(x\right)\ \Rightarrow\ A^{-1}F\left(x,\varphi\left(x\right)\right)=0\ \Rightarrow\ F\left(x,\varphi\left(x\right)\right)=0
+\varphi\left(x\right)-A^{-1}F\left(x,\varphi\left(x\right)\right)=\varphi\left(x\right)\ \Rightarrow\ A^{-1}F\left(x,\varphi\left(x\right)\right)=0\ \Rightarrow\ F\left(x,\varphi\left(x\right)\right)=0.
 $$
 
-(最后一步用到 $A^{-1}$ 可逆, 故 $A^{-1}F=0$ 蕴含 $F=0$). 且 $\varphi\left(x_0\right)=y_0$.
+其中, 最后一步用到 $A^{-1}$ 可逆, 故 $A^{-1}F=0$ 蕴含 $F=0$, 且 $\varphi\left(x_0\right)=y_0$. 
 
-取 $U_0=B\left(x_0,r\right)\cap U$, 则 $U_0$ 是 $x_0$ 在 $U$ 中的邻域, $\varphi|_{U_0}$ 连续, 满足 $F\left(x,\varphi\left(x\right)\right)=0$ ($\forall x\in U_0$) 且 $\varphi\left(x_0\right)=y_0$. 唯一性: 若在 $U_0'\subset U$ 上还有连续解 $\psi$, 满足 $F\left(x,\psi\left(x\right)\right)=0$、$\psi\left(x_0\right)=y_0$, 则由 $\psi$ 的连续性和 $\psi\left(x_0\right)=y_0$, 适当缩小邻域可设 $B\left(x_0,r\right)\subset U_0\cap U_0'$ 且 $\left|\psi\left(x\right)-y_0\right|\le\delta$ 对 $x\in B\left(x_0,r\right)$ 成立, 于是 $\psi|_{B\left(x_0,r\right)}\in E$ 且 $T\psi=\psi$, 由不动点的唯一性得 $\psi=\varphi$ 于 $B\left(x_0,r\right)$, 进而于 $U_0\cap U_0'$. 证毕.
+取 $U_0=B\left(x_0,r\right)\cap U$, 则 $U_0$ 是 $x_0$ 在 $U$ 中的邻域, $\varphi|_{U_0}$ 连续, 满足 $F\left(x,\varphi\left(x\right)\right)=0$ ($\forall x\in U_0$) 且 $\varphi\left(x_0\right)=y_0$. 唯一性: 若在 $U_0'\subset U$ 上还有连续解 $\psi$, 满足 $F\left(x,\psi\left(x\right)\right)=0$, $\psi\left(x_0\right)=y_0$, 则由 $\psi$ 的连续性和 $\psi\left(x_0\right)=y_0$, 适当缩小邻域可设 $B\left(x_0,r\right)\subset U_0\cap U_0'$ 且 $\left|\psi\left(x\right)-y_0\right|\le\delta$ 对 $x\in B\left(x_0,r\right)$ 成立, 于是 $\psi|_{B\left(x_0,r\right)}\in E$ 且 $T\psi=\psi$, 由不动点的唯一性得 $\psi=\varphi$ 于 $B\left(x_0,r\right)$, 进而于 $U_0\cap U_0'$. $\blacksquare$
 
 ---
 
@@ -139,7 +145,7 @@ $$
 
 从而 $\bigcap_{i=1}^{n}F_{\lambda_i}=\emptyset$, 这与 $\left\{F_\lambda\right\}$ 的任意有限交集不空矛盾. 故 $\bigcap_\lambda F_\lambda\neq\emptyset$.
 
-再证第二句. 设度量空间 $A$ 具有所述有限交性质, 证明 $A$ 是紧的. 由**定理 1.6.2 (列紧 $\Leftrightarrow$ 覆盖紧)**, 只须证明 $A$ 是列紧的, 即 $A$ 中任意点列都有收敛子列. 用反证法, 设存在点列 $\left\{x_n\right\}\subset A$ 没有收敛子列. 令 $F_n=\overline{\left\{x_k:k\ge n\right\}}$ ($A$ 中从第 $n$ 项起的尾集的闭包). 则每个 $F_n$ 是闭集, 且 $F_1\supset F_2\supset\cdots$, 故任意有限个 $F_{n_1},\dots,F_{n_m}$ (设 $n=\max\left\{n_i\right\}$) 的交 $\bigcap_{i=1}^{m}F_{n_i}=F_n\neq\emptyset$ (因为 $x_n\in F_n$). 由有限交性质, $\bigcap_{n=1}^{\infty}F_n\neq\emptyset$. 取 $x\in\bigcap_{n=1}^{\infty}F_n$. 由 $x\in F_n=\overline{\left\{x_k:k\ge n\right\}}$, 对每个 $n$ 与 $\epsilon=\frac1m$, 存在 $k_m\ge n$ 使 $d\left(x_{k_m},x\right)<\frac1m$, 于是取子列 $k_1<k_2<\cdots$ 即得 $x_{k_m}\to x$, 这与 $\left\{x_n\right\}$ 没有收敛子列矛盾. 故 $A$ 列紧, 由**定理 1.6.2 (列紧 $\Leftrightarrow$ 覆盖紧)**, $A$ 是紧的. 证毕.
+再证第二句. 设度量空间 $A$ 具有所述有限交性质, 证明 $A$ 是紧的. 由**定理 1.6.2 (列紧 $\Leftrightarrow$ 覆盖紧)**, 只须证明 $A$ 是列紧的, 即 $A$ 中任意点列都有收敛子列. 用反证法, 设存在点列 $\left\{x_n\right\}\subset A$ 没有收敛子列. 令 $F_n=\overline{\left\{x_k:k\ge n\right\}}$ ($A$ 中从第 $n$ 项起的尾集的闭包). 则每个 $F_n$ 是闭集, 且 $F_1\supset F_2\supset\cdots$, 故任意有限个 $F_{n_1},\dots,F_{n_m}$ (设 $n=\max\left\{n_i\right\}$) 的交 $\bigcap_{i=1}^{m}F_{n_i}=F_n\neq\emptyset$ (因为 $x_n\in F_n$). 由有限交性质, $\bigcap_{n=1}^{\infty}F_n\neq\emptyset$. 取 $x\in\bigcap_{n=1}^{\infty}F_n$. 由 $x\in F_n=\overline{\left\{x_k:k\ge n\right\}}$, 对每个 $n$ 与 $\epsilon=\frac1m$, 存在 $k_m\ge n$ 使 $d\left(x_{k_m},x\right)<\frac1m$, 于是取子列 $k_1<k_2<\cdots$ 即得 $x_{k_m}\to x$, 这与 $\left\{x_n\right\}$ 没有收敛子列矛盾. 故 $A$ 列紧, 由**定理 1.6.2 (列紧 $\Leftrightarrow$ 覆盖紧)**, $A$ 是紧的. $\blacksquare$
 
 ---
 
@@ -155,7 +161,7 @@ $$
 \left\{\prod_{i=1}^{n}\left[k_i a,\ \left(k_i+1\right)a\right]:\ k_i\in\mathbb{Z},\ i=1,\dots,n\right\}.
 $$
 
-每个小方体的直径不超过 $\sqrt{n}\,a=\epsilon$. 因为 $E\subset\left[-M,M\right]^{n}$, 故与 $E$ 相交的小方体只有有限多个 (事实上至多 $\left(\left\lfloor\frac{2M}{a}\right\rfloor+2\right)^{n}$ 个). 对这有限多个小方体, 每个与 $E$ 相交的方体 $Q_j$ 中取一个点 $x_j\in E\cap Q_j$, 得到有限集 $\left\{x_1,\dots,x_N\right\}$. 对任意 $x\in E$, $x$ 属于某个与 $E$ 相交的方体 $Q_j$, 故 $\left|x-x_j\right|\le\operatorname{diam}Q_j\le\epsilon$, 即 $x\in U\left(x_j,\epsilon\right)$. 所以 $\left\{x_1,\dots,x_N\right\}$ 是 $E$ 的有限 $\epsilon$-网. 证毕.
+每个小方体的 (外接球的) 直径不超过 $\sqrt{n}\,a=\epsilon$. 因为 $E\subset\left[-M,M\right]^{n}$, 故与 $E$ 相交的小方体只有有限多个 (事实上至多 $\left(\left\lfloor\frac{2M}{a}\right\rfloor+2\right)^{n}$ 个). 对这有限多个小方体, 每个与 $E$ 相交的方体 $Q_j$ 中取一个点 $x_j\in E\cap Q_j$, 得到有限集 $\left\{x_1,\dots,x_N\right\}$. 对任意 $x\in E$, $x$ 属于某个与 $E$ 相交的方体 $Q_j$, 故 $\left|x-x_j\right|\le\operatorname{diam}Q_j\le\epsilon$, 即 $x\in U\left(x_j,\epsilon\right)$. 所以 $\left\{x_1,\dots,x_N\right\}$ 是 $E$ 的有限 $\epsilon$-网. $\blacksquare$
 
 ---
 
@@ -167,19 +173,19 @@ $$
 
 先证充分性. 设 $A$ 完全有界. 由**定义 1.6.3 ($\epsilon$-网与完全有界集)**, 对 $\epsilon>0$, $A$ 有有限的 $\epsilon$-网 $\left\{a_1,\dots,a_N\right\}\subset A$. 令 $M=\operatorname{span}\left\{a_1,\dots,a_N\right\}$, 则 $M$ 是 $L$ 的有限维子空间. 对任意 $a\in A$, 存在 $a_i$ 使 $\left\|a-a_i\right\|<\epsilon$, 而 $a_i\in M$, 故 $d\left(a,M\right)=\inf_{m\in M}\left\|a-m\right\|\le\left\|a-a_i\right\|<\epsilon$. 故 $A$ 中每个点与 $M$ 的距离小于 $\epsilon$.
 
-再证必要性. 设对任何 $\epsilon>0$ 存在有限维子空间 $M$, 使 $A$ 中每个点与 $M$ 的距离小于 $\epsilon$. 给定 $\epsilon>0$, 取 $M$ 使 $d\left(a,M\right)<\frac{\epsilon}{2}$ 对一切 $a\in A$ 成立. 对每个 $a\in A$, 由 $d\left(a,M\right)<\frac{\epsilon}{2}$ 可取 $m\left(a\right)\in M$ 使 $\left\|a-m\left(a\right)\right\|<\frac{\epsilon}{2}$. 因 $A$ 有界且 $\left\|m\left(a\right)\right\|\le\left\|m\left(a\right)-a\right\|+\left\|a\right\|$, 故集合 $\left\{m\left(a\right):a\in A\right\}\subset M$ 有界. 由**例 1.6.1 (有限维空间中相对列紧 $\Leftrightarrow$ 有界) 与例 1.6.3 ($\mathbb{R}^n$ 中有界集完全有界)**, 有限维赋范线性空间 $M$ 中的有界集是完全有界集, 故存在有限集 $\left\{m_1,\dots,m_N\right\}\subset M$ 使 $\left\{m\left(a\right):a\in A\right\}\subset\bigcup_{i=1}^{N}U\left(m_i,\epsilon/2\right)$. 于是对任意 $a\in A$, 存在 $i$ 使 $\left\|m\left(a\right)-m_i\right\|<\frac{\epsilon}{2}$, 故
+再证必要性. 设对任何 $\epsilon>0$ 存在有限维子空间 $M$, 使 $A$ 中每个点与 $M$ 的距离小于 $\epsilon$. 给定 $\epsilon>0$, 取 $M$ 使 $d\left(a,M\right)<\frac{\epsilon}{2}$ 对一切 $a\in A$ 成立. 对每个 $a\in A$, 由 $d\left(a,M\right)<\frac{\epsilon}{2}$ 可取 $m\left(a\right)\in M$ 使 $\left\|a-m\left(a\right)\right\|<\frac{\epsilon}{2}$. 因 $A$ 有界且 $\left\|m\left(a\right)\right\|\le\left\|m\left(a\right)-a\right\|+\left\|a\right\|$, 故集合 $\left\{m\left(a\right):a\in A\right\}\subset M$ 有界. 由**例 1.6.3 ($\mathbb{R}^n$ 中有界集完全有界)**, 有限维赋范线性空间 $M$ 中的有界集是完全有界集, 故存在有限集 $\left\{m_1,\dots,m_N\right\}\subset M$ 使 $\left\{m\left(a\right):a\in A\right\}\subset\bigcup_{i=1}^{N}U\left(m_i,\epsilon/2\right)$. 于是对任意 $a\in A$, 存在 $i$ 使 $\left\|m\left(a\right)-m_i\right\|<\frac{\epsilon}{2}$, 故
 
 $$
 \left\|a-m_i\right\|\le\left\|a-m\left(a\right)\right\|+\left\|m\left(a\right)-m_i\right\|<\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon.
 $$
 
-所以 $\left\{m_1,\dots,m_N\right\}$ 是 $A$ 的有限 $\epsilon$-网 (由**注 1.6.1 (网中的点不必属于集合本身)**, 网点不必属于 $A$). 由 $\epsilon$ 的任意性, $A$ 完全有界. 证毕.
+所以 $\left\{m_1,\dots,m_N\right\}$ 是 $A$ 的有限 $\epsilon$-网 (由**注 1.6.1 (网中的点不必属于集合本身)**, 网点不必属于 $A$). 由 $\epsilon$ 的任意性, $A$ 完全有界. $\blacksquare$
 
 ---
 
 ## 1.6-6
 
-设 $0<\alpha\le1$. $C_\alpha\left[a,b\right]$ 是由在 $\left[a,b\right]$ 上满足 $\mathrm{H\ddot{o}lder}$ 条件 $\left|f\left(x\right)-f\left(x'\right)\right|\le M_f\left|x-x'\right|^{\alpha}$, 并且 $f\left(a\right)=0$ 的函数组成的线性空间, 其范数定义为
+设 $0<\alpha\le1$. $C_\alpha\left[a,b\right]$ 是由在 $\left[a,b\right]$ 上满足赫尔德条件 $\left|f\left(x\right)-f\left(x'\right)\right|\le M_f\left|x-x'\right|^{\alpha}$, 并且 $f\left(a\right)=0$ 的函数组成的线性空间, 其范数定义为
 
 $$
 \left\|f\right\|=\sup_{x,x'\in\left[a,b\right],\,x\neq x'}\frac{\left|f\left(x\right)-f\left(x'\right)\right|}{\left|x-x'\right|^{\alpha}}.
@@ -189,7 +195,7 @@ $$
 
 ### 解答 1.6-6
 
-我给出如下的充分条件: 若 $A\subset C_\alpha\left[a,b\right]$ 满足
+我给出如下的充分条件: 若 $A\subset C_\alpha\left[a,b\right]$ 满足:
 
 (i) $A$ 在 $C_\alpha\left[a,b\right]$ 中有界, 即存在 $M>0$ 使 $\left\|f\right\|\le M$ ($\forall f\in A$) ;
 
@@ -201,7 +207,7 @@ $$
 
 则 $A$ 是完全有界集.
 
-先由 (i) 推出 $A$ 在 $C\left[a,b\right]$ 中一致有界且等度连续. 事实上, 对 $f\in A$ 与 $x\in\left[a,b\right]$, 由 $f\left(a\right)=0$ 得 $\left|f\left(x\right)\right|=\left|f\left(x\right)-f\left(a\right)\right|\le\left\|f\right\|\left|x-a\right|^{\alpha}\le M\left(b-a\right)^{\alpha}$, 故 $A$ 在 $C\left[a,b\right]$ 中一致有界; 且 $\left|f\left(x\right)-f\left(x'\right)\right|\le\left\|f\right\|\left|x-x'\right|^{\alpha}\le M\left|x-x'\right|^{\alpha}$, 故 $A$ 在 $C\left[a,b\right]$ 中等度连续. 由**定理 1.6.5 (阿泽拉-阿斯卡里定理)**, $A$ 在 $C\left[a,b\right]$ 中相对列紧, 从而是完全有界的 (由**定理 1.6.3 (豪斯多夫定理)**, 因 $C\left[a,b\right]$ 完备).
+先由 (i) 推出 $A$ 在 $C\left[a,b\right]$ 中一致有界且等度连续. 事实上, 对 $f\in A$ 与 $x\in\left[a,b\right]$, 由 $f\left(a\right)=0$ 得 $\left|f\left(x\right)\right|=\left|f\left(x\right)-f\left(a\right)\right|\le\left\|f\right\|\left|x-a\right|^{\alpha}\le M\left(b-a\right)^{\alpha}$, 故 $A$ 在 $C\left[a,b\right]$ 中一致有界; 且 $\left|f\left(x\right)-f\left(x'\right)\right|\le\left\|f\right\|\left|x-x'\right|^{\alpha}\le M\left|x-x'\right|^{\alpha}$, 故 $A$ 在 $C\left[a,b\right]$ 中等度连续. 由**定理 1.6.5 (阿泽拉-阿斯卡里定理)**, $A$ 在 $C\left[a,b\right]$ 中相对列紧. 由**定理 1.6.3 (豪斯多夫定理)**, 因 $C\left[a,b\right]$ 完备, 故其是完全有界的.
 
 下面用 $\epsilon$-网直接证明 $A$ 在 $C_\alpha\left[a,b\right]$ 中完全有界. 给定 $\epsilon>0$, 由条件 (ii) 取 $\delta>0$ 使
 
@@ -241,7 +247,7 @@ $$
 \frac{\left|\left(f-f_i\right)\left(x\right)-\left(f-f_i\right)\left(x'\right)\right|}{\left|x-x'\right|^{\alpha}}\le\frac{\left|\left(f-f_i\right)\left(x\right)\right|+\left|\left(f-f_i\right)\left(x'\right)\right|}{\delta^{\alpha}}\le\frac{2\left(\frac{\epsilon}{2}h^{\alpha}+\frac{\epsilon\delta^{\alpha}}{8}\right)}{\delta^{\alpha}}=\frac{\epsilon h^{\alpha}}{\delta^{\alpha}}+\frac{\epsilon}{4}<\frac{\epsilon}{2}.
 $$
 
-综合两情形, $\left\|f-f_i\right\|_{C_\alpha\left[a,b\right]}<\epsilon$, 故 $\left\{f_1,\dots,f_K\right\}$ 是 $A$ 的有限 $\epsilon$-网. 由 $\epsilon$ 的任意性, $A$ 完全有界. 证毕.
+综合两情形, $\left\|f-f_i\right\|_{C_\alpha\left[a,b\right]}<\epsilon$, 故 $\left\{f_1,\dots,f_K\right\}$ 是 $A$ 的有限 $\epsilon$-网. 由 $\epsilon$ 的任意性, $A$ 完全有界. $\blacksquare$
 
 ---
 
@@ -268,7 +274,10 @@ $$
 对任意 $f\in A$, 存在 $i$ 使 $\left\|f-f_i\right\|_{p}<\frac{\epsilon}{2}$. 由**闵可夫斯基不等式**,
 
 $$
-\left(\int_{\left\{\left|x\right|>M\right\}}\left|f\left(x\right)\right|^{p}\,\mathrm dm\right)^{1/p}\le\left(\int_{\left\{\left|x\right|>M\right\}}\left|f\left(x\right)-f_i\left(x\right)\right|^{p}\,\mathrm dm\right)^{1/p}+\left(\int_{\left\{\left|x\right|>M\right\}}\left|f_i\left(x\right)\right|^{p}\,\mathrm dm\right)^{1/p}\le\left\|f-f_i\right\|_{p}+\frac{\epsilon}{2}<\epsilon.
+\begin{aligned}
+&\quad\;\left(\int_{\left\{\left|x\right|>M\right\}}\left|f\left(x\right)\right|^{p}\,\mathrm dm\right)^{1/p}\le\left(\int_{\left\{\left|x\right|>M\right\}}\left|f\left(x\right)-f_i\left(x\right)\right|^{p}\,\mathrm dm\right)^{1/p}\\
+&+\left(\int_{\left\{\left|x\right|>M\right\}}\left|f_i\left(x\right)\right|^{p}\,\mathrm dm\right)^{1/p}\le\left\|f-f_i\right\|_{p}+\frac{\epsilon}{2}<\epsilon.
+\end{aligned}
 $$
 
 于是 $\int_{\left\{\left|x\right|>M\right\}}\left|f\left(x\right)\right|^{p}\,\mathrm dm<\epsilon^{p}$ ($\forall f\in A$), (ii) 得证.
@@ -279,7 +288,7 @@ $$
 \left\|f\left(x+h\right)-f\left(x\right)\right\|_{p}\le\left\|f\left(x+h\right)-f_i\left(x+h\right)\right\|_{p}+\left\|f_i\left(x+h\right)-f_i\left(x\right)\right\|_{p}+\left\|f_i\left(x\right)-f\left(x\right)\right\|_{p}<\frac{\epsilon}{3}+\frac{\epsilon}{3}+\frac{\epsilon}{3}=\epsilon
 $$
 
-对一切 $\left|h\right|<\delta$ 成立. 故 (iii) 得证. 综上, 必要性成立. 证毕.
+对一切 $\left|h\right|<\delta$ 成立. 故 (iii) 得证. 综上, 必要性成立. $\blacksquare$
 
 ---
 
@@ -291,7 +300,7 @@ $$
 C_0\left(\mathbb{R}\right)=\left\{f:\ f\ \text{在}\ \mathbb{R}\ \text{上连续且}\ \lim_{\left|x\right|\to\infty}f\left(x\right)=0\right\}
 $$
 
-按范数 $\left\|f\right\|=\sup_{x\in\mathbb{R}}\left|f\left(x\right)\right|$ 构成巴拿赫空间. 证明 $A\subset C_0\left(\mathbb{R}\right)$ 是相对列紧集的充要条件是 $A$ 有界、等度连续, 且对任意 $\epsilon>0$ 存在 $N>0$, 使得 $\left|f\left(x\right)\right|\le\epsilon$ ($\forall \left|x\right|>N$, $f\in A$).
+按范数 $\left\|f\right\|=\sup_{x\in\mathbb{R}}\left|f\left(x\right)\right|$ 构成巴拿赫空间. 证明 $A\subset C_0\left(\mathbb{R}\right)$ 是相对列紧集的充要条件是 $A$ 有界, 等度连续, 且对任意 $\epsilon>0$ 存在 $N>0$, 使得 $\left|f\left(x\right)\right|\le\epsilon$ ($\forall \left|x\right|>N$, $f\in A$).
 
 ### 解答 1.6-8
 
@@ -313,15 +322,15 @@ $$
 
 故 $A$ 等度连续. 必要性得证.
 
-再证充分性. 设 $A$ 有界、等度连续, 且对任意 $\epsilon>0$ 存在 $N$ 使 $\left|f\left(x\right)\right|\le\epsilon$ 对 $\left|x\right|>N$、$f\in A$. 证明 $A$ 完全有界, 再由**定理 1.6.3 (豪斯多夫定理)** ($C_0\left(\mathbb{R}\right)$ 完备) 得 $A$ 相对列紧.
+再证充分性. 设 $A$ 有界, 等度连续, 且对任意 $\epsilon>0$ 存在 $N$ 使 $\left|f\left(x\right)\right|\le\epsilon$ 对 $\left|x\right|>N$, $f\in A$. 证明 $A$ 完全有界, 再由**定理 1.6.3 (豪斯多夫定理)** ($C_0\left(\mathbb{R}\right)$ 完备) 得 $A$ 相对列紧.
 
-给定 $\epsilon>0$, 由假设取 $N>0$ 使 $\left|f\left(x\right)\right|\le\frac{\epsilon}{3}$ 对 $\left|x\right|>N$、$f\in A$. 在紧区间 $\left[-N,N\right]$ 上, $A$ 作为 $C\left[-N,N\right]$ 的子集有界且等度连续, 由**定理 1.6.5 (阿泽拉-阿斯卡里定理)**, $A|_{\left[-N,N\right]}$ 在 $C\left[-N,N\right]$ 中相对列紧, 从而是完全有界的, 故存在有限个函数 $g_1,\dots,g_K$ 使: 对每个 $f\in A$, 存在 $k$ 满足
+给定 $\epsilon>0$, 由假设取 $N>0$ 使 $\left|f\left(x\right)\right|\le\frac{\epsilon}{3}$ 对 $\left|x\right|>N$, $f\in A$. 在紧区间 $\left[-N,N\right]$ 上, $A$ 作为 $C\left[-N,N\right]$ 的子集有界且等度连续, 由**定理 1.6.5 (阿泽拉-阿斯卡里定理)**, $A|_{\left[-N,N\right]}$ 在 $C\left[-N,N\right]$ 中相对列紧, 从而是完全有界的, 故存在有限个函数 $g_1,\dots,g_K$ 使: 对每个 $f\in A$, 存在 $k$ 满足
 
 $$
 \max_{\left|x\right|\le N}\left|f\left(x\right)-g_k\left(x\right)\right|<\frac{\epsilon}{3}.
 $$
 
-把每个 $g_k$ 线性延拓为 $\widetilde g_k\in C_0\left(\mathbb{R}\right)$: $\widetilde g_k=g_k$ 于 $\left[-N,N\right]$, 在 $\left[N,N+1\right]$ 与 $\left[-N-1,-N\right]$ 上从 $g_k\left(\pm N\right)$ 线性过渡到 $0$, 在 $\left|x\right|\ge N+1$ 上取 $0$. 则 $\left\{\widetilde g_1,\dots,\widetilde g_K\right\}\subset C_0\left(\mathbb{R}\right)$. 对任意 $f\in A$, 存在 $k$ 使 $\max_{\left|x\right|\le N}\left|f-g_k\right|<\frac{\epsilon}{3}$. 当 $\left|x\right|\le N$ 时 $\left|f\left(x\right)-\widetilde g_k\left(x\right)\right|=\left|f\left(x\right)-g_k\left(x\right)\right|<\frac{\epsilon}{3}$; 当 $\left|x\right|>N$ 时 $\left|f\left(x\right)\right|\le\frac{\epsilon}{3}$, 且 $\left|\widetilde g_k\left(x\right)\right|\le\max\left\{\left|g_k\left(N\right)\right|,\left|g_k\left(-N\right)\right|\right\}$, 而 $\left|g_k\left(\pm N\right)\right|\le\left|f\left(\pm N\right)-g_k\left(\pm N\right)\right|+\left|f\left(\pm N\right)\right|<\frac{\epsilon}{3}+\frac{\epsilon}{3}=\frac{2\epsilon}{3}$, 故 $\left|f\left(x\right)-\widetilde g_k\left(x\right)\right|\le\left|f\left(x\right)\right|+\left|\widetilde g_k\left(x\right)\right|<\frac{\epsilon}{3}+\frac{2\epsilon}{3}=\epsilon$. 于是 $\left\|f-\widetilde g_k\right\|<\epsilon$, 故 $\left\{\widetilde g_1,\dots,\widetilde g_K\right\}$ 是 $A$ 的有限 $\epsilon$-网. 由 $\epsilon$ 的任意性, $A$ 完全有界, 从而相对列紧. 证毕.
+把每个 $g_k$ 线性延拓为 $\widetilde g_k\in C_0\left(\mathbb{R}\right)$: $\widetilde g_k=g_k$ 于 $\left[-N,N\right]$, 在 $\left[N,N+1\right]$ 与 $\left[-N-1,-N\right]$ 上从 $g_k\left(\pm N\right)$ 线性过渡到 $0$, 在 $\left|x\right|\ge N+1$ 上取 $0$. 则 $\left\{\widetilde g_1,\dots,\widetilde g_K\right\}\subset C_0\left(\mathbb{R}\right)$. 对任意 $f\in A$, 存在 $k$ 使 $\max_{\left|x\right|\le N}\left|f-g_k\right|<\frac{\epsilon}{3}$. 当 $\left|x\right|\le N$ 时 $\left|f\left(x\right)-\widetilde g_k\left(x\right)\right|=\left|f\left(x\right)-g_k\left(x\right)\right|<\frac{\epsilon}{3}$; 当 $\left|x\right|>N$ 时 $\left|f\left(x\right)\right|\le\frac{\epsilon}{3}$, 且 $\left|\widetilde g_k\left(x\right)\right|\le\max\left\{\left|g_k\left(N\right)\right|,\left|g_k\left(-N\right)\right|\right\}$, 而 $\left|g_k\left(\pm N\right)\right|\le\left|f\left(\pm N\right)-g_k\left(\pm N\right)\right|+\left|f\left(\pm N\right)\right|<\frac{\epsilon}{3}+\frac{\epsilon}{3}=\frac{2\epsilon}{3}$, 故 $\left|f\left(x\right)-\widetilde g_k\left(x\right)\right|\le\left|f\left(x\right)\right|+\left|\widetilde g_k\left(x\right)\right|<\frac{\epsilon}{3}+\frac{2\epsilon}{3}=\epsilon$. 于是 $\left\|f-\widetilde g_k\right\|<\epsilon$, 故 $\left\{\widetilde g_1,\dots,\widetilde g_K\right\}$ 是 $A$ 的有限 $\epsilon$-网. 由 $\epsilon$ 的任意性, $A$ 完全有界, 从而相对列紧. $\blacksquare$
 
 ---
 
@@ -347,7 +356,7 @@ $$
 
 故 $z\in\operatorname{co}\left\{a_1,\dots,a_N\right\}+B\left(0,\epsilon\right)$.
 
-记 $K=\operatorname{co}\left\{a_1,\dots,a_N\right\}=\left\{\sum_{i=1}^{N}\lambda_ia_i:\lambda_i\ge0,\ \sum_{i=1}^{N}\lambda_i=1\right\}$. 它是 $\mathbb{R}^{N}$ 中的单形 $\Delta_{N-1}=\left\{\lambda_i\ge0,\ \sum\lambda_i=1\right\}$ 在连续映射 $\left(\lambda_1,\dots,\lambda_N\right)\mapsto\sum\lambda_ia_i$ 下的像, 故 $K$ 是紧集, 由**例 1.6.3 ($\mathbb{R}^n$ 中有界集完全有界)** 知 $K$ 完全有界, 故对 $\epsilon>0$, $K$ 有有限的 $\epsilon$-网 $\left\{y_1,\dots,y_M\right\}\subset K$. 于是对任意 $z\in\operatorname{co}\left(A\right)$, 存在 $u\in K$ 使 $\left\|z-u\right\|<\epsilon$, 且存在 $l$ 使 $\left\|u-y_l\right\|<\epsilon$, 故 $\left\|z-y_l\right\|<2\epsilon$. 所以 $\left\{y_1,\dots,y_M\right\}$ 是 $\operatorname{co}\left(A\right)$ 的有限 $2\epsilon$-网. 由 $\epsilon$ 的任意性, $\operatorname{co}\left(A\right)$ 完全有界, 再由**定理 1.6.3 (豪斯多夫定理)** ($X$ 完备) 得 $\operatorname{co}\left(A\right)$ 相对列紧. 证毕.
+记 $K=\operatorname{co}\left\{a_1,\dots,a_N\right\}=\left\{\sum_{i=1}^{N}\lambda_ia_i:\lambda_i\ge0,\ \sum_{i=1}^{N}\lambda_i=1\right\}$. 它是 $\mathbb{R}^{N}$ 中的单形 $\Delta_{N-1}=\left\{\lambda_i\ge0,\ \sum\lambda_i=1\right\}$ 在连续映射 $\left(\lambda_1,\dots,\lambda_N\right)\mapsto\sum\lambda_ia_i$ 下的像, 故 $K$ 是紧集, 由**例 1.6.3 ($\mathbb{R}^n$ 中有界集完全有界)** 知 $K$ 完全有界, 故对 $\epsilon>0$, $K$ 有有限的 $\epsilon$-网 $\left\{y_1,\dots,y_M\right\}\subset K$. 于是对任意 $z\in\operatorname{co}\left(A\right)$, 存在 $u\in K$ 使 $\left\|z-u\right\|<\epsilon$, 且存在 $l$ 使 $\left\|u-y_l\right\|<\epsilon$, 故 $\left\|z-y_l\right\|<2\epsilon$. 所以 $\left\{y_1,\dots,y_M\right\}$ 是 $\operatorname{co}\left(A\right)$ 的有限 $2\epsilon$-网. 由 $\epsilon$ 的任意性, $\operatorname{co}\left(A\right)$ 完全有界, 再由**定理 1.6.3 (豪斯多夫定理)** ($X$ 完备) 得 $\operatorname{co}\left(A\right)$ 相对列紧. $\blacksquare$
 
 ---
 
@@ -369,7 +378,7 @@ $$
 B=\bigcup_{n=1}^{\infty}\left\{y_{n,1},\dots,y_{n,m_n}\right\},
 $$
 
-则 $B$ 是可数集, 且 $B$ 在 $K$ 中稠密 (因 $B$ 以任意精度逼近 $K$ 中每点). 把 $B$ 依序排列成点列 $\left\{z_1,z_2,\dots\right\}$, 使先排 $\frac{1}{n}$-网、再排 $\frac{1}{n+1}$-网……由于后加入的点属于更细的网, 与已有点的距离至多约 $\frac{1}{n}+\frac{1}{n-1}$, 故可排得相邻点距离递减且满足
+则 $B$ 是可数集, 且 $B$ 在 $K$ 中稠密 (因 $B$ 以任意精度逼近 $K$ 中每点). 把 $B$ 依序排列成点列 $\left\{z_1,z_2,\dots\right\}$, 使先排 $\frac{1}{n}$-网, 再排 $\frac{1}{n+1}$-网……由于后加入的点属于更细的网, 与已有点的距离至多约 $\frac{1}{n}+\frac{1}{n-1}$, 故可排得相邻点距离递减且满足
 
 $$
 \left\|z_k-z_{k-1}\right\|\to0,\quad \sum_{k=2}^{\infty}\left\|z_k-z_{k-1}\right\|<\infty. \tag{1}
@@ -389,7 +398,7 @@ $$
 
 由 (1), $\left\|x_n\right\|=\left\|z_n-z_{n-1}\right\|\to0$, 故 $\lim_{n\to\infty}x_n=0$; 且 $\sum_{n=1}^{\infty}\left\|x_n\right\|\le\left\|z_1\right\|+\sum_{n=2}^{\infty}\left\|z_n-z_{n-1}\right\|<\infty$, 即 $\left\{x_n\right\}$ 绝对可和.
 
-下面证明 $K\subset\overline{\operatorname{co}}\left\{\pm x_n\right\}$. 任取 $w\in\overline{K}$, 由 (2), 存在 $w^{\left(m\right)}\in\operatorname{co}\left\{z_k\right\}$ 使 $w^{\left(m\right)}\to w$. 每个 $w^{\left(m\right)}$ 形如有限凸组合 $w^{\left(m\right)}=\sum_{k=1}^{p_m}\lambda_k^{\left(m\right)}z_k$, 其中 $\lambda_k^{\left(m\right)}\ge0$、$\sum_k\lambda_k^{\left(m\right)}=1$. 由于 $z_k=\sum_{i=1}^{k}x_i$ (望远镜求和), 故
+下面证明 $K\subset\overline{\operatorname{co}}\left\{\pm x_n\right\}$. 任取 $w\in\overline{K}$, 由 (2), 存在 $w^{\left(m\right)}\in\operatorname{co}\left\{z_k\right\}$ 使 $w^{\left(m\right)}\to w$. 每个 $w^{\left(m\right)}$ 形如有限凸组合 $w^{\left(m\right)}=\sum_{k=1}^{p_m}\lambda_k^{\left(m\right)}z_k$, 其中 $\lambda_k^{\left(m\right)}\ge0$, $\sum_k\lambda_k^{\left(m\right)}=1$. 由于 $z_k=\sum_{i=1}^{k}x_i$ (望远镜求和), 故
 
 $$
 w^{\left(m\right)}=\sum_{k=1}^{p_m}\lambda_k^{\left(m\right)}\sum_{i=1}^{k}x_i=\sum_{i=1}^{p_m}\left(\sum_{k=i}^{p_m}\lambda_k^{\left(m\right)}\right)x_i.
@@ -409,7 +418,7 @@ $$
 K\subset\overline{\operatorname{co}}\left\{\pm x_n\right\}=\left\{\sum_{n=1}^{\infty}a_nx_n:\ \left|a_n\right|\le1,\ n=1,2,\dots\right\},\quad \lim_{n\to\infty}x_n=0.
 $$
 
-**说明 (关于系数条件)** 由上述望远镜构造, 所得系数的精确条件为逐项 $\left|a_n\right|\le1$ (即 $K\subset\overline{\operatorname{co}}\left\{\pm x_n\right\}$). 教材习题中写为 $\sum_{n=1}^{\infty}\left|a_n\right|\le1$ 处, 按本构造应理解为逐项 $\left|a_n\right|\le1$; 这也正与书末提示"在推论 1.6.1 稠密点列 $B$ 中相邻点距离越来越小"的望远镜求和构造一致. 证毕.
+**说明 (关于系数条件)** 由上述望远镜构造, 所得系数的精确条件为逐项 $\left|a_n\right|\le1$ (即 $K\subset\overline{\operatorname{co}}\left\{\pm x_n\right\}$). 教材习题中写为 $\sum_{n=1}^{\infty}\left|a_n\right|\le1$ 处, 按本构造应理解为逐项 $\left|a_n\right|\le1$; 这也正与书末提示"在推论 1.6.1 稠密点列 $B$ 中相邻点距离越来越小"的望远镜求和构造一致. $\blacksquare$
 
 ---
 
@@ -461,7 +470,7 @@ $$
 b-a=F_g\left(f\right)=\int_a^{b}\left(x-a\right)f\,\mathrm dm\le\int_a^{b}\left(b-a\right)\left|f\right|\,\mathrm dm=\left(b-a\right)\left\|f\right\|_1\le b-a.
 $$
 
-上式必须处处取等号, 特别地 $\left\|f\right\|_1=1$ 且 $\int_a^{b}\left(x-a\right)f\,\mathrm dm=\int_a^{b}\left(b-a\right)\left|f\right|\,\mathrm dm$. 由 $x-a<b-a$ 在除点 $b$ 外的一切点成立, 最后这个等式迫使 $f$ 几乎处处为零 ($f\neq0$ 的点只能落在单点集 $\left\{b\right\}$ 上, 其测度为 $0$), 这与 $\left\|f\right\|_1=1$ 矛盾. 故不存在 $f\in B_1$ 使 $F_g\left(f\right)=\left\|g\right\|_{\infty}$, 即 $\sup$ 不能达到. 证毕.
+上式必须处处取等号, 特别地 $\left\|f\right\|_1=1$ 且 $\int_a^{b}\left(x-a\right)f\,\mathrm dm=\int_a^{b}\left(b-a\right)\left|f\right|\,\mathrm dm$. 由 $x-a<b-a$ 在除点 $b$ 外的一切点成立, 最后这个等式迫使 $f$ 几乎处处为零 ($f\neq0$ 的点只能落在单点集 $\left\{b\right\}$ 上, 其测度为 $0$), 这与 $\left\|f\right\|_1=1$ 矛盾. 故不存在 $f\in B_1$ 使 $F_g\left(f\right)=\left\|g\right\|_{\infty}$, 即 $\sup$ 不能达到. $\blacksquare$
 
 ---
 
@@ -479,9 +488,9 @@ $$
 
 先证 (i). 设 $f\in C\left(X\right)$, $\epsilon>0$. 由 $f$ 的连续性, 对每个 $x\in X$ 存在 $\delta_x>0$, 使得 $d\left(x,x'\right)<\delta_x$ 蕴含 $\left|f\left(x\right)-f\left(x'\right)\right|<\frac{\epsilon}{2}$. 开球族 $\left\{U\left(x,\frac{\delta_x}{2}\right):x\in X\right\}$ 覆盖紧空间 $X$, 由**定理 1.6.2 (列紧 $\Leftrightarrow$ 覆盖紧)** 它有有限子覆盖 $\left\{U\left(x_i,\frac{\delta_{x_i}}{2}\right)\right\}_{i=1}^{m}$. 令 $\delta=\min_i\frac{\delta_{x_i}}{2}>0$. 若 $d\left(x,x'\right)<\delta$, 取 $i$ 使 $x\in U\left(x_i,\frac{\delta_{x_i}}{2}\right)$, 则 $d\left(x,x_i\right)<\frac{\delta_{x_i}}{2}<\delta_{x_i}$, 故 $\left|f\left(x\right)-f\left(x_i\right)\right|<\frac{\epsilon}{2}$; 且 $d\left(x',x_i\right)\le d\left(x',x\right)+d\left(x,x_i\right)<\delta+\frac{\delta_{x_i}}{2}\le\frac{\delta_{x_i}}{2}+\frac{\delta_{x_i}}{2}=\delta_{x_i}$, 故 $\left|f\left(x'\right)-f\left(x_i\right)\right|<\frac{\epsilon}{2}$. 于是 $\left|f\left(x\right)-f\left(x'\right)\right|<\epsilon$. 所以 $f$ 一致连续, (i) 得证.
 
-再证 (ii). 由**推论 1.6.3 (连续函数达到上下确界)**, 连续函数在紧空间上达到上确界, 故 $\left\|f\right\|=\max_{x\in X}\left|f\left(x\right)\right|$ 良定义, 且它满足范数公理 (非负性、齐次性、三角不等式), 故 $C\left(X\right)$ 是赋范线性空间. 证其完备: 设 $\left\{f_n\right\}\subset C\left(X\right)$ 是 Cauchy 列, 则对每个 $x\in X$, $\left|f_n\left(x\right)-f_m\left(x\right)\right|\le\left\|f_n-f_m\right\|\to0$, 故 $\left\{f_n\left(x\right)\right\}$ 是 $\mathbb{R}$ 中的 Cauchy 列, 因 $\mathbb{R}$ 完备而收敛, 记 $f\left(x\right)=\lim_nf_n\left(x\right)$. 对 $\epsilon>0$, 取 $N$ 使 $\left\|f_n-f_m\right\|<\epsilon$ ($n,m\ge N$), 则对一切 $x$ 与 $m\ge N$, $\left|f_n\left(x\right)-f_m\left(x\right)\right|<\epsilon$, 令 $m\to\infty$ 得 $\left|f_n\left(x\right)-f\left(x\right)\right|\le\epsilon$ ($\forall x$), 故 $\left\|f_n-f\right\|\le\epsilon$, 即 $f_n\to f$ 于 $C\left(X\right)$ 范数. 又因一致极限保持连续性: 对 $\epsilon>0$ 取 $n$ 使 $\left\|f_n-f\right\|<\frac{\epsilon}{3}$, 由 $f_n$ 连续取 $\delta$ 使 $d\left(x,y\right)<\delta$ 蕴含 $\left|f_n\left(x\right)-f_n\left(y\right)\right|<\frac{\epsilon}{3}$, 则 $\left|f\left(x\right)-f\left(y\right)\right|\le\left|f\left(x\right)-f_n\left(x\right)\right|+\left|f_n\left(x\right)-f_n\left(y\right)\right|+\left|f_n\left(y\right)-f\left(y\right)\right|<\epsilon$, 故 $f$ 连续, $f\in C\left(X\right)$. 于是 Cauchy 列收敛, $C\left(X\right)$ 完备, 是巴拿赫空间, (ii) 得证.
+再证 (ii). 由**推论 1.6.3 (连续函数达到上下确界)**, 连续函数在紧空间上达到上确界, 故 $\left\|f\right\|=\max_{x\in X}\left|f\left(x\right)\right|$ 良定义, 且它满足范数公理 (非负性, 齐次性, 三角不等式), 故 $C\left(X\right)$ 是赋范线性空间. 证其完备: 设 $\left\{f_n\right\}\subset C\left(X\right)$ 是 Cauchy 列, 则对每个 $x\in X$, $\left|f_n\left(x\right)-f_m\left(x\right)\right|\le\left\|f_n-f_m\right\|\to0$, 故 $\left\{f_n\left(x\right)\right\}$ 是 $\mathbb{R}$ 中的 Cauchy 列, 因 $\mathbb{R}$ 完备而收敛, 记 $f\left(x\right)=\lim_nf_n\left(x\right)$. 对 $\epsilon>0$, 取 $N$ 使 $\left\|f_n-f_m\right\|<\epsilon$ ($n,m\ge N$), 则对一切 $x$ 与 $m\ge N$, $\left|f_n\left(x\right)-f_m\left(x\right)\right|<\epsilon$, 令 $m\to\infty$ 得 $\left|f_n\left(x\right)-f\left(x\right)\right|\le\epsilon$ ($\forall x$), 故 $\left\|f_n-f\right\|\le\epsilon$, 即 $f_n\to f$ 于 $C\left(X\right)$ 范数. 又因一致极限保持连续性: 对 $\epsilon>0$ 取 $n$ 使 $\left\|f_n-f\right\|<\frac{\epsilon}{3}$, 由 $f_n$ 连续取 $\delta$ 使 $d\left(x,y\right)<\delta$ 蕴含 $\left|f_n\left(x\right)-f_n\left(y\right)\right|<\frac{\epsilon}{3}$, 则 $\left|f\left(x\right)-f\left(y\right)\right|\le\left|f\left(x\right)-f_n\left(x\right)\right|+\left|f_n\left(x\right)-f_n\left(y\right)\right|+\left|f_n\left(y\right)-f\left(y\right)\right|<\epsilon$, 故 $f$ 连续, $f\in C\left(X\right)$. 于是 Cauchy 列收敛, $C\left(X\right)$ 完备, 是巴拿赫空间, (ii) 得证.
 
-最后证 (iii). 先证充分性: 设 $A$ 有界且等度连续, 证明 $A$ 相对列紧. 因 $X$ 紧, 由**基础知识: 紧度量空间的性质**, $X$ 完备且完全有界; 由 (ii), $C\left(X\right)$ 完备. 故由**定理 1.6.3 (豪斯多夫定理)**, 只须证 $A$ 完全有界. 给定 $\epsilon>0$, 由 $A$ 等度连续, 存在 $\delta>0$ 使 $d\left(x,y\right)<\delta$ 蕴含 $\left|f\left(x\right)-f\left(y\right)\right|<\frac{\epsilon}{3}$ ($\forall f\in A$). 因 $X$ 完全有界, $X$ 有有限的 $\delta$-网 $\left\{x_1,\dots,x_N\right\}\subset X$. 考虑求值映射 $\Phi:A\to\mathbb{R}^{N}$, $\Phi\left(f\right)=\left(f\left(x_1\right),\dots,f\left(x_N\right)\right)$. 因 $A$ 有界, $\Phi\left(A\right)$ 在 $\mathbb{R}^{N}$ 中有界, 由**例 1.6.3 ($\mathbb{R}^n$ 中有界集完全有界)** 它完全有界, 故有有限的 $\frac{\epsilon}{3}$-网, 即存在有限个 $f_1,\dots,f_K\in A$ 使: 对每个 $f\in A$ 存在 $i$ 满足 $\max_j\left|f\left(x_j\right)-f_i\left(x_j\right)\right|<\frac{\epsilon}{3}$. 对任意 $x\in X$, $x$ 落在某个 $x_j$ 的 $\delta$-邻域内, 故 $d\left(x,x_j\right)<\delta$, 由等度连续性 $\left|f\left(x\right)-f\left(x_j\right)\right|<\frac{\epsilon}{3}$、$\left|f_i\left(x\right)-f_i\left(x_j\right)\right|<\frac{\epsilon}{3}$, 于是
+最后证 (iii). 先证充分性: 设 $A$ 有界且等度连续, 证明 $A$ 相对列紧. 因 $X$ 紧, 由**基础知识: 紧度量空间的性质**, $X$ 完备且完全有界; 由 (ii), $C\left(X\right)$ 完备. 故由**定理 1.6.3 (豪斯多夫定理)**, 只须证 $A$ 完全有界. 给定 $\epsilon>0$, 由 $A$ 等度连续, 存在 $\delta>0$ 使 $d\left(x,y\right)<\delta$ 蕴含 $\left|f\left(x\right)-f\left(y\right)\right|<\frac{\epsilon}{3}$ ($\forall f\in A$). 因 $X$ 完全有界, $X$ 有有限的 $\delta$-网 $\left\{x_1,\dots,x_N\right\}\subset X$. 考虑求值映射 $\Phi:A\to\mathbb{R}^{N}$, $\Phi\left(f\right)=\left(f\left(x_1\right),\dots,f\left(x_N\right)\right)$. 因 $A$ 有界, $\Phi\left(A\right)$ 在 $\mathbb{R}^{N}$ 中有界, 由**例 1.6.3 ($\mathbb{R}^n$ 中有界集完全有界)** 它完全有界, 故有有限的 $\frac{\epsilon}{3}$-网, 即存在有限个 $f_1,\dots,f_K\in A$ 使: 对每个 $f\in A$ 存在 $i$ 满足 $\max_j\left|f\left(x_j\right)-f_i\left(x_j\right)\right|<\frac{\epsilon}{3}$. 对任意 $x\in X$, $x$ 落在某个 $x_j$ 的 $\delta$-邻域内, 故 $d\left(x,x_j\right)<\delta$, 由等度连续性 $\left|f\left(x\right)-f\left(x_j\right)\right|<\frac{\epsilon}{3}$, $\left|f_i\left(x\right)-f_i\left(x_j\right)\right|<\frac{\epsilon}{3}$, 于是
 
 $$
 \left|f\left(x\right)-f_i\left(x\right)\right|\le\left|f\left(x\right)-f\left(x_j\right)\right|+\left|f\left(x_j\right)-f_i\left(x_j\right)\right|+\left|f_i\left(x_j\right)-f_i\left(x\right)\right|<\epsilon.
@@ -495,7 +504,7 @@ $$
 \left|f\left(x\right)-f\left(y\right)\right|\le\left|f\left(x\right)-f_i\left(x\right)\right|+\left|f_i\left(x\right)-f_i\left(y\right)\right|+\left|f_i\left(y\right)-f\left(y\right)\right|<\epsilon.
 $$
 
-故 $A$ 等度连续. 必要性得证. 综上, (iii) 成立. 证毕.
+故 $A$ 等度连续. 必要性得证. 综上, (iii) 成立. $\blacksquare$
 
 ---
 
@@ -505,7 +514,7 @@ $$
 
 ### 解答 1.6-16
 
-设 $\epsilon>0$. 由 $f$ 的连续性, 对每个 $x\in X$ 存在 $\delta_x>0$, 使得 $d_X\left(x,x'\right)<\delta_x$ 蕴含 $d_Y\left(f\left(x\right),f\left(x'\right)\right)<\frac{\epsilon}{2}$. 开球族 $\left\{U\left(x,\frac{\delta_x}{2}\right):x\in X\right\}$ 覆盖紧空间 $X$, 由**定理 1.6.2 (列紧 $\Leftrightarrow$ 覆盖紧)** 它有有限子覆盖 $\left\{U\left(x_i,\frac{\delta_{x_i}}{2}\right)\right\}_{i=1}^{m}$. 令 $\delta=\min_i\frac{\delta_{x_i}}{2}>0$. 若 $d_X\left(x,x'\right)<\delta$, 取 $i$ 使 $x\in U\left(x_i,\frac{\delta_{x_i}}{2}\right)$, 则 $d_X\left(x,x_i\right)<\frac{\delta_{x_i}}{2}<\delta_{x_i}$, 故 $d_Y\left(f\left(x\right),f\left(x_i\right)\right)<\frac{\epsilon}{2}$; 且 $d_X\left(x',x_i\right)\le d_X\left(x',x\right)+d_X\left(x,x_i\right)<\delta+\frac{\delta_{x_i}}{2}\le\delta_{x_i}$, 故 $d_Y\left(f\left(x'\right),f\left(x_i\right)\right)<\frac{\epsilon}{2}$. 于是 $d_Y\left(f\left(x\right),f\left(x'\right)\right)\le d_Y\left(f\left(x\right),f\left(x_i\right)\right)+d_Y\left(f\left(x_i\right),f\left(x'\right)\right)<\epsilon$. 所以 $f$ 一致连续. 证毕.
+设 $\epsilon>0$. 由 $f$ 的连续性, 对每个 $x\in X$ 存在 $\delta_x>0$, 使得 $d_X\left(x,x'\right)<\delta_x$ 蕴含 $d_Y\left(f\left(x\right),f\left(x'\right)\right)<\frac{\epsilon}{2}$. 开球族 $\left\{U\left(x,\frac{\delta_x}{2}\right):x\in X\right\}$ 覆盖紧空间 $X$, 由**定理 1.6.2 (列紧 $\Leftrightarrow$ 覆盖紧)** 它有有限子覆盖 $\left\{U\left(x_i,\frac{\delta_{x_i}}{2}\right)\right\}_{i=1}^{m}$. 令 $\delta=\min_i\frac{\delta_{x_i}}{2}>0$. 若 $d_X\left(x,x'\right)<\delta$, 取 $i$ 使 $x\in U\left(x_i,\frac{\delta_{x_i}}{2}\right)$, 则 $d_X\left(x,x_i\right)<\frac{\delta_{x_i}}{2}<\delta_{x_i}$, 故 $d_Y\left(f\left(x\right),f\left(x_i\right)\right)<\frac{\epsilon}{2}$; 且 $d_X\left(x',x_i\right)\le d_X\left(x',x\right)+d_X\left(x,x_i\right)<\delta+\frac{\delta_{x_i}}{2}\le\delta_{x_i}$, 故 $d_Y\left(f\left(x'\right),f\left(x_i\right)\right)<\frac{\epsilon}{2}$. 于是 $d_Y\left(f\left(x\right),f\left(x'\right)\right)\le d_Y\left(f\left(x\right),f\left(x_i\right)\right)+d_Y\left(f\left(x_i\right),f\left(x'\right)\right)<\epsilon$. 所以 $f$ 一致连续. $\blacksquare$
 
 ---
 
@@ -515,7 +524,7 @@ $$
 
 ### 解答 1.6-17
 
-记 $g_k=f-f_k$. 因 $f$、$f_k$ 连续且 $f_k\le f_{k+1}\le f$, 故每个 $g_k\in C\left(X\right)$、$g_k\ge0$, 且对每个 $x$, $\left\{g_k\left(x\right)\right\}$ 单调递减趋于 $0$ (因 $f_k\left(x\right)\uparrow f\left(x\right)$).
+记 $g_k=f-f_k$. 因 $f$, $f_k$ 连续且 $f_k\le f_{k+1}\le f$, 故每个 $g_k\in C\left(X\right)$, $g_k\ge0$, 且对每个 $x$, $\left\{g_k\left(x\right)\right\}$ 单调递减趋于 $0$ (因 $f_k\left(x\right)\uparrow f\left(x\right)$).
 
 给定 $\epsilon>0$. 由 $g_k\left(x\right)\to0$, 对每个 $x\in X$ 存在 $k_x$ 使 $g_{k_x}\left(x\right)<\frac{\epsilon}{2}$. 由 $g_{k_x}$ 的连续性, 存在 $x$ 的开邻域 $O_x$, 使 $y\in O_x$ 时 $g_{k_x}\left(y\right)<\epsilon$. 开集族 $\left\{O_x:x\in X\right\}$ 覆盖紧空间 $X$, 由**定理 1.6.2 (列紧 $\Leftrightarrow$ 覆盖紧)** 它有有限子覆盖 $\left\{O_{x_1},\dots,O_{x_m}\right\}$. 令 $N=\max\left\{k_{x_1},\dots,k_{x_m}\right\}$. 对任意 $k\ge N$ 与 $y\in X$, $y$ 属于某个 $O_{x_j}$, 且 $k\ge k_{x_j}$, 由 $\left\{g_k\left(y\right)\right\}$ 关于 $k$ 单调递减得
 
@@ -523,4 +532,4 @@ $$
 g_k\left(y\right)\le g_{k_{x_j}}\left(y\right)<\epsilon.
 $$
 
-于是 $\left\|g_k\right\|=\max_{y\in X}g_k\left(y\right)<\epsilon$ 对一切 $k\ge N$ 成立, 故 $\left\|f_k-f\right\|=\left\|g_k\right\|\to0$, 即 $f_k\rightrightarrows f$. 证毕.
+于是 $\left\|g_k\right\|=\max_{y\in X}g_k\left(y\right)<\epsilon$ 对一切 $k\ge N$ 成立, 故 $\left\|f_k-f\right\|=\left\|g_k\right\|\to0$, 即 $f_k\rightrightarrows f$. $\blacksquare$
