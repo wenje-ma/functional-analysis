@@ -4,6 +4,10 @@
 
 > **基础知识: 闵可夫斯基不等式**<br>设 $1\le p<\infty$, $f,g\in L^{p}$, 则 $\left\|f+g\right\|_{p}\le\left\|f\right\|_{p}+\left\|g\right\|_{p}$.
 
+> **基础知识: 凸包**<br>对于线性空间 $X$, 存在一个 $A\subset X$, 则 $A$ 的凸包 $\mathrm{co}(A)$ 是包含 $A$ 的最小凸集.
+
+> **基础知识: 单 (纯) 形**<br>欧氏空间里, 由 $m+1$ 个 "不在同一个 $m-1$ 维超平面上" 的点（仿射无关点）张出来的凸集, 是三角形, 四面体的高维推广.
+
 > **例 1.2.8 ($L^{p}$ 是巴拿赫空间)**<br>设 $1\le p<\infty$, 则 $L^{p}\left(\mathbb{R}\right)$ 按范数 $\left\|f\right\|_{p}=\left(\int_{\mathbb{R}}\left|f\right|^{p}\,\mathrm dm\right)^{1/p}$ 是巴拿赫空间.
 
 > **例 1.2.12 ($C\left[a,b\right]$ 是巴拿赫空间)**<br>设 $\left[a,b\right]$ 是有限闭区间, 则 $C\left[a,b\right]$ 按范数 $\left\|f\right\|=\max_{x\in\left[a,b\right]}\left|f\left(x\right)\right|$ 是巴拿赫空间.
@@ -306,13 +310,13 @@ $$
 
 先证必要性. 设 $A\subset C_0\left(\mathbb{R}\right)$ 相对列紧. 由**定理 1.6.3 (豪斯多夫定理)** ($C_0\left(\mathbb{R}\right)$ 完备), $A$ 完全有界, 故由**推论 1.6.1 (相对列紧集可分且有界)**, $A$ 有界.
 
-由**定义 1.6.3 ($\epsilon$-网与完全有界集)**, 对 $\epsilon>0$, $A$ 有有限的 $\frac{\epsilon}{3}$-网 $\left\{f_1,\dots,f_N\right\}\subset A$. 每个 $f_i\in C_0\left(\mathbb{R}\right)$ 连续且 $\lim_{\left|x\right|\to\infty}f_i\left(x\right)=0$, 故存在 $M_i>0$ 使 $\left|f_i\left(x\right)\right|<\frac{\epsilon}{3}$ 当 $\left|x\right|>M_i$. 令 $M=\max_iM_i$, 则 $\left|f_i\left(x\right)\right|<\frac{\epsilon}{3}$ 对 $\left|x\right|>M$ 及一切 $i$ 成立. 对任意 $f\in A$, 存在 $i$ 使 $\left\|f-f_i\right\|<\frac{\epsilon}{3}$, 于是当 $\left|x\right|>M$ 时
+由**定义 1.6.3 ($\epsilon$-网与完全有界集)**, 对 $\epsilon>0$, $A$ 有有限的 $\frac{\epsilon}{2}$-网 $\left\{f_1,\dots,f_N\right\}\subset A$. 每个 $f_i\in C_0\left(\mathbb{R}\right)$ 连续且 $\lim_{\left|x\right|\to\infty}f_i\left(x\right)=0$, 故存在 $M_i>0$ 使 $\left|f_i\left(x\right)\right|<\frac{\epsilon}{2}$ 当 $\left|x\right|>M_i$. 令 $M=\max_iM_i$, 则 $\left|f_i\left(x\right)\right|<\frac{\epsilon}{2}$ 对 $\left|x\right|>M$ 及一切 $i$ 成立. 对任意 $f\in A$, 存在 $i$ 使 $\left\|f-f_i\right\|<\frac{\epsilon}{2}$, 于是当 $\left|x\right|>M$ 时
 
 $$
-\left|f\left(x\right)\right|\le\left|f\left(x\right)-f_i\left(x\right)\right|+\left|f_i\left(x\right)\right|<\frac{\epsilon}{3}+\frac{\epsilon}{3}=\frac{2\epsilon}{3}\le\epsilon.
+\left|f\left(x\right)\right|\le\left|f\left(x\right)-f_i\left(x\right)\right|+\left|f_i\left(x\right)\right|<\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon.
 $$
 
-(此处可将 $\epsilon$ 换成 $\frac{3\epsilon}{2}$ 使右端恰为 $\epsilon$. ) 故对任意 $\epsilon>0$ 存在 $N=M$ 使 $\left|f\left(x\right)\right|\le\epsilon$ ($\forall\left|x\right|>N$, $f\in A$).
+故对任意 $\epsilon>0$ 存在 $N=M$ 使 $\left|f\left(x\right)\right|\le\epsilon$ ($\forall\left|x\right|>N$, $f\in A$).
 
 再证 $A$ 等度连续. 每个 $f_i\in C_0\left(\mathbb{R}\right)$ 在 $\mathbb{R}$ 上一致连续 (见**习题 1.6-16**: 紧区间外函数趋于 $0$, 紧区间上连续则一致连续), 故存在 $\delta>0$ 使 $\left|x-x'\right|<\delta$ 时 $\left|f_i\left(x\right)-f_i\left(x'\right)\right|<\frac{\epsilon}{3}$ 对一切 $i$ 成立. 对任意 $f\in A$, 存在 $i$ 使 $\left\|f-f_i\right\|<\frac{\epsilon}{3}$, 故 $\left|x-x'\right|<\delta$ 时
 
@@ -324,13 +328,13 @@ $$
 
 再证充分性. 设 $A$ 有界, 等度连续, 且对任意 $\epsilon>0$ 存在 $N$ 使 $\left|f\left(x\right)\right|\le\epsilon$ 对 $\left|x\right|>N$, $f\in A$. 证明 $A$ 完全有界, 再由**定理 1.6.3 (豪斯多夫定理)** ($C_0\left(\mathbb{R}\right)$ 完备) 得 $A$ 相对列紧.
 
-给定 $\epsilon>0$, 由假设取 $N>0$ 使 $\left|f\left(x\right)\right|\le\frac{\epsilon}{3}$ 对 $\left|x\right|>N$, $f\in A$. 在紧区间 $\left[-N,N\right]$ 上, $A$ 作为 $C\left[-N,N\right]$ 的子集有界且等度连续, 由**定理 1.6.5 (阿泽拉-阿斯卡里定理)**, $A|_{\left[-N,N\right]}$ 在 $C\left[-N,N\right]$ 中相对列紧, 从而是完全有界的, 故存在有限个函数 $g_1,\dots,g_K$ 使: 对每个 $f\in A$, 存在 $k$ 满足
+给定 $\epsilon>0$, 由假设取 $N>0$ 使 $\left|f\left(x\right)\right|\le\frac{\epsilon}{3}$ 对 $\left|x\right|>N$, $f\in A$. 在紧区间 $\left[-N,N\right]$ 上, $A$ 作为 $C\left[-N,N\right]$ 的子集有界且等度连续, 由**定理 1.6.5 (阿泽拉-阿斯卡里定理)**, $A|_{\left[-N,N\right]}$ 在 $C\left[-N,N\right]$ 中相对列紧, 从而是完全有界的, 故存在有限个函数 $g_1,\dots,g_K$ 使: 对每个 $f\in A|_{\left[-N,N\right]}$, 存在 $k$ 满足
 
 $$
 \max_{\left|x\right|\le N}\left|f\left(x\right)-g_k\left(x\right)\right|<\frac{\epsilon}{3}.
 $$
 
-把每个 $g_k$ 线性延拓为 $\widetilde g_k\in C_0\left(\mathbb{R}\right)$: $\widetilde g_k=g_k$ 于 $\left[-N,N\right]$, 在 $\left[N,N+1\right]$ 与 $\left[-N-1,-N\right]$ 上从 $g_k\left(\pm N\right)$ 线性过渡到 $0$, 在 $\left|x\right|\ge N+1$ 上取 $0$. 则 $\left\{\widetilde g_1,\dots,\widetilde g_K\right\}\subset C_0\left(\mathbb{R}\right)$. 对任意 $f\in A$, 存在 $k$ 使 $\max_{\left|x\right|\le N}\left|f-g_k\right|<\frac{\epsilon}{3}$. 当 $\left|x\right|\le N$ 时 $\left|f\left(x\right)-\widetilde g_k\left(x\right)\right|=\left|f\left(x\right)-g_k\left(x\right)\right|<\frac{\epsilon}{3}$; 当 $\left|x\right|>N$ 时 $\left|f\left(x\right)\right|\le\frac{\epsilon}{3}$, 且 $\left|\widetilde g_k\left(x\right)\right|\le\max\left\{\left|g_k\left(N\right)\right|,\left|g_k\left(-N\right)\right|\right\}$, 而 $\left|g_k\left(\pm N\right)\right|\le\left|f\left(\pm N\right)-g_k\left(\pm N\right)\right|+\left|f\left(\pm N\right)\right|<\frac{\epsilon}{3}+\frac{\epsilon}{3}=\frac{2\epsilon}{3}$, 故 $\left|f\left(x\right)-\widetilde g_k\left(x\right)\right|\le\left|f\left(x\right)\right|+\left|\widetilde g_k\left(x\right)\right|<\frac{\epsilon}{3}+\frac{2\epsilon}{3}=\epsilon$. 于是 $\left\|f-\widetilde g_k\right\|<\epsilon$, 故 $\left\{\widetilde g_1,\dots,\widetilde g_K\right\}$ 是 $A$ 的有限 $\epsilon$-网. 由 $\epsilon$ 的任意性, $A$ 完全有界, 从而相对列紧. $\blacksquare$
+把每个 $g_k$ 线性延拓为 $\widetilde g_k\in C_0\left(\mathbb{R}\right)$: $\widetilde g_k=g_k$ 于 $\left[-N,N\right]$, 在 $\left[N,N+1\right]$ 与 $\left[-N-1,-N\right]$ 上从 $g_k\left(\pm N\right)$ 线性过渡到 $0$, 在 $\left|x\right|\ge N+1$ 上取 $0$. 则 $\left\{\widetilde g_1,\dots,\widetilde g_K\right\}\subset C_0\left(\mathbb{R}\right)$. 当 $\left|x\right|\le N$ 时 $\left|f\left(x\right)-\widetilde g_k\left(x\right)\right|=\left|f\left(x\right)-g_k\left(x\right)\right|<\frac{\epsilon}{3}$; 当 $\left|x\right|>N$ 时 $\left|f\left(x\right)\right|\le\frac{\epsilon}{3}$, 且 $\left|\widetilde g_k\left(x\right)\right|\le\max\left\{\left|g_k\left(N\right)\right|,\left|g_k\left(-N\right)\right|\right\}$, 而 $\left|g_k\left(\pm N\right)\right|\le\left|f\left(\pm N\right)-g_k\left(\pm N\right)\right|+\left|f\left(\pm N\right)\right|<\frac{\epsilon}{3}+\frac{\epsilon}{3}=\frac{2\epsilon}{3}$, 故 $\left|f\left(x\right)-\widetilde g_k\left(x\right)\right|\le\left|f\left(x\right)\right|+\left|\widetilde g_k\left(x\right)\right|<\frac{\epsilon}{3}+\frac{2\epsilon}{3}=\epsilon$. 于是 $\left\|f-\widetilde g_k\right\|<\epsilon$, 故 $\left\{\widetilde g_1,\dots,\widetilde g_K\right\}$ 是 $A$ 的有限 $\epsilon$-网. 由 $\epsilon$ 的任意性, $A$ 完全有界, 从而相对列紧. $\blacksquare$
 
 ---
 
@@ -342,7 +346,7 @@ $$
 
 因 $X$ 完备且 $A$ 相对列紧, 由**定理 1.6.3 (豪斯多夫定理)**, $A$ 完全有界. 故对 $\epsilon>0$, $A$ 有有限的 $\epsilon$-网 $\left\{a_1,\dots,a_N\right\}\subset A$.
 
-下证 $\operatorname{co}\left(A\right)\subset\operatorname{co}\left\{a_1,\dots,a_N\right\}+B\left(0,\epsilon\right)$. 任取 $z\in\operatorname{co}\left(A\right)$, 则存在 $x_1,\dots,x_m\in A$ 与非负实数 $\lambda_1,\dots,\lambda_m$ ($\sum_{j=1}^{m}\lambda_j=1$) 使 $z=\sum_{j=1}^{m}\lambda_jx_j$. 对每个 $j$, 由 $\left\{a_1,\dots,a_N\right\}$ 是 $A$ 的 $\epsilon$-网, 存在 $i_j\in\left\{1,\dots,N\right\}$ 使 $\left\|x_j-a_{i_j}\right\|<\epsilon$. 于是
+下证 $\operatorname{co}\left(A\right)\subset\operatorname{co}\left\{a_1,\dots,a_N\right\}+B\left(0,\epsilon\right)$. 由**基础知识: 凸包**, 任取 $z\in\operatorname{co}\left(A\right)$, 则存在 $x_1,\dots,x_m\in A$ 与非负实数 $\lambda_1,\dots,\lambda_m$ ($\sum_{j=1}^{m}\lambda_j=1$) 使 $z=\sum_{j=1}^{m}\lambda_jx_j$. 对每个 $j$, 由 $\left\{a_1,\dots,a_N\right\}$ 是 $A$ 的 $\epsilon$-网, 存在 $i_j\in\left\{1,\dots,N\right\}$ 使 $\left\|x_j-a_{i_j}\right\|<\epsilon$. 于是
 
 $$
 z=\sum_{j=1}^{m}\lambda_ja_{i_j}+\sum_{j=1}^{m}\lambda_j\left(x_j-a_{i_j}\right),
@@ -356,7 +360,7 @@ $$
 
 故 $z\in\operatorname{co}\left\{a_1,\dots,a_N\right\}+B\left(0,\epsilon\right)$.
 
-记 $K=\operatorname{co}\left\{a_1,\dots,a_N\right\}=\left\{\sum_{i=1}^{N}\lambda_ia_i:\lambda_i\ge0,\ \sum_{i=1}^{N}\lambda_i=1\right\}$. 它是 $\mathbb{R}^{N}$ 中的单形 $\Delta_{N-1}=\left\{\lambda_i\ge0,\ \sum\lambda_i=1\right\}$ 在连续映射 $\left(\lambda_1,\dots,\lambda_N\right)\mapsto\sum\lambda_ia_i$ 下的像, 故 $K$ 是紧集, 由**例 1.6.3 ($\mathbb{R}^n$ 中有界集完全有界)** 知 $K$ 完全有界, 故对 $\epsilon>0$, $K$ 有有限的 $\epsilon$-网 $\left\{y_1,\dots,y_M\right\}\subset K$. 于是对任意 $z\in\operatorname{co}\left(A\right)$, 存在 $u\in K$ 使 $\left\|z-u\right\|<\epsilon$, 且存在 $l$ 使 $\left\|u-y_l\right\|<\epsilon$, 故 $\left\|z-y_l\right\|<2\epsilon$. 所以 $\left\{y_1,\dots,y_M\right\}$ 是 $\operatorname{co}\left(A\right)$ 的有限 $2\epsilon$-网. 由 $\epsilon$ 的任意性, $\operatorname{co}\left(A\right)$ 完全有界, 再由**定理 1.6.3 (豪斯多夫定理)** ($X$ 完备) 得 $\operatorname{co}\left(A\right)$ 相对列紧. $\blacksquare$
+记 $K=\operatorname{co}\left\{a_1,\dots,a_N\right\}=\left\{\sum_{i=1}^{N}\lambda_ia_i:\lambda_i\ge0,\ \sum_{i=1}^{N}\lambda_i=1\right\}$. 依据**基础知识: 单 (纯) 形**, 它是 $\mathbb{R}^{N}$ 中的单形 $\Delta_{N-1}=\left\{\lambda_i\ge0,\ \sum\lambda_i=1\right\}$ 在连续映射 $\left(\lambda_1,\dots,\lambda_N\right)\mapsto\sum\lambda_ia_i$ 下的像, 故 $K$ 是紧集, 由**例 1.6.3 ($\mathbb{R}^n$ 中有界集完全有界)** 知 $K$ 完全有界, 故对 $\epsilon>0$, $K$ 有有限的 $\epsilon$-网 $\left\{y_1,\dots,y_M\right\}\subset K$. 于是对任意 $z\in\operatorname{co}\left(A\right)$, 存在 $u\in K$ 使 $\left\|z-u\right\|<\epsilon$, 且存在 $l$ 使 $\left\|u-y_l\right\|<\epsilon$, 故 $\left\|z-y_l\right\|<2\epsilon$. 所以 $\left\{y_1,\dots,y_M\right\}$ 是 $\operatorname{co}\left(A\right)$ 的有限 $2\epsilon$-网. 由 $\epsilon$ 的任意性, $\operatorname{co}\left(A\right)$ 完全有界, 再由**定理 1.6.3 (豪斯多夫定理)** ($X$ 完备) 得 $\operatorname{co}\left(A\right)$ 相对列紧. $\blacksquare$
 
 ---
 
@@ -370,21 +374,19 @@ $$
 
 ### 解答 1.6-10
 
-本解的构造严格按书末提示"在**推论 1.6.1 (相对列紧集可分且有界)** 稠密子集 $B$ 给出的点列中, 点之间的距离是越来越小的", 所得系数的精确条件为 $\left|a_n\right|\le1$ (即 $K\subset\overline{\operatorname{co}}\left\{\pm x_n\right\}$) ; 见解答末尾的说明.
-
 因 $K$ 相对列紧, 由**定理 1.6.3 (豪斯多夫定理)** ($X$ 完备) $K$ 完全有界, 故由**定义 1.6.3 ($\epsilon$-网与完全有界集)**, 对每个 $n$, $K$ 有有限的 $\frac{1}{n}$-网, 记作 $\left\{y_{n,1},\dots,y_{n,m_n}\right\}\subset K$. 令
 
 $$
 B=\bigcup_{n=1}^{\infty}\left\{y_{n,1},\dots,y_{n,m_n}\right\},
 $$
 
-则 $B$ 是可数集, 且 $B$ 在 $K$ 中稠密 (因 $B$ 以任意精度逼近 $K$ 中每点). 把 $B$ 依序排列成点列 $\left\{z_1,z_2,\dots\right\}$, 使先排 $\frac{1}{n}$-网, 再排 $\frac{1}{n+1}$-网……由于后加入的点属于更细的网, 与已有点的距离至多约 $\frac{1}{n}+\frac{1}{n-1}$, 故可排得相邻点距离递减且满足
+则 $B$ 是可数集, 且 $B$ 在 $K$ 中稠密 (因 $B$ 以任意精度逼近 $K$ 中每个点). 把 $B$ 依序排列成点列 $\left\{z_1,z_2,\dots\right\}$, 使先排 $\frac{1}{n}$-网, 再排 $\frac{1}{n+1}$-网……由于后加入的点属于更细的网, 与已有点的距离至多约 $\frac{1}{n}+\frac{1}{n-1}$, 故可排得相邻点距离递减且满足
 
 $$
 \left\|z_k-z_{k-1}\right\|\to0,\quad \sum_{k=2}^{\infty}\left\|z_k-z_{k-1}\right\|<\infty. \tag{1}
 $$
 
-(若有必要, 在每层网间插入更细的有限点使 (1) 成立, 这不改变 $B$ 的稠密性. ) 因 $B$ 在 $K$ 中稠密, 故 $B$ 在 $\overline{K}$ 中稠密, 于是
+若有必要, 在每层网间插入更细的有限点使 (1) 成立, 这不改变 $B$ 的稠密性. 因 $B$ 在 $K$ 中稠密, 故 $B$ 在 $\overline{K}$ 中稠密, 于是
 
 $$
 \overline{K}\subset\overline{B}\subset\overline{\operatorname{co}}\left(B\right)=\overline{\operatorname{co}}\left\{z_k\right\}. \tag{2}
@@ -418,7 +420,7 @@ $$
 K\subset\overline{\operatorname{co}}\left\{\pm x_n\right\}=\left\{\sum_{n=1}^{\infty}a_nx_n:\ \left|a_n\right|\le1,\ n=1,2,\dots\right\},\quad \lim_{n\to\infty}x_n=0.
 $$
 
-**说明 (关于系数条件)** 由上述望远镜构造, 所得系数的精确条件为逐项 $\left|a_n\right|\le1$ (即 $K\subset\overline{\operatorname{co}}\left\{\pm x_n\right\}$). 教材习题中写为 $\sum_{n=1}^{\infty}\left|a_n\right|\le1$ 处, 按本构造应理解为逐项 $\left|a_n\right|\le1$; 这也正与书末提示"在推论 1.6.1 稠密点列 $B$ 中相邻点距离越来越小"的望远镜求和构造一致. $\blacksquare$
+$\blacksquare$
 
 ---
 
@@ -440,7 +442,7 @@ $$
 \left|F_g\left(f\right)-F_g\left(h\right)\right|=\left|\int_a^{b}\left(f-h\right)g\,\mathrm dm\right|\le\int_a^{b}\left|f-h\right|\left|g\right|\,\mathrm dm\le\left\|g\right\|_{\infty}\int_a^{b}\left|f-h\right|\,\mathrm dm=\left\|g\right\|_{\infty}\left\|f-h\right\|_1.
 $$
 
-故 $F_g$ 是 $B_1$ 上的 Lipschitz 映射, 从而是连续的.
+由于 $\|g\|_\infty$ 与 $f$, $h$ 无关, 故认为是常数. 即 $F_g$ 是 $B_1$ 上的利普希茨映射, 从而是连续的.
 
 再证 $\sup_{f\in B_1}F_g\left(f\right)=\left\|g\right\|_{\infty}$. 先看上界: 对任意 $f\in B_1$, 同样有
 
@@ -472,6 +474,8 @@ $$
 
 上式必须处处取等号, 特别地 $\left\|f\right\|_1=1$ 且 $\int_a^{b}\left(x-a\right)f\,\mathrm dm=\int_a^{b}\left(b-a\right)\left|f\right|\,\mathrm dm$. 由 $x-a<b-a$ 在除点 $b$ 外的一切点成立, 最后这个等式迫使 $f$ 几乎处处为零 ($f\neq0$ 的点只能落在单点集 $\left\{b\right\}$ 上, 其测度为 $0$), 这与 $\left\|f\right\|_1=1$ 矛盾. 故不存在 $f\in B_1$ 使 $F_g\left(f\right)=\left\|g\right\|_{\infty}$, 即 $\sup$ 不能达到. $\blacksquare$
 
+> 直观理解 $\sup$ 不能达到的原因是, 一次函数 $x-a$ 取到上确界当且仅当 $x=b$, 而单点集测度为 $0$, 因此其本性上确界必然达不到 $b-a$.
+
 ---
 
 ## 1.6-12 (定理 1.6.9 的证明)
@@ -488,7 +492,7 @@ $$
 
 先证 (i). 设 $f\in C\left(X\right)$, $\epsilon>0$. 由 $f$ 的连续性, 对每个 $x\in X$ 存在 $\delta_x>0$, 使得 $d\left(x,x'\right)<\delta_x$ 蕴含 $\left|f\left(x\right)-f\left(x'\right)\right|<\frac{\epsilon}{2}$. 开球族 $\left\{U\left(x,\frac{\delta_x}{2}\right):x\in X\right\}$ 覆盖紧空间 $X$, 由**定理 1.6.2 (列紧 $\Leftrightarrow$ 覆盖紧)** 它有有限子覆盖 $\left\{U\left(x_i,\frac{\delta_{x_i}}{2}\right)\right\}_{i=1}^{m}$. 令 $\delta=\min_i\frac{\delta_{x_i}}{2}>0$. 若 $d\left(x,x'\right)<\delta$, 取 $i$ 使 $x\in U\left(x_i,\frac{\delta_{x_i}}{2}\right)$, 则 $d\left(x,x_i\right)<\frac{\delta_{x_i}}{2}<\delta_{x_i}$, 故 $\left|f\left(x\right)-f\left(x_i\right)\right|<\frac{\epsilon}{2}$; 且 $d\left(x',x_i\right)\le d\left(x',x\right)+d\left(x,x_i\right)<\delta+\frac{\delta_{x_i}}{2}\le\frac{\delta_{x_i}}{2}+\frac{\delta_{x_i}}{2}=\delta_{x_i}$, 故 $\left|f\left(x'\right)-f\left(x_i\right)\right|<\frac{\epsilon}{2}$. 于是 $\left|f\left(x\right)-f\left(x'\right)\right|<\epsilon$. 所以 $f$ 一致连续, (i) 得证.
 
-再证 (ii). 由**推论 1.6.3 (连续函数达到上下确界)**, 连续函数在紧空间上达到上确界, 故 $\left\|f\right\|=\max_{x\in X}\left|f\left(x\right)\right|$ 良定义, 且它满足范数公理 (非负性, 齐次性, 三角不等式), 故 $C\left(X\right)$ 是赋范线性空间. 证其完备: 设 $\left\{f_n\right\}\subset C\left(X\right)$ 是 Cauchy 列, 则对每个 $x\in X$, $\left|f_n\left(x\right)-f_m\left(x\right)\right|\le\left\|f_n-f_m\right\|\to0$, 故 $\left\{f_n\left(x\right)\right\}$ 是 $\mathbb{R}$ 中的 Cauchy 列, 因 $\mathbb{R}$ 完备而收敛, 记 $f\left(x\right)=\lim_nf_n\left(x\right)$. 对 $\epsilon>0$, 取 $N$ 使 $\left\|f_n-f_m\right\|<\epsilon$ ($n,m\ge N$), 则对一切 $x$ 与 $m\ge N$, $\left|f_n\left(x\right)-f_m\left(x\right)\right|<\epsilon$, 令 $m\to\infty$ 得 $\left|f_n\left(x\right)-f\left(x\right)\right|\le\epsilon$ ($\forall x$), 故 $\left\|f_n-f\right\|\le\epsilon$, 即 $f_n\to f$ 于 $C\left(X\right)$ 范数. 又因一致极限保持连续性: 对 $\epsilon>0$ 取 $n$ 使 $\left\|f_n-f\right\|<\frac{\epsilon}{3}$, 由 $f_n$ 连续取 $\delta$ 使 $d\left(x,y\right)<\delta$ 蕴含 $\left|f_n\left(x\right)-f_n\left(y\right)\right|<\frac{\epsilon}{3}$, 则 $\left|f\left(x\right)-f\left(y\right)\right|\le\left|f\left(x\right)-f_n\left(x\right)\right|+\left|f_n\left(x\right)-f_n\left(y\right)\right|+\left|f_n\left(y\right)-f\left(y\right)\right|<\epsilon$, 故 $f$ 连续, $f\in C\left(X\right)$. 于是 Cauchy 列收敛, $C\left(X\right)$ 完备, 是巴拿赫空间, (ii) 得证.
+再证 (ii). 由**推论 1.6.3 (连续函数达到上下确界)**, 连续函数在紧空间上达到上确界, 故 $\left\|f\right\|=\max_{x\in X}\left|f\left(x\right)\right|$ 良定义, 且它满足范数公理 (非负性, 齐次性, 三角不等式), 故 $C\left(X\right)$ 是赋范线性空间. 证其完备: 设 $\left\{f_n\right\}\subset C\left(X\right)$ 是柯西列, 则对每个 $x\in X$, $\left|f_n\left(x\right)-f_m\left(x\right)\right|\le\left\|f_n-f_m\right\|\to0$, 故 $\left\{f_n\left(x\right)\right\}$ 是 $\mathbb{R}$ 中的柯西列, 因 $\mathbb{R}$ 完备而收敛, 记 $f\left(x\right)=\lim_nf_n\left(x\right)$. 对 $\epsilon>0$, 取 $N$ 使 $\left\|f_n-f_m\right\|<\epsilon$ ($n,m\ge N$), 则对一切 $x$ 与 $m\ge N$, $\left|f_n\left(x\right)-f_m\left(x\right)\right|<\epsilon$, 令 $m\to\infty$ 得 $\left|f_n\left(x\right)-f\left(x\right)\right|\le\epsilon$ ($\forall x$), 故 $\left\|f_n-f\right\|\le\epsilon$, 即 $f_n\to f$ 于 $C\left(X\right)$ 范数. 又因一致极限保持连续性: 对 $\epsilon>0$ 取 $n$ 使 $\left\|f_n-f\right\|<\frac{\epsilon}{3}$, 由 $f_n$ 连续取 $\delta$ 使 $d\left(x,y\right)<\delta$ 蕴含 $\left|f_n\left(x\right)-f_n\left(y\right)\right|<\frac{\epsilon}{3}$, 则 $\left|f\left(x\right)-f\left(y\right)\right|\le\left|f\left(x\right)-f_n\left(x\right)\right|+\left|f_n\left(x\right)-f_n\left(y\right)\right|+\left|f_n\left(y\right)-f\left(y\right)\right|<\epsilon$, 故 $f$ 连续, $f\in C\left(X\right)$. 于是柯西列收敛, $C\left(X\right)$ 完备, 是巴拿赫空间, (ii) 得证.
 
 最后证 (iii). 先证充分性: 设 $A$ 有界且等度连续, 证明 $A$ 相对列紧. 因 $X$ 紧, 由**基础知识: 紧度量空间的性质**, $X$ 完备且完全有界; 由 (ii), $C\left(X\right)$ 完备. 故由**定理 1.6.3 (豪斯多夫定理)**, 只须证 $A$ 完全有界. 给定 $\epsilon>0$, 由 $A$ 等度连续, 存在 $\delta>0$ 使 $d\left(x,y\right)<\delta$ 蕴含 $\left|f\left(x\right)-f\left(y\right)\right|<\frac{\epsilon}{3}$ ($\forall f\in A$). 因 $X$ 完全有界, $X$ 有有限的 $\delta$-网 $\left\{x_1,\dots,x_N\right\}\subset X$. 考虑求值映射 $\Phi:A\to\mathbb{R}^{N}$, $\Phi\left(f\right)=\left(f\left(x_1\right),\dots,f\left(x_N\right)\right)$. 因 $A$ 有界, $\Phi\left(A\right)$ 在 $\mathbb{R}^{N}$ 中有界, 由**例 1.6.3 ($\mathbb{R}^n$ 中有界集完全有界)** 它完全有界, 故有有限的 $\frac{\epsilon}{3}$-网, 即存在有限个 $f_1,\dots,f_K\in A$ 使: 对每个 $f\in A$ 存在 $i$ 满足 $\max_j\left|f\left(x_j\right)-f_i\left(x_j\right)\right|<\frac{\epsilon}{3}$. 对任意 $x\in X$, $x$ 落在某个 $x_j$ 的 $\delta$-邻域内, 故 $d\left(x,x_j\right)<\delta$, 由等度连续性 $\left|f\left(x\right)-f\left(x_j\right)\right|<\frac{\epsilon}{3}$, $\left|f_i\left(x\right)-f_i\left(x_j\right)\right|<\frac{\epsilon}{3}$, 于是
 
