@@ -4,7 +4,7 @@
 
 > **基础知识: 闵可夫斯基不等式**<br>设 $1\le p<\infty$, $f,g\in L^{p}$, 则 $\left\|f+g\right\|_{p}\le\left\|f\right\|_{p}+\left\|g\right\|_{p}$.
 
-> **基础知识: 凸包**<br>对于线性空间 $X$, 存在一个 $A\subset X$, 则 $A$ 的凸包 $\mathrm{co}(A)$ 是包含 $A$ 的最小凸集.
+> **基础知识: 凸包**<br>对于线性空间 $X$, 存在一个 $A\subset X$, 则 $A$ 的凸包 $\mathrm{co}\left(A\right)$ 是包含 $A$ 的最小凸集.
 
 > **基础知识: 单 (纯) 形**<br>欧氏空间里, 由 $m+1$ 个 "不在同一个 $m-1$ 维超平面上" 的点（仿射无关点）张出来的凸集, 是三角形, 四面体的高维推广.
 
@@ -442,7 +442,7 @@ $$
 \left|F_g\left(f\right)-F_g\left(h\right)\right|=\left|\int_a^{b}\left(f-h\right)g\,\mathrm dm\right|\le\int_a^{b}\left|f-h\right|\left|g\right|\,\mathrm dm\le\left\|g\right\|_{\infty}\int_a^{b}\left|f-h\right|\,\mathrm dm=\left\|g\right\|_{\infty}\left\|f-h\right\|_1.
 $$
 
-由于 $\|g\|_\infty$ 与 $f$, $h$ 无关, 故认为是常数. 即 $F_g$ 是 $B_1$ 上的利普希茨映射, 从而是连续的.
+由于 $\left\|g\right\|_\infty$ 与 $f$, $h$ 无关, 故认为是常数. 即 $F_g$ 是 $B_1$ 上的利普希茨映射, 从而是连续的.
 
 再证 $\sup_{f\in B_1}F_g\left(f\right)=\left\|g\right\|_{\infty}$. 先看上界: 对任意 $f\in B_1$, 同样有
 
