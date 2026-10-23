@@ -240,17 +240,17 @@ $$
 
 ## 1.1-7
 
-在三维 Euclid 空间 $\mathbb R^3$ 中, 考虑单位球面
+在三维欧几里得空间 $\mathbb R^3$ 中, 考虑单位球面
 
 $$
 S^2=\left\{x\in\mathbb R^3:\ x=\left(x_1,x_2,x_3\right),\ x_1^2+x_2^2+x_3^2=1\right\}.
 $$
 
-对于 $x,y\in S^2$, 规定 $d\left(x,y\right)$ 为过 $x,y$ 两点的大圆上以 $x,y$ 为端点的劣弧的弧长, 它在三维 Euclid 空间的正交变换下是保持不变的.
+对于 $x,y\in S^2$, 规定 $d\left(x,y\right)$ 为过 $x,y$ 两点的大圆上以 $x,y$ 为端点的劣弧的弧长, 它在三维欧几里得空间的正交变换下是保持不变的.
 
 (i) 对于 $x_1^2+x_2^2=1$, 计算 $d\left(\left(1,0,0\right),\left(x_1,x_2,0\right)\right)$.
 
-(ii) 如果用 $\rho\left(x,y\right)$ 表示 Euclid 距离, 证明:
+(ii) 如果用 $\rho\left(x,y\right)$ 表示欧几里得距离, 证明:
 
 $$
 \rho\left(x,y\right)\le d\left(x,y\right)\le\frac{\pi}{2}\rho\left(x,y\right).
