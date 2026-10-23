@@ -4,7 +4,7 @@
 
 > **基础知识: Euclid 范数的三角不等式**<br>$\mathbb R^2$ 上 Euclid 范数 $\left\|\left(u,v\right)\right\|=\sqrt{u^2+v^2}$ 满足三角不等式: $\left\|\left(u_1,v_1\right)+\left(u_2,v_2\right)\right\|\le\left\|\left(u_1,v_1\right)\right\|+\left\|\left(u_2,v_2\right)\right\|$.
 
-> **基础知识: 稠密的传递性**<br>设 $X$ 是度量空间, $B$ 是 $X$ 的稠密子集. 若对每个 $b\in B$ 与每个 $\epsilon>0$, 存在 $a\in A$ 使 $d\left(a,b\right)<\epsilon$, 则 $A$ 在 $X$ 中稠密.
+> **基础知识: 稠密的传递性**<br>设 $X$ 是度量空间, $B$ 是 $X$ 的稠密子集. 若对每个 $b\in B$ 与每个 $\varepsilon>0$, 存在 $a\in A$ 使 $d\left(a,b\right)<\varepsilon$, 则 $A$ 在 $X$ 中稠密.
 
 > **基础知识: 非奇异矩阵可逆**<br>数域上的方阵 $A$ 非奇异 (行列式不为零) 当且仅当 $A$ 可逆, 即存在方阵 $A^{-1}$ 使 $AA^{-1}=A^{-1}A=I$.
 
@@ -84,7 +84,7 @@
 
 教材为 $\mathbb R$ 情形, 下面证明更强的 $\mathbb R^n$ 情形 (令 $n=1$ 即得本题).
 
-第一步: 化归为逼近简单函数. 由**定义 1.4.5 (稠密性)**, 只需证明: 对任意 $f\in L^p\left(\mathbb R^n\right)$ 与任意 $\epsilon>0$, 存在 $\varphi\in C_c^\infty\left(\mathbb R^n\right)$ 使 $\left\|f-\varphi\right\|_p<\epsilon$. 由**注 1.4.1 ($L^p\left(\mathbb R^n\right)$ 中的稠密子集)**, 简单函数全体在 $L^p\left(\mathbb R^n\right)$ 中稠密. 于是由**基础知识: 稠密的传递性**, 只需证明每个简单函数都能被 $C_c^\infty\left(\mathbb R^n\right)$ 中函数以任意 $L^p$ 精度逼近.
+第一步: 化归为逼近简单函数. 由**定义 1.4.5 (稠密性)**, 只需证明: 对任意 $f\in L^p\left(\mathbb R^n\right)$ 与任意 $\varepsilon>0$, 存在 $\varphi\in C_c^\infty\left(\mathbb R^n\right)$ 使 $\left\|f-\varphi\right\|_p<\varepsilon$. 由**注 1.4.1 ($L^p\left(\mathbb R^n\right)$ 中的稠密子集)**, 简单函数全体在 $L^p\left(\mathbb R^n\right)$ 中稠密. 于是由**基础知识: 稠密的传递性**, 只需证明每个简单函数都能被 $C_c^\infty\left(\mathbb R^n\right)$ 中函数以任意 $L^p$ 精度逼近.
 
 第二步: 用简单函数逼近 $f$. 由**基础知识: 简单函数的单调逼近**, 存在简单函数列 $\left\{\Phi_k\right\}$ 点态收敛于 $f$, 且 $\left|\Phi_k\right|\le\left|f\right|$. 于是 $\left|f-\Phi_k\right|^p\le\left(2\left|f\right|\right)^p\in L^1$, 由**基础知识: 勒贝格控制收敛定理**,
 
@@ -92,28 +92,28 @@ $$
 \lim_{k\to\infty}\left\|f-\Phi_k\right\|_p^p=\lim_{k\to\infty}\int_{\mathbb R^n}\left|f-\Phi_k\right|^p\,\mathrm dm=\int_{\mathbb R^n}\lim_{k\to\infty}\left|f-\Phi_k\right|^p\,\mathrm dm=0.
 $$
 
-故对给定的 $\epsilon>0$, 存在简单函数 $\Phi$ 使 $\left\|f-\Phi\right\|_p<\frac{\epsilon}{2}$. 余下只需证明 $\Phi$ 可被 $C_c^\infty$ 函数逼近到任意精度.
+故对给定的 $\varepsilon>0$, 存在简单函数 $\Phi$ 使 $\left\|f-\Phi\right\|_p<\frac{\varepsilon}{2}$. 余下只需证明 $\Phi$ 可被 $C_c^\infty$ 函数逼近到任意精度.
 
-第三步: 用卷积磨光逼近特征函数. 设 $E\subset\mathbb R^n$ 是有限测度 Lebesgue 可测集. 由**基础知识: 可测集的紧-开逼近与卷积磨光**, 存在紧集 $K\subset E$, 开集 $U\supset E$ 以及 $\psi\in C_c^\infty\left(\mathbb R^n\right)$, 使 $m\left(U\setminus K\right)<\left(\frac{\epsilon}{2}\right)^p$, 且 $0\le\psi\le1$, $\psi\equiv1$ 于 $K$, $\operatorname{supp}\psi\subset U$. 于是 $\chi_E-\psi$ 只可能在 $U\setminus K$ 上非零, 且 $\left|\chi_E-\psi\right|\le1$, 故
-
-$$
-\left\|\chi_E-\psi\right\|_p^p=\int_{U\setminus K}\left|\chi_E-\psi\right|^p\,\mathrm dm\le m\left(U\setminus K\right)<\left(\frac{\epsilon}{2}\right)^p,
-$$
-
-即 $\left\|\chi_E-\psi\right\|_p<\frac{\epsilon}{2}$. 故特征函数可被 $C_c^\infty$ 函数逼近.
-
-第四步: 用线性性逼近一般简单函数. 设 $\Phi=\sum_{i=1}^s c_i\chi_{E_i}$ 是简单函数, 其中每个 $E_i$ 有限测度. 对每个 $i$, 由第三步取 $\psi_i\in C_c^\infty\left(\mathbb R^n\right)$ 使 $\left\|\chi_{E_i}-\psi_i\right\|_p<\frac{\epsilon}{2s\left(\left|c_i\right|+1\right)}$. 令 $\varphi=\sum_{i=1}^s c_i\psi_i$, 则 $\varphi\in C_c^\infty\left(\mathbb R^n\right)$ (有限个紧支集光滑函数的线性组合仍紧支光滑). 由**定义 1.2.2 (半范数与范数)** (iii) 范数的三角不等式,
+第三步: 用卷积磨光逼近特征函数. 设 $E\subset\mathbb R^n$ 是有限测度 Lebesgue 可测集. 由**基础知识: 可测集的紧-开逼近与卷积磨光**, 存在紧集 $K\subset E$, 开集 $U\supset E$ 以及 $\psi\in C_c^\infty\left(\mathbb R^n\right)$, 使 $m\left(U\setminus K\right)<\left(\frac{\varepsilon}{2}\right)^p$, 且 $0\le\psi\le1$, $\psi\equiv1$ 于 $K$, $\operatorname{supp}\psi\subset U$. 于是 $\chi_E-\psi$ 只可能在 $U\setminus K$ 上非零, 且 $\left|\chi_E-\psi\right|\le1$, 故
 
 $$
-\left\|\Phi-\varphi\right\|_p=\left\|\sum_{i=1}^s c_i\left(\chi_{E_i}-\psi_i\right)\right\|_p\le\sum_{i=1}^s\left|c_i\right|\left\|\chi_{E_i}-\psi_i\right\|_p<\frac{\epsilon}{2}.
+\left\|\chi_E-\psi\right\|_p^p=\int_{U\setminus K}\left|\chi_E-\psi\right|^p\,\mathrm dm\le m\left(U\setminus K\right)<\left(\frac{\varepsilon}{2}\right)^p,
+$$
+
+即 $\left\|\chi_E-\psi\right\|_p<\frac{\varepsilon}{2}$. 故特征函数可被 $C_c^\infty$ 函数逼近.
+
+第四步: 用线性性逼近一般简单函数. 设 $\Phi=\sum_{i=1}^s c_i\chi_{E_i}$ 是简单函数, 其中每个 $E_i$ 有限测度. 对每个 $i$, 由第三步取 $\psi_i\in C_c^\infty\left(\mathbb R^n\right)$ 使 $\left\|\chi_{E_i}-\psi_i\right\|_p<\frac{\varepsilon}{2s\left(\left|c_i\right|+1\right)}$. 令 $\varphi=\sum_{i=1}^s c_i\psi_i$, 则 $\varphi\in C_c^\infty\left(\mathbb R^n\right)$ (有限个紧支集光滑函数的线性组合仍紧支光滑). 由**定义 1.2.2 (半范数与范数)** (iii) 范数的三角不等式,
+
+$$
+\left\|\Phi-\varphi\right\|_p=\left\|\sum_{i=1}^s c_i\left(\chi_{E_i}-\psi_i\right)\right\|_p\le\sum_{i=1}^s\left|c_i\right|\left\|\chi_{E_i}-\psi_i\right\|_p<\frac{\varepsilon}{2}.
 $$
 
 故每个简单函数都可被 $C_c^\infty$ 函数以任意精度逼近.
 
-第五步: 合拢. 对给定的 $f$ 与 $\epsilon>0$, 由第二步取简单函数 $\Phi$ 使 $\left\|f-\Phi\right\|_p<\frac{\epsilon}{2}$, 由第四步取 $\varphi\in C_c^\infty\left(\mathbb R^n\right)$ 使 $\left\|\Phi-\varphi\right\|_p<\frac{\epsilon}{2}$. 再由**定义 1.2.2 (半范数与范数)** (iii) 的三角不等式,
+第五步: 合拢. 对给定的 $f$ 与 $\varepsilon>0$, 由第二步取简单函数 $\Phi$ 使 $\left\|f-\Phi\right\|_p<\frac{\varepsilon}{2}$, 由第四步取 $\varphi\in C_c^\infty\left(\mathbb R^n\right)$ 使 $\left\|\Phi-\varphi\right\|_p<\frac{\varepsilon}{2}$. 再由**定义 1.2.2 (半范数与范数)** (iii) 的三角不等式,
 
 $$
-\left\|f-\varphi\right\|_p\le\left\|f-\Phi\right\|_p+\left\|\Phi-\varphi\right\|_p<\epsilon.
+\left\|f-\varphi\right\|_p\le\left\|f-\Phi\right\|_p+\left\|\Phi-\varphi\right\|_p<\varepsilon.
 $$
 
 由**定义 1.4.5 (稠密性)**, $C_c^\infty\left(\mathbb R^n\right)$ 在 $L^p\left(\mathbb R^n\right)$ 中稠密, 特别地 $C_c^\infty\left(\mathbb R\right)$ 在 $L^p\left(\mathbb R\right)$ 中稠密. $\blacksquare$

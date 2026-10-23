@@ -1,5 +1,33 @@
 # week4
 
+> **基础知识: 闵可夫斯基不等式**<br>设 $1\le p<\infty$, $f,g\in L^p$, 则 $\left\|f+g\right\|_p\le\left\|f\right\|_p+\left\|g\right\|_p$.
+
+> **基础知识: 闭集与补集开集**<br>度量空间中集合 $A$ 是闭集当且仅当它的补集 $X\setminus A$ 是开集.
+
+> **基础知识: 有理数在实数中稠密**<br>有理数集 $\mathbb Q$ 在 $\mathbb R$ 中稠密, 即对任意实数 $a<b$ 存在有理数 $r$ 使 $a<r<b$.
+
+> **基础知识: 可积函数尾积分趋于零**<br>若 $g\in L^1\left(\mathbb R\right)$ 非负可积, 则 $\int_{\left|t\right|>N}g\left(t\right)\mathrm dt\to0$ ($N\to\infty$).
+
+> **基础知识: 稠密关系的传递性**<br>若 $D$ 在 $E$ 中稠密且 $E$ 在 $X$ 中稠密, 则 $D$ 在 $X$ 中稠密.
+
+> **基础知识: 分片线性延拓保最大模**<br>对定义在整数点 $\mathbb Z$ 上的有界实数列 $\left(a_n\right)_{n\in\mathbb Z}$, 在每个区间 $\left[n,n+1\right]$ 上线性连接 $\left(n,a_n\right)$ 与 $\left(n+1,a_{n+1}\right)$ 所得的分片连续函数 $f$ 满足 $\sup_{t\in\mathbb R}\left|f\left(t\right)\right|=\sup_{n\in\mathbb Z}\left|a_n\right|$.
+
+> **基础知识: 积分三角不等式**<br>对可积复值函数 $g$, $\left|\int_E g\left(t\right)\mathrm dt\right|\le\int_E\left|g\left(t\right)\right|\mathrm dt$.
+
+> **基础知识: 勒贝格测度平移不变性**<br>对任意可积函数 $g$ 与实数 $h$, $\int_{\mathbb R}\left|g\left(t+h\right)\right|^p\mathrm dt=\int_{\mathbb R}\left|g\left(t\right)\right|^p\mathrm dt$.
+
+> **基础知识: 紧区间上连续函数一致连续**<br>有限闭区间上的连续函数必一致连续.
+
+> **基础知识: 弱导数定义**<br>设 $g,h\in L_{\mathrm{loc}}^2\left(\mathbb R\right)$. 若对一切 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 成立 $\int_{\mathbb R}g\varphi'\mathrm dt=-\int_{\mathbb R}h\varphi\mathrm dt$, 则称 $h$ 是 $g$ 的弱导数, 记 $g'=h$.
+
+> **基础知识: 弱导数绝对连续**<br>若 $g\in L_{\mathrm{loc}}^2\left(\mathbb R\right)$ 有弱导数 $h\in L^2\left(\mathbb R\right)$, 则 $g$ 绝对连续, 且 $g'=h$ 几乎处处成立.
+
+> **基础知识: 微分中值定理**<br>若一元实函数 $F$ 在 $\left[a,b\right]$ 上连续、在 $\left(a,b\right)$ 内可导, 则存在 $\xi\in\left(a,b\right)$ 使 $F\left(b\right)-F\left(a\right)=F'\left(\xi\right)\left(b-a\right)$.
+
+> **基础知识: 微积分基本定理**<br>对可微函数 $F$ 及 $a<b$ 有 $\int_a^bF'\left(t\right)\,\mathrm dt=F\left(b\right)-F\left(a\right)$; 特别地, 初值问题 $y'=f\left(x,y\right)$, $y\left(x_0\right)=y_0$ 等价于积分方程 $y\left(x\right)=y_0+\int_{x_0}^xf\left(t,y\left(t\right)\right)\,\mathrm dt$.
+
+> **基础知识: 绝对连续函数的常数性**<br>若绝对连续函数 $f$ 的导数几乎处处为零, 则 $f$ 几乎处处为常数.
+
 > **定义 1.1.1 (度量空间)**<br>设 $X$ 是一个非空集合, 若对于 $X$ 中任意两个元素 $x,y$, 有一个实数 $d\left(x,y\right)$ 与它们对应, 而且满足: (i) $d\left(x,y\right)\ge0$, $d\left(x,y\right)=0$ 当且仅当 $x=y$; (ii) $d\left(x,y\right)=d\left(y,x\right)$; (iii) $d\left(x,y\right)\le d\left(x,z\right)+d\left(z,y\right)$, 则称 $\left(X,d\right)$ 是度量空间.
 
 > **定义 1.1.2 (极限)**<br>设 $\left(X,d\right)$ 是度量空间, $\left\{x_n\right\}\subset X$, $x_0\in X$. 若 $\lim_{n\to\infty}d\left(x_n,x_0\right)=0$, 则称点列 $\left\{x_n\right\}$ 按度量 $d$ 收敛于 $x_0$.
@@ -56,7 +84,7 @@
 
 > **例 1.4.13 ($L^{p}\left(E\right)$ 是巴拿赫空间)**<br>设 $E$ 是 $\mathbb R^n$ 的勒贝格可测集, 则 $L^p\left(E\right)$ ($1\le p<\infty$) 是巴拿赫空间; 特别地, $L^2\left(E\right)$ 是希尔伯特空间.
 
-> **定义 1.4.7 (完备性)**<br>(i) 若 $\left\{x_n\right\}$ 满足: 对任意 $\epsilon>0$, 存在 $N$, 使 $n,m\ge N$ 时 $d\left(x_n,x_m\right)<\epsilon$, 则称 $\left\{x_n\right\}$ 是基本点列 (柯西点列); (ii) 若每个基本点列都收敛, 则称 $X$ 完备; (iii) 完备赋范线性空间称为巴拿赫空间; (iv) 完备内积空间称为希尔伯特空间.
+> **定义 1.4.7 (完备性)**<br>(i) 若 $\left\{x_n\right\}$ 满足: 对任意 $\varepsilon>0$, 存在 $N$, 使 $n,m\ge N$ 时 $d\left(x_n,x_m\right)<\varepsilon$, 则称 $\left\{x_n\right\}$ 是基本点列 (柯西点列); (ii) 若每个基本点列都收敛, 则称 $X$ 完备; (iii) 完备赋范线性空间称为巴拿赫空间; (iv) 完备内积空间称为希尔伯特空间.
 
 > **引理 1.4.1 (基本点列与完备性)**<br>(i) 收敛点列是基本点列; (ii) 基本点列若有收敛子列则自身收敛于同一极限; (iii) 完备度量空间的闭子集是完备子空间; (iv) 完备子空间是闭子集.
 
@@ -77,34 +105,6 @@
 > **例 1.6.1 (有限维空间中相对列紧等价于有界)**<br>在 $\mathbb R^n$ (及任意有限维赋范线性空间) 中, 子集 $A$ 是相对列紧集当且仅当 $A$ 是有界集; 有界闭集因此是紧集.
 
 > **推论 1.6.3 (连续函数达到上下确界)**<br>度量空间 $X$ 的紧子集 $K$ 上的连续函数 $f$ 有界, 且上、下确界在 $K$ 上达到.
-
-> **基础知识: 闵可夫斯基不等式**<br>设 $1\le p<\infty$, $f,g\in L^p$, 则 $\left\|f+g\right\|_p\le\left\|f\right\|_p+\left\|g\right\|_p$.
-
-> **基础知识: 闭集与补集开集**<br>度量空间中集合 $A$ 是闭集当且仅当它的补集 $X\setminus A$ 是开集.
-
-> **基础知识: 有理数在实数中稠密**<br>有理数集 $\mathbb Q$ 在 $\mathbb R$ 中稠密, 即对任意实数 $a<b$ 存在有理数 $r$ 使 $a<r<b$.
-
-> **基础知识: 可积函数尾积分趋于零**<br>若 $g\in L^1\left(\mathbb R\right)$ 非负可积, 则 $\int_{\left|t\right|>N}g\left(t\right)\mathrm dt\to0$ ($N\to\infty$).
-
-> **基础知识: 稠密关系的传递性**<br>若 $D$ 在 $E$ 中稠密且 $E$ 在 $X$ 中稠密, 则 $D$ 在 $X$ 中稠密.
-
-> **基础知识: 分片线性延拓保最大模**<br>对定义在整数点 $\mathbb Z$ 上的有界实数列 $\left(a_n\right)_{n\in\mathbb Z}$, 在每个区间 $\left[n,n+1\right]$ 上线性连接 $\left(n,a_n\right)$ 与 $\left(n+1,a_{n+1}\right)$ 所得的分片连续函数 $f$ 满足 $\sup_{t\in\mathbb R}\left|f\left(t\right)\right|=\sup_{n\in\mathbb Z}\left|a_n\right|$.
-
-> **基础知识: 积分三角不等式**<br>对可积复值函数 $g$, $\left|\int_E g\left(t\right)\mathrm dt\right|\le\int_E\left|g\left(t\right)\right|\mathrm dt$.
-
-> **基础知识: 勒贝格测度平移不变性**<br>对任意可积函数 $g$ 与实数 $h$, $\int_{\mathbb R}\left|g\left(t+h\right)\right|^p\mathrm dt=\int_{\mathbb R}\left|g\left(t\right)\right|^p\mathrm dt$.
-
-> **基础知识: 紧区间上连续函数一致连续**<br>有限闭区间上的连续函数必一致连续.
-
-> **基础知识: 弱导数定义**<br>设 $g,h\in L_{\mathrm{loc}}^2\left(\mathbb R\right)$. 若对一切 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 成立 $\int_{\mathbb R}g\varphi'\mathrm dt=-\int_{\mathbb R}h\varphi\mathrm dt$, 则称 $h$ 是 $g$ 的弱导数, 记 $g'=h$.
-
-> **基础知识: 弱导数绝对连续**<br>若 $g\in L_{\mathrm{loc}}^2\left(\mathbb R\right)$ 有弱导数 $h\in L^2\left(\mathbb R\right)$, 则 $g$ 绝对连续, 且 $g'=h$ 几乎处处成立.
-
-> **基础知识: 微分中值定理**<br>若一元实函数 $F$ 在 $\left[a,b\right]$ 上连续、在 $\left(a,b\right)$ 内可导, 则存在 $\xi\in\left(a,b\right)$ 使 $F\left(b\right)-F\left(a\right)=F'\left(\xi\right)\left(b-a\right)$.
-
-> **基础知识: 微积分基本定理**<br>对可微函数 $F$ 及 $a<b$ 有 $\int_a^bF'\left(t\right)\,\mathrm dt=F\left(b\right)-F\left(a\right)$; 特别地, 初值问题 $y'=f\left(x,y\right)$, $y\left(x_0\right)=y_0$ 等价于积分方程 $y\left(x\right)=y_0+\int_{x_0}^xf\left(t,y\left(t\right)\right)\,\mathrm dt$.
-
-> **基础知识: 绝对连续函数的常数性**<br>若绝对连续函数 $f$ 的导数几乎处处为零, 则 $f$ 几乎处处为常数.
 
 ---
 
@@ -260,13 +260,13 @@ $$
 
 **第一步: 取可数稠密子集.** 因 $X$ 可分, 依据**定义 1.4.6 (可分性)**, 存在可数子集 $D=\left\{x_1,x_2,\cdots\right\}$ 在 $X$ 中稠密, 即依据**定义 1.4.5 (稠密性)**, $\overline D=X$.
 
-**第二步: 证明可数开球族构成开基.** 断言: 对任意开集 $G\subset X$ 及任意 $x\in G$, 存在 $x_n\in D$ 与正有理数 $r$ 使 $x\in O\left(x_n,r\right)\subset G$. 事实上, 由 $G$ 是开集及**定义 1.4.1 (内点、内部与开集)**, 存在 $\epsilon>0$ 使 $O\left(x,\epsilon\right)\subset G$. 由 $\overline D=X$ 及 $x\in X$, $x$ 是 $D$ 的闭包中的点, 故存在 $x_n\in D$ 使 $d\left(x,x_n\right)<\frac{\epsilon}{2}$. 依据**基础知识: 有理数在实数中稠密**, 可取有理数 $r$ 使 $d\left(x,x_n\right)<r<\frac{\epsilon}{2}$. 对任意 $y\in O\left(x_n,r\right)$, 依据**定义 1.1.1 (度量空间)** (iii) 的三角不等式,
+**第二步: 证明可数开球族构成开基.** 断言: 对任意开集 $G\subset X$ 及任意 $x\in G$, 存在 $x_n\in D$ 与正有理数 $r$ 使 $x\in O\left(x_n,r\right)\subset G$. 事实上, 由 $G$ 是开集及**定义 1.4.1 (内点、内部与开集)**, 存在 $\varepsilon>0$ 使 $O\left(x,\varepsilon\right)\subset G$. 由 $\overline D=X$ 及 $x\in X$, $x$ 是 $D$ 的闭包中的点, 故存在 $x_n\in D$ 使 $d\left(x,x_n\right)<\frac{\varepsilon}{2}$. 依据**基础知识: 有理数在实数中稠密**, 可取有理数 $r$ 使 $d\left(x,x_n\right)<r<\frac{\varepsilon}{2}$. 对任意 $y\in O\left(x_n,r\right)$, 依据**定义 1.1.1 (度量空间)** (iii) 的三角不等式,
 
 $$
-d\left(y,x\right)\le d\left(y,x_n\right)+d\left(x_n,x\right)<r+\frac{\epsilon}{2}<\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon,
+d\left(y,x\right)\le d\left(y,x_n\right)+d\left(x_n,x\right)<r+\frac{\varepsilon}{2}<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon,
 $$
 
-故 $y\in O\left(x,\epsilon\right)\subset G$, 即 $O\left(x_n,r\right)\subset G$, 且 $x\in O\left(x_n,r\right)$. 断言得证.
+故 $y\in O\left(x,\varepsilon\right)\subset G$, 即 $O\left(x_n,r\right)\subset G$, 且 $x\in O\left(x_n,r\right)$. 断言得证.
 
 **第三步: 构造至多可列子覆盖.** 考虑可数族
 
@@ -298,7 +298,7 @@ $$
 \left\|f-f_N\right\|_p^p=\int_{\left|t\right|>N}\left|f\left(t\right)\right|^p\mathrm e^{-t^2}\mathrm dt\to0\quad\left(N\to\infty\right).
 $$
 
-故对给定 $\epsilon>0$, 可取 $N$ 使 $\left\|f-f_N\right\|_p<\frac{\epsilon}{2}$.
+故对给定 $\varepsilon>0$, 可取 $N$ 使 $\left\|f-f_N\right\|_p<\frac{\varepsilon}{2}$.
 
 **第二步: 支集有界的函数可用 $C_c^\infty$ 在普通 $L^p\left(\mathbb R\right)$ 中逼近.** 在 $\left[-N,N\right]$ 上有 $\mathrm e^{-t^2}\ge\mathrm e^{-N^2}>0$, 故
 
@@ -306,19 +306,19 @@ $$
 \int_{\mathbb R}\left|f_N\right|^p\mathrm dt\le\mathrm e^{N^2}\int_{\mathbb R}\left|f_N\right|^p\mathrm e^{-t^2}\mathrm dt\le\mathrm e^{N^2}\int_{\mathbb R}\left|f\right|^p\mathrm e^{-t^2}\mathrm dt<\infty,
 $$
 
-即 $f_N\in L^p\left(\mathbb R\right)$. 依据**注 1.4.1 ($L^{p}$ 中的稠密子集)**, $C_c^\infty\left(\mathbb R\right)$ 在 $L^p\left(\mathbb R\right)$ 中稠密; 依据**定义 1.4.5 (稠密性)**, 存在 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 使 $\left\|f_N-\varphi\right\|_{L^p\left(\mathbb R\right)}<\frac{\epsilon}{2}$. 又因 $\mathrm e^{-t^2}\le1$ 对一切 $t$ 成立,
+即 $f_N\in L^p\left(\mathbb R\right)$. 依据**注 1.4.1 ($L^{p}$ 中的稠密子集)**, $C_c^\infty\left(\mathbb R\right)$ 在 $L^p\left(\mathbb R\right)$ 中稠密; 依据**定义 1.4.5 (稠密性)**, 存在 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 使 $\left\|f_N-\varphi\right\|_{L^p\left(\mathbb R\right)}<\frac{\varepsilon}{2}$. 又因 $\mathrm e^{-t^2}\le1$ 对一切 $t$ 成立,
 
 $$
-\left\|f_N-\varphi\right\|_{L^p\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)}\le\left\|f_N-\varphi\right\|_{L^p\left(\mathbb R\right)}<\frac{\epsilon}{2}.
+\left\|f_N-\varphi\right\|_{L^p\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)}\le\left\|f_N-\varphi\right\|_{L^p\left(\mathbb R\right)}<\frac{\varepsilon}{2}.
 $$
 
 **第三步: 三角不等式合拢.** 依据**定义 1.2.2 (半范数与范数)** (iii) 的三角不等式,
 
 $$
-\left\|f-\varphi\right\|_p\le\left\|f-f_N\right\|_p+\left\|f_N-\varphi\right\|_p<\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon.
+\left\|f-\varphi\right\|_p\le\left\|f-f_N\right\|_p+\left\|f_N-\varphi\right\|_p<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon.
 $$
 
-故对任意 $f$ 与 $\epsilon>0$, 存在 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 使 $\left\|f-\varphi\right\|_p<\epsilon$, 依据**定义 1.4.5 (稠密性)**, $C_c^\infty\left(\mathbb R\right)$ 在 $L^p\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$ 中稠密.
+故对任意 $f$ 与 $\varepsilon>0$, 存在 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 使 $\left\|f-\varphi\right\|_p<\varepsilon$, 依据**定义 1.4.5 (稠密性)**, $C_c^\infty\left(\mathbb R\right)$ 在 $L^p\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$ 中稠密.
 
 **关于多项式全体:** 多项式全体也是稠密集. 依据**例 1.3.9 (埃尔米特多项式构成完备正交系)**, 埃尔米特多项式族关于权 $\mathrm e^{-t^2}$ 正交且完备, 因而它在 $L^2\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$ 中按该范数张成的闭包为全空间, 故多项式全体在 $L^2\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$ 中稠密; 对一般 $1\le p<\infty$ 亦然. $\blacksquare$
 
@@ -336,21 +336,21 @@ $$
 
 ### 解答 1.4-10
 
-**(i) $\mathcal P$ 在 $C_{2\pi}$ 中稠密.** 设 $f\in C_{2\pi}$, $\epsilon>0$. 依据**例 1.4.5 (魏尔斯特拉斯第一逼近定理)**, 多项式全体在 $C\left[0,2\pi\right]$ 中稠密, 故存在多项式 $Q$ 使 $\left\|f-Q\right\|_{C\left[0,2\pi\right]}<\frac{\epsilon}{4}$. 记 $\delta=Q\left(2\pi\right)-Q\left(0\right)$, 则
+**(i) $\mathcal P$ 在 $C_{2\pi}$ 中稠密.** 设 $f\in C_{2\pi}$, $\varepsilon>0$. 依据**例 1.4.5 (魏尔斯特拉斯第一逼近定理)**, 多项式全体在 $C\left[0,2\pi\right]$ 中稠密, 故存在多项式 $Q$ 使 $\left\|f-Q\right\|_{C\left[0,2\pi\right]}<\frac{\varepsilon}{4}$. 记 $\delta=Q\left(2\pi\right)-Q\left(0\right)$, 则
 
 $$
-\left|\delta\right|\le\left|Q\left(2\pi\right)-f\left(2\pi\right)\right|+\left|f\left(2\pi\right)-f\left(0\right)\right|+\left|f\left(0\right)-Q\left(0\right)\right|<\frac{\epsilon}{4}+0+\frac{\epsilon}{4}=\frac{\epsilon}{2}.
+\left|\delta\right|\le\left|Q\left(2\pi\right)-f\left(2\pi\right)\right|+\left|f\left(2\pi\right)-f\left(0\right)\right|+\left|f\left(0\right)-Q\left(0\right)\right|<\frac{\varepsilon}{4}+0+\frac{\varepsilon}{4}=\frac{\varepsilon}{2}.
 $$
 
 作多项式 $P\left(t\right)=Q\left(t\right)-\frac{\delta}{4\pi^2}t^2$. 则 $P\left(0\right)=Q\left(0\right)$, 且 $P\left(2\pi\right)=Q\left(2\pi\right)-\delta=Q\left(0\right)$, 故 $P\left(0\right)=P\left(2\pi\right)$, 即 $P\in\mathcal P$. 又
 
 $$
-\left\|P-Q\right\|_{C\left[0,2\pi\right]}=\max_{0\le t\le2\pi}\left|\frac{\delta}{4\pi^2}t^2\right|=\left|\delta\right|<\frac{\epsilon}{2}.
+\left\|P-Q\right\|_{C\left[0,2\pi\right]}=\max_{0\le t\le2\pi}\left|\frac{\delta}{4\pi^2}t^2\right|=\left|\delta\right|<\frac{\varepsilon}{2}.
 $$
 
-依据**定义 1.2.2 (半范数与范数)** (iii), $\left\|f-P\right\|\le\left\|f-Q\right\|+\left\|Q-P\right\|<\frac{\epsilon}{4}+\frac{\epsilon}{2}<\epsilon$. 依据**定义 1.4.5 (稠密性)**, $\mathcal P$ 在 $C_{2\pi}$ 中稠密.
+依据**定义 1.2.2 (半范数与范数)** (iii), $\left\|f-P\right\|\le\left\|f-Q\right\|+\left\|Q-P\right\|<\frac{\varepsilon}{4}+\frac{\varepsilon}{2}<\varepsilon$. 依据**定义 1.4.5 (稠密性)**, $\mathcal P$ 在 $C_{2\pi}$ 中稠密.
 
-**(ii) 第一部分: $C_{2\pi}$ 在 $L^p\left[0,2\pi\right]$ 中稠密.** 设 $f\in L^p\left[0,2\pi\right]$, $\epsilon>0$. 依据**例 1.4.6 ($L^{p}$ 中的稠密子集)**, $C\left[0,2\pi\right]$ 在 $L^p\left[0,2\pi\right]$ 中稠密, 故存在 $g\in C\left[0,2\pi\right]$ 使 $\left\|f-g\right\|_p<\frac{\epsilon}{2}$. 现把 $g$ 在左端点附近稍作修改以令其满足 $h\left(0\right)=h\left(2\pi\right)$: 取 $\eta>0$ 充分小, 令
+**(ii) 第一部分: $C_{2\pi}$ 在 $L^p\left[0,2\pi\right]$ 中稠密.** 设 $f\in L^p\left[0,2\pi\right]$, $\varepsilon>0$. 依据**例 1.4.6 ($L^{p}$ 中的稠密子集)**, $C\left[0,2\pi\right]$ 在 $L^p\left[0,2\pi\right]$ 中稠密, 故存在 $g\in C\left[0,2\pi\right]$ 使 $\left\|f-g\right\|_p<\frac{\varepsilon}{2}$. 现把 $g$ 在左端点附近稍作修改以令其满足 $h\left(0\right)=h\left(2\pi\right)$: 取 $\eta>0$ 充分小, 令
 
 $$
 h\left(t\right)=
@@ -360,7 +360,7 @@ g\left(t\right),&\eta\le t\le2\pi.
 \end{cases}
 $$
 
-则 $h$ 连续, 且 $h\left(0\right)=g\left(2\pi\right)$, $h\left(2\pi\right)=g\left(2\pi\right)$, 故 $h\left(0\right)=h\left(2\pi\right)$, 即 $h\in C_{2\pi}$. 又 $g,h$ 在 $\left[0,\eta\right]$ 上有界, 设 $\left|g\right|,\left|h\right|\le M$, 则 $\left\|g-h\right\|_p^p\le\int_0^\eta\left(2M\right)^p\mathrm dt=\left(2M\right)^p\eta$, 取 $\eta$ 足够小即得 $\left\|g-h\right\|_p<\frac{\epsilon}{2}$. 依据**定义 1.2.2 (半范数与范数)** (iii), $\left\|f-h\right\|_p\le\left\|f-g\right\|_p+\left\|g-h\right\|_p<\epsilon$. 依据**定义 1.4.5 (稠密性)**, $C_{2\pi}$ 在 $L^p\left[0,2\pi\right]$ 中稠密.
+则 $h$ 连续, 且 $h\left(0\right)=g\left(2\pi\right)$, $h\left(2\pi\right)=g\left(2\pi\right)$, 故 $h\left(0\right)=h\left(2\pi\right)$, 即 $h\in C_{2\pi}$. 又 $g,h$ 在 $\left[0,\eta\right]$ 上有界, 设 $\left|g\right|,\left|h\right|\le M$, 则 $\left\|g-h\right\|_p^p\le\int_0^\eta\left(2M\right)^p\mathrm dt=\left(2M\right)^p\eta$, 取 $\eta$ 足够小即得 $\left\|g-h\right\|_p<\frac{\varepsilon}{2}$. 依据**定义 1.2.2 (半范数与范数)** (iii), $\left\|f-h\right\|_p\le\left\|f-g\right\|_p+\left\|g-h\right\|_p<\varepsilon$. 依据**定义 1.4.5 (稠密性)**, $C_{2\pi}$ 在 $L^p\left[0,2\pi\right]$ 中稠密.
 
 **(ii) 第二部分: $C_{2\pi}$ 不在 $L^\infty\left[0,2\pi\right]$ 中稠密.** 因 $C_{2\pi}\subset C\left[0,2\pi\right]$, 依据**例 1.4.9 ($C$ 与 $L^{p}$ 的可分性)**, $C\left[0,2\pi\right]$ 可分; 依据**命题 1.4.1 (可分空间的子空间可分)**, 其子空间 $C_{2\pi}$ 亦可分, 即存在可数稠密子集 $D\subset C_{2\pi}$. 若 $C_{2\pi}$ 在 $L^\infty\left[0,2\pi\right]$ 中稠密, 则依据**基础知识: 稠密关系的传递性**, $D$ 在 $L^\infty\left[0,2\pi\right]$ 中稠密, 从而 $L^\infty\left[0,2\pi\right]$ 可分; 但依据**例 1.4.11 ($L^{\infty}$ 不可分)**, $L^\infty\left[0,2\pi\right]$ 不可分, 矛盾. 故 $C_{2\pi}$ 不在 $L^\infty\left[0,2\pi\right]$ 中稠密.
 
@@ -386,13 +386,13 @@ $$
 
 **(i) $C_0\left(\mathbb R\right)$ 可分.**
 
-**第一步: 紧支撑连续函数 $C_c\left(\mathbb R\right)$ 在 $C_0\left(\mathbb R\right)$ 中稠密.** 设 $f\in C_0\left(\mathbb R\right)$, $\epsilon>0$. 因 $\lim_{t\to\pm\infty}f\left(t\right)=0$, 存在 $M>0$ 使 $\left|t\right|\ge M$ 时 $\left|f\left(t\right)\right|<\epsilon$. 取连续函数 $\varphi$ 满足 $0\le\varphi\le1$, $\varphi\equiv1$ 于 $\left[-M,M\right]$, $\varphi\equiv0$ 于 $\left(-\infty,-M-1\right]\cup\left[M+1,\infty\right)$ (例如分段线性函数). 令 $g=f\varphi$, 则 $g\in C_c\left(\mathbb R\right)$, 且
+**第一步: 紧支撑连续函数 $C_c\left(\mathbb R\right)$ 在 $C_0\left(\mathbb R\right)$ 中稠密.** 设 $f\in C_0\left(\mathbb R\right)$, $\varepsilon>0$. 因 $\lim_{t\to\pm\infty}f\left(t\right)=0$, 存在 $M>0$ 使 $\left|t\right|\ge M$ 时 $\left|f\left(t\right)\right|<\varepsilon$. 取连续函数 $\varphi$ 满足 $0\le\varphi\le1$, $\varphi\equiv1$ 于 $\left[-M,M\right]$, $\varphi\equiv0$ 于 $\left(-\infty,-M-1\right]\cup\left[M+1,\infty\right)$ (例如分段线性函数). 令 $g=f\varphi$, 则 $g\in C_c\left(\mathbb R\right)$, 且
 
 $$
-\left\|f-g\right\|_\infty=\sup_t\left|f\left(t\right)\right|\left|1-\varphi\left(t\right)\right|<\epsilon,
+\left\|f-g\right\|_\infty=\sup_t\left|f\left(t\right)\right|\left|1-\varphi\left(t\right)\right|<\varepsilon,
 $$
 
-因为在 $\left[-M,M\right]$ 上 $1-\varphi=0$, 在 $\left|t\right|\ge M$ 上 $\left|f\left(t\right)\right|<\epsilon$. 依据**定义 1.4.5 (稠密性)**, $C_c\left(\mathbb R\right)$ 在 $C_0\left(\mathbb R\right)$ 中稠密.
+因为在 $\left[-M,M\right]$ 上 $1-\varphi=0$, 在 $\left|t\right|\ge M$ 上 $\left|f\left(t\right)\right|<\varepsilon$. 依据**定义 1.4.5 (稠密性)**, $C_c\left(\mathbb R\right)$ 在 $C_0\left(\mathbb R\right)$ 中稠密.
 
 **第二步: $C_c\left(\mathbb R\right)$ 可分.** 记 $C_c\left(\left[-n,n\right]\right)=\left\{f\in C\left[-n,n\right]:\text{支集 }\subset\left[-n,n\right]\right\}$, 则 $C_c\left(\mathbb R\right)=\bigcup_{n=1}^{\infty}C_c\left(\left[-n,n\right]\right)$. 依据**例 1.4.9 ($C$ 与 $L^{p}$ 的可分性)**, $C\left[-n,n\right]$ 可分; 依据**命题 1.4.1 (可分空间的子空间可分)**, 其子空间 $C_c\left(\left[-n,n\right]\right)$ 可分. 因可数多个可分空间之并仍可分, 故 $C_c\left(\mathbb R\right)$ 可分.
 
@@ -418,13 +418,13 @@ $$
 D=\left\{\sum_{k=1}^m\left(a_k+\mathrm i b_k\right)e_k:m\ge1,\ a_k,b_k\in\mathbb Q\right\}.
 $$
 
-因 $\mathbb Q$ 可数而 $m$ 可数, 故 $D$ 可数. 对任意 $x\in H$ 与 $\epsilon>0$, 由 $\mathrm{span}\left\{e_n\right\}$ 在 $H$ 中稠密 (依据**定义 1.4.5 (稠密性)**), 存在有限线性组合 $y=\sum_{k=1}^m c_k e_k$ 使 $\left\|x-y\right\|<\frac{\epsilon}{2}$. 依据**基础知识: 有理数在实数中稠密**, 可取 $c'_k=a_k+\mathrm i b_k$ ($a_k,b_k\in\mathbb Q$) 使 $\left|c_k-c'_k\right|$ 充分小, 从而
+因 $\mathbb Q$ 可数而 $m$ 可数, 故 $D$ 可数. 对任意 $x\in H$ 与 $\varepsilon>0$, 由 $\mathrm{span}\left\{e_n\right\}$ 在 $H$ 中稠密 (依据**定义 1.4.5 (稠密性)**), 存在有限线性组合 $y=\sum_{k=1}^m c_k e_k$ 使 $\left\|x-y\right\|<\frac{\varepsilon}{2}$. 依据**基础知识: 有理数在实数中稠密**, 可取 $c'_k=a_k+\mathrm i b_k$ ($a_k,b_k\in\mathbb Q$) 使 $\left|c_k-c'_k\right|$ 充分小, 从而
 
 $$
-\left\|y-\sum_{k=1}^m c'_k e_k\right\|=\left\|\sum_{k=1}^m\left(c_k-c'_k\right)e_k\right\|\le\sum_{k=1}^m\left|c_k-c'_k\right|<\frac{\epsilon}{2},
+\left\|y-\sum_{k=1}^m c'_k e_k\right\|=\left\|\sum_{k=1}^m\left(c_k-c'_k\right)e_k\right\|\le\sum_{k=1}^m\left|c_k-c'_k\right|<\frac{\varepsilon}{2},
 $$
 
-其中不等式依据**定义 1.2.2 (半范数与范数)** (iii) 的三角不等式与 $\left\|e_k\right\|=1$. 于是 $\left\|x-\sum c'_k e_k\right\|<\epsilon$, 即 $D$ 在 $H$ 中稠密. 依据**定义 1.4.6 (可分性)**, $H$ 可分.
+其中不等式依据**定义 1.2.2 (半范数与范数)** (iii) 的三角不等式与 $\left\|e_k\right\|=1$. 于是 $\left\|x-\sum c'_k e_k\right\|<\varepsilon$, 即 $D$ 在 $H$ 中稠密. 依据**定义 1.4.6 (可分性)**, $H$ 可分.
 
 **再证 $\Rightarrow$ ($H$ 可分蕴含存在可数正交基).** 依据**定理 1.3.3 (标准正交系可扩张为标准正交基)**, $H$ 存在一组标准正交基 $\mathcal E=\left\{e_\lambda:\lambda\in\Lambda\right\}$. 下面证明 $\mathcal E$ 可数. 对 $\lambda\ne\mu\in\Lambda$, 有 $e_\lambda\perp e_\mu$ 且 $\left\|e_\lambda\right\|=\left\|e_\mu\right\|=1$, 依据**定理 1.2.2 (毕达哥拉斯定理)**, $\left\|e_\lambda-e_\mu\right\|^2=\left\|e_\lambda\right\|^2+\left\|e_\mu\right\|^2=2$, 故 $\left\|e_\lambda-e_\mu\right\|=\sqrt2$.
 
@@ -460,13 +460,13 @@ $$
 
 **第二步: 对阶梯函数成立.** 设 $s=\sum_{k=1}^m c_k\chi_{\left[a_k,b_k\right]}$ 是有限个区间特征函数的线性组合 (阶梯函数). 由第一步及积分关于被积函数的线性性, $\int_{\mathbb R}s\left(x\right)\mathrm e^{-\mathrm i2\pi t x}\mathrm dx=\sum_k c_k\int_{a_k}^{b_k}\mathrm e^{-\mathrm i2\pi t x}\mathrm dx\to0$ ($\left|t\right|\to\infty$).
 
-**第三步: 对一般 $f\in L^1\left(\mathbb R\right)$ 成立.** 依据**注 1.4.1 ($L^{p}$ 中的稠密子集)**, 阶梯函数全体在 $L^1\left(\mathbb R\right)$ 中稠密; 依据**定义 1.4.5 (稠密性)**, 对任意 $\epsilon>0$ 存在阶梯函数 $s$ 使 $\left\|f-s\right\|_1<\epsilon$. 依据**基础知识: 积分三角不等式**,
+**第三步: 对一般 $f\in L^1\left(\mathbb R\right)$ 成立.** 依据**注 1.4.1 ($L^{p}$ 中的稠密子集)**, 阶梯函数全体在 $L^1\left(\mathbb R\right)$ 中稠密; 依据**定义 1.4.5 (稠密性)**, 对任意 $\varepsilon>0$ 存在阶梯函数 $s$ 使 $\left\|f-s\right\|_1<\varepsilon$. 依据**基础知识: 积分三角不等式**,
 
 $$
-\left|F\left(t\right)\right|\le\int_{\mathbb R}\left|f-s\right|\mathrm dx+\left|\int_{\mathbb R}s\left(x\right)\mathrm e^{-\mathrm i2\pi t x}\mathrm dx\right|<\epsilon+\left|\int_{\mathbb R}s\left(x\right)\mathrm e^{-\mathrm i2\pi t x}\mathrm dx\right|.
+\left|F\left(t\right)\right|\le\int_{\mathbb R}\left|f-s\right|\mathrm dx+\left|\int_{\mathbb R}s\left(x\right)\mathrm e^{-\mathrm i2\pi t x}\mathrm dx\right|<\varepsilon+\left|\int_{\mathbb R}s\left(x\right)\mathrm e^{-\mathrm i2\pi t x}\mathrm dx\right|.
 $$
 
-由第二步, 右端第二项当 $\left|t\right|\to\infty$ 时趋于 $0$, 故 $\limsup_{\left|t\right|\to\infty}\left|F\left(t\right)\right|\le\epsilon$. 因 $\epsilon>0$ 任意, 令 $\epsilon\to0$ 得 $\lim_{\left|t\right|\to\infty}\left|F\left(t\right)\right|=0$, 即 $\lim_{\left|t\right|\to\infty}\int_{\mathbb R}f\left(x\right)\mathrm e^{-\mathrm i2\pi t x}\mathrm dx=0$. $\blacksquare$
+由第二步, 右端第二项当 $\left|t\right|\to\infty$ 时趋于 $0$, 故 $\limsup_{\left|t\right|\to\infty}\left|F\left(t\right)\right|\le\varepsilon$. 因 $\varepsilon>0$ 任意, 令 $\varepsilon\to0$ 得 $\lim_{\left|t\right|\to\infty}\left|F\left(t\right)\right|=0$, 即 $\lim_{\left|t\right|\to\infty}\int_{\mathbb R}f\left(x\right)\mathrm e^{-\mathrm i2\pi t x}\mathrm dx=0$. $\blacksquare$
 
 ---
 
@@ -482,21 +482,21 @@ $$
 
 记平移算子 $\left(\tau_h f\right)\left(x\right)=f\left(x+h\right)$, 并记 $\left\|g\right\|_p=\left(\int_{\mathbb R}\left|g\right|^p\mathrm dx\right)^{1/p}$.
 
-**第一步: 对 $C_c^\infty$ 函数成立.** 设 $\varphi\in C_c^\infty\left(\mathbb R\right)$, 其支集含于 $\left[-M,M\right]$. 则 $\varphi$ 在紧集 $\left[-M-1,M+1\right]$ 上连续; 依据**基础知识: 紧区间上连续函数一致连续**, $\varphi$ 在 $\left[-M-1,M+1\right]$ 上一致连续, 即对任意 $\epsilon>0$ 存在 $\delta>0$, 当 $\left|h\right|<\delta$ 时 $\sup_x\left|\varphi\left(x+h\right)-\varphi\left(x\right)\right|<\epsilon$. 对 $\left|h\right|<1$, 被积函数仅在 $\left[-M-1,M+1\right]$ 上可能非零, 故
+**第一步: 对 $C_c^\infty$ 函数成立.** 设 $\varphi\in C_c^\infty\left(\mathbb R\right)$, 其支集含于 $\left[-M,M\right]$. 则 $\varphi$ 在紧集 $\left[-M-1,M+1\right]$ 上连续; 依据**基础知识: 紧区间上连续函数一致连续**, $\varphi$ 在 $\left[-M-1,M+1\right]$ 上一致连续, 即对任意 $\varepsilon>0$ 存在 $\delta>0$, 当 $\left|h\right|<\delta$ 时 $\sup_x\left|\varphi\left(x+h\right)-\varphi\left(x\right)\right|<\varepsilon$. 对 $\left|h\right|<1$, 被积函数仅在 $\left[-M-1,M+1\right]$ 上可能非零, 故
 
 $$
-\left\|\tau_h\varphi-\varphi\right\|_p^p=\int_{\mathbb R}\left|\varphi\left(x+h\right)-\varphi\left(x\right)\right|^p\mathrm dx\le\left(2M+2\right)\epsilon^p\to0.
+\left\|\tau_h\varphi-\varphi\right\|_p^p=\int_{\mathbb R}\left|\varphi\left(x+h\right)-\varphi\left(x\right)\right|^p\mathrm dx\le\left(2M+2\right)\varepsilon^p\to0.
 $$
 
 即 $\lim_{h\to0}\left\|\tau_h\varphi-\varphi\right\|_p=0$.
 
-**第二步: 对一般 $f\in L^p\left(\mathbb R\right)$ 成立.** 依据**注 1.4.1 ($L^{p}$ 中的稠密子集)**, $C_c^\infty\left(\mathbb R\right)$ 在 $L^p\left(\mathbb R\right)$ 中稠密; 依据**定义 1.4.5 (稠密性)**, 对任意 $\epsilon>0$ 存在 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 使 $\left\|f-\varphi\right\|_p<\epsilon$. 依据**基础知识: 勒贝格测度平移不变性**, $\left\|\tau_h\left(f-\varphi\right)\right\|_p=\left\|f-\varphi\right\|_p$. 再依据**基础知识: 闵可夫斯基不等式**,
+**第二步: 对一般 $f\in L^p\left(\mathbb R\right)$ 成立.** 依据**注 1.4.1 ($L^{p}$ 中的稠密子集)**, $C_c^\infty\left(\mathbb R\right)$ 在 $L^p\left(\mathbb R\right)$ 中稠密; 依据**定义 1.4.5 (稠密性)**, 对任意 $\varepsilon>0$ 存在 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 使 $\left\|f-\varphi\right\|_p<\varepsilon$. 依据**基础知识: 勒贝格测度平移不变性**, $\left\|\tau_h\left(f-\varphi\right)\right\|_p=\left\|f-\varphi\right\|_p$. 再依据**基础知识: 闵可夫斯基不等式**,
 
 $$
 \left\|\tau_h f-f\right\|_p\le\left\|\tau_h f-\tau_h\varphi\right\|_p+\left\|\tau_h\varphi-\varphi\right\|_p+\left\|\varphi-f\right\|_p=2\left\|f-\varphi\right\|_p+\left\|\tau_h\varphi-\varphi\right\|_p.
 $$
 
-令 $h\to0$, 由第一步 $\lim_{h\to0}\left\|\tau_h\varphi-\varphi\right\|_p=0$, 故 $\limsup_{\left|h\right|\to0}\left\|\tau_h f-f\right\|_p\le2\epsilon$. 因 $\epsilon>0$ 任意, 令 $\epsilon\to0$ 得 $\lim_{\left|h\right|\to0}\left\|\tau_h f-f\right\|_p=0$, 即 $\lim_{\left|h\right|\to0}\int_{\mathbb R}\left|f\left(x+h\right)-f\left(x\right)\right|^p\mathrm dx=0$. $\blacksquare$
+令 $h\to0$, 由第一步 $\lim_{h\to0}\left\|\tau_h\varphi-\varphi\right\|_p=0$, 故 $\limsup_{\left|h\right|\to0}\left\|\tau_h f-f\right\|_p\le2\varepsilon$. 因 $\varepsilon>0$ 任意, 令 $\varepsilon\to0$ 得 $\lim_{\left|h\right|\to0}\left\|\tau_h f-f\right\|_p=0$, 即 $\lim_{\left|h\right|\to0}\int_{\mathbb R}\left|f\left(x+h\right)-f\left(x\right)\right|^p\mathrm dx=0$. $\blacksquare$
 
 ---
 
@@ -514,7 +514,7 @@ $$
 
 因为正项级数收敛时其余项趋于零. 故 $\left\{S_n\right\}$ 是基本点列 (依据**定义 1.4.7 (完备性)** (i)). 因 $X$ 完备 (依据**定义 1.4.7 (完备性)** (ii)), $\left\{S_n\right\}$ 收敛, 即 $\sum_{n=1}^{\infty}x_n$ 收敛.
 
-**再证 $\Leftarrow$ (绝对收敛级数恒收敛蕴含 $X$ 完备).** 设 $\left\{y_n\right\}$ 是 $X$ 中的基本点列. 由**定义 1.4.7 (完备性)** (i), 对 $\epsilon=\frac{1}{2^k}$ 依次归纳选取下标 $n_1<n_2<\cdots$: 取 $n_1=1$; 已取 $n_k$, 由基本点列定义存在 $N_k$ 使 $n,m\ge N_k$ 时 $\left\|y_n-y_m\right\|<\frac{1}{2^k}$, 取 $n_{k+1}>\max\left\{n_k,N_k\right\}$, 则
+**再证 $\Leftarrow$ (绝对收敛级数恒收敛蕴含 $X$ 完备).** 设 $\left\{y_n\right\}$ 是 $X$ 中的基本点列. 由**定义 1.4.7 (完备性)** (i), 对 $\varepsilon=\frac{1}{2^k}$ 依次归纳选取下标 $n_1<n_2<\cdots$: 取 $n_1=1$; 已取 $n_k$, 由基本点列定义存在 $N_k$ 使 $n,m\ge N_k$ 时 $\left\|y_n-y_m\right\|<\frac{1}{2^k}$, 取 $n_{k+1}>\max\left\{n_k,N_k\right\}$, 则
 
 $$
 \left\|y_{n_{k+1}}-y_{n_k}\right\|<\frac{1}{2^k},\quad k=1,2,\cdots.
