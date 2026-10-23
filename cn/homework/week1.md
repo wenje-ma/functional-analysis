@@ -32,7 +32,7 @@
 
 > **例 1.1.10 (一致收敛与度量收敛)**<br>由例 1.1.6 的讨论可知, $C\left[a,b\right]$ 中点列按度量 $d\left(f,g\right)=\max_{x\in\left[a,b\right]}\left|f\left(x\right)-g\left(x\right)\right|$ 收敛等价于区间 $\left[a,b\right]$ 上的函数列一致收敛.
 
-> **例 1.1.12 (可测函数等价类空间)**<br>对于有限区间 $\left[a,b\right]$, 记 $\mathfrak G=\left\{\left[a,b\right]\,\text{上几乎处处有限的勒贝格可测函数}\right\}$, $f,g\in\mathfrak G$ 等价是指 $f\overset m= g$, 仍以 $f$ 表示 $f$ 在 $\mathcal S=\mathfrak G/\sim$ 中对应的等价类; 对于 $f,g\in\mathcal S$, 定义 $d\left(f,g\right)=\int_{\left[a,b\right]}\frac{\left|f\left(t\right)-g\left(t\right)\right|}{1+\left|f\left(t\right)-g\left(t\right)\right|}\,\mathrm dm\left(t\right)$, 这是一个度量, 且 $d\left(f,g\right)=0$ 当且仅当 $f\overset m= g$.
+> **例 1.1.12 (可测函数等价类空间)**<br>对于有限区间 $\left[a,b\right]$, 记 $\mathfrak G=\left\{\left[a,b\right]\;\text{上几乎处处有限的勒贝格可测函数}\right\}$, $f,g\in\mathfrak G$ 等价是指 $f\overset m= g$, 仍以 $f$ 表示 $f$ 在 $\mathcal S=\mathfrak G/\sim$ 中对应的等价类; 对于 $f,g\in\mathcal S$, 定义 $d\left(f,g\right)=\int_{\left[a,b\right]}\frac{\left|f\left(t\right)-g\left(t\right)\right|}{1+\left|f\left(t\right)-g\left(t\right)\right|}\,\mathrm dm\left(t\right)$, 这是一个度量, 且 $d\left(f,g\right)=0$ 当且仅当 $f\overset m= g$.
 
 > **引理 1.2.3 (柯西-施瓦茨不等式)**<br>设 $x,y\in H$ ($H$ 为内积空间), 则 $\left|\left\langle x,y\right\rangle\right|^2\le\left\langle x,x\right\rangle\left\langle y,y\right\rangle$, 特别地当 $\left\|x\right\|=\left\|y\right\|=1$ 时 $\left|\left\langle x,y\right\rangle\right|\le1$.
 

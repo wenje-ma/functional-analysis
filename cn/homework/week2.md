@@ -58,8 +58,6 @@
 
 > **例 1.3.7 ($e^{inx}$ 构成标准正交基)**<br>在复空间 $L^2\left[0,2\pi\right]$ 中, $\left\{e^{inx}:n\in\mathbb Z\right\}$ 是一组标准正交基.
 
-> **例 1.3.8 (勒让德多项式)**<br>在 $L^2\left[-1,1\right]$ 中, 函数列 $g_k\left(x\right)=x^k$ ($k=0,1,2,\cdots$) 是线性无关的. 勒让德多项式 $P_0\left(x\right)=1$, $P_n\left(x\right)=\frac{1}{2^n n!}\frac{\mathrm d^n}{\mathrm dx^n}\left(x^2-1\right)^n$ ($n=1,2,\cdots$) 是 $L^2\left[-1,1\right]$ 中的正交多项式系; 单位化后 $h_0\left(x\right)=\frac{1}{\sqrt2}$, $h_n\left(x\right)=\frac{1}{2^n n!}\sqrt{\frac{2n+1}{2}}\frac{\mathrm d^n}{\mathrm dx^n}\left(x^2-1\right)^n$ 是 $\left\{g_k\right\}$ 经过格拉姆-施密特过程得到的标准正交向量系.
-
 > **注 1.4.1 ($L^p\left(\mathbb R\right)$ 中的稠密子集)**<br>类似地, 可得 $L^p\left(\mathbb R\right)$ ($1\le p<\infty$) 中的简单函数全体、阶梯函数全体以及 $C_c^\infty\left(\mathbb R\right)$ 均是稠密子集.
 
 > **定义 1.4.5 (稠密性)**<br>在度量空间 $\left(X,d\right)$ 中, 对于 $X$ 中一个子集 $A$, 称 $A$ 在 $X$ 中稠密是指 $X\subset\overline A$ (即 $\overline A=X$).
@@ -346,17 +344,13 @@ $$
 
 ## 1.3-5 (勒让德多项式构成标准正交基)
 
-基本假设如**例 1.3.8 (勒让德多项式)**, 证明:
-
-(i) $\left\{h_n:n=0,1,\cdots,n\right\}$ 是一组标准正交系;
-
-(ii) $\left\{h_n:n=0,1,\cdots,n\right\}$ 是一组标准正交基.
+在 $L^2\left[-1,1\right]$ 中, 函数列 $g_k\left(x\right)=x^k$ ($k=0,1,2,\cdots$) 是线性无关的. 勒让德多项式 $P_0\left(x\right)=1$, $P_n\left(x\right)=\frac{1}{2^n n!}\frac{\mathrm d^n}{\mathrm dx^n}\left(x^2-1\right)^n$ ($n=1,2,\cdots$) 是 $L^2\left[-1,1\right]$ 中的正交多项式系. 证明: 单位化后 $h_0\left(x\right)=\frac{1}{\sqrt2}$, $h_n\left(x\right)=\frac{1}{2^n n!}\sqrt{\frac{2n+1}{2}}\frac{\mathrm d^n}{\mathrm dx^n}\left(x^2-1\right)^n$ 是 $\left\{g_k\right\}$ 经过格拉姆-施密特过程得到的标准正交向量系, 且是一组标准正交基.
 
 ### 解答 1.3-5
 
-(i) 由**例 1.3.8 (勒让德多项式)**, 勒让德多项式 $P_n$ 是 $L^2\left[-1,1\right]$ 中的正交多项式系, 而单位化后的 $h_n$ 正是 $\left\{g_k\right\}$ 经过格拉姆-施密特过程得到的标准正交向量系. 故对 $i\neq j$, $\left\langle h_i,h_j\right\rangle=0$, 且 $\left\|h_i\right\|=1$. 由**定义 1.3.1 (正交系与标准正交系)**, $\left\{h_n:n=0,1,\cdots,N\right\}$ 是 $L^2\left[-1,1\right]$ 中的标准正交系.
+(i) 勒让德多项式 $P_n$ 是 $L^2\left[-1,1\right]$ 中的正交多项式系, 而单位化后的 $h_n$ 正是 $\left\{g_k\right\}$ 经过格拉姆-施密特过程得到的标准正交向量系. 故对 $i\neq j$, $\left\langle h_i,h_j\right\rangle=0$, 且 $\left\|h_i\right\|=1$. 由**定义 1.3.1 (正交系与标准正交系)**, $\left\{h_n:n=0,1,\cdots,N\right\}$ 是 $L^2\left[-1,1\right]$ 中的标准正交系.
 
-(ii) 由**例 1.3.8 (勒让德多项式)**, $h_n$ 是 $n$ 次多项式. 由**基础知识: 格拉姆-施密特过程不改变张成空间**, $\operatorname{span}\left\{h_0,\cdots,h_N\right\}=\operatorname{span}\left\{g_0,\cdots,g_N\right\}=\operatorname{span}\left\{1,x,\cdots,x^N\right\}$. 令 $N\to\infty$ 得
+(ii) $h_n$ 是 $n$ 次多项式. 由**基础知识: 格拉姆-施密特过程不改变张成空间**, $\operatorname{span}\left\{h_0,\cdots,h_N\right\}=\operatorname{span}\left\{g_0,\cdots,g_N\right\}=\operatorname{span}\left\{1,x,\cdots,x^N\right\}$. 令 $N\to\infty$ 得
 
 $$
 \overline{\operatorname{span}\left\{h_n:n=0,1,\cdots\right\}}=\overline{\operatorname{span}\left\{1,x,x^2,\cdots\right\}}=\overline{P},
@@ -371,7 +365,7 @@ $$
 设 $\omega\left(t\right)$ 是 $\mathbb R$ 上勒贝格可积的非负函数. 令
 
 $$
-H=\left\{f\text{ 是 }\mathbb R\text{ 上勒贝格可测函数: }\int_{\mathbb R}\left|f\left(t\right)\right|^2\omega\left(t\right)\,\mathrm dt<\infty\right\}.
+H=\left\{f\;\text{是}\;\mathbb R\;\text{上勒贝格可测函数:}\int_{\mathbb R}\left|f\left(t\right)\right|^2\omega\left(t\right)\,\mathrm dt<\infty\right\}.
 $$
 
 证明: $H$ 按通常函数的线性运算以及内积
