@@ -24,7 +24,7 @@
 
 > **基础知识: $\cos$ 在 $\left[0,\pi\right]$ 上严格递减**<br>若 $\gamma,\beta\in\left[0,\pi\right]$ 且 $\cos\gamma\ge\cos\beta$, 则 $\gamma\le\beta$.
 
-> **定义 1.1.1 (度量空间)**<br>设 $X$ 是一个非空集合, 若对于 $X$ 中任意两个元素 $x,y$, 都有一个实数 $d\left(x,y\right)$ 与它们对应, 而且满足下面条件:<br>(i) (非负性与正定性) 对任意 $x,y\in X$, $d\left(x,y\right)\ge0$, 并且 $d\left(x,y\right)=0$ 的充要条件是 $x=y$;<br>(ii) (对称性) 对任意 $x,y\in X$, $d\left(x,y\right)=d\left(y,x\right)$;<br>(iii) (三角不等式) 对任意 $x,y,z\in X$, $d\left(x,y\right)\le d\left(x,z\right)+d\left(z,y\right)$, 则称 $\left(X,d\right)$ 是一个度量空间, $d$ 为 $X$ 上的度量.
+> **定义 1.1.1 (度量空间)**<br>设 $X$ 是一个非空集合, 若对于 $X$ 中任意两个元素 $x,y$, 都有一个实数 $d\left(x,y\right)$ 与它们对应, 而且满足下面条件:<br>(i) (非负性与正定性) 对任意 $x,y\in X$, $d\left(x,y\right)\ge0$, 并且 $d\left(x,y\right)=0$ 的充要条件是 $x=y$;<br>(ii) (对称性) 对任意 $x,y\in X$, $d\left(x,y\right)=d\left(y,x\right)$;<br>(iii) (三角不等式) 对任意 $x,y,z\in X$, $d\left(x,y\right)\le d\left(x,z\right)+d\left(z,y\right)$,<br>则称 $\left(X,d\right)$ 是一个度量空间, $d$ 为 $X$ 上的度量.
 
 > **定义 1.1.2 (极限)**<br>设 $\left(X,d\right)$ 是度量空间, $\left\{x_n\right\}_{n=1}^\infty$ 是 $X$ 中点列, $x_0\in X$, 若 $\lim_{n\to\infty}d\left(x_n,x_0\right)=0$, 则称点列 $\left\{x_n\right\}$ 按照度量 $d$ 收敛于 $x_0$, 记为 $\lim_{n\to\infty}x_n=x_0$.
 

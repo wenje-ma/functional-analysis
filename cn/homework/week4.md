@@ -145,7 +145,7 @@ $$
 **第三步: 用紧性取上下确界.** 由**例 1.6.1 (有限维空间中相对列紧等价于有界)**, $\mathbb R^n$ 中有界集相对列紧, 而 $S^{n-1}$ 是有界闭集, 故 $S^{n-1}$ 是紧集. 依据**推论 1.6.3 (连续函数达到上下确界)**, 连续函数 $f$ 在 $S^{n-1}$ 上同时达到下确界与上确界: 存在 $\left(x_i^0\right),\left(x_i^1\right)\in S^{n-1}$ 使
 
 $$
-c_1:=f\left(\left(x_i^0\right)\right)=\min_{\left(x_i\right)\in S^{n-1}}f\left(\left(x_i\right)\right)>0,\qquad
+c_1:=f\left(\left(x_i^0\right)\right)=\min_{\left(x_i\right)\in S^{n-1}}f\left(\left(x_i\right)\right)>0,\quad
 c_2:=f\left(\left(x_i^1\right)\right)=\max_{\left(x_i\right)\in S^{n-1}}f\left(\left(x_i\right)\right).
 $$
 
@@ -198,7 +198,7 @@ $$
 记 $\delta=d\left(E,F\right)>0$, 令
 
 $$
-O=\left\{x\in X:d\left(x,E\right)<\frac{\delta}{2}\right\},\qquad
+O=\left\{x\in X:d\left(x,E\right)<\frac{\delta}{2}\right\},\quad
 G=\left\{x\in X:d\left(x,F\right)<\frac{\delta}{2}\right\}.
 $$
 

@@ -2,25 +2,25 @@
 
 > **基础知识: 巴塞尔问题**<br>$\sum_{n=1}^{\infty}\frac{1}{n^2}=\frac{\pi^2}{6}$.
 
-> **基础知识: Euclid 范数的三角不等式**<br>$\mathbb R^2$ 上 Euclid 范数 $\left\|\left(u,v\right)\right\|=\sqrt{u^2+v^2}$ 满足三角不等式: $\left\|\left(u_1,v_1\right)+\left(u_2,v_2\right)\right\|\le\left\|\left(u_1,v_1\right)\right\|+\left\|\left(u_2,v_2\right)\right\|$.
+> **基础知识: 欧几里得范数的三角不等式**<br>$\mathbb R^2$ 上欧几里得范数 $\left\|\left(u,v\right)\right\|=\sqrt{u^2+v^2}$ 满足三角不等式: $\left\|\left(u_1,v_1\right)+\left(u_2,v_2\right)\right\|\le\left\|\left(u_1,v_1\right)\right\|+\left\|\left(u_2,v_2\right)\right\|$.
 
 > **基础知识: 稠密的传递性**<br>设 $X$ 是度量空间, $B$ 是 $X$ 的稠密子集. 若对每个 $b\in B$ 与每个 $\varepsilon>0$, 存在 $a\in A$ 使 $d\left(a,b\right)<\varepsilon$, 则 $A$ 在 $X$ 中稠密.
 
 > **基础知识: 非奇异矩阵可逆**<br>数域上的方阵 $A$ 非奇异 (行列式不为零) 当且仅当 $A$ 可逆, 即存在方阵 $A^{-1}$ 使 $AA^{-1}=A^{-1}A=I$.
 
-> **基础知识: 富比尼定理**<br>设 $f$ 在乘积空间 $\mathbb R^m\times\mathbb R^n$ 上 Lebesgue 可积, 则对几乎处处的 $x\in\mathbb R^m$, $f\left(x,\cdot\right)$ 关于 $\mathbb R^n$ 可积, 且 $\int_{\mathbb R^m\times\mathbb R^n}f\,\mathrm dm=\int_{\mathbb R^m}\left(\int_{\mathbb R^n}f\left(x,y\right)\,\mathrm dn\left(y\right)\right)\mathrm dm\left(x\right)$.
+> **基础知识: 富比尼定理**<br>设 $f$ 在乘积空间 $\mathbb R^m\times\mathbb R^n$ 上勒贝格可积, 则对几乎处处的 $x\in\mathbb R^m$, $f\left(x,\cdot\right)$ 关于 $\mathbb R^n$ 可积, 且 $\int_{\mathbb R^m\times\mathbb R^n}f\,\mathrm dm=\int_{\mathbb R^m}\left(\int_{\mathbb R^n}f\left(x,y\right)\,\mathrm dn\left(y\right)\right)\mathrm dm\left(x\right)$.
 
 > **基础知识: 格拉姆-施密特过程不改变张成空间**<br>对内积空间中的向量列 $\left\{g_n\right\}$ 施行格拉姆-施密特正交化得到标准正交列 $\left\{h_n\right\}$, 则对每个 $N$, $\operatorname{span}\left\{h_0,h_1,\cdots,h_N\right\}=\operatorname{span}\left\{g_0,g_1,\cdots,g_N\right\}$.
 
-> **基础知识: 积分的线性性**<br>Lebesgue 积分对被积函数是线性的: $\int\left(\alpha f+\beta g\right)\,\mathrm dm=\alpha\int f\,\mathrm dm+\beta\int g\,\mathrm dm$.
+> **基础知识: 积分的线性性**<br>勒贝格积分对被积函数是线性的: $\int\left(\alpha f+\beta g\right)\,\mathrm dm=\alpha\int f\,\mathrm dm+\beta\int g\,\mathrm dm$.
 
 > **基础知识: 集合论的直接事实**<br>若 $M\subset N\subset H$, 则 $N$ 中元素满足的条件自动对 $M$ 中元素成立, 故 $\left\{x:x\perp N\right\}\subset\left\{x:x\perp M\right\}$, 即 $N^\perp\subset M^\perp$.
 
-> **基础知识: 可测集的紧-开逼近与卷积磨光**<br>对 $\mathbb R^n$ 中有限测度 Lebesgue 可测集 $E$ 与 $\delta>0$, 存在紧集 $K\subset E$ 与开集 $U\supset E$ 使 $m\left(U\setminus K\right)<\delta$, 且存在 $\psi\in C_c^\infty\left(\mathbb R^n\right)$ 满足 $0\le\psi\le1$, $\psi\equiv1$ 于 $K$, $\operatorname{supp}\psi\subset U$.
+> **基础知识: 可测集的紧-开逼近与卷积磨光**<br>对 $\mathbb R^n$ 中有限测度勒贝格可测集 $E$ 与 $\delta>0$, 存在紧集 $K\subset E$ 与开集 $U\supset E$ 使 $m\left(U\setminus K\right)<\delta$, 且存在 $\psi\in C_c^\infty\left(\mathbb R^n\right)$ 满足 $0\le\psi\le1$, $\psi\equiv1$ 于 $K$, $\operatorname{supp}\psi\subset U$.
 
 > **基础知识: 勒贝格积分的性质**<br>设 $g\ge0$ 是可测函数, 则 $\int g\,\mathrm dm=0$ 当且仅当 $g=0$ 几乎处处成立.
 
-> **基础知识: 勒贝格控制收敛定理**<br>设 $\left\{f_n\right\}$ 是 Lebesgue 可测函数列, 点态收敛于可测函数 $f$, 且存在可积函数 $g$ 使 $\left|f_n\left(t\right)\right|\le g\left(t\right)$ 对几乎处处的 $t$ 与一切 $n$ 成立, 则 $f$ 可积, 且 $\lim_{n\to\infty}\int f_n\,\mathrm dm=\int f\,\mathrm dm$.
+> **基础知识: 勒贝格控制收敛定理**<br>设 $\left\{f_n\right\}$ 是勒贝格可测函数列, 点态收敛于可测函数 $f$, 且存在可积函数 $g$ 使 $\left|f_n\left(t\right)\right|\le g\left(t\right)$ 对几乎处处的 $t$ 与一切 $n$ 成立, 则 $f$ 可积, 且 $\lim_{n\to\infty}\int f_n\,\mathrm dm=\int f\,\mathrm dm$.
 
 > **基础知识: 实数三角不等式**<br>对任意实数 $a,b$, 有 $\left|a+b\right|\le\left|a\right|+\left|b\right|$.
 
@@ -30,29 +30,29 @@
 
 > **基础知识: 线性无关组的定义**<br>对于线性空间 $X$, $X$ 中的线性无关组是指 $X$ 中的一些元素构成的子集 $A$, 使得 $A$ 中任意一个元素都不能被 $A$ 中其他有限个元素线性表出; 等价地, 若 $\sum_{i=1}^n c_i x_i=0$, 则一切 $c_i=0$.
 
-> **基础知识: 希尔伯特空间的定义**<br>若内积空间 $H$ 所导出的度量是完备的, 则称 $H$ 是一个希尔伯特 (Hilbert) 空间.
+> **基础知识: 希尔伯特空间的定义**<br>若内积空间 $H$ 所导出的度量是完备的, 则称 $H$ 是一个希尔伯特空间.
 
 > **基础知识: 正交补的定义**<br>设 $H$ 是内积空间, 对于 $x\in H$, $A\subset H$, 若对每个 $y\in A$ 有 $x\perp y$, 则称 $x\perp A$, 并记 $A^\perp=\left\{x\in H:x\perp A\right\}$.
 
 > **定义 1.1.2 (极限)**<br>设 $\left(X,d\right)$ 是度量空间, $\left\{x_n\right\}_{n=1}^\infty$ 是 $X$ 中点列, $x_0\in X$, 若 $\lim_{n\to\infty}d\left(x_n,x_0\right)=0$, 则称点列 $\left\{x_n\right\}_{n=1}^\infty$ 按照度量 $d$ 收敛于 $x_0$, 记为 $\lim_{n\to\infty}x_n=x_0$.
 
-> **定义 1.2.2 (半范数与范数)**<br>记 $\mathbb K$ 是实数域 $\mathbb R$ 或复数域 $\mathbb C$. 对于 $\mathbb K$ 上的线性空间 $X$, 若每个向量 $x$ 都对应一个实数 $\left\|x\right\|$, 满足: (i) $\left\|x\right\|\ge0$; (ii) $\left\|\alpha x\right\|=\left|\alpha\right|\left\|x\right\|$; (iii) $\left\|x+y\right\|\le\left\|x\right\|+\left\|y\right\|$, 则称 $\left\|\cdot\right\|$ 为半范数. 若还满足 $\left\|x\right\|=0$ 当且仅当 $x=0$, 则称 $\left\|\cdot\right\|$ 为范数, $\left(X,\left\|\cdot\right\|\right)$ 称为赋范线性空间. 范数诱导度量 $d\left(x,y\right)=\left\|x-y\right\|$.
-
-> **定义 1.2.3 (内积空间)**<br>记 $\mathbb K$ 是实数域 $\mathbb R$ 或复数域 $\mathbb C$. 对于 $\mathbb K$ 上的线性空间 $H$, 如果任何两个向量 $x,y$ 都对应一个数 $\left\langle x,y\right\rangle\in\mathbb K$, 满足: (i) 共轭对称性 $\left\langle x,y\right\rangle=\overline{\left\langle y,x\right\rangle}$; (ii) 对第一变元的线性性 $\left\langle\alpha x+\beta y,z\right\rangle=\alpha\left\langle x,z\right\rangle+\beta\left\langle y,z\right\rangle$; (iii) 正定性 $\left\langle x,x\right\rangle\ge0$ 且 $\left\langle x,x\right\rangle=0$ 当且仅当 $x=0$, 则称 $\left\langle\cdot,\cdot\right\rangle$ 是 $H$ 中的内积, 称 $H$ 是内积空间.
-
-> **引理 1.2.3 (柯西-施瓦茨不等式)**<br>设 $H$ 是内积空间, $x,y\in H$, 则 $\left|\left\langle x,y\right\rangle\right|^2\le\left\langle x,x\right\rangle\left\langle y,y\right\rangle$.
+> **定义 1.2.2 (半范数与范数)**<br>记 $\mathbb K$ 是实数域 $\mathbb R$ 或复数域 $\mathbb C$. 对于 $\mathbb K$ 上的线性空间 $X$, 若每个向量 $x$ 都对应一个实数 $\left\|x\right\|$, 满足:<br>(i) $\left\|x\right\|\ge0$;<br>(ii) $\left\|\alpha x\right\|=\left|\alpha\right|\left\|x\right\|$;<br>(iii) $\left\|x+y\right\|\le\left\|x\right\|+\left\|y\right\|$,<br>则称 $\left\|\cdot\right\|$ 为半范数. 若还满足 $\left\|x\right\|=0$ 当且仅当 $x=0$, 则称 $\left\|\cdot\right\|$ 为范数, $\left(X,\left\|\cdot\right\|\right)$ 称为赋范线性空间. 范数诱导度量 $d\left(x,y\right)=\left\|x-y\right\|$.
 
 > **定理 1.2.2 (勾股定理, 毕达哥拉斯定理)**<br>对内积空间 $H$ 中两个元素 $x,y$, 若 $x\perp y$, 则 $\left\|x+y\right\|^2=\left\|x\right\|^2+\left\|y\right\|^2$.
 
+> **定义 1.2.3 (内积空间)**<br>记 $\mathbb K$ 是实数域 $\mathbb R$ 或复数域 $\mathbb C$. 对于 $\mathbb K$ 上的线性空间 $H$, 如果任何两个向量 $x,y$ 都对应一个数 $\left\langle x,y\right\rangle\in\mathbb K$, 满足:<br>(i) 共轭对称性 $\left\langle x,y\right\rangle=\overline{\left\langle y,x\right\rangle}$;<br>(ii) 对第一变元的线性性 $\left\langle\alpha x+\beta y,z\right\rangle=\alpha\left\langle x,z\right\rangle+\beta\left\langle y,z\right\rangle$;<br>(iii) 正定性 $\left\langle x,x\right\rangle\ge0$ 且 $\left\langle x,x\right\rangle=0$ 当且仅当 $x=0$,<br>则称 $\left\langle\cdot,\cdot\right\rangle$ 是 $H$ 中的内积, 称 $H$ 是内积空间.
+
+> **引理 1.2.3 (柯西-施瓦茨不等式)**<br>设 $H$ 是内积空间, $x,y\in H$, 则 $\left|\left\langle x,y\right\rangle\right|^2\le\left\langle x,x\right\rangle\left\langle y,y\right\rangle$.
+
 > **引理 1.2.4 (内积的连续性)**<br>设 $H$ 是内积空间, 则内积关于两个变元是连续的: 当 $x_n\to x$, $y_n\to y$ 时, 有 $\left\langle x_n,y_n\right\rangle\to\left\langle x,y\right\rangle$.
 
-> **例 1.2.8 ($L^p\left(E\right)$ 是巴拿赫空间)**<br>设 $E$ 是 Euclid 空间 $\mathbb R^k$ 的 Lebesgue 可测集, $1\le p<\infty$, 则 $L^p\left(E\right)$ 按范数 $\left\|f\right\|_p=\left(\int_E\left|f\right|^p\,\mathrm dm\right)^{1/p}$ 是赋范线性空间, 且该范数诱导的度量是完备的, 即 $L^p\left(E\right)$ 是巴拿赫空间.
+> **例 1.2.8 ($L^p\left(E\right)$ 是巴拿赫空间)**<br>设 $E$ 是欧几里得空间 $\mathbb R^k$ 的勒贝格可测集, $1\le p<\infty$, 则 $L^p\left(E\right)$ 按范数 $\left\|f\right\|_p=\left(\int_E\left|f\right|^p\,\mathrm dm\right)^{1/p}$ 是赋范线性空间, 且该范数诱导的度量是完备的, 即 $L^p\left(E\right)$ 是巴拿赫空间.
 
-> **定义 1.3.1 (正交系与标准正交系)**<br>设 $\mathfrak F$ 是内积空间 $H$ 中的一族非零向量. (i) 如果 $\mathfrak F$ 中任何两个不同的向量都正交, 就称 $\mathfrak F$ 是 $H$ 的正交系; (ii) 如果正交系 $\mathfrak F$ 中每个向量的范数都等于 $1$, 就称 $\mathfrak F$ 是标准正交系 (规范正交系).
+> **定义 1.3.1 (正交系与标准正交系)**<br>设 $\mathfrak F$ 是内积空间 $H$ 中的一族非零向量.<br>(i) 如果 $\mathfrak F$ 中任何两个不同的向量都正交, 就称 $\mathfrak F$ 是 $H$ 的正交系;<br>(ii) 如果正交系 $\mathfrak F$ 中每个向量的范数都等于 $1$, 就称 $\mathfrak F$ 是标准正交系 (规范正交系).
 
-> **定理 1.3.1 (贝塞尔不等式)**<br>设 $\mathfrak F=\left\{e_\lambda:\lambda\in\Lambda\right\}$ 是 Hilbert 空间 $H$ 中的标准正交系. 对每个 $x\in H$, 其 Fourier 系数 $\left\{\left\langle x,e_\lambda\right\rangle:\lambda\in\Lambda\right\}$ 中最多只有可列个不为零, 且 $\sum_{\lambda\in\Lambda}\left|\left\langle x,e_\lambda\right\rangle\right|^2\le\left\|x\right\|^2$.
+> **定理 1.3.1 (贝塞尔不等式)**<br>设 $\mathfrak F=\left\{e_\lambda:\lambda\in\Lambda\right\}$ 是希尔伯特空间 $H$ 中的标准正交系. 对每个 $x\in H$, 其傅里叶系数 $\left\{\left\langle x,e_\lambda\right\rangle:\lambda\in\Lambda\right\}$ 中最多只有可列个不为零, 且 $\sum_{\lambda\in\Lambda}\left|\left\langle x,e_\lambda\right\rangle\right|^2\le\left\|x\right\|^2$.
 
-> **定理 1.3.2 (标准正交基的等价条件)**<br>设 $\mathfrak F=\left\{e_\lambda:\lambda\in\Lambda\right\}$ 是 Hilbert 空间 $H$ 中的标准正交系, 下列命题等价: (i) 对任意 $x\in H$, $x=\sum_{\lambda\in\Lambda}\left\langle x,e_\lambda\right\rangle e_\lambda$; (ii) $\overline{\operatorname{span}\left\{e_\lambda:\lambda\in\Lambda\right\}}=H$; (iii) $\mathfrak F$ 是完全的, 即若 $x\in H$ 满足 $x\perp e_\lambda$ ($\forall\lambda\in\Lambda$), 则 $x=0$; (iv) $\mathfrak F$ 是完备的, 即对任意 $x\in H$, 帕塞瓦尔等式 $\left\|x\right\|^2=\sum_{\lambda\in\Lambda}\left|\left\langle x,e_\lambda\right\rangle\right|^2$ 成立. 满足上述条件之一的标准正交系称为 $H$ 中的标准正交基.
+> **定理 1.3.2 (标准正交基的等价条件)**<br>设 $\mathfrak F=\left\{e_\lambda:\lambda\in\Lambda\right\}$ 是希尔伯特空间 $H$ 中的标准正交系, 下列命题等价:<br>(i) 对任意 $x\in H$, $x=\sum_{\lambda\in\Lambda}\left\langle x,e_\lambda\right\rangle e_\lambda$;<br>(ii) $\overline{\operatorname{span}\left\{e_\lambda:\lambda\in\Lambda\right\}}=H$;<br>(iii) $\mathfrak F$ 是完全的, 即若 $x\in H$ 满足 $x\perp e_\lambda$ ($\forall\lambda\in\Lambda$), 则 $x=0$;<br>(iv) $\mathfrak F$ 是完备的, 即对任意 $x\in H$, 帕塞瓦尔等式 $\left\|x\right\|^2=\sum_{\lambda\in\Lambda}\left|\left\langle x,e_\lambda\right\rangle\right|^2$ 成立.<br>满足上述条件之一的标准正交系称为 $H$ 中的标准正交基.
 
 > **例 1.3.3 (三角多项式标准正交系)**<br>在实 (或复) 周期函数空间 $L^2\left[0,2\pi\right]$ 中, 规定内积 $\left\langle f,g\right\rangle=\frac{1}{2\pi}\int_0^{2\pi}f\left(x\right)\overline{g\left(x\right)}\,\mathrm dx$, 则 $\left\{1,\sqrt2\cos x,\sqrt2\sin x,\sqrt2\cos2x,\sqrt2\sin2x,\cdots,\sqrt2\cos nx,\sqrt2\sin nx,\cdots\right\}$ 组成 $L^2\left[0,2\pi\right]$ 的标准正交系.
 
@@ -60,41 +60,23 @@
 
 > **例 1.3.8 (勒让德多项式)**<br>在 $L^2\left[-1,1\right]$ 中, 函数列 $g_k\left(x\right)=x^k$ ($k=0,1,2,\cdots$) 是线性无关的. 勒让德多项式 $P_0\left(x\right)=1$, $P_n\left(x\right)=\frac{1}{2^n n!}\frac{\mathrm d^n}{\mathrm dx^n}\left(x^2-1\right)^n$ ($n=1,2,\cdots$) 是 $L^2\left[-1,1\right]$ 中的正交多项式系; 单位化后 $h_0\left(x\right)=\frac{1}{\sqrt2}$, $h_n\left(x\right)=\frac{1}{2^n n!}\sqrt{\frac{2n+1}{2}}\frac{\mathrm d^n}{\mathrm dx^n}\left(x^2-1\right)^n$ 是 $\left\{g_k\right\}$ 经过格拉姆-施密特过程得到的标准正交向量系.
 
+> **注 1.4.1 ($L^p\left(\mathbb R\right)$ 中的稠密子集)**<br>类似地, 可得 $L^p\left(\mathbb R\right)$ ($1\le p<\infty$) 中的简单函数全体、阶梯函数全体以及 $C_c^\infty\left(\mathbb R\right)$ 均是稠密子集.
+
 > **定义 1.4.5 (稠密性)**<br>在度量空间 $\left(X,d\right)$ 中, 对于 $X$ 中一个子集 $A$, 称 $A$ 在 $X$ 中稠密是指 $X\subset\overline A$ (即 $\overline A=X$).
 
 > **例 1.4.6 ($L^p$ 中的稠密子集)**<br>对直线上有界闭区间 $\left[a,b\right]$ 及 $1\le p<\infty$, $L^p\left[a,b\right]$ 中的简单函数全体、阶梯函数全体、$C_c^\infty\left(a,b\right)$、$C\left[a,b\right]$ 以及多项式全体 $P$ 均是 $L^p\left[a,b\right]$ 的稠密子集.
-
-> **注 1.4.1 ($L^p\left(\mathbb R^n\right)$ 中的稠密子集)**<br>类似地, 可得 $L^p\left(\mathbb R^n\right)$ ($1\le p<\infty$) 中的简单函数全体、阶梯函数全体以及 $C_c^\infty\left(\mathbb R^n\right)$ 均是稠密子集.
 
 ---
 
 ## 1.4-8 ($C_c^\infty$ 在 $L^p$ 中稠密)
 
-在直线 $\mathbb R$ 上, 证明:
-
-(i) $C_c^\infty\left(\mathbb R\right)$ 在 $L^p\left(\mathbb R\right)$ ($1\le p<\infty$) 中稠密.
-
-(ii) $C_c^\infty\left(\mathbb R\right)$ 不在 $L^\infty\left(\mathbb R\right)$ 中稠密.
-
-(iii) 多项式全体不在 $L^p\left(\mathbb R\right)$ ($1\le p<\infty$) 中稠密.
-
-本题作业要求作答第 (i) 问.
+在直线 $\mathbb R$ 上, 证明 $C_c^\infty\left(\mathbb R\right)$ 在 $L^p\left(\mathbb R\right)$ ($1\le p<\infty$) 中稠密.
 
 ### 解答 1.4-8
 
-教材为 $\mathbb R$ 情形, 下面证明更强的 $\mathbb R^n$ 情形 (令 $n=1$ 即得本题).
+第一步: 化归为逼近简单函数. 由**定义 1.4.5 (稠密性)**, 只需证明: 对任意 $f\in L^p\left(\mathbb R\right)$ 与任意 $\varepsilon>0$, 存在 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 使 $\left\|f-\varphi\right\|_p<\varepsilon$. 由**注 1.4.1 ($L^p\left(\mathbb R\right)$ 中的稠密子集)**, 简单函数全体在 $L^p\left(\mathbb R\right)$ 中稠密. 于是由**基础知识: 稠密的传递性**, 只需证明每个简单函数都能被 $C_c^\infty\left(\mathbb R\right)$ 中函数以任意 $L^p$ 精度逼近.
 
-第一步: 化归为逼近简单函数. 由**定义 1.4.5 (稠密性)**, 只需证明: 对任意 $f\in L^p\left(\mathbb R^n\right)$ 与任意 $\varepsilon>0$, 存在 $\varphi\in C_c^\infty\left(\mathbb R^n\right)$ 使 $\left\|f-\varphi\right\|_p<\varepsilon$. 由**注 1.4.1 ($L^p\left(\mathbb R^n\right)$ 中的稠密子集)**, 简单函数全体在 $L^p\left(\mathbb R^n\right)$ 中稠密. 于是由**基础知识: 稠密的传递性**, 只需证明每个简单函数都能被 $C_c^\infty\left(\mathbb R^n\right)$ 中函数以任意 $L^p$ 精度逼近.
-
-第二步: 用简单函数逼近 $f$. 由**基础知识: 简单函数的单调逼近**, 存在简单函数列 $\left\{\Phi_k\right\}$ 点态收敛于 $f$, 且 $\left|\Phi_k\right|\le\left|f\right|$. 于是 $\left|f-\Phi_k\right|^p\le\left(2\left|f\right|\right)^p\in L^1$, 由**基础知识: 勒贝格控制收敛定理**,
-
-$$
-\lim_{k\to\infty}\left\|f-\Phi_k\right\|_p^p=\lim_{k\to\infty}\int_{\mathbb R^n}\left|f-\Phi_k\right|^p\,\mathrm dm=\int_{\mathbb R^n}\lim_{k\to\infty}\left|f-\Phi_k\right|^p\,\mathrm dm=0.
-$$
-
-故对给定的 $\varepsilon>0$, 存在简单函数 $\Phi$ 使 $\left\|f-\Phi\right\|_p<\frac{\varepsilon}{2}$. 余下只需证明 $\Phi$ 可被 $C_c^\infty$ 函数逼近到任意精度.
-
-第三步: 用卷积磨光逼近特征函数. 设 $E\subset\mathbb R^n$ 是有限测度 Lebesgue 可测集. 由**基础知识: 可测集的紧-开逼近与卷积磨光**, 存在紧集 $K\subset E$, 开集 $U\supset E$ 以及 $\psi\in C_c^\infty\left(\mathbb R^n\right)$, 使 $m\left(U\setminus K\right)<\left(\frac{\varepsilon}{2}\right)^p$, 且 $0\le\psi\le1$, $\psi\equiv1$ 于 $K$, $\operatorname{supp}\psi\subset U$. 于是 $\chi_E-\psi$ 只可能在 $U\setminus K$ 上非零, 且 $\left|\chi_E-\psi\right|\le1$, 故
+第二步: 用卷积磨光逼近特征函数. 设 $E\subset\mathbb R$ 是有限测度勒贝格可测集. 由**基础知识: 可测集的紧-开逼近与卷积磨光**, 存在紧集 $K\subset E$, 开集 $U\supset E$ 以及 $\psi\in C_c^\infty\left(\mathbb R\right)$, 使 $m\left(U\setminus K\right)<\left(\frac{\varepsilon}{2}\right)^p$, 且 $0\le\psi\le1$, $\psi\equiv1$ 于 $K$, $\operatorname{supp}\psi\subset U$. 于是 $\chi_E-\psi$ 只可能在 $U\setminus K$ 上非零, 且 $\left|\chi_E-\psi\right|\le1$, 故
 
 $$
 \left\|\chi_E-\psi\right\|_p^p=\int_{U\setminus K}\left|\chi_E-\psi\right|^p\,\mathrm dm\le m\left(U\setminus K\right)<\left(\frac{\varepsilon}{2}\right)^p,
@@ -102,21 +84,13 @@ $$
 
 即 $\left\|\chi_E-\psi\right\|_p<\frac{\varepsilon}{2}$. 故特征函数可被 $C_c^\infty$ 函数逼近.
 
-第四步: 用线性性逼近一般简单函数. 设 $\Phi=\sum_{i=1}^s c_i\chi_{E_i}$ 是简单函数, 其中每个 $E_i$ 有限测度. 对每个 $i$, 由第三步取 $\psi_i\in C_c^\infty\left(\mathbb R^n\right)$ 使 $\left\|\chi_{E_i}-\psi_i\right\|_p<\frac{\varepsilon}{2s\left(\left|c_i\right|+1\right)}$. 令 $\varphi=\sum_{i=1}^s c_i\psi_i$, 则 $\varphi\in C_c^\infty\left(\mathbb R^n\right)$ (有限个紧支集光滑函数的线性组合仍紧支光滑). 由**定义 1.2.2 (半范数与范数)** (iii) 范数的三角不等式,
+第三步: 用线性性逼近一般简单函数. 设 $\Phi=\sum_{i=1}^s c_i\chi_{E_i}$ 是简单函数, 其中每个 $E_i$ 有限测度. 对每个 $i$, 由第二步取 $\psi_i\in C_c^\infty\left(\mathbb R\right)$ 使 $\left\|\chi_{E_i}-\psi_i\right\|_p<\frac{\varepsilon}{2s\left(\left|c_i\right|+1\right)}$. 令 $\varphi=\sum_{i=1}^s c_i\psi_i$, 则 $\varphi\in C_c^\infty\left(\mathbb R\right)$ (有限个紧支集光滑函数的线性组合仍紧支光滑). 由**定义 1.2.2 (半范数与范数)** (iii) 范数的三角不等式,
 
 $$
 \left\|\Phi-\varphi\right\|_p=\left\|\sum_{i=1}^s c_i\left(\chi_{E_i}-\psi_i\right)\right\|_p\le\sum_{i=1}^s\left|c_i\right|\left\|\chi_{E_i}-\psi_i\right\|_p<\frac{\varepsilon}{2}.
 $$
 
-故每个简单函数都可被 $C_c^\infty$ 函数以任意精度逼近.
-
-第五步: 合拢. 对给定的 $f$ 与 $\varepsilon>0$, 由第二步取简单函数 $\Phi$ 使 $\left\|f-\Phi\right\|_p<\frac{\varepsilon}{2}$, 由第四步取 $\varphi\in C_c^\infty\left(\mathbb R^n\right)$ 使 $\left\|\Phi-\varphi\right\|_p<\frac{\varepsilon}{2}$. 再由**定义 1.2.2 (半范数与范数)** (iii) 的三角不等式,
-
-$$
-\left\|f-\varphi\right\|_p\le\left\|f-\Phi\right\|_p+\left\|\Phi-\varphi\right\|_p<\varepsilon.
-$$
-
-由**定义 1.4.5 (稠密性)**, $C_c^\infty\left(\mathbb R^n\right)$ 在 $L^p\left(\mathbb R^n\right)$ 中稠密, 特别地 $C_c^\infty\left(\mathbb R\right)$ 在 $L^p\left(\mathbb R\right)$ 中稠密. $\blacksquare$
+故每个简单函数都可被 $C_c^\infty$ 函数以任意精度逼近. $\blacksquare$
 
 ---
 
@@ -152,7 +126,7 @@ $$
 \left\|\alpha\left(x,y\right)\right\|_1=\sqrt{\left\|\alpha x\right\|^2+\left\|\alpha y\right\|^2}=\sqrt{\left|\alpha\right|^2\left\|x\right\|^2+\left|\alpha\right|^2\left\|y\right\|^2}=\left|\alpha\right|\left\|\left(x,y\right)\right\|_1.
 $$
 
-三角不等式: 由 $L$ 中范数的三角不等式 (**定义 1.2.2 (半范数与范数)** (iii)), $\left\|x+x'\right\|\le\left\|x\right\|+\left\|x'\right\|$, $\left\|y+y'\right\|\le\left\|y\right\|+\left\|y'\right\|$. 由**基础知识: Euclid 范数的三角不等式**,
+三角不等式: 由 $L$ 中范数的三角不等式 (**定义 1.2.2 (半范数与范数)** (iii)), $\left\|x+x'\right\|\le\left\|x\right\|+\left\|x'\right\|$, $\left\|y+y'\right\|\le\left\|y\right\|+\left\|y'\right\|$. 由**基础知识: 欧几里得范数的三角不等式**,
 
 $$
 \begin{aligned}
@@ -255,7 +229,7 @@ $$
 
 ## 1.2-12 (正交补的性质)
 
-设 $H$ 是一个 Hilbert 空间.
+设 $H$ 是一个希尔伯特空间.
 
 (i) 对于 $x\in H$, $x\perp H$ 的充要条件是 $x=0$.
 
@@ -301,7 +275,7 @@ $$
 
 ## 1.3-1 (标准正交基下内积的展开式)
 
-设 $\mathfrak F=\left\{e_\lambda:\lambda\in\Lambda\right\}$ 是 Hilbert 空间 $H$ 的标准正交基. 证明: 对任何 $x,y\in H$,
+设 $\mathfrak F=\left\{e_\lambda:\lambda\in\Lambda\right\}$ 是希尔伯特空间 $H$ 的标准正交基. 证明: 对任何 $x,y\in H$,
 
 $$
 \left\langle x,y\right\rangle=\sum_{\lambda\in\Lambda}\left\langle x,e_\lambda\right\rangle\overline{\left\langle y,e_\lambda\right\rangle}.
@@ -309,10 +283,10 @@ $$
 
 ### 解答 1.3-1
 
-由**定理 1.3.2 (标准正交基的等价条件)** (i), 对任何 $x,y\in H$ 有 Fourier 展开
+由**定理 1.3.2 (标准正交基的等价条件)** (i), 对任何 $x,y\in H$ 有傅里叶展开
 
 $$
-x=\sum_{\lambda\in\Lambda}\left\langle x,e_\lambda\right\rangle e_\lambda,\qquad y=\sum_{\mu\in\Lambda}\left\langle y,e_\mu\right\rangle e_\mu.
+x=\sum_{\lambda\in\Lambda}\left\langle x,e_\lambda\right\rangle e_\lambda,\quad y=\sum_{\mu\in\Lambda}\left\langle y,e_\mu\right\rangle e_\mu.
 $$
 
 由**引理 1.2.4 (内积的连续性)**, 内积可换入级数. 再由**定义 1.2.3 (内积空间)** (ii) 对第一变元的线性性与 (i) 共轭对称性,
@@ -360,13 +334,13 @@ $$
 0=\left\langle f,e^{imx}e^{iny}\right\rangle=\frac{1}{2\pi}\int_0^{2\pi}\left(\frac{1}{2\pi}\int_0^{2\pi}f\left(x,y\right)e^{-imx}\,\mathrm dx\right)e^{-iny}\,\mathrm dy.
 $$
 
-记 $c_m\left(y\right)=\frac{1}{2\pi}\int_0^{2\pi}f\left(x,y\right)e^{-imx}\,\mathrm dx$, 即 $f\left(\cdot,y\right)$ 关于 $\left\{e^{imx}\right\}$ 的 Fourier 系数. 由**引理 1.2.3 (柯西-施瓦茨不等式)**, $\left|c_m\left(y\right)\right|^2\le\frac{1}{2\pi}\int_0^{2\pi}\left|f\left(x,y\right)\right|^2\,\mathrm dx$, 对 $y$ 积分并再次用**基础知识: 富比尼定理** 得
+记 $c_m\left(y\right)=\frac{1}{2\pi}\int_0^{2\pi}f\left(x,y\right)e^{-imx}\,\mathrm dx$, 即 $f\left(\cdot,y\right)$ 关于 $\left\{e^{imx}\right\}$ 的傅里叶系数. 由**引理 1.2.3 (柯西-施瓦茨不等式)**, $\left|c_m\left(y\right)\right|^2\le\frac{1}{2\pi}\int_0^{2\pi}\left|f\left(x,y\right)\right|^2\,\mathrm dx$, 对 $y$ 积分并再次用**基础知识: 富比尼定理** 得
 
 $$
 \int_0^{2\pi}\left|c_m\left(y\right)\right|^2\,\mathrm dy\le\frac{1}{2\pi}\int_0^{2\pi}\int_0^{2\pi}\left|f\left(x,y\right)\right|^2\,\mathrm dx\mathrm dy<\infty,
 $$
 
-故 $c_m\in L^2\left[0,2\pi\right]$. 而上面的等式说明 $c_m\perp e^{iny}$ 于 $L^2\left[0,2\pi\right]$ 对一切 $n$ 成立. 由**例 1.3.7 ($e^{inx}$ 构成标准正交基)**, $\left\{e^{iny}\right\}$ 是 $L^2\left[0,2\pi\right]$ 的标准正交基, 由**定理 1.3.2 (标准正交基的等价条件)** (iii), 它完全, 故 $c_m=0$ 几乎处处成立. 此对每个 $m$ 成立. 再由**例 1.3.7 ($e^{inx}$ 构成标准正交基)** 在 $x$ 变量上的完全性 (即**定理 1.3.2 (标准正交基的等价条件)** (iii)), 对几乎处处每个 $y$, $f\left(\cdot,y\right)$ 的所有 Fourier 系数为零蕴含 $f\left(\cdot,y\right)=0$ 几乎处处于 $x$, 即 $f=0$ 几乎处处于 $\left[0,2\pi\right]\times\left[0,2\pi\right]$. 故该标准正交系完全, 由**定理 1.3.2 (标准正交基的等价条件)** 它是 $L^2\left(\left[0,2\pi\right]\times\left[0,2\pi\right]\right)$ 的一组标准正交基. $\blacksquare$
+故 $c_m\in L^2\left[0,2\pi\right]$. 而上面的等式说明 $c_m\perp e^{iny}$ 于 $L^2\left[0,2\pi\right]$ 对一切 $n$ 成立. 由**例 1.3.7 ($e^{inx}$ 构成标准正交基)**, $\left\{e^{iny}\right\}$ 是 $L^2\left[0,2\pi\right]$ 的标准正交基, 由**定理 1.3.2 (标准正交基的等价条件)** (iii), 它完全, 故 $c_m=0$ 几乎处处成立. 此对每个 $m$ 成立. 再由**例 1.3.7 ($e^{inx}$ 构成标准正交基)** 在 $x$ 变量上的完全性 (即**定理 1.3.2 (标准正交基的等价条件)** (iii)), 对几乎处处每个 $y$, $f\left(\cdot,y\right)$ 的所有傅里叶系数为零蕴含 $f\left(\cdot,y\right)=0$ 几乎处处于 $x$, 即 $f=0$ 几乎处处于 $\left[0,2\pi\right]\times\left[0,2\pi\right]$. 故该标准正交系完全, 由**定理 1.3.2 (标准正交基的等价条件)** 它是 $L^2\left(\left[0,2\pi\right]\times\left[0,2\pi\right]\right)$ 的一组标准正交基. $\blacksquare$
 
 ---
 
@@ -394,10 +368,10 @@ $$
 
 ## 1.3-7 (带权 $L^2$ 空间是希尔伯特空间)
 
-设 $\omega\left(t\right)$ 是 $\mathbb R$ 上 Lebesgue 可积的非负函数. 令
+设 $\omega\left(t\right)$ 是 $\mathbb R$ 上勒贝格可积的非负函数. 令
 
 $$
-H=\left\{f\text{ 是 }\mathbb R\text{ 上 Lebesgue 可测函数: }\int_{\mathbb R}\left|f\left(t\right)\right|^2\omega\left(t\right)\,\mathrm dt<\infty\right\}.
+H=\left\{f\text{ 是 }\mathbb R\text{ 上勒贝格可测函数: }\int_{\mathbb R}\left|f\left(t\right)\right|^2\omega\left(t\right)\,\mathrm dt<\infty\right\}.
 $$
 
 证明: $H$ 按通常函数的线性运算以及内积
@@ -406,7 +380,7 @@ $$
 \left\langle f,g\right\rangle=\int_{\mathbb R}f\left(t\right)\overline{g\left(t\right)}\omega\left(t\right)\,\mathrm dt,\quad\forall f,g\in H
 $$
 
-成为 Hilbert 空间.
+成为希尔伯特空间.
 
 ### 解答 1.3-7
 
@@ -450,9 +424,9 @@ $$
 
 ---
 
-## 1.3-8 (标准正交系重排后 Fourier 级数极限不变)
+## 1.3-8 (标准正交系重排后傅里叶级数极限不变)
 
-设 $\mathfrak F=\left\{e_1,e_2,\cdots,e_n,\cdots\right\}$ 是 Hilbert 空间 $\left(H,\left\langle\cdot,\cdot\right\rangle\right)$ 的一组标准正交系, 将 $\mathfrak F$ 重排成另一个序列 $\left\{e_1',e_2',\cdots,e_n',\cdots\right\}$. 证明: 对于 $x\in H$,
+设 $\mathfrak F=\left\{e_1,e_2,\cdots,e_n,\cdots\right\}$ 是希尔伯特空间 $\left(H,\left\langle\cdot,\cdot\right\rangle\right)$ 的一组标准正交系, 将 $\mathfrak F$ 重排成另一个序列 $\left\{e_1',e_2',\cdots,e_n',\cdots\right\}$. 证明: 对于 $x\in H$,
 
 $$
 \lim_{n\to\infty}\sum_{k=1}^n\left\langle x,e_k\right\rangle e_k=\lim_{n\to\infty}\sum_{k=1}^n\left\langle x,e_k'\right\rangle e_k'.
