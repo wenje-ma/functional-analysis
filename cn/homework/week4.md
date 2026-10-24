@@ -480,7 +480,7 @@ $$
 
 记平移算子 $\left(\tau_h f\right)\left(x\right)=f\left(x+h\right)$, 并记 $\left\|g\right\|_p=\left(\int_{\mathbb R}\left|g\right|^p\mathrm dx\right)^{1/p}$.
 
-**第一步: 对 $C_c^\infty$ 函数成立.** 设 $\varphi\in C_c^\infty\left(\mathbb R\right)$, 其支集含于 $\left[-M,M\right]$. 则 $\varphi$ 在紧集 $\left[-M-1,M+1\right]$ 上连续; 依据**基础知识: 紧区间上连续函数一致连续**, $\varphi$ 在 $\left[-M-1,M+1\right]$ 上一致连续, 即对任意 $\varepsilon>0$ 存在 $\delta>0$, 当 $\left|h\right|<\delta$ 时 $\sup_x\left|\varphi\left(x+h\right)-\varphi\left(x\right)\right|<\varepsilon$. 对 $\left|h\right|<1$, 被积函数仅在 $\left[-M-1,M+1\right]$ 上可能非零, 故
+**第一步: 对 $C_c^\infty$ 函数成立.** 设 $\varphi\in C_c^\infty\left(\mathbb R\right)$, 其支集含于 $\left[-M,M\right]$. 不妨设 $|h|<1$, 则 $\varphi$ 在紧集 $\left[-M-1,M+1\right]$ 上连续; 依据**基础知识: 紧区间上连续函数一致连续**, $\varphi$ 在 $\left[-M-1,M+1\right]$ 上一致连续, 即对任意 $\varepsilon>0$ 存在 $\delta>0$, 当 $\left|h\right|<\delta$ 时 $\sup_x\left|\varphi\left(x+h\right)-\varphi\left(x\right)\right|<\varepsilon$. 对 $\left|h\right|<1$, 被积函数仅在 $\left[-M-1,M+1\right]$ 上可能非零, 故
 
 $$
 \left\|\tau_h\varphi-\varphi\right\|_p^p=\int_{\mathbb R}\left|\varphi\left(x+h\right)-\varphi\left(x\right)\right|^p\mathrm dx\le\left(2M+2\right)\varepsilon^p\to0.
@@ -504,7 +504,7 @@ $$
 
 ### 解答 1.4-16
 
-**先证 $\Rightarrow$ (完备且 $\sum\left\|x_n\right\|<\infty$ 蕴含级数收敛).** 设 $\left\{x_n\right\}$ 满足 $\sum_{n=1}^{\infty}\left\|x_n\right\|<\infty$, 记部分和 $S_n=\sum_{k=1}^n x_k$. 对 $m>n$, 依据**定义 1.2.2 (半范数与范数)** (iii) 的三角不等式,
+**先证 $\Rightarrow$ (完备则 $\sum\left\|x_n\right\|<\infty$ 蕴含级数收敛).** 设 $\left\{x_n\right\}$ 满足 $\sum_{n=1}^{\infty}\left\|x_n\right\|<\infty$, 记部分和 $S_n=\sum_{k=1}^n x_k$. 对 $m>n$, 依据**定义 1.2.2 (半范数与范数)** (iii) 的三角不等式,
 
 $$
 \left\|S_m-S_n\right\|=\left\|\sum_{k=n+1}^m x_k\right\|\le\sum_{k=n+1}^m\left\|x_k\right\|\le\sum_{k=n+1}^{\infty}\left\|x_k\right\|\to0\quad\left(n\to\infty\right),
@@ -618,15 +618,7 @@ $$
 
 **(ii) $\inf_n\alpha_n<1$ 的情形.**
 
-因 $\inf_n\alpha_n<1$, 存在正整数 $N$ 使 $\alpha_N<1$, 即 $\varphi^N$ 满足 $d\left(\varphi^N x,\varphi^N y\right)\le\alpha_N d\left(x,y\right)$, 依据**定义 1.5.2 (压缩映射)**, $\varphi^N$ 是压缩映射. 依据**定理 1.5.1 (巴拿赫不动点定理)**, $\varphi^N$ 在完备空间 $X$ 中有唯一不动点 $x^*$, 即 $\varphi^N\left(x^*\right)=x^*$.
-
-**第一步: $x^*$ 是 $\varphi$ 的唯一不动点.** 因 $\varphi$ 与 $\varphi^N$ 可交换 ($\varphi\varphi^N=\varphi^{N+1}=\varphi^N\varphi$), 故
-
-$$
-\varphi^N\left(\varphi\left(x^*\right)\right)=\varphi\left(\varphi^N\left(x^*\right)\right)=\varphi\left(x^*\right),
-$$
-
-即 $\varphi\left(x^*\right)$ 也是 $\varphi^N$ 的不动点. 由 $\varphi^N$ 不动点的唯一性, $\varphi\left(x^*\right)=x^*$, 即 $x^*$ 是 $\varphi$ 的不动点. 若 $y^*$ 是 $\varphi$ 的另一不动点, 则 $\varphi^N\left(y^*\right)=y^*$, 故 $y^*$ 也是 $\varphi^N$ 的不动点, 由唯一性 $y^*=x^*$. 故 $\varphi$ 有唯一不动点 $x^*$.
+**第一步: $x^*$ 是 $\varphi$ 的唯一不动点.** 因 $\inf_n\alpha_n<1$, 存在正整数 $N$ 使 $\alpha_N<1$, 即 $\varphi^N$ 满足 $d\left(\varphi^N x,\varphi^N y\right)\le\alpha_N d\left(x,y\right)$, 依据**定义 1.5.2 (压缩映射)**, $\varphi^N$ 是压缩映射. 依据**定理 1.5.1 (巴拿赫不动点定理)**, $\varphi^N$ 在完备空间 $X$ 中有唯一不动点 $x^*$, 即 $\varphi^N\left(x^*\right)=x^*$. 由**定理 1.5.2 ($\varphi^{n}$ 压缩蕴含唯一不动点)**, $\varphi$ 有唯一不动点 $x^*$.
 
 **第二步: 迭代程序与逼近程度.** 取迭代程序 $x_{n+1}=\varphi^N\left(x_n\right)$, 即考察子列 $\left\{\varphi^{Nk}\left(x_0\right)\right\}$. 因 $\varphi^N$ 是以 $\alpha_N<1$ 为压缩系数的压缩映射, 且 $X$ 完备, 依据**定理 1.5.1 (巴拿赫不动点定理)** 与**注 1.5.1 (迭代法的误差估计)** 的式 (1.25), 迭代 $\left\{\left(\varphi^N\right)^k\left(x_0\right)\right\}=\left\{\varphi^{Nk}\left(x_0\right)\right\}$ 收敛于 $x^*$, 且
 
@@ -782,6 +774,8 @@ $$
 
 **关于不闭的有界集:** 该事实不成立. 取 $F=\left(0,1\right]$ ($\mathbb R$ 中的有界非闭集), 定义 $\varphi\left(x\right)=\frac{x}{2}$. 对任意 $x\ne y\in F$, $d\left(\varphi\left(x\right),\varphi\left(y\right)\right)=\frac{\left|x-y\right|}{2}<d\left(x,y\right)$, 满足题设严格压缩条件; 但方程 $\frac{x}{2}=x$ 的解为 $x=0\notin F$, 故 $\varphi$ 在 $F$ 中无不动点. 因而对不闭的有界集, 该结论不成立. $\blacksquare$
 
+> 不闭自然不完备, 因此多次压缩后的点很容易溜出定义域.
+
 ---
 
 ## 1.5-7 (牛顿迭代法的局部收敛性)
@@ -812,12 +806,12 @@ $$
 
 故 $N$ 在闭区间 $\left[\overline{x}-\delta,\overline{x}+\delta\right]$ 上以 $\frac12$ 为压缩系数, 依据**定义 1.5.2 (压缩映射)**, $N$ 是该闭区间上的压缩映射.
 
-**第三步: 取不变闭区间并应用不动点定理.** 记 $B=\left[\overline{x}-\rho,\overline{x}+\rho\right]$, 其中 $0<\rho\le\delta$. 因 $N\left(\overline{x}\right)=\overline{x}-\frac{f\left(\overline{x}\right)}{f'\left(\overline{x}\right)}=\overline{x}$, 对任意 $x\in B$, 由第二步的压缩估计,
+**第三步: 取不变闭区间并应用不动点定理.** 记 $B=\left[\overline{x}-\delta,\overline{x}+\delta\right]$. 因 $N\left(\overline{x}\right)=\overline{x}-\frac{f\left(\overline{x}\right)}{f'\left(\overline{x}\right)}=\overline{x}$, 对任意 $x\in B$, 由第二步的压缩估计,
 
 $$
-\left|N\left(x\right)-\overline{x}\right|=\left|N\left(x\right)-N\left(\overline{x}\right)\right|\le\frac12\left|x-\overline{x}\right|\le\frac{\rho}{2}<\rho,
+\left|N\left(x\right)-\overline{x}\right|=\left|N\left(x\right)-N\left(\overline{x}\right)\right|\le\frac12\left|x-\overline{x}\right|\le\frac{\delta}{2}<\delta,
 $$
 
 故 $N\left(B\right)\subset B$. 又 $B$ 是完备度量空间 $\mathbb R$ 的闭子集, 依据**引理 1.4.1 (基本点列与完备性)** (iii), $B$ 完备. 依据**定理 1.5.1 (巴拿赫不动点定理)**, $N$ 在 $B$ 内有唯一不动点; 而 $N\left(\overline{x}\right)=\overline{x}$, 故该不动点即为 $\overline{x}$. 依据**注 1.5.1 (迭代法的误差估计)**, 从任意初值 $x_0\in B$ 出发的迭代 $x_{n+1}=N\left(x_n\right)$ 收敛于 $\overline{x}$.
 
-故取 $U=B\left(\overline{x},\rho\right)$ ($\overline{x}$ 的邻域), 对任意 $x_0\in U$, 牛顿迭代序列 $x_{n+1}=x_n-\frac{f\left(x_n\right)}{f'\left(x_n\right)}$ 收敛于 $\overline{x}$. $\blacksquare$
+故取 $U=B\left(\overline{x},\delta\right)$ ($\overline{x}$ 的邻域), 对任意 $x_0\in U$, 牛顿迭代序列 $x_{n+1}=x_n-\frac{f\left(x_n\right)}{f'\left(x_n\right)}$ 收敛于 $\overline{x}$. $\blacksquare$
