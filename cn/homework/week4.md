@@ -34,47 +34,49 @@
 
 > **定义 1.2.1 (哈梅尔基与维数)**<br>线性空间 $X$ 上的一个极大线性无关组称为 $X$ 的一组哈梅尔基; 若哈梅尔基中只有有限个元素, 则称 $X$ 是有限维线性空间.
 
-> **定义 1.2.2 (半范数与范数)**<br>设 $X$ 是 $\mathbb K$ 上的线性空间. 若每个 $x\in X$ 对应实数 $\left\|x\right\|$, 满足 (i) $\left\|x\right\|\ge0$; (ii) $\left\|\alpha x\right\|=\left|\alpha\right|\left\|x\right\|$; (iii) $\left\|x+y\right\|\le\left\|x\right\|+\left\|y\right\|$, 则称 $\left\|\cdot\right\|$ 为半范数. 若还满足 $\left\|x\right\|=0\Leftrightarrow x=0$, 则称 $\left\|\cdot\right\|$ 为范数, $\left(X,\left\|\cdot\right\|\right)$ 称为赋范线性空间. 范数诱导度量 $d\left(x,y\right)=\left\|x-y\right\|$, 且 $\left\|\cdot\right\|$ 在该度量拓扑下连续.
+> **定义 1.2.2 (半范数与范数)**<br>设 $X$ 是 $\mathbb K$ 上的线性空间. 若每个 $x\in X$ 对应实数 $\left\|x\right\|$, 满足<br>(i) $\left\|x\right\|\ge0$;<br>(ii) $\left\|\alpha x\right\|=\left|\alpha\right|\left\|x\right\|$;<br>(iii) $\left\|x+y\right\|\le\left\|x\right\|+\left\|y\right\|$,<br>则称 $\left\|\cdot\right\|$ 为半范数. 若还满足 $\left\|x\right\|=0\Leftrightarrow x=0$, 则称 $\left\|\cdot\right\|$ 为范数, $\left(X,\left\|\cdot\right\|\right)$ 称为赋范线性空间. 范数诱导度量 $d\left(x,y\right)=\left\|x-y\right\|$, 且 $\left\|\cdot\right\|$ 在该度量拓扑下连续.
 
-> **定义 1.2.3 (内积空间)**<br>设 $H$ 是 $\mathbb K$ 上的线性空间. 若对任意 $x,y\in H$ 有 $\left\langle x,y\right\rangle\in\mathbb K$, 满足 (i) $\left\langle x,y\right\rangle=\overline{\left\langle y,x\right\rangle}$; (ii) 对第一变元线性; (iii) $\left\langle x,x\right\rangle\ge0$ 且 $\left\langle x,x\right\rangle=0\Leftrightarrow x=0$, 则称 $H$ 是内积空间.
+> **定理 1.2.2 (勾股定理, 毕达哥拉斯定理)**<br>对内积空间 $H$ 中两个元素 $x,y$, 若 $x\perp y$, 则 $\left\|x+y\right\|^2=\left\|x\right\|^2+\left\|y\right\|^2$.
+
+> **定义 1.2.3 (内积空间)**<br>记 $\mathbb K$ 是实数域 $\mathbb R$ 或复数域 $\mathbb C$. 对于 $\mathbb K$ 上的线性空间 $H$, 如果任何两个向量 $x,y$ 都对应一个数 $\left\langle x,y\right\rangle\in\mathbb K$, 满足:<br>(i) 共轭对称性 $\left\langle x,y\right\rangle=\overline{\left\langle y,x\right\rangle}$;<br>(ii) 对第一变元的线性性 $\left\langle\alpha x+\beta y,z\right\rangle=\alpha\left\langle x,z\right\rangle+\beta\left\langle y,z\right\rangle$;<br>(iii) 正定性 $\left\langle x,x\right\rangle\ge0$ 且 $\left\langle x,x\right\rangle=0$ 当且仅当 $x=0$,<br>则称 $\left\langle\cdot,\cdot\right\rangle$ 是 $H$ 中的内积, 称 $H$ 是内积空间.
 
 > **引理 1.2.3 (柯西-施瓦茨不等式)**<br>对内积空间中任意 $x,y$, 成立 $\left|\left\langle x,y\right\rangle\right|^2\le\left\langle x,x\right\rangle\left\langle y,y\right\rangle$.
 
-> **定理 1.2.2 (毕达哥拉斯定理)**<br>若内积空间中 $x\perp y$, 则 $\left\|x+y\right\|^2=\left\|x\right\|^2+\left\|y\right\|^2$.
-
 > **例 1.2.12 ($C\left[a,b\right]$ 是巴拿赫空间)**<br>有限闭区间 $\left[a,b\right]$ 上的连续函数空间 $C\left[a,b\right]$ 按范数 $\left\|f\right\|=\max_{x\in\left[a,b\right]}\left|f\left(x\right)\right|$ 是巴拿赫空间.
 
-> **习题 1.2 第 13 题 (内积空间的可数直和)**<br>设 $R_n$ 都是内积空间, $R=\left\{\left\{x_n\right\}:x_n\in R_n,\ \sum_n\left\|x_n\right\|^2<\infty\right\}$ 按 $\left\langle\left\{x_n\right\},\left\{y_n\right\}\right\rangle=\sum_n\left\langle x_n,y_n\right\rangle$ 成为内积空间; 若每个 $R_n$ 是希尔伯特空间, 则 $R$ 也是希尔伯特空间.
+> **习题 1.2-13 (内积空间的可数直和)**<br>设 $R_n$ 都是内积空间, $R=\left\{\left\{x_n\right\}:x_n\in R_n,\ \sum_n\left\|x_n\right\|^2<\infty\right\}$ 按 $\left\langle\left\{x_n\right\},\left\{y_n\right\}\right\rangle=\sum_n\left\langle x_n,y_n\right\rangle$ 成为内积空间; 若每个 $R_n$ 是希尔伯特空间, 则 $R$ 也是希尔伯特空间.
 
-> **例 1.3.9 (埃尔米特多项式构成完备正交系)**<br>令 $H_n\left(t\right)=\left(-1\right)^n\mathrm e^{t^2}\frac{\mathrm d^n}{\mathrm dt^n}\mathrm e^{-t^2}$ 为埃尔米特多项式, 则加权多项式族 $\psi_n\left(t\right)=\left(2^n n!\sqrt\pi\right)^{-1/2}\mathrm e^{-t^2/2}H_n\left(t\right)$ 组成 $L^2\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$ 中的完备标准正交系; 特别地, 多项式族关于权 $\mathrm e^{-t^2}$ 正交且完备.
-
-> **定理 1.3.2 (标准正交基的等价条件)**<br>设 $\mathcal E=\left\{e_\lambda\right\}$ 是希尔伯特空间 $H$ 中的标准正交系, 下列条件等价: (i) $x=\sum_\lambda\left\langle x,e_\lambda\right\rangle e_\lambda$ ($\forall x\in H$); (ii) $\overline{\mathrm{span}\left\{e_\lambda\right\}}=H$; (iii) $\left\{e_\lambda\right\}$ 完全; (iv) 帕塞瓦尔等式成立. 满足其一者称为 $H$ 的一组标准正交基.
+> **定理 1.3.2 (标准正交基的等价条件)**<br>设 $\mathfrak F=\left\{e_\lambda:\lambda\in\Lambda\right\}$ 是希尔伯特空间 $H$ 中的标准正交系, 下列命题等价:<br>(i) 对任意 $x\in H$, $x=\sum_{\lambda\in\Lambda}\left\langle x,e_\lambda\right\rangle e_\lambda$;<br>(ii) $\overline{\operatorname{span}\left\{e_\lambda:\lambda\in\Lambda\right\}}=H$;<br>(iii) $\mathfrak F$ 是完全的, 即若 $x\in H$ 满足 $x\perp e_\lambda$ ($\forall\lambda\in\Lambda$), 则 $x=0$;<br>(iv) $\mathfrak F$ 是完备的, 即对任意 $x\in H$, 帕塞瓦尔等式 $\left\|x\right\|^2=\sum_{\lambda\in\Lambda}\left|\left\langle x,e_\lambda\right\rangle\right|^2$ 成立.<br>满足上述条件之一的标准正交系称为 $H$ 中的标准正交基.
 
 > **定理 1.3.3 (标准正交系可扩张为标准正交基)**<br>希尔伯特空间 $H$ 中的任意标准正交系都可扩张为 $H$ 的一组标准正交基.
 
+> **例 1.3.9 (埃尔米特多项式构成完备正交系)**<br>令 $H_n\left(t\right)=\left(-1\right)^n\mathrm e^{t^2}\frac{\mathrm d^n}{\mathrm dt^n}\mathrm e^{-t^2}$ 为埃尔米特多项式, 则加权多项式族 $\psi_n\left(t\right)=\left(2^n n!\sqrt\pi\right)^{-1/2}\mathrm e^{-t^2/2}H_n\left(t\right)$ 组成 $L^2\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$ 中的完备标准正交系; 特别地, 多项式族关于权 $\mathrm e^{-t^2}$ 正交且完备.
+
 > **定义 1.4.1 (内点、内部与开集)**<br>设 $A$ 是度量空间 $\left(X,d\right)$ 的点集, $x_0\in A$. 若存在 $r>0$ 使 $\left\{x:d\left(x,x_0\right)<r\right\}\subset A$, 则称 $x_0$ 是 $A$ 的内点; $A$ 的内点全体称为 $A$ 的内部; 若 $A$ 中每点都是内点, 则称 $A$ 是开集.
+
+> **引理 1.4.1 (基本点列与完备性)**<br>设 $X$ 是度量空间, 则:<br>(i) 基本点列是有界的;<br>(ii) 若 $X$ 完备, 则点列收敛当且仅当它是基本点列;<br>(iii) 完备度量空间的闭子集是完备的.
+
+> **命题 1.4.1 (可分空间的子空间可分)**<br>设 $\left(X,d\right)$ 可分, $A\subset X$, 则 $\left(A,d\right)$ 也是可分的.
+
+> **定理 1.4.1 (连续映射的等价条件)**<br>设 $f:X\to Y$ 是度量空间之间的映射, 下列条件等价:<br>(i) $f$ 连续;<br>(ii) $Y$ 中任一开集 $O$ 的原像 $f^{-1}\left(O\right)$ 是 $X$ 中的开集;<br>(iii) $Y$ 中任一闭集 $F$ 的原像 $f^{-1}\left(F\right)$ 是 $X$ 中的闭集.
 
 > **例 1.4.1 (开球是开集)**<br>度量空间中开球 $O\left(x_0,r\right)=\left\{x:d\left(x,x_0\right)<r\right\}$ 是开集.
 
+> **注 1.4.1 ($L^{p}$ 中的稠密子集)**<br>(i) $L^p\left(\mathbb R^n\right)$ ($1\le p<\infty$) 中的简单函数全体、阶梯函数全体以及 $C_c^\infty\left(\mathbb R^n\right)$ 均是稠密子集;<br>(ii) 在 $L^\infty\left[a,b\right]$ 中只有简单函数全体稠密.
+
 > **例 1.4.2 (闭球是闭集)**<br>度量空间中闭球 $B\left(x_0,r\right)=\left\{x:d\left(x,x_0\right)\le r\right\}$ 是闭集.
+
+> **定义 1.4.3 (极限点、导集、闭包与闭集)**<br>(i) 若存在异于 $x_0$ 的点列 $x_n\to x_0$, 则 $x_0$ 是 $A$ 的极限点;<br>(ii) 极限点全体记为导集 $A'$, 闭包 $\overline A=A\cup A'$;<br>(iii) 若 $A'\subset A$, 则称 $A$ 是闭集.
 
 > **例 1.4.3 (距离函数连续)**<br>设 $F$ 是度量空间 $\left(X,d\right)$ 的非空子集, $d\left(x,F\right)=\inf_{z\in F}d\left(x,z\right)$. 由三角不等式得 $\left|d\left(x_1,F\right)-d\left(x_2,F\right)\right|\le d\left(x_1,x_2\right)$, 故 $x\mapsto d\left(x,F\right)$ 连续且一致连续.
 
-> **定理 1.4.1 (连续映射的等价条件)**<br>设 $f:X\to Y$ 是度量空间之间的映射, 下列条件等价: (i) $f$ 连续; (ii) $Y$ 中任一开集 $O$ 的原像 $f^{-1}\left(O\right)$ 是 $X$ 中的开集; (iii) $Y$ 中任一闭集 $F$ 的原像 $f^{-1}\left(F\right)$ 是 $X$ 中的闭集.
-
-> **定义 1.4.3 (极限点、导集、闭包与闭集)**<br>(i) 若存在异于 $x_0$ 的点列 $x_n\to x_0$, 则 $x_0$ 是 $A$ 的极限点; (ii) 极限点全体记为导集 $A'$, 闭包 $\overline A=A\cup A'$; (iii) 若 $A'\subset A$, 则称 $A$ 是闭集.
-
-> **定理 1.4.2 (有限维的赋范线性空间是完备的)**<br>有限维赋范线性空间是完备的. 其证明中断言存在正实数 $c_1,c_2$, 使对 $X$ 中每个 $x=\sum_{i=1}^n x_i e_i$ 成立 $c_1\sqrt{\sum_{i=1}^n\left|x_i\right|^2}\le\left\|x\right\|\le c_2\sqrt{\sum_{i=1}^n\left|x_i\right|^2}$ 即式 (1.21).
-
-> **定义 1.4.5 (稠密性)**<br>在度量空间 $\left(X,d\right)$ 中, 称 $A$ 在 $B$ 中稠密是指 $B\subset\overline A$.
+> **定义 1.4.5 (稠密性)**<br>在度量空间 $\left(X,d\right)$ 中, 对于 $X$ 中一个子集 $A$, 称 $A$ 在 $X$ 中稠密是指 $X\subset\overline A$ (即 $\overline A=X$).
 
 > **例 1.4.5 (魏尔斯特拉斯第一逼近定理)**<br>有界闭区间 $\left[a,b\right]$ 上, 多项式全体 $P$ 在 $C\left[a,b\right]$ 中稠密.
 
 > **定义 1.4.6 (可分性)**<br>若度量空间 $X$ 中存在可数稠密子集, 则称 $X$ 是可分空间.
 
-> **例 1.4.6 ($L^{p}$ 中的稠密子集)**<br>对 $\left[a,b\right]$ 及 $1\le p<\infty$, $L^p\left[a,b\right]$ 中的简单函数全体、阶梯函数全体、$C_c^\infty\left(a,b\right)$、$C\left[a,b\right]$ 以及多项式全体 $P$ 均是稠密子集.
-
-> **注 1.4.1 ($L^{p}$ 中的稠密子集)**<br>(i) $L^p\left(\mathbb R^n\right)$ ($1\le p<\infty$) 中的简单函数全体、阶梯函数全体以及 $C_c^\infty\left(\mathbb R^n\right)$ 均是稠密子集; (ii) 在 $L^\infty\left[a,b\right]$ 中只有简单函数全体稠密.
+> **定义 1.4.7 (完备性)**<br>(i) 若 $\left\{x_n\right\}$ 满足: 对任意 $\varepsilon>0$, 存在 $N$, 使 $n,m\ge N$ 时 $d\left(x_n,x_m\right)<\varepsilon$, 则称 $\left\{x_n\right\}$ 是基本点列 (柯西点列);<br>(ii) 若每个基本点列都收敛, 则称 $X$ 完备;<br>(iii) 完备赋范线性空间称为巴拿赫空间;<br>(iv) 完备内积空间称为希尔伯特空间.
 
 > **例 1.4.9 ($C$ 与 $L^{p}$ 的可分性)**<br>$C\left[a,b\right]$ 和 $L^p\left[a,b\right]$ ($1\le p<\infty$) 是可分空间.
 
@@ -84,21 +86,15 @@
 
 > **例 1.4.13 ($L^{p}\left(E\right)$ 是巴拿赫空间)**<br>设 $E$ 是 $\mathbb R^n$ 的勒贝格可测集, 则 $L^p\left(E\right)$ ($1\le p<\infty$) 是巴拿赫空间; 特别地, $L^2\left(E\right)$ 是希尔伯特空间.
 
-> **定义 1.4.7 (完备性)**<br>(i) 若 $\left\{x_n\right\}$ 满足: 对任意 $\varepsilon>0$, 存在 $N$, 使 $n,m\ge N$ 时 $d\left(x_n,x_m\right)<\varepsilon$, 则称 $\left\{x_n\right\}$ 是基本点列 (柯西点列); (ii) 若每个基本点列都收敛, 则称 $X$ 完备; (iii) 完备赋范线性空间称为巴拿赫空间; (iv) 完备内积空间称为希尔伯特空间.
-
-> **引理 1.4.1 (基本点列与完备性)**<br>(i) 收敛点列是基本点列; (ii) 基本点列若有收敛子列则自身收敛于同一极限; (iii) 完备度量空间的闭子集是完备子空间; (iv) 完备子空间是闭子集.
-
-> **命题 1.4.1 (可分空间的子空间可分)**<br>设 $\left(X,d\right)$ 可分, $A\subset X$, 则 $\left(A,d\right)$ 也是可分的.
-
 > **定义 1.5.1 (不动点)**<br>设 $X$ 为集合, $\varphi:X\to X$. 若 $x^*\in X$ 使 $\varphi\left(x^*\right)=x^*$, 则称 $x^*$ 是 $\varphi$ 的不动点.
-
-> **定义 1.5.2 (压缩映射)**<br>设 $\left(X,d\right)$ 是度量空间, $\varphi:X\to X$. 若存在 $0\le\alpha<1$, 使对一切 $x,y\in X$ 有 $d\left(\varphi\left(x\right),\varphi\left(y\right)\right)\le\alpha d\left(x,y\right)$, 则称 $\varphi$ 是 $X$ 上的压缩映射, $\alpha$ 称为压缩系数.
 
 > **定理 1.5.1 (巴拿赫不动点定理)**<br>设 $X$ 是完备度量空间, $\varphi:X\to X$ 是压缩映射, 则 $\varphi$ 在 $X$ 中有唯一不动点 $x^*$; 对任意初值 $x_0$, 迭代 $x_n=\varphi^n\left(x_0\right)$ 收敛于 $x^*$, 且 $d\left(x^*,x_n\right)\le\frac{\alpha^n}{1-\alpha}d\left(x_1,x_0\right)$.
 
-> **定理 1.5.2 ($\varphi^{n}$ 压缩蕴含唯一不动点)**<br>设完备度量空间 $X$ 上的映射 $\varphi$ 存在自然数 $n$, 使 $\varphi^n$ 是压缩映射, 则 $\varphi$ 在 $X$ 中有唯一不动点.
+> **注 1.5.1 (迭代法的误差估计)**<br>在**定理 1.5.1 (巴拿赫不动点定理)** 的证明中, 令误差不等式两端取极限可得 $d\left(x^*,x_n\right)\le\frac{\alpha^n}{1-\alpha}d\left(x_1,x_0\right)$.
 
-> **注 1.5.1 (迭代法的误差估计)**<br>在**定理 1.5.1 (巴拿赫不动点定理)** 的证明中, 令误差不等式两端取极限可得 $d\left(x^*,x_n\right)\le\frac{\alpha^n}{1-\alpha}d\left(x_1,x_0\right)$ 即式 (1.25).
+> **定义 1.5.2 (压缩映射)**<br>设 $\left(X,d\right)$ 是度量空间, $\varphi:X\to X$. 若存在 $0\le\alpha<1$, 使对一切 $x,y\in X$ 有 $d\left(\varphi\left(x\right),\varphi\left(y\right)\right)\le\alpha d\left(x,y\right)$, 则称 $\varphi$ 是 $X$ 上的压缩映射, $\alpha$ 称为压缩系数.
+
+> **定理 1.5.2 ($\varphi^{n}$ 压缩蕴含唯一不动点)**<br>设完备度量空间 $X$ 上的映射 $\varphi$ 存在自然数 $n$, 使 $\varphi^n$ 是压缩映射, 则 $\varphi$ 在 $X$ 中有唯一不动点.
 
 > **定理 1.5.3 (初值问题解的存在唯一性)**<br>设 $f\left(x,y\right)$ 在区域 $D$ 上连续且关于 $y$ 满足利普希茨条件 $\left|f\left(x,y_1\right)-f\left(x,y_2\right)\right|\le L\left|y_1-y_2\right|$, 则当 $h<\min\left\{a,\frac{\lambda}{M},\frac{1}{L}\right\}$ 时, 初值问题 $y'=f\left(x,y\right)$, $y\left(x_0\right)=y_0$ 在 $\left[x_0-h,x_0+h\right]$ 上有唯一解.
 
@@ -110,14 +106,14 @@
 
 ## 1 (有限维赋范线性空间与 $\mathbb R^{n}$ 的等价)
 
-设 $X$ 是 $n$ 维赋范线性空间 (数域为 $\mathbb R$), 证明 $X$ 与 $\mathbb R^n$ 在范数意义下等价. 本题为**定理 1.4.2 (有限维的赋范线性空间是完备的)** 证明中 (1.21) 式所确立的事实.
+设 $X$ 是 $n$ 维赋范线性空间 (数域为 $\mathbb R$), 证明 $X$ 与 $\mathbb R^n$ 在范数意义下等价.
 
 ### 解答 1
 
 欲证明 $X$ 与 $\mathbb R^n$ 在范数意义下等价, 即要证明存在正实数 $c_1,c_2$, 使得对 $X$ 中每个 $x=\sum_{i=1}^n x_i e_i$ 成立
 
 $$
-c_1\sqrt{\sum_{i=1}^n\left|x_i\right|^2}\le\left\|x\right\|\le c_2\sqrt{\sum_{i=1}^n\left|x_i\right|^2}. \tag{1.21}
+c_1\sqrt{\sum_{i=1}^n\left|x_i\right|^2}\le\left\|x\right\|\le c_2\sqrt{\sum_{i=1}^n\left|x_i\right|^2}.
 $$
 
 **第一步: 建立坐标同构.** 因 $X$ 是 $n$ 维线性空间, 依据**定义 1.2.1 (哈梅尔基与维数)**, 可取 $X$ 的一组基 $e_1,e_2,\cdots,e_n$. 定义线性映射
@@ -163,7 +159,7 @@ $$
 c_1\sqrt{\sum_{i=1}^n\left|x_i\right|^2}\le\left\|\sum_{i=1}^n x_i e_i\right\|\le c_2\sqrt{\sum_{i=1}^n\left|x_i\right|^2}.
 $$
 
-该不等式对 $\left(x_i\right)=0$ 也平凡成立. 这正是式 (1.21), 故 $X$ 上的范数与 $\mathbb R^n$ 上的欧几里得范数互相控制, 即二者在范数意义下等价. $\blacksquare$
+该不等式对 $\left(x_i\right)=0$ 也平凡成立. 故 $X$ 上的范数与 $\mathbb R^n$ 上的欧几里得范数互相控制, 即二者在范数意义下等价. $\blacksquare$
 
 ---
 
@@ -234,7 +230,7 @@ $$
 \lim_{r\to0}\sup_{x\in O\left(x_0,r\right)}f\left(x\right)\le f\left(x_0\right)<a.
 $$
 
-由上式左端的极限严格小于 $a$, 存在 $r_0>0$ 使 $\sup_{x\in O\left(x_0,r_0\right)}f\left(x\right)<a$, 即对一切 $x\in O\left(x_0,r_0\right)$ 有 $f\left(x\right)<a$, 故 $O\left(x_0,r_0\right)\subset X\setminus X\left(f\ge a\right)$. 依据**例 1.4.1 (开球是开集)**, $O\left(x_0,r_0\right)$ 是开集, 故 $x_0$ 是补集的内点 (依据**定义 1.4.1 (内点、内部与开集)**). 由于 $x_0$ 任取, $X\setminus X\left(f\ge a\right)$ 是开集, 故 $X\left(f\ge a\right)$ 是闭集.
+由上式左端的极限严格小于 $a$, 存在 $r_0>0$ 使 $\sup_{x\in O\left(x_0,r_0\right)}f\left(x\right)<a$, 即对一切 $x\in O\left(x_0,r_0\right)$ 有 $f\left(x\right)<a$, 故 $O\left(x_0,r_0\right)\subset X\setminus X\left(f\ge a\right)$. 依据**例 1.4.1 (开球是开集)**, $O\left(x_0,r_0\right)$ 是开集, 故 $x_0$ 是其内点 (依据**定义 1.4.1 (内点、内部与开集)**). 由于 $x_0$ 任取, $X\setminus X\left(f\ge a\right)$ 是开集, 故 $X\left(f\ge a\right)$ 是闭集.
 
 **再证 $\Leftarrow$ (水平集对一切 $a$ 闭蕴含上半连续).** 固定 $x_0\in X$. 对任意实数 $a>f\left(x_0\right)$, 因 $f\left(x_0\right)<a$, 故 $x_0\notin X\left(f\ge a\right)$. 由假设 $X\left(f\ge a\right)$ 是闭集, 依据**基础知识: 闭集与补集开集**, 其补集 $X\setminus X\left(f\ge a\right)$ 是开集; 而 $x_0$ 属于该开集, 依据**定义 1.4.1 (内点、内部与开集)**, 存在 $r_0>0$ 使 $O\left(x_0,r_0\right)\subset X\setminus X\left(f\ge a\right)$, 即对一切 $x\in O\left(x_0,r_0\right)$ 有 $f\left(x\right)<a$, 从而
 
@@ -285,7 +281,7 @@ $$
 对 $1\le p<\infty$, 定义巴拿赫空间
 
 $$
-L^p\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)=\left\{f\text{ 在 }\mathbb R\text{ 上勒贝格可测}:\left\|f\right\|_p=\left(\int_{\mathbb R}\left|f\left(t\right)\right|^p\mathrm e^{-t^2}\mathrm dt\right)^{1/p}<\infty\right\}.
+L^p\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)=\left\{f\;\text{在}\;\mathbb R\;\text{上勒贝格可测}:\left\|f\right\|_p=\left(\int_{\mathbb R}\left|f\left(t\right)\right|^p\mathrm e^{-t^2}\mathrm dt\right)^{1/p}<\infty\right\}.
 $$
 
 证明: $C_c^\infty\left(\mathbb R\right)$ 在 $L^p\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$ 中稠密. 判断多项式全体是否为稠密集 (无须证明).
@@ -328,7 +324,7 @@ $$
 
 设 $C_{2\pi}=\left\{f\in C\left[0,2\pi\right]:f\left(0\right)=f\left(2\pi\right)\right\}$, 并按范数 $\left\|f\right\|=\max_{0\le t\le2\pi}\left|f\left(t\right)\right|$ 成一赋范空间. 证明:
 
-(i) 令 $\mathcal P=\left\{f\in C_{2\pi}:\text{存在多项式 }P\text{ 使得 }f\left(t\right)=P\left(t\right),\ \forall0\le t\le2\pi\right\}$, 则 $\mathcal P$ 在 $C_{2\pi}$ 中稠密.
+(i) 令 $\mathcal P=\left\{f\in C_{2\pi}:\text{存在多项式}\;P\;\text{使得}\;f\left(t\right)=P\left(t\right),\ \forall0\le t\le2\pi\right\}$, 则 $\mathcal P$ 在 $C_{2\pi}$ 中稠密.
 
 (ii) $C_{2\pi}$ 在 $L^p\left[0,2\pi\right]$ ($1\le p<\infty$) 中稠密, 但不在 $L^\infty\left[0,2\pi\right]$ 中稠密.
 
@@ -350,7 +346,7 @@ $$
 
 依据**定义 1.2.2 (半范数与范数)** (iii), $\left\|f-P\right\|\le\left\|f-Q\right\|+\left\|Q-P\right\|<\frac{\varepsilon}{4}+\frac{\varepsilon}{2}<\varepsilon$. 依据**定义 1.4.5 (稠密性)**, $\mathcal P$ 在 $C_{2\pi}$ 中稠密.
 
-**(ii) 第一部分: $C_{2\pi}$ 在 $L^p\left[0,2\pi\right]$ 中稠密.** 设 $f\in L^p\left[0,2\pi\right]$, $\varepsilon>0$. 依据**例 1.4.6 ($L^{p}$ 中的稠密子集)**, $C\left[0,2\pi\right]$ 在 $L^p\left[0,2\pi\right]$ 中稠密, 故存在 $g\in C\left[0,2\pi\right]$ 使 $\left\|f-g\right\|_p<\frac{\varepsilon}{2}$. 现把 $g$ 在左端点附近稍作修改以令其满足 $h\left(0\right)=h\left(2\pi\right)$: 取 $\eta>0$ 充分小, 令
+**(ii) 第一部分: $C_{2\pi}$ 在 $L^p\left[0,2\pi\right]$ 中稠密.** 设 $f\in L^p\left[0,2\pi\right]$, $\varepsilon>0$. 依据**注 1.4.1 ($L^{p}$ 中的稠密子集)**, $C\left[0,2\pi\right]$ 在 $L^p\left[0,2\pi\right]$ 中稠密, 故存在 $g\in C\left[0,2\pi\right]$ 使 $\left\|f-g\right\|_p<\frac{\varepsilon}{2}$. 现把 $g$ 在左端点附近稍作修改以令其满足 $h\left(0\right)=h\left(2\pi\right)$: 取 $\eta>0$ 充分小, 令
 
 $$
 h\left(t\right)=
@@ -394,7 +390,7 @@ $$
 
 因为在 $\left[-M,M\right]$ 上 $1-\varphi=0$, 在 $\left|t\right|\ge M$ 上 $\left|f\left(t\right)\right|<\varepsilon$. 依据**定义 1.4.5 (稠密性)**, $C_c\left(\mathbb R\right)$ 在 $C_0\left(\mathbb R\right)$ 中稠密.
 
-**第二步: $C_c\left(\mathbb R\right)$ 可分.** 记 $C_c\left(\left[-n,n\right]\right)=\left\{f\in C\left[-n,n\right]:\text{支集 }\subset\left[-n,n\right]\right\}$, 则 $C_c\left(\mathbb R\right)=\bigcup_{n=1}^{\infty}C_c\left(\left[-n,n\right]\right)$. 依据**例 1.4.9 ($C$ 与 $L^{p}$ 的可分性)**, $C\left[-n,n\right]$ 可分; 依据**命题 1.4.1 (可分空间的子空间可分)**, 其子空间 $C_c\left(\left[-n,n\right]\right)$ 可分. 因可数多个可分空间之并仍可分, 故 $C_c\left(\mathbb R\right)$ 可分.
+**第二步: $C_c\left(\mathbb R\right)$ 可分.** 记 $C_c\left(\left[-n,n\right]\right)=\left\{f\in C\left[-n,n\right]:\text{支集}\subset\left[-n,n\right]\right\}$, 则 $C_c\left(\mathbb R\right)=\bigcup_{n=1}^{\infty}C_c\left(\left[-n,n\right]\right)$. 依据**例 1.4.9 ($C$ 与 $L^{p}$ 的可分性)**, $C\left[-n,n\right]$ 可分; 依据**命题 1.4.1 (可分空间的子空间可分)**, 其子空间 $C_c\left(\left[-n,n\right]\right)$ 可分. 因可数多个可分空间之并仍可分, 故 $C_c\left(\mathbb R\right)$ 可分.
 
 **第三步: 合成 $C_0\left(\mathbb R\right)$ 的可分性.** 由第一步, $C_c\left(\mathbb R\right)$ 在 $C_0\left(\mathbb R\right)$ 中稠密; 由第二步, $C_c\left(\mathbb R\right)$ 可分. 依据**基础知识: 稠密关系的传递性**, 稠密于 $C_0\left(\mathbb R\right)$ 中的可分空间 $C_c\left(\mathbb R\right)$ 的可数稠密子集也是 $C_0\left(\mathbb R\right)$ 的可数稠密子集, 故 $C_0\left(\mathbb R\right)$ 可分.
 
@@ -403,6 +399,8 @@ $$
 **第一步: $l^\infty$ 等距嵌入 $C_b\left(\mathbb R\right)$.** 对 $a=\left(a_n\right)_{n\in\mathbb Z}\in l^\infty$, 定义 $f_a\in C_b\left(\mathbb R\right)$ 为分片线性函数: $f_a\left(n\right)=a_n$ ($n\in\mathbb Z$), 且 $f_a$ 在每个区间 $\left[n,n+1\right]$ 上为线性. 则 $f_a$ 连续且有界. 依据**基础知识: 分片线性延拓保最大模**, $\left\|f_a\right\|_\infty=\sup_{t\in\mathbb R}\left|f_a\left(t\right)\right|=\sup_{n\in\mathbb Z}\left|a_n\right|=\left\|a\right\|_{l^\infty}$, 故 $a\mapsto f_a$ 是 $l^\infty$ 到 $C_b\left(\mathbb R\right)$ 的某个子空间的等距映射.
 
 **第二步: 反证推出矛盾.** 若 $C_b\left(\mathbb R\right)$ 可分, 则依据**命题 1.4.1 (可分空间的子空间可分)**, 其上述子空间 (即 $l^\infty$ 的等距像) 也可分, 从而 $l^\infty$ 可分. 但依据**例 1.4.10 ($l^{\infty}$ 不可分)**, $l^\infty$ 不可分, 矛盾. 故 $C_b\left(\mathbb R\right)$ 不可分. $\blacksquare$
+
+> $C_b(\mathbb R)$ 相较于 $C_0(\mathbb R)$, 放宽了边界条件, 这导致了 $C_b(\mathbb R)$ 中可以嵌入任意有界的数列, 从而导致其不可分; 反观 $C_0(\mathbb R)$ 中当然嵌入不进去.
 
 ---
 
