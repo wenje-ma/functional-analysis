@@ -4,15 +4,15 @@
 
 > **基础知识: 夹逼定理**<br>若数列 $\left\{a_n\right\}$ 满足 $0\le a_n\le b_n$, 且 $b_n\to0$, 则 $a_n\to0$.
 
-> **基础知识: 对数与指数函数的连续性**<br>$\ln$ 与 $\exp$ 分别在其定义域上连续, 即 $\lim_{u\to u_0}\ln u=\ln u_0$ ($u_0>0$), $\lim_{v\to v_0}e^v=e^{v_0}$.
+> **基础知识: 对数与指数函数的连续性**<br>$\ln$ 与 $\exp$ 分别在其定义域上连续, 即 $\lim_{u\to u_0}\ln u=\ln u_0$ ($u_0> 0$), $\lim_{v\to v_0}e^v=e^{v_0}$.
 
 > **基础知识: 二项式定理**<br>对任意 $x$ 与正整数 $k$, $\left(1-x\right)^k=\sum_{j=0}^{k}\binom{k}{j}\left(-x\right)^j$.
 
-> **基础知识: 函数 $\varphi,\psi$ 的单调与凹性**<br>记 $\varphi\left(t\right)=\frac{t}{1+t}$, $\psi\left(t\right)=\ln\left(1+t\right)$, $t\ge0$. 则 $\varphi,\psi$ 在 $\left[0,\infty\right)$ 上都严格递增, $\varphi\left(0\right)=\psi\left(0\right)=0$, 且 $\varphi''\left(t\right)=-\frac{2}{\left(1+t\right)^3}<0$, $\psi''\left(t\right)=-\frac{1}{\left(1+t\right)^2}<0$, 即二者都是严格凹函数.
+> **基础知识: 函数 $\varphi,\psi$ 的单调与凹性**<br>记 $\varphi\left(t\right)=\frac{t}{1+t}$, $\psi\left(t\right)=\ln\left(1+t\right)$, $t\ge0$. 则 $\varphi,\psi$ 在 $\left[0,\infty\right)$ 上都严格递增, $\varphi\left(0\right)=\psi\left(0\right)=0$, 且 $\varphi''\left(t\right)=-\frac{2}{\left(1+t\right)^3}< 0$, $\psi''\left(t\right)=-\frac{1}{\left(1+t\right)^2}< 0$, 即二者都是严格凹函数.
 
 > **基础知识: 凹函数过原点的次可加性**<br>若 $f:\left[0,\infty\right)\to\left[0,\infty\right)$ 是凹函数且 $f\left(0\right)=0$, 则对任意 $a,b\ge0$ 有 $f\left(a+b\right)\le f\left(a\right)+f\left(b\right)$. 事实上, 凹函数的导函数 $f'$ 单调递减, 故 $f\left(a+b\right)-f\left(a\right)=\int_a^{a+b}f'\left(s\right)\,\mathrm ds\le\int_a^{a+b}f'\left(s-a\right)\,\mathrm ds=\int_0^bf'\left(u\right)\,\mathrm du=f\left(b\right)-f\left(0\right)=f\left(b\right)$.
 
-> **基础知识: 幂函数的单调性**<br>对任意 $p>0$, $u\mapsto u^p$ 在 $\left[0,\infty\right)$ 上严格递增; 特别当 $0<p<1$ 时, $\left(u^p\right)''=p\left(p-1\right)u^{p-2}<0$ ($u>0$), 即 $t\mapsto t^p$ 在 $\left[0,\infty\right)$ 上是凹函数且 $0^p=0$.
+> **基础知识: 幂函数的单调性**<br>对任意 $p> 0$, $u\mapsto u^p$ 在 $\left[0,\infty\right)$ 上严格递增; 特别当 $0< p< 1$ 时, $\left(u^p\right)''=p\left(p-1\right)u^{p-2}< 0$ ($u> 0$), 即 $t\mapsto t^p$ 在 $\left[0,\infty\right)$ 上是凹函数且 $0^p=0$.
 
 > **基础知识: 非负可测函数积分为零的充要条件**<br>若 $g\ge0$ 是 $\left[0,1\right]$ 上的勒贝格可测函数, 则 $\int_0^1g\left(t\right)\,\mathrm dt=0$ 当且仅当 $g\left(t\right)=0$ 几乎处处成立.
 
@@ -20,7 +20,7 @@
 
 > **基础知识: $\sin u\le u$**<br>对任意 $u\ge0$, 有 $\sin u\le u$.
 
-> **基础知识: $\sin$ 在 $\left[0,\pi/2\right]$ 上的凹弦估计**<br>$\sin''u=-\sin u<0$ ($u\in\left(0,\pi/2\right)$), 故 $\sin$ 在 $\left[0,\pi/2\right]$ 上是凹函数, 其图像位于连接 $\left(0,0\right)$ 与 $\left(\pi/2,1\right)$ 的弦 $y=\frac{2}{\pi}u$ 之上, 即 $\sin u\ge\frac{2}{\pi}u$ ($0\le u\le\frac{\pi}{2}$).
+> **基础知识: $\sin$ 在 $\left[0,\pi/2\right]$ 上的凹弦估计**<br>$\sin''u=-\sin u< 0$ ($u\in\left(0,\pi/2\right)$), 故 $\sin$ 在 $\left[0,\pi/2\right]$ 上是凹函数, 其图像位于连接 $\left(0,0\right)$ 与 $\left(\pi/2,1\right)$ 的弦 $y=\frac{2}{\pi}u$ 之上, 即 $\sin u\ge\frac{2}{\pi}u$ ($0\le u\le\frac{\pi}{2}$).
 
 > **基础知识: $\cos$ 在 $\left[0,\pi\right]$ 上严格递减**<br>若 $\gamma,\beta\in\left[0,\pi\right]$ 且 $\cos\gamma\ge\cos\beta$, 则 $\gamma\le\beta$.
 
@@ -38,7 +38,7 @@
 
 ---
 
-## 1.1-2
+## 1.1-2 (两个导出的度量及其收敛性一致)
 
 设 $\left(X,d\right)$ 是度量空间, 证明:
 
@@ -102,7 +102,7 @@ $$
 
 ---
 
-## 1.1-4
+## 1.1-4 (多项式空间上的两个度量及其收敛比较)
 
 设 $X$ 是 $\left[0,1\right]$ 上多项式全体. 对于 $P,Q\in X$, $P\left(x\right)-Q\left(x\right)=\sum_{i=0}^{n}a_ix^i$, 令
 
@@ -182,9 +182,9 @@ $$
 
 ---
 
-## 1.1-5
+## 1.1-5 ($L^p$ 伪度量与商空间)
 
-对 $0<p<1$, 记 $\mathcal L^p\left[0,1\right]$ 是区间 $\left[a,b\right]$ 上勒贝格可测且 $p$ 次可积的函数全体. 令
+对 $0< p< 1$, 记 $\mathcal L^p\left[0,1\right]$ 是区间 $\left[a,b\right]$ 上勒贝格可测且 $p$ 次可积的函数全体. 令
 
 $$
 d\left(f,g\right)=\int_0^1\left|f\left(t\right)-g\left(t\right)\right|^p\,\mathrm dt.
@@ -192,7 +192,7 @@ $$
 
 证明:
 
-(i) 当数 $a,b>0$ 时, $\left(a+b\right)^p\le a^p+b^p$.
+(i) 当数 $a,b> 0$ 时, $\left(a+b\right)^p\le a^p+b^p$.
 
 (ii) $d$ 是伪度量, 即 $d$ 是非负的且满足定义 1.1.1(ii) 及 (iii).
 
@@ -200,7 +200,7 @@ $$
 
 ### 解答 1.1-5
 
-**(i) 对 $a,b>0$, 证明 $\left(a+b\right)^p\le a^p+b^p$.** 令 $f\left(t\right)=t^p$ ($t\ge0$). 由 $0<p<1$, $\left(t^p\right)''=p\left(p-1\right)t^{p-2}<0$ ($t>0$), 且 $f\left(0\right)=0$, 故 $f$ 是 $\left[0,\infty\right)$ 上的凹函数 (**基础知识: 幂函数的单调性**). 由**基础知识: 凹函数过原点的次可加性**, $f\left(a+b\right)\le f\left(a\right)+f\left(b\right)$, 即 $\left(a+b\right)^p\le a^p+b^p$ 对 $a,b\ge0$ 成立, 特别对 $a,b>0$ 成立.
+**(i) 对 $a,b> 0$, 证明 $\left(a+b\right)^p\le a^p+b^p$.** 令 $f\left(t\right)=t^p$ ($t\ge0$). 由 $0< p< 1$, $\left(t^p\right)''=p\left(p-1\right)t^{p-2}< 0$ ($t> 0$), 且 $f\left(0\right)=0$, 故 $f$ 是 $\left[0,\infty\right)$ 上的凹函数 (**基础知识: 幂函数的单调性**). 由**基础知识: 凹函数过原点的次可加性**, $f\left(a+b\right)\le f\left(a\right)+f\left(b\right)$, 即 $\left(a+b\right)^p\le a^p+b^p$ 对 $a,b\ge0$ 成立, 特别对 $a,b> 0$ 成立.
 
 **(ii) 验证 $d$ 是伪度量.** 依据**定义 1.1.1 (度量空间)**, 验证非负性、(ii) 对称性与 (iii) 三角不等式 (不要求 (i) 中的正定性).
 
@@ -238,7 +238,7 @@ $$
 
 ---
 
-## 1.1-7
+## 1.1-7 (单位球面上的测地度量)
 
 在三维欧几里得空间 $\mathbb R^3$ 中, 考虑单位球面
 
@@ -304,7 +304,7 @@ $$
 
 若 $\alpha+\beta\ge\pi$, 则 $\gamma\le\pi\le\alpha+\beta$, 即 $d\left(x,z\right)\le d\left(x,y\right)+d\left(y,z\right)$, 三角不等式成立.
 
-若 $\alpha+\beta<\pi$, 将 $x,z$ 沿 $y$ 的方向作正交分解: 由 $\left\|x\right\|=\left\|y\right\|=\left\|z\right\|=1$, 存在单位向量 $u,v\perp y$ 使得
+若 $\alpha+\beta< \pi$, 将 $x,z$ 沿 $y$ 的方向作正交分解: 由 $\left\|x\right\|=\left\|y\right\|=\left\|z\right\|=1$, 存在单位向量 $u,v\perp y$ 使得
 
 $$
 x=\cos\alpha\,y+\sin\alpha\,u,\quad z=\cos\beta\,y+\sin\beta\,v.

@@ -4,7 +4,7 @@
 
 > **基础知识: 欧几里得范数的三角不等式**<br>$\mathbb R^2$ 上欧几里得范数 $\left\|\left(u,v\right)\right\|=\sqrt{u^2+v^2}$ 满足三角不等式: $\left\|\left(u_1,v_1\right)+\left(u_2,v_2\right)\right\|\le\left\|\left(u_1,v_1\right)\right\|+\left\|\left(u_2,v_2\right)\right\|$.
 
-> **基础知识: 稠密的传递性**<br>设 $X$ 是度量空间, $B$ 是 $X$ 的稠密子集. 若对每个 $b\in B$ 与每个 $\varepsilon>0$, 存在 $a\in A$ 使 $d\left(a,b\right)<\varepsilon$, 则 $A$ 在 $X$ 中稠密.
+> **基础知识: 稠密的传递性**<br>设 $X$ 是度量空间, $B$ 是 $X$ 的稠密子集. 若对每个 $b\in B$ 与每个 $\varepsilon> 0$, 存在 $a\in A$ 使 $d\left(a,b\right)< \varepsilon$, 则 $A$ 在 $X$ 中稠密.
 
 > **基础知识: 非奇异矩阵可逆**<br>数域上的方阵 $A$ 非奇异 (行列式不为零) 当且仅当 $A$ 可逆, 即存在方阵 $A^{-1}$ 使 $AA^{-1}=A^{-1}A=I$.
 
@@ -16,7 +16,7 @@
 
 > **基础知识: 集合论的直接事实**<br>若 $M\subset N\subset H$, 则 $N$ 中元素满足的条件自动对 $M$ 中元素成立, 故 $\left\{x:x\perp N\right\}\subset\left\{x:x\perp M\right\}$, 即 $N^\perp\subset M^\perp$.
 
-> **基础知识: 可测集的紧-开逼近与卷积磨光**<br>对 $\mathbb R^n$ 中有限测度勒贝格可测集 $E$ 与 $\delta>0$, 存在紧集 $K\subset E$ 与开集 $U\supset E$ 使 $m\left(U\setminus K\right)<\delta$, 且存在 $\psi\in C_c^\infty\left(\mathbb R^n\right)$ 满足 $0\le\psi\le1$, $\psi\equiv1$ 于 $K$, $\operatorname{supp}\psi\subset U$.
+> **基础知识: 可测集的紧-开逼近与卷积磨光**<br>对 $\mathbb R^n$ 中有限测度勒贝格可测集 $E$ 与 $\delta> 0$, 存在紧集 $K\subset E$ 与开集 $U\supset E$ 使 $m\left(U\setminus K\right)< \delta$, 且存在 $\psi\in C_c^\infty\left(\mathbb R^n\right)$ 满足 $0\le\psi\le1$, $\psi\equiv1$ 于 $K$, $\operatorname{supp}\psi\subset U$.
 
 > **基础知识: 勒贝格积分的性质**<br>设 $g\ge0$ 是可测函数, 则 $\int g\,\mathrm dm=0$ 当且仅当 $g=0$ 几乎处处成立.
 
@@ -46,7 +46,7 @@
 
 > **引理 1.2.4 (内积的连续性)**<br>设 $H$ 是内积空间, 则内积关于两个变元是连续的: 当 $x_n\to x$, $y_n\to y$ 时, 有 $\left\langle x_n,y_n\right\rangle\to\left\langle x,y\right\rangle$.
 
-> **例 1.2.8 ($L^p\left(E\right)$ 是巴拿赫空间)**<br>设 $E$ 是欧几里得空间 $\mathbb R^k$ 的勒贝格可测集, $1\le p<\infty$, 则 $L^p\left(E\right)$ 按范数 $\left\|f\right\|_p=\left(\int_E\left|f\right|^p\,\mathrm dm\right)^{1/p}$ 是赋范线性空间, 且该范数诱导的度量是完备的, 即 $L^p\left(E\right)$ 是巴拿赫空间.
+> **例 1.2.8 ($L^p\left(E\right)$ 是巴拿赫空间)**<br>设 $E$ 是欧几里得空间 $\mathbb R^k$ 的勒贝格可测集, $1\le p< \infty$, 则 $L^p\left(E\right)$ 按范数 $\left\|f\right\|_p=\left(\int_E\left|f\right|^p\,\mathrm dm\right)^{1/p}$ 是赋范线性空间, 且该范数诱导的度量是完备的, 即 $L^p\left(E\right)$ 是巴拿赫空间.
 
 > **定义 1.3.1 (正交系与标准正交系)**<br>设 $\mathfrak F$ 是内积空间 $H$ 中的一族非零向量.<br>(i) 如果 $\mathfrak F$ 中任何两个不同的向量都正交, 就称 $\mathfrak F$ 是 $H$ 的正交系;<br>(ii) 如果正交系 $\mathfrak F$ 中每个向量的范数都等于 $1$, 就称 $\mathfrak F$ 是标准正交系 (规范正交系).
 
@@ -58,34 +58,34 @@
 
 > **例 1.3.7 ($e^{inx}$ 构成标准正交基)**<br>在复空间 $L^2\left[0,2\pi\right]$ 中, $\left\{e^{inx}:n\in\mathbb Z\right\}$ 是一组标准正交基.
 
-> **注 1.4.1 ($L^p\left(\mathbb R\right)$ 中的稠密子集)**<br>类似地, 可得 $L^p\left(\mathbb R\right)$ ($1\le p<\infty$) 中的简单函数全体、阶梯函数全体以及 $C_c^\infty\left(\mathbb R\right)$ 均是稠密子集.
+> **注 1.4.1 ($L^p\left(\mathbb R\right)$ 中的稠密子集)**<br>类似地, 可得 $L^p\left(\mathbb R\right)$ ($1\le p< \infty$) 中的简单函数全体、阶梯函数全体以及 $C_c^\infty\left(\mathbb R\right)$ 均是稠密子集.
 
 > **定义 1.4.5 (稠密性)**<br>在度量空间 $\left(X,d\right)$ 中, 对于 $X$ 中一个子集 $A$, 称 $A$ 在 $X$ 中稠密是指 $X\subset\overline A$ (即 $\overline A=X$).
 
-> **例 1.4.6 ($L^p$ 中的稠密子集)**<br>对直线上有界闭区间 $\left[a,b\right]$ 及 $1\le p<\infty$, $L^p\left[a,b\right]$ 中的简单函数全体、阶梯函数全体、$C_c^\infty\left(a,b\right)$、$C\left[a,b\right]$ 以及多项式全体 $P$ 均是 $L^p\left[a,b\right]$ 的稠密子集.
+> **例 1.4.6 ($L^p$ 中的稠密子集)**<br>对直线上有界闭区间 $\left[a,b\right]$ 及 $1\le p< \infty$, $L^p\left[a,b\right]$ 中的简单函数全体、阶梯函数全体、$C_c^\infty\left(a,b\right)$、$C\left[a,b\right]$ 以及多项式全体 $P$ 均是 $L^p\left[a,b\right]$ 的稠密子集.
 
 ---
 
 ## 1.4-8 ($C_c^\infty$ 在 $L^p$ 中稠密)
 
-在直线 $\mathbb R$ 上, 证明 $C_c^\infty\left(\mathbb R\right)$ 在 $L^p\left(\mathbb R\right)$ ($1\le p<\infty$) 中稠密.
+在直线 $\mathbb R$ 上, 证明 $C_c^\infty\left(\mathbb R\right)$ 在 $L^p\left(\mathbb R\right)$ ($1\le p< \infty$) 中稠密.
 
 ### 解答 1.4-8
 
-第一步: 化归为逼近简单函数. 由**定义 1.4.5 (稠密性)**, 只需证明: 对任意 $f\in L^p\left(\mathbb R\right)$ 与任意 $\varepsilon>0$, 存在 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 使 $\left\|f-\varphi\right\|_p<\varepsilon$. 由**注 1.4.1 ($L^p\left(\mathbb R\right)$ 中的稠密子集)**, 简单函数全体在 $L^p\left(\mathbb R\right)$ 中稠密. 于是由**基础知识: 稠密的传递性**, 只需证明每个简单函数都能被 $C_c^\infty\left(\mathbb R\right)$ 中函数以任意 $L^p$ 精度逼近.
+第一步: 化归为逼近简单函数. 由**定义 1.4.5 (稠密性)**, 只需证明: 对任意 $f\in L^p\left(\mathbb R\right)$ 与任意 $\varepsilon> 0$, 存在 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 使 $\left\|f-\varphi\right\|_p< \varepsilon$. 由**注 1.4.1 ($L^p\left(\mathbb R\right)$ 中的稠密子集)**, 简单函数全体在 $L^p\left(\mathbb R\right)$ 中稠密. 于是由**基础知识: 稠密的传递性**, 只需证明每个简单函数都能被 $C_c^\infty\left(\mathbb R\right)$ 中函数以任意 $L^p$ 精度逼近.
 
-第二步: 用卷积磨光逼近特征函数. 设 $E\subset\mathbb R$ 是有限测度勒贝格可测集. 由**基础知识: 可测集的紧-开逼近与卷积磨光**, 存在紧集 $K\subset E$, 开集 $U\supset E$ 以及 $\psi\in C_c^\infty\left(\mathbb R\right)$, 使 $m\left(U\setminus K\right)<\left(\frac{\varepsilon}{2}\right)^p$, 且 $0\le\psi\le1$, $\psi\equiv1$ 于 $K$, $\operatorname{supp}\psi\subset U$. 于是 $\chi_E-\psi$ 只可能在 $U\setminus K$ 上非零, 且 $\left|\chi_E-\psi\right|\le1$, 故
-
-$$
-\left\|\chi_E-\psi\right\|_p^p=\int_{U\setminus K}\left|\chi_E-\psi\right|^p\,\mathrm dm\le m\left(U\setminus K\right)<\left(\frac{\varepsilon}{2}\right)^p,
-$$
-
-即 $\left\|\chi_E-\psi\right\|_p<\frac{\varepsilon}{2}$. 故特征函数可被 $C_c^\infty$ 函数逼近.
-
-第三步: 用线性性逼近一般简单函数. 设 $\Phi=\sum_{i=1}^s c_i\chi_{E_i}$ 是简单函数, 其中每个 $E_i$ 有限测度. 对每个 $i$, 由第二步取 $\psi_i\in C_c^\infty\left(\mathbb R\right)$ 使 $\left\|\chi_{E_i}-\psi_i\right\|_p<\frac{\varepsilon}{2s\left(\left|c_i\right|+1\right)}$. 令 $\varphi=\sum_{i=1}^s c_i\psi_i$, 则 $\varphi\in C_c^\infty\left(\mathbb R\right)$ (有限个紧支集光滑函数的线性组合仍紧支光滑). 由**定义 1.2.2 (半范数与范数)** (iii) 范数的三角不等式,
+第二步: 用卷积磨光逼近特征函数. 设 $E\subset\mathbb R$ 是有限测度勒贝格可测集. 由**基础知识: 可测集的紧-开逼近与卷积磨光**, 存在紧集 $K\subset E$, 开集 $U\supset E$ 以及 $\psi\in C_c^\infty\left(\mathbb R\right)$, 使 $m\left(U\setminus K\right)< \left(\frac{\varepsilon}{2}\right)^p$, 且 $0\le\psi\le1$, $\psi\equiv1$ 于 $K$, $\operatorname{supp}\psi\subset U$. 于是 $\chi_E-\psi$ 只可能在 $U\setminus K$ 上非零, 且 $\left|\chi_E-\psi\right|\le1$, 故
 
 $$
-\left\|\Phi-\varphi\right\|_p=\left\|\sum_{i=1}^s c_i\left(\chi_{E_i}-\psi_i\right)\right\|_p\le\sum_{i=1}^s\left|c_i\right|\left\|\chi_{E_i}-\psi_i\right\|_p<\frac{\varepsilon}{2}.
+\left\|\chi_E-\psi\right\|_p^p=\int_{U\setminus K}\left|\chi_E-\psi\right|^p\,\mathrm dm\le m\left(U\setminus K\right)< \left(\frac{\varepsilon}{2}\right)^p,
+$$
+
+即 $\left\|\chi_E-\psi\right\|_p< \frac{\varepsilon}{2}$. 故特征函数可被 $C_c^\infty$ 函数逼近.
+
+第三步: 用线性性逼近一般简单函数. 设 $\Phi=\sum_{i=1}^s c_i\chi_{E_i}$ 是简单函数, 其中每个 $E_i$ 有限测度. 对每个 $i$, 由第二步取 $\psi_i\in C_c^\infty\left(\mathbb R\right)$ 使 $\left\|\chi_{E_i}-\psi_i\right\|_p< \frac{\varepsilon}{2s\left(\left|c_i\right|+1\right)}$. 令 $\varphi=\sum_{i=1}^s c_i\psi_i$, 则 $\varphi\in C_c^\infty\left(\mathbb R\right)$ (有限个紧支集光滑函数的线性组合仍紧支光滑). 由**定义 1.2.2 (半范数与范数)** (iii) 范数的三角不等式,
+
+$$
+\left\|\Phi-\varphi\right\|_p=\left\|\sum_{i=1}^s c_i\left(\chi_{E_i}-\psi_i\right)\right\|_p\le\sum_{i=1}^s\left|c_i\right|\left\|\chi_{E_i}-\psi_i\right\|_p< \frac{\varepsilon}{2}.
 $$
 
 故每个简单函数都可被 $C_c^\infty$ 函数以任意精度逼近. $\blacksquare$
@@ -174,7 +174,7 @@ $$
 设 $C_b\left(0,1\right]$ 表示在半开半闭区间 $\left(0,1\right]$ 上处处连续且有界的函数全体. 对于每个 $x\in C_b\left(0,1\right]$, 令
 
 $$
-\left\|x\right\|=\sup_{0<t\le1}\left|x\left(t\right)\right|.
+\left\|x\right\|=\sup_{0< t\le1}\left|x\left(t\right)\right|.
 $$
 
 证明:
@@ -185,10 +185,10 @@ $$
 
 ### 解答 1.2-6
 
-(i) $C_b\left(0,1\right]$ 按通常函数的线性运算成为线性空间, 因为两个有界连续函数的线性组合仍是有界连续函数. 由**定义 1.2.2 (半范数与范数)** 逐条验证范数公理. 非负性: $\left\|x\right\|=\sup_{0<t\le1}\left|x\left(t\right)\right|\ge0$. 正定性: $\left\|x\right\|=0$ 当且仅当 $\left|x\left(t\right)\right|=0$ 对一切 $0<t\le1$ 成立, 当且仅当 $x\equiv0$. 齐次性: 由**定义 1.2.2 (半范数与范数)** (ii),
+(i) $C_b\left(0,1\right]$ 按通常函数的线性运算成为线性空间, 因为两个有界连续函数的线性组合仍是有界连续函数. 由**定义 1.2.2 (半范数与范数)** 逐条验证范数公理. 非负性: $\left\|x\right\|=\sup_{0< t\le1}\left|x\left(t\right)\right|\ge0$. 正定性: $\left\|x\right\|=0$ 当且仅当 $\left|x\left(t\right)\right|=0$ 对一切 $0< t\le1$ 成立, 当且仅当 $x\equiv0$. 齐次性: 由**定义 1.2.2 (半范数与范数)** (ii),
 
 $$
-\left\|\alpha x\right\|=\sup_{0<t\le1}\left|\alpha x\left(t\right)\right|=\left|\alpha\right|\sup_{0<t\le1}\left|x\left(t\right)\right|=\left|\alpha\right|\left\|x\right\|.
+\left\|\alpha x\right\|=\sup_{0< t\le1}\left|\alpha x\left(t\right)\right|=\left|\alpha\right|\sup_{0< t\le1}\left|x\left(t\right)\right|=\left|\alpha\right|\left\|x\right\|.
 $$
 
 三角不等式: 对任意 $x,y\in C_b\left(0,1\right]$ 与 $t\in\left(0,1\right]$, 由**基础知识: 实数三角不等式**,
@@ -202,7 +202,7 @@ $$
 (ii) 由**定义 1.1.2 (极限)**, $\left\{x_n\right\}$ 按范数 $\left\|\cdot\right\|$ 收敛于 $x_0$ 当且仅当
 
 $$
-\left\|x_n-x_0\right\|=\sup_{0<t\le1}\left|x_n\left(t\right)-x_0\left(t\right)\right|\to0.
+\left\|x_n-x_0\right\|=\sup_{0< t\le1}\left|x_n\left(t\right)-x_0\left(t\right)\right|\to0.
 $$
 
 而该式正是 $\left\{x_n\right\}$ 在 $\left(0,1\right]$ 上一致收敛于 $x_0$ 的定义. 故按范数收敛与一致收敛等价. $\blacksquare$
@@ -335,7 +335,7 @@ $$
 记 $c_m\left(y\right)=\frac{1}{2\pi}\int_0^{2\pi}f\left(x,y\right)e^{-imx}\,\mathrm dx$, 即 $f\left(\cdot,y\right)$ 关于 $\left\{e^{imx}\right\}$ 的傅里叶系数. 由**引理 1.2.3 (柯西-施瓦茨不等式)**, $\left|c_m\left(y\right)\right|^2\le\frac{1}{2\pi}\int_0^{2\pi}\left|f\left(x,y\right)\right|^2\,\mathrm dx$, 对 $y$ 积分并再次用**基础知识: 富比尼定理** 得
 
 $$
-\int_0^{2\pi}\left|c_m\left(y\right)\right|^2\,\mathrm dy\le\frac{1}{2\pi}\int_0^{2\pi}\int_0^{2\pi}\left|f\left(x,y\right)\right|^2\,\mathrm dx\mathrm dy<\infty,
+\int_0^{2\pi}\left|c_m\left(y\right)\right|^2\,\mathrm dy\le\frac{1}{2\pi}\int_0^{2\pi}\int_0^{2\pi}\left|f\left(x,y\right)\right|^2\,\mathrm dx\mathrm dy< \infty,
 $$
 
 故 $c_m\in L^2\left[0,2\pi\right]$. 而上面的等式说明 $c_m\perp e^{iny}$ 于 $L^2\left[0,2\pi\right]$ 对一切 $n$ 成立. 由**例 1.3.7 ($e^{inx}$ 构成标准正交基)**, $\left\{e^{iny}\right\}$ 是 $L^2\left[0,2\pi\right]$ 的标准正交基, 由**定理 1.3.2 (标准正交基的等价条件)** (iii), 它完全, 故 $c_m=0$ 几乎处处成立. 此对每个 $m$ 成立. 再由**例 1.3.7 ($e^{inx}$ 构成标准正交基)** 在 $x$ 变量上的完全性 (即**定理 1.3.2 (标准正交基的等价条件)** (iii)), 对几乎处处每个 $y$, $f\left(\cdot,y\right)$ 的所有傅里叶系数为零蕴含 $f\left(\cdot,y\right)=0$ 几乎处处于 $x$, 即 $f=0$ 几乎处处于 $\left[0,2\pi\right]\times\left[0,2\pi\right]$. 故该标准正交系完全, 由**定理 1.3.2 (标准正交基的等价条件)** 它是 $L^2\left(\left[0,2\pi\right]\times\left[0,2\pi\right]\right)$ 的一组标准正交基. $\blacksquare$
@@ -365,7 +365,7 @@ $$
 设 $\omega\left(t\right)$ 是 $\mathbb R$ 上勒贝格可积的非负函数. 令
 
 $$
-H=\left\{f\;\text{是}\;\mathbb R\;\text{上勒贝格可测函数:}\int_{\mathbb R}\left|f\left(t\right)\right|^2\omega\left(t\right)\,\mathrm dt<\infty\right\}.
+H=\left\{f\;\text{是}\;\mathbb R\;\text{上勒贝格可测函数:}\int_{\mathbb R}\left|f\left(t\right)\right|^2\omega\left(t\right)\,\mathrm dt< \infty\right\}.
 $$
 
 证明: $H$ 按通常函数的线性运算以及内积
@@ -386,7 +386,7 @@ $$
 \left|\alpha f+\beta g\right|^2\omega\le2\left|\alpha\right|^2\left|f\right|^2\omega+2\left|\beta\right|^2\left|g\right|^2\omega\in L^1\left(\mathbb R\right),
 $$
 
-故 $\int_{\mathbb R}\left|\alpha f+\beta g\right|^2\omega\,\mathrm dt<\infty$, 即 $\alpha f+\beta g\in H$. 故 $H$ 是线性空间.
+故 $\int_{\mathbb R}\left|\alpha f+\beta g\right|^2\omega\,\mathrm dt< \infty$, 即 $\alpha f+\beta g\in H$. 故 $H$ 是线性空间.
 
 第二步: $\left\langle\cdot,\cdot\right\rangle$ 是内积. 由**定义 1.2.3 (内积空间)** 逐条验证. (i) 共轭对称性:
 
@@ -411,10 +411,10 @@ $$
 故 $\left\{Tf_n\right\}$ 是 $L^2\left(\mathbb R\right)$ 中的基本点列. 由**例 1.2.8 ($L^p\left(E\right)$ 是巴拿赫空间)**, $L^2\left(\mathbb R\right)$ 完备, 故存在 $g\in L^2\left(\mathbb R\right)$ 使 $\left\|Tf_n-g\right\|_{L^2}\to0$. 令
 
 $$
-f\left(t\right)=\begin{cases}g\left(t\right)/\sqrt{\omega\left(t\right)},&\omega\left(t\right)>0,\\0,&\omega\left(t\right)=0.\end{cases}
+f\left(t\right)=\begin{cases}g\left(t\right)/\sqrt{\omega\left(t\right)},&\omega\left(t\right)> 0,\\0,&\omega\left(t\right)=0.\end{cases}
 $$
 
-则 $f$ 可测, 且 $\int_{\mathbb R}\left|f\right|^2\omega\,\mathrm dt=\int_{\mathbb R}\left|g\right|^2\,\mathrm dt<\infty$, 故 $f\in H$. 又 $\left\|f_n-f\right\|_H=\left\|Tf_n-g\right\|_{L^2}\to0$, 即 $\left\{f_n\right\}$ 在 $H$ 中收敛于 $f$. 故 $H$ 按内积诱导的度量完备. 由**基础知识: 希尔伯特空间的定义**, $H$ 是希尔伯特空间. $\blacksquare$
+则 $f$ 可测, 且 $\int_{\mathbb R}\left|f\right|^2\omega\,\mathrm dt=\int_{\mathbb R}\left|g\right|^2\,\mathrm dt< \infty$, 故 $f\in H$. 又 $\left\|f_n-f\right\|_H=\left\|Tf_n-g\right\|_{L^2}\to0$, 即 $\left\{f_n\right\}$ 在 $H$ 中收敛于 $f$. 故 $H$ 按内积诱导的度量完备. 由**基础知识: 希尔伯特空间的定义**, $H$ 是希尔伯特空间. $\blacksquare$
 
 ---
 
@@ -430,7 +430,7 @@ $$
 
 记 $S_n=\sum_{k=1}^n\left\langle x,e_k\right\rangle e_k$, $S_n'=\sum_{k=1}^n\left\langle x,e_k'\right\rangle e_k'$.
 
-第一步: 证两个极限都存在. 由**定理 1.3.1 (贝塞尔不等式)**, $\sum_{k=1}^{\infty}\left|\left\langle x,e_k\right\rangle\right|^2\le\left\|x\right\|^2<\infty$. 对 $m<n$, 由标准正交性 (**定义 1.3.1 (正交系与标准正交系)**) 与**定理 1.2.2 (勾股定理, 毕达哥拉斯定理)**,
+第一步: 证两个极限都存在. 由**定理 1.3.1 (贝塞尔不等式)**, $\sum_{k=1}^{\infty}\left|\left\langle x,e_k\right\rangle\right|^2\le\left\|x\right\|^2< \infty$. 对 $m< n$, 由标准正交性 (**定义 1.3.1 (正交系与标准正交系)**) 与**定理 1.2.2 (勾股定理, 毕达哥拉斯定理)**,
 
 $$
 \left\|S_n-S_m\right\|^2=\left\|\sum_{k=m+1}^n\left\langle x,e_k\right\rangle e_k\right\|^2=\sum_{k=m+1}^n\left|\left\langle x,e_k\right\rangle\right|^2\to0\quad\left(m,n\to\infty\right).
@@ -482,7 +482,7 @@ $$
 0=\left\langle x,\cos kx\right\rangle=c_0\left\langle f_0,\cos kx\right\rangle+c_k\left\langle\cos kx,\cos kx\right\rangle=\frac{c_0}{2k}+\frac{c_k}{2},
 $$
 
-即 $c_k=-\frac{c_0}{k}$. 同理, $0=\left\langle x,\sin kx\right\rangle$ 给出 $d_k=-\frac{c_0}{k}$. 由于 $x$ 是有限线性组合, 当 $k>N$ 时 $c_k=d_k=0$, 代入 $c_k=-c_0/k$ 得 $c_0=0$, 从而一切 $c_k=d_k=0$, 即 $x=0$. 由**定理 1.3.2 (标准正交基的等价条件)** (iii), $\mathcal E$ 在 $H$ 中完全.
+即 $c_k=-\frac{c_0}{k}$. 同理, $0=\left\langle x,\sin kx\right\rangle$ 给出 $d_k=-\frac{c_0}{k}$. 由于 $x$ 是有限线性组合, 当 $k> N$ 时 $c_k=d_k=0$, 代入 $c_k=-c_0/k$ 得 $c_0=0$, 从而一切 $c_k=d_k=0$, 即 $x=0$. 由**定理 1.3.2 (标准正交基的等价条件)** (iii), $\mathcal E$ 在 $H$ 中完全.
 
 第三步: $\mathcal E$ 不完备. 取 $x=f_0\in H$. 由**例 1.3.3 (三角多项式标准正交系)** 计算得 $\left\langle1,1\right\rangle=1$, $\left\langle\cos nx,\cos nx\right\rangle=\left\langle\sin nx,\sin nx\right\rangle=\frac12$, 且不同项互相正交, 故
 
@@ -493,7 +493,7 @@ $$
 由**基础知识: 巴塞尔问题**, $\sum_{n=1}^{\infty}\frac{1}{n^2}=\frac{\pi^2}{6}$, 故 $\left\|f_0\right\|^2=1+\frac{\pi^2}{6}$. 另一方面, $\left\langle f_0,\sqrt2\cos nx\right\rangle=\frac{1}{n}\left\langle\cos nx,\sqrt2\cos nx\right\rangle=\frac{\sqrt2}{2n}=\frac{1}{\sqrt2\,n}$, 同理 $\left\langle f_0,\sqrt2\sin nx\right\rangle=\frac{1}{\sqrt2\,n}$, 故
 
 $$
-\sum_{e\in\mathcal E}\left|\left\langle f_0,e\right\rangle\right|^2=\sum_{n=1}^{\infty}\left(\frac{1}{2n^2}+\frac{1}{2n^2}\right)=\sum_{n=1}^{\infty}\frac{1}{n^2}=\frac{\pi^2}{6}<1+\frac{\pi^2}{6}=\left\|f_0\right\|^2.
+\sum_{e\in\mathcal E}\left|\left\langle f_0,e\right\rangle\right|^2=\sum_{n=1}^{\infty}\left(\frac{1}{2n^2}+\frac{1}{2n^2}\right)=\sum_{n=1}^{\infty}\frac{1}{n^2}=\frac{\pi^2}{6}< 1+\frac{\pi^2}{6}=\left\|f_0\right\|^2.
 $$
 
 即帕塞瓦尔等式不成立. 由**定理 1.3.2 (标准正交基的等价条件)** (iv), $\mathcal E$ 不完备.
