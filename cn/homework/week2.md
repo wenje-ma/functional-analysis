@@ -111,10 +111,10 @@ $$
 (ii) 作 $\left(L\times L,\left\|\cdot\right\|_1\right)$ 到 $\left(L\times L,\left\|\cdot\right\|_2\right)$ 的映射:
 
 $$
-\varphi:\left(x,y\right)\mapsto\left(x',y'\right),\quad\left(x',y'\right)=\left(x,y\right)\begin{pmatrix}a&b\\c&d\end{pmatrix},
+\varphi:\left(x,y\right)\mapsto\left(x',y'\right),\quad\left(x',y'\right)=\left(x,y\right)\begin{bmatrix}a&b\\c&d\end{bmatrix},
 $$
 
-其中矩阵 $\begin{pmatrix}a&b\\c&d\end{pmatrix}$ 是非奇异的. 证明: $\varphi$ 是拓扑同胚 (即 $\varphi$ 是到上的一一对应, 且 $\varphi$ 和 $\varphi^{-1}$ 都是连续的).
+其中矩阵 $\begin{bmatrix}a&b\\c&d\end{bmatrix}$ 是非奇异的. 证明: $\varphi$ 是拓扑同胚 (即 $\varphi$ 是到上的一一对应, 且 $\varphi$ 和 $\varphi^{-1}$ 都是连续的).
 
 ### 解答 1.2-3
 
@@ -154,7 +154,7 @@ $$
 
 故 $\left\|\cdot\right\|_2$ 也是范数. 因此 $\left(L\times L,\left\|\cdot\right\|_1\right)$ 与 $\left(L\times L,\left\|\cdot\right\|_2\right)$ 都是赋范线性空间.
 
-(ii) 先证 $\varphi$ 是到上的一一对应. 记 $A=\begin{pmatrix}a&b\\c&d\end{pmatrix}$. 由**基础知识: 非奇异矩阵可逆**, $A$ 非奇异蕴含 $A^{-1}$ 存在. 对任意 $\left(x',y'\right)\in L\times L$, 令 $\left(x,y\right)=\left(x',y'\right)A^{-1}$, 则 $\varphi\left(x,y\right)=\left(x,y\right)A=\left(x',y'\right)A^{-1}A=\left(x',y'\right)$, 故 $\varphi$ 是到上的. 又若 $\varphi\left(x,y\right)=\varphi\left(u,v\right)$, 则 $\left(x,y\right)A=\left(u,v\right)A$, 两边右乘 $A^{-1}$ 得 $\left(x,y\right)=\left(u,v\right)$, 故 $\varphi$ 是一一的.
+(ii) 先证 $\varphi$ 是到上的一一对应. 记 $A=\begin{bmatrix}a&b\\c&d\end{bmatrix}$. 由**基础知识: 非奇异矩阵可逆**, $A$ 非奇异蕴含 $A^{-1}$ 存在. 对任意 $\left(x',y'\right)\in L\times L$, 令 $\left(x,y\right)=\left(x',y'\right)A^{-1}$, 则 $\varphi\left(x,y\right)=\left(x,y\right)A=\left(x',y'\right)A^{-1}A=\left(x',y'\right)$, 故 $\varphi$ 是到上的. 又若 $\varphi\left(x,y\right)=\varphi\left(u,v\right)$, 则 $\left(x,y\right)A=\left(u,v\right)A$, 两边右乘 $A^{-1}$ 得 $\left(x,y\right)=\left(u,v\right)$, 故 $\varphi$ 是一一的.
 
 再证 $\varphi$ 连续. 由**定义 1.1.2 (极限)**, 只需证明: 若 $\left(x_n,y_n\right)\to\left(x,y\right)$ 按 $\left\|\cdot\right\|_1$, 则 $\varphi\left(x_n,y_n\right)\to\varphi\left(x,y\right)$ 按 $\left\|\cdot\right\|_2$. 由 $\left\|\cdot\right\|_1$ 的定义, $\left\|x_n-x\right\|\to0$ 且 $\left\|y_n-y\right\|\to0$, 故 $\delta_n=\max\left\{\left\|x_n-x\right\|,\left\|y_n-y\right\|\right\}\to0$. 由 $L$ 中范数的三角不等式与齐次性 (**定义 1.2.2 (半范数与范数)** (ii)(iii)),
 
