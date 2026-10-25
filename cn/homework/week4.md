@@ -400,7 +400,7 @@ $$
 
 **第二步: 反证推出矛盾.** 若 $C_b\left(\mathbb R\right)$ 可分, 则依据**命题 1.4.1 (可分空间的子空间可分)**, 其上述子空间 (即 $l^\infty$ 的等距像) 也可分, 从而 $l^\infty$ 可分. 但依据**例 1.4.10 ($l^{\infty}$ 不可分)**, $l^\infty$ 不可分, 矛盾. 故 $C_b\left(\mathbb R\right)$ 不可分. $\blacksquare$
 
-> $C_b(\mathbb R)$ 相较于 $C_0(\mathbb R)$, 放宽了边界条件, 这导致了 $C_b(\mathbb R)$ 中可以嵌入任意有界的数列, 从而导致其不可分; 反观 $C_0(\mathbb R)$ 中当然嵌入不进去.
+> $C_b\left(\mathbb R\right)$ 相较于 $C_0\left(\mathbb R\right)$, 放宽了边界条件, 这导致了 $C_b\left(\mathbb R\right)$ 中可以嵌入任意有界的数列, 从而导致其不可分; 反观 $C_0\left(\mathbb R\right)$ 中当然嵌入不进去.
 
 ---
 
@@ -480,7 +480,7 @@ $$
 
 记平移算子 $\left(\tau_h f\right)\left(x\right)=f\left(x+h\right)$, 并记 $\left\|g\right\|_p=\left(\int_{\mathbb R}\left|g\right|^p\mathrm dx\right)^{1/p}$.
 
-**第一步: 对 $C_c^\infty$ 函数成立.** 设 $\varphi\in C_c^\infty\left(\mathbb R\right)$, 其支集含于 $\left[-M,M\right]$. 不妨设 $|h|< 1$, 则 $\varphi$ 在紧集 $\left[-M-1,M+1\right]$ 上连续; 依据**基础知识: 紧区间上连续函数一致连续**, $\varphi$ 在 $\left[-M-1,M+1\right]$ 上一致连续, 即对任意 $\varepsilon> 0$ 存在 $\delta> 0$, 当 $\left|h\right|< \delta$ 时 $\sup_x\left|\varphi\left(x+h\right)-\varphi\left(x\right)\right|< \varepsilon$. 对 $\left|h\right|< 1$, 被积函数仅在 $\left[-M-1,M+1\right]$ 上可能非零, 故
+**第一步: 对 $C_c^\infty$ 函数成立.** 设 $\varphi\in C_c^\infty\left(\mathbb R\right)$, 其支集含于 $\left[-M,M\right]$. 不妨设 $\left|h\right|< 1$, 则 $\varphi$ 在紧集 $\left[-M-1,M+1\right]$ 上连续; 依据**基础知识: 紧区间上连续函数一致连续**, $\varphi$ 在 $\left[-M-1,M+1\right]$ 上一致连续, 即对任意 $\varepsilon> 0$ 存在 $\delta> 0$, 当 $\left|h\right|< \delta$ 时 $\sup_x\left|\varphi\left(x+h\right)-\varphi\left(x\right)\right|< \varepsilon$. 对 $\left|h\right|< 1$, 被积函数仅在 $\left[-M-1,M+1\right]$ 上可能非零, 故
 
 $$
 \left\|\tau_h\varphi-\varphi\right\|_p^p=\int_{\mathbb R}\left|\varphi\left(x+h\right)-\varphi\left(x\right)\right|^p\mathrm dx\le\left(2M+2\right)\varepsilon^p\to0.
