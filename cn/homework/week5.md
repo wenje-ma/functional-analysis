@@ -10,34 +10,34 @@
 
 > **基础知识: 方阵可逆判据与算子范数**<br>对方阵 $A$, $\det A\neq0$ 当且仅当 $A$ 可逆; 可逆矩阵 $A^{-1}$ 的算子范数 $\left\|A^{-1}\right\|$ 有限, 且 $A^{-1}F=0$ 蕴含 $F=0$.
 
-> **基础知识: 向量值函数的微分中值定理 (积分形式)**<br>设 $F:V\to\mathbb{R}^{m}$ 在开集 $V\subset\mathbb{R}^{m}$ 上连续可微, $y_1,y_2\in V$ 且线段 $[y_2,y_1]\subset V$, 则
-$$F(y_1)-F(y_2)=\left(\int_0^{1}DF(y_2+t(y_1-y_2))\,\mathrm dt\right)(y_1-y_2).$$
+> **基础知识: 向量值函数的微分中值定理 (积分形式)**<br>设 $F:V\to\mathbb{R}^{m}$ 在开集 $V\subset\mathbb{R}^{m}$ 上连续可微, $y_1,y_2\in V$ 且线段 $\left[y_2,y_1\right]\subset V$, 则
+$$F\left(y_1\right)-F\left(y_2\right)=\left(\int_0^{1}DF\left(y_2+t\left(y_1-y_2\right)\right)\,\mathrm dt\right)\left(y_1-y_2\right).$$
 
 > **基础知识: 闭集的交与连续映射原像**<br>拓扑空间中, 任意多个闭集的交是闭集; 连续映射下, 闭集的原像是闭集.
 
-> **基础知识: 德摩根律**<br>对集合 $A$ 与子集族 $\{F_\lambda\}$, $\bigcup_\lambda(A\setminus F_\lambda)=A\setminus\bigcap_\lambda F_\lambda$.
+> **基础知识: 德摩根律**<br>对集合 $A$ 与子集族 $\left\{F_\lambda\right\}$, $\bigcup_\lambda\left(A\setminus F_\lambda\right)=A\setminus\bigcap_\lambda F_\lambda$.
 
-> **基础知识: 闭包的邻域刻画**<br>$x\in\overline A$ 当且仅当对任意 $\varepsilon>0$, 存在 $a\in A$ 使 $d(x,a)<\varepsilon$.
+> **基础知识: 闭包的邻域刻画**<br>$x\in\overline A$ 当且仅当对任意 $\varepsilon>0$, 存在 $a\in A$ 使 $d\left(x,a\right)<\varepsilon$.
 
 > **基础知识: $\mathbb{R}^{n}$ 中方体的直径与有界集的网格覆盖**<br>边长为 $a$ 且平行于坐标轴的 $n$ 维方体, 其直径为 $\sqrt n\,a$; $\mathbb{R}^{n}$ 中的有界集只与有限个这样的小方体相交.
 
-> **基础知识: 范数公理**<br>赋范线性空间的范数满足: 非负性 ($\|x\|\ge0$, 且 $\|x\|=0\iff x=0$), 齐次性 ($\|\alpha x\|=|\alpha|\|x\|$), 三角不等式 ($\|x+y\|\le\|x\|+\|y\|$).
+> **基础知识: 范数公理**<br>赋范线性空间的范数满足: 非负性 ($\left\|x\right\|\ge0$, 且 $\left\|x\right\|=0\iff x=0$), 齐次性 ($\left\|\alpha x\right\|=\left|\alpha\right|\left\|x\right\|$), 三角不等式 ($\left\|x+y\right\|\le\left\|x\right\|+\left\|y\right\|$).
 
-> **基础知识: $L^{p}$ 函数的积分尾项趋于零 (胎紧性)**<br>对 $f\in L^{p}(\mathbb{R})$, $1\le p<\infty$, 有 $\int_{\{|x|>M\}}|f(x)|^{p}\,\mathrm dm\to0$ ($M\to\infty$).
+> **基础知识: $L^{p}$ 函数的积分尾项趋于零 (胎紧性)**<br>对 $f\in L^{p}\left(\mathbb{R}\right)$, $1\le p<\infty$, 有 $\int_{\left\{\left|x\right|>M\right\}}\left|f\left(x\right)\right|^{p}\,\mathrm dm\to0$ ($M\to\infty$).
 
-> **基础知识: $L^{p}$ 范数的平移不变性**<br>对 $f\in L^{p}(\mathbb{R})$ 与 $h\in\mathbb{R}$, $\|f(\cdot+h)\|_{p}=\|f\|_{p}$.
+> **基础知识: $L^{p}$ 范数的平移不变性**<br>对 $f\in L^{p}\left(\mathbb{R}\right)$ 与 $h\in\mathbb{R}$, $\left\|f\left(\cdot+h\right)\right\|_{p}=\left\|f\right\|_{p}$.
 
-> **基础知识: $C_{0}(\mathbb{R})$ 函数在 $\mathbb{R}$ 上一致连续**<br>若 $f\in C_{0}(\mathbb{R})$ (连续且 $|f(x)|\to0$ 当 $|x|\to\infty$), 则 $f$ 在 $\mathbb{R}$ 上一致连续.
+> **基础知识: $C_{0}\left(\mathbb{R}\right)$ 函数在 $\mathbb{R}$ 上一致连续**<br>若 $f\in C_{0}\left(\mathbb{R}\right)$ (连续且 $\left|f\left(x\right)\right|\to0$ 当 $\left|x\right|\to\infty$), 则 $f$ 在 $\mathbb{R}$ 上一致连续.
 
-> **基础知识: 对角抽取与有界数列的收敛子列**<br>$\mathbb{R}$ 中有界数列必有收敛子列 (Bolzano-Weierstrass 定理); 对双指标有界数列 $\{a_n^{(m)}\}$, 可抽取子列 $m_k$ 使对每个固定的 $n$, $a_n^{(m_k)}$ 收敛.
+> **基础知识: 对角抽取与有界数列的收敛子列**<br>$\mathbb{R}$ 中有界数列必有收敛子列 (Bolzano-Weierstrass 定理); 对双指标有界数列 $\left\{a_n^{\left(m\right)}\right\}$, 可抽取子列 $m_k$ 使对每个固定的 $n$, $a_n^{\left(m_k\right)}$ 收敛.
 
-> **基础知识: 绝对收敛级数必收敛**<br>在巴拿赫空间中, 若 $\sum_{n}\|x_n\|<\infty$, 则级数 $\sum_{n}x_n$ 收敛.
+> **基础知识: 绝对收敛级数必收敛**<br>在巴拿赫空间中, 若 $\sum_{n}\left\|x_n\right\|<\infty$, 则级数 $\sum_{n}x_n$ 收敛.
 
-> **基础知识: $L^{\infty}$ 范数的定义**<br>$\|g\|_{\infty}=\operatorname{ess\,sup}|g|$, 即 $|g(x)|\le\|g\|_{\infty}$ 对几乎处处的 $x$ 成立.
+> **基础知识: $L^{\infty}$ 范数的定义**<br>$\left\|g\right\|_{\infty}=\operatorname{ess\,sup}\left|g\right|$, 即 $\left|g\left(x\right)\right|\le\left\|g\right\|_{\infty}$ 对几乎处处的 $x$ 成立.
 
 > **基础知识: 非负可测函数积分为零则几乎处处为零**<br>若 $\varphi\ge0$ a.e. 且 $\int\varphi\,\mathrm dm=0$, 则 $\varphi=0$ a.e.
 
-> **基础知识: 一致收敛极限保持连续性**<br>若 $f_n\in C(X)$ 且 $f_n\rightrightarrows f$ 于 $X$, 则 $f\in C(X)$.
+> **基础知识: 一致收敛极限保持连续性**<br>若 $f_n\in C\left(X\right)$ 且 $f_n\rightrightarrows f$ 于 $X$, 则 $f\in C\left(X\right)$.
 
 > **基础知识: 实数系完备**<br>$\mathbb{R}$ 中的柯西列必收敛.
 
@@ -351,7 +351,7 @@ $$
 
 故对任意 $\varepsilon> 0$ 存在 $N=M$ 使 $\left|f\left(x\right)\right|\le\varepsilon$ ($\forall\left|x\right|> N$, $f\in A$).
 
-再证 $A$ 等度连续. 由**基础知识: $C_{0}(\mathbb{R})$ 函数在 $\mathbb{R}$ 上一致连续**, 每个 $f_i\in C_0\left(\mathbb{R}\right)$ 在 $\mathbb{R}$ 上一致连续, 故存在 $\delta> 0$ 使 $\left|x-x'\right|< \delta$ 时 $\left|f_i\left(x\right)-f_i\left(x'\right)\right|< \frac{\varepsilon}{3}$ 对一切 $i$ 成立. 对任意 $f\in A$, 存在 $i$ 使 $\left\|f-f_i\right\|< \frac{\varepsilon}{3}$, 故 $\left|x-x'\right|< \delta$ 时
+再证 $A$ 等度连续. 由**基础知识: $C_{0}\left(\mathbb{R}\right)$ 函数在 $\mathbb{R}$ 上一致连续**, 每个 $f_i\in C_0\left(\mathbb{R}\right)$ 在 $\mathbb{R}$ 上一致连续, 故存在 $\delta> 0$ 使 $\left|x-x'\right|< \delta$ 时 $\left|f_i\left(x\right)-f_i\left(x'\right)\right|< \frac{\varepsilon}{3}$ 对一切 $i$ 成立. 对任意 $f\in A$, 存在 $i$ 使 $\left\|f-f_i\right\|< \frac{\varepsilon}{3}$, 故 $\left|x-x'\right|< \delta$ 时
 
 $$
 \left|f\left(x\right)-f\left(x'\right)\right|\le\left|f\left(x\right)-f_i\left(x\right)\right|+\left|f_i\left(x\right)-f_i\left(x'\right)\right|+\left|f_i\left(x'\right)-f\left(x'\right)\right|< \frac{\varepsilon}{3}+\frac{\varepsilon}{3}+\frac{\varepsilon}{3}=\varepsilon.
