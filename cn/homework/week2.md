@@ -127,11 +127,7 @@ $$
 三角不等式: 由 $L$ 中范数的三角不等式 (**定义 1.2.2 (半范数与范数)** (iii)), $\left\|x+x'\right\|\le\left\|x\right\|+\left\|x'\right\|$, $\left\|y+y'\right\|\le\left\|y\right\|+\left\|y'\right\|$. 由**基础知识: 欧几里得范数的三角不等式**,
 
 $$
-\begin{aligned}
-\left\|\left(x,y\right)+\left(x',y'\right)\right\|_1&=\sqrt{\left\|x+x'\right\|^2+\left\|y+y'\right\|^2}\\
-&\le\sqrt{\left(\left\|x\right\|+\left\|x'\right\|\right)^2+\left(\left\|y\right\|+\left\|y'\right\|\right)^2}\\
-&\le\sqrt{\left\|x\right\|^2+\left\|y\right\|^2}+\sqrt{\left\|x'\right\|^2+\left\|y'\right\|^2}.
-\end{aligned}
+\left\|\left(x,y\right)+\left(x',y'\right)\right\|_1=\sqrt{\left\|x+x'\right\|^2+\left\|y+y'\right\|^2}\le\sqrt{\left(\left\|x\right\|+\left\|x'\right\|\right)^2+\left(\left\|y\right\|+\left\|y'\right\|\right)^2}\le\sqrt{\left\|x\right\|^2+\left\|y\right\|^2}+\sqrt{\left\|x'\right\|^2+\left\|y'\right\|^2}.
 $$
 
 故 $\left\|\cdot\right\|_1$ 满足**定义 1.2.2 (半范数与范数)** 的全部条件, 是范数.
@@ -145,11 +141,7 @@ $$
 三角不等式: 由 $L$ 中范数的三角不等式 (**定义 1.2.2 (半范数与范数)** (iii)), $\left\|x+x'\right\|\le\left\|x\right\|+\left\|x'\right\|$, $\left\|y+y'\right\|\le\left\|y\right\|+\left\|y'\right\|$, 故
 
 $$
-\begin{aligned}
-\left\|\left(x,y\right)+\left(x',y'\right)\right\|_2&=\max\left\{\left\|x+x'\right\|,\left\|y+y'\right\|\right\}\\
-&\le\max\left\{\left\|x\right\|+\left\|x'\right\|,\left\|y\right\|+\left\|y'\right\|\right\}\\
-&\le\max\left\{\left\|x\right\|,\left\|y\right\|\right\}+\max\left\{\left\|x'\right\|,\left\|y'\right\|\right\}.
-\end{aligned}
+\left\|\left(x,y\right)+\left(x',y'\right)\right\|_2=\max\left\{\left\|x+x'\right\|,\left\|y+y'\right\|\right\}\le\max\left\{\left\|x\right\|+\left\|x'\right\|,\left\|y\right\|+\left\|y'\right\|\right\}\le\max\left\{\left\|x\right\|,\left\|y\right\|\right\}+\max\left\{\left\|x'\right\|,\left\|y'\right\|\right\}.
 $$
 
 故 $\left\|\cdot\right\|_2$ 也是范数. 因此 $\left(L\times L,\left\|\cdot\right\|_1\right)$ 与 $\left(L\times L,\left\|\cdot\right\|_2\right)$ 都是赋范线性空间.
@@ -159,10 +151,7 @@ $$
 再证 $\varphi$ 连续. 由**定义 1.1.2 (极限)**, 只需证明: 若 $\left(x_n,y_n\right)\to\left(x,y\right)$ 按 $\left\|\cdot\right\|_1$, 则 $\varphi\left(x_n,y_n\right)\to\varphi\left(x,y\right)$ 按 $\left\|\cdot\right\|_2$. 由 $\left\|\cdot\right\|_1$ 的定义, $\left\|x_n-x\right\|\to0$ 且 $\left\|y_n-y\right\|\to0$, 故 $\delta_n=\max\left\{\left\|x_n-x\right\|,\left\|y_n-y\right\|\right\}\to0$. 由 $L$ 中范数的三角不等式与齐次性 (**定义 1.2.2 (半范数与范数)** (ii)(iii)),
 
 $$
-\begin{aligned}
-\left\|\varphi\left(x_n,y_n\right)-\varphi\left(x,y\right)\right\|_2&=\max\left\{\left\|a\left(x_n-x\right)+b\left(y_n-y\right)\right\|,\left\|c\left(x_n-x\right)+d\left(y_n-y\right)\right\|\right\}\\
-&\le\max\left\{\left(\left|a\right|+\left|b\right|\right)\delta_n,\left(\left|c\right|+\left|d\right|\right)\delta_n\right\}\to0.
-\end{aligned}
+\left\|\varphi\left(x_n,y_n\right)-\varphi\left(x,y\right)\right\|_2=\max\left\{\left\|a\left(x_n-x\right)+b\left(y_n-y\right)\right\|,\left\|c\left(x_n-x\right)+d\left(y_n-y\right)\right\|\right\}\le\max\left\{\left(\left|a\right|+\left|b\right|\right)\delta_n,\left(\left|c\right|+\left|d\right|\right)\delta_n\right\}\to0.
 $$
 
 故 $\varphi$ 连续. 最后证 $\varphi^{-1}$ 连续: $\varphi^{-1}\left(x',y'\right)=\left(x',y'\right)A^{-1}$, 而 $A^{-1}$ 也是非奇异矩阵, 对 $\varphi^{-1}$ 重复上面 $\varphi$ 的论证即得 $\varphi^{-1}$ 连续. 综上, $\varphi$ 是到上的一一对应且 $\varphi,\varphi^{-1}$ 均连续, 故 $\varphi$ 是拓扑同胚. $\blacksquare$
@@ -260,11 +249,7 @@ $$
 (v) 由题设 $L=\operatorname{span}\left(M\cup N\right)$ 是 $M\cup N$ 中元素的有限线性组合全体. 对任意 $z\in H$, 由内积对第一变元的线性性 (**定义 1.2.3 (内积空间)** (ii)), $\left\langle z,\cdot\right\rangle$ 在有限线性组合上为零当且仅当它在每个基元上为零, 故
 
 $$
-\begin{aligned}
-z\in L^\perp&\Leftrightarrow\left\langle z,w\right\rangle=0\quad\left(\forall w\in L\right)\\
-&\Leftrightarrow\left\langle z,m\right\rangle=0\ \left(\forall m\in M\right)\ \text{且}\ \left\langle z,n\right\rangle=0\ \left(\forall n\in N\right)\\
-&\Leftrightarrow z\in M^\perp\ \text{且}\ z\in N^\perp\Leftrightarrow z\in M^\perp\cap N^\perp.
-\end{aligned}
+z\in L^\perp\Leftrightarrow\left\langle z,w\right\rangle=0\quad\left(\forall w\in L\right)\Leftrightarrow\left\langle z,m\right\rangle=0\ \left(\forall m\in M\right)\ \text{且}\ \left\langle z,n\right\rangle=0\ \left(\forall n\in N\right)\Leftrightarrow z\in M^\perp\ \text{且}\ z\in N^\perp\Leftrightarrow z\in M^\perp\cap N^\perp.
 $$
 
 故 $L^\perp=M^\perp\cap N^\perp$. $\blacksquare$
@@ -318,10 +303,7 @@ $$
 第一步: 证标准正交性. 对任意 $m,n,m',n'\in\mathbb Z$, 被积函数在乘积测度下绝对可积, 由**基础知识: 富比尼定理**,
 
 $$
-\begin{aligned}
-\left\langle e^{imx}e^{iny},e^{im'x}e^{in'y}\right\rangle&=\frac{1}{4\pi^2}\int_0^{2\pi}\int_0^{2\pi}e^{i\left(m-m'\right)x}e^{i\left(n-n'\right)y}\,\mathrm dx\mathrm dy\\
-&=\left(\frac{1}{2\pi}\int_0^{2\pi}e^{i\left(m-m'\right)x}\,\mathrm dx\right)\left(\frac{1}{2\pi}\int_0^{2\pi}e^{i\left(n-n'\right)y}\,\mathrm dy\right).
-\end{aligned}
+\left\langle e^{imx}e^{iny},e^{im'x}e^{in'y}\right\rangle=\frac{1}{4\pi^2}\int_0^{2\pi}\int_0^{2\pi}e^{i\left(m-m'\right)x}e^{i\left(n-n'\right)y}\,\mathrm dx\mathrm dy=\left(\frac{1}{2\pi}\int_0^{2\pi}e^{i\left(m-m'\right)x}\,\mathrm dx\right)\left(\frac{1}{2\pi}\int_0^{2\pi}e^{i\left(n-n'\right)y}\,\mathrm dy\right).
 $$
 
 由**例 1.3.7 ($e^{inx}$ 构成标准正交基)**, $\left\{e^{ikx}\right\}_{k\in\mathbb Z}$ 是 $L^2\left[0,2\pi\right]$ 的标准正交系, 即 $\frac{1}{2\pi}\int_0^{2\pi}e^{ikx}\,\mathrm dx=\delta_{k0}$. 故上式 $=\delta_{mm'}\delta_{nn'}$. 由**定义 1.3.1 (正交系与标准正交系)**, $\left\{e^{imx}e^{iny}:m,n\in\mathbb Z\right\}$ 是 $L^2\left(\left[0,2\pi\right]\times\left[0,2\pi\right]\right)$ 的标准正交系.

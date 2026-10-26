@@ -148,10 +148,7 @@ $$
 因为 $\varphi_1,\varphi_2\in E$, 故 $\varphi_2\left(x\right)+t\left(\varphi_1\left(x\right)-\varphi_2\left(x\right)\right)\in B\left(y_0,\delta\right)$, 故由 (2),
 
 $$
-\begin{aligned}
-\left|\left(T\varphi_1\right)\left(x\right)-\left(T\varphi_2\right)\left(x\right)\right|&=\left|\left(I-A^{-1}\int_0^{1}\frac{\partial F}{\partial y}\left(x,\varphi_2\left(x\right)t\left(\varphi_1\left(x\right)-\varphi_2\left(x\right)\right)\right)\,\mathrm dt\right)\left(\varphi_1\left(x\right)-\varphi_2\left(x\right)\right)\right|\\
-&\le\theta\left|\varphi_1\left(x\right)-\varphi_2\left(x\right)\right|.
-\end{aligned}
+\left|\left(T\varphi_1\right)\left(x\right)-\left(T\varphi_2\right)\left(x\right)\right|=\left|\left(I-A^{-1}\int_0^{1}\frac{\partial F}{\partial y}\left(x,\varphi_2\left(x\right)t\left(\varphi_1\left(x\right)-\varphi_2\left(x\right)\right)\right)\,\mathrm dt\right)\left(\varphi_1\left(x\right)-\varphi_2\left(x\right)\right)\right|\le\theta\left|\varphi_1\left(x\right)-\varphi_2\left(x\right)\right|.
 $$
 
 对 $x$ 取最大值, 得到 $\left\|T\varphi_1-T\varphi_2\right\|\le\theta\left\|\varphi_1-\varphi_2\right\|$, 其中 $0< \theta< 1$. 故 $T$ 是 $E$ 上的压缩映射.
@@ -311,10 +308,7 @@ $$
 对任意 $f\in A$, 存在 $i$ 使 $\left\|f-f_i\right\|_{p}< \frac{\varepsilon}{2}$. 由**基础知识: 闵可夫斯基不等式**,
 
 $$
-\begin{aligned}
-&\quad\;\left(\int_{\left\{\left|x\right|> M\right\}}\left|f\left(x\right)\right|^{p}\,\mathrm dm\right)^{1/p}\le\left(\int_{\left\{\left|x\right|> M\right\}}\left|f\left(x\right)-f_i\left(x\right)\right|^{p}\,\mathrm dm\right)^{1/p}\\
-&+\left(\int_{\left\{\left|x\right|> M\right\}}\left|f_i\left(x\right)\right|^{p}\,\mathrm dm\right)^{1/p}\le\left\|f-f_i\right\|_{p}+\frac{\varepsilon}{2}< \varepsilon.
-\end{aligned}
+\left(\int_{\left\{\left|x\right|> M\right\}}\left|f\left(x\right)\right|^{p}\,\mathrm dm\right)^{1/p}\le\left(\int_{\left\{\left|x\right|> M\right\}}\left|f\left(x\right)-f_i\left(x\right)\right|^{p}\,\mathrm dm\right)^{1/p}+\left(\int_{\left\{\left|x\right|> M\right\}}\left|f_i\left(x\right)\right|^{p}\,\mathrm dm\right)^{1/p}\le\left\|f-f_i\right\|_{p}+\frac{\varepsilon}{2}< \varepsilon.
 $$
 
 于是 $\int_{\left\{\left|x\right|> M\right\}}\left|f\left(x\right)\right|^{p}\,\mathrm dm< \varepsilon^{p}$ ($\forall f\in A$), (ii) 得证.
