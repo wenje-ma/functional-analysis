@@ -1,106 +1,258 @@
 # week4
 
-> **基础知识: 闵可夫斯基不等式**<br>设 $1\le p< \infty$, $f,g\in L^p$, 则 $\left\|f+g\right\|_p\le\left\|f\right\|_p+\left\|g\right\|_p$.
+> **基础知识: 闵可夫斯基不等式**
+>
+> 设 $1\le p< \infty$, $f,g\in L^p$, 则 $\left\|f+g\right\|_p\le\left\|f\right\|_p+\left\|g\right\|_p$.
 
-> **基础知识: 闭集与补集开集**<br>度量空间中集合 $A$ 是闭集当且仅当它的补集 $X\setminus A$ 是开集.
+> **基础知识: 闭集与补集开集**
+>
+> 度量空间中集合 $A$ 是闭集当且仅当它的补集 $X\setminus A$ 是开集.
 
-> **基础知识: 有理数在实数中稠密**<br>有理数集 $\mathbb Q$ 在 $\mathbb R$ 中稠密, 即对任意实数 $a< b$ 存在有理数 $r$ 使 $a< r< b$.
+> **基础知识: 有理数在实数中稠密**
+>
+> 有理数集 $\mathbb Q$ 在 $\mathbb R$ 中稠密, 即对任意实数 $a< b$ 存在有理数 $r$ 使 $a< r< b$.
 
-> **基础知识: 可积函数尾积分趋于零**<br>若 $g\in L^1\left(\mathbb R\right)$ 非负可积, 则 $\int_{\left|t\right|> N}g\left(t\right)\mathrm dt\to0$ ($N\to\infty$).
+> **基础知识: 可积函数尾积分趋于零**
+>
+> 若 $g\in L^1\left(\mathbb R\right)$ 非负可积, 则 $\int_{\left|t\right|> N}g\left(t\right)\mathrm dt\to0$ ($N\to\infty$).
 
-> **基础知识: 稠密关系的传递性**<br>若 $D$ 在 $E$ 中稠密且 $E$ 在 $X$ 中稠密, 则 $D$ 在 $X$ 中稠密.
+> **基础知识: 稠密关系的传递性**
+>
+> 若 $D$ 在 $E$ 中稠密且 $E$ 在 $X$ 中稠密, 则 $D$ 在 $X$ 中稠密.
 
-> **基础知识: 分片线性延拓保最大模**<br>对定义在整数点 $\mathbb Z$ 上的有界实数列 $\left(a_n\right)_{n\in\mathbb Z}$, 在每个区间 $\left[n,n+1\right]$ 上线性连接 $\left(n,a_n\right)$ 与 $\left(n+1,a_{n+1}\right)$ 所得的分片连续函数 $f$ 满足 $\sup_{t\in\mathbb R}\left|f\left(t\right)\right|=\sup_{n\in\mathbb Z}\left|a_n\right|$.
+> **基础知识: 分片线性延拓保最大模**
+>
+> 对定义在整数点 $\mathbb Z$ 上的有界实数列 $\left(a_n\right)_{n\in\mathbb Z}$, 在每个区间 $\left[n,n+1\right]$ 上线性连接 $\left(n,a_n\right)$ 与 $\left(n+1,a_{n+1}\right)$ 所得的分片连续函数 $f$ 满足 $\sup_{t\in\mathbb R}\left|f\left(t\right)\right|=\sup_{n\in\mathbb Z}\left|a_n\right|$.
 
-> **基础知识: 积分三角不等式**<br>对可积复值函数 $g$, $\left|\int_E g\left(t\right)\mathrm dt\right|\le\int_E\left|g\left(t\right)\right|\mathrm dt$.
+> **基础知识: 积分三角不等式**
+>
+> 对可积复值函数 $g$, $\left|\int_E g\left(t\right)\mathrm dt\right|\le\int_E\left|g\left(t\right)\right|\mathrm dt$.
 
-> **基础知识: 勒贝格测度平移不变性**<br>对任意可积函数 $g$ 与实数 $h$, $\int_{\mathbb R}\left|g\left(t+h\right)\right|^p\mathrm dt=\int_{\mathbb R}\left|g\left(t\right)\right|^p\mathrm dt$.
+> **基础知识: 勒贝格测度平移不变性**
+>
+> 对任意可积函数 $g$ 与实数 $h$, $\int_{\mathbb R}\left|g\left(t+h\right)\right|^p\mathrm dt=\int_{\mathbb R}\left|g\left(t\right)\right|^p\mathrm dt$.
 
-> **基础知识: 紧区间上连续函数一致连续**<br>有限闭区间上的连续函数必一致连续.
+> **基础知识: 紧区间上连续函数一致连续**
+>
+> 有限闭区间上的连续函数必一致连续.
 
-> **基础知识: 弱导数定义**<br>设 $g,h\in L_{\mathrm{loc}}^2\left(\mathbb R\right)$. 若对一切 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 成立 $\int_{\mathbb R}g\varphi'\mathrm dt=-\int_{\mathbb R}h\varphi\mathrm dt$, 则称 $h$ 是 $g$ 的弱导数, 记 $g'=h$.
+> **基础知识: 弱导数定义**
+>
+> 设 $g,h\in L_{\mathrm{loc}}^2\left(\mathbb R\right)$. 若对一切 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 成立 $\int_{\mathbb R}g\varphi'\mathrm dt=-\int_{\mathbb R}h\varphi\mathrm dt$, 则称 $h$ 是 $g$ 的弱导数, 记 $g'=h$.
 
-> **基础知识: 弱导数绝对连续**<br>若 $g\in L_{\mathrm{loc}}^2\left(\mathbb R\right)$ 有弱导数 $h\in L^2\left(\mathbb R\right)$, 则 $g$ 绝对连续, 且 $g'=h$ 几乎处处成立.
+> **基础知识: 弱导数绝对连续**
+>
+> 若 $g\in L_{\mathrm{loc}}^2\left(\mathbb R\right)$ 有弱导数 $h\in L^2\left(\mathbb R\right)$, 则 $g$ 绝对连续, 且 $g'=h$ 几乎处处成立.
 
-> **基础知识: 微分中值定理**<br>若一元实函数 $F$ 在 $\left[a,b\right]$ 上连续、在 $\left(a,b\right)$ 内可导, 则存在 $\xi\in\left(a,b\right)$ 使 $F\left(b\right)-F\left(a\right)=F'\left(\xi\right)\left(b-a\right)$.
+> **基础知识: 微分中值定理**
+>
+> 若一元实函数 $F$ 在 $\left[a,b\right]$ 上连续、在 $\left(a,b\right)$ 内可导, 则存在 $\xi\in\left(a,b\right)$ 使 $F\left(b\right)-F\left(a\right)=F'\left(\xi\right)\left(b-a\right)$.
 
-> **基础知识: 微积分基本定理**<br>对可微函数 $F$ 及 $a< b$ 有 $\int_a^bF'\left(t\right)\,\mathrm dt=F\left(b\right)-F\left(a\right)$; 特别地, 初值问题 $y'=f\left(x,y\right)$, $y\left(x_0\right)=y_0$ 等价于积分方程 $y\left(x\right)=y_0+\int_{x_0}^xf\left(t,y\left(t\right)\right)\,\mathrm dt$.
+> **基础知识: 微积分基本定理**
+>
+> 对可微函数 $F$ 及 $a< b$ 有 $\int_a^bF'\left(t\right)\,\mathrm dt=F\left(b\right)-F\left(a\right)$; 特别地, 初值问题 $y'=f\left(x,y\right)$, $y\left(x_0\right)=y_0$ 等价于积分方程 $y\left(x\right)=y_0+\int_{x_0}^xf\left(t,y\left(t\right)\right)\,\mathrm dt$.
 
-> **基础知识: 绝对连续函数的常数性**<br>若绝对连续函数 $f$ 的导数几乎处处为零, 则 $f$ 几乎处处为常数.
+> **基础知识: 绝对连续函数的常数性**
+>
+> 若绝对连续函数 $f$ 的导数几乎处处为零, 则 $f$ 几乎处处为常数.
 
-> **定义 1.1.1 (度量空间)**<br>设 $X$ 是一个非空集合, 若对于 $X$ 中任意两个元素 $x,y$, 有一个实数 $d\left(x,y\right)$ 与它们对应, 而且满足: (i) $d\left(x,y\right)\ge0$, $d\left(x,y\right)=0$ 当且仅当 $x=y$; (ii) $d\left(x,y\right)=d\left(y,x\right)$; (iii) $d\left(x,y\right)\le d\left(x,z\right)+d\left(z,y\right)$, 则称 $\left(X,d\right)$ 是度量空间.
+> **定义 1.1.1 (度量空间)**
+>
+> 设 $X$ 是一个非空集合, 若对于 $X$ 中任意两个元素 $x,y$, 有一个实数 $d\left(x,y\right)$ 与它们对应, 而且满足: (i) $d\left(x,y\right)\ge0$, $d\left(x,y\right)=0$ 当且仅当 $x=y$; (ii) $d\left(x,y\right)=d\left(y,x\right)$; (iii) $d\left(x,y\right)\le d\left(x,z\right)+d\left(z,y\right)$, 则称 $\left(X,d\right)$ 是度量空间.
 
-> **定义 1.1.2 (极限)**<br>设 $\left(X,d\right)$ 是度量空间, $\left\{x_n\right\}\subset X$, $x_0\in X$. 若 $\lim_{n\to\infty}d\left(x_n,x_0\right)=0$, 则称点列 $\left\{x_n\right\}$ 按度量 $d$ 收敛于 $x_0$.
+> **定义 1.1.2 (极限)**
+>
+> 设 $\left(X,d\right)$ 是度量空间, $\left\{x_n\right\}\subset X$, $x_0\in X$. 若 $\lim_{n\to\infty}d\left(x_n,x_0\right)=0$, 则称点列 $\left\{x_n\right\}$ 按度量 $d$ 收敛于 $x_0$.
 
-> **定义 1.2.1 (哈梅尔基与维数)**<br>线性空间 $X$ 上的一个极大线性无关组称为 $X$ 的一组哈梅尔基; 若哈梅尔基中只有有限个元素, 则称 $X$ 是有限维线性空间.
+> **定义 1.2.1 (哈梅尔基与维数)**
+>
+> 线性空间 $X$ 上的一个极大线性无关组称为 $X$ 的一组哈梅尔基; 若哈梅尔基中只有有限个元素, 则称 $X$ 是有限维线性空间.
 
-> **定义 1.2.2 (半范数与范数)**<br>设 $X$ 是 $\mathbb K$ 上的线性空间. 若每个 $x\in X$ 对应实数 $\left\|x\right\|$, 满足<br>(i) $\left\|x\right\|\ge0$;<br>(ii) $\left\|\alpha x\right\|=\left|\alpha\right|\left\|x\right\|$;<br>(iii) $\left\|x+y\right\|\le\left\|x\right\|+\left\|y\right\|$,<br>则称 $\left\|\cdot\right\|$ 为半范数. 若还满足 $\left\|x\right\|=0\Leftrightarrow x=0$, 则称 $\left\|\cdot\right\|$ 为范数, $\left(X,\left\|\cdot\right\|\right)$ 称为赋范线性空间. 范数诱导度量 $d\left(x,y\right)=\left\|x-y\right\|$, 且 $\left\|\cdot\right\|$ 在该度量拓扑下连续.
+> **定义 1.2.2 (半范数与范数)**
+>
+> 设 $X$ 是 $\mathbb K$ 上的线性空间. 若每个 $x\in X$ 对应实数 $\left\|x\right\|$, 满足
+>
+> (i) $\left\|x\right\|\ge0$;
+>
+> (ii) $\left\|\alpha x\right\|=\left|\alpha\right|\left\|x\right\|$;
+>
+> (iii) $\left\|x+y\right\|\le\left\|x\right\|+\left\|y\right\|$,
+>
+> 则称 $\left\|\cdot\right\|$ 为半范数. 若还满足 $\left\|x\right\|=0\Leftrightarrow x=0$, 则称 $\left\|\cdot\right\|$ 为范数, $\left(X,\left\|\cdot\right\|\right)$ 称为赋范线性空间. 范数诱导度量 $d\left(x,y\right)=\left\|x-y\right\|$, 且 $\left\|\cdot\right\|$ 在该度量拓扑下连续.
 
-> **定理 1.2.2 (勾股定理, 毕达哥拉斯定理)**<br>对内积空间 $H$ 中两个元素 $x,y$, 若 $x\perp y$, 则 $\left\|x+y\right\|^2=\left\|x\right\|^2+\left\|y\right\|^2$.
+> **定理 1.2.2 (勾股定理, 毕达哥拉斯定理)**
+>
+> 对内积空间 $H$ 中两个元素 $x,y$, 若 $x\perp y$, 则 $\left\|x+y\right\|^2=\left\|x\right\|^2+\left\|y\right\|^2$.
 
-> **定义 1.2.3 (内积空间)**<br>记 $\mathbb K$ 是实数域 $\mathbb R$ 或复数域 $\mathbb C$. 对于 $\mathbb K$ 上的线性空间 $H$, 如果任何两个向量 $x,y$ 都对应一个数 $\left\langle x,y\right\rangle\in\mathbb K$, 满足:<br>(i) 共轭对称性 $\left\langle x,y\right\rangle=\overline{\left\langle y,x\right\rangle}$;<br>(ii) 对第一变元的线性性 $\left\langle\alpha x+\beta y,z\right\rangle=\alpha\left\langle x,z\right\rangle+\beta\left\langle y,z\right\rangle$;<br>(iii) 正定性 $\left\langle x,x\right\rangle\ge0$ 且 $\left\langle x,x\right\rangle=0$ 当且仅当 $x=0$,<br>则称 $\left\langle\cdot,\cdot\right\rangle$ 是 $H$ 中的内积, 称 $H$ 是内积空间.
+> **定义 1.2.3 (内积空间)**
+>
+> 记 $\mathbb K$ 是实数域 $\mathbb R$ 或复数域 $\mathbb C$. 对于 $\mathbb K$ 上的线性空间 $H$, 如果任何两个向量 $x,y$ 都对应一个数 $\left\langle x,y\right\rangle\in\mathbb K$, 满足:
+>
+> (i) 共轭对称性 $\left\langle x,y\right\rangle=\overline{\left\langle y,x\right\rangle}$;
+>
+> (ii) 对第一变元的线性性 $\left\langle\alpha x+\beta y,z\right\rangle=\alpha\left\langle x,z\right\rangle+\beta\left\langle y,z\right\rangle$;
+>
+> (iii) 正定性 $\left\langle x,x\right\rangle\ge0$ 且 $\left\langle x,x\right\rangle=0$ 当且仅当 $x=0$,
+>
+> 则称 $\left\langle\cdot,\cdot\right\rangle$ 是 $H$ 中的内积, 称 $H$ 是内积空间.
 
-> **引理 1.2.3 (柯西-施瓦茨不等式)**<br>对内积空间中任意 $x,y$, 成立 $\left|\left\langle x,y\right\rangle\right|^2\le\left\langle x,x\right\rangle\left\langle y,y\right\rangle$.
+> **引理 1.2.3 (柯西-施瓦茨不等式)**
+>
+> 对内积空间中任意 $x,y$, 成立 $\left|\left\langle x,y\right\rangle\right|^2\le\left\langle x,x\right\rangle\left\langle y,y\right\rangle$.
 
-> **例 1.2.12 ($C\left[a,b\right]$ 是巴拿赫空间)**<br>有限闭区间 $\left[a,b\right]$ 上的连续函数空间 $C\left[a,b\right]$ 按范数 $\left\|f\right\|=\max_{x\in\left[a,b\right]}\left|f\left(x\right)\right|$ 是巴拿赫空间.
+> **例 1.2.12 ($C\left[a,b\right]$ 是巴拿赫空间)**
+>
+> 有限闭区间 $\left[a,b\right]$ 上的连续函数空间 $C\left[a,b\right]$ 按范数 $\left\|f\right\|=\max_{x\in\left[a,b\right]}\left|f\left(x\right)\right|$ 是巴拿赫空间.
 
-> **习题 1.2-13 (内积空间的可数直和)**<br>设 $R_n$ 都是内积空间, $R=\left\{\left\{x_n\right\}:x_n\in R_n,\ \sum_n\left\|x_n\right\|^2< \infty\right\}$ 按 $\left\langle\left\{x_n\right\},\left\{y_n\right\}\right\rangle=\sum_n\left\langle x_n,y_n\right\rangle$ 成为内积空间; 若每个 $R_n$ 是希尔伯特空间, 则 $R$ 也是希尔伯特空间.
+> **习题 1.2-13 (内积空间的可数直和)**
+>
+> 设 $R_n$ 都是内积空间, $R=\left\{\left\{x_n\right\}:x_n\in R_n,\ \sum_n\left\|x_n\right\|^2< \infty\right\}$ 按 $\left\langle\left\{x_n\right\},\left\{y_n\right\}\right\rangle=\sum_n\left\langle x_n,y_n\right\rangle$ 成为内积空间; 若每个 $R_n$ 是希尔伯特空间, 则 $R$ 也是希尔伯特空间.
 
-> **定理 1.3.2 (标准正交基的等价条件)**<br>设 $\mathfrak F=\left\{e_\lambda:\lambda\in\Lambda\right\}$ 是希尔伯特空间 $H$ 中的标准正交系, 下列命题等价:<br>(i) 对任意 $x\in H$, $x=\sum_{\lambda\in\Lambda}\left\langle x,e_\lambda\right\rangle e_\lambda$;<br>(ii) $\overline{\operatorname{span}\left\{e_\lambda:\lambda\in\Lambda\right\}}=H$;<br>(iii) $\mathfrak F$ 是完全的, 即若 $x\in H$ 满足 $x\perp e_\lambda$ ($\forall\lambda\in\Lambda$), 则 $x=0$;<br>(iv) $\mathfrak F$ 是完备的, 即对任意 $x\in H$, 帕塞瓦尔等式 $\left\|x\right\|^2=\sum_{\lambda\in\Lambda}\left|\left\langle x,e_\lambda\right\rangle\right|^2$ 成立.<br>满足上述条件之一的标准正交系称为 $H$ 中的标准正交基.
+> **定理 1.3.2 (标准正交基的等价条件)**
+>
+> 设 $\mathfrak F=\left\{e_\lambda:\lambda\in\Lambda\right\}$ 是希尔伯特空间 $H$ 中的标准正交系, 下列命题等价:
+>
+> (i) 对任意 $x\in H$, $x=\sum_{\lambda\in\Lambda}\left\langle x,e_\lambda\right\rangle e_\lambda$;
+>
+> (ii) $\overline{\operatorname{span}\left\{e_\lambda:\lambda\in\Lambda\right\}}=H$;
+>
+> (iii) $\mathfrak F$ 是完全的, 即若 $x\in H$ 满足 $x\perp e_\lambda$ ($\forall\lambda\in\Lambda$), 则 $x=0$;
+>
+> (iv) $\mathfrak F$ 是完备的, 即对任意 $x\in H$, 帕塞瓦尔等式 $\left\|x\right\|^2=\sum_{\lambda\in\Lambda}\left|\left\langle x,e_\lambda\right\rangle\right|^2$ 成立.
+>
+> 满足上述条件之一的标准正交系称为 $H$ 中的标准正交基.
 
-> **定理 1.3.3 (标准正交系可扩张为标准正交基)**<br>希尔伯特空间 $H$ 中的任意标准正交系都可扩张为 $H$ 的一组标准正交基.
+> **定理 1.3.3 (标准正交系可扩张为标准正交基)**
+>
+> 希尔伯特空间 $H$ 中的任意标准正交系都可扩张为 $H$ 的一组标准正交基.
 
-> **例 1.3.9 (埃尔米特多项式构成完备正交系)**<br>令 $H_n\left(t\right)=\left(-1\right)^n\mathrm e^{t^2}\frac{\mathrm d^n}{\mathrm dt^n}\mathrm e^{-t^2}$ 为埃尔米特多项式, 则加权多项式族 $\psi_n\left(t\right)=\left(2^n n!\sqrt\pi\right)^{-1/2}\mathrm e^{-t^2/2}H_n\left(t\right)$ 组成 $L^2\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$ 中的完备标准正交系; 特别地, 多项式族关于权 $\mathrm e^{-t^2}$ 正交且完备.
+> **例 1.3.9 (埃尔米特多项式构成完备正交系)**
+>
+> 令 $H_n\left(t\right)=\left(-1\right)^n\mathrm e^{t^2}\frac{\mathrm d^n}{\mathrm dt^n}\mathrm e^{-t^2}$ 为埃尔米特多项式, 则加权多项式族 $\psi_n\left(t\right)=\left(2^n n!\sqrt\pi\right)^{-1/2}\mathrm e^{-t^2/2}H_n\left(t\right)$ 组成 $L^2\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$ 中的完备标准正交系; 特别地, 多项式族关于权 $\mathrm e^{-t^2}$ 正交且完备.
 
-> **定义 1.4.1 (内点、内部与开集)**<br>设 $A$ 是度量空间 $\left(X,d\right)$ 的点集, $x_0\in A$. 若存在 $r> 0$ 使 $\left\{x:d\left(x,x_0\right)< r\right\}\subset A$, 则称 $x_0$ 是 $A$ 的内点; $A$ 的内点全体称为 $A$ 的内部; 若 $A$ 中每点都是内点, 则称 $A$ 是开集.
+> **定义 1.4.1 (内点、内部与开集)**
+>
+> 设 $A$ 是度量空间 $\left(X,d\right)$ 的点集, $x_0\in A$. 若存在 $r> 0$ 使 $\left\{x:d\left(x,x_0\right)< r\right\}\subset A$, 则称 $x_0$ 是 $A$ 的内点; $A$ 的内点全体称为 $A$ 的内部; 若 $A$ 中每点都是内点, 则称 $A$ 是开集.
 
-> **引理 1.4.1 (基本点列与完备性)**<br>设 $X$ 是度量空间, 则:<br>(i) 基本点列是有界的;<br>(ii) 若 $X$ 完备, 则点列收敛当且仅当它是基本点列;<br>(iii) 完备度量空间的闭子集是完备的.
+> **引理 1.4.1 (基本点列与完备性)**
+>
+> 设 $X$ 是度量空间, 则:
+>
+> (i) 基本点列是有界的;
+>
+> (ii) 若 $X$ 完备, 则点列收敛当且仅当它是基本点列;
+>
+> (iii) 完备度量空间的闭子集是完备的.
 
-> **命题 1.4.1 (可分空间的子空间可分)**<br>设 $\left(X,d\right)$ 可分, $A\subset X$, 则 $\left(A,d\right)$ 也是可分的.
+> **命题 1.4.1 (可分空间的子空间可分)**
+>
+> 设 $\left(X,d\right)$ 可分, $A\subset X$, 则 $\left(A,d\right)$ 也是可分的.
 
-> **定理 1.4.1 (连续映射的等价条件)**<br>设 $f:X\to Y$ 是度量空间之间的映射, 下列条件等价:<br>(i) $f$ 连续;<br>(ii) $Y$ 中任一开集 $O$ 的原像 $f^{-1}\left(O\right)$ 是 $X$ 中的开集;<br>(iii) $Y$ 中任一闭集 $F$ 的原像 $f^{-1}\left(F\right)$ 是 $X$ 中的闭集.
+> **定理 1.4.1 (连续映射的等价条件)**
+>
+> 设 $f:X\to Y$ 是度量空间之间的映射, 下列条件等价:
+>
+> (i) $f$ 连续;
+>
+> (ii) $Y$ 中任一开集 $O$ 的原像 $f^{-1}\left(O\right)$ 是 $X$ 中的开集;
+>
+> (iii) $Y$ 中任一闭集 $F$ 的原像 $f^{-1}\left(F\right)$ 是 $X$ 中的闭集.
 
-> **例 1.4.1 (开球是开集)**<br>度量空间中开球 $O\left(x_0,r\right)=\left\{x:d\left(x,x_0\right)< r\right\}$ 是开集.
+> **例 1.4.1 (开球是开集)**
+>
+> 度量空间中开球 $O\left(x_0,r\right)=\left\{x:d\left(x,x_0\right)< r\right\}$ 是开集.
 
-> **注 1.4.1 ($L^{p}$ 中的稠密子集)**<br>(i) $L^p\left(\mathbb R^n\right)$ ($1\le p< \infty$) 中的简单函数全体、阶梯函数全体以及 $C_c^\infty\left(\mathbb R^n\right)$ 均是稠密子集;<br>(ii) 在 $L^\infty\left[a,b\right]$ 中只有简单函数全体稠密.
+> **注 1.4.1 ($L^{p}$ 中的稠密子集)**
+>
+> (i) $L^p\left(\mathbb R^n\right)$ ($1\le p< \infty$) 中的简单函数全体、阶梯函数全体以及 $C_c^\infty\left(\mathbb R^n\right)$ 均是稠密子集;
+>
+> (ii) 在 $L^\infty\left[a,b\right]$ 中只有简单函数全体稠密.
 
-> **例 1.4.2 (闭球是闭集)**<br>度量空间中闭球 $B\left(x_0,r\right)=\left\{x:d\left(x,x_0\right)\le r\right\}$ 是闭集.
+> **例 1.4.2 (闭球是闭集)**
+>
+> 度量空间中闭球 $B\left(x_0,r\right)=\left\{x:d\left(x,x_0\right)\le r\right\}$ 是闭集.
 
-> **定义 1.4.3 (极限点、导集、闭包与闭集)**<br>(i) 若存在异于 $x_0$ 的点列 $x_n\to x_0$, 则 $x_0$ 是 $A$ 的极限点;<br>(ii) 极限点全体记为导集 $A'$, 闭包 $\overline A=A\cup A'$;<br>(iii) 若 $A'\subset A$, 则称 $A$ 是闭集.
+> **定义 1.4.3 (极限点、导集、闭包与闭集)**
+>
+> (i) 若存在异于 $x_0$ 的点列 $x_n\to x_0$, 则 $x_0$ 是 $A$ 的极限点;
+>
+> (ii) 极限点全体记为导集 $A'$, 闭包 $\overline A=A\cup A'$;
+>
+> (iii) 若 $A'\subset A$, 则称 $A$ 是闭集.
 
-> **例 1.4.3 (距离函数连续)**<br>设 $F$ 是度量空间 $\left(X,d\right)$ 的非空子集, $d\left(x,F\right)=\inf_{z\in F}d\left(x,z\right)$. 由三角不等式得 $\left|d\left(x_1,F\right)-d\left(x_2,F\right)\right|\le d\left(x_1,x_2\right)$, 故 $x\mapsto d\left(x,F\right)$ 连续且一致连续.
+> **例 1.4.3 (距离函数连续)**
+>
+> 设 $F$ 是度量空间 $\left(X,d\right)$ 的非空子集, $d\left(x,F\right)=\inf_{z\in F}d\left(x,z\right)$. 由三角不等式得 $\left|d\left(x_1,F\right)-d\left(x_2,F\right)\right|\le d\left(x_1,x_2\right)$, 故 $x\mapsto d\left(x,F\right)$ 连续且一致连续.
 
-> **定义 1.4.5 (稠密性)**<br>在度量空间 $\left(X,d\right)$ 中, 对于 $X$ 中一个子集 $A$, 称 $A$ 在 $X$ 中稠密是指 $X\subset\overline A$ (即 $\overline A=X$).
+> **定义 1.4.5 (稠密性)**
+>
+> 在度量空间 $\left(X,d\right)$ 中, 对于 $X$ 中一个子集 $A$, 称 $A$ 在 $X$ 中稠密是指 $X\subset\overline A$ (即 $\overline A=X$).
 
-> **例 1.4.5 (魏尔斯特拉斯第一逼近定理)**<br>有界闭区间 $\left[a,b\right]$ 上, 多项式全体 $P$ 在 $C\left[a,b\right]$ 中稠密.
+> **例 1.4.5 (魏尔斯特拉斯第一逼近定理)**
+>
+> 有界闭区间 $\left[a,b\right]$ 上, 多项式全体 $P$ 在 $C\left[a,b\right]$ 中稠密.
 
-> **定义 1.4.6 (可分性)**<br>若度量空间 $X$ 中存在可数稠密子集, 则称 $X$ 是可分空间.
+> **定义 1.4.6 (可分性)**
+>
+> 若度量空间 $X$ 中存在可数稠密子集, 则称 $X$ 是可分空间.
 
-> **定义 1.4.7 (完备性)**<br>(i) 若 $\left\{x_n\right\}$ 满足: 对任意 $\varepsilon> 0$, 存在 $N$, 使 $n,m\ge N$ 时 $d\left(x_n,x_m\right)< \varepsilon$, 则称 $\left\{x_n\right\}$ 是基本点列 (柯西点列);<br>(ii) 若每个基本点列都收敛, 则称 $X$ 完备;<br>(iii) 完备赋范线性空间称为巴拿赫空间;<br>(iv) 完备内积空间称为希尔伯特空间.
+> **定义 1.4.7 (完备性)**
+>
+> (i) 若 $\left\{x_n\right\}$ 满足: 对任意 $\varepsilon> 0$, 存在 $N$, 使 $n,m\ge N$ 时 $d\left(x_n,x_m\right)< \varepsilon$, 则称 $\left\{x_n\right\}$ 是基本点列 (柯西点列);
+>
+> (ii) 若每个基本点列都收敛, 则称 $X$ 完备;
+>
+> (iii) 完备赋范线性空间称为巴拿赫空间;
+>
+> (iv) 完备内积空间称为希尔伯特空间.
 
-> **例 1.4.9 ($C$ 与 $L^{p}$ 的可分性)**<br>$C\left[a,b\right]$ 和 $L^p\left[a,b\right]$ ($1\le p< \infty$) 是可分空间.
+> **例 1.4.9 ($C$ 与 $L^{p}$ 的可分性)**
+>
+> $C\left[a,b\right]$ 和 $L^p\left[a,b\right]$ ($1\le p< \infty$) 是可分空间.
 
-> **例 1.4.10 ($l^{\infty}$ 不可分)**<br>有界数列空间 $l^\infty$ 是不可分的.
+> **例 1.4.10 ($l^{\infty}$ 不可分)**
+>
+> 有界数列空间 $l^\infty$ 是不可分的.
 
-> **例 1.4.11 ($L^{\infty}$ 不可分)**<br>$L^\infty\left[a,b\right]$ 是不可分的.
+> **例 1.4.11 ($L^{\infty}$ 不可分)**
+>
+> $L^\infty\left[a,b\right]$ 是不可分的.
 
-> **例 1.4.13 ($L^{p}\left(E\right)$ 是巴拿赫空间)**<br>设 $E$ 是 $\mathbb R^n$ 的勒贝格可测集, 则 $L^p\left(E\right)$ ($1\le p< \infty$) 是巴拿赫空间; 特别地, $L^2\left(E\right)$ 是希尔伯特空间.
+> **例 1.4.13 ($L^{p}\left(E\right)$ 是巴拿赫空间)**
+>
+> 设 $E$ 是 $\mathbb R^n$ 的勒贝格可测集, 则 $L^p\left(E\right)$ ($1\le p< \infty$) 是巴拿赫空间; 特别地, $L^2\left(E\right)$ 是希尔伯特空间.
 
-> **定义 1.5.1 (不动点)**<br>设 $X$ 为集合, $\varphi:X\to X$. 若 $x^*\in X$ 使 $\varphi\left(x^*\right)=x^*$, 则称 $x^*$ 是 $\varphi$ 的不动点.
+> **定义 1.5.1 (不动点)**
+>
+> 设 $X$ 为集合, $\varphi:X\to X$. 若 $x^*\in X$ 使 $\varphi\left(x^*\right)=x^*$, 则称 $x^*$ 是 $\varphi$ 的不动点.
 
-> **定理 1.5.1 (巴拿赫不动点定理)**<br>设 $X$ 是完备度量空间, $\varphi:X\to X$ 是压缩映射, 则 $\varphi$ 在 $X$ 中有唯一不动点 $x^*$; 对任意初值 $x_0$, 迭代 $x_n=\varphi^n\left(x_0\right)$ 收敛于 $x^*$, 且 $d\left(x^*,x_n\right)\le\frac{\alpha^n}{1-\alpha}d\left(x_1,x_0\right)$.
+> **定理 1.5.1 (巴拿赫不动点定理)**
+>
+> 设 $X$ 是完备度量空间, $\varphi:X\to X$ 是压缩映射, 则 $\varphi$ 在 $X$ 中有唯一不动点 $x^*$; 对任意初值 $x_0$, 迭代 $x_n=\varphi^n\left(x_0\right)$ 收敛于 $x^*$, 且 $d\left(x^*,x_n\right)\le\frac{\alpha^n}{1-\alpha}d\left(x_1,x_0\right)$.
 
-> **注 1.5.1 (迭代法的误差估计)**<br>在**定理 1.5.1 (巴拿赫不动点定理)** 的证明中, 令误差不等式两端取极限可得 $d\left(x^*,x_n\right)\le\frac{\alpha^n}{1-\alpha}d\left(x_1,x_0\right)$.
+> **注 1.5.1 (迭代法的误差估计)**
+>
+> 在**定理 1.5.1 (巴拿赫不动点定理)** 的证明中, 令误差不等式两端取极限可得 $d\left(x^*,x_n\right)\le\frac{\alpha^n}{1-\alpha}d\left(x_1,x_0\right)$.
 
-> **定义 1.5.2 (压缩映射)**<br>设 $\left(X,d\right)$ 是度量空间, $\varphi:X\to X$. 若存在 $0\le\alpha< 1$, 使对一切 $x,y\in X$ 有 $d\left(\varphi\left(x\right),\varphi\left(y\right)\right)\le\alpha d\left(x,y\right)$, 则称 $\varphi$ 是 $X$ 上的压缩映射, $\alpha$ 称为压缩系数.
+> **定义 1.5.2 (压缩映射)**
+>
+> 设 $\left(X,d\right)$ 是度量空间, $\varphi:X\to X$. 若存在 $0\le\alpha< 1$, 使对一切 $x,y\in X$ 有 $d\left(\varphi\left(x\right),\varphi\left(y\right)\right)\le\alpha d\left(x,y\right)$, 则称 $\varphi$ 是 $X$ 上的压缩映射, $\alpha$ 称为压缩系数.
 
-> **定理 1.5.2 ($\varphi^{n}$ 压缩蕴含唯一不动点)**<br>设完备度量空间 $X$ 上的映射 $\varphi$ 存在自然数 $n$, 使 $\varphi^n$ 是压缩映射, 则 $\varphi$ 在 $X$ 中有唯一不动点.
+> **定理 1.5.2 ($\varphi^{n}$ 压缩蕴含唯一不动点)**
+>
+> 设完备度量空间 $X$ 上的映射 $\varphi$ 存在自然数 $n$, 使 $\varphi^n$ 是压缩映射, 则 $\varphi$ 在 $X$ 中有唯一不动点.
 
-> **定理 1.5.3 (初值问题解的存在唯一性)**<br>设 $f\left(x,y\right)$ 在区域 $D$ 上连续且关于 $y$ 满足利普希茨条件 $\left|f\left(x,y_1\right)-f\left(x,y_2\right)\right|\le L\left|y_1-y_2\right|$, 则当 $h< \min\left\{a,\frac{\lambda}{M},\frac{1}{L}\right\}$ 时, 初值问题 $y'=f\left(x,y\right)$, $y\left(x_0\right)=y_0$ 在 $\left[x_0-h,x_0+h\right]$ 上有唯一解.
+> **定理 1.5.3 (初值问题解的存在唯一性)**
+>
+> 设 $f\left(x,y\right)$ 在区域 $D$ 上连续且关于 $y$ 满足利普希茨条件 $\left|f\left(x,y_1\right)-f\left(x,y_2\right)\right|\le L\left|y_1-y_2\right|$, 则当 $h< \min\left\{a,\frac{\lambda}{M},\frac{1}{L}\right\}$ 时, 初值问题 $y'=f\left(x,y\right)$, $y\left(x_0\right)=y_0$ 在 $\left[x_0-h,x_0+h\right]$ 上有唯一解.
 
-> **例 1.6.1 (有限维空间中相对列紧等价于有界)**<br>在 $\mathbb R^n$ (及任意有限维赋范线性空间) 中, 子集 $A$ 是相对列紧集当且仅当 $A$ 是有界集; 有界闭集因此是紧集.
+> **例 1.6.1 (有限维空间中相对列紧等价于有界)**
+>
+> 在 $\mathbb R^n$ (及任意有限维赋范线性空间) 中, 子集 $A$ 是相对列紧集当且仅当 $A$ 是有界集; 有界闭集因此是紧集.
 
-> **推论 1.6.3 (连续函数达到上下确界)**<br>度量空间 $X$ 的紧子集 $K$ 上的连续函数 $f$ 有界, 且上、下确界在 $K$ 上达到.
+> **推论 1.6.3 (连续函数达到上下确界)**
+>
+> 度量空间 $X$ 的紧子集 $K$ 上的连续函数 $f$ 有界, 且上、下确界在 $K$ 上达到.
 
 ---
 
