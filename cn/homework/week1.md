@@ -1,83 +1,83 @@
 # week1
 
 > **基础知识: 实数绝对值的三角不等式**
->
+> 
 > 对任意实数 $a,b$, 有 $\left|a+b\right|\le\left|a\right|+\left|b\right|$, 进而 $\left|\sum_{i=1}^{n}a_i\right|\le\sum_{i=1}^{n}\left|a_i\right|$.
 
 > **基础知识: 夹逼定理**
->
+> 
 > 若数列 $\left\{a_n\right\}$ 满足 $0\le a_n\le b_n$, 且 $b_n\to0$, 则 $a_n\to0$.
 
 > **基础知识: 对数与指数函数的连续性**
->
+> 
 > $\ln$ 与 $\exp$ 分别在其定义域上连续, 即 $\lim_{u\to u_0}\ln u=\ln u_0$ ($u_0> 0$), $\lim_{v\to v_0}e^v=e^{v_0}$.
 
 > **基础知识: 二项式定理**
->
+> 
 > 对任意 $x$ 与正整数 $k$, $\left(1-x\right)^k=\sum_{j=0}^{k}\binom{k}{j}\left(-x\right)^j$.
 
 > **基础知识: 函数 $\varphi,\psi$ 的单调与凹性**
->
+> 
 > 记 $\varphi\left(t\right)=\frac{t}{1+t}$, $\psi\left(t\right)=\ln\left(1+t\right)$, $t\ge0$. 则 $\varphi,\psi$ 在 $\left[0,\infty\right)$ 上都严格递增, $\varphi\left(0\right)=\psi\left(0\right)=0$, 且 $\varphi''\left(t\right)=-\frac{2}{\left(1+t\right)^3}< 0$, $\psi''\left(t\right)=-\frac{1}{\left(1+t\right)^2}< 0$, 即二者都是严格凹函数.
 
 > **基础知识: 凹函数过原点的次可加性**
->
+> 
 > 若 $f:\left[0,\infty\right)\to\left[0,\infty\right)$ 是凹函数且 $f\left(0\right)=0$, 则对任意 $a,b\ge0$ 有 $f\left(a+b\right)\le f\left(a\right)+f\left(b\right)$. 事实上, 凹函数的导函数 $f'$ 单调递减, 故 $f\left(a+b\right)-f\left(a\right)=\int_a^{a+b}f'\left(s\right)\,\mathrm ds\le\int_a^{a+b}f'\left(s-a\right)\,\mathrm ds=\int_0^bf'\left(u\right)\,\mathrm du=f\left(b\right)-f\left(0\right)=f\left(b\right)$.
 
 > **基础知识: 幂函数的单调性**
->
+> 
 > 对任意 $p> 0$, $u\mapsto u^p$ 在 $\left[0,\infty\right)$ 上严格递增; 特别当 $0< p< 1$ 时, $\left(u^p\right)''=p\left(p-1\right)u^{p-2}< 0$ ($u> 0$), 即 $t\mapsto t^p$ 在 $\left[0,\infty\right)$ 上是凹函数且 $0^p=0$.
 
 > **基础知识: 非负可测函数积分为零的充要条件**
->
+> 
 > 若 $g\ge0$ 是 $\left[0,1\right]$ 上的勒贝格可测函数, 则 $\int_0^1g\left(t\right)\,\mathrm dt=0$ 当且仅当 $g\left(t\right)=0$ 几乎处处成立.
 
 > **基础知识: 单位向量内积与夹角**
->
+> 
 > 设 $x,y\in\mathbb R^3$, $\left\|x\right\|=\left\|y\right\|=1$, $\theta\in\left[0,\pi\right]$ 为 $x,y$ 的夹角, 则 $x\cdot y=\cos\theta$, 且以 $x,y$ 为端点的大圆劣弧长等于 $\theta$ (单位球面).
 
 > **基础知识: $\sin u\le u$**
->
+> 
 > 对任意 $u\ge0$, 有 $\sin u\le u$.
 
 > **基础知识: $\sin$ 在 $\left[0,\pi/2\right]$ 上的凹弦估计**
->
+> 
 > $\sin''u=-\sin u< 0$ ($u\in\left(0,\pi/2\right)$), 故 $\sin$ 在 $\left[0,\pi/2\right]$ 上是凹函数, 其图像位于连接 $\left(0,0\right)$ 与 $\left(\pi/2,1\right)$ 的弦 $y=\frac{2}{\pi}u$ 之上, 即 $\sin u\ge\frac{2}{\pi}u$ ($0\le u\le\frac{\pi}{2}$).
 
 > **基础知识: $\cos$ 在 $\left[0,\pi\right]$ 上严格递减**
->
+> 
 > 若 $\gamma,\beta\in\left[0,\pi\right]$ 且 $\cos\gamma\ge\cos\beta$, 则 $\gamma\le\beta$.
 
 > **定义 1.1.1 (度量空间)**
->
+> 
 > 设 $X$ 是一个非空集合, 若对于 $X$ 中任意两个元素 $x,y$, 都有一个实数 $d\left(x,y\right)$ 与它们对应, 而且满足下面条件:
->
+> 
 > (i) (非负性与正定性) 对任意 $x,y\in X$, $d\left(x,y\right)\ge0$, 并且 $d\left(x,y\right)=0$ 的充要条件是 $x=y$;
->
+> 
 > (ii) (对称性) 对任意 $x,y\in X$, $d\left(x,y\right)=d\left(y,x\right)$;
->
+> 
 > (iii) (三角不等式) 对任意 $x,y,z\in X$, $d\left(x,y\right)\le d\left(x,z\right)+d\left(z,y\right)$,
->
+> 
 > 则称 $\left(X,d\right)$ 是一个度量空间, $d$ 为 $X$ 上的度量.
 
 > **定义 1.1.2 (极限)**
->
+> 
 > 设 $\left(X,d\right)$ 是度量空间, $\left\{x_n\right\}_{n=1}^\infty$ 是 $X$ 中点列, $x_0\in X$, 若 $\lim_{n\to\infty}d\left(x_n,x_0\right)=0$, 则称点列 $\left\{x_n\right\}$ 按照度量 $d$ 收敛于 $x_0$, 记为 $\lim_{n\to\infty}x_n=x_0$.
 
 > **例 1.1.2 ($n$ 维欧几里得空间)**
->
+> 
 > 在 $n$ 个有序实数组 $x=\left(x_1,x_2,\cdots,x_n\right)$ 全体组成的集合 $X$ 中, 定义 $d\left(x,y\right)=\sqrt{\sum_{i=1}^{n}\left(x_i-y_i\right)^2}$, 则 $\left(X,d\right)$ 是度量空间, 称为 $n$ 维欧几里得空间, 通常记为 $\mathbb R^n$.
 
 > **例 1.1.10 (一致收敛与度量收敛)**
->
+> 
 > 由例 1.1.6 的讨论可知, $C\left[a,b\right]$ 中点列按度量 $d\left(f,g\right)=\max_{x\in\left[a,b\right]}\left|f\left(x\right)-g\left(x\right)\right|$ 收敛等价于区间 $\left[a,b\right]$ 上的函数列一致收敛.
 
 > **例 1.1.12 (可测函数等价类空间)**
->
+> 
 > 对于有限区间 $\left[a,b\right]$, 记 $\mathfrak G=\left\{\left[a,b\right]\;\text{上几乎处处有限的勒贝格可测函数}\right\}$, $f,g\in\mathfrak G$ 等价是指 $f\overset m= g$, 仍以 $f$ 表示 $f$ 在 $\mathcal S=\mathfrak G/\sim$ 中对应的等价类; 对于 $f,g\in\mathcal S$, 定义 $d\left(f,g\right)=\int_{\left[a,b\right]}\frac{\left|f\left(t\right)-g\left(t\right)\right|}{1+\left|f\left(t\right)-g\left(t\right)\right|}\,\mathrm dm\left(t\right)$, 这是一个度量, 且 $d\left(f,g\right)=0$ 当且仅当 $f\overset m= g$.
 
 > **引理 1.2.3 (柯西-施瓦茨不等式)**
->
+> 
 > 设 $x,y\in H$ ($H$ 为内积空间), 则 $\left|\left\langle x,y\right\rangle\right|^2\le\left\langle x,x\right\rangle\left\langle y,y\right\rangle$, 特别地当 $\left\|x\right\|=\left\|y\right\|=1$ 时 $\left|\left\langle x,y\right\rangle\right|\le1$.
 
 ---

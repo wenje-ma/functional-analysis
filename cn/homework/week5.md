@@ -1,184 +1,184 @@
 # week5
 
 > **基础知识: 紧度量空间的性质**
->
+> 
 > 紧的度量空间是完备的且完全有界的.
 
 > **基础知识: 闵可夫斯基不等式**
->
+> 
 > 设 $1\le p< \infty$, $f,g\in L^{p}$, 则 $\left\|f+g\right\|_{p}\le\left\|f\right\|_{p}+\left\|g\right\|_{p}$.
 
 > **基础知识: 凸包**
->
+> 
 > 对于线性空间 $X$, 存在一个 $A\subset X$, 则 $A$ 的凸包 $\mathrm{co}\left(A\right)$ 是包含 $A$ 的最小凸集.
 
 > **基础知识: 单 (纯) 形**
->
+> 
 > 欧氏空间里, 由 $m+1$ 个 "不在同一个 $m-1$ 维超平面上" 的点（仿射无关点）张出来的凸集, 是三角形, 四面体的高维推广.
 
 > **基础知识: 方阵可逆判据与算子范数**
->
+> 
 > 对方阵 $A$, $\det A\neq0$ 当且仅当 $A$ 可逆; 可逆矩阵 $A^{-1}$ 的算子范数 $\left\|A^{-1}\right\|$ 有限, 且 $A^{-1}F=0$ 蕴含 $F=0$.
 
 > **基础知识: 向量值函数的微分中值定理 (积分形式)**
->
+> 
 > 设 $F:V\to\mathbb{R}^{m}$ 在开集 $V\subset\mathbb{R}^{m}$ 上连续可微, $y_1,y_2\in V$ 且线段 $\left[y_2,y_1\right]\subset V$, 则
 $$F\left(y_1\right)-F\left(y_2\right)=\left(\int_0^{1}DF\left(y_2+t\left(y_1-y_2\right)\right)\,\mathrm dt\right)\left(y_1-y_2\right).$$
 
 > **基础知识: 闭集的交与连续映射原像**
->
+> 
 > 拓扑空间中, 任意多个闭集的交是闭集; 连续映射下, 闭集的原像是闭集.
 
 > **基础知识: 德摩根律**
->
+> 
 > 对集合 $A$ 与子集族 $\left\{F_\lambda\right\}$, $\bigcup_\lambda\left(A\setminus F_\lambda\right)=A\setminus\bigcap_\lambda F_\lambda$.
 
 > **基础知识: 闭包的邻域刻画**
->
-> $x\in\overline A$ 当且仅当对任意 $\varepsilon>0$, 存在 $a\in A$ 使 $d\left(x,a\right)<\varepsilon$.
+> 
+> $x\in\overline A$ 当且仅当对任意 $\varepsilon> 0$, 存在 $a\in A$ 使 $d\left(x,a\right)< \varepsilon$.
 
 > **基础知识: $\mathbb{R}^{n}$ 中方体的直径与有界集的网格覆盖**
->
+> 
 > 边长为 $a$ 且平行于坐标轴的 $n$ 维方体, 其直径为 $\sqrt n\,a$; $\mathbb{R}^{n}$ 中的有界集只与有限个这样的小方体相交.
 
 > **基础知识: 范数公理**
->
+> 
 > 赋范线性空间的范数满足: 非负性 ($\left\|x\right\|\ge0$, 且 $\left\|x\right\|=0\iff x=0$), 齐次性 ($\left\|\alpha x\right\|=\left|\alpha\right|\left\|x\right\|$), 三角不等式 ($\left\|x+y\right\|\le\left\|x\right\|+\left\|y\right\|$).
 
 > **基础知识: $L^{p}$ 函数的积分尾项趋于零 (胎紧性)**
->
-> 对 $f\in L^{p}\left(\mathbb{R}\right)$, $1\le p<\infty$, 有 $\int_{\left\{\left|x\right|>M\right\}}\left|f\left(x\right)\right|^{p}\,\mathrm dm\to0$ ($M\to\infty$).
+> 
+> 对 $f\in L^{p}\left(\mathbb{R}\right)$, $1\le p< \infty$, 有 $\int_{\left\{\left|x\right|> M\right\}}\left|f\left(x\right)\right|^{p}\,\mathrm dm\to0$ ($M\to\infty$).
 
 > **基础知识: $L^{p}$ 范数的平移不变性**
->
+> 
 > 对 $f\in L^{p}\left(\mathbb{R}\right)$ 与 $h\in\mathbb{R}$, $\left\|f\left(\cdot+h\right)\right\|_{p}=\left\|f\right\|_{p}$.
 
 > **基础知识: $C_{0}\left(\mathbb{R}\right)$ 函数在 $\mathbb{R}$ 上一致连续**
->
+> 
 > 若 $f\in C_{0}\left(\mathbb{R}\right)$ (连续且 $\left|f\left(x\right)\right|\to0$ 当 $\left|x\right|\to\infty$), 则 $f$ 在 $\mathbb{R}$ 上一致连续.
 
 > **基础知识: 对角抽取与有界数列的收敛子列**
->
+> 
 > $\mathbb{R}$ 中有界数列必有收敛子列 (Bolzano-Weierstrass 定理); 对双指标有界数列 $\left\{a_n^{\left(m\right)}\right\}$, 可抽取子列 $m_k$ 使对每个固定的 $n$, $a_n^{\left(m_k\right)}$ 收敛.
 
 > **基础知识: 绝对收敛级数必收敛**
->
-> 在巴拿赫空间中, 若 $\sum_{n}\left\|x_n\right\|<\infty$, 则级数 $\sum_{n}x_n$ 收敛.
+> 
+> 在巴拿赫空间中, 若 $\sum_{n}\left\|x_n\right\|< \infty$, 则级数 $\sum_{n}x_n$ 收敛.
 
 > **基础知识: $L^{\infty}$ 范数的定义**
->
+> 
 > $\left\|g\right\|_{\infty}=\operatorname{ess\,sup}\left|g\right|$, 即 $\left|g\left(x\right)\right|\le\left\|g\right\|_{\infty}$ 对几乎处处的 $x$ 成立.
 
 > **基础知识: 非负可测函数积分为零则几乎处处为零**
->
+> 
 > 若 $\varphi\ge0$ a.e. 且 $\int\varphi\,\mathrm dm=0$, 则 $\varphi=0$ a.e.
 
 > **基础知识: 一致收敛极限保持连续性**
->
+> 
 > 若 $f_n\in C\left(X\right)$ 且 $f_n\rightrightarrows f$ 于 $X$, 则 $f\in C\left(X\right)$.
 
 > **基础知识: 实数系完备**
->
+> 
 > $\mathbb{R}$ 中的柯西列必收敛.
 
 > **例 1.2.8 ($L^{p}$ 是巴拿赫空间)**
->
+> 
 > 设 $1\le p< \infty$, 则 $L^{p}\left(\mathbb{R}\right)$ 按范数 $\left\|f\right\|_{p}=\left(\int_{\mathbb{R}}\left|f\right|^{p}\,\mathrm dm\right)^{1/p}$ 是巴拿赫空间.
 
 > **例 1.2.12 ($C\left[a,b\right]$ 是巴拿赫空间)**
->
+> 
 > 设 $\left[a,b\right]$ 是有限闭区间, 则 $C\left[a,b\right]$ 按范数 $\left\|f\right\|=\max_{x\in\left[a,b\right]}\left|f\left(x\right)\right|$ 是巴拿赫空间.
 
 > **引理 1.4.1 (基本点列与完备性)**
->
+> 
 > 设 $X$ 是度量空间, 则:
->
+> 
 > (i) 基本点列是有界的;
->
+> 
 > (ii) 若 $X$ 完备, 则点列收敛当且仅当它是基本点列;
->
+> 
 > (iii) 完备度量空间的闭子集是完备的.
 
 > **习题 1.4-15 (平均连续性)**
->
+> 
 > 设 $f\in L^{p}\left(\mathbb{R}\right)$, $1\le p< \infty$, 则 $\lim_{h\to0}\left(\int_{\mathbb{R}}\left|f\left(x+h\right)-f\left(x\right)\right|^{p}\,\mathrm dm\right)^{1/p}=0$.
 
 > **定义 1.5.1 (不动点)**
->
+> 
 > 设 $T$ 是集合 $X$ 到自身的映射. 若存在 $x\in X$ 使得 $Tx=x$, 则称 $x$ 是 $T$ 的不动点.
 
 > **定理 1.5.1 (巴拿赫不动点定理)**
->
+> 
 > 设 $X$ 是完备的度量空间, $T:X\to X$ 是压缩映射, 则 $T$ 在 $X$ 中存在唯一的不动点 $x$; 且对任意的 $x_0\in X$, 迭代序列 $x_n=T^{n}x_0$ 收敛于 $x$, 误差估计 $d\left(x_n,x\right)\le \frac{\theta^{n}}{1-\theta}d\left(x_0,Tx_0\right)$.
 
 > **定义 1.5.2 (压缩映射)**
->
+> 
 > 设 $X$ 是度量空间, $T:X\to X$. 若存在 $0< \theta< 1$, 使得 $d\left(Tx,Ty\right)\le \theta d\left(x,y\right)$ ($\forall x,y\in X$), 则称 $T$ 是 $X$ 上的压缩映射, $\theta$ 称为压缩系数.
 
 > **定义 1.6.1 (相对列紧集)**
->
+> 
 > 设 $A$ 是度量空间 $X$ 的子集. 若 $A$ 的闭包 $\overline{A}$ 是紧集, 则称 $A$ 是相对列紧集.
 
 > **推论 1.6.1 (相对列紧集可分且有界)**
->
+> 
 > 相对列紧集是可分的有界集.
 
 > **例 1.6.1 (有限维空间中相对列紧 $\Leftrightarrow$ 有界)**
->
+> 
 > 在有限维赋范线性空间 (特别地 $\mathbb{R}^n$) 中, $A$ 是相对列紧集当且仅当 $A$ 是有界集.
 
 > **注 1.6.1 (网中的点不必属于集合本身)**
->
+> 
 > $\varepsilon$-网中的点可以不必属于 $A$ 本身.
 
 > **定理 1.6.2 (列紧 $\Leftrightarrow$ 覆盖紧)**
->
+> 
 > 度量空间 $X$ 是紧集当且仅当它是列紧集 (即 $X$ 中任意点列都有收敛子列).
 
 > **定义 1.6.3 ($\varepsilon$-网与完全有界集)**
->
+> 
 > 设 $A$ 是度量空间 $X$ 的子集, $\varepsilon> 0$. 若存在 $X$ 的有限子集 $\left\{x_1,\dots,x_N\right\}$, 使得 $A\subset \bigcup_{i=1}^{N}U\left(x_i,\varepsilon\right)$, 则称 $\left\{x_1,\dots,x_N\right\}$ 是 $A$ 的一个 $\varepsilon$-网. 若对每个 $\varepsilon> 0$, $A$ 都有有限的 $\varepsilon$-网, 则称 $A$ 是完全有界集.
 
 > **定理 1.6.3 (豪斯多夫定理)**
->
+> 
 > 设 $X$ 是完备的度量空间, $A\subset X$, 则 $A$ 是相对列紧集当且仅当 $A$ 是完全有界集.
 
 > **推论 1.6.3 (连续函数达到上下确界)**
->
+> 
 > 设 $X$ 是紧度量空间, $f\in C\left(X\right)$, 则 $f$ 在 $X$ 上达到上确界与下确界.
 
 > **例 1.6.3 ($\mathbb{R}^n$ 中有界集完全有界)**
->
+> 
 > 设 $A$ 是 $\mathbb{R}^n$ 中的有界集, 则 $A$ 是完全有界集.
 
 > **定义 1.6.5 (一致连续与等度连续)**
->
+> 
 > (i) 设 $f:X\to Y$ 是度量空间之间的映射. 若对每个 $\varepsilon> 0$ 存在 $\delta> 0$, 使得 $d_X\left(x_1,x_2\right)< \delta$ 蕴含 $d_Y\left(f\left(x_1\right),f\left(x_2\right)\right)< \varepsilon$, 则称 $f$ 一致连续.
->
+> 
 > (ii) 设 $X$ 是紧度量空间, $\mathscr{F}\subset C\left(X\right)$. 若对每个 $\varepsilon> 0$ 存在 $\delta> 0$, 使得对一切 $f\in\mathscr{F}$ 及 $x_1,x_2\in X$, 由 $d\left(x_1,x_2\right)< \delta$ 可推出 $\left|f\left(x_1\right)-f\left(x_2\right)\right|< \varepsilon$, 则称 $\mathscr{F}$ 是等度连续的.
 
 > **定理 1.6.5 (阿泽拉-阿斯卡里定理)**
->
+> 
 > 设 $A\subset C\left[a,b\right]$, 则 $A$ 是相对列紧集当且仅当 $A$ 是有界的且等度连续的.
 
 > **定理 1.6.7 (科尔莫戈罗夫-里斯-弗雷歇定理)**
->
+> 
 > 设 $A\subset L^{p}\left(\mathbb{R}\right)$, $1\le p< \infty$. 则 $A$ 是完全有界集当且仅当下列三条件同时成立:
->
+> 
 > (i) $A$ 是有界集;
->
+> 
 > (ii) (等度 $L^{p}$-胎紧) 对每个 $\varepsilon> 0$, 存在 $M> 0$, 使得 $\int_{\left\{\left|x\right|> M\right\}}\left|f\left(x\right)\right|^{p}\,\mathrm dm< \varepsilon^{p}$, $\forall f\in A$;
->
+> 
 > (iii) (等度 $L^{p}$-范数连续) 对每个 $\varepsilon> 0$, 存在 $\delta> 0$, 使得 $\left\|f\left(x+h\right)-f\left(x\right)\right\|_{p}\le\varepsilon$, $\forall f\in A$, $\forall \left|h\right|< \delta$.
 
 > **定理 1.6.9 (紧度量空间上的性质)**
->
+> 
 > 设 $X$ 是紧的度量空间, 则:
->
+> 
 > (i) $X$ 上的连续函数是一致连续的;
->
+> 
 > (ii) $C\left(X\right)$ 按范数 $\left\|f\right\|=\max_{x\in X}\left|f\left(x\right)\right|$ 构成巴拿赫空间;
->
+> 
 > (iii) (阿泽拉-阿斯卡里定理) $A\subset C\left(X\right)$ 是相对列紧集当且仅当 $A$ 是有界的且等度连续的.
 
 ---
