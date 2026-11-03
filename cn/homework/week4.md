@@ -1,61 +1,5 @@
 # week4
 
-> **基础知识: 闵可夫斯基不等式**
-> 
-> 设 $1\le p< \infty$, $f,g\in L^p$, 则 $\left\|f+g\right\|_p\le\left\|f\right\|_p+\left\|g\right\|_p$.
-
-> **基础知识: 闭集与补集开集**
-> 
-> 度量空间中集合 $A$ 是闭集当且仅当它的补集 $X\setminus A$ 是开集.
-
-> **基础知识: 有理数在实数中稠密**
-> 
-> 有理数集 $\mathbb Q$ 在 $\mathbb R$ 中稠密, 即对任意实数 $a< b$ 存在有理数 $r$ 使 $a< r< b$.
-
-> **基础知识: 可积函数尾积分趋于零**
-> 
-> 若 $g\in L^1\left(\mathbb R\right)$ 非负可积, 则 $\int_{\left|t\right|> N}g\left(t\right)\mathrm dt\to0$ ($N\to\infty$).
-
-> **基础知识: 稠密关系的传递性**
-> 
-> 若 $D$ 在 $E$ 中稠密且 $E$ 在 $X$ 中稠密, 则 $D$ 在 $X$ 中稠密.
-
-> **基础知识: 分片线性延拓保最大模**
-> 
-> 对定义在整数点 $\mathbb Z$ 上的有界实数列 $\left(a_n\right)_{n\in\mathbb Z}$, 在每个区间 $\left[n,n+1\right]$ 上线性连接 $\left(n,a_n\right)$ 与 $\left(n+1,a_{n+1}\right)$ 所得的分片连续函数 $f$ 满足 $\sup_{t\in\mathbb R}\left|f\left(t\right)\right|=\sup_{n\in\mathbb Z}\left|a_n\right|$.
-
-> **基础知识: 积分三角不等式**
-> 
-> 对可积复值函数 $g$, $\left|\int_E g\left(t\right)\mathrm dt\right|\le\int_E\left|g\left(t\right)\right|\mathrm dt$.
-
-> **基础知识: 勒贝格测度平移不变性**
-> 
-> 对任意可积函数 $g$ 与实数 $h$, $\int_{\mathbb R}\left|g\left(t+h\right)\right|^p\mathrm dt=\int_{\mathbb R}\left|g\left(t\right)\right|^p\mathrm dt$.
-
-> **基础知识: 紧区间上连续函数一致连续**
-> 
-> 有限闭区间上的连续函数必一致连续.
-
-> **基础知识: 弱导数定义**
-> 
-> 设 $g,h\in L_{\mathrm{loc}}^2\left(\mathbb R\right)$. 若对一切 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 成立 $\int_{\mathbb R}g\varphi'\mathrm dt=-\int_{\mathbb R}h\varphi\mathrm dt$, 则称 $h$ 是 $g$ 的弱导数, 记 $g'=h$.
-
-> **基础知识: 弱导数绝对连续**
-> 
-> 若 $g\in L_{\mathrm{loc}}^2\left(\mathbb R\right)$ 有弱导数 $h\in L^2\left(\mathbb R\right)$, 则 $g$ 绝对连续, 且 $g'=h$ 几乎处处成立.
-
-> **基础知识: 微分中值定理**
-> 
-> 若一元实函数 $F$ 在 $\left[a,b\right]$ 上连续、在 $\left(a,b\right)$ 内可导, 则存在 $\xi\in\left(a,b\right)$ 使 $F\left(b\right)-F\left(a\right)=F'\left(\xi\right)\left(b-a\right)$.
-
-> **基础知识: 微积分基本定理**
-> 
-> 对可微函数 $F$ 及 $a< b$ 有 $\int_a^bF'\left(t\right)\,\mathrm dt=F\left(b\right)-F\left(a\right)$; 特别地, 初值问题 $y'=f\left(x,y\right)$, $y\left(x_0\right)=y_0$ 等价于积分方程 $y\left(x\right)=y_0+\int_{x_0}^xf\left(t,y\left(t\right)\right)\,\mathrm dt$.
-
-> **基础知识: 绝对连续函数的常数性**
-> 
-> 若绝对连续函数 $f$ 的导数几乎处处为零, 则 $f$ 几乎处处为常数.
-
 > **定义 1.1.1 (度量空间)**
 > 
 > 设 $X$ 是一个非空集合, 若对于 $X$ 中任意两个元素 $x,y$, 有一个实数 $d\left(x,y\right)$ 与它们对应, 而且满足: (i) $d\left(x,y\right)\ge0$, $d\left(x,y\right)=0$ 当且仅当 $x=y$; (ii) $d\left(x,y\right)=d\left(y,x\right)$; (iii) $d\left(x,y\right)\le d\left(x,z\right)+d\left(z,y\right)$, 则称 $\left(X,d\right)$ 是度量空间.
@@ -376,7 +320,7 @@ $$
 
 ### 解答 1.4-5
 
-**先证 $\Rightarrow$ (上半连续蕴含 $X\left(f\ge a\right)$ 闭).** 固定常数 $a$. 依据**基础知识: 闭集与补集开集**, 要证 $X\left(f\ge a\right)$ 闭, 只须证其补集 $X\setminus X\left(f\ge a\right)$ 是开集. 任取 $x_0\notin X\left(f\ge a\right)$, 即 $f\left(x_0\right)< a$. 由上半连续定义,
+**先证 $\Rightarrow$ (上半连续蕴含 $X\left(f\ge a\right)$ 闭).** 固定常数 $a$. 依据闭集与补集开集, 要证 $X\left(f\ge a\right)$ 闭, 只须证其补集 $X\setminus X\left(f\ge a\right)$ 是开集. 任取 $x_0\notin X\left(f\ge a\right)$, 即 $f\left(x_0\right)< a$. 由上半连续定义,
 
 $$
 \lim_{r\to0}\sup_{x\in O\left(x_0,r\right)}f\left(x\right)\le f\left(x_0\right)< a.
@@ -384,7 +328,7 @@ $$
 
 由上式左端的极限严格小于 $a$, 存在 $r_0> 0$ 使 $\sup_{x\in O\left(x_0,r_0\right)}f\left(x\right)< a$, 即对一切 $x\in O\left(x_0,r_0\right)$ 有 $f\left(x\right)< a$, 故 $O\left(x_0,r_0\right)\subset X\setminus X\left(f\ge a\right)$. 依据**例 1.4.1 (开球是开集)**, $O\left(x_0,r_0\right)$ 是开集, 故 $x_0$ 是其内点 (依据**定义 1.4.1 (内点、内部与开集)**). 由于 $x_0$ 任取, $X\setminus X\left(f\ge a\right)$ 是开集, 故 $X\left(f\ge a\right)$ 是闭集.
 
-**再证 $\Leftarrow$ (水平集对一切 $a$ 闭蕴含上半连续).** 固定 $x_0\in X$. 对任意实数 $a> f\left(x_0\right)$, 因 $f\left(x_0\right)< a$, 故 $x_0\notin X\left(f\ge a\right)$. 由假设 $X\left(f\ge a\right)$ 是闭集, 依据**基础知识: 闭集与补集开集**, 其补集 $X\setminus X\left(f\ge a\right)$ 是开集; 而 $x_0$ 属于该开集, 依据**定义 1.4.1 (内点、内部与开集)**, 存在 $r_0> 0$ 使 $O\left(x_0,r_0\right)\subset X\setminus X\left(f\ge a\right)$, 即对一切 $x\in O\left(x_0,r_0\right)$ 有 $f\left(x\right)< a$, 从而
+**再证 $\Leftarrow$ (水平集对一切 $a$ 闭蕴含上半连续).** 固定 $x_0\in X$. 对任意实数 $a> f\left(x_0\right)$, 因 $f\left(x_0\right)< a$, 故 $x_0\notin X\left(f\ge a\right)$. 由假设 $X\left(f\ge a\right)$ 是闭集, 依据闭集与补集开集, 其补集 $X\setminus X\left(f\ge a\right)$ 是开集; 而 $x_0$ 属于该开集, 依据**定义 1.4.1 (内点、内部与开集)**, 存在 $r_0> 0$ 使 $O\left(x_0,r_0\right)\subset X\setminus X\left(f\ge a\right)$, 即对一切 $x\in O\left(x_0,r_0\right)$ 有 $f\left(x\right)< a$, 从而
 
 $$
 \sup_{x\in O\left(x_0,r_0\right)}f\left(x\right)\le a.
@@ -408,7 +352,7 @@ $$
 
 **第一步: 取可数稠密子集.** 因 $X$ 可分, 依据**定义 1.4.6 (可分性)**, 存在可数子集 $D=\left\{x_1,x_2,\cdots\right\}$ 在 $X$ 中稠密, 即依据**定义 1.4.5 (稠密性)**, $\overline D=X$.
 
-**第二步: 证明可数开球族构成开基.** 断言: 对任意开集 $G\subset X$ 及任意 $x\in G$, 存在 $x_n\in D$ 与正有理数 $r$ 使 $x\in O\left(x_n,r\right)\subset G$. 事实上, 由 $G$ 是开集及**定义 1.4.1 (内点、内部与开集)**, 存在 $\varepsilon> 0$ 使 $O\left(x,\varepsilon\right)\subset G$. 由 $\overline D=X$ 及 $x\in X$, $x$ 是 $D$ 的闭包中的点, 故存在 $x_n\in D$ 使 $d\left(x,x_n\right)< \frac{\varepsilon}{2}$. 依据**基础知识: 有理数在实数中稠密**, 可取有理数 $r$ 使 $d\left(x,x_n\right)< r< \frac{\varepsilon}{2}$. 对任意 $y\in O\left(x_n,r\right)$, 依据**定义 1.1.1 (度量空间)** (iii) 的三角不等式,
+**第二步: 证明可数开球族构成开基.** 断言: 对任意开集 $G\subset X$ 及任意 $x\in G$, 存在 $x_n\in D$ 与正有理数 $r$ 使 $x\in O\left(x_n,r\right)\subset G$. 事实上, 由 $G$ 是开集及**定义 1.4.1 (内点、内部与开集)**, 存在 $\varepsilon> 0$ 使 $O\left(x,\varepsilon\right)\subset G$. 由 $\overline D=X$ 及 $x\in X$, $x$ 是 $D$ 的闭包中的点, 故存在 $x_n\in D$ 使 $d\left(x,x_n\right)< \frac{\varepsilon}{2}$. 依据有理数在实数中稠密, 可取有理数 $r$ 使 $d\left(x,x_n\right)< r< \frac{\varepsilon}{2}$. 对任意 $y\in O\left(x_n,r\right)$, 依据**定义 1.1.1 (度量空间)** (iii) 的三角不等式,
 
 $$
 d\left(y,x\right)\le d\left(y,x_n\right)+d\left(x_n,x\right)< r+\frac{\varepsilon}{2}< \frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon,
@@ -440,7 +384,7 @@ $$
 
 ### 解答 1.4-9
 
-**第一步: 把 $f$ 截断为支集有界的函数.** 对 $f\in L^p\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$, 令 $f_N=f\cdot\chi_{\left[-N,N\right]}$. 因 $\left|f\right|^p\mathrm e^{-t^2}$ 非负可积, 依据**基础知识: 可积函数尾积分趋于零**,
+**第一步: 把 $f$ 截断为支集有界的函数.** 对 $f\in L^p\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$, 令 $f_N=f\cdot\chi_{\left[-N,N\right]}$. 因 $\left|f\right|^p\mathrm e^{-t^2}$ 非负可积, 依据可积函数尾积分趋于零,
 
 $$
 \left\|f-f_N\right\|_p^p=\int_{\left|t\right|> N}\left|f\left(t\right)\right|^p\mathrm e^{-t^2}\mathrm dt\to0\quad\left(N\to\infty\right).
@@ -510,7 +454,7 @@ $$
 
 则 $h$ 连续, 且 $h\left(0\right)=g\left(2\pi\right)$, $h\left(2\pi\right)=g\left(2\pi\right)$, 故 $h\left(0\right)=h\left(2\pi\right)$, 即 $h\in C_{2\pi}$. 又 $g,h$ 在 $\left[0,\eta\right]$ 上有界, 设 $\left|g\right|,\left|h\right|\le M$, 则 $\left\|g-h\right\|_p^p\le\int_0^\eta\left(2M\right)^p\mathrm dt=\left(2M\right)^p\eta$, 取 $\eta$ 足够小即得 $\left\|g-h\right\|_p< \frac{\varepsilon}{2}$. 依据**定义 1.2.2 (半范数与范数)** (iii), $\left\|f-h\right\|_p\le\left\|f-g\right\|_p+\left\|g-h\right\|_p< \varepsilon$. 依据**定义 1.4.5 (稠密性)**, $C_{2\pi}$ 在 $L^p\left[0,2\pi\right]$ 中稠密.
 
-**(ii) 第二部分: $C_{2\pi}$ 不在 $L^\infty\left[0,2\pi\right]$ 中稠密.** 因 $C_{2\pi}\subset C\left[0,2\pi\right]$, 依据**例 1.4.9 ($C$ 与 $L^{p}$ 的可分性)**, $C\left[0,2\pi\right]$ 可分; 依据**命题 1.4.1 (可分空间的子空间可分)**, 其子空间 $C_{2\pi}$ 亦可分, 即存在可数稠密子集 $D\subset C_{2\pi}$. 若 $C_{2\pi}$ 在 $L^\infty\left[0,2\pi\right]$ 中稠密, 则依据**基础知识: 稠密关系的传递性**, $D$ 在 $L^\infty\left[0,2\pi\right]$ 中稠密, 从而 $L^\infty\left[0,2\pi\right]$ 可分; 但依据**例 1.4.11 ($L^{\infty}$ 不可分)**, $L^\infty\left[0,2\pi\right]$ 不可分, 矛盾. 故 $C_{2\pi}$ 不在 $L^\infty\left[0,2\pi\right]$ 中稠密.
+**(ii) 第二部分: $C_{2\pi}$ 不在 $L^\infty\left[0,2\pi\right]$ 中稠密.** 因 $C_{2\pi}\subset C\left[0,2\pi\right]$, 依据**例 1.4.9 ($C$ 与 $L^{p}$ 的可分性)**, $C\left[0,2\pi\right]$ 可分; 依据**命题 1.4.1 (可分空间的子空间可分)**, 其子空间 $C_{2\pi}$ 亦可分, 即存在可数稠密子集 $D\subset C_{2\pi}$. 若 $C_{2\pi}$ 在 $L^\infty\left[0,2\pi\right]$ 中稠密, 则依据稠密关系的传递性, $D$ 在 $L^\infty\left[0,2\pi\right]$ 中稠密, 从而 $L^\infty\left[0,2\pi\right]$ 可分; 但依据**例 1.4.11 ($L^{\infty}$ 不可分)**, $L^\infty\left[0,2\pi\right]$ 不可分, 矛盾. 故 $C_{2\pi}$ 不在 $L^\infty\left[0,2\pi\right]$ 中稠密.
 
 **(iii) 零延拓不稠密.** 记 $Z=\left\{\widetilde f:f\in C_{2\pi}\right\}$, 其中 $\widetilde f$ 是 $f$ 零延拓到 $\left[0,4\pi\right]$ 所得, 故 $\widetilde f\equiv0$ 于 $\left(2\pi,4\pi\right]$. 取 $h=\chi_{\left[3\pi,4\pi\right]}\in L^p\left[0,4\pi\right]$. 对任意 $\widetilde f\in Z$, 因 $\widetilde f\equiv0$ 于 $\left(2\pi,4\pi\right]$,
 
@@ -544,11 +488,11 @@ $$
 
 **第二步: $C_c\left(\mathbb R\right)$ 可分.** 记 $C_c\left(\left[-n,n\right]\right)=\left\{f\in C\left[-n,n\right]:\text{支集}\subset\left[-n,n\right]\right\}$, 则 $C_c\left(\mathbb R\right)=\bigcup_{n=1}^{\infty}C_c\left(\left[-n,n\right]\right)$. 依据**例 1.4.9 ($C$ 与 $L^{p}$ 的可分性)**, $C\left[-n,n\right]$ 可分; 依据**命题 1.4.1 (可分空间的子空间可分)**, 其子空间 $C_c\left(\left[-n,n\right]\right)$ 可分. 因可数多个可分空间之并仍可分, 故 $C_c\left(\mathbb R\right)$ 可分.
 
-**第三步: 合成 $C_0\left(\mathbb R\right)$ 的可分性.** 由第一步, $C_c\left(\mathbb R\right)$ 在 $C_0\left(\mathbb R\right)$ 中稠密; 由第二步, $C_c\left(\mathbb R\right)$ 可分. 依据**基础知识: 稠密关系的传递性**, 稠密于 $C_0\left(\mathbb R\right)$ 中的可分空间 $C_c\left(\mathbb R\right)$ 的可数稠密子集也是 $C_0\left(\mathbb R\right)$ 的可数稠密子集, 故 $C_0\left(\mathbb R\right)$ 可分.
+**第三步: 合成 $C_0\left(\mathbb R\right)$ 的可分性.** 由第一步, $C_c\left(\mathbb R\right)$ 在 $C_0\left(\mathbb R\right)$ 中稠密; 由第二步, $C_c\left(\mathbb R\right)$ 可分. 依据稠密关系的传递性, 稠密于 $C_0\left(\mathbb R\right)$ 中的可分空间 $C_c\left(\mathbb R\right)$ 的可数稠密子集也是 $C_0\left(\mathbb R\right)$ 的可数稠密子集, 故 $C_0\left(\mathbb R\right)$ 可分.
 
 **(ii) $C_b\left(\mathbb R\right)$ 不可分.**
 
-**第一步: $l^\infty$ 等距嵌入 $C_b\left(\mathbb R\right)$.** 对 $a=\left(a_n\right)_{n\in\mathbb Z}\in l^\infty$, 定义 $f_a\in C_b\left(\mathbb R\right)$ 为分片线性函数: $f_a\left(n\right)=a_n$ ($n\in\mathbb Z$), 且 $f_a$ 在每个区间 $\left[n,n+1\right]$ 上为线性. 则 $f_a$ 连续且有界. 依据**基础知识: 分片线性延拓保最大模**, $\left\|f_a\right\|_\infty=\sup_{t\in\mathbb R}\left|f_a\left(t\right)\right|=\sup_{n\in\mathbb Z}\left|a_n\right|=\left\|a\right\|_{l^\infty}$, 故 $a\mapsto f_a$ 是 $l^\infty$ 到 $C_b\left(\mathbb R\right)$ 的某个子空间的等距映射.
+**第一步: $l^\infty$ 等距嵌入 $C_b\left(\mathbb R\right)$.** 对 $a=\left(a_n\right)_{n\in\mathbb Z}\in l^\infty$, 定义 $f_a\in C_b\left(\mathbb R\right)$ 为分片线性函数: $f_a\left(n\right)=a_n$ ($n\in\mathbb Z$), 且 $f_a$ 在每个区间 $\left[n,n+1\right]$ 上为线性. 则 $f_a$ 连续且有界. 依据分片线性延拓保最大模, $\left\|f_a\right\|_\infty=\sup_{t\in\mathbb R}\left|f_a\left(t\right)\right|=\sup_{n\in\mathbb Z}\left|a_n\right|=\left\|a\right\|_{l^\infty}$, 故 $a\mapsto f_a$ 是 $l^\infty$ 到 $C_b\left(\mathbb R\right)$ 的某个子空间的等距映射.
 
 **第二步: 反证推出矛盾.** 若 $C_b\left(\mathbb R\right)$ 可分, 则依据**命题 1.4.1 (可分空间的子空间可分)**, 其上述子空间 (即 $l^\infty$ 的等距像) 也可分, 从而 $l^\infty$ 可分. 但依据**例 1.4.10 ($l^{\infty}$ 不可分)**, $l^\infty$ 不可分, 矛盾. 故 $C_b\left(\mathbb R\right)$ 不可分. $\blacksquare$
 
@@ -568,7 +512,7 @@ $$
 D=\left\{\sum_{k=1}^m\left(a_k+\mathrm i b_k\right)e_k:m\ge1,\ a_k,b_k\in\mathbb Q\right\}.
 $$
 
-因 $\mathbb Q$ 可数而 $m$ 可数, 故 $D$ 可数. 对任意 $x\in H$ 与 $\varepsilon> 0$, 由 $\mathrm{span}\left\{e_n\right\}$ 在 $H$ 中稠密 (依据**定义 1.4.5 (稠密性)**), 存在有限线性组合 $y=\sum_{k=1}^m c_k e_k$ 使 $\left\|x-y\right\|< \frac{\varepsilon}{2}$. 依据**基础知识: 有理数在实数中稠密**, 可取 $c'_k=a_k+\mathrm i b_k$ ($a_k,b_k\in\mathbb Q$) 使 $\left|c_k-c'_k\right|$ 充分小, 从而
+因 $\mathbb Q$ 可数而 $m$ 可数, 故 $D$ 可数. 对任意 $x\in H$ 与 $\varepsilon> 0$, 由 $\mathrm{span}\left\{e_n\right\}$ 在 $H$ 中稠密 (依据**定义 1.4.5 (稠密性)**), 存在有限线性组合 $y=\sum_{k=1}^m c_k e_k$ 使 $\left\|x-y\right\|< \frac{\varepsilon}{2}$. 依据有理数在实数中稠密, 可取 $c'_k=a_k+\mathrm i b_k$ ($a_k,b_k\in\mathbb Q$) 使 $\left|c_k-c'_k\right|$ 充分小, 从而
 
 $$
 \left\|y-\sum_{k=1}^m c'_k e_k\right\|=\left\|\sum_{k=1}^m\left(c_k-c'_k\right)e_k\right\|\le\sum_{k=1}^m\left|c_k-c'_k\right|< \frac{\varepsilon}{2},
@@ -610,7 +554,7 @@ $$
 
 **第二步: 对阶梯函数成立.** 设 $s=\sum_{k=1}^m c_k\chi_{\left[a_k,b_k\right]}$ 是有限个区间特征函数的线性组合 (阶梯函数). 由第一步及积分关于被积函数的线性性, $\int_{\mathbb R}s\left(x\right)\mathrm e^{-\mathrm i2\pi t x}\mathrm dx=\sum_k c_k\int_{a_k}^{b_k}\mathrm e^{-\mathrm i2\pi t x}\mathrm dx\to0$ ($\left|t\right|\to\infty$).
 
-**第三步: 对一般 $f\in L^1\left(\mathbb R\right)$ 成立.** 依据**注 1.4.1 ($L^{p}$ 中的稠密子集)**, 阶梯函数全体在 $L^1\left(\mathbb R\right)$ 中稠密; 依据**定义 1.4.5 (稠密性)**, 对任意 $\varepsilon> 0$ 存在阶梯函数 $s$ 使 $\left\|f-s\right\|_1< \varepsilon$. 依据**基础知识: 积分三角不等式**,
+**第三步: 对一般 $f\in L^1\left(\mathbb R\right)$ 成立.** 依据**注 1.4.1 ($L^{p}$ 中的稠密子集)**, 阶梯函数全体在 $L^1\left(\mathbb R\right)$ 中稠密; 依据**定义 1.4.5 (稠密性)**, 对任意 $\varepsilon> 0$ 存在阶梯函数 $s$ 使 $\left\|f-s\right\|_1< \varepsilon$. 依据积分三角不等式,
 
 $$
 \left|F\left(t\right)\right|\le\int_{\mathbb R}\left|f-s\right|\mathrm dx+\left|\int_{\mathbb R}s\left(x\right)\mathrm e^{-\mathrm i2\pi t x}\mathrm dx\right|< \varepsilon+\left|\int_{\mathbb R}s\left(x\right)\mathrm e^{-\mathrm i2\pi t x}\mathrm dx\right|.
@@ -632,7 +576,7 @@ $$
 
 记平移算子 $\left(\tau_h f\right)\left(x\right)=f\left(x+h\right)$, 并记 $\left\|g\right\|_p=\left(\int_{\mathbb R}\left|g\right|^p\mathrm dx\right)^{1/p}$.
 
-**第一步: 对 $C_c^\infty$ 函数成立.** 设 $\varphi\in C_c^\infty\left(\mathbb R\right)$, 其支集含于 $\left[-M,M\right]$. 不妨设 $\left|h\right|< 1$, 则 $\varphi$ 在紧集 $\left[-M-1,M+1\right]$ 上连续; 依据**基础知识: 紧区间上连续函数一致连续**, $\varphi$ 在 $\left[-M-1,M+1\right]$ 上一致连续, 即对任意 $\varepsilon> 0$ 存在 $\delta> 0$, 当 $\left|h\right|< \delta$ 时 $\sup_x\left|\varphi\left(x+h\right)-\varphi\left(x\right)\right|< \varepsilon$. 对 $\left|h\right|< 1$, 被积函数仅在 $\left[-M-1,M+1\right]$ 上可能非零, 故
+**第一步: 对 $C_c^\infty$ 函数成立.** 设 $\varphi\in C_c^\infty\left(\mathbb R\right)$, 其支集含于 $\left[-M,M\right]$. 不妨设 $\left|h\right|< 1$, 则 $\varphi$ 在紧集 $\left[-M-1,M+1\right]$ 上连续; 依据紧区间上连续函数一致连续, $\varphi$ 在 $\left[-M-1,M+1\right]$ 上一致连续, 即对任意 $\varepsilon> 0$ 存在 $\delta> 0$, 当 $\left|h\right|< \delta$ 时 $\sup_x\left|\varphi\left(x+h\right)-\varphi\left(x\right)\right|< \varepsilon$. 对 $\left|h\right|< 1$, 被积函数仅在 $\left[-M-1,M+1\right]$ 上可能非零, 故
 
 $$
 \left\|\tau_h\varphi-\varphi\right\|_p^p=\int_{\mathbb R}\left|\varphi\left(x+h\right)-\varphi\left(x\right)\right|^p\mathrm dx\le\left(2M+2\right)\varepsilon^p\to0.
@@ -640,7 +584,7 @@ $$
 
 即 $\lim_{h\to0}\left\|\tau_h\varphi-\varphi\right\|_p=0$.
 
-**第二步: 对一般 $f\in L^p\left(\mathbb R\right)$ 成立.** 依据**注 1.4.1 ($L^{p}$ 中的稠密子集)**, $C_c^\infty\left(\mathbb R\right)$ 在 $L^p\left(\mathbb R\right)$ 中稠密; 依据**定义 1.4.5 (稠密性)**, 对任意 $\varepsilon> 0$ 存在 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 使 $\left\|f-\varphi\right\|_p< \varepsilon$. 依据**基础知识: 勒贝格测度平移不变性**, $\left\|\tau_h\left(f-\varphi\right)\right\|_p=\left\|f-\varphi\right\|_p$. 再依据**基础知识: 闵可夫斯基不等式**,
+**第二步: 对一般 $f\in L^p\left(\mathbb R\right)$ 成立.** 依据**注 1.4.1 ($L^{p}$ 中的稠密子集)**, $C_c^\infty\left(\mathbb R\right)$ 在 $L^p\left(\mathbb R\right)$ 中稠密; 依据**定义 1.4.5 (稠密性)**, 对任意 $\varepsilon> 0$ 存在 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 使 $\left\|f-\varphi\right\|_p< \varepsilon$. 依据勒贝格测度平移不变性, $\left\|\tau_h\left(f-\varphi\right)\right\|_p=\left\|f-\varphi\right\|_p$. 再依据闵可夫斯基不等式,
 
 $$
 \left\|\tau_h f-f\right\|_p\le\left\|\tau_h f-\tau_h\varphi\right\|_p+\left\|\tau_h\varphi-\varphi\right\|_p+\left\|\varphi-f\right\|_p=2\left\|f-\varphi\right\|_p+\left\|\tau_h\varphi-\varphi\right\|_p.
@@ -692,7 +636,7 @@ $$
 \left\langle f,g\right\rangle=\int_{\mathbb R}f\left(t\right)\overline{g\left(t\right)}\mathrm dt+\int_{\mathbb R}f'\left(t\right)\overline{g'\left(t\right)}\mathrm dt.
 $$
 
-由 $f,f'\in L^2\left(\mathbb R\right)$ 及 $g,g'\in L^2\left(\mathbb R\right)$, 依据**引理 1.2.3 (柯西-施瓦茨不等式)**, 上式右端两项均有限, 故 $\left\langle f,g\right\rangle$ 有限. 它显然满足**定义 1.2.3 (内积空间)** 的共轭对称性与对第一变元的线性性; 正定性方面, $\left\langle f,f\right\rangle=0$ 蕴含 $\int\left|f\right|^2=0$ 与 $\int\left|f'\right|^2=0$, 即 $f=0$ 且 $f'=0$ 几乎处处; 依据**基础知识: 绝对连续函数的常数性**, $f$ 几乎处处为常数, 而 $f\in L^2\left(\mathbb R\right)$ 迫使该常数为零, 即 $f\equiv0$. 又 $\left\langle f,f\right\rangle^{1/2}=\left\|f\right\|$, 故 $H$ 是内积空间且其范数为题给范数. 依据**定义 1.4.7 (完备性)** (iv), 只须证 $H$ 完备, 即为希尔伯特空间.
+由 $f,f'\in L^2\left(\mathbb R\right)$ 及 $g,g'\in L^2\left(\mathbb R\right)$, 依据**引理 1.2.3 (柯西-施瓦茨不等式)**, 上式右端两项均有限, 故 $\left\langle f,g\right\rangle$ 有限. 它显然满足**定义 1.2.3 (内积空间)** 的共轭对称性与对第一变元的线性性; 正定性方面, $\left\langle f,f\right\rangle=0$ 蕴含 $\int\left|f\right|^2=0$ 与 $\int\left|f'\right|^2=0$, 即 $f=0$ 且 $f'=0$ 几乎处处; 依据绝对连续函数的常数性, $f$ 几乎处处为常数, 而 $f\in L^2\left(\mathbb R\right)$ 迫使该常数为零, 即 $f\equiv0$. 又 $\left\langle f,f\right\rangle^{1/2}=\left\|f\right\|$, 故 $H$ 是内积空间且其范数为题给范数. 依据**定义 1.4.7 (完备性)** (iv), 只须证 $H$ 完备, 即为希尔伯特空间.
 
 **第二步: 把 $H$ 等距嵌入 $L^2\left(\mathbb R\right)\times L^2\left(\mathbb R\right)$.** 令乘积空间的范数为 $\left\|\left(u,v\right)\right\|=\sqrt{\left\|u\right\|_2^2+\left\|v\right\|_2^2}$. 依据**例 1.4.13 ($L^{p}\left(E\right)$ 是巴拿赫空间)**, $L^2\left(\mathbb R\right)$ 是希尔伯特空间; 依据**习题 1.2 第 13 题 (内积空间的可数直和)** (取 $R_1=R_2=L^2\left(\mathbb R\right)$), $L^2\left(\mathbb R\right)\times L^2\left(\mathbb R\right)$ 是希尔伯特空间. 作映射
 
@@ -714,7 +658,7 @@ $$
 \int_{\mathbb R}g\varphi'\mathrm dt=-\int_{\mathbb R}h\varphi\mathrm dt,\quad\forall\varphi\in C_c^\infty\left(\mathbb R\right).
 $$
 
-依据**基础知识: 弱导数定义**, $g$ 的弱导数为 $h\in L^2$. 依据**基础知识: 弱导数绝对连续**, $g$ 绝对连续且 $g'=h$ 几乎处处, 故 $g\in H$ 且 $\left(g,h\right)=T\left(g\right)\in T\left(H\right)$. 因此 $T\left(H\right)$ 是 $L^2\times L^2$ 的闭线性子空间.
+依据弱导数定义, $g$ 的弱导数为 $h\in L^2$. 依据弱导数绝对连续, $g$ 绝对连续且 $g'=h$ 几乎处处, 故 $g\in H$ 且 $\left(g,h\right)=T\left(g\right)\in T\left(H\right)$. 因此 $T\left(H\right)$ 是 $L^2\times L^2$ 的闭线性子空间.
 
 **第四步: 结论.** 由第二步, $L^2\times L^2$ 是希尔伯特空间 (完备); 由第三步, $T\left(H\right)$ 是其闭子集. 依据**引理 1.4.1 (基本点列与完备性)** (iii), 完备度量空间的闭子集是完备子空间, 故 $T\left(H\right)$ 完备. 又 $T$ 是保范线性同构: 其单射性由 $T\left(f\right)=0$ 即 $f=f'=0$ 几乎处处推出 $f\equiv0$ (同第一步), 故 $H$ 与完备空间 $T\left(H\right)$ 等距同构, 从而 $H$ 完备. 依据**定义 1.4.7 (完备性)** (iv), $H$ 是希尔伯特空间. $\blacksquare$
 
@@ -816,7 +760,7 @@ $$
 
 其中范数 $\left\|y\right\|=\max_{1\le k\le n}\max_{x\in\left[x_0-h,x_0+h\right]}\left|y_k\left(x\right)\right|$, $y_0=\left(y_1^0,\cdots,y_n^0\right)$.
 
-**第一步: 问题化为积分方程.** 依据**基础知识: 微积分基本定理**, 初值问题等价于积分方程组
+**第一步: 问题化为积分方程.** 依据微积分基本定理, 初值问题等价于积分方程组
 
 $$
 y_k\left(x\right)=y_k^0+\int_{x_0}^x f_k\left(t,y_1\left(t\right),\cdots,y_n\left(t\right)\right)\mathrm dt,\quad k=1,\cdots,n.
@@ -950,7 +894,7 @@ $$
 
 代入 $x=\overline{x}$ 并利用 $f\left(\overline{x}\right)=0$, 得 $N'\left(\overline{x}\right)=\frac{f\left(\overline{x}\right)f''\left(\overline{x}\right)}{f'\left(\overline{x}\right)^2}=0$.
 
-**第二步: 选取压缩区间.** 因 $N'$ 连续且 $N'\left(\overline{x}\right)=0$, 存在 $\delta> 0$, 使当 $\left|x-\overline{x}\right|\le\delta$ 时 $\left|N'\left(x\right)\right|\le\frac12< 1$. 对任意 $x,y\in\left[\overline{x}-\delta,\overline{x}+\delta\right]$, 依据**基础知识: 微分中值定理**, 存在 $\xi$ 介于 $x,y$ 之间使
+**第二步: 选取压缩区间.** 因 $N'$ 连续且 $N'\left(\overline{x}\right)=0$, 存在 $\delta> 0$, 使当 $\left|x-\overline{x}\right|\le\delta$ 时 $\left|N'\left(x\right)\right|\le\frac12< 1$. 对任意 $x,y\in\left[\overline{x}-\delta,\overline{x}+\delta\right]$, 依据微分中值定理, 存在 $\xi$ 介于 $x,y$ 之间使
 
 $$
 \left|N\left(x\right)-N\left(y\right)\right|=\left|N'\left(\xi\right)\right|\left|x-y\right|\le\frac12\left|x-y\right|.
