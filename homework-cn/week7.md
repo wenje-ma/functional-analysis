@@ -185,29 +185,22 @@
 ### 解答 2.1-1
 
 不一定. 反例取自**例 2.1.9 (微分算子的无界性)**: 取 $X=C^{\left(1\right)}\left[a,b\right]$ 按 $C\left[a,b\right]$ 的范数 $\left\|x\right\|=\max_{t\in\left[a,b\right]}\left|x\left(t\right)\right|$, $Y=C\left[a,b\right]$, $T=D$, 其中
+
 $$
 \left(Dx\right)\left(t\right)=\frac{\mathrm d}{\mathrm dt}x\left(t\right),\quad x\in X.
 $$
 
 先证 $\ker D$ 是 $X$ 的闭集. 由 $Dx=0$ 当且仅当 $x'$ 在 $\left[a,b\right]$ 上恒为 $0$, 而闭区间上导数恒为 $0$ 的函数是常值函数, 故
-$$
-\ker D=\left\{x\in X:\ \exists c\in\mathbb R,\ x\left(t\right)=c\ \forall t\in\left[a,b\right]\right\}.
-$$
-设 $\left\{x_n\right\}\subset\ker D$ 且 $x_n\to x$ 于 $X$ (即 $\max_t\left|x_n\left(t\right)-x\left(t\right)\right|\to0$), 并记 $x_n\equiv c_n$. 由
-$$
-\left|c_n-c_m\right|=\left\|x_n-x_m\right\|\to0\quad\left(n,m\to\infty\right)
-$$
-知 $\left\{c_n\right\}$ 是 $\mathbb R$ 中的基本点列, 由 $\mathbb R$ 完备 (**定义 1.4.7 (完备性)**) 它收敛, 记 $c=\lim_nc_n$. 于是对每个 $t\in\left[a,b\right]$,
-$$
-\left|x\left(t\right)-c\right|\le\left|x\left(t\right)-x_n\left(t\right)\right|+\left|c_n-c\right|\le\left\|x-x_n\right\|+\left|c_n-c\right|,
-$$
-令 $n\to\infty$ 得 $x\left(t\right)=c$. 故 $x\in\ker D$, 即 $\ker D$ 闭.
 
-再证 $D$ 无界. 取 $x_n\left(t\right)=\mathrm e^{-n\left(t-a\right)}$, 则 $\left\|x_n\right\|=\max_t\mathrm e^{-n\left(t-a\right)}=1$, 而 $\left(Dx_n\right)\left(t\right)=-n\mathrm e^{-n\left(t-a\right)}$, 故 $\left\|Dx_n\right\|=n$. 若 $D$ 有界, 则由**定义 2.1.2 (算子范数)** 中的 $\left\|Dx_n\right\|\le\left\|D\right\|\left\|x_n\right\|=\left\|D\right\|$ 得 $n\le\left\|D\right\|$ 对一切 $n$ 成立, 矛盾. 所以 $D$ 无界.
+$$
+\ker D=\left\{x\in X:\ \exists\ c\in\mathbb R,\ x\left(t\right)=c,\ \forall\ t\in\left[a,b\right]\right\}.
+$$
 
-综上, 零空间闭**推不出**算子有界. $\blacksquare$
+设 $\left\{x_n\right\}\subset\ker D$ 且 $x_n\to x$ 于 $X$, 则 $x_n \equiv c = x$, $\forall\ n \in \mathbb{N}$. 故 $x\in\ker D$, 即 $\ker D$ 闭. $\blacksquare$
 
-> 需要指出, 当 $Y=\mathbb K$ (即 $T$ 是线性泛函) 时这一反例不成立: 由**定理 2.2.1 (线性泛函有界 $\Leftrightarrow$ 核闭)**, 线性泛函有界当且仅当其核闭. 差别在于泛函的商空间 $X/\ker T$ 是一维的, 而一般算子的 $X/\ker T$ 可以是无限维的.
+
+
+再证 $D$ 无界. 取 $x_n\left(t\right)=\mathrm e^{-n\left(t-a\right)}$, 则 $\left\|x_n\right\|=\max_t\mathrm e^{-n\left(t-a\right)}=1$, 而 $\left(Dx_n\right)\left(t\right)=-n\mathrm e^{-n\left(t-a\right)}$, 故 $\left\|Dx_n\right\|=n$ 无界. $\blacksquare$
 
 ## 2.1-2 (稠密子空间上算子范数的双变量表示)
 
@@ -218,40 +211,28 @@ $$
 
 ### 解答 2.1-2
 
-记右端的上确界为 $S$. 分两步证明 $S=\left\|T\right\|$.
+记右端为 $S$.
 
 **第一步: $S\le\left\|T\right\|$.** 任取 $x,y\in E$ 且 $\left\|x\right\|=\left\|y\right\|=1$. 由**引理 1.2.3 (柯西-施瓦茨不等式)**,
+
 $$
 \left|\left\langle Tx,y\right\rangle\right|\le\left\|Tx\right\|\left\|y\right\|=\left\|Tx\right\|,
 $$
-再由**定义 2.1.2 (算子范数)** 中的 $\left\|Tx\right\|\le\left\|T\right\|\left\|x\right\|$ 得 $\left|\left\langle Tx,y\right\rangle\right|\le\left\|T\right\|$. 对这样的 $x,y$ 取上确界即得 $S\le\left\|T\right\|$.
+
+再由**定义 2.1.2 (算子范数)** 中的 $\left\|Tx\right\|\le\left\|T\right\|\left\|x\right\|$ 得 $\left|\left\langle Tx,y\right\rangle\right|\le\left\|T\right\|$. 对这样的 $x,y$ 取上确界即得 $S\le\left\|T\right\|$. $\blacksquare$
 
 **第二步: $S\ge\left\|T\right\|$.** 任给 $\varepsilon> 0$. 由**例 2.2.2 (算子导出的共轭双线性泛函)**, $\left\|T\right\|=\sup_{\left\|x\right\|=\left\|y\right\|=1}\left|\left\langle Tx,y\right\rangle\right|$, 故存在 $x_0,y_0\in H$ 满足 $\left\|x_0\right\|=\left\|y_0\right\|=1$ 且
+
 $$
 \left|\left\langle Tx_0,y_0\right\rangle\right|> \left\|T\right\|-\varepsilon. \tag{1}
 $$
 
-由 $E$ 在 $H$ 中稠密 (**定义 1.4.5 (稠密性)**), 存在 $\left\{x_n\right\},\left\{y_n\right\}\subset E$ 使 $\left\|x_n-x_0\right\|\to0$, $\left\|y_n-y_0\right\|\to0$. 令 $\widetilde x_n=x_n/\left\|x_n\right\|$, $\widetilde y_n=y_n/\left\|y_n\right\|$; 则 $\widetilde x_n,\widetilde y_n\in E$, $\left\|\widetilde x_n\right\|=\left\|\widetilde y_n\right\|=1$. 由
-$$
-\widetilde x_n-x_0=\frac{x_n-x_0}{\left\|x_n\right\|}+\left(\frac1{\left\|x_n\right\|}-1\right)x_0
-$$
-得
-$$
-\left\|\widetilde x_n-x_0\right\|\le\frac{\left\|x_n-x_0\right\|}{\left\|x_n\right\|}+\left|1-\left\|x_n\right\|\right|,
-$$
-而 $\left|1-\left\|x_n\right\|\right|=\left|\left\|x_0\right\|-\left\|x_n\right\|\right|\le\left\|x_0-x_n\right\|$ (用了 $\left\|x_0\right\|=1$ 与范数之差的三角不等式), 故 $\left\|\widetilde x_n-x_0\right\|\to0$; 同理 $\widetilde y_n\to y_0$.
-
-由**定理 2.1.1 (线性算子有界与连续的等价条件)**, 有界算子 $T$ 连续, 故 $T\widetilde x_n\to Tx_0$. 又由内积关于两个变元连续 (因为
-$$
-\left|\left\langle u,v\right\rangle-\left\langle u_0,v_0\right\rangle\right|\le\left\|u-u_0\right\|\left\|v\right\|+\left\|u_0\right\|\left\|v-v_0\right\|
-$$
-), 得 $\left\langle T\widetilde x_n,\widetilde y_n\right\rangle\to\left\langle Tx_0,y_0\right\rangle$. 结合 (1), 当 $n$ 充分大时 $\left|\left\langle T\widetilde x_n,\widetilde y_n\right\rangle\right|> \left\|T\right\|-\varepsilon$. 因 $\widetilde x_n,\widetilde y_n$ 是 $E$ 中的单位向量, 故 $S\ge\left\|T\right\|-\varepsilon$; 令 $\varepsilon\to0$ 得 $S\ge\left\|T\right\|$.
-
-两步合起来即 $S=\left\|T\right\|$. $\blacksquare$
+由 $E$ 在 $H$ 中稠密, 依据**定义 1.4.5 (稠密性)**, 存在 $\left\{x_n\right\},\left\{y_n\right\}\subset E$ 使 $\left\|x_n-x_0\right\|\to0$, $\left\|y_n-y_0\right\|\to0$. 令 $\widetilde x_n=x_n/\left\|x_n\right\|$, $\widetilde y_n=y_n/\left\|y_n\right\|$; 则 $\widetilde x_n,\widetilde y_n\in E$, $\left\|\widetilde x_n\right\|=\left\|\widetilde y_n\right\|=1$, 得 $\left\langle T\widetilde x_n,\widetilde y_n\right\rangle\to\left\langle Tx_0,y_0\right\rangle$. 结合 (1), 当 $n$ 充分大时 $\left|\left\langle T\widetilde x_n,\widetilde y_n\right\rangle\right|> \left\|T\right\|-\varepsilon$. 因 $\widetilde x_n,\widetilde y_n$ 是 $E$ 中的单位向量, 故左侧取上确界有 $S\ge\left\|T\right\|-\varepsilon$; 令 $\varepsilon\to0$ 得 $S\ge\left\|T\right\|$. $\blacksquare$
 
 ## 2.1-3 (矩阵算子在两种范数下的范数)
 
-在**例 2.1.1 (矩阵表示的线性算子)** 中, 如果规定向量 $x=\sum_{i=1}^{n}x_ie_i$ 的范数为 $\left\|x\right\|=\max_{1\le i\le n}\left|x_i\right|$, 求出例 2.1.1 中算子 $T$ 的范数; 如果规定向量 $x$ 的范数为 $\left\|x\right\|=\left(\sum_{i=1}^{n}\left|x_i\right|^2\right)^{\frac12}$, 证明例 2.1.1 中算子的范数满足
+在**例 2.1.1 (矩阵表示的线性算子)** 中, 如果规定向量 $x=\sum_{i=1}^{n}x_ie_i$ 的范数为 $\left\|x\right\|=\max_{1\le i\le n}\left|x_i\right|$, 求出其中算子 $T$ 的范数; 如果规定向量 $x$ 的范数为 $\left\|x\right\|=\left(\sum_{i=1}^{n}\left|x_i\right|^2\right)^{\frac12}$, 证明其中算子的范数满足
+
 $$
 \max_{1\le j\le n}\left(\sum_{i=1}^{n}\left|t_{ji}\right|^2\right)^{\frac12}\le\left\|T\right\|\le\left(\sum_{j=1}^{n}\sum_{i=1}^{n}\left|t_{ji}\right|^2\right)^{\frac12}.
 $$
@@ -260,90 +241,118 @@ $$
 
 由**例 2.1.1 (矩阵表示的线性算子)**, $Tx=y$, 其中 $\left(Tx\right)_j=y_j=\sum_{i=1}^{n}t_{ji}x_i$ ($j=1,\cdots,n$).
 
-**(1) 范数为 $\left\|x\right\|=\max_i\left|x_i\right|$ 时, $\left\|T\right\|=\max_{1\le j\le n}\sum_{i=1}^{n}\left|t_{ji}\right|$.**
+**(1) 范数为 $\left\|x\right\|=\max_i\left|x_i\right|$ 时.**
 
 上界: 对任意 $x$ 与任意 $j$,
+
 $$
 \left|\left(Tx\right)_j\right|=\left|\sum_{i=1}^{n}t_{ji}x_i\right|\le\sum_{i=1}^{n}\left|t_{ji}\right|\left|x_i\right|\le\left(\max_{1\le i\le n}\left|x_i\right|\right)\sum_{i=1}^{n}\left|t_{ji}\right|\le\left\|x\right\|\max_{1\le j\le n}\sum_{i=1}^{n}\left|t_{ji}\right|,
 $$
-对 $j$ 取最大值得 $\left\|Tx\right\|\le\left\|x\right\|\max_j\sum_i\left|t_{ji}\right|$, 故由**定义 2.1.2 (算子范数)** 有 $\left\|T\right\|\le\max_j\sum_i\left|t_{ji}\right|$.
+
+对 $j$ 取最大值得 $\left\|Tx\right\|\le\left\|x\right\|\max_j\sum_i\left|t_{ji}\right|$, 故由**定义 2.1.2 (算子范数)** 有 $\left\|T\right\|\le\max_j\sum_i\left|t_{ji}\right|$. $\blacksquare$
 
 下界: 取指标 $j_0$ 使 $\sum_{i=1}^{n}\left|t_{j_0i}\right|=\max_j\sum_i\left|t_{ji}\right|$, 并令
+
 $$
 x_i=\begin{cases}\overline{t_{j_0i}}/\left|t_{j_0i}\right|, & t_{j_0i}\neq0,\\ 1, & t_{j_0i}=0.\end{cases}
 $$
+
 则 $\left|x_i\right|=1$ ($\forall i$), 故 $\left\|x\right\|=1$, 且 $t_{j_0i}x_i=\left|t_{j_0i}\right|$, 于是 $\left(Tx\right)_{j_0}=\sum_{i=1}^{n}\left|t_{j_0i}\right|$. 因而
+
 $$
 \left\|T\right\|\ge\frac{\left\|Tx\right\|}{\left\|x\right\|}\ge\left|\left(Tx\right)_{j_0}\right|=\sum_{i=1}^{n}\left|t_{j_0i}\right|=\max_{1\le j\le n}\sum_{i=1}^{n}\left|t_{ji}\right|.
 $$
-上下界合起来即得该情形下的范数公式.
 
-**(2) 范数为 $\left\|x\right\|=\left(\sum_i\left|x_i\right|^2\right)^{\frac12}$ 时, 证明题中的双边估计.**
+$\blacksquare$
+
+> 依据范数的定义, 先看 $\|Tx\|$ 最大能放大多少, 分离出 $\|x\|$ 后得到 $\|T\|$ 的上界; 再亲自构造一套 $T$ 与 $x$ 证明此上界真的能达到.
+
+**(2) 范数为 $\left\|x\right\|=\left(\sum_i\left|x_i\right|^2\right)^{\frac12}$ 时.**
 
 上界: 对每个 $j$, 把 $\left(t_{ji}\right)_{i=1}^n$ 与 $\left(x_i\right)_{i=1}^n$ 都看作 $\mathbb C^n$ 中的向量, 由**引理 1.2.3 (柯西-施瓦茨不等式)**,
+
 $$
 \left|\left(Tx\right)_j\right|^2=\left|\sum_{i=1}^{n}t_{ji}x_i\right|^2\le\left(\sum_{i=1}^{n}\left|t_{ji}\right|^2\right)\left(\sum_{i=1}^{n}\left|x_i\right|^2\right).
 $$
+
 对 $j$ 求和得
+
 $$
 \left\|Tx\right\|^2=\sum_{j=1}^{n}\left|\left(Tx\right)_j\right|^2\le\left(\sum_{j=1}^{n}\sum_{i=1}^{n}\left|t_{ji}\right|^2\right)\left\|x\right\|^2,
 $$
-故 $\left\|T\right\|\le\left(\sum_{j}\sum_{i}\left|t_{ji}\right|^2\right)^{\frac12}$.
+
+故 $\left\|T\right\|\le\left(\sum_{j}\sum_{i}\left|t_{ji}\right|^2\right)^{\frac12}$. $\blacksquare$
 
 下界: 取指标 $j_0$ 使 $\sum_{i=1}^{n}\left|t_{j_0i}\right|^2=\max_{1\le j\le n}\sum_{i=1}^{n}\left|t_{ji}\right|^2$, 并令 $x_i=\overline{t_{j_0i}}$. 则
+
 $$
 \left\|x\right\|=\left(\sum_{i=1}^{n}\left|t_{j_0i}\right|^2\right)^{\frac12},\qquad \left(Tx\right)_{j_0}=\sum_{i=1}^{n}t_{j_0i}\overline{t_{j_0i}}=\sum_{i=1}^{n}\left|t_{j_0i}\right|^2,
 $$
+
 于是
+
 $$
-\left\|Tx\right\|\ge\left|\left(Tx\right)_{j_0}\right|=\sum_{i=1}^{n}\left|t_{j_0i}\right|^2=\left\|x\right\|\left(\sum_{i=1}^{n}\left|t_{j_0i}\right|^2\right)^{\frac12},
+\left\|Tx\right\|\ge\left|\left(Tx\right)_{j_0}\right|=\sum_{i=1}^{n}\left|t_{j_0i}\right|^2=\left\|x\right\|\left(\sum_{i=1}^{n}\left|t_{j_0i}\right|^2\right)^{\frac12}.
 $$
-即 $\left\|T\right\|\ge\left(\max_j\sum_i\left|t_{ji}\right|^2\right)^{\frac12}=\max_{1\le j\le n}\left(\sum_{i=1}^{n}\left|t_{ji}\right|^2\right)^{\frac12}$. 两边夹即得题中不等式. $\blacksquare$
+
+$\blacksquare$
 
 ## 2.1-4 ($l^{p}$ 上由矩阵给定的算子)
 
 作赋范线性空间 $l^p$ ($1< p< \infty$) 中算子 $T$ 如下: 当 $x=\left\{x_\nu\right\}\in l^p$ 时, $Tx=\left\{y_\mu\right\}$, 其中
+
+
 $$
 y_\mu=\sum_{\nu=1}^{\infty}t_{\mu\nu}x_\nu,\quad \mu=1,2,\cdots,
 $$
+
 且
+
 $$
 \sum_{\mu=1}^{\infty}\left(\sum_{\nu=1}^{\infty}\left|t_{\mu\nu}\right|^q\right)^{\frac pq}< \infty,\quad \frac1p+\frac1q=1.
 $$
+
 证明 $T$ 是 $l^p$ 上有界线性算子. 又问 $l^p$ 上有界线性算子是否都是这种形式?
 
 ### 解答 2.1-4
 
 记
+
 $$
 C=\sum_{\mu=1}^{\infty}\left(\sum_{\nu=1}^{\infty}\left|t_{\mu\nu}\right|^q\right)^{\frac pq}< \infty.
 $$
 
-**第一步: $T$ 良定义且线性.** 对每个固定的 $\mu$, 把 $\left(\left|t_{\mu\nu}\right|\right)_\nu$ 与 $\left(\left|x_\nu\right|\right)_\nu$ 分别看作 $l^q$ 与 $l^p$ 中的元素, 由赫尔德不等式 (书中的 (1.4) 式),
+**第一步: $T$ 良定义且线性.** 由 $C$ 有限可知, 对每个固定的 $\mu$, $\left(\left|t_{\mu\nu}\right|\right)_\nu$ 与 $\left(\left|x_\nu\right|\right)_\nu$ 正是 $l^q$ 与 $l^p$ 中的元素, 由赫尔德不等式,
+
 $$
 \left|y_\mu\right|\le\sum_{\nu=1}^{\infty}\left|t_{\mu\nu}\right|\left|x_\nu\right|\le\left(\sum_{\nu=1}^{\infty}\left|t_{\mu\nu}\right|^q\right)^{\frac1q}\left(\sum_{\nu=1}^{\infty}\left|x_\nu\right|^p\right)^{\frac1p}< \infty,
 $$
-故每个 $y_\mu$ 都是有限数, $Tx$ 有意义. 线性性由数项级数逐项相加与数乘的运算律直接得到.
+
+故每个 $y_\mu$ 都是有限数, $Tx$ 有意义. 线性性由数项级数逐项相加与数乘的运算律直接得到. $\blacksquare$
 
 **第二步: $T$ 有界.** 记 $c_\mu=\left(\sum_{\nu}\left|t_{\mu\nu}\right|^q\right)^{\frac1q}$, 由上一步 $\left|y_\mu\right|\le c_\mu\left\|x\right\|_p$. 于是
+
 $$
 \left\|Tx\right\|_p^p=\sum_{\mu=1}^{\infty}\left|y_\mu\right|^p\le\sum_{\mu=1}^{\infty}c_\mu^p\left\|x\right\|_p^p=C\left\|x\right\|_p^p,
 $$
-即 $\left\|Tx\right\|_p\le C^{\frac1p}\left\|x\right\|_p$; 由**定义 2.1.2 (算子范数)** 得 $\left\|T\right\|\le C^{\frac1p}< \infty$.
 
-**第三步: 第二问的回答. 在"矩阵形式"的意义上是, 但题中的求和条件不是必要的.**
+即 $\left\|Tx\right\|_p\le C^{\frac1p}\left\|x\right\|_p$; 由**定义 2.1.2 (算子范数)** 得 $\left\|T\right\|\le C^{\frac1p}< \infty$. $\blacksquare$
 
-先证每个 $l^p$ 上的有界线性算子都有矩阵形式. 设 $T\in\mathfrak B\left(l^p\right)$, 记 $e_\nu$ 为第 $\nu$ 个标准单位向量, $t_{\mu\nu}=\left(Te_\nu\right)_\mu$. 因 $\sum_{\nu> N}\left|x_\nu\right|^p\to0$, 有 $x^{\left(N\right)}=\sum_{\nu\le N}x_\nu e_\nu\to x$ ($N\to\infty$); 由**定理 2.1.1 (线性算子有界与连续的等价条件)** $T$ 连续, 故
+**第三步: 每个 $l^p$ 上的有界线性算子都有矩阵形式.** 设 $T\in\mathfrak B\left(l^p\right)$, 记 $e_\nu$ 为第 $\nu$ 个标准单位向量, $t_{\mu\nu}=\left(Te_\nu\right)_\mu$. 因 $\sum_{\nu> N}\left|x_\nu\right|^p\to0$, 有 $x^{\left(N\right)}=\sum_{\nu\le N}x_\nu e_\nu\to x$ ($N\to\infty$); 由**定理 2.1.1 (线性算子有界与连续的等价条件)** $T$ 连续, 故
+
 $$
 Tx=\lim_{N\to\infty}Tx^{\left(N\right)}=\lim_{N\to\infty}\sum_{\nu=1}^{N}x_\nu Te_\nu.
 $$
+
 又第 $\mu$ 个坐标泛函连续, 因为 $\left|y_\mu\right|^p\le\left\|y\right\|_p^p$ 给出 $\left|y_\mu\right|\le\left\|y\right\|_p$; 于是
+
 $$
 y_\mu=\left(Tx\right)_\mu=\lim_{N\to\infty}\sum_{\nu=1}^{N}x_\nu\left(Te_\nu\right)_\mu=\sum_{\nu=1}^{\infty}t_{\mu\nu}x_\nu,
 $$
-即 $T$ 由矩阵 $\left(t_{\mu\nu}\right)$ 按题中的方式给出.
 
-再指出条件是充分的而非必要的. 取恒等算子 $T=I$, 其矩阵为 $t_{\mu\nu}=\delta_{\mu\nu}$, 此时 $\sum_{\nu}\left|t_{\mu\nu}\right|^q=1$, 从而 $\sum_{\mu}\left(\sum_{\nu}\left|t_{\mu\nu}\right|^q\right)^{\frac pq}=\sum_{\mu}1=\infty$. 可见恒等算子虽是 $l^p$ 上的有界线性算子, 却不满足题设的求和条件; 该条件只是 $T$ 有界的一个充分条件. $\blacksquare$
+$\blacksquare$
+
+**第四步: 求和条件不一定都满足.** 取恒等算子 $T=I$, 其矩阵为 $t_{\mu\nu}=\delta_{\mu\nu}$, 此时 $\sum_{\nu}\left|t_{\mu\nu}\right|^q=1$, 从而 $\sum_{\mu}\left(\sum_{\nu}\left|t_{\mu\nu}\right|^q\right)^{\frac pq}=\sum_{\mu}1=\infty$. $\blacksquare$
 
 ## 2.1-5 (积分算子的范数)
 
