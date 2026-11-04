@@ -1,15 +1,5 @@
 # week5
 
-$$F\left(y_1\right)-F\left(y_2\right)=\left(\int_0^{1}DF\left(y_2+t\left(y_1-y_2\right)\right)\,\mathrm dt\right)\left(y_1-y_2\right).$$
-
-> **例 1.2.8 ($L^{p}$ 是巴拿赫空间)**
-> 
-> 设 $1\le p< \infty$, 则 $L^{p}\left(\mathbb{R}\right)$ 按范数 $\left\|f\right\|_{p}=\left(\int_{\mathbb{R}}\left|f\right|^{p}\,\mathrm dm\right)^{1/p}$ 是巴拿赫空间.
-
-> **例 1.2.12 ($C\left[a,b\right]$ 是巴拿赫空间)**
-> 
-> 设 $\left[a,b\right]$ 是有限闭区间, 则 $C\left[a,b\right]$ 按范数 $\left\|f\right\|=\max_{x\in\left[a,b\right]}\left|f\left(x\right)\right|$ 是巴拿赫空间.
-
 > **引理 1.4.1 (基本点列与完备性)**
 > 
 > 设 $X$ 是度量空间, 则:
@@ -24,29 +14,13 @@ $$F\left(y_1\right)-F\left(y_2\right)=\left(\int_0^{1}DF\left(y_2+t\left(y_1-y_2
 > 
 > 设 $f\in L^{p}\left(\mathbb{R}\right)$, $1\le p< \infty$, 则 $\lim_{h\to0}\left(\int_{\mathbb{R}}\left|f\left(x+h\right)-f\left(x\right)\right|^{p}\,\mathrm dm\right)^{1/p}=0$.
 
-> **定义 1.5.1 (不动点)**
-> 
-> 设 $T$ 是集合 $X$ 到自身的映射. 若存在 $x\in X$ 使得 $Tx=x$, 则称 $x$ 是 $T$ 的不动点.
-
 > **定理 1.5.1 (巴拿赫不动点定理)**
 > 
 > 设 $X$ 是完备的度量空间, $T:X\to X$ 是压缩映射, 则 $T$ 在 $X$ 中存在唯一的不动点 $x$; 且对任意的 $x_0\in X$, 迭代序列 $x_n=T^{n}x_0$ 收敛于 $x$, 误差估计 $d\left(x_n,x\right)\le \frac{\theta^{n}}{1-\theta}d\left(x_0,Tx_0\right)$.
 
-> **定义 1.5.2 (压缩映射)**
-> 
-> 设 $X$ 是度量空间, $T:X\to X$. 若存在 $0< \theta< 1$, 使得 $d\left(Tx,Ty\right)\le \theta d\left(x,y\right)$ ($\forall x,y\in X$), 则称 $T$ 是 $X$ 上的压缩映射, $\theta$ 称为压缩系数.
-
-> **定义 1.6.1 (相对列紧集)**
-> 
-> 设 $A$ 是度量空间 $X$ 的子集. 若 $A$ 的闭包 $\overline{A}$ 是紧集, 则称 $A$ 是相对列紧集.
-
 > **推论 1.6.1 (相对列紧集可分且有界)**
 > 
 > 相对列紧集是可分的有界集.
-
-> **例 1.6.1 (有限维空间中相对列紧 $\Leftrightarrow$ 有界)**
-> 
-> 在有限维赋范线性空间 (特别地 $\mathbb{R}^n$) 中, $A$ 是相对列紧集当且仅当 $A$ 是有界集.
 
 > **注 1.6.1 (网中的点不必属于集合本身)**
 > 
@@ -71,12 +45,6 @@ $$F\left(y_1\right)-F\left(y_2\right)=\left(\int_0^{1}DF\left(y_2+t\left(y_1-y_2
 > **例 1.6.3 ($\mathbb{R}^n$ 中有界集完全有界)**
 > 
 > 设 $A$ 是 $\mathbb{R}^n$ 中的有界集, 则 $A$ 是完全有界集.
-
-> **定义 1.6.5 (一致连续与等度连续)**
-> 
-> (i) 设 $f:X\to Y$ 是度量空间之间的映射. 若对每个 $\varepsilon> 0$ 存在 $\delta> 0$, 使得 $d_X\left(x_1,x_2\right)< \delta$ 蕴含 $d_Y\left(f\left(x_1\right),f\left(x_2\right)\right)< \varepsilon$, 则称 $f$ 一致连续.
-> 
-> (ii) 设 $X$ 是紧度量空间, $\mathscr{F}\subset C\left(X\right)$. 若对每个 $\varepsilon> 0$ 存在 $\delta> 0$, 使得对一切 $f\in\mathscr{F}$ 及 $x_1,x_2\in X$, 由 $d\left(x_1,x_2\right)< \delta$ 可推出 $\left|f\left(x_1\right)-f\left(x_2\right)\right|< \varepsilon$, 则称 $\mathscr{F}$ 是等度连续的.
 
 > **定理 1.6.5 (阿泽拉-阿斯卡里定理)**
 > 
