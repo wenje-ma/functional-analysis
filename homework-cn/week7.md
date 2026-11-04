@@ -104,7 +104,7 @@
 > \left\|Tx\right\|\le\left\|T\right\|\left\|x\right\|,\quad \forall x\in X.
 > $$
 
-> **例 2.2.1 (线性泛函的核, 此处只列 (iv))**
+> **例 2.2.1 (线性泛函的核 (iv))**
 > 
 > 设 $1\le q\le\infty$, $\frac1q+\frac1p=1$. 对于 $\varphi\in L^q\left[a,b\right]$, 令
 > 
@@ -178,8 +178,6 @@
 > 
 > 那么 $\varphi$ 是有界的, 且 $\left\|\varphi\right\|\le c$.
 
----
-
 ## 2.1-1 (零空间闭并不蕴含算子有界)
 
 设 $T$ 是赋范线性空间 $X$ 到赋范线性空间 $Y$ 的线性算子. 如果零空间 $\ker\left(T\right)=\left\{x:Tx=0\right\}$ 是闭集, 问 $T$ 是否有界?
@@ -210,8 +208,6 @@ $$
 综上, 零空间闭**推不出**算子有界. $\blacksquare$
 
 > 需要指出, 当 $Y=\mathbb K$ (即 $T$ 是线性泛函) 时这一反例不成立: 由**定理 2.2.1 (线性泛函有界 $\Leftrightarrow$ 核闭)**, 线性泛函有界当且仅当其核闭. 差别在于泛函的商空间 $X/\ker T$ 是一维的, 而一般算子的 $X/\ker T$ 可以是无限维的.
-
----
 
 ## 2.1-2 (稠密子空间上算子范数的双变量表示)
 
@@ -252,8 +248,6 @@ $$
 ), 得 $\left\langle T\widetilde x_n,\widetilde y_n\right\rangle\to\left\langle Tx_0,y_0\right\rangle$. 结合 (1), 当 $n$ 充分大时 $\left|\left\langle T\widetilde x_n,\widetilde y_n\right\rangle\right|> \left\|T\right\|-\varepsilon$. 因 $\widetilde x_n,\widetilde y_n$ 是 $E$ 中的单位向量, 故 $S\ge\left\|T\right\|-\varepsilon$; 令 $\varepsilon\to0$ 得 $S\ge\left\|T\right\|$.
 
 两步合起来即 $S=\left\|T\right\|$. $\blacksquare$
-
----
 
 ## 2.1-3 (矩阵算子在两种范数下的范数)
 
@@ -306,8 +300,6 @@ $$
 $$
 即 $\left\|T\right\|\ge\left(\max_j\sum_i\left|t_{ji}\right|^2\right)^{\frac12}=\max_{1\le j\le n}\left(\sum_{i=1}^{n}\left|t_{ji}\right|^2\right)^{\frac12}$. 两边夹即得题中不等式. $\blacksquare$
 
----
-
 ## 2.1-4 ($l^{p}$ 上由矩阵给定的算子)
 
 作赋范线性空间 $l^p$ ($1< p< \infty$) 中算子 $T$ 如下: 当 $x=\left\{x_\nu\right\}\in l^p$ 时, $Tx=\left\{y_\mu\right\}$, 其中
@@ -353,8 +345,6 @@ $$
 
 再指出条件是充分的而非必要的. 取恒等算子 $T=I$, 其矩阵为 $t_{\mu\nu}=\delta_{\mu\nu}$, 此时 $\sum_{\nu}\left|t_{\mu\nu}\right|^q=1$, 从而 $\sum_{\mu}\left(\sum_{\nu}\left|t_{\mu\nu}\right|^q\right)^{\frac pq}=\sum_{\mu}1=\infty$. 可见恒等算子虽是 $l^p$ 上的有界线性算子, 却不满足题设的求和条件; 该条件只是 $T$ 有界的一个充分条件. $\blacksquare$
 
----
-
 ## 2.1-5 (积分算子的范数)
 
 $T$ 是 $C\left[a,b\right]$ 到自身的积分算子:
@@ -398,8 +388,6 @@ $$
 
 结合上界与下界, $\left\|T\right\|=M$. $\blacksquare$
 
----
-
 ## 2.1-6 (微分算子的范数)
 
 证明 $\frac{\mathrm d}{\mathrm dx}$ 是 $C^{\left(k\right)}\left[a,b\right]$ ($k\ge1$) 到 $C\left[a,b\right]$ 的连续线性算子, 并求出它的范数. 其中 $C^{\left(k\right)}\left[a,b\right]$ 是区间 $\left[a,b\right]$ 中具有连续的 $k$ 阶导函数的函数全体, 以
@@ -423,8 +411,6 @@ $$
 \left\|Tx\right\|=\max_{t\in\left[a,b\right]}\left|\cos\left(t-a\right)\right|=1,
 $$
 故 $\left\|T\right\|\ge1$. 结合 $\left\|T\right\|\le1$ 得 $\left\|T\right\|=1$. $\blacksquare$
-
----
 
 ## 2.1-7 (一致有界算子列在稠密子空间上收敛则可延拓)
 
@@ -456,8 +442,6 @@ $$
 \left\|T_nx-Tx\right\|\le2M\left\|x-z\right\|+\left\|T_nz-Tz\right\|< \varepsilon.
 $$
 故 $\lim_{n\to\infty}\left\|T_nx-Tx\right\|=0$. $\blacksquare$
-
----
 
 ## 2.1-8 (阶梯函数的傅里叶变换与 $L^{2}$ 上的等距延拓)
 
@@ -511,8 +495,6 @@ $$
 其二, 它保范, 即帕塞瓦尔等式 $\left\|\widehat f\right\|_2=\left\|f\right\|_2$ 对一切 $f\in L^2\left(\mathbb R\right)$ 成立 (或言之, 延拓后的 $\mathcal F$ 是 $L^2$ 上的等距算子);
 其三, 它与逼近列的选取无关, 且对 $f\notin L^1\left(\mathbb R\right)$ 也有意义. 后者是关键: 当 $f\in L^2$ 但 $f\notin L^1$ 时, (2.3) 式的积分未必绝对收敛, 而上述 $L^2$ 极限总存在. 由 $L^2$ 收敛可再取连续代表 (必要时逐次抽取子列使其几乎处处收敛), 于是 $\widehat f$ 亦可理解为一个连续函数 (在 $L^2$ 等价类意义下). $\blacksquare$
 
----
-
 ## 2.2-1 ($L^{q}$ 诱导的有界线性泛函的范数)
 
 对**例 2.2.1 (线性泛函的核, 此处只列 (iv))**, 证明 $\left\|F_\varphi\right\|=\left\|\varphi\right\|_q$.
@@ -565,8 +547,6 @@ $$
 
 三种情形都给出 $\left\|F_\varphi\right\|=\left\|\varphi\right\|_q$. $\blacksquare$
 
----
-
 ## 2.2-3 (零集包含关系给出线性泛函的线性组合)
 
 对线性空间 $L$ 上的线性泛函 $f,f_1,f_2,\cdots,f_n$, 假设由 $f_1\left(x\right)=0, f_2\left(x\right)=0,\cdots,f_n\left(x\right)=0$ 可推得 $f\left(x\right)=0$. 证明: 存在常数 $a_1,a_2,\cdots,a_n$, 使得 $f=\sum_{k=1}^na_kf_k$.
@@ -595,8 +575,6 @@ $$
 f\left(x\right)=g\left(\Lambda x\right)=\widetilde g\left(\Lambda x\right)=\sum_{k=1}^{n}a_k\left(\Lambda x\right)_k=\sum_{k=1}^{n}a_kf_k\left(x\right),
 $$
 即 $f=\sum_{k=1}^{n}a_kf_k$. $\blacksquare$
-
----
 
 ## 2.2-4 ($\left(l^{1}\right)^{*}=l^{\infty}$)
 
@@ -630,8 +608,6 @@ $$
 故 $f=f_\eta$, 从而由第一步 $\left\|f\right\|=\left\|\eta\right\|_\infty$.
 
 **第三步: 得到同构.** 记 $\Phi:l^\infty\to\left(l^1\right)^*$, $\Phi\left(\eta\right)=f_\eta$. 由第一、二步, $\Phi$ 是线性双射且保范, 由**定义 2.2.2 (保范算子与同构)** 它是 $l^\infty$ 到 $\left(l^1\right)^*$ 上的保范同构映射, 故 $\left(l^1\right)^*=l^\infty$. $\blacksquare$
-
----
 
 ## 2.2-7 (多项式在加权 $L^{2}$ 空间中稠密)
 
@@ -680,8 +656,6 @@ $$
 
 > 说明. **例 1.3.9** 把 $\psi_n$ 说成 $L^2\left(\mathbb R,\mathrm e^{-x^2}\mathrm dm\right)$ 中的完备标准正交系; 按上面的直接计算, 它们关于勒贝格测度标准正交, 而"关于权 $\mathrm e^{-t^2}$ 正交"的是多项式族 $H_n$ 本身. 本解答按"$\psi_n$ 为 $L^2\left(\mathbb R,\mathrm dm\right)$ 的完备标准正交系"这一理解使用该例, 结论不受影响.
 
----
-
 ## 2.2-9 (共轭双线性泛函有界 $\Leftrightarrow$ 二元连续)
 
 证明: 希尔伯特空间 $H$ 上共轭双线性泛函 $\varphi\left(\cdot,\cdot\right)$ 有界的充要条件是 $\varphi$ 是 $H$ 上二元连续函数 (即当 $x_n\to0$, $y_n\to0$ 时, $\varphi\left(x_n,y_n\right)\to0$).
@@ -713,8 +687,6 @@ $$
 \varphi\left(x,y\right)-\varphi\left(x_0,y_0\right)=\varphi\left(x-x_0,y\right)+\varphi\left(x_0,y-y_0\right),
 $$
 故若 $\left(x_n,y_n\right)\to\left(x_0,y_0\right)$, 则 $\varphi\left(x_n,y_n\right)\to\varphi\left(x_0,y_0\right)$ 当且仅当 $\varphi\left(x-x_0,y\right)\to0$ 与 $\varphi\left(x_0,y-y_0\right)\to0$; 因此在一点连续等价于在 $\left(0,0\right)$ 处按题中方式连续. $\blacksquare$
-
----
 
 ## 2.2-10 (实空间上仅控制对角项不足以得到有界性)
 
@@ -755,8 +727,6 @@ $$
 > \varphi\left(x,y\right)=\frac14\left(\varphi\left(x+y,x+y\right)-\varphi\left(x-y,x-y\right)\right)
 > $$
 > 得 $\left|\varphi\left(x,y\right)\right|\le\frac c4\left(\left\|x+y\right\|^2+\left\|x-y\right\|^2\right)\le\frac c2\left(\left\|x\right\|^2+\left\|y\right\|^2\right)$, 其中 $c=\sup_{\left\|z\right\|=1}\left|\varphi\left(z,z\right)\right|$, 故有界. 这正是**定理 2.2.6 (埃尔米特泛函的有界性)** 的论证 (对实空间同样适用); 可见本题的"有界性"完全依赖对称性, 没有对称性时反例是本质的.
-
----
 
 ## 2.2-12 (拉克斯-米尔格拉姆定理)
 

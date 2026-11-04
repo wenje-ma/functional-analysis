@@ -198,8 +198,6 @@
 > 
 > 度量空间 $X$ 的紧子集 $K$ 上的连续函数 $f$ 有界, 且上、下确界在 $K$ 上达到.
 
----
-
 ## 1.4.2 (定理: 有限维赋范线性空间与 $\mathbb R^{n}$ 的等价)
 
 设 $X$ 是 $n$ 维赋范线性空间 (数域为 $\mathbb R$), 证明 $X$ 与 $\mathbb R^n$ 在范数意义下等价.
@@ -257,8 +255,6 @@ $$
 
 该不等式对 $\left(x_i\right)=0$ 也平凡成立. 故 $X$ 上的范数与 $\mathbb R^n$ 上的欧几里得范数互相控制, 即二者在范数意义下等价. $\blacksquare$
 
----
-
 ## 1.4-2 (闭集的递减开集邻域列)
 
 设 $B$ 是度量空间中的闭集, 证明存在一个递减开集列 $\left\{O_1,O_2,\cdots,O_n,\cdots\right\}$, 使得每个 $O_n$ 包含 $B$ 且 $\bigcap_{n=1}^{\infty}O_n=B$.
@@ -278,8 +274,6 @@ $$
 **第三步: 证明 $\bigcap_n O_n\subset B$.** 设 $x\in\bigcap_{n=1}^{\infty}O_n$, 则 $d\left(x,B\right)< \frac1n$ 对一切 $n$ 成立, 令 $n\to\infty$ 得 $d\left(x,B\right)=0$. 由下确界定义, 对每个 $n$ 存在 $z_n\in B$ 使 $d\left(x,z_n\right)< \frac1n$, 故 $z_n\to x$. 依据**定义 1.4.3 (极限点、导集、闭包与闭集)**, $x$ 是 $B$ 的极限点, 故 $x\in B'$. 又 $B$ 是闭集, 依据**定义 1.4.3 (极限点、导集、闭包与闭集)** (iii), 闭集满足 $B'\subset B$, 故 $x\in B$. 于是 $\bigcap_n O_n\subset B$.
 
 综合第二步与第三步, $B\subset\bigcap_n O_n\subset B$, 故 $\bigcap_{n=1}^{\infty}O_n=B$. $\blacksquare$
-
----
 
 ## 1.4-4 (两不相交集合的分离开集)
 
@@ -305,8 +299,6 @@ $$
 但 $y\in E$, $z\in F$, 故 $\delta=\inf_{u\in E,v\in F}d\left(u,v\right)\le d\left(y,z\right)$, 这与 $d\left(y,z\right)< \delta$ 矛盾. 故 $O\cap G=\varnothing$.
 
 于是 $O,G$ 是分别包含 $E,F$ 的两个互不相交的开集. $\blacksquare$
-
----
 
 ## 1.4-5 (上半连续与水平集闭)
 
@@ -342,8 +334,6 @@ $$
 
 上式对一切 $a> f\left(x_0\right)$ 成立, 令 $a\downarrow f\left(x_0\right)$ 得 $\lim_{r\to0}\sup_{x\in O\left(x_0,r\right)}f\left(x\right)\le f\left(x_0\right)$, 这正是 $f$ 在 $x_0$ 处上半连续. 由 $x_0$ 任取, $f$ 在 $X$ 上上半连续. $\blacksquare$
 
----
-
 ## 1.4-7 (可分空间开覆盖有可列子覆盖)
 
 设 $X$ 是可分的度量空间, $A\subset X$, $\left\{O_\lambda:\lambda\in\Lambda\right\}$ 是 $A$ 的开覆盖. 证明: 可从 $\left\{O_\lambda:\lambda\in\Lambda\right\}$ 中选出至多可列个开集 $\left\{O_{\lambda_n}\right\}$, 使得 $\bigcup_n O_{\lambda_n}\supset A$.
@@ -369,8 +359,6 @@ $$
 因 $\mathbb N$ 与 $\mathbb Q$ 皆可数, 故 $\mathscr B$ 可数. 对每个 $B\in\mathscr B$, 若存在 $\lambda\in\Lambda$ 使 $B\subset O_\lambda$ 且 $B\cap A\ne\varnothing$, 则任取一个这样的 $\lambda$, 记为 $\lambda_B$. 令 $\mathscr B'=\left\{B\in\mathscr B:\text{存在这样的 }\lambda_B\right\}$, 则 $\left\{O_{\lambda_B}:B\in\mathscr B'\right\}$ 是至多可列集.
 
 对任意 $x\in A$, 因 $\left\{O_\lambda\right\}$ 覆盖 $A$, 存在 $\lambda$ 使 $x\in O_\lambda$, 且 $O_\lambda$ 是开集. 由第二步, 存在 $B=O\left(x_n,r\right)\in\mathscr B$ 使 $x\in B\subset O_\lambda$, 且 $B\cap A\ni x\ne\varnothing$, 故 $B\in\mathscr B'$ 且 $x\in B\subset O_{\lambda_B}$. 因此 $\bigcup_{B\in\mathscr B'}O_{\lambda_B}\supset A$, 即从原开覆盖中选出了至多可列个开集覆盖 $A$. $\blacksquare$
-
----
 
 ## 1.4-9 ($C_{c}^{\infty}$ 在加权 $L^{p}$ 中稠密)
 
@@ -413,8 +401,6 @@ $$
 故对任意 $f$ 与 $\varepsilon> 0$, 存在 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 使 $\left\|f-\varphi\right\|_p< \varepsilon$, 依据**定义 1.4.5 (稠密性)**, $C_c^\infty\left(\mathbb R\right)$ 在 $L^p\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$ 中稠密.
 
 **关于多项式全体:** 多项式全体也是稠密集. 依据**例 1.3.9 (埃尔米特多项式构成完备正交系)**, 埃尔米特多项式族关于权 $\mathrm e^{-t^2}$ 正交且完备, 因而它在 $L^2\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$ 中按该范数张成的闭包为全空间, 故多项式全体在 $L^2\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$ 中稠密; 对一般 $1\le p< \infty$ 亦然. $\blacksquare$
-
----
 
 ## 1.4-10 ($C_{2\pi}$ 中的稠密性)
 
@@ -464,8 +450,6 @@ $$
 
 故 $\left\|h-\widetilde f\right\|_p\ge\pi^{1/p}> 0$ 对一切 $\widetilde f\in Z$ 成立, 即 $h$ 不在 $Z$ 的闭包中. 依据**定义 1.4.5 (稠密性)**, $Z$ 在 $L^p\left[0,4\pi\right]$ 中不稠密. $\blacksquare$
 
----
-
 ## 1.4-12 ($C_{0}$ 可分而 $C_{b}$ 不可分)
 
 令 $C_b\left(\mathbb R\right)$ 为 $\mathbb R$ 上有界的连续函数全体构成的巴拿赫空间, 它的范数 $\left\|x\right\|=\sup_{t\in\mathbb R}\left|x\left(t\right)\right|$. 令 $C_0\left(\mathbb R\right)=\left\{f\in C_b\left(\mathbb R\right):\lim_{t\to\pm\infty}x\left(t\right)=0\right\}$ 为 $C_b\left(\mathbb R\right)$ 的线性子空间. 证明:
@@ -498,8 +482,6 @@ $$
 
 > $C_b\left(\mathbb R\right)$ 相较于 $C_0\left(\mathbb R\right)$, 放宽了边界条件, 这导致了 $C_b\left(\mathbb R\right)$ 中可以嵌入任意有界的数列, 从而导致其不可分; 反观 $C_0\left(\mathbb R\right)$ 中当然嵌入不进去.
 
----
-
 ## 1.4-13 (希尔伯特空间可分等价于可数正交基)
 
 设 $H$ 是希尔伯特空间, 证明 $H$ 可分等价于 $H$ 存在一组可数的正交基.
@@ -529,8 +511,6 @@ $$
 $$
 
 这与 $\left\|e_\lambda-e_\mu\right\|=\sqrt2$ 矛盾. 故 $\Lambda$ 单射入可数集 $\mathbb N$, 从而 $\Lambda$ 可数, 即 $H$ 存在一组可数 (标准) 正交基. $\blacksquare$
-
----
 
 ## 1.4-14 (傅里叶变换的黎曼-勒贝格引理)
 
@@ -562,8 +542,6 @@ $$
 
 由第二步, 右端第二项当 $\left|t\right|\to\infty$ 时趋于 $0$, 故 $\limsup_{\left|t\right|\to\infty}\left|F\left(t\right)\right|\le\varepsilon$. 因 $\varepsilon> 0$ 任意, 令 $\varepsilon\to0$ 得 $\lim_{\left|t\right|\to\infty}\left|F\left(t\right)\right|=0$, 即 $\lim_{\left|t\right|\to\infty}\int_{\mathbb R}f\left(x\right)\mathrm e^{-\mathrm i2\pi t x}\mathrm dx=0$. $\blacksquare$
 
----
-
 ## 1.4-15 (平均连续性)
 
 对 $f\in L^p\left(\mathbb R\right)$, $1\le p< \infty$, 证明:
@@ -592,8 +570,6 @@ $$
 
 令 $h\to0$, 由第一步 $\lim_{h\to0}\left\|\tau_h\varphi-\varphi\right\|_p=0$, 故 $\limsup_{\left|h\right|\to0}\left\|\tau_h f-f\right\|_p\le2\varepsilon$. 因 $\varepsilon> 0$ 任意, 令 $\varepsilon\to0$ 得 $\lim_{\left|h\right|\to0}\left\|\tau_h f-f\right\|_p=0$, 即 $\lim_{\left|h\right|\to0}\int_{\mathbb R}\left|f\left(x+h\right)-f\left(x\right)\right|^p\mathrm dx=0$. $\blacksquare$
 
----
-
 ## 1.4-16 (完备性等价于绝对收敛级数收敛)
 
 对赋范线性空间 $X$, 证明: $X$ 是完备的当且仅当对任意 $X$ 中点列 $\left\{x_n\right\}$, 当 $\sum_{n=1}^{\infty}\left\|x_n\right\|< \infty$ 时, $\sum_{n=1}^{\infty}x_n$ 在 $X$ 中收敛.
@@ -615,8 +591,6 @@ $$
 $$
 
 令 $z_1=y_{n_1}$, $z_k=y_{n_k}-y_{n_{k-1}}$ ($k\ge2$), 则 $\sum_{k=1}^{\infty}\left\|z_k\right\|\le\left\|y_{n_1}\right\|+\sum_{k=1}^{\infty}\frac1{2^k}< \infty$ (几何级数收敛). 由题设条件, 级数 $\sum_{k=1}^{\infty}z_k$ 在 $X$ 中收敛; 而其部分和恰为 $\sum_{k=1}^m z_k=y_{n_m}$, 故子列 $\left\{y_{n_m}\right\}$ 收敛于某点 $x\in X$. 依据**引理 1.4.1 (基本点列与完备性)** (ii), 基本点列若有收敛子列则自身收敛于同一极限, 故 $\left\{y_n\right\}$ 收敛于 $x$. 由 $\left\{y_n\right\}$ 任取, $X$ 中每个基本点列都收敛, 依据**定义 1.4.7 (完备性)** (ii), $X$ 完备. $\blacksquare$
-
----
 
 ## 1.4-18 (索伯列夫型空间 $H$ 是希尔伯特空间)
 
@@ -661,8 +635,6 @@ $$
 依据弱导数定义, $g$ 的弱导数为 $h\in L^2$. 依据弱导数绝对连续, $g$ 绝对连续且 $g'=h$ 几乎处处, 故 $g\in H$ 且 $\left(g,h\right)=T\left(g\right)\in T\left(H\right)$. 因此 $T\left(H\right)$ 是 $L^2\times L^2$ 的闭线性子空间.
 
 **第四步: 结论.** 由第二步, $L^2\times L^2$ 是希尔伯特空间 (完备); 由第三步, $T\left(H\right)$ 是其闭子集. 依据**引理 1.4.1 (基本点列与完备性)** (iii), 完备度量空间的闭子集是完备子空间, 故 $T\left(H\right)$ 完备. 又 $T$ 是保范线性同构: 其单射性由 $T\left(f\right)=0$ 即 $f=f'=0$ 几乎处处推出 $f\equiv0$ (同第一步), 故 $H$ 与完备空间 $T\left(H\right)$ 等距同构, 从而 $H$ 完备. 依据**定义 1.4.7 (完备性)** (iv), $H$ 是希尔伯特空间. $\blacksquare$
-
----
 
 ## 1.5-2 ($\alpha_{n}$ 条件下的迭代收敛)
 
@@ -723,8 +695,6 @@ d\left(x^*,\varphi^{Nk}\left(x_0\right)\right)\le\frac{\alpha_N^k}{1-\alpha_N}d\
 $$
 
 故 $\left\{\varphi^{Nk}\left(x_0\right)\right\}$ 即是一种收敛于准确解 $\varphi\left(x\right)=x$ 的迭代程序, 其 $k$ 次近似与准确解的逼近程度由上式给出. $\blacksquare$
-
----
 
 ## 1.5-4 (常微分方程组解的存在唯一性)
 
@@ -788,8 +758,6 @@ $$
 
 **第三步: 应用不动点原理.** 由**例 1.2.12 ($C\left[a,b\right]$ 是巴拿赫空间)**, $C\left(\left[x_0-h,x_0+h\right],\mathbb R^n\right)$ 按最大范数是完备的; 而 $C_D$ 由闭条件 $\left|y_k\left(x\right)-y_k^0\right|\le\lambda$ 与 $y\left(x_0\right)=y_0$ 定义, 是该巴拿赫空间的闭子集. 依据**引理 1.4.1 (基本点列与完备性)** (iii), $C_D$ 是完备度量空间. 依据**定理 1.5.1 (巴拿赫不动点定理)**, $A$ 在 $C_D$ 中有唯一不动点 $y$, 即 $Ay=y$. 由第一步, 该 $y$ 满足积分方程组, 从而是初值问题的解; 唯一性亦由不动点唯一性得到. $\blacksquare$
 
----
-
 ## 1.5-5 (开球内压缩的不动点)
 
 设从完备度量空间 $X$ 到自身的映射 $T$ 满足如下条件: 在开球 $O\left(x_0,r\right)$ ($r> 0$) 内成立
@@ -840,8 +808,6 @@ $$
 
 **第三步: 应用不动点原理.** $B\left(x_0,r\right)$ 是完备空间 $X$ 的闭子集 (依据**例 1.4.2 (闭球是闭集)**), 依据**引理 1.4.1 (基本点列与完备性)** (iii), $B\left(x_0,r\right)$ 完备; 由第一步, $T$ 把它映入自身. 依据**定理 1.5.1 (巴拿赫不动点定理)**, $T$ 在 $B\left(x_0,r\right)$ 内有唯一不动点, 即唯一性成立. $\blacksquare$
 
----
-
 ## 1.5-6 (紧集上严格压缩映射的不动点)
 
 设 $F$ 是 $n$ 维欧几里得空间 $\mathbb R^n$ 中的有界闭集, $\varphi$ 是 $F$ 到自身的映射并且满足如下条件: 对于任何 $x,y\in F$ ($x\ne y$), 有
@@ -871,8 +837,6 @@ $$
 **关于不闭的有界集:** 该事实不成立. 取 $F=\left(0,1\right]$ ($\mathbb R$ 中的有界非闭集), 定义 $\varphi\left(x\right)=\frac{x}{2}$. 对任意 $x\ne y\in F$, $d\left(\varphi\left(x\right),\varphi\left(y\right)\right)=\frac{\left|x-y\right|}{2}< d\left(x,y\right)$, 满足题设严格压缩条件; 但方程 $\frac{x}{2}=x$ 的解为 $x=0\notin F$, 故 $\varphi$ 在 $F$ 中无不动点. 因而对不闭的有界集, 该结论不成立. $\blacksquare$
 
 > 不闭自然不完备, 因此多次压缩后的点很容易溜出定义域.
-
----
 
 ## 1.5-7 (牛顿迭代法的局部收敛性)
 

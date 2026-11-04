@@ -70,8 +70,6 @@
 > 
 > (iii) (阿泽拉-阿斯卡里定理) $A\subset C\left(X\right)$ 是相对列紧集当且仅当 $A$ 是有界的且等度连续的.
 
----
-
 ## 1.5-8 (隐函数存在定理)
 
 设函数 $F:U\times V\to\mathbb{R}^{m}$, 其中 $U$ 和 $V$ 分别是 $\mathbb{R}^{n}$ 和 $\mathbb{R}^{m}$ 中的开区域, $\left(x_0,y_0\right)\in U\times V$. 如果 $F$ 在 $U\times V$ 中连续, 并且对于任意的 $x\in U$, $F\left(x,\cdot\right)$ 在 $V$ 中是连续可微的, 同时满足
@@ -152,8 +150,6 @@ $$
 
 取 $U_0=B\left(x_0,r\right)\cap U$, 则 $U_0$ 是 $x_0$ 在 $U$ 中的邻域, $\varphi|_{U_0}$ 连续, 满足 $F\left(x,\varphi\left(x\right)\right)=0$ ($\forall x\in U_0$) 且 $\varphi\left(x_0\right)=y_0$. 唯一性: 若在 $U_0'\subset U$ 上还有连续解 $\psi$, 满足 $F\left(x,\psi\left(x\right)\right)=0$, $\psi\left(x_0\right)=y_0$, 则由 $\psi$ 的连续性和 $\psi\left(x_0\right)=y_0$, 适当缩小邻域可设 $B\left(x_0,r\right)\subset U_0\cap U_0'$ 且 $\left|\psi\left(x\right)-y_0\right|\le\delta$ 对 $x\in B\left(x_0,r\right)$ 成立, 于是 $\psi|_{B\left(x_0,r\right)}\in E$ 且 $T\psi=\psi$, 由不动点的唯一性得 $\psi=\varphi$ 于 $B\left(x_0,r\right)$, 进而于 $U_0\cap U_0'$. $\blacksquare$
 
----
-
 ## 1.6-1 (紧度量空间的有限交性质)
 
 设 $A$ 是紧的度量空间, $\left\{F_\lambda\right\}$ 是 $A$ 的一族闭子集, 如果 $\left\{F_\lambda\right\}$ 中任意有限个 $F_{\lambda_1},\dots,F_{\lambda_n}$ 的交集都不空, 那么 $\bigcap_\lambda F_\lambda$ 也不空. 反之, 如果度量空间 $A$ 具有如下性质: 对于 $A$ 中任意的闭子集族 $\left\{F_\lambda\right\}$, 从任意有限交集不空可推出 $\bigcap_\lambda F_\lambda$ 不空, 那么 $A$ 是紧的度量空间.
@@ -170,8 +166,6 @@ $$
 
 再证第二句. 设度量空间 $A$ 具有所述有限交性质, 证明 $A$ 是紧的. 由**定理 1.6.2 (列紧 $\Leftrightarrow$ 覆盖紧)**, 只须证明 $A$ 是列紧的, 即 $A$ 中任意点列都有收敛子列. 用反证法, 设存在点列 $\left\{x_n\right\}\subset A$ 没有收敛子列. 令 $F_n=\overline{\left\{x_k:k\ge n\right\}}$ ($A$ 中从第 $n$ 项起的尾集的闭包). 则每个 $F_n$ 是闭集, 且 $F_1\supset F_2\supset\cdots$, 故任意有限个 $F_{n_1},\dots,F_{n_m}$ (设 $n=\max\left\{n_i\right\}$) 的交 $\bigcap_{i=1}^{m}F_{n_i}=F_n\neq\emptyset$ (因为 $x_n\in F_n$). 由有限交性质, $\bigcap_{n=1}^{\infty}F_n\neq\emptyset$. 取 $x\in\bigcap_{n=1}^{\infty}F_n$. 由 $x\in F_n=\overline{\left\{x_k:k\ge n\right\}}$ 及闭包的邻域刻画, 对每个 $n$ 与 $\varepsilon=\frac1m$, 存在 $k_m\ge n$ 使 $d\left(x_{k_m},x\right)< \frac1m$, 于是取子列 $k_1< k_2< \cdots$ 即得 $x_{k_m}\to x$, 这与 $\left\{x_n\right\}$ 没有收敛子列矛盾. 故 $A$ 列紧, 由**定理 1.6.2 (列紧 $\Leftrightarrow$ 覆盖紧)**, $A$ 是紧的. $\blacksquare$
 
----
-
 ## 1.6-3 ($\mathbb{R}^{n}$ 有界子集的有限 $\varepsilon$-网)
 
 对 $\mathbb{R}^{n}$ 的有界子集 $E$ 及数 $\varepsilon> 0$, 给出它的一个有限 $\varepsilon$-网.
@@ -185,8 +179,6 @@ $$
 $$
 
 由$\mathbb{R}^{n}$ 中方体的直径与有界集的网格覆盖, 每个小方体的 (外接球的) 直径不超过 $\sqrt{n}\,a=\varepsilon$, 且与 $E$ 相交的小方体只有有限多个 (事实上至多 $\left(\left\lfloor\frac{2M}{a}\right\rfloor+2\right)^{n}$ 个). 对这有限多个小方体, 每个与 $E$ 相交的方体 $Q_j$ 中取一个点 $x_j\in E\cap Q_j$, 得到有限集 $\left\{x_1,\dots,x_N\right\}$. 对任意 $x\in E$, $x$ 属于某个与 $E$ 相交的方体 $Q_j$, 故 $\left|x-x_j\right|\le\operatorname{diam}Q_j\le\varepsilon$, 即 $x\in U\left(x_j,\varepsilon\right)$. 所以 $\left\{x_1,\dots,x_N\right\}$ 是 $E$ 的有限 $\varepsilon$-网. $\blacksquare$
-
----
 
 ## 1.6-5 (完全有界等价于有限维子空间逼近)
 
@@ -203,8 +195,6 @@ $$
 $$
 
 所以 $\left\{m_1,\dots,m_N\right\}$ 是 $A$ 的有限 $\varepsilon$-网 (由**注 1.6.1 (网中的点不必属于集合本身)**, 网点不必属于 $A$). 由 $\varepsilon$ 的任意性, $A$ 完全有界. $\blacksquare$
-
----
 
 ## 1.6-6 (赫尔德空间 $C_\alpha$ 中完全有界集的充分条件)
 
@@ -272,8 +262,6 @@ $$
 
 综合两情形, $\left\|f-f_i\right\|_{C_\alpha\left[a,b\right]}< \varepsilon$, 故 $\left\{f_1,\dots,f_K\right\}$ 是 $A$ 的有限 $\varepsilon$-网. 由 $\varepsilon$ 的任意性, $A$ 完全有界. $\blacksquare$
 
----
-
 ## 1.6-7 (科尔莫戈罗夫-里斯-弗雷歇定理的必要性)
 
 证明**定理 1.6.7 (科尔莫戈罗夫-里斯-弗雷歇定理)** 中的必要性, 即若 $A\subset L^{p}\left(\mathbb{R}\right)$ ($1\le p< \infty$) 是完全有界集, 则:
@@ -309,8 +297,6 @@ $$
 $$
 
 对一切 $\left|h\right|< \delta$ 成立. 故 (iii) 得证. 综上, 必要性成立. $\blacksquare$
-
----
 
 ## 1.6-8 ($C_0\left(\mathbb R\right)$ 中相对列紧的充要条件)
 
@@ -352,8 +338,6 @@ $$
 
 把每个 $g_k$ 线性延拓为 $\widetilde g_k\in C_0\left(\mathbb{R}\right)$: $\widetilde g_k=g_k$ 于 $\left[-N,N\right]$, 在 $\left[N,N+1\right]$ 与 $\left[-N-1,-N\right]$ 上从 $g_k\left(\pm N\right)$ 线性过渡到 $0$, 在 $\left|x\right|\ge N+1$ 上取 $0$. 则 $\left\{\widetilde g_1,\dots,\widetilde g_K\right\}\subset C_0\left(\mathbb{R}\right)$. 当 $\left|x\right|\le N$ 时 $\left|f\left(x\right)-\widetilde g_k\left(x\right)\right|=\left|f\left(x\right)-g_k\left(x\right)\right|< \frac{\varepsilon}{3}$; 当 $\left|x\right|> N$ 时 $\left|f\left(x\right)\right|\le\frac{\varepsilon}{3}$, 且 $\left|\widetilde g_k\left(x\right)\right|\le\max\left\{\left|g_k\left(N\right)\right|,\left|g_k\left(-N\right)\right|\right\}$, 而 $\left|g_k\left(\pm N\right)\right|\le\left|f\left(\pm N\right)-g_k\left(\pm N\right)\right|+\left|f\left(\pm N\right)\right|< \frac{\varepsilon}{3}+\frac{\varepsilon}{3}=\frac{2\varepsilon}{3}$, 故 $\left|f\left(x\right)-\widetilde g_k\left(x\right)\right|\le\left|f\left(x\right)\right|+\left|\widetilde g_k\left(x\right)\right|< \frac{\varepsilon}{3}+\frac{2\varepsilon}{3}=\varepsilon$. 于是 $\left\|f-\widetilde g_k\right\|< \varepsilon$, 故 $\left\{\widetilde g_1,\dots,\widetilde g_K\right\}$ 是 $A$ 的有限 $\varepsilon$-网. 由 $\varepsilon$ 的任意性, $A$ 完全有界, 从而相对列紧. $\blacksquare$
 
----
-
 ## 1.6-9 (相对列紧集的凸包仍相对列紧)
 
 设 $X$ 是巴拿赫空间, $A$ 是 $X$ 中的相对列紧集, 证明它的凸包 $\operatorname{co}\left(A\right)$ 也是相对列紧集.
@@ -377,8 +361,6 @@ $$
 故 $z\in\operatorname{co}\left\{a_1,\dots,a_N\right\}+B\left(0,\varepsilon\right)$.
 
 记 $K=\operatorname{co}\left\{a_1,\dots,a_N\right\}=\left\{\sum_{i=1}^{N}\lambda_ia_i:\lambda_i\ge0,\ \sum_{i=1}^{N}\lambda_i=1\right\}$. 由单 (纯) 形, 它是 $\mathbb{R}^{N}$ 中的单形 $\Delta_{N-1}=\left\{\lambda_i\ge0,\ \sum\lambda_i=1\right\}$ 在连续映射 $\left(\lambda_1,\dots,\lambda_N\right)\mapsto\sum\lambda_ia_i$ 下的像, 故 $K$ 是紧集, 由**例 1.6.3 ($\mathbb{R}^n$ 中有界集完全有界)** 知 $K$ 完全有界, 故对 $\varepsilon> 0$, $K$ 有有限的 $\varepsilon$-网 $\left\{y_1,\dots,y_M\right\}\subset K$. 于是对任意 $z\in\operatorname{co}\left(A\right)$, 存在 $u\in K$ 使 $\left\|z-u\right\|< \varepsilon$, 且存在 $l$ 使 $\left\|u-y_l\right\|< \varepsilon$, 故 $\left\|z-y_l\right\|< 2\varepsilon$. 所以 $\left\{y_1,\dots,y_M\right\}$ 是 $\operatorname{co}\left(A\right)$ 的有限 $2\varepsilon$-网. 由 $\varepsilon$ 的任意性, $\operatorname{co}\left(A\right)$ 完全有界, 再由**定理 1.6.3 (豪斯多夫定理)** ($X$ 完备) 得 $\operatorname{co}\left(A\right)$ 相对列紧. $\blacksquare$
-
----
 
 ## 1.6-10 (格罗滕迪克定理)
 
@@ -438,8 +420,6 @@ $$
 
 $\blacksquare$
 
----
-
 ## 1.6-11 ($L^1$ 单位球上的线性泛函与上确界不可达)
 
 设 $B_1=\left\{f\in L^{1}\left[a,b\right]:\ \left\|f\right\|_1\le1\right\}$ 是实 $L^{1}\left[a,b\right]$ 的闭单位球, $g\in L^{\infty}\left[a,b\right]$ 是实值函数. 对 $f\in B_1$, 定义 $F_g\left(f\right)=\int_a^{b}fg\,\mathrm dm$. 证明 $F_g$ 在 $B_1$ 上是连续的, 并且
@@ -492,8 +472,6 @@ $$
 
 > 直观理解 $\sup$ 不能达到的原因是, 一次函数 $x-a$ 取到上确界当且仅当 $x=b$, 而单点集测度为 $0$, 因此其本性上确界必然达不到 $b-a$.
 
----
-
 ## 1.6-12 (定理 1.6.9 的证明)
 
 证明**定理 1.6.9 (紧度量空间上的性质)**. 即设 $X$ 是紧的度量空间, 证明:
@@ -526,8 +504,6 @@ $$
 
 故 $A$ 等度连续. 必要性得证. 综上, (iii) 成立. $\blacksquare$
 
----
-
 ## 1.6-16 (紧度量空间上连续映射一致连续)
 
 设 $X$ 是紧的度量空间, $f:X\to Y$ 是度量空间之间的连续映射. 证明 $f$ 是一致连续的.
@@ -535,8 +511,6 @@ $$
 ### 解答 1.6-16
 
 设 $\varepsilon> 0$. 由 $f$ 的连续性, 对每个 $x\in X$ 存在 $\delta_x> 0$, 使得 $d_X\left(x,x'\right)< \delta_x$ 蕴含 $d_Y\left(f\left(x\right),f\left(x'\right)\right)< \frac{\varepsilon}{2}$. 开球族 $\left\{U\left(x,\frac{\delta_x}{2}\right):x\in X\right\}$ 覆盖紧空间 $X$, 由**定理 1.6.2 (列紧 $\Leftrightarrow$ 覆盖紧)** 它有有限子覆盖 $\left\{U\left(x_i,\frac{\delta_{x_i}}{2}\right)\right\}_{i=1}^{m}$. 令 $\delta=\min_i\frac{\delta_{x_i}}{2}> 0$. 若 $d_X\left(x,x'\right)< \delta$, 取 $i$ 使 $x\in U\left(x_i,\frac{\delta_{x_i}}{2}\right)$, 则 $d_X\left(x,x_i\right)< \frac{\delta_{x_i}}{2}< \delta_{x_i}$, 故 $d_Y\left(f\left(x\right),f\left(x_i\right)\right)< \frac{\varepsilon}{2}$; 且 $d_X\left(x',x_i\right)\le d_X\left(x',x\right)+d_X\left(x,x_i\right)< \delta+\frac{\delta_{x_i}}{2}\le\delta_{x_i}$, 故 $d_Y\left(f\left(x'\right),f\left(x_i\right)\right)< \frac{\varepsilon}{2}$. 于是 $d_Y\left(f\left(x\right),f\left(x'\right)\right)\le d_Y\left(f\left(x\right),f\left(x_i\right)\right)+d_Y\left(f\left(x_i\right),f\left(x'\right)\right)< \varepsilon$. 所以 $f$ 一致连续. $\blacksquare$
-
----
 
 ## 1.6-17 (迪尼定理)
 

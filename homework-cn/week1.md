@@ -32,8 +32,6 @@
 > 
 > 设 $x,y\in H$ ($H$ 为内积空间), 则 $\left|\left\langle x,y\right\rangle\right|^2\le\left\langle x,x\right\rangle\left\langle y,y\right\rangle$, 特别地当 $\left\|x\right\|=\left\|y\right\|=1$ 时 $\left|\left\langle x,y\right\rangle\right|\le1$.
 
----
-
 ## 1.1-2 (两个导出的度量及其收敛性一致)
 
 设 $\left(X,d\right)$ 是度量空间, 证明:
@@ -95,8 +93,6 @@ $$
 $$
 
 即 $\left(X,d'\right)$, $\left(X,d''\right)$ 中点列的收敛性和在 $\left(X,d\right)$ 中是一致的. $\blacksquare$
-
----
 
 ## 1.1-4 (多项式空间上的两个度量及其收敛比较)
 
@@ -176,8 +172,6 @@ $$
 
 > 构造思路: 要找一个函数值很小但系数很大的多项式, 需函数中含大量正负抵消项; $\left(-1\right)^j$ 天然合适, 二项式展开恰好提供交错系数, 故取 $x^k\left(1-x\right)^k$, 其 $d_2$-系数和恰为 $2^k$.
 
----
-
 ## 1.1-5 ($L^p$ 伪度量与商空间)
 
 对 $0< p< 1$, 记 $\mathcal L^p\left[0,1\right]$ 是区间 $\left[a,b\right]$ 上勒贝格可测且 $p$ 次可积的函数全体. 令
@@ -231,8 +225,6 @@ d\left(\left[f\right],\left[g\right]\right)=0\Leftrightarrow\int_0^1\left|f\left
 $$
 
 因被积函数 $\left|f\left(t\right)-g\left(t\right)\right|^p\ge0$ 且可测, 由非负可测函数积分为零的充要条件, 上式当且仅当 $\left|f\left(t\right)-g\left(t\right)\right|^p=0$ 几乎处处成立, 当且仅当 $f\left(t\right)=g\left(t\right)$ 几乎处处成立, 即 $f\overset m= g$, 亦即 $f\sim g$, 故 $\left[f\right]=\left[g\right]$. 这一"几乎处处相等作商、$d=0$ 当且仅当等价"的构造与**例 1.1.12 (可测函数等价类空间)** 相同. 于是正定性成立, $\left(L^p\left[a,b\right],d\right)$ 是度量空间. $\blacksquare$
-
----
 
 ## 1.1-7 (单位球面上的测地度量)
 

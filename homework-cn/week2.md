@@ -90,8 +90,6 @@
 > 
 > 对直线上有界闭区间 $\left[a,b\right]$ 及 $1\le p< \infty$, $L^p\left[a,b\right]$ 中的简单函数全体、阶梯函数全体、$C_c^\infty\left(a,b\right)$、$C\left[a,b\right]$ 以及多项式全体 $P$ 均是 $L^p\left[a,b\right]$ 的稠密子集.
 
----
-
 ## 1.4-8 ($C_c^\infty$ 在 $L^p$ 中稠密)
 
 在直线 $\mathbb R$ 上, 证明 $C_c^\infty\left(\mathbb R\right)$ 在 $L^p\left(\mathbb R\right)$ ($1\le p< \infty$) 中稠密.
@@ -115,8 +113,6 @@ $$
 $$
 
 故每个简单函数都可被 $C_c^\infty$ 函数以任意精度逼近. $\blacksquare$
-
----
 
 ## 1.2-3 (乘积空间上两范数与非奇异矩阵映射的拓扑同胚)
 
@@ -182,8 +178,6 @@ $$
 
 故 $\varphi$ 连续. 最后证 $\varphi^{-1}$ 连续: $\varphi^{-1}\left(x',y'\right)=\left(x',y'\right)A^{-1}$, 而 $A^{-1}$ 也是非奇异矩阵, 对 $\varphi^{-1}$ 重复上面 $\varphi$ 的论证即得 $\varphi^{-1}$ 连续. 综上, $\varphi$ 是到上的一一对应且 $\varphi,\varphi^{-1}$ 均连续, 故 $\varphi$ 是拓扑同胚. $\blacksquare$
 
----
-
 ## 1.2-6 ($C_b\left(0,1\right]$ 上的上确界范数)
 
 设 $C_b\left(0,1\right]$ 表示在半开半闭区间 $\left(0,1\right]$ 上处处连续且有界的函数全体. 对于每个 $x\in C_b\left(0,1\right]$, 令
@@ -222,8 +216,6 @@ $$
 
 而该式正是 $\left\{x_n\right\}$ 在 $\left(0,1\right]$ 上一致收敛于 $x_0$ 的定义. 故按范数收敛与一致收敛等价. $\blacksquare$
 
----
-
 ## 1.2-10 (标准正交向量组线性无关)
 
 设 $H$ 是内积空间. 如果 $x_1,x_2,\cdots,x_n$ 是 $H$ 中的向量, 它们满足条件 $\left\langle x_i,x_j\right\rangle=\delta_{ij}$, 证明: $x_1,x_2,\cdots,x_n$ 是一组线性无关的向量.
@@ -237,8 +229,6 @@ $$
 $$
 
 因 $j$ 任意, 故 $\sum_{i=1}^n c_i x_i=0$ 蕴含一切 $c_j=0$. 由线性无关组的定义, $x_1,x_2,\cdots,x_n$ 是一组线性无关的向量. $\blacksquare$
-
----
 
 ## 1.2-12 (正交补的性质)
 
@@ -280,8 +270,6 @@ $$
 
 故 $L^\perp=M^\perp\cap N^\perp$. $\blacksquare$
 
----
-
 ## 1.3-1 (标准正交基下内积的展开式)
 
 设 $\mathfrak F=\left\{e_\lambda:\lambda\in\Lambda\right\}$ 是希尔伯特空间 $H$ 的标准正交基. 证明: 对任何 $x,y\in H$,
@@ -311,8 +299,6 @@ $$
 $$
 
 $\blacksquare$
-
----
 
 ## 1.3-3 (二元三角标准正交基)
 
@@ -348,8 +334,6 @@ $$
 
 故 $c_m\in L^2\left[0,2\pi\right]$. 而上面的等式说明 $c_m\perp e^{iny}$ 于 $L^2\left[0,2\pi\right]$ 对一切 $n$ 成立. 由**例 1.3.7 ($e^{inx}$ 构成标准正交基)**, $\left\{e^{iny}\right\}$ 是 $L^2\left[0,2\pi\right]$ 的标准正交基, 由**定理 1.3.2 (标准正交基的等价条件)** (iii), 它完全, 故 $c_m=0$ 几乎处处成立. 此对每个 $m$ 成立. 再由**例 1.3.7 ($e^{inx}$ 构成标准正交基)** 在 $x$ 变量上的完全性 (即**定理 1.3.2 (标准正交基的等价条件)** (iii)), 对几乎处处每个 $y$, $f\left(\cdot,y\right)$ 的所有傅里叶系数为零蕴含 $f\left(\cdot,y\right)=0$ 几乎处处于 $x$, 即 $f=0$ 几乎处处于 $\left[0,2\pi\right]\times\left[0,2\pi\right]$. 故该标准正交系完全, 由**定理 1.3.2 (标准正交基的等价条件)** 它是 $L^2\left(\left[0,2\pi\right]\times\left[0,2\pi\right]\right)$ 的一组标准正交基. $\blacksquare$
 
----
-
 ## 1.3-5 (勒让德多项式构成标准正交基)
 
 在 $L^2\left[-1,1\right]$ 中, 函数列 $g_k\left(x\right)=x^k$ ($k=0,1,2,\cdots$) 是线性无关的. 勒让德多项式 $P_0\left(x\right)=1$, $P_n\left(x\right)=\frac{1}{2^n n!}\frac{\mathrm d^n}{\mathrm dx^n}\left(x^2-1\right)^n$ ($n=1,2,\cdots$) 是 $L^2\left[-1,1\right]$ 中的正交多项式系. 证明: 单位化后 $h_0\left(x\right)=\frac{1}{\sqrt2}$, $h_n\left(x\right)=\frac{1}{2^n n!}\sqrt{\frac{2n+1}{2}}\frac{\mathrm d^n}{\mathrm dx^n}\left(x^2-1\right)^n$ 是 $\left\{g_k\right\}$ 经过格拉姆-施密特过程得到的标准正交向量系, 且是一组标准正交基.
@@ -365,8 +349,6 @@ $$
 $$
 
 其中 $P$ 是多项式全体. 由**例 1.4.6 ($L^p$ 中的稠密子集)**, 多项式全体 $P$ 在 $L^2\left[-1,1\right]$ 中稠密, 故 $\overline{\operatorname{span}\left\{h_n\right\}}=L^2\left[-1,1\right]$. 由**定理 1.3.2 (标准正交基的等价条件)** (ii), $\left\{h_n:n=0,1,\cdots\right\}$ 是 $L^2\left[-1,1\right]$ 的一组标准正交基. $\blacksquare$
-
----
 
 ## 1.3-7 (带权 $L^2$ 空间是希尔伯特空间)
 
@@ -424,8 +406,6 @@ $$
 
 则 $f$ 可测, 且 $\int_{\mathbb R}\left|f\right|^2\omega\,\mathrm dt=\int_{\mathbb R}\left|g\right|^2\,\mathrm dt< \infty$, 故 $f\in H$. 又 $\left\|f_n-f\right\|_H=\left\|Tf_n-g\right\|_{L^2}\to0$, 即 $\left\{f_n\right\}$ 在 $H$ 中收敛于 $f$. 故 $H$ 按内积诱导的度量完备. 由希尔伯特空间的定义, $H$ 是希尔伯特空间. $\blacksquare$
 
----
-
 ## 1.3-8 (标准正交系重排后傅里叶级数极限不变)
 
 设 $\mathfrak F=\left\{e_1,e_2,\cdots,e_n,\cdots\right\}$ 是希尔伯特空间 $\left(H,\left\langle\cdot,\cdot\right\rangle\right)$ 的一组标准正交系, 将 $\mathfrak F$ 重排成另一个序列 $\left\{e_1',e_2',\cdots,e_n',\cdots\right\}$. 证明: 对于 $x\in H$,
@@ -459,8 +439,6 @@ $$
 $$
 
 两式相减得 $\left\langle S-S',e_j\right\rangle=0$ 对一切 $j$ 成立. 由**引理 1.2.4 (内积的连续性)**, $\left\langle S-S',z\right\rangle=0$ 对一切 $z\in\overline{\operatorname{span}\left\{e_k\right\}}$ 成立. 而每个 $S_n\in\operatorname{span}\left\{e_k\right\}$, 故 $S\in\overline{\operatorname{span}\left\{e_k\right\}}$; 同理 $S'\in\overline{\operatorname{span}\left\{e_k\right\}}$. 于是 $S-S'\in\overline{\operatorname{span}\left\{e_k\right\}}$, 特别地 $\left\langle S-S',S-S'\right\rangle=0$. 由**定义 1.2.3 (内积空间)** (iii) 的正定性, $S-S'=0$, 即 $S=S'$. $\blacksquare$
-
----
 
 ## 1.3-10 (完全但不完备的标准正交系)
 
