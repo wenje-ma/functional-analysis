@@ -265,7 +265,7 @@ $$
 
 $\blacksquare$
 
-> 依据范数的定义, 先看 $\|Tx\|$ 最大能放大多少, 分离出 $\|x\|$ 后得到 $\|T\|$ 的上界; 再亲自构造一套 $T$ 与 $x$ 证明此上界真的能达到.
+> 依据范数的定义, 先看 $\left\|Tx\right\|$ 最大能放大多少, 分离出 $\left\|x\right\|$ 后得到 $\left\|T\right\|$ 的上界; 再亲自构造一套 $T$ 与 $x$ 证明此上界真的能达到.
 
 **(2) 范数为 $\left\|x\right\|=\left(\sum_i\left|x_i\right|^2\right)^{\frac12}$ 时.**
 
@@ -344,7 +344,7 @@ $$
 Tx=\lim_{N\to\infty}Tx^{\left(N\right)}=\lim_{N\to\infty}\sum_{\nu=1}^{N}x_\nu Te_\nu.
 $$
 
-又第 $\mu$ 个坐标泛函连续, 因为 $\left|y_\mu\right|^p\le\left\|y\right\|_p^p$ 给出 $\left|y_\mu\right|\le\left\|y\right\|_p$; 于是
+于是
 
 $$
 y_\mu=\left(Tx\right)_\mu=\lim_{N\to\infty}\sum_{\nu=1}^{N}x_\nu\left(Te_\nu\right)_\mu=\sum_{\nu=1}^{\infty}t_{\mu\nu}x_\nu,
@@ -357,10 +357,13 @@ $\blacksquare$
 ## 2.1-5 (积分算子的范数)
 
 $T$ 是 $C\left[a,b\right]$ 到自身的积分算子:
+
 $$
 \left(T\varphi\right)\left(s\right)=\int_a^bK\left(s,t\right)\varphi\left(t\right)\mathrm dt,\quad \varphi\in C\left[a,b\right],
 $$
+
 其中 $K\left(s,t\right)$ 是 $\left[a,b\right]\times\left[a,b\right]$ 上二元连续函数. 证明
+
 $$
 \left\|T\right\|=\max_{a\le s\le b}\int_a^b\left|K\left(s,t\right)\right|\mathrm dt.
 $$
@@ -370,56 +373,64 @@ $$
 记 $M=\max_{a\le s\le b}\int_a^b\left|K\left(s,t\right)\right|\mathrm dt$; 因 $K$ 在紧集 $\left[a,b\right]\times\left[a,b\right]$ 上连续, 故对 $t$ 积分所得的 $\int_a^b\left|K\left(s,t\right)\right|\mathrm dt$ 关于 $s$ 连续, 从而该最大值存在.
 
 **上界.** 对任意 $\varphi\in C\left[a,b\right]$ 与 $s\in\left[a,b\right]$,
+
 $$
 \left|\left(T\varphi\right)\left(s\right)\right|\le\int_a^b\left|K\left(s,t\right)\right|\left|\varphi\left(t\right)\right|\mathrm dt\le\left\|\varphi\right\|\int_a^b\left|K\left(s,t\right)\right|\mathrm dt\le M\left\|\varphi\right\|,
 $$
-对 $s$ 取最大值得 $\left\|T\varphi\right\|\le M\left\|\varphi\right\|$, 故 $\left\|T\right\|\le M$.
+
+对 $s$ 取最大值得 $\left\|T\varphi\right\|\le M\left\|\varphi\right\|$, 故 $\left\|T\right\|\le M$. $\blacksquare$
 
 **下界.** 取 $s_0\in\left[a,b\right]$ 使 $\int_a^b\left|K\left(s_0,t\right)\right|\mathrm dt=M$. 由**注 1.4.1 ($L^{p}$ 中的稠密子集)(i)** (取 $n=1$, $p=1$), 存在 $g_n\in C_c^\infty\left(\mathbb R\right)$ 使
+
 $$
 g_n\to\chi_{\left[a,b\right]}\left(t\right)\operatorname{sign}\left(K\left(s_0,t\right)\right)\quad\text{于 }L^1\left(\mathbb R\right).
 $$
-令 $\varphi_n=g_n|_{\left[a,b\right]}$, 并把 $\varphi_n$ 截断为
-$$
-\psi_n\left(t\right)=\max\left\{-1,\ \min\left\{1,\ \varphi_n\left(t\right)\right\}\right\},
-$$
-则 $\psi_n\in C\left[a,b\right]$ 且 $\left\|\psi_n\right\|\le1$; 又截断映射是 1-利普希茨的, 且 $\left|\chi_{\left[a,b\right]}\operatorname{sign}\left(K\left(s_0,\cdot\right)\right)\right|=1$, 故 $\psi_n\to\operatorname{sign}\left(K\left(s_0,\cdot\right)\right)$ 于 $L^1\left[a,b\right]$.
 
-于是由控制收敛定理 (被积函数被可积函数 $\left|K\left(s_0,t\right)\right|$ 控制),
-$$
-\left(T\psi_n\right)\left(s_0\right)=\int_a^bK\left(s_0,t\right)\psi_n\left(t\right)\mathrm dt\to\int_a^b\left|K\left(s_0,t\right)\right|\mathrm dt=M.
-$$
-因 $\left\|\psi_n\right\|\le1$, 由**定义 2.1.2 (算子范数)**
-$$
-\left\|T\right\|\ge\frac{\left\|T\psi_n\right\|}{\left\|\psi_n\right\|}\ge\left|\left(T\psi_n\right)\left(s_0\right)\right|,
-$$
-令 $n\to\infty$ 得 $\left\|T\right\|\ge M$.
+令 $\varphi_n=g_n|_{\left[a,b\right]}$, 则 $\varphi_n\in C\left[a,b\right]$ 且 $\left\|\varphi_n\right\|\le1$.
 
-结合上界与下界, $\left\|T\right\|=M$. $\blacksquare$
+由于被积函数被可积函数 $\left|K\left(s_0,t\right)\right|$ 控制, 由控制收敛定理,
+
+$$
+\left(T\varphi_n\right)\left(s_0\right)=\int_a^bK\left(s_0,t\right)\varphi_n\left(t\right)\mathrm dt\to\int_a^b\left|K\left(s_0,t\right)\right|\mathrm dt=M.
+$$
+
+由**定义 2.1.2 (算子范数)**
+
+$$
+\left\|T\right\|\ge\frac{\left\|T\varphi_n\right\|}{\left\|\varphi_n\right\|}\ge\left|\left(T\varphi_n\right)\left(s_0\right)\right|,
+$$
+
+令 $n\to\infty$ 得 $\left\|T\right\|\ge M$. $\blacksquare$
 
 ## 2.1-6 (微分算子的范数)
 
 证明 $\frac{\mathrm d}{\mathrm dx}$ 是 $C^{\left(k\right)}\left[a,b\right]$ ($k\ge1$) 到 $C\left[a,b\right]$ 的连续线性算子, 并求出它的范数. 其中 $C^{\left(k\right)}\left[a,b\right]$ 是区间 $\left[a,b\right]$ 中具有连续的 $k$ 阶导函数的函数全体, 以
+
 $$
 \left\|x\right\|=\max_{0\le j\le k}\max_{t\in\left[a,b\right]}\left|x^{\left(j\right)}\left(t\right)\right|
 $$
+
 为范数.
 
 ### 解答 2.1-6
 
-记 $T=\frac{\mathrm d}{\mathrm dx}$, 即 $\left(Tx\right)\left(t\right)=x'\left(t\right)$. 因求导是线性运算, $T$ 是线性的, 且 $Tx\in C\left[a,b\right]$ ($\forall x\in C^{\left(k\right)}\left[a,b\right]$, $k\ge1$), 故 $T$ 是从 $C^{\left(k\right)}\left[a,b\right]$ 到 $C\left[a,b\right]$ 的线性算子.
+**线性.** 记 $T=\frac{\mathrm d}{\mathrm dx}$, 即 $\left(Tx\right)\left(t\right)=x'\left(t\right)$. 因求导是线性运算, 故 $T$ 是从 $C^{\left(k\right)}\left[a,b\right]$ 到 $C\left[a,b\right]$ 的线性算子.
 
 **连续性与 $\left\|T\right\|\le1$.** 对任意 $x\in C^{\left(k\right)}\left[a,b\right]$,
+
 $$
 \left\|Tx\right\|=\max_{t\in\left[a,b\right]}\left|x'\left(t\right)\right|\le\max_{0\le j\le k}\max_{t\in\left[a,b\right]}\left|x^{\left(j\right)}\left(t\right)\right|=\left\|x\right\|,
 $$
+
 故由**定理 2.1.1 (线性算子有界与连续的等价条件)** ($\left(\mathrm{iii}\right)\Rightarrow\left(\mathrm{i}\right)$), $T$ 连续, 且由**定义 2.1.2 (算子范数)** 有 $\left\|T\right\|\le1$.
 
-**$\left\|T\right\|=1$.** 取 $x\left(t\right)=\sin\left(t-a\right)$. 则 $x^{\left(j\right)}\left(t\right)=\sin^{\left(j\right)}\left(t-a\right)$, 其绝对值处处不超过 $1$, 故 $\left\|x\right\|\le1$; 而 $x'\left(a\right)=\cos0=1$, 故 $\left\|x\right\|\ge\left\|x'\right\|\ge1$. 于是 $\left\|x\right\|=1$ 且
+**$\left\|T\right\|=1$.** 取 $x\left(t\right)=\sin\left(t-a\right)$, 则 $\left\|x\right\|=1$. 且
+
 $$
 \left\|Tx\right\|=\max_{t\in\left[a,b\right]}\left|\cos\left(t-a\right)\right|=1,
 $$
-故 $\left\|T\right\|\ge1$. 结合 $\left\|T\right\|\le1$ 得 $\left\|T\right\|=1$. $\blacksquare$
+
+故 $\left\|T\right\|\ge1$. 结合得 $\left\|T\right\|=1$. $\blacksquare$
 
 ## 2.1-7 (一致有界算子列在稠密子空间上收敛则可延拓)
 
@@ -430,27 +441,30 @@ $$
 若 $M=0$, 则 $\left\|T_n\right\|=0$, 由**定义 2.1.2 (算子范数)** 得 $T_n=0$, 取 $T=0$ 即可; 以下设 $M> 0$.
 
 **第一步: $\left\{T_nx\right\}$ 对每个 $x\in X$ 都是 $Y$ 中的基本点列.** 对 $x\in X$ 与 $z\in L$,
+
 $$
 \left\|T_nx-T_mx\right\|\le\left\|T_n\left(x-z\right)\right\|+\left\|T_nz-T_mz\right\|+\left\|T_m\left(z-x\right)\right\|\le2M\left\|x-z\right\|+\left\|T_nz-T_mz\right\|. \tag{1}
 $$
-任给 $\varepsilon> 0$. 由 $L$ 在 $X$ 中稠密 (**定义 1.4.5 (稠密性)**) 取 $z\in L$ 使 $\left\|x-z\right\|< \frac{\varepsilon}{4M}$. 对 $z\in L$, $\left\{T_nz\right\}$ 收敛故是基本点列, 存在 $N$ 使 $n,m\ge N$ 时 $\left\|T_nz-T_mz\right\|< \frac{\varepsilon}{2}$. 代入 (1) 得 $\left\|T_nx-T_mx\right\|< \varepsilon$ 对所有 $n,m\ge N$ 成立, 故 $\left\{T_nx\right\}$ 是基本点列.
+
+任给 $\varepsilon> 0$. 由 $L$ 在 $X$ 中稠密 (**定义 1.4.5 (稠密性)**), 故 $2M\|x-z\|<\frac{\varepsilon}{2}$. 对 $z\in L$, $\left\{T_nz\right\}$ 收敛故 $\left\|T_nz-T_mz\right\|< \frac{\varepsilon}{2}$. 代入 (1) 得 $\left\|T_nx-T_mx\right\|< \varepsilon$, 即 $\left\{T_nx\right\}$ 是基本点列.
 
 由 $Y$ 是巴拿赫空间 (**定义 1.4.7 (完备性)**), $\left\{T_nx\right\}$ 收敛; 定义
+
 $$
 Tx=\lim_{n\to\infty}T_nx,\quad x\in X.
 $$
 
-**第二步: $T$ 线性且 $T\in\mathfrak B\left(X,Y\right)$.** 线性由极限的线性性: 对 $x,y\in X$ 与 $\alpha,\beta\in\mathbb K$,
-$$
-T\left(\alpha x+\beta y\right)=\lim_nT_n\left(\alpha x+\beta y\right)=\lim_n\left(\alpha T_nx+\beta T_ny\right)=\alpha Tx+\beta Ty.
-$$
-又由 $\left\|T_nx\right\|\le M\left\|x\right\|$ (算子范数的估计, 见**定义 2.1.2 (算子范数)**) 与范数的连续性, 在 $\left\|T_nx\right\|\le M\left\|x\right\|$ 中令 $n\to\infty$ 得 $\left\|Tx\right\|\le M\left\|x\right\|$. 故 $T$ 有界, 且 $\left\|T\right\|\le M$.
+$\blacksquare$
 
-**第三步: $T_nx\to Tx$ 对一切 $x\in X$ 成立.** 任给 $\varepsilon> 0$ 与 $x\in X$, 取 $z\in L$ 使 $\left\|x-z\right\|< \frac{\varepsilon}{4M}$; 由 $T_nz\to Tz$ 取 $N$ 使 $n\ge N$ 时 $\left\|T_nz-Tz\right\|< \frac{\varepsilon}{2}$. 于是在 (1) 中令 $m\to\infty$ (注意 $T_mx\to Tx$, $T_mz\to Tz$) 得, 对 $n\ge N$,
+**第二步: $T$ 线性且 $T\in\mathfrak B\left(X,Y\right)$.** 线性由极限的线性性成立; 在 $\left\|T_nx\right\|\le M\left\|x\right\|$ 中令 $n\to\infty$ 得 $\left\|Tx\right\|\le M\left\|x\right\|$. 故 $T$ 有界, 且 $\left\|T\right\|\le M$. $\blacksquare$
+
+**第三步: $T_nx\to Tx$ 对一切 $x\in X$ 成立.** 对 $x\in X$ 与 $z\in L$,
+
 $$
-\left\|T_nx-Tx\right\|\le2M\left\|x-z\right\|+\left\|T_nz-Tz\right\|< \varepsilon.
+\left\|T_nx-Tx\right\|\le\left\|T_n\left(x-z\right)\right\|+\left\|T_nz-Tz\right\|+\left\|T\left(z-x\right)\right\|\le2M\left\|x-z\right\|+\left\|T_nz-Tz\right\|. \tag{2}
 $$
-故 $\lim_{n\to\infty}\left\|T_nx-Tx\right\|=0$. $\blacksquare$
+
+任给 $\varepsilon> 0$. 由 $L$ 在 $X$ 中稠密 (**定义 1.4.5 (稠密性)**), 故 $2M\|x-z\|<\frac{\varepsilon}{2}$. 对 $z\in L$, 由 (1) 知 $\left\|T_nz-Tz\right\|< \frac{\varepsilon}{2}$. 代入 (2) 得 $\left\|T_nx-Tx\right\|< \varepsilon$. 故 $\lim_{n\to\infty}\left\|T_nx-Tx\right\|=0$. $\blacksquare$
 
 ## 2.1-8 (阶梯函数的傅里叶变换与 $L^{2}$ 上的等距延拓)
 
@@ -463,46 +477,60 @@ $$
 ### 解答 2.1-8
 
 **预备.** 阶梯函数有界且支在有限区间上, 故 $A\subset L^1\left(\mathbb R\right)\cap L^2\left(\mathbb R\right)$; 由**例 2.1.6 (傅里叶变换)**, 对 $f\in A$ 可定义
+
 $$
 \widehat f\left(t\right)=\int_{\mathbb R}f\left(x\right)\mathrm e^{-2\pi\mathrm itx}\,\mathrm dx,
 $$
-且 $\widehat f$ 连续、满足 $\left|\widehat f\left(t\right)\right|\le\left\|f\right\|_1< \infty$, 故 $\widehat f\in L^2\left(\mathbb R\right)$ (其 $L^2$ 范数在第二步算出).
 
-**(i) 第一步: $A$ 在 $L^2\left(\mathbb R\right)$ 中稠密.** 由**注 1.4.1 ($L^{p}$ 中的稠密子集)(i)** (取 $n=1$, $p=2$), 阶梯函数全体在 $L^2\left(\mathbb R\right)$ 中稠密.
+**(i) 第一步: $A$ 在 $L^2\left(\mathbb R\right)$ 中稠密.** 由**注 1.4.1 ($L^{p}$ 中的稠密子集)(i)** (取 $n=1$, $p=2$), 阶梯函数全体在 $L^2\left(\mathbb R\right)$ 中稠密. $\blacksquare$
 
-**(i) 第二步: $f\mapsto\widehat f$ 在 $A$ 上线性且保范.** 线性由积分对 $f$ 的线性性. 因 $A$ 中每个函数是有限个区间指示函数的线性组合, 且 $\widehat{\alpha f+\beta g}=\alpha\widehat f+\beta\widehat g$, 保范性只需对 $f=\chi_{\left[\alpha,\beta\right]}$ 验证. 对 $t\neq0$,
+**(i) 第二步: $f\mapsto\widehat f$ 在 $A$ 上线性且保范.** 线性由积分对 $f$ 的线性性得到. 因 $A$ 中每个函数是有限个区间指示函数的线性组合, 因此保范性只需对 $f=\chi_{\left[\alpha,\beta\right]}$ 验证. 对 $t\neq0$,
+
 $$
 \widehat f\left(t\right)=\int_\alpha^\beta\mathrm e^{-2\pi\mathrm itx}\,\mathrm dx=\mathrm e^{-\pi\mathrm it\left(\alpha+\beta\right)}\frac{\sin\left(\pi t\left(\beta-\alpha\right)\right)}{\pi t},
 $$
+
 故
+
 $$
 \left|\widehat f\left(t\right)\right|^2=\frac{\sin^2\left(\pi tL\right)}{\pi^2t^2},\quad L=\beta-\alpha> 0.
 $$
+
 令 $u=\pi tL$, 则 $\mathrm dt=\mathrm du/\left(\pi L\right)$, $\pi^2t^2=u^2/L^2$, 于是
+
 $$
-\int_{\mathbb R}\left|\widehat f\left(t\right)\right|^2\mathrm dt=\int_{\mathbb R}\frac{L\sin^2u}{\pi u^2}\,\mathrm du=\frac{L}{\pi}\cdot\pi=L=\left\|f\right\|_2^2,
+\int_{\mathbb R}\left|\widehat f\left(t\right)\right|^2\mathrm dt=\int_{\mathbb R}\frac{L\sin^2u}{\pi u^2}\,\mathrm du=\frac{L}{\pi}\cdot\pi=L=\left\|f\right\|_2^2.
 $$
-其中用了数学分析中的已知积分 $\int_{\mathbb R}\frac{\sin^2u}{u^2}\,\mathrm du=\pi$, 而 $\left\|f\right\|_2^2=m\left(\left[\alpha,\beta\right]\right)=L$.
+
+其中用了 $\int_{\mathbb R}\frac{\sin^2u}{u^2}\,\mathrm du=\pi$ 与 $\left\|f\right\|_2^2=m\left(\left[\alpha,\beta\right]\right)=L$. $\blacksquare$
 
 **(i) 第三步: 延拓到 $L^2\left(\mathbb R\right)$.** 任取 $f\in L^2\left(\mathbb R\right)$, 由第一步取 $\left\{f_n\right\}\subset A$ 使 $\left\|f_n-f\right\|_2\to0$. 由第二步,
+
 $$
 \left\|\widehat f_n-\widehat f_m\right\|_2=\left\|\widehat{f_n-f_m}\right\|_2=\left\|f_n-f_m\right\|_2\le\left\|f_n-f\right\|_2+\left\|f-f_m\right\|_2,
 $$
+
 故 $\left\{\widehat f_n\right\}$ 是 $L^2\left(\mathbb R\right)$ 中的基本点列; 由**例 1.4.13 ($L^{p}\left(E\right)$ 是巴拿赫空间)**, $L^2\left(\mathbb R\right)$ 完备, 故它收敛. 定义
+
 $$
 Tf=\lim_{n\to\infty}\widehat f_n\quad\text{于 }L^2\left(\mathbb R\right).
 $$
-这个极限与 $\left\{f_n\right\}$ 的取法无关: 若 $\left\{f_n'\right\}\subset A$ 也满足 $\left\|f_n'-f\right\|_2\to0$, 则 $\left\|\widehat f_n-\widehat f_n'\right\|_2\le\left\|f_n-f\right\|_2+\left\|f-f_n'\right\|_2\to0$. 于是 $T$ 在 $L^2\left(\mathbb R\right)$ 上良定义; 由极限的线性性 $T$ 线性; 又
+
+这个极限与 $\left\{f_n\right\}$ 的取法无关: 对于任意的 $n$, 都有
+
+$$
+\left\|\widehat f_n-\widehat f\right\|_2=\left\|\widehat{f_n-f}\right\|_2=\left\|f_n-f\right\|_2\le\left\|f_n-f\right\|_2+\left\|f-f\right\|_2.
+$$
+
+由极限的线性性可知 $T$ 线性; 又
+
 $$
 \left\|Tf\right\|_2=\lim_n\left\|\widehat f_n\right\|_2=\lim_n\left\|f_n\right\|_2=\left\|f\right\|_2,
 $$
-故 $T$ 是等距的, 特别地 $\left\|T\right\|=1$, 即 $T\in\mathfrak B\left(L^2\left(\mathbb R\right)\right)$. 最后, 若 $f\in A$, 取 $f_n\equiv f$, 得 $Tf=\widehat f$, 这正是条件 $T\left(f\right)=\widehat f$ ($f\in A$).
 
-**(ii) 定义方式.** 对 $f\in L^2\left(\mathbb R\right)$, 定义 $\widehat f:=Tf$, 即取 $\left\{f_n\right\}\subset A$ 使 $\left\|f_n-f\right\|_2\to0$ 后令 $\widehat f$ 为 $\widehat f_n$ 在 $L^2\left(\mathbb R\right)$ 中的极限. 这样定义是合理的, 理由有三:
+故 $T$ 是等距的 $\blacksquare$
 
-其一, 它在 $A$ 上与原有定义 (2.3) 式一致, 因为这正是 (i) 中 $T$ 的性质;
-其二, 它保范, 即帕塞瓦尔等式 $\left\|\widehat f\right\|_2=\left\|f\right\|_2$ 对一切 $f\in L^2\left(\mathbb R\right)$ 成立 (或言之, 延拓后的 $\mathcal F$ 是 $L^2$ 上的等距算子);
-其三, 它与逼近列的选取无关, 且对 $f\notin L^1\left(\mathbb R\right)$ 也有意义. 后者是关键: 当 $f\in L^2$ 但 $f\notin L^1$ 时, (2.3) 式的积分未必绝对收敛, 而上述 $L^2$ 极限总存在. 由 $L^2$ 收敛可再取连续代表 (必要时逐次抽取子列使其几乎处处收敛), 于是 $\widehat f$ 亦可理解为一个连续函数 (在 $L^2$ 等价类意义下). $\blacksquare$
+**(ii) 定义方式.** 对 $f\in L^2\left(\mathbb R\right)$, 定义 $\widehat f:=Tf$, 即取 $\left\{f_n\right\}\subset A$ 使 $\left\|f_n-f\right\|_2\to0$ 后令 $\widehat f$ 为 $\widehat f_n$ 在 $L^2\left(\mathbb R\right)$ 中的极限. $\blacksquare$
 
 ## 2.2-1 ($L^{q}$ 诱导的有界线性泛函的范数)
 
