@@ -46,7 +46,7 @@ $$
 
 记 $\varphi\left(t\right)=\frac{t}{1+t}$, $\psi\left(t\right)=\ln\left(1+t\right)$ ($t\ge0$). 由函数 $\varphi,\psi$ 的单调与凹性, $\varphi,\psi$ 在 $\left[0,\infty\right)$ 上严格递增, $\varphi\left(0\right)=\psi\left(0\right)=0$, 且二者都是严格凹函数. 由凹函数过原点的次可加性, $\varphi$ 与 $\psi$ 都满足 $f\left(a+b\right)\le f\left(a\right)+f\left(b\right)$ ($a,b\ge0$).
 
-**第一步: 验证 $d'$ 是 $X$ 上的度量.** 依据**定义 1.1.1 (度量空间)**, 逐条验证 (i)(ii)(iii).
+第一步: 验证 $d'$ 是 $X$ 上的度量. 依据**定义 1.1.1 (度量空间)**, 逐条验证 (i)(ii)(iii).
 
 (i) 非负性与正定性. 由 $d$ 是 $X$ 上的度量 (**定义 1.1.1 (度量空间)**(i)), 对任意 $x,y\in X$ 有 $d\left(x,y\right)\ge0$, 且 $d\left(x,y\right)=0$ 当且仅当 $x=y$. 因 $\varphi$ 的自变量非负, $\varphi\left(t\right)\ge0$ ($t\ge0$), 故 $d'\left(x,y\right)=\varphi\left(d\left(x,y\right)\right)\ge0$. 又因 $\varphi$ 严格递增且 $\varphi\left(0\right)=0$, $\varphi\left(t\right)=0$ 当且仅当 $t=0$, 故
 
@@ -66,7 +66,7 @@ $$
 
 故 $d'\left(x,y\right)\le d'\left(x,z\right)+d'\left(z,y\right)$, (iii) 成立. 由 (i)(ii)(iii) 全部成立, 依据**定义 1.1.1 (度量空间)**, $d'$ 是 $X$ 上的度量.
 
-**第二步: 验证 $d''$ 是 $X$ 上的度量.** 同样依据**定义 1.1.1 (度量空间)** 逐条验证.
+第二步: 验证 $d''$ 是 $X$ 上的度量. 同样依据**定义 1.1.1 (度量空间)** 逐条验证.
 
 (i) 由 $d\left(x,y\right)\ge0$ 及 $\psi$ 严格递增、$\psi\left(0\right)=0$, $\psi\left(t\right)\ge0$ 且 $\psi\left(t\right)=0$ 当且仅当 $t=0$, 故 $d''\left(x,y\right)=\psi\left(d\left(x,y\right)\right)\ge0$, 且 $d''\left(x,y\right)=0\Leftrightarrow d\left(x,y\right)=0\Leftrightarrow x=y$. (i) 成立.
 
@@ -74,7 +74,7 @@ $$
 
 (iii) 由 $d\left(x,y\right)\le d\left(x,z\right)+d\left(z,y\right)$ 及 $\psi$ 严格递增, $d''\left(x,y\right)\le\psi\left(d\left(x,z\right)+d\left(z,y\right)\right)$; 再由 $\psi$ 的次可加性 (凹函数过原点的次可加性), $\psi\left(d\left(x,z\right)+d\left(z,y\right)\right)\le\psi\left(d\left(x,z\right)\right)+\psi\left(d\left(z,y\right)\right)=d''\left(x,z\right)+d''\left(z,y\right)$. (iii) 成立. 故 $d''$ 也是 $X$ 上的度量.
 
-**第三步: 三种度量下收敛性一致.** 依据**定义 1.1.2 (极限)**, 记 $\varepsilon_n=d\left(x_n,x_0\right)$, 则
+第三步: 三种度量下收敛性一致. 依据**定义 1.1.2 (极限)**, 记 $\varepsilon_n=d\left(x_n,x_0\right)$, 则
 
 $$
 x_n\overset d\to x_0\Leftrightarrow\varepsilon_n\to0.
@@ -112,7 +112,7 @@ $$
 
 ### 解答 1.1-4
 
-**(i) $d_1$ 是 $X$ 上的度量.** 依据**定义 1.1.1 (度量空间)** 逐条验证.
+(i) $d_1$ 是 $X$ 上的度量. 依据**定义 1.1.1 (度量空间)** 逐条验证.
 
 (i) 对任意 $x\in\left[0,1\right]$, $\left|P\left(x\right)-Q\left(x\right)\right|\ge0$, 故 $d_1\left(P,Q\right)=\max_{x\in\left[0,1\right]}\left|P\left(x\right)-Q\left(x\right)\right|\ge0$. 且 $d_1\left(P,Q\right)=0$ 当且仅当 $\max_{x\in\left[0,1\right]}\left|P\left(x\right)-Q\left(x\right)\right|=0$, 当且仅当 $\left|P\left(x\right)-Q\left(x\right)\right|=0$ 对一切 $x\in\left[0,1\right]$ 成立, 当且仅当 $P\left(x\right)\equiv Q\left(x\right)$, 即 $P=Q$. 非负性与正定性成立.
 
@@ -126,7 +126,7 @@ $$
 
 该不等式右端与 $x$ 无关, 故对左端关于 $x\in\left[0,1\right]$ 取最大值, 得 $d_1\left(P,Q\right)\le d_1\left(P,R\right)+d_1\left(R,Q\right)$. 三角不等式成立. 故 $d_1$ 是 $X$ 上的度量.
 
-**(i) $d_2$ 是 $X$ 上的度量.** 同样依据**定义 1.1.1 (度量空间)** 逐条验证.
+(i) $d_2$ 是 $X$ 上的度量. 同样依据**定义 1.1.1 (度量空间)** 逐条验证.
 
 (i) 由 $\left|a_i\right|\ge0$ ($\forall i$), $d_2\left(P,Q\right)=\sum_{i=0}^{n}\left|a_i\right|\ge0$. 且 $d_2\left(P,Q\right)=0$ 当且仅当 $\sum_{i=0}^{n}\left|a_i\right|=0$, 当且仅当 $a_i=0$ ($\forall i$), 当且仅当 $P-Q\equiv0$, 即 $P=Q$. 非负性与正定性成立.
 
@@ -140,7 +140,7 @@ $$
 
 三角不等式成立. 故 $d_2$ 也是 $X$ 上的度量.
 
-**(ii) 按 $d_1$ 收敛等价于在 $\left[0,1\right]$ 上一致收敛.** 依据**定义 1.1.2 (极限)** 与 $d_1$ 的定义,
+(ii) 按 $d_1$ 收敛等价于在 $\left[0,1\right]$ 上一致收敛. 依据**定义 1.1.2 (极限)** 与 $d_1$ 的定义,
 
 $$
 P_k\overset{d_1}\to P\Leftrightarrow d_1\left(P_k,P\right)=\max_{x\in\left[0,1\right]}\left|P_k\left(x\right)-P\left(x\right)\right|\to0.
@@ -148,7 +148,7 @@ $$
 
 而 $\max_{x\in\left[0,1\right]}\left|P_k\left(x\right)-P\left(x\right)\right|\to0$ 正是函数列 $\left\{P_k\right\}$ 在 $\left[0,1\right]$ 上一致收敛于 $P$ 的定义. 由**例 1.1.10 (一致收敛与度量收敛)**, $C\left[a,b\right]$ 中点列按最大模范量收敛等价于在 $\left[a,b\right]$ 上一致收敛; 多项式空间 $X\subset C\left[0,1\right]$ 作为子空间继承这一对应. 故按 $d_1$ 收敛等价于在 $\left[0,1\right]$ 上一致收敛于某一多项式.
 
-**(iii) 按 $d_2$ 收敛推出按 $d_1$ 收敛.** 设 $P_k\overset{d_2}\to Q$, 记 $P_k-Q=\sum_{i=0}^{n_k}a_i^{\left(k\right)}x^i$, 则 $d_2\left(P_k,Q\right)=\sum_{i=0}^{n_k}\left|a_i^{\left(k\right)}\right|\to0$. 对任意 $x\in\left[0,1\right]$, 有 $0\le x^i\le1$ 对每个 $i$ 成立, 由实数绝对值的三角不等式,
+(iii) 按 $d_2$ 收敛推出按 $d_1$ 收敛. 设 $P_k\overset{d_2}\to Q$, 记 $P_k-Q=\sum_{i=0}^{n_k}a_i^{\left(k\right)}x^i$, 则 $d_2\left(P_k,Q\right)=\sum_{i=0}^{n_k}\left|a_i^{\left(k\right)}\right|\to0$. 对任意 $x\in\left[0,1\right]$, 有 $0\le x^i\le1$ 对每个 $i$ 成立, 由实数绝对值的三角不等式,
 
 $$
 \left|P_k\left(x\right)-Q\left(x\right)\right|=\left|\sum_{i=0}^{n_k}a_i^{\left(k\right)}x^i\right|\le\sum_{i=0}^{n_k}\left|a_i^{\left(k\right)}\right|x^i\le\sum_{i=0}^{n_k}\left|a_i^{\left(k\right)}\right|=d_2\left(P_k,Q\right).
@@ -156,7 +156,7 @@ $$
 
 上式对一切 $x\in\left[0,1\right]$ 一致成立且右端趋于 $0$, 故 $d_1\left(P_k,Q\right)=\max_{x\in\left[0,1\right]}\left|P_k\left(x\right)-Q\left(x\right)\right|\to0$, 即 $P_k\overset{d_1}\to Q$.
 
-**(iii) 反之不真.** 取 $P_k\left(x\right)=x^k\left(1-x\right)^k$. 由二项式定理,
+(iii) 反之不真. 取 $P_k\left(x\right)=x^k\left(1-x\right)^k$. 由二项式定理,
 
 $$
 P_k\left(x\right)=x^k\sum_{j=0}^{k}\binom{k}{j}\left(-x\right)^j=\sum_{j=0}^{k}\binom{k}{j}\left(-1\right)^jx^{k+j}.
@@ -190,9 +190,9 @@ $$
 
 ### 解答 1.1-5
 
-**(i) 对 $a,b> 0$, 证明 $\left(a+b\right)^p\le a^p+b^p$.** 令 $f\left(t\right)=t^p$ ($t\ge0$). 由 $0< p< 1$, $\left(t^p\right)''=p\left(p-1\right)t^{p-2}< 0$ ($t> 0$), 且 $f\left(0\right)=0$, 故 $f$ 是 $\left[0,\infty\right)$ 上的凹函数 (幂函数的单调性). 由凹函数过原点的次可加性, $f\left(a+b\right)\le f\left(a\right)+f\left(b\right)$, 即 $\left(a+b\right)^p\le a^p+b^p$ 对 $a,b\ge0$ 成立, 特别对 $a,b> 0$ 成立.
+(i) 对 $a,b> 0$, 证明 $\left(a+b\right)^p\le a^p+b^p$. 令 $f\left(t\right)=t^p$ ($t\ge0$). 由 $0< p< 1$, $\left(t^p\right)''=p\left(p-1\right)t^{p-2}< 0$ ($t> 0$), 且 $f\left(0\right)=0$, 故 $f$ 是 $\left[0,\infty\right)$ 上的凹函数 (幂函数的单调性). 由凹函数过原点的次可加性, $f\left(a+b\right)\le f\left(a\right)+f\left(b\right)$, 即 $\left(a+b\right)^p\le a^p+b^p$ 对 $a,b\ge0$ 成立, 特别对 $a,b> 0$ 成立.
 
-**(ii) 验证 $d$ 是伪度量.** 依据**定义 1.1.1 (度量空间)**, 验证非负性、(ii) 对称性与 (iii) 三角不等式 (不要求 (i) 中的正定性).
+(ii) 验证 $d$ 是伪度量. 依据**定义 1.1.1 (度量空间)**, 验证非负性、(ii) 对称性与 (iii) 三角不等式 (不要求 (i) 中的正定性).
 
 非负性: 对任意 $f,g$, 逐点有 $\left|f\left(t\right)-g\left(t\right)\right|^p\ge0$, 故 $d\left(f,g\right)=\int_0^1\left|f\left(t\right)-g\left(t\right)\right|^p\,\mathrm dt\ge0$.
 
@@ -218,7 +218,7 @@ $$
 
 (iii) 成立. 综上, $d$ 是非负的且满足 (ii)(iii), 即 $d$ 是伪度量.
 
-**(iii) 商空间 $\left(L^p\left[a,b\right],d\right)$ 是度量空间.** 由 (ii), 非负性、对称性与三角不等式在商空间 $L^p\left[a,b\right]=\mathcal L^p\left[a,b\right]/\sim$ 上仍然成立, 依据**定义 1.1.1 (度量空间)** 只需再验证正定性. 对等价类 $\left[f\right],\left[g\right]$,
+(iii) 商空间 $\left(L^p\left[a,b\right],d\right)$ 是度量空间. 由 (ii), 非负性、对称性与三角不等式在商空间 $L^p\left[a,b\right]=\mathcal L^p\left[a,b\right]/\sim$ 上仍然成立, 依据**定义 1.1.1 (度量空间)** 只需再验证正定性. 对等价类 $\left[f\right],\left[g\right]$,
 
 $$
 d\left(\left[f\right],\left[g\right]\right)=0\Leftrightarrow\int_0^1\left|f\left(t\right)-g\left(t\right)\right|^p\,\mathrm dt=0.
@@ -250,7 +250,7 @@ $$
 
 其中 $\rho\left(x,y\right)=\left\|x-y\right\|$ 即**例 1.1.2 ($n$ 维欧几里得空间)** 中的欧几里得距离.
 
-**(i) 计算 $d\left(\left(1,0,0\right),\left(x_1,x_2,0\right)\right)$.** 设 $\theta$ 为两点在赤道大圆上的中心角. 两点都是单位向量且都在赤道平面 $x_3=0$ 上, 由单位向量内积与夹角,
+(i) 计算 $d\left(\left(1,0,0\right),\left(x_1,x_2,0\right)\right)$. 设 $\theta$ 为两点在赤道大圆上的中心角. 两点都是单位向量且都在赤道平面 $x_3=0$ 上, 由单位向量内积与夹角,
 
 $$
 \cos\theta=\left(1,0,0\right)\cdot\left(x_1,x_2,0\right)=x_1.
@@ -264,7 +264,7 @@ $$
 
 结合 $x_1^2+x_2^2=1$, 当 $x_2\ge0$ 时, 也可写为 $d\left(\left(1,0,0\right),\left(x_1,x_2,0\right)\right)=\arcsin x_2$.
 
-**(ii) 证明 $\rho\left(x,y\right)\le d\left(x,y\right)\le\frac{\pi}{2}\rho\left(x,y\right)$.** 设 $\theta=d\left(x,y\right)\in\left[0,\pi\right]$ 为 $x,y$ 的中心角. 由 $\left\|x\right\|=\left\|y\right\|=1$ 及 $x\cdot y=\cos\theta$ (单位向量内积与夹角),
+(ii) 证明 $\rho\left(x,y\right)\le d\left(x,y\right)\le\frac{\pi}{2}\rho\left(x,y\right)$. 设 $\theta=d\left(x,y\right)\in\left[0,\pi\right]$ 为 $x,y$ 的中心角. 由 $\left\|x\right\|=\left\|y\right\|=1$ 及 $x\cdot y=\cos\theta$ (单位向量内积与夹角),
 
 $$
 \rho\left(x,y\right)^2=\left\|x-y\right\|^2=\left\|x\right\|^2+\left\|y\right\|^2-2x\cdot y=2\left(1-\cos\theta\right)=4\sin^2\frac{\theta}{2},
@@ -282,7 +282,7 @@ $$
 
 合并两边即得 $\rho\left(x,y\right)\le d\left(x,y\right)\le\frac{\pi}{2}\rho\left(x,y\right)$.
 
-**(iii) 验证 $d$ 是 $S^2$ 上的度量.** 依据**定义 1.1.1 (度量空间)** 逐条验证.
+(iii) 验证 $d$ 是 $S^2$ 上的度量. 依据**定义 1.1.1 (度量空间)** 逐条验证.
 
 (i) 劣弧长非负, 故 $d\left(x,y\right)\ge0$; 且 $d\left(x,y\right)=0$ 当且仅当两端点重合的劣弧长度为 $0$, 当且仅当 $x=y$. 非负性与正定性成立.
 

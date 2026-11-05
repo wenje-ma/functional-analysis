@@ -210,7 +210,7 @@ $$
 c_1\sqrt{\sum_{i=1}^n\left|x_i\right|^2}\le\left\|x\right\|\le c_2\sqrt{\sum_{i=1}^n\left|x_i\right|^2}.
 $$
 
-**第一步: 建立坐标同构.** 因 $X$ 是 $n$ 维线性空间, 依据**定义 1.2.1 (哈梅尔基与维数)**, 可取 $X$ 的一组基 $e_1,e_2,\cdots,e_n$. 定义线性映射
+第一步: 建立坐标同构. 因 $X$ 是 $n$ 维线性空间, 依据**定义 1.2.1 (哈梅尔基与维数)**, 可取 $X$ 的一组基 $e_1,e_2,\cdots,e_n$. 定义线性映射
 
 $$
 T\colon\mathbb R^n\to X,\quad T\left(\left(x_1,x_2,\cdots,x_n\right)\right)=\sum_{i=1}^n x_i e_i.
@@ -218,7 +218,7 @@ $$
 
 由于 $\left\{e_i\right\}$ 是基, $T$ 是 $\mathbb R^n$ 到 $X$ 上的一一对应, 即线性同构.
 
-**第二步: 证明范数 $\left\|T\left(\cdot\right)\right\|$ 在 $\mathbb R^n$ 的单位球面上连续且恒正.** 在 $\mathbb R^n$ 的单位球面 $S^{n-1}=\left\{\left(x_i\right):\sum_{i=1}^n x_i^2=1\right\}$ 上定义函数
+第二步: 证明范数 $\left\|T\left(\cdot\right)\right\|$ 在 $\mathbb R^n$ 的单位球面上连续且恒正. 在 $\mathbb R^n$ 的单位球面 $S^{n-1}=\left\{\left(x_i\right):\sum_{i=1}^n x_i^2=1\right\}$ 上定义函数
 
 $$
 f\left(\left(x_i\right)\right)=\left\|T\left(\left(x_i\right)\right)\right\|=\left\|\sum_{i=1}^n x_i e_i\right\|.
@@ -232,7 +232,7 @@ $$
 
 再由**引理 1.2.3 (柯西-施瓦茨不等式)** 应用于向量 $\left(\left|u_i-v_i\right|\right)$ 与 $\left(\left\|e_i\right\|\right)$, 右端不超过 $\sqrt{\sum_i\left\|e_i\right\|^2}\cdot\left\|u-v\right\|_2$, 故 $T$ 是 $\mathbb R^n$ 到 $X$ 的利普希茨映射, 从而连续. 于是复合函数 $f=\left\|\cdot\right\|\circ T$ 是 $\mathbb R^n$ 上的连续函数. 又因 $\left\{e_i\right\}$ 线性无关, 对一切 $\left(x_i\right)\ne0$ 有 $\sum_i x_i e_i\ne0$, 故在 $S^{n-1}$ 上 $f> 0$.
 
-**第三步: 用紧性取上下确界.** 由**例 1.6.1 (有限维空间中相对列紧等价于有界)**, $\mathbb R^n$ 中有界集相对列紧, 而 $S^{n-1}$ 是有界闭集, 故 $S^{n-1}$ 是紧集. 依据**推论 1.6.3 (连续函数达到上下确界)**, 连续函数 $f$ 在 $S^{n-1}$ 上同时达到下确界与上确界: 存在 $\left(x_i^0\right),\left(x_i^1\right)\in S^{n-1}$ 使
+第三步: 用紧性取上下确界. 由**例 1.6.1 (有限维空间中相对列紧等价于有界)**, $\mathbb R^n$ 中有界集相对列紧, 而 $S^{n-1}$ 是有界闭集, 故 $S^{n-1}$ 是紧集. 依据**推论 1.6.3 (连续函数达到上下确界)**, 连续函数 $f$ 在 $S^{n-1}$ 上同时达到下确界与上确界: 存在 $\left(x_i^0\right),\left(x_i^1\right)\in S^{n-1}$ 使
 
 $$
 c_1:=f\left(\left(x_i^0\right)\right)=\min_{\left(x_i\right)\in S^{n-1}}f\left(\left(x_i\right)\right)> 0,\quad
@@ -241,7 +241,7 @@ $$
 
 于是对一切 $\left(x_i\right)\in S^{n-1}$ 有 $c_1\le f\left(\left(x_i\right)\right)\le c_2$.
 
-**第四步: 由齐性推广到全空间.** 对任意 $\left(x_i\right)\ne0$, 记 $r=\sqrt{\sum_i x_i^2}$, 则 $\left(x_i\right)/r\in S^{n-1}$. 依据**定义 1.2.2 (半范数与范数)** 中的齐次性 $\left\|\alpha x\right\|=\left|\alpha\right|\left\|x\right\|$, 有
+第四步: 由齐性推广到全空间. 对任意 $\left(x_i\right)\ne0$, 记 $r=\sqrt{\sum_i x_i^2}$, 则 $\left(x_i\right)/r\in S^{n-1}$. 依据**定义 1.2.2 (半范数与范数)** 中的齐次性 $\left\|\alpha x\right\|=\left|\alpha\right|\left\|x\right\|$, 有
 
 $$
 \left\|T\left(\left(x_i\right)\right)\right\|=r\left\|T\left(\left(x_i\right)/r\right)\right\|,\quad c_1\le\left\|T\left(\left(x_i\right)/r\right)\right\|\le c_2,
@@ -267,11 +267,11 @@ $$
 O_n=\left\{x\in X:d\left(x,B\right)< \frac1n\right\}.
 $$
 
-**第一步: 每个 $O_n$ 是开集.** 依据**例 1.4.3 (距离函数连续)**, 函数 $x\mapsto d\left(x,B\right)$ 是 $X$ 上的连续函数. 而区间 $\left(-\infty,\frac1n\right)$ 是 $\mathbb R$ 中的开集, 依据**定理 1.4.1 (连续映射的等价条件)**, 开集的原像 $O_n=\left(d\left(\cdot,B\right)\right)^{-1}\left(\left(-\infty,\frac1n\right)\right)$ 是 $X$ 中的开集.
+第一步: 每个 $O_n$ 是开集. 依据**例 1.4.3 (距离函数连续)**, 函数 $x\mapsto d\left(x,B\right)$ 是 $X$ 上的连续函数. 而区间 $\left(-\infty,\frac1n\right)$ 是 $\mathbb R$ 中的开集, 依据**定理 1.4.1 (连续映射的等价条件)**, 开集的原像 $O_n=\left(d\left(\cdot,B\right)\right)^{-1}\left(\left(-\infty,\frac1n\right)\right)$ 是 $X$ 中的开集.
 
-**第二步: $\left\{O_n\right\}$ 递减且每个 $O_n$ 包含 $B$.** 因 $\frac1{n+1}< \frac1n$, 故 $d\left(x,B\right)< \frac1{n+1}$ 蕴含 $d\left(x,B\right)< \frac1n$, 即 $O_{n+1}\subset O_n$, 故 $\left\{O_n\right\}$ 是递减开集列. 又对任意 $x\in B$, 由下确界定义 $d\left(x,B\right)=\inf_{z\in B}d\left(x,z\right)\le d\left(x,x\right)=0$, 故 $d\left(x,B\right)=0< \frac1n$, 从而 $x\in O_n$, 即 $B\subset O_n$ 对一切 $n$ 成立.
+第二步: $\left\{O_n\right\}$ 递减且每个 $O_n$ 包含 $B$. 因 $\frac1{n+1}< \frac1n$, 故 $d\left(x,B\right)< \frac1{n+1}$ 蕴含 $d\left(x,B\right)< \frac1n$, 即 $O_{n+1}\subset O_n$, 故 $\left\{O_n\right\}$ 是递减开集列. 又对任意 $x\in B$, 由下确界定义 $d\left(x,B\right)=\inf_{z\in B}d\left(x,z\right)\le d\left(x,x\right)=0$, 故 $d\left(x,B\right)=0< \frac1n$, 从而 $x\in O_n$, 即 $B\subset O_n$ 对一切 $n$ 成立.
 
-**第三步: 证明 $\bigcap_n O_n\subset B$.** 设 $x\in\bigcap_{n=1}^{\infty}O_n$, 则 $d\left(x,B\right)< \frac1n$ 对一切 $n$ 成立, 令 $n\to\infty$ 得 $d\left(x,B\right)=0$. 由下确界定义, 对每个 $n$ 存在 $z_n\in B$ 使 $d\left(x,z_n\right)< \frac1n$, 故 $z_n\to x$. 依据**定义 1.4.3 (极限点、导集、闭包与闭集)**, $x$ 是 $B$ 的极限点, 故 $x\in B'$. 又 $B$ 是闭集, 依据**定义 1.4.3 (极限点、导集、闭包与闭集)** (iii), 闭集满足 $B'\subset B$, 故 $x\in B$. 于是 $\bigcap_n O_n\subset B$.
+第三步: 证明 $\bigcap_n O_n\subset B$. 设 $x\in\bigcap_{n=1}^{\infty}O_n$, 则 $d\left(x,B\right)< \frac1n$ 对一切 $n$ 成立, 令 $n\to\infty$ 得 $d\left(x,B\right)=0$. 由下确界定义, 对每个 $n$ 存在 $z_n\in B$ 使 $d\left(x,z_n\right)< \frac1n$, 故 $z_n\to x$. 依据**定义 1.4.3 (极限点、导集、闭包与闭集)**, $x$ 是 $B$ 的极限点, 故 $x\in B'$. 又 $B$ 是闭集, 依据**定义 1.4.3 (极限点、导集、闭包与闭集)** (iii), 闭集满足 $B'\subset B$, 故 $x\in B$. 于是 $\bigcap_n O_n\subset B$.
 
 综合第二步与第三步, $B\subset\bigcap_n O_n\subset B$, 故 $\bigcap_{n=1}^{\infty}O_n=B$. $\blacksquare$
 
@@ -288,9 +288,9 @@ O=\left\{x\in X:d\left(x,E\right)< \frac{\delta}{2}\right\},\quad
 G=\left\{x\in X:d\left(x,F\right)< \frac{\delta}{2}\right\}.
 $$
 
-**第一步: $O,G$ 是开集且分别包含 $E,F$.** 依据**例 1.4.3 (距离函数连续)**, $x\mapsto d\left(x,E\right)$ 与 $x\mapsto d\left(x,F\right)$ 都是连续函数. 依据**定理 1.4.1 (连续映射的等价条件)**, 开区间 $\left(-\infty,\frac{\delta}{2}\right)$ 在这两个连续函数下的原像 $O,G$ 都是 $X$ 中的开集. 对任意 $x\in E$, 由下确界定义 $d\left(x,E\right)=\inf_{z\in E}d\left(x,z\right)\le d\left(x,x\right)=0$, 故 $d\left(x,E\right)=0< \frac{\delta}{2}$, 即 $x\in O$, 从而 $E\subset O$; 同理 $F\subset G$.
+第一步: $O,G$ 是开集且分别包含 $E,F$. 依据**例 1.4.3 (距离函数连续)**, $x\mapsto d\left(x,E\right)$ 与 $x\mapsto d\left(x,F\right)$ 都是连续函数. 依据**定理 1.4.1 (连续映射的等价条件)**, 开区间 $\left(-\infty,\frac{\delta}{2}\right)$ 在这两个连续函数下的原像 $O,G$ 都是 $X$ 中的开集. 对任意 $x\in E$, 由下确界定义 $d\left(x,E\right)=\inf_{z\in E}d\left(x,z\right)\le d\left(x,x\right)=0$, 故 $d\left(x,E\right)=0< \frac{\delta}{2}$, 即 $x\in O$, 从而 $E\subset O$; 同理 $F\subset G$.
 
-**第二步: 证明 $O\cap G=\varnothing$.** 反设存在 $x\in O\cap G$, 则 $d\left(x,E\right)< \frac{\delta}{2}$ 且 $d\left(x,F\right)< \frac{\delta}{2}$. 由下确界定义, 存在 $y\in E$ 与 $z\in F$ 使 $d\left(x,y\right)< \frac{\delta}{2}$ 与 $d\left(x,z\right)< \frac{\delta}{2}$. 依据**定义 1.1.1 (度量空间)** (iii) 中的三角不等式,
+第二步: 证明 $O\cap G=\varnothing$. 反设存在 $x\in O\cap G$, 则 $d\left(x,E\right)< \frac{\delta}{2}$ 且 $d\left(x,F\right)< \frac{\delta}{2}$. 由下确界定义, 存在 $y\in E$ 与 $z\in F$ 使 $d\left(x,y\right)< \frac{\delta}{2}$ 与 $d\left(x,z\right)< \frac{\delta}{2}$. 依据**定义 1.1.1 (度量空间)** (iii) 中的三角不等式,
 
 $$
 d\left(y,z\right)\le d\left(y,x\right)+d\left(x,z\right)< \frac{\delta}{2}+\frac{\delta}{2}=\delta.
@@ -312,7 +312,7 @@ $$
 
 ### 解答 1.4-5
 
-**先证 $\Rightarrow$ (上半连续蕴含 $X\left(f\ge a\right)$ 闭).** 固定常数 $a$. 依据闭集与补集开集, 要证 $X\left(f\ge a\right)$ 闭, 只须证其补集 $X\setminus X\left(f\ge a\right)$ 是开集. 任取 $x_0\notin X\left(f\ge a\right)$, 即 $f\left(x_0\right)< a$. 由上半连续定义,
+先证 $\Rightarrow$ (上半连续蕴含 $X\left(f\ge a\right)$ 闭). 固定常数 $a$. 依据闭集与补集开集, 要证 $X\left(f\ge a\right)$ 闭, 只须证其补集 $X\setminus X\left(f\ge a\right)$ 是开集. 任取 $x_0\notin X\left(f\ge a\right)$, 即 $f\left(x_0\right)< a$. 由上半连续定义,
 
 $$
 \lim_{r\to0}\sup_{x\in O\left(x_0,r\right)}f\left(x\right)\le f\left(x_0\right)< a.
@@ -320,7 +320,7 @@ $$
 
 由上式左端的极限严格小于 $a$, 存在 $r_0> 0$ 使 $\sup_{x\in O\left(x_0,r_0\right)}f\left(x\right)< a$, 即对一切 $x\in O\left(x_0,r_0\right)$ 有 $f\left(x\right)< a$, 故 $O\left(x_0,r_0\right)\subset X\setminus X\left(f\ge a\right)$. 依据**例 1.4.1 (开球是开集)**, $O\left(x_0,r_0\right)$ 是开集, 故 $x_0$ 是其内点 (依据**定义 1.4.1 (内点、内部与开集)**). 由于 $x_0$ 任取, $X\setminus X\left(f\ge a\right)$ 是开集, 故 $X\left(f\ge a\right)$ 是闭集.
 
-**再证 $\Leftarrow$ (水平集对一切 $a$ 闭蕴含上半连续).** 固定 $x_0\in X$. 对任意实数 $a> f\left(x_0\right)$, 因 $f\left(x_0\right)< a$, 故 $x_0\notin X\left(f\ge a\right)$. 由假设 $X\left(f\ge a\right)$ 是闭集, 依据闭集与补集开集, 其补集 $X\setminus X\left(f\ge a\right)$ 是开集; 而 $x_0$ 属于该开集, 依据**定义 1.4.1 (内点、内部与开集)**, 存在 $r_0> 0$ 使 $O\left(x_0,r_0\right)\subset X\setminus X\left(f\ge a\right)$, 即对一切 $x\in O\left(x_0,r_0\right)$ 有 $f\left(x\right)< a$, 从而
+再证 $\Leftarrow$ (水平集对一切 $a$ 闭蕴含上半连续). 固定 $x_0\in X$. 对任意实数 $a> f\left(x_0\right)$, 因 $f\left(x_0\right)< a$, 故 $x_0\notin X\left(f\ge a\right)$. 由假设 $X\left(f\ge a\right)$ 是闭集, 依据闭集与补集开集, 其补集 $X\setminus X\left(f\ge a\right)$ 是开集; 而 $x_0$ 属于该开集, 依据**定义 1.4.1 (内点、内部与开集)**, 存在 $r_0> 0$ 使 $O\left(x_0,r_0\right)\subset X\setminus X\left(f\ge a\right)$, 即对一切 $x\in O\left(x_0,r_0\right)$ 有 $f\left(x\right)< a$, 从而
 
 $$
 \sup_{x\in O\left(x_0,r_0\right)}f\left(x\right)\le a.
@@ -340,9 +340,9 @@ $$
 
 ### 解答 1.4-7
 
-**第一步: 取可数稠密子集.** 因 $X$ 可分, 依据**定义 1.4.6 (可分性)**, 存在可数子集 $D=\left\{x_1,x_2,\cdots\right\}$ 在 $X$ 中稠密, 即依据**定义 1.4.5 (稠密性)**, $\overline D=X$.
+第一步: 取可数稠密子集. 因 $X$ 可分, 依据**定义 1.4.6 (可分性)**, 存在可数子集 $D=\left\{x_1,x_2,\cdots\right\}$ 在 $X$ 中稠密, 即依据**定义 1.4.5 (稠密性)**, $\overline D=X$.
 
-**第二步: 证明可数开球族构成开基.** 断言: 对任意开集 $G\subset X$ 及任意 $x\in G$, 存在 $x_n\in D$ 与正有理数 $r$ 使 $x\in O\left(x_n,r\right)\subset G$. 事实上, 由 $G$ 是开集及**定义 1.4.1 (内点、内部与开集)**, 存在 $\varepsilon> 0$ 使 $O\left(x,\varepsilon\right)\subset G$. 由 $\overline D=X$ 及 $x\in X$, $x$ 是 $D$ 的闭包中的点, 故存在 $x_n\in D$ 使 $d\left(x,x_n\right)< \frac{\varepsilon}{2}$. 依据有理数在实数中稠密, 可取有理数 $r$ 使 $d\left(x,x_n\right)< r< \frac{\varepsilon}{2}$. 对任意 $y\in O\left(x_n,r\right)$, 依据**定义 1.1.1 (度量空间)** (iii) 的三角不等式,
+第二步: 证明可数开球族构成开基. 断言: 对任意开集 $G\subset X$ 及任意 $x\in G$, 存在 $x_n\in D$ 与正有理数 $r$ 使 $x\in O\left(x_n,r\right)\subset G$. 事实上, 由 $G$ 是开集及**定义 1.4.1 (内点、内部与开集)**, 存在 $\varepsilon> 0$ 使 $O\left(x,\varepsilon\right)\subset G$. 由 $\overline D=X$ 及 $x\in X$, $x$ 是 $D$ 的闭包中的点, 故存在 $x_n\in D$ 使 $d\left(x,x_n\right)< \frac{\varepsilon}{2}$. 依据有理数在实数中稠密, 可取有理数 $r$ 使 $d\left(x,x_n\right)< r< \frac{\varepsilon}{2}$. 对任意 $y\in O\left(x_n,r\right)$, 依据**定义 1.1.1 (度量空间)** (iii) 的三角不等式,
 
 $$
 d\left(y,x\right)\le d\left(y,x_n\right)+d\left(x_n,x\right)< r+\frac{\varepsilon}{2}< \frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon,
@@ -350,7 +350,7 @@ $$
 
 故 $y\in O\left(x,\varepsilon\right)\subset G$, 即 $O\left(x_n,r\right)\subset G$, 且 $x\in O\left(x_n,r\right)$. 断言得证.
 
-**第三步: 构造至多可列子覆盖.** 考虑可数族
+第三步: 构造至多可列子覆盖. 考虑可数族
 
 $$
 \mathscr B=\left\{O\left(x_n,r\right):n=1,2,\cdots;\ r\in\mathbb Q,\ r> 0\right\}.
@@ -372,7 +372,7 @@ $$
 
 ### 解答 1.4-9
 
-**第一步: 把 $f$ 截断为支集有界的函数.** 对 $f\in L^p\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$, 令 $f_N=f\cdot\chi_{\left[-N,N\right]}$. 因 $\left|f\right|^p\mathrm e^{-t^2}$ 非负可积, 依据可积函数尾积分趋于零,
+第一步: 把 $f$ 截断为支集有界的函数. 对 $f\in L^p\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$, 令 $f_N=f\cdot\chi_{\left[-N,N\right]}$. 因 $\left|f\right|^p\mathrm e^{-t^2}$ 非负可积, 依据可积函数尾积分趋于零,
 
 $$
 \left\|f-f_N\right\|_p^p=\int_{\left|t\right|> N}\left|f\left(t\right)\right|^p\mathrm e^{-t^2}\mathrm dt\to0\quad\left(N\to\infty\right).
@@ -380,7 +380,7 @@ $$
 
 故对给定 $\varepsilon> 0$, 可取 $N$ 使 $\left\|f-f_N\right\|_p< \frac{\varepsilon}{2}$.
 
-**第二步: 支集有界的函数可用 $C_c^\infty$ 在普通 $L^p\left(\mathbb R\right)$ 中逼近.** 在 $\left[-N,N\right]$ 上有 $\mathrm e^{-t^2}\ge\mathrm e^{-N^2}> 0$, 故
+第二步: 支集有界的函数可用 $C_c^\infty$ 在普通 $L^p\left(\mathbb R\right)$ 中逼近. 在 $\left[-N,N\right]$ 上有 $\mathrm e^{-t^2}\ge\mathrm e^{-N^2}> 0$, 故
 
 $$
 \int_{\mathbb R}\left|f_N\right|^p\mathrm dt\le\mathrm e^{N^2}\int_{\mathbb R}\left|f_N\right|^p\mathrm e^{-t^2}\mathrm dt\le\mathrm e^{N^2}\int_{\mathbb R}\left|f\right|^p\mathrm e^{-t^2}\mathrm dt< \infty,
@@ -392,7 +392,7 @@ $$
 \left\|f_N-\varphi\right\|_{L^p\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)}\le\left\|f_N-\varphi\right\|_{L^p\left(\mathbb R\right)}< \frac{\varepsilon}{2}.
 $$
 
-**第三步: 三角不等式合拢.** 依据**定义 1.2.2 (半范数与范数)** (iii) 的三角不等式,
+第三步: 三角不等式合拢. 依据**定义 1.2.2 (半范数与范数)** (iii) 的三角不等式,
 
 $$
 \left\|f-\varphi\right\|_p\le\left\|f-f_N\right\|_p+\left\|f_N-\varphi\right\|_p< \frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon.
@@ -400,7 +400,7 @@ $$
 
 故对任意 $f$ 与 $\varepsilon> 0$, 存在 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 使 $\left\|f-\varphi\right\|_p< \varepsilon$, 依据**定义 1.4.5 (稠密性)**, $C_c^\infty\left(\mathbb R\right)$ 在 $L^p\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$ 中稠密.
 
-**关于多项式全体:** 多项式全体也是稠密集. 依据**例 1.3.9 (埃尔米特多项式构成完备正交系)**, 埃尔米特多项式族关于权 $\mathrm e^{-t^2}$ 正交且完备, 因而它在 $L^2\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$ 中按该范数张成的闭包为全空间, 故多项式全体在 $L^2\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$ 中稠密; 对一般 $1\le p< \infty$ 亦然. $\blacksquare$
+关于多项式全体: 多项式全体也是稠密集. 依据**例 1.3.9 (埃尔米特多项式构成完备正交系)**, 埃尔米特多项式族关于权 $\mathrm e^{-t^2}$ 正交且完备, 因而它在 $L^2\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$ 中按该范数张成的闭包为全空间, 故多项式全体在 $L^2\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$ 中稠密; 对一般 $1\le p< \infty$ 亦然. $\blacksquare$
 
 ## 1.4-10 ($C_{2\pi}$ 中的稠密性)
 
@@ -414,7 +414,7 @@ $$
 
 ### 解答 1.4-10
 
-**(i) $\mathcal P$ 在 $C_{2\pi}$ 中稠密.** 设 $f\in C_{2\pi}$, $\varepsilon> 0$. 依据**例 1.4.5 (魏尔斯特拉斯第一逼近定理)**, 多项式全体在 $C\left[0,2\pi\right]$ 中稠密, 故存在多项式 $Q$ 使 $\left\|f-Q\right\|_{C\left[0,2\pi\right]}< \frac{\varepsilon}{4}$. 记 $\delta=Q\left(2\pi\right)-Q\left(0\right)$, 则
+(i) $\mathcal P$ 在 $C_{2\pi}$ 中稠密. 设 $f\in C_{2\pi}$, $\varepsilon> 0$. 依据**例 1.4.5 (魏尔斯特拉斯第一逼近定理)**, 多项式全体在 $C\left[0,2\pi\right]$ 中稠密, 故存在多项式 $Q$ 使 $\left\|f-Q\right\|_{C\left[0,2\pi\right]}< \frac{\varepsilon}{4}$. 记 $\delta=Q\left(2\pi\right)-Q\left(0\right)$, 则
 
 $$
 \left|\delta\right|\le\left|Q\left(2\pi\right)-f\left(2\pi\right)\right|+\left|f\left(2\pi\right)-f\left(0\right)\right|+\left|f\left(0\right)-Q\left(0\right)\right|< \frac{\varepsilon}{4}+0+\frac{\varepsilon}{4}=\frac{\varepsilon}{2}.
@@ -428,7 +428,7 @@ $$
 
 依据**定义 1.2.2 (半范数与范数)** (iii), $\left\|f-P\right\|\le\left\|f-Q\right\|+\left\|Q-P\right\|< \frac{\varepsilon}{4}+\frac{\varepsilon}{2}< \varepsilon$. 依据**定义 1.4.5 (稠密性)**, $\mathcal P$ 在 $C_{2\pi}$ 中稠密.
 
-**(ii) 第一部分: $C_{2\pi}$ 在 $L^p\left[0,2\pi\right]$ 中稠密.** 设 $f\in L^p\left[0,2\pi\right]$, $\varepsilon> 0$. 依据**注 1.4.1 ($L^{p}$ 中的稠密子集)**, $C\left[0,2\pi\right]$ 在 $L^p\left[0,2\pi\right]$ 中稠密, 故存在 $g\in C\left[0,2\pi\right]$ 使 $\left\|f-g\right\|_p< \frac{\varepsilon}{2}$. 现把 $g$ 在左端点附近稍作修改以令其满足 $h\left(0\right)=h\left(2\pi\right)$: 取 $\eta> 0$ 充分小, 令
+(ii) 第一部分: $C_{2\pi}$ 在 $L^p\left[0,2\pi\right]$ 中稠密. 设 $f\in L^p\left[0,2\pi\right]$, $\varepsilon> 0$. 依据**注 1.4.1 ($L^{p}$ 中的稠密子集)**, $C\left[0,2\pi\right]$ 在 $L^p\left[0,2\pi\right]$ 中稠密, 故存在 $g\in C\left[0,2\pi\right]$ 使 $\left\|f-g\right\|_p< \frac{\varepsilon}{2}$. 现把 $g$ 在左端点附近稍作修改以令其满足 $h\left(0\right)=h\left(2\pi\right)$: 取 $\eta> 0$ 充分小, 令
 
 $$
 h\left(t\right)=
@@ -440,9 +440,9 @@ $$
 
 则 $h$ 连续, 且 $h\left(0\right)=g\left(2\pi\right)$, $h\left(2\pi\right)=g\left(2\pi\right)$, 故 $h\left(0\right)=h\left(2\pi\right)$, 即 $h\in C_{2\pi}$. 又 $g,h$ 在 $\left[0,\eta\right]$ 上有界, 设 $\left|g\right|,\left|h\right|\le M$, 则 $\left\|g-h\right\|_p^p\le\int_0^\eta\left(2M\right)^p\mathrm dt=\left(2M\right)^p\eta$, 取 $\eta$ 足够小即得 $\left\|g-h\right\|_p< \frac{\varepsilon}{2}$. 依据**定义 1.2.2 (半范数与范数)** (iii), $\left\|f-h\right\|_p\le\left\|f-g\right\|_p+\left\|g-h\right\|_p< \varepsilon$. 依据**定义 1.4.5 (稠密性)**, $C_{2\pi}$ 在 $L^p\left[0,2\pi\right]$ 中稠密.
 
-**(ii) 第二部分: $C_{2\pi}$ 不在 $L^\infty\left[0,2\pi\right]$ 中稠密.** 因 $C_{2\pi}\subset C\left[0,2\pi\right]$, 依据**例 1.4.9 ($C$ 与 $L^{p}$ 的可分性)**, $C\left[0,2\pi\right]$ 可分; 依据**命题 1.4.1 (可分空间的子空间可分)**, 其子空间 $C_{2\pi}$ 亦可分, 即存在可数稠密子集 $D\subset C_{2\pi}$. 若 $C_{2\pi}$ 在 $L^\infty\left[0,2\pi\right]$ 中稠密, 则依据稠密关系的传递性, $D$ 在 $L^\infty\left[0,2\pi\right]$ 中稠密, 从而 $L^\infty\left[0,2\pi\right]$ 可分; 但依据**例 1.4.11 ($L^{\infty}$ 不可分)**, $L^\infty\left[0,2\pi\right]$ 不可分, 矛盾. 故 $C_{2\pi}$ 不在 $L^\infty\left[0,2\pi\right]$ 中稠密.
+(ii) 第二部分: $C_{2\pi}$ 不在 $L^\infty\left[0,2\pi\right]$ 中稠密. 因 $C_{2\pi}\subset C\left[0,2\pi\right]$, 依据**例 1.4.9 ($C$ 与 $L^{p}$ 的可分性)**, $C\left[0,2\pi\right]$ 可分; 依据**命题 1.4.1 (可分空间的子空间可分)**, 其子空间 $C_{2\pi}$ 亦可分, 即存在可数稠密子集 $D\subset C_{2\pi}$. 若 $C_{2\pi}$ 在 $L^\infty\left[0,2\pi\right]$ 中稠密, 则依据稠密关系的传递性, $D$ 在 $L^\infty\left[0,2\pi\right]$ 中稠密, 从而 $L^\infty\left[0,2\pi\right]$ 可分; 但依据**例 1.4.11 ($L^{\infty}$ 不可分)**, $L^\infty\left[0,2\pi\right]$ 不可分, 矛盾. 故 $C_{2\pi}$ 不在 $L^\infty\left[0,2\pi\right]$ 中稠密.
 
-**(iii) 零延拓不稠密.** 记 $Z=\left\{\widetilde f:f\in C_{2\pi}\right\}$, 其中 $\widetilde f$ 是 $f$ 零延拓到 $\left[0,4\pi\right]$ 所得, 故 $\widetilde f\equiv0$ 于 $\left(2\pi,4\pi\right]$. 取 $h=\chi_{\left[3\pi,4\pi\right]}\in L^p\left[0,4\pi\right]$. 对任意 $\widetilde f\in Z$, 因 $\widetilde f\equiv0$ 于 $\left(2\pi,4\pi\right]$,
+(iii) 零延拓不稠密. 记 $Z=\left\{\widetilde f:f\in C_{2\pi}\right\}$, 其中 $\widetilde f$ 是 $f$ 零延拓到 $\left[0,4\pi\right]$ 所得, 故 $\widetilde f\equiv0$ 于 $\left(2\pi,4\pi\right]$. 取 $h=\chi_{\left[3\pi,4\pi\right]}\in L^p\left[0,4\pi\right]$. 对任意 $\widetilde f\in Z$, 因 $\widetilde f\equiv0$ 于 $\left(2\pi,4\pi\right]$,
 
 $$
 \left\|h-\widetilde f\right\|_p^p\ge\int_{\left[3\pi,4\pi\right]}\left|1-\widetilde f\right|^p\mathrm dt\ge\int_{\left[3\pi,4\pi\right]}1\,\mathrm dt=\pi,
@@ -460,9 +460,9 @@ $$
 
 ### 解答 1.4-12
 
-**(i) $C_0\left(\mathbb R\right)$ 可分.**
+(i) $C_0\left(\mathbb R\right)$ 可分.
 
-**第一步: 紧支撑连续函数 $C_c\left(\mathbb R\right)$ 在 $C_0\left(\mathbb R\right)$ 中稠密.** 设 $f\in C_0\left(\mathbb R\right)$, $\varepsilon> 0$. 因 $\lim_{t\to\pm\infty}f\left(t\right)=0$, 存在 $M> 0$ 使 $\left|t\right|\ge M$ 时 $\left|f\left(t\right)\right|< \varepsilon$. 取连续函数 $\varphi$ 满足 $0\le\varphi\le1$, $\varphi\equiv1$ 于 $\left[-M,M\right]$, $\varphi\equiv0$ 于 $\left(-\infty,-M-1\right]\cup\left[M+1,\infty\right)$ (例如分段线性函数). 令 $g=f\varphi$, 则 $g\in C_c\left(\mathbb R\right)$, 且
+第一步: 紧支撑连续函数 $C_c\left(\mathbb R\right)$ 在 $C_0\left(\mathbb R\right)$ 中稠密. 设 $f\in C_0\left(\mathbb R\right)$, $\varepsilon> 0$. 因 $\lim_{t\to\pm\infty}f\left(t\right)=0$, 存在 $M> 0$ 使 $\left|t\right|\ge M$ 时 $\left|f\left(t\right)\right|< \varepsilon$. 取连续函数 $\varphi$ 满足 $0\le\varphi\le1$, $\varphi\equiv1$ 于 $\left[-M,M\right]$, $\varphi\equiv0$ 于 $\left(-\infty,-M-1\right]\cup\left[M+1,\infty\right)$ (例如分段线性函数). 令 $g=f\varphi$, 则 $g\in C_c\left(\mathbb R\right)$, 且
 
 $$
 \left\|f-g\right\|_\infty=\sup_t\left|f\left(t\right)\right|\left|1-\varphi\left(t\right)\right|< \varepsilon,
@@ -470,15 +470,15 @@ $$
 
 因为在 $\left[-M,M\right]$ 上 $1-\varphi=0$, 在 $\left|t\right|\ge M$ 上 $\left|f\left(t\right)\right|< \varepsilon$. 依据**定义 1.4.5 (稠密性)**, $C_c\left(\mathbb R\right)$ 在 $C_0\left(\mathbb R\right)$ 中稠密.
 
-**第二步: $C_c\left(\mathbb R\right)$ 可分.** 记 $C_c\left(\left[-n,n\right]\right)=\left\{f\in C\left[-n,n\right]:\text{支集}\subset\left[-n,n\right]\right\}$, 则 $C_c\left(\mathbb R\right)=\bigcup_{n=1}^{\infty}C_c\left(\left[-n,n\right]\right)$. 依据**例 1.4.9 ($C$ 与 $L^{p}$ 的可分性)**, $C\left[-n,n\right]$ 可分; 依据**命题 1.4.1 (可分空间的子空间可分)**, 其子空间 $C_c\left(\left[-n,n\right]\right)$ 可分. 因可数多个可分空间之并仍可分, 故 $C_c\left(\mathbb R\right)$ 可分.
+第二步: $C_c\left(\mathbb R\right)$ 可分. 记 $C_c\left(\left[-n,n\right]\right)=\left\{f\in C\left[-n,n\right]:\text{支集}\subset\left[-n,n\right]\right\}$, 则 $C_c\left(\mathbb R\right)=\bigcup_{n=1}^{\infty}C_c\left(\left[-n,n\right]\right)$. 依据**例 1.4.9 ($C$ 与 $L^{p}$ 的可分性)**, $C\left[-n,n\right]$ 可分; 依据**命题 1.4.1 (可分空间的子空间可分)**, 其子空间 $C_c\left(\left[-n,n\right]\right)$ 可分. 因可数多个可分空间之并仍可分, 故 $C_c\left(\mathbb R\right)$ 可分.
 
-**第三步: 合成 $C_0\left(\mathbb R\right)$ 的可分性.** 由第一步, $C_c\left(\mathbb R\right)$ 在 $C_0\left(\mathbb R\right)$ 中稠密; 由第二步, $C_c\left(\mathbb R\right)$ 可分. 依据稠密关系的传递性, 稠密于 $C_0\left(\mathbb R\right)$ 中的可分空间 $C_c\left(\mathbb R\right)$ 的可数稠密子集也是 $C_0\left(\mathbb R\right)$ 的可数稠密子集, 故 $C_0\left(\mathbb R\right)$ 可分.
+第三步: 合成 $C_0\left(\mathbb R\right)$ 的可分性. 由第一步, $C_c\left(\mathbb R\right)$ 在 $C_0\left(\mathbb R\right)$ 中稠密; 由第二步, $C_c\left(\mathbb R\right)$ 可分. 依据稠密关系的传递性, 稠密于 $C_0\left(\mathbb R\right)$ 中的可分空间 $C_c\left(\mathbb R\right)$ 的可数稠密子集也是 $C_0\left(\mathbb R\right)$ 的可数稠密子集, 故 $C_0\left(\mathbb R\right)$ 可分.
 
-**(ii) $C_b\left(\mathbb R\right)$ 不可分.**
+(ii) $C_b\left(\mathbb R\right)$ 不可分.
 
-**第一步: $l^\infty$ 等距嵌入 $C_b\left(\mathbb R\right)$.** 对 $a=\left(a_n\right)_{n\in\mathbb Z}\in l^\infty$, 定义 $f_a\in C_b\left(\mathbb R\right)$ 为分片线性函数: $f_a\left(n\right)=a_n$ ($n\in\mathbb Z$), 且 $f_a$ 在每个区间 $\left[n,n+1\right]$ 上为线性. 则 $f_a$ 连续且有界. 依据分片线性延拓保最大模, $\left\|f_a\right\|_\infty=\sup_{t\in\mathbb R}\left|f_a\left(t\right)\right|=\sup_{n\in\mathbb Z}\left|a_n\right|=\left\|a\right\|_{l^\infty}$, 故 $a\mapsto f_a$ 是 $l^\infty$ 到 $C_b\left(\mathbb R\right)$ 的某个子空间的等距映射.
+第一步: $l^\infty$ 等距嵌入 $C_b\left(\mathbb R\right)$. 对 $a=\left(a_n\right)_{n\in\mathbb Z}\in l^\infty$, 定义 $f_a\in C_b\left(\mathbb R\right)$ 为分片线性函数: $f_a\left(n\right)=a_n$ ($n\in\mathbb Z$), 且 $f_a$ 在每个区间 $\left[n,n+1\right]$ 上为线性. 则 $f_a$ 连续且有界. 依据分片线性延拓保最大模, $\left\|f_a\right\|_\infty=\sup_{t\in\mathbb R}\left|f_a\left(t\right)\right|=\sup_{n\in\mathbb Z}\left|a_n\right|=\left\|a\right\|_{l^\infty}$, 故 $a\mapsto f_a$ 是 $l^\infty$ 到 $C_b\left(\mathbb R\right)$ 的某个子空间的等距映射.
 
-**第二步: 反证推出矛盾.** 若 $C_b\left(\mathbb R\right)$ 可分, 则依据**命题 1.4.1 (可分空间的子空间可分)**, 其上述子空间 (即 $l^\infty$ 的等距像) 也可分, 从而 $l^\infty$ 可分. 但依据**例 1.4.10 ($l^{\infty}$ 不可分)**, $l^\infty$ 不可分, 矛盾. 故 $C_b\left(\mathbb R\right)$ 不可分. $\blacksquare$
+第二步: 反证推出矛盾. 若 $C_b\left(\mathbb R\right)$ 可分, 则依据**命题 1.4.1 (可分空间的子空间可分)**, 其上述子空间 (即 $l^\infty$ 的等距像) 也可分, 从而 $l^\infty$ 可分. 但依据**例 1.4.10 ($l^{\infty}$ 不可分)**, $l^\infty$ 不可分, 矛盾. 故 $C_b\left(\mathbb R\right)$ 不可分. $\blacksquare$
 
 > $C_b\left(\mathbb R\right)$ 相较于 $C_0\left(\mathbb R\right)$, 放宽了边界条件, 这导致了 $C_b\left(\mathbb R\right)$ 中可以嵌入任意有界的数列, 从而导致其不可分; 反观 $C_0\left(\mathbb R\right)$ 中当然嵌入不进去.
 
@@ -488,7 +488,7 @@ $$
 
 ### 解答 1.4-13
 
-**先证 $\Leftarrow$ (存在可数正交基蕴含 $H$ 可分).** 设 $\left\{e_n:n=1,2,\cdots\right\}$ 是 $H$ 的一组可数标准正交基. 依据**定理 1.3.2 (标准正交基的等价条件)** (ii), $\overline{\mathrm{span}\left\{e_n\right\}}=H$. 令
+先证 $\Leftarrow$ (存在可数正交基蕴含 $H$ 可分). 设 $\left\{e_n:n=1,2,\cdots\right\}$ 是 $H$ 的一组可数标准正交基. 依据**定理 1.3.2 (标准正交基的等价条件)** (ii), $\overline{\mathrm{span}\left\{e_n\right\}}=H$. 令
 
 $$
 D=\left\{\sum_{k=1}^m\left(a_k+\mathrm i b_k\right)e_k:m\ge1,\ a_k,b_k\in\mathbb Q\right\}.
@@ -502,7 +502,7 @@ $$
 
 其中不等式依据**定义 1.2.2 (半范数与范数)** (iii) 的三角不等式与 $\left\|e_k\right\|=1$. 于是 $\left\|x-\sum c'_k e_k\right\|< \varepsilon$, 即 $D$ 在 $H$ 中稠密. 依据**定义 1.4.6 (可分性)**, $H$ 可分.
 
-**再证 $\Rightarrow$ ($H$ 可分蕴含存在可数正交基).** 依据**定理 1.3.3 (标准正交系可扩张为标准正交基)**, $H$ 存在一组标准正交基 $\mathcal E=\left\{e_\lambda:\lambda\in\Lambda\right\}$. 下面证明 $\mathcal E$ 可数. 对 $\lambda\ne\mu\in\Lambda$, 有 $e_\lambda\perp e_\mu$ 且 $\left\|e_\lambda\right\|=\left\|e_\mu\right\|=1$, 依据**定理 1.2.2 (毕达哥拉斯定理)**, $\left\|e_\lambda-e_\mu\right\|^2=\left\|e_\lambda\right\|^2+\left\|e_\mu\right\|^2=2$, 故 $\left\|e_\lambda-e_\mu\right\|=\sqrt2$.
+再证 $\Rightarrow$ ($H$ 可分蕴含存在可数正交基). 依据**定理 1.3.3 (标准正交系可扩张为标准正交基)**, $H$ 存在一组标准正交基 $\mathcal E=\left\{e_\lambda:\lambda\in\Lambda\right\}$. 下面证明 $\mathcal E$ 可数. 对 $\lambda\ne\mu\in\Lambda$, 有 $e_\lambda\perp e_\mu$ 且 $\left\|e_\lambda\right\|=\left\|e_\mu\right\|=1$, 依据**定理 1.2.2 (毕达哥拉斯定理)**, $\left\|e_\lambda-e_\mu\right\|^2=\left\|e_\lambda\right\|^2+\left\|e_\mu\right\|^2=2$, 故 $\left\|e_\lambda-e_\mu\right\|=\sqrt2$.
 
 因 $H$ 可分, 依据**定义 1.4.6 (可分性)**, 存在可数稠密子集 $\left\{x_n:n\in\mathbb N\right\}$. 对每个 $\lambda\in\Lambda$, 依据**定义 1.4.5 (稠密性)** 与 $\left\{x_n\right\}$ 的稠密性, 可取 $n\left(\lambda\right)\in\mathbb N$ 使 $\left\|e_\lambda-x_{n\left(\lambda\right)}\right\|< \frac13$. 现证映射 $\lambda\mapsto n\left(\lambda\right)$ 是单射: 若 $\lambda\ne\mu$ 而 $n\left(\lambda\right)=n\left(\mu\right)$, 则依据**定义 1.2.2 (半范数与范数)** (iii),
 
@@ -524,7 +524,7 @@ $$
 
 记 $F\left(t\right)=\int_{\mathbb R}f\left(x\right)\mathrm e^{-\mathrm i2\pi t x}\mathrm dx$.
 
-**第一步: 对区间特征函数成立.** 对 $f=\chi_{\left[a,b\right]}$, 直接计算
+第一步: 对区间特征函数成立. 对 $f=\chi_{\left[a,b\right]}$, 直接计算
 
 $$
 F\left(t\right)=\int_a^b\mathrm e^{-\mathrm i2\pi t x}\mathrm dx=\frac{\mathrm e^{-\mathrm i2\pi t b}-\mathrm e^{-\mathrm i2\pi t a}}{-\mathrm i2\pi t},
@@ -532,9 +532,9 @@ $$
 
 故 $\left|F\left(t\right)\right|\le\frac{2}{2\pi\left|t\right|}\to0$ ($\left|t\right|\to\infty$).
 
-**第二步: 对阶梯函数成立.** 设 $s=\sum_{k=1}^m c_k\chi_{\left[a_k,b_k\right]}$ 是有限个区间特征函数的线性组合 (阶梯函数). 由第一步及积分关于被积函数的线性性, $\int_{\mathbb R}s\left(x\right)\mathrm e^{-\mathrm i2\pi t x}\mathrm dx=\sum_k c_k\int_{a_k}^{b_k}\mathrm e^{-\mathrm i2\pi t x}\mathrm dx\to0$ ($\left|t\right|\to\infty$).
+第二步: 对阶梯函数成立. 设 $s=\sum_{k=1}^m c_k\chi_{\left[a_k,b_k\right]}$ 是有限个区间特征函数的线性组合 (阶梯函数). 由第一步及积分关于被积函数的线性性, $\int_{\mathbb R}s\left(x\right)\mathrm e^{-\mathrm i2\pi t x}\mathrm dx=\sum_k c_k\int_{a_k}^{b_k}\mathrm e^{-\mathrm i2\pi t x}\mathrm dx\to0$ ($\left|t\right|\to\infty$).
 
-**第三步: 对一般 $f\in L^1\left(\mathbb R\right)$ 成立.** 依据**注 1.4.1 ($L^{p}$ 中的稠密子集)**, 阶梯函数全体在 $L^1\left(\mathbb R\right)$ 中稠密; 依据**定义 1.4.5 (稠密性)**, 对任意 $\varepsilon> 0$ 存在阶梯函数 $s$ 使 $\left\|f-s\right\|_1< \varepsilon$. 依据积分三角不等式,
+第三步: 对一般 $f\in L^1\left(\mathbb R\right)$ 成立. 依据**注 1.4.1 ($L^{p}$ 中的稠密子集)**, 阶梯函数全体在 $L^1\left(\mathbb R\right)$ 中稠密; 依据**定义 1.4.5 (稠密性)**, 对任意 $\varepsilon> 0$ 存在阶梯函数 $s$ 使 $\left\|f-s\right\|_1< \varepsilon$. 依据积分三角不等式,
 
 $$
 \left|F\left(t\right)\right|\le\int_{\mathbb R}\left|f-s\right|\mathrm dx+\left|\int_{\mathbb R}s\left(x\right)\mathrm e^{-\mathrm i2\pi t x}\mathrm dx\right|< \varepsilon+\left|\int_{\mathbb R}s\left(x\right)\mathrm e^{-\mathrm i2\pi t x}\mathrm dx\right|.
@@ -554,7 +554,7 @@ $$
 
 记平移算子 $\left(\tau_h f\right)\left(x\right)=f\left(x+h\right)$, 并记 $\left\|g\right\|_p=\left(\int_{\mathbb R}\left|g\right|^p\mathrm dx\right)^{1/p}$.
 
-**第一步: 对 $C_c^\infty$ 函数成立.** 设 $\varphi\in C_c^\infty\left(\mathbb R\right)$, 其支集含于 $\left[-M,M\right]$. 不妨设 $\left|h\right|< 1$, 则 $\varphi$ 在紧集 $\left[-M-1,M+1\right]$ 上连续; 依据紧区间上连续函数一致连续, $\varphi$ 在 $\left[-M-1,M+1\right]$ 上一致连续, 即对任意 $\varepsilon> 0$ 存在 $\delta> 0$, 当 $\left|h\right|< \delta$ 时 $\sup_x\left|\varphi\left(x+h\right)-\varphi\left(x\right)\right|< \varepsilon$. 对 $\left|h\right|< 1$, 被积函数仅在 $\left[-M-1,M+1\right]$ 上可能非零, 故
+第一步: 对 $C_c^\infty$ 函数成立. 设 $\varphi\in C_c^\infty\left(\mathbb R\right)$, 其支集含于 $\left[-M,M\right]$. 不妨设 $\left|h\right|< 1$, 则 $\varphi$ 在紧集 $\left[-M-1,M+1\right]$ 上连续; 依据紧区间上连续函数一致连续, $\varphi$ 在 $\left[-M-1,M+1\right]$ 上一致连续, 即对任意 $\varepsilon> 0$ 存在 $\delta> 0$, 当 $\left|h\right|< \delta$ 时 $\sup_x\left|\varphi\left(x+h\right)-\varphi\left(x\right)\right|< \varepsilon$. 对 $\left|h\right|< 1$, 被积函数仅在 $\left[-M-1,M+1\right]$ 上可能非零, 故
 
 $$
 \left\|\tau_h\varphi-\varphi\right\|_p^p=\int_{\mathbb R}\left|\varphi\left(x+h\right)-\varphi\left(x\right)\right|^p\mathrm dx\le\left(2M+2\right)\varepsilon^p\to0.
@@ -562,7 +562,7 @@ $$
 
 即 $\lim_{h\to0}\left\|\tau_h\varphi-\varphi\right\|_p=0$.
 
-**第二步: 对一般 $f\in L^p\left(\mathbb R\right)$ 成立.** 依据**注 1.4.1 ($L^{p}$ 中的稠密子集)**, $C_c^\infty\left(\mathbb R\right)$ 在 $L^p\left(\mathbb R\right)$ 中稠密; 依据**定义 1.4.5 (稠密性)**, 对任意 $\varepsilon> 0$ 存在 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 使 $\left\|f-\varphi\right\|_p< \varepsilon$. 依据勒贝格测度平移不变性, $\left\|\tau_h\left(f-\varphi\right)\right\|_p=\left\|f-\varphi\right\|_p$. 再依据闵可夫斯基不等式,
+第二步: 对一般 $f\in L^p\left(\mathbb R\right)$ 成立. 依据**注 1.4.1 ($L^{p}$ 中的稠密子集)**, $C_c^\infty\left(\mathbb R\right)$ 在 $L^p\left(\mathbb R\right)$ 中稠密; 依据**定义 1.4.5 (稠密性)**, 对任意 $\varepsilon> 0$ 存在 $\varphi\in C_c^\infty\left(\mathbb R\right)$ 使 $\left\|f-\varphi\right\|_p< \varepsilon$. 依据勒贝格测度平移不变性, $\left\|\tau_h\left(f-\varphi\right)\right\|_p=\left\|f-\varphi\right\|_p$. 再依据闵可夫斯基不等式,
 
 $$
 \left\|\tau_h f-f\right\|_p\le\left\|\tau_h f-\tau_h\varphi\right\|_p+\left\|\tau_h\varphi-\varphi\right\|_p+\left\|\varphi-f\right\|_p=2\left\|f-\varphi\right\|_p+\left\|\tau_h\varphi-\varphi\right\|_p.
@@ -576,7 +576,7 @@ $$
 
 ### 解答 1.4-16
 
-**先证 $\Rightarrow$ (完备则 $\sum\left\|x_n\right\|< \infty$ 蕴含级数收敛).** 设 $\left\{x_n\right\}$ 满足 $\sum_{n=1}^{\infty}\left\|x_n\right\|< \infty$, 记部分和 $S_n=\sum_{k=1}^n x_k$. 对 $m> n$, 依据**定义 1.2.2 (半范数与范数)** (iii) 的三角不等式,
+先证 $\Rightarrow$ (完备则 $\sum\left\|x_n\right\|< \infty$ 蕴含级数收敛). 设 $\left\{x_n\right\}$ 满足 $\sum_{n=1}^{\infty}\left\|x_n\right\|< \infty$, 记部分和 $S_n=\sum_{k=1}^n x_k$. 对 $m> n$, 依据**定义 1.2.2 (半范数与范数)** (iii) 的三角不等式,
 
 $$
 \left\|S_m-S_n\right\|=\left\|\sum_{k=n+1}^m x_k\right\|\le\sum_{k=n+1}^m\left\|x_k\right\|\le\sum_{k=n+1}^{\infty}\left\|x_k\right\|\to0\quad\left(n\to\infty\right),
@@ -584,7 +584,7 @@ $$
 
 因为正项级数收敛时其余项趋于零. 故 $\left\{S_n\right\}$ 是基本点列 (依据**定义 1.4.7 (完备性)** (i)). 因 $X$ 完备 (依据**定义 1.4.7 (完备性)** (ii)), $\left\{S_n\right\}$ 收敛, 即 $\sum_{n=1}^{\infty}x_n$ 收敛.
 
-**再证 $\Leftarrow$ (绝对收敛级数恒收敛蕴含 $X$ 完备).** 设 $\left\{y_n\right\}$ 是 $X$ 中的基本点列. 由**定义 1.4.7 (完备性)** (i), 对 $\varepsilon=\frac{1}{2^k}$ 依次归纳选取下标 $n_1< n_2< \cdots$: 取 $n_1=1$; 已取 $n_k$, 由基本点列定义存在 $N_k$ 使 $n,m\ge N_k$ 时 $\left\|y_n-y_m\right\|< \frac{1}{2^k}$, 取 $n_{k+1}> \max\left\{n_k,N_k\right\}$, 则
+再证 $\Leftarrow$ (绝对收敛级数恒收敛蕴含 $X$ 完备). 设 $\left\{y_n\right\}$ 是 $X$ 中的基本点列. 由**定义 1.4.7 (完备性)** (i), 对 $\varepsilon=\frac{1}{2^k}$ 依次归纳选取下标 $n_1< n_2< \cdots$: 取 $n_1=1$; 已取 $n_k$, 由基本点列定义存在 $N_k$ 使 $n,m\ge N_k$ 时 $\left\|y_n-y_m\right\|< \frac{1}{2^k}$, 取 $n_{k+1}> \max\left\{n_k,N_k\right\}$, 则
 
 $$
 \left\|y_{n_{k+1}}-y_{n_k}\right\|< \frac{1}{2^k},\quad k=1,2,\cdots.
@@ -604,7 +604,7 @@ $H$ 成为赋范线性空间. 证明: $H$ 是希尔伯特空间.
 
 ### 解答 1.4-18
 
-**第一步: $H$ 是内积空间.** 对 $f,g\in H$, 定义
+第一步: $H$ 是内积空间. 对 $f,g\in H$, 定义
 
 $$
 \left\langle f,g\right\rangle=\int_{\mathbb R}f\left(t\right)\overline{g\left(t\right)}\mathrm dt+\int_{\mathbb R}f'\left(t\right)\overline{g'\left(t\right)}\mathrm dt.
@@ -612,7 +612,7 @@ $$
 
 由 $f,f'\in L^2\left(\mathbb R\right)$ 及 $g,g'\in L^2\left(\mathbb R\right)$, 依据**引理 1.2.3 (柯西-施瓦茨不等式)**, 上式右端两项均有限, 故 $\left\langle f,g\right\rangle$ 有限. 它显然满足**定义 1.2.3 (内积空间)** 的共轭对称性与对第一变元的线性性; 正定性方面, $\left\langle f,f\right\rangle=0$ 蕴含 $\int\left|f\right|^2=0$ 与 $\int\left|f'\right|^2=0$, 即 $f=0$ 且 $f'=0$ 几乎处处; 依据绝对连续函数的常数性, $f$ 几乎处处为常数, 而 $f\in L^2\left(\mathbb R\right)$ 迫使该常数为零, 即 $f\equiv0$. 又 $\left\langle f,f\right\rangle^{1/2}=\left\|f\right\|$, 故 $H$ 是内积空间且其范数为题给范数. 依据**定义 1.4.7 (完备性)** (iv), 只须证 $H$ 完备, 即为希尔伯特空间.
 
-**第二步: 把 $H$ 等距嵌入 $L^2\left(\mathbb R\right)\times L^2\left(\mathbb R\right)$.** 令乘积空间的范数为 $\left\|\left(u,v\right)\right\|=\sqrt{\left\|u\right\|_2^2+\left\|v\right\|_2^2}$. 依据**例 1.4.13 ($L^{p}\left(E\right)$ 是巴拿赫空间)**, $L^2\left(\mathbb R\right)$ 是希尔伯特空间; 依据**习题 1.2 第 13 题 (内积空间的可数直和)** (取 $R_1=R_2=L^2\left(\mathbb R\right)$), $L^2\left(\mathbb R\right)\times L^2\left(\mathbb R\right)$ 是希尔伯特空间. 作映射
+第二步: 把 $H$ 等距嵌入 $L^2\left(\mathbb R\right)\times L^2\left(\mathbb R\right)$. 令乘积空间的范数为 $\left\|\left(u,v\right)\right\|=\sqrt{\left\|u\right\|_2^2+\left\|v\right\|_2^2}$. 依据**例 1.4.13 ($L^{p}\left(E\right)$ 是巴拿赫空间)**, $L^2\left(\mathbb R\right)$ 是希尔伯特空间; 依据**习题 1.2 第 13 题 (内积空间的可数直和)** (取 $R_1=R_2=L^2\left(\mathbb R\right)$), $L^2\left(\mathbb R\right)\times L^2\left(\mathbb R\right)$ 是希尔伯特空间. 作映射
 
 $$
 T\colon H\to L^2\left(\mathbb R\right)\times L^2\left(\mathbb R\right),\quad f\mapsto\left(f,f'\right).
@@ -620,7 +620,7 @@ $$
 
 由 $\left\|Tf\right\|^2=\left\|f\right\|_2^2+\left\|f'\right\|_2^2=\left\|f\right\|^2$, $T$ 是保范线性映射, $T\left(H\right)$ 是 $L^2\times L^2$ 的线性子空间.
 
-**第三步: 证明 $T\left(H\right)$ 是闭子空间.** 设 $\left(f_n,f'_n\right)\to\left(g,h\right)$ 于 $L^2\times L^2$, 即 $f_n\to g$, $f'_n\to h$ 于 $L^2\left(\mathbb R\right)$. 对任意 $\varphi\in C_c^\infty\left(\mathbb R\right)$, 因每个 $f_n$ 绝对连续, 分部积分给出
+第三步: 证明 $T\left(H\right)$ 是闭子空间. 设 $\left(f_n,f'_n\right)\to\left(g,h\right)$ 于 $L^2\times L^2$, 即 $f_n\to g$, $f'_n\to h$ 于 $L^2\left(\mathbb R\right)$. 对任意 $\varphi\in C_c^\infty\left(\mathbb R\right)$, 因每个 $f_n$ 绝对连续, 分部积分给出
 
 $$
 \int_{\mathbb R}f_n\varphi'\mathrm dt=-\int_{\mathbb R}f'_n\varphi\mathrm dt.
@@ -634,7 +634,7 @@ $$
 
 依据弱导数定义, $g$ 的弱导数为 $h\in L^2$. 依据弱导数绝对连续, $g$ 绝对连续且 $g'=h$ 几乎处处, 故 $g\in H$ 且 $\left(g,h\right)=T\left(g\right)\in T\left(H\right)$. 因此 $T\left(H\right)$ 是 $L^2\times L^2$ 的闭线性子空间.
 
-**第四步: 结论.** 由第二步, $L^2\times L^2$ 是希尔伯特空间 (完备); 由第三步, $T\left(H\right)$ 是其闭子集. 依据**引理 1.4.1 (基本点列与完备性)** (iii), 完备度量空间的闭子集是完备子空间, 故 $T\left(H\right)$ 完备. 又 $T$ 是保范线性同构: 其单射性由 $T\left(f\right)=0$ 即 $f=f'=0$ 几乎处处推出 $f\equiv0$ (同第一步), 故 $H$ 与完备空间 $T\left(H\right)$ 等距同构, 从而 $H$ 完备. 依据**定义 1.4.7 (完备性)** (iv), $H$ 是希尔伯特空间. $\blacksquare$
+第四步: 结论. 由第二步, $L^2\times L^2$ 是希尔伯特空间 (完备); 由第三步, $T\left(H\right)$ 是其闭子集. 依据**引理 1.4.1 (基本点列与完备性)** (iii), 完备度量空间的闭子集是完备子空间, 故 $T\left(H\right)$ 完备. 又 $T$ 是保范线性同构: 其单射性由 $T\left(f\right)=0$ 即 $f=f'=0$ 几乎处处推出 $f\equiv0$ (同第一步), 故 $H$ 与完备空间 $T\left(H\right)$ 等距同构, 从而 $H$ 完备. 依据**定义 1.4.7 (完备性)** (iv), $H$ 是希尔伯特空间. $\blacksquare$
 
 ## 1.5-2 ($\alpha_{n}$ 条件下的迭代收敛)
 
@@ -650,11 +650,11 @@ $$
 
 ### 解答 1.5-2
 
-**(i) $\sum_n\alpha_n< \infty$ 的情形.**
+(i) $\sum_n\alpha_n< \infty$ 的情形.
 
-**第一步: 不动点的存在与唯一性.** 因 $\sum_n\alpha_n< \infty$, 级数收敛故通项 $\alpha_n\to0$, 从而存在正整数 $N$ 使 $\alpha_N< 1$. 由 $\alpha_N$ 的定义, $d\left(\varphi^N\left(x\right),\varphi^N\left(y\right)\right)\le\alpha_N d\left(x,y\right)$ 对一切 $x,y\in X$ 成立, 依据**定义 1.5.2 (压缩映射)**, $\varphi^N$ 是 $X$ 上的压缩映射. 依据**定理 1.5.2 ($\varphi^{n}$ 压缩蕴含唯一不动点)**, $\varphi$ 在 $X$ 中有唯一不动点 $x^*$.
+第一步: 不动点的存在与唯一性. 因 $\sum_n\alpha_n< \infty$, 级数收敛故通项 $\alpha_n\to0$, 从而存在正整数 $N$ 使 $\alpha_N< 1$. 由 $\alpha_N$ 的定义, $d\left(\varphi^N\left(x\right),\varphi^N\left(y\right)\right)\le\alpha_N d\left(x,y\right)$ 对一切 $x,y\in X$ 成立, 依据**定义 1.5.2 (压缩映射)**, $\varphi^N$ 是 $X$ 上的压缩映射. 依据**定理 1.5.2 ($\varphi^{n}$ 压缩蕴含唯一不动点)**, $\varphi$ 在 $X$ 中有唯一不动点 $x^*$.
 
-**第二步: 迭代列是基本点列并收敛.** 记 $x_n=\varphi^n\left(x_0\right)$. 对任意 $n\ge1$, 由 $\alpha_n$ 的定义,
+第二步: 迭代列是基本点列并收敛. 记 $x_n=\varphi^n\left(x_0\right)$. 对任意 $n\ge1$, 由 $\alpha_n$ 的定义,
 
 $$
 d\left(x_{n+1},x_n\right)=d\left(\varphi^n\left(\varphi\left(x_0\right)\right),\varphi^n\left(x_0\right)\right)\le\alpha_n d\left(\varphi\left(x_0\right),x_0\right)=\alpha_n d\left(x_1,x_0\right).
@@ -668,7 +668,7 @@ $$
 
 最后一步因正项级数余项趋于零. 故 $\left\{x_n\right\}$ 是基本点列 (依据**定义 1.4.7 (完备性)** (i)). 因 $X$ 完备, 依据**定义 1.4.7 (完备性)** (ii), 存在 $y\in X$ 使 $x_n\to y$.
 
-**第三步: 极限是不动点.** 因 $\alpha_1< \infty$, $d\left(\varphi\left(x\right),\varphi\left(x'\right)\right)\le\alpha_1 d\left(x,x'\right)$, 故 $\varphi$ 连续. 于是
+第三步: 极限是不动点. 因 $\alpha_1< \infty$, $d\left(\varphi\left(x\right),\varphi\left(x'\right)\right)\le\alpha_1 d\left(x,x'\right)$, 故 $\varphi$ 连续. 于是
 
 $$
 \varphi\left(y\right)=\varphi\left(\lim_{n\to\infty}x_n\right)=\lim_{n\to\infty}\varphi\left(x_n\right)=\lim_{n\to\infty}x_{n+1}=y,
@@ -676,7 +676,7 @@ $$
 
 即 $\varphi\left(y\right)=y$, 依据**定义 1.5.1 (不动点)**, $y$ 是 $\varphi$ 的不动点. 由第一步的唯一性, $y=x^*$, 故 $\left\{\varphi^n\left(x_0\right)\right\}$ 收敛于唯一不动点 $x^*$.
 
-**第四步: 逼近程度.** 在第二步的不等式 $d\left(x_m,x_n\right)\le d\left(x_1,x_0\right)\sum_{k=n}^{\infty}\alpha_k$ 中令 $m\to\infty$. 依据**例 1.4.3 (距离函数连续)** (距离关于变元连续), 左端趋于 $d\left(x^*,x_n\right)$, 故
+第四步: 逼近程度. 在第二步的不等式 $d\left(x_m,x_n\right)\le d\left(x_1,x_0\right)\sum_{k=n}^{\infty}\alpha_k$ 中令 $m\to\infty$. 依据**例 1.4.3 (距离函数连续)** (距离关于变元连续), 左端趋于 $d\left(x^*,x_n\right)$, 故
 
 $$
 d\left(x^*,x_n\right)\le d\left(x_1,x_0\right)\sum_{k=n}^{\infty}\alpha_k.
@@ -684,11 +684,11 @@ $$
 
 即第 $n$ 次近似 $x_n=\varphi^n\left(x_0\right)$ 与准确解 $x^*$ 的逼近程度为上式.
 
-**(ii) $\inf_n\alpha_n< 1$ 的情形.**
+(ii) $\inf_n\alpha_n< 1$ 的情形.
 
-**第一步: $x^*$ 是 $\varphi$ 的唯一不动点.** 因 $\inf_n\alpha_n< 1$, 存在正整数 $N$ 使 $\alpha_N< 1$, 即 $\varphi^N$ 满足 $d\left(\varphi^N x,\varphi^N y\right)\le\alpha_N d\left(x,y\right)$, 依据**定义 1.5.2 (压缩映射)**, $\varphi^N$ 是压缩映射. 依据**定理 1.5.1 (巴拿赫不动点定理)**, $\varphi^N$ 在完备空间 $X$ 中有唯一不动点 $x^*$, 即 $\varphi^N\left(x^*\right)=x^*$. 由**定理 1.5.2 ($\varphi^{n}$ 压缩蕴含唯一不动点)**, $\varphi$ 有唯一不动点 $x^*$.
+第一步: $x^*$ 是 $\varphi$ 的唯一不动点. 因 $\inf_n\alpha_n< 1$, 存在正整数 $N$ 使 $\alpha_N< 1$, 即 $\varphi^N$ 满足 $d\left(\varphi^N x,\varphi^N y\right)\le\alpha_N d\left(x,y\right)$, 依据**定义 1.5.2 (压缩映射)**, $\varphi^N$ 是压缩映射. 依据**定理 1.5.1 (巴拿赫不动点定理)**, $\varphi^N$ 在完备空间 $X$ 中有唯一不动点 $x^*$, 即 $\varphi^N\left(x^*\right)=x^*$. 由**定理 1.5.2 ($\varphi^{n}$ 压缩蕴含唯一不动点)**, $\varphi$ 有唯一不动点 $x^*$.
 
-**第二步: 迭代程序与逼近程度.** 取迭代程序 $x_{n+1}=\varphi^N\left(x_n\right)$, 即考察子列 $\left\{\varphi^{Nk}\left(x_0\right)\right\}$. 因 $\varphi^N$ 是以 $\alpha_N< 1$ 为压缩系数的压缩映射, 且 $X$ 完备, 依据**定理 1.5.1 (巴拿赫不动点定理)** 与**注 1.5.1 (迭代法的误差估计)** 的式 (1.25), 迭代 $\left\{\left(\varphi^N\right)^k\left(x_0\right)\right\}=\left\{\varphi^{Nk}\left(x_0\right)\right\}$ 收敛于 $x^*$, 且
+第二步: 迭代程序与逼近程度. 取迭代程序 $x_{n+1}=\varphi^N\left(x_n\right)$, 即考察子列 $\left\{\varphi^{Nk}\left(x_0\right)\right\}$. 因 $\varphi^N$ 是以 $\alpha_N< 1$ 为压缩系数的压缩映射, 且 $X$ 完备, 依据**定理 1.5.1 (巴拿赫不动点定理)** 与**注 1.5.1 (迭代法的误差估计)** 的式 (1.25), 迭代 $\left\{\left(\varphi^N\right)^k\left(x_0\right)\right\}=\left\{\varphi^{Nk}\left(x_0\right)\right\}$ 收敛于 $x^*$, 且
 
 $$
 d\left(x^*,\varphi^{Nk}\left(x_0\right)\right)\le\frac{\alpha_N^k}{1-\alpha_N}d\left(\varphi^N\left(x_0\right),x_0\right).
@@ -722,7 +722,7 @@ $$
 
 在 $x_0$ 的某个邻域上有唯一解 $y\left(x\right)=\left(y_1\left(x\right),\cdots,y_n\left(x\right)\right)$.
 
-**证明.** 取 $h> 0$ 充分小, 考虑空间
+证明. 取 $h> 0$ 充分小, 考虑空间
 
 $$
 C_D=\left\{y=\left(y_1,\cdots,y_n\right)\in C\left(\left[x_0-h,x_0+h\right],\mathbb R^n\right):\left|y_k\left(x\right)-y_k^0\right|\le\lambda,\ \forall x,\ y\left(x_0\right)=y_0\right\},
@@ -730,13 +730,13 @@ $$
 
 其中范数 $\left\|y\right\|=\max_{1\le k\le n}\max_{x\in\left[x_0-h,x_0+h\right]}\left|y_k\left(x\right)\right|$, $y_0=\left(y_1^0,\cdots,y_n^0\right)$.
 
-**第一步: 问题化为积分方程.** 依据微积分基本定理, 初值问题等价于积分方程组
+第一步: 问题化为积分方程. 依据微积分基本定理, 初值问题等价于积分方程组
 
 $$
 y_k\left(x\right)=y_k^0+\int_{x_0}^x f_k\left(t,y_1\left(t\right),\cdots,y_n\left(t\right)\right)\mathrm dt,\quad k=1,\cdots,n.
 $$
 
-**第二步: 在 $C_D$ 上构造压缩映射.** 依据**定理 1.5.3 (初值问题解的存在唯一性)** 的思路, 记
+第二步: 在 $C_D$ 上构造压缩映射. 依据**定理 1.5.3 (初值问题解的存在唯一性)** 的思路, 记
 
 $$
 M=\max\left\{\left|f_k\left(x,y\right)\right|:1\le k\le n,\ \left|x-x_0\right|\le h,\ \left|y_k-y_k^0\right|\le\lambda\right\},
@@ -756,7 +756,7 @@ $$
 
 因 $Lh< 1$, 依据**定义 1.5.2 (压缩映射)**, $A$ 是 $C_D$ 上的压缩映射.
 
-**第三步: 应用不动点原理.** 由**例 1.2.12 ($C\left[a,b\right]$ 是巴拿赫空间)**, $C\left(\left[x_0-h,x_0+h\right],\mathbb R^n\right)$ 按最大范数是完备的; 而 $C_D$ 由闭条件 $\left|y_k\left(x\right)-y_k^0\right|\le\lambda$ 与 $y\left(x_0\right)=y_0$ 定义, 是该巴拿赫空间的闭子集. 依据**引理 1.4.1 (基本点列与完备性)** (iii), $C_D$ 是完备度量空间. 依据**定理 1.5.1 (巴拿赫不动点定理)**, $A$ 在 $C_D$ 中有唯一不动点 $y$, 即 $Ay=y$. 由第一步, 该 $y$ 满足积分方程组, 从而是初值问题的解; 唯一性亦由不动点唯一性得到. $\blacksquare$
+第三步: 应用不动点原理. 由**例 1.2.12 ($C\left[a,b\right]$ 是巴拿赫空间)**, $C\left(\left[x_0-h,x_0+h\right],\mathbb R^n\right)$ 按最大范数是完备的; 而 $C_D$ 由闭条件 $\left|y_k\left(x\right)-y_k^0\right|\le\lambda$ 与 $y\left(x_0\right)=y_0$ 定义, 是该巴拿赫空间的闭子集. 依据**引理 1.4.1 (基本点列与完备性)** (iii), $C_D$ 是完备度量空间. 依据**定理 1.5.1 (巴拿赫不动点定理)**, $A$ 在 $C_D$ 中有唯一不动点 $y$, 即 $Ay=y$. 由第一步, 该 $y$ 满足积分方程组, 从而是初值问题的解; 唯一性亦由不动点唯一性得到. $\blacksquare$
 
 ## 1.5-5 (开球内压缩的不动点)
 
@@ -780,11 +780,11 @@ $$
 
 ### 解答 1.5-5
 
-**(i) 条件为 $\alpha< 1-\theta$.**
+(i) 条件为 $\alpha< 1-\theta$.
 
-**第一步: 选取闭子球.** 设 $\alpha< 1-\theta$, 则 $\frac{\alpha r}{1-\theta}< r$. 取实数 $\rho$ 使 $\frac{\alpha r}{1-\theta}< \rho< r$, 作闭球 $B\left(x_0,\rho\right)$. 由 $\rho< r$ 有 $B\left(x_0,\rho\right)\subset O\left(x_0,r\right)$.
+第一步: 选取闭子球. 设 $\alpha< 1-\theta$, 则 $\frac{\alpha r}{1-\theta}< r$. 取实数 $\rho$ 使 $\frac{\alpha r}{1-\theta}< \rho< r$, 作闭球 $B\left(x_0,\rho\right)$. 由 $\rho< r$ 有 $B\left(x_0,\rho\right)\subset O\left(x_0,r\right)$.
 
-**第二步: $T$ 把 $B\left(x_0,\rho\right)$ 映入自身.** 对任意 $x\in B\left(x_0,\rho\right)$, 依据**定义 1.1.1 (度量空间)** (iii) 的三角不等式, 并注意 $x,x_0\in O\left(x_0,r\right)$ 故压缩条件适用,
+第二步: $T$ 把 $B\left(x_0,\rho\right)$ 映入自身. 对任意 $x\in B\left(x_0,\rho\right)$, 依据**定义 1.1.1 (度量空间)** (iii) 的三角不等式, 并注意 $x,x_0\in O\left(x_0,r\right)$ 故压缩条件适用,
 
 $$
 d\left(Tx,x_0\right)\le d\left(Tx,Tx_0\right)+d\left(Tx_0,x_0\right)< \theta d\left(x,x_0\right)+\alpha r\le\theta\rho+\alpha r.
@@ -792,11 +792,11 @@ $$
 
 由 $\rho$ 的选取 $\theta\rho+\alpha r< \theta\rho+\left(1-\theta\right)\rho=\rho$, 故 $Tx\in B\left(x_0,\rho\right)$. 同时 $B\left(x_0,\rho\right)$ 是完备空间 $X$ 的闭子集 (依据**例 1.4.2 (闭球是闭集)**), 依据**引理 1.4.1 (基本点列与完备性)** (iii), $B\left(x_0,\rho\right)$ 完备.
 
-**第三步: 存在唯一不动点.** 由第二步, $T$ 是完备度量空间 $B\left(x_0,\rho\right)$ 到自身的映射, 且压缩条件 $d\left(Tx,Tx'\right)\le\theta d\left(x,x'\right)$ 在其上成立, 依据**定义 1.5.2 (压缩映射)** 与**定理 1.5.1 (巴拿赫不动点定理)**, $T$ 在 $B\left(x_0,\rho\right)$ 内有唯一不动点, 从而在 $O\left(x_0,r\right)$ 内存在不动点. 唯一性还可直接看出: 若 $x',x''\in O\left(x_0,r\right)$ 都是不动点且 $x'\ne x''$, 则 $d\left(x',x''\right)=d\left(Tx',Tx''\right)< \theta d\left(x',x''\right)< d\left(x',x''\right)$, 矛盾. 故 $T$ 在 $O\left(x_0,r\right)$ 内不动点唯一.
+第三步: 存在唯一不动点. 由第二步, $T$ 是完备度量空间 $B\left(x_0,\rho\right)$ 到自身的映射, 且压缩条件 $d\left(Tx,Tx'\right)\le\theta d\left(x,x'\right)$ 在其上成立, 依据**定义 1.5.2 (压缩映射)** 与**定理 1.5.1 (巴拿赫不动点定理)**, $T$ 在 $B\left(x_0,\rho\right)$ 内有唯一不动点, 从而在 $O\left(x_0,r\right)$ 内存在不动点. 唯一性还可直接看出: 若 $x',x''\in O\left(x_0,r\right)$ 都是不动点且 $x'\ne x''$, 则 $d\left(x',x''\right)=d\left(Tx',Tx''\right)< \theta d\left(x',x''\right)< d\left(x',x''\right)$, 矛盾. 故 $T$ 在 $O\left(x_0,r\right)$ 内不动点唯一.
 
-**(ii) 当 $\alpha\le1-\theta$ 且 $T$ 在 $B\left(x_0,r\right)$ 上连续时, $T$ 在 $B\left(x_0,r\right)$ 内有不动点, 且唯一性成立.**
+(ii) 当 $\alpha\le1-\theta$ 且 $T$ 在 $B\left(x_0,r\right)$ 上连续时, $T$ 在 $B\left(x_0,r\right)$ 内有不动点, 且唯一性成立.
 
-**第一步: $T$ 把 $B\left(x_0,r\right)$ 映入自身.** 对 $x\in O\left(x_0,r\right)$, $d\left(x,x_0\right)< r$, 由压缩条件与 $\alpha\le1-\theta$,
+第一步: $T$ 把 $B\left(x_0,r\right)$ 映入自身. 对 $x\in O\left(x_0,r\right)$, $d\left(x,x_0\right)< r$, 由压缩条件与 $\alpha\le1-\theta$,
 
 $$
 d\left(Tx,x_0\right)\le d\left(Tx,Tx_0\right)+d\left(Tx_0,x_0\right)< \theta d\left(x,x_0\right)+\alpha r< \theta r+\left(1-\theta\right)r=r,
@@ -804,9 +804,9 @@ $$
 
 故 $Tx\in O\left(x_0,r\right)\subset B\left(x_0,r\right)$. 对边界点 $x\in B\left(x_0,r\right)\setminus O\left(x_0,r\right)$, 取 $x_m\in O\left(x_0,r\right)$ 使 $x_m\to x$ (例如沿径向趋近). 由 $T$ 连续, $Tx_m\to Tx$; 而 $Tx_m\in B\left(x_0,r\right)$ 且 $B\left(x_0,r\right)$ 闭 (依据**例 1.4.2 (闭球是闭集)**), 故 $Tx\in B\left(x_0,r\right)$. 于是 $T\left(B\left(x_0,r\right)\right)\subset B\left(x_0,r\right)$.
 
-**第二步: $T$ 在 $B\left(x_0,r\right)$ 上满足压缩条件.** 对任意 $x,y\in B\left(x_0,r\right)$, 取 $x_m,y_m\in O\left(x_0,r\right)$ 使 $x_m\to x$, $y_m\to y$. 由开球内的严格压缩条件, $d\left(Tx_m,Ty_m\right)< \theta d\left(x_m,y_m\right)$. 令 $m\to\infty$, 由 $T$ 连续及距离函数的连续性, 得 $d\left(Tx,Ty\right)\le\theta d\left(x,y\right)$. 依据**定义 1.5.2 (压缩映射)**, $T$ 是 $B\left(x_0,r\right)$ 上以 $\theta< 1$ 为压缩系数的压缩映射.
+第二步: $T$ 在 $B\left(x_0,r\right)$ 上满足压缩条件. 对任意 $x,y\in B\left(x_0,r\right)$, 取 $x_m,y_m\in O\left(x_0,r\right)$ 使 $x_m\to x$, $y_m\to y$. 由开球内的严格压缩条件, $d\left(Tx_m,Ty_m\right)< \theta d\left(x_m,y_m\right)$. 令 $m\to\infty$, 由 $T$ 连续及距离函数的连续性, 得 $d\left(Tx,Ty\right)\le\theta d\left(x,y\right)$. 依据**定义 1.5.2 (压缩映射)**, $T$ 是 $B\left(x_0,r\right)$ 上以 $\theta< 1$ 为压缩系数的压缩映射.
 
-**第三步: 应用不动点原理.** $B\left(x_0,r\right)$ 是完备空间 $X$ 的闭子集 (依据**例 1.4.2 (闭球是闭集)**), 依据**引理 1.4.1 (基本点列与完备性)** (iii), $B\left(x_0,r\right)$ 完备; 由第一步, $T$ 把它映入自身. 依据**定理 1.5.1 (巴拿赫不动点定理)**, $T$ 在 $B\left(x_0,r\right)$ 内有唯一不动点, 即唯一性成立. $\blacksquare$
+第三步: 应用不动点原理. $B\left(x_0,r\right)$ 是完备空间 $X$ 的闭子集 (依据**例 1.4.2 (闭球是闭集)**), 依据**引理 1.4.1 (基本点列与完备性)** (iii), $B\left(x_0,r\right)$ 完备; 由第一步, $T$ 把它映入自身. 依据**定理 1.5.1 (巴拿赫不动点定理)**, $T$ 在 $B\left(x_0,r\right)$ 内有唯一不动点, 即唯一性成立. $\blacksquare$
 
 ## 1.5-6 (紧集上严格压缩映射的不动点)
 
@@ -820,11 +820,11 @@ $$
 
 ### 解答 1.5-6
 
-**第一步: $F$ 是紧集, $\varphi$ 连续.** 由**例 1.6.1 (有限维空间中相对列紧等价于有界)**, $\mathbb R^n$ 中有界集相对列紧; 而 $F$ 是有界闭集, 相对列紧的闭集即紧集, 故 $F$ 是紧集. 由题设 $d\left(\varphi\left(x\right),\varphi\left(y\right)\right)< d\left(x,y\right)$, 对任意 $x_m\to x$ 于 $F$, 有 $d\left(\varphi\left(x_m\right),\varphi\left(x\right)\right)< d\left(x_m,x\right)\to0$, 依据**定义 1.1.2 (极限)**, $\varphi\left(x_m\right)\to\varphi\left(x\right)$, 故 $\varphi$ 连续.
+第一步: $F$ 是紧集, $\varphi$ 连续. 由**例 1.6.1 (有限维空间中相对列紧等价于有界)**, $\mathbb R^n$ 中有界集相对列紧; 而 $F$ 是有界闭集, 相对列紧的闭集即紧集, 故 $F$ 是紧集. 由题设 $d\left(\varphi\left(x\right),\varphi\left(y\right)\right)< d\left(x,y\right)$, 对任意 $x_m\to x$ 于 $F$, 有 $d\left(\varphi\left(x_m\right),\varphi\left(x\right)\right)< d\left(x_m,x\right)\to0$, 依据**定义 1.1.2 (极限)**, $\varphi\left(x_m\right)\to\varphi\left(x\right)$, 故 $\varphi$ 连续.
 
-**第二步: 在紧集 $F$ 上定义连续函数 $g$ 并取最小值.** 令 $g\left(x\right)=d\left(x,\varphi\left(x\right)\right)$ ($x\in F$). 依据**例 1.4.3 (距离函数连续)**, 距离函数连续; 又 $\varphi$ 连续, 故 $g$ 是紧集 $F$ 上的连续函数. 依据**推论 1.6.3 (连续函数达到上下确界)**, $g$ 在 $F$ 上达到下确界, 即存在 $x_0\in F$ 使 $g\left(x_0\right)=\min_{x\in F}g\left(x\right)$.
+第二步: 在紧集 $F$ 上定义连续函数 $g$ 并取最小值. 令 $g\left(x\right)=d\left(x,\varphi\left(x\right)\right)$ ($x\in F$). 依据**例 1.4.3 (距离函数连续)**, 距离函数连续; 又 $\varphi$ 连续, 故 $g$ 是紧集 $F$ 上的连续函数. 依据**推论 1.6.3 (连续函数达到上下确界)**, $g$ 在 $F$ 上达到下确界, 即存在 $x_0\in F$ 使 $g\left(x_0\right)=\min_{x\in F}g\left(x\right)$.
 
-**第三步: 最小值点必为不动点.** 反设 $g\left(x_0\right)> 0$, 即 $\varphi\left(x_0\right)\ne x_0$. 因 $\varphi\left(x_0\right)\in F$ 且 $x_0\ne\varphi\left(x_0\right)$, 由题设严格压缩条件,
+第三步: 最小值点必为不动点. 反设 $g\left(x_0\right)> 0$, 即 $\varphi\left(x_0\right)\ne x_0$. 因 $\varphi\left(x_0\right)\in F$ 且 $x_0\ne\varphi\left(x_0\right)$, 由题设严格压缩条件,
 
 $$
 g\left(\varphi\left(x_0\right)\right)=d\left(\varphi\left(x_0\right),\varphi\left(\varphi\left(x_0\right)\right)\right)< d\left(x_0,\varphi\left(x_0\right)\right)=g\left(x_0\right),
@@ -832,9 +832,9 @@ $$
 
 这与 $g\left(x_0\right)$ 是 $g$ 在 $F$ 上的最小值矛盾. 故 $g\left(x_0\right)=0$, 即 $d\left(x_0,\varphi\left(x_0\right)\right)=0$. 依据**定义 1.1.1 (度量空间)** (i) 的正定性, $\varphi\left(x_0\right)=x_0$, 即 $x_0$ 是不动点.
 
-**第四步: 唯一性.** 若 $x,y\in F$ 都是不动点且 $x\ne y$, 则由题设 $d\left(x,y\right)=d\left(\varphi\left(x\right),\varphi\left(y\right)\right)< d\left(x,y\right)$, 矛盾. 故不动点唯一.
+第四步: 唯一性. 若 $x,y\in F$ 都是不动点且 $x\ne y$, 则由题设 $d\left(x,y\right)=d\left(\varphi\left(x\right),\varphi\left(y\right)\right)< d\left(x,y\right)$, 矛盾. 故不动点唯一.
 
-**关于不闭的有界集:** 该事实不成立. 取 $F=\left(0,1\right]$ ($\mathbb R$ 中的有界非闭集), 定义 $\varphi\left(x\right)=\frac{x}{2}$. 对任意 $x\ne y\in F$, $d\left(\varphi\left(x\right),\varphi\left(y\right)\right)=\frac{\left|x-y\right|}{2}< d\left(x,y\right)$, 满足题设严格压缩条件; 但方程 $\frac{x}{2}=x$ 的解为 $x=0\notin F$, 故 $\varphi$ 在 $F$ 中无不动点. 因而对不闭的有界集, 该结论不成立. $\blacksquare$
+关于不闭的有界集: 该事实不成立. 取 $F=\left(0,1\right]$ ($\mathbb R$ 中的有界非闭集), 定义 $\varphi\left(x\right)=\frac{x}{2}$. 对任意 $x\ne y\in F$, $d\left(\varphi\left(x\right),\varphi\left(y\right)\right)=\frac{\left|x-y\right|}{2}< d\left(x,y\right)$, 满足题设严格压缩条件; 但方程 $\frac{x}{2}=x$ 的解为 $x=0\notin F$, 故 $\varphi$ 在 $F$ 中无不动点. 因而对不闭的有界集, 该结论不成立. $\blacksquare$
 
 > 不闭自然不完备, 因此多次压缩后的点很容易溜出定义域.
 
@@ -850,7 +850,7 @@ $$
 
 ### 解答 1.5-7
 
-**第一步: 牛顿映射及其在根点处的导数.** 令 $N\left(x\right)=x-\frac{f\left(x\right)}{f'\left(x\right)}$, 其定义域为使 $f'\left(x\right)\ne0$ 的开集. 因 $f$ 二次连续可微且 $f'\left(\overline{x}\right)\ne0$, $N$ 在 $\overline{x}$ 的某邻域内连续可微, 且
+第一步: 牛顿映射及其在根点处的导数. 令 $N\left(x\right)=x-\frac{f\left(x\right)}{f'\left(x\right)}$, 其定义域为使 $f'\left(x\right)\ne0$ 的开集. 因 $f$ 二次连续可微且 $f'\left(\overline{x}\right)\ne0$, $N$ 在 $\overline{x}$ 的某邻域内连续可微, 且
 
 $$
 N'\left(x\right)=1-\frac{f'\left(x\right)^2-f\left(x\right)f''\left(x\right)}{f'\left(x\right)^2}=\frac{f\left(x\right)f''\left(x\right)}{f'\left(x\right)^2}.
@@ -858,7 +858,7 @@ $$
 
 代入 $x=\overline{x}$ 并利用 $f\left(\overline{x}\right)=0$, 得 $N'\left(\overline{x}\right)=\frac{f\left(\overline{x}\right)f''\left(\overline{x}\right)}{f'\left(\overline{x}\right)^2}=0$.
 
-**第二步: 选取压缩区间.** 因 $N'$ 连续且 $N'\left(\overline{x}\right)=0$, 存在 $\delta> 0$, 使当 $\left|x-\overline{x}\right|\le\delta$ 时 $\left|N'\left(x\right)\right|\le\frac12< 1$. 对任意 $x,y\in\left[\overline{x}-\delta,\overline{x}+\delta\right]$, 依据微分中值定理, 存在 $\xi$ 介于 $x,y$ 之间使
+第二步: 选取压缩区间. 因 $N'$ 连续且 $N'\left(\overline{x}\right)=0$, 存在 $\delta> 0$, 使当 $\left|x-\overline{x}\right|\le\delta$ 时 $\left|N'\left(x\right)\right|\le\frac12< 1$. 对任意 $x,y\in\left[\overline{x}-\delta,\overline{x}+\delta\right]$, 依据微分中值定理, 存在 $\xi$ 介于 $x,y$ 之间使
 
 $$
 \left|N\left(x\right)-N\left(y\right)\right|=\left|N'\left(\xi\right)\right|\left|x-y\right|\le\frac12\left|x-y\right|.
@@ -866,7 +866,7 @@ $$
 
 故 $N$ 在闭区间 $\left[\overline{x}-\delta,\overline{x}+\delta\right]$ 上以 $\frac12$ 为压缩系数, 依据**定义 1.5.2 (压缩映射)**, $N$ 是该闭区间上的压缩映射.
 
-**第三步: 取不变闭区间并应用不动点定理.** 记 $B=\left[\overline{x}-\delta,\overline{x}+\delta\right]$. 因 $N\left(\overline{x}\right)=\overline{x}-\frac{f\left(\overline{x}\right)}{f'\left(\overline{x}\right)}=\overline{x}$, 对任意 $x\in B$, 由第二步的压缩估计,
+第三步: 取不变闭区间并应用不动点定理. 记 $B=\left[\overline{x}-\delta,\overline{x}+\delta\right]$. 因 $N\left(\overline{x}\right)=\overline{x}-\frac{f\left(\overline{x}\right)}{f'\left(\overline{x}\right)}=\overline{x}$, 对任意 $x\in B$, 由第二步的压缩估计,
 
 $$
 \left|N\left(x\right)-\overline{x}\right|=\left|N\left(x\right)-N\left(\overline{x}\right)\right|\le\frac12\left|x-\overline{x}\right|\le\frac{\delta}{2}< \delta,
