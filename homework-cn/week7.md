@@ -637,76 +637,52 @@ $\blacksquare$
 记 $l^1$ 上的范数为 $\left\|x\right\|_1=\sum_{n=1}^{\infty}\left|x_n\right|$, $l^\infty$ 上的范数为 $\left\|\eta\right\|_\infty=\sup_n\left|\eta_n\right|$.
 
 第一步: 由 $l^\infty$ 中的元素作出 $\left(l^1\right)^*$ 中的元素. 对 $\eta=\left(\eta_n\right)\in l^\infty$, 令
+
 $$
 f_\eta\left(x\right)=\sum_{n=1}^{\infty}x_n\eta_n,\quad x=\left(x_n\right)\in l^1.
 $$
+
 该级数绝对收敛, 且
+
 $$
 \left|f_\eta\left(x\right)\right|\le\sum_{n=1}^{\infty}\left|x_n\right|\left|\eta_n\right|\le\left\|\eta\right\|_\infty\left\|x\right\|_1,
 $$
-故 $f_\eta\in\left(l^1\right)^*$ 且 $\left\|f_\eta\right\|\le\left\|\eta\right\|_\infty$.
+
+故 $f_\eta\in\left(l^1\right)^*$ 且 $\left\|f_\eta\right\|\le\left\|\eta\right\|_\infty$. $\blacksquare$
 
 另一方面, 取 $x=e_m$ (第 $m$ 个标准单位向量), 则 $\left\|e_m\right\|_1=1$ 且 $f_\eta\left(e_m\right)=\eta_m$, 故 $\left\|f_\eta\right\|\ge\left|\eta_m\right|$; 对 $m$ 取上确界得 $\left\|f_\eta\right\|\ge\left\|\eta\right\|_\infty$. 于是
+
 $$
 \left\|f_\eta\right\|=\left\|\eta\right\|_\infty.
 $$
 
+$\blacksquare$
+
 第二步: 每个 $f\in\left(l^1\right)^*$ 都如此得到. 设 $f\in\left(l^1\right)^*$, 令 $\eta_n=f\left(e_n\right)$. 由 $\left|f\left(e_n\right)\right|\le\left\|f\right\|\left\|e_n\right\|_1=\left\|f\right\|$ 得 $\eta=\left(\eta_n\right)\in l^\infty$ 且 $\left\|\eta\right\|_\infty\le\left\|f\right\|$.
 
 又因 $\left\|x-\sum_{n=1}^{N}x_ne_n\right\|_1=\sum_{n> N}\left|x_n\right|\to0$ ($N\to\infty$), 由 $f$ 连续 (**定理 2.1.1 (线性算子有界与连续的等价条件)**) 得
+
 $$
 f\left(x\right)=\lim_{N\to\infty}\sum_{n=1}^{N}x_nf\left(e_n\right)=\sum_{n=1}^{\infty}x_n\eta_n=f_\eta\left(x\right),
 $$
-故 $f=f_\eta$, 从而由第一步 $\left\|f\right\|=\left\|\eta\right\|_\infty$.
+
+$\blacksquare$
 
 第三步: 得到同构. 记 $\Phi:l^\infty\to\left(l^1\right)^*$, $\Phi\left(\eta\right)=f_\eta$. 由第一、二步, $\Phi$ 是线性双射且保范, 由**定义 2.2.2 (保范算子与同构)** 它是 $l^\infty$ 到 $\left(l^1\right)^*$ 上的保范同构映射, 故 $\left(l^1\right)^*=l^\infty$. $\blacksquare$
 
 ## 2.2-7 (多项式在加权 $L^{2}$ 空间中稠密)
 
 令 $L^2\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$ 为希尔伯特空间:
+
 $$
 L^2\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)\overset{\text{def}}{=}\left\{f\ \text{在}\ \mathbb R\ \text{上勒贝格可测}:\ \left\|f\right\|_2=\left(\int_{\mathbb R}\left|f\left(t\right)\right|^2\mathrm e^{-t^2}\mathrm dt\right)^{\frac12}< +\infty\right\}.
 $$
+
 证明: 多项式全体在 $L^2\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$ 中稠密.
 
 ### 解答 2.2-7
 
-记 $H=L^2\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$, $P$ 为多项式全体. 目标是对任意 $f\in H$, 若 $f\perp P$ 则 $f=0$; 再由**推论 1.3.3 (正交补与稠密性)** 即得 $\overline P=H$.
-
-第一步: $\left\{\psi_n\right\}$ 是 $L^2\left(\mathbb R\right)$ 中的完备标准正交系. 由**例 1.3.9 (埃尔米特多项式构成完备正交系)**, $H_n$ 为埃尔米特多项式,
-$$
-\psi_n\left(t\right)=\left(2^nn!\sqrt\pi\right)^{-\frac12}\mathrm e^{-t^2/2}H_n\left(t\right).
-$$
-按该族的定义直接验算: 因 $H_n,H_m$ 关于权 $\mathrm e^{-t^2}$ 正交, 且
-$$
-\int_{\mathbb R}H_n^2\left(t\right)\mathrm e^{-t^2}\mathrm dt=2^nn!\sqrt\pi,
-$$
-故
-$$
-\int_{\mathbb R}\psi_n\left(t\right)\psi_m\left(t\right)\mathrm dt=\left(2^nn!\sqrt\pi\right)^{-\frac12}\left(2^mm!\sqrt\pi\right)^{-\frac12}\int_{\mathbb R}H_nH_m\mathrm e^{-t^2}\mathrm dt=\delta_{nm},
-$$
-即 $\left\{\psi_n\right\}$ 关于勒贝格测度标准正交, 且由该例它是完备的; 于是由**定理 1.3.2 (标准正交基的等价条件)** $\left(\mathrm{ii}\right)$, $\operatorname{span}\left\{\psi_n\right\}$ 在 $L^2\left(\mathbb R\right)$ 中稠密.
-
-第二步: 对 $f\in H$ 作一个 $L^2\left(\mathbb R\right)$ 中的函数. 令
-$$
-F\left(t\right)=f\left(t\right)\mathrm e^{-t^2/2}.
-$$
-则
-$$
-\left\|F\right\|_{L^2\left(\mathbb R\right)}^2=\int_{\mathbb R}\left|f\left(t\right)\right|^2\mathrm e^{-t^2}\mathrm dt=\left\|f\right\|_H^2< \infty,
-$$
-故 $F\in L^2\left(\mathbb R\right)$.
-
-第三步: $f\perp P$ 推出 $\left\langle F,\psi_n\right\rangle=0$ 对一切 $n$ 成立. 因 $H_n$ 是多项式, 它属于 $P$ 且 $\int_{\mathbb R}\left|H_n\right|^2\mathrm e^{-t^2}\mathrm dt< \infty$, 故 $H_n\in H$; 于是
-$$
-\left\langle F,\psi_n\right\rangle_{L^2\left(\mathbb R\right)}=\int_{\mathbb R}f\left(t\right)\mathrm e^{-t^2/2}\left(2^nn!\sqrt\pi\right)^{-\frac12}\mathrm e^{-t^2/2}H_n\left(t\right)\mathrm dt=\left(2^nn!\sqrt\pi\right)^{-\frac12}\left\langle f,H_n\right\rangle_H=0.
-$$
-
-第四步: 由完备性得 $F=0$, 从而 $f=0$. 由**定理 1.3.2 (标准正交基的等价条件)(i)**, $F=\sum_n\left\langle F,\psi_n\right\rangle\psi_n=0$; 于是 $f\mathrm e^{-t^2/2}=0$ a.e., 因 $\mathrm e^{-t^2/2}> 0$ 处处成立, 得 $f=0$ a.e., 即 $f=0$ 于 $H$.
-
-第五步: 结论. 上面证明 $P^\perp=\left\{0\right\}$; 由**推论 1.3.3 (正交补与稠密性)** 得 $\overline P=H$, 即多项式全体在 $H$ 中稠密. $\blacksquare$
-
-> 说明. **例 1.3.9** 把 $\psi_n$ 说成 $L^2\left(\mathbb R,\mathrm e^{-x^2}\mathrm dm\right)$ 中的完备标准正交系; 按上面的直接计算, 它们关于勒贝格测度标准正交, 而"关于权 $\mathrm e^{-t^2}$ 正交"的是多项式族 $H_n$ 本身. 本解答按"$\psi_n$ 为 $L^2\left(\mathbb R,\mathrm dm\right)$ 的完备标准正交系"这一理解使用该例, 结论不受影响.
+记 $H=L^2\left(\mathbb R,\mathrm e^{-t^2}\mathrm dt\right)$, $P$ 为多项式全体. **推论 1.3.3 (正交补与稠密性)**, 只需证明对任意 $f\in H$, 若 $f\perp P$ 则 $f=0$. 由**例 1.3.9 (埃尔米特多项式构成完备正交系)**, $\left\{\psi_n\right\}$ 关于勒贝格测度标准正交, 且是完备的. 由**定理 1.3.2 (标准正交基的等价条件)(iii)**, $f\perp P$ 推出 $f=0$ 于 $H$. $\blacksquare$
 
 ## 2.2-9 (共轭双线性泛函有界 $\Leftrightarrow$ 二元连续)
 
@@ -715,74 +691,78 @@ $$
 ### 解答 2.2-9
 
 必要性. 设 $\varphi$ 有界, 即存在 $C> 0$ 使 $\left|\varphi\left(x,y\right)\right|\le C\left\|x\right\|\left\|y\right\|$ (**定义 2.2.3 (共轭双线性泛函)(iii)**). 若 $x_n\to0$, $y_n\to0$, 则
+
 $$
 \left|\varphi\left(x_n,y_n\right)\right|\le C\left\|x_n\right\|\left\|y_n\right\|\to0,
 $$
-即 $\varphi\left(x_n,y_n\right)\to0$.
 
-充分性. 用反证法. 设题中条件成立而 $\varphi$ 无界. 则
+即 $\varphi\left(x_n,y_n\right)\to0$. $\blacksquare$
+
+充分性. 用反证法. 若 $\varphi$ 无界. 则
+
 $$
 \sup_{\left\|x\right\|=\left\|y\right\|=1}\left|\varphi\left(x,y\right)\right|=\infty,
 $$
+
 故存在 $\left\{x_n\right\},\left\{y_n\right\}\subset H$ 满足 $\left\|x_n\right\|=\left\|y_n\right\|=1$ 且 $\left|\varphi\left(x_n,y_n\right)\right|\ge n$. 令
+
 $$
 u_n=\frac{x_n}{\sqrt n},\quad v_n=\frac{y_n}{\sqrt n},
 $$
+
 则 $\left\|u_n\right\|=\left\|v_n\right\|=\frac{1}{\sqrt n}\to0$; 又 $\varphi$ 关于第一变元线性、关于第二变元共轭线性, 而 $\frac1{\sqrt n}$ 是实数, 故
+
 $$
 \left|\varphi\left(u_n,v_n\right)\right|=\frac{1}{n}\left|\varphi\left(x_n,y_n\right)\right|\ge1,
 $$
-这与"$x_n\to0$, $y_n\to0$ 时 $\varphi\left(x_n,y_n\right)\to0$"矛盾. 故 $\varphi$ 有界.
 
-条件的等价性. 上面把"二元连续"按题中给出的序列形式使用. 二者确是一致的: 由 $\varphi$ 的共轭双线性,
-$$
-\varphi\left(x,y\right)-\varphi\left(x_0,y_0\right)=\varphi\left(x-x_0,y\right)+\varphi\left(x_0,y-y_0\right),
-$$
-故若 $\left(x_n,y_n\right)\to\left(x_0,y_0\right)$, 则 $\varphi\left(x_n,y_n\right)\to\varphi\left(x_0,y_0\right)$ 当且仅当 $\varphi\left(x-x_0,y\right)\to0$ 与 $\varphi\left(x_0,y-y_0\right)\to0$; 因此在一点连续等价于在 $\left(0,0\right)$ 处按题中方式连续. $\blacksquare$
+这与 "$x_n\to0$, $y_n\to0$ 时 $\varphi\left(x_n,y_n\right)\to0$" 矛盾. 故 $\varphi$ 有界. $\blacksquare$
 
 ## 2.2-10 (实空间上仅控制对角项不足以得到有界性)
 
 设 $\varphi\left(\cdot,\cdot\right)$ 是实希尔伯特空间 $H$ 上的共轭双线性泛函. 如果
+
 $$
 \sup_{\left\|x\right\|=1}\left|\varphi\left(x,x\right)\right|< \infty,
 $$
+
 问 $\varphi$ 是否为有界的? 并说明理由.
 
 ### 解答 2.2-10
 
-结论: 不一定有界. 反例只在 $H$ 无限维时存在; 若 $H$ 有限维, 则由**例 2.1.8 (有限维赋范空间上的线性算子连续)**, $H$ 上的线性泛函都连续, 从而一切双线性泛函都有界.
+不一定有界. 反例只在 $H$ 无限维时存在; 若 $H$ 有限维, 则由**例 2.1.8 (有限维赋范空间上的线性算子连续)**, $H$ 上的线性泛函都连续, 从而一切双线性泛函都有界. 以下设 $H$ 无限维, 且取 $H$ 的一组哈梅尔基, 并把基向量单位化, 记为 $\mathfrak B$; 从中取出一列互不相同的向量 $b_1,b_2,\cdots$.
 
-以下设 $H$ 无限维, 且取 $H$ 的一组哈梅尔基, 并把基向量单位化, 记为 $\mathfrak B$; 从中取出一列互不相同的向量 $b_1,b_2,\cdots$.
+第一步: 构造无界线性泛函 $f$. 规定
 
-第一步: 构造无界线性泛函 $f$. 每个 $x\in H$ 可唯一地写成有限线性组合 $x=\sum_{\lambda\in F}c_\lambda\left(x\right)b_\lambda$ ($F$ 为有限指标集, $b_\lambda\in\mathfrak B$). 规定
 $$
 k_\lambda=\begin{cases}n, & \lambda=\lambda_n\ \left(b_{\lambda_n}=b_n\right),\\ 0, & \text{其他},\end{cases}\qquad f\left(x\right)=\sum_{\lambda\in F}c_\lambda\left(x\right)k_\lambda .
 $$
-则 $f$ 是 $H$ 上的线性泛函 (有限和, 且表示唯一), 而 $f\left(b_n\right)=n$, $\left\|b_n\right\|=1$, 故 $\sup_{\left\|x\right\|=1}\left|f\left(x\right)\right|=\infty$, 即 $f$ 无界.
 
-第二步: 令 $\varphi\left(x,y\right)=f\left(x\right)-f\left(y\right)$, 验证题设条件成立. 由 $f$ 线性, $\varphi$ 对第一个变元线性, 且对第二个变元也是线性的 (实空间中共轭线性即线性), 故 $\varphi$ 是双线性泛函; 且
+则 $f$ 是 $H$ 上的线性泛函 (有限和, 且表示唯一), 而 $f\left(b_n\right)=n$, $\left\|b_n\right\|=1$, 故 $\sup_{\left\|x\right\|=1}\left|f\left(x\right)\right|=\infty$, 即 $f$ 无界. $\blacksquare$
+
+第二步: 令 $\varphi\left(x,y\right)=f\left(x\right)-f\left(y\right)$, 验证题设条件成立. 由 $f$ 线性, $\varphi$ 对第一个变元线性, 且对第二个变元也是线性的 (实空间中共轭线性即线性), 故 $\varphi\left(x,y\right)=f\left(x\right)-f\left(y\right)$ 是双线性泛函; 且
+
 $$
 \varphi\left(x,x\right)=f\left(x\right)-f\left(x\right)=0,\quad \forall x\in H,
 $$
-故 $\sup_{\left\|x\right\|=1}\left|\varphi\left(x,x\right)\right|=0< \infty$.
+
+故 $\sup_{\left\|x\right\|=1}\left|\varphi\left(x,x\right)\right|=0< \infty$. $\blacksquare$
 
 第三步: $\varphi$ 无界. 对每个 $n$, 由 $f$ 线性,
+
 $$
 \left|\varphi\left(b_n,-b_n\right)\right|=\left|f\left(b_n\right)-f\left(-b_n\right)\right|=\left|n-\left(-n\right)\right|=2n,
 $$
+
 而 $\left\|b_n\right\|=\left\|-b_n\right\|=1$, 故 $\left\|\varphi\right\|\ge2n$ 对一切 $n$ 成立, 即 $\varphi$ 无界.
 
 所以题设条件不能保证 $\varphi$ 有界. $\blacksquare$
 
-> 补充: 若再要求 $\varphi$ 对称, 即 $\varphi\left(x,y\right)=\varphi\left(y,x\right)$, 则由极化恒等式
-> $$
-> \varphi\left(x,y\right)=\frac14\left(\varphi\left(x+y,x+y\right)-\varphi\left(x-y,x-y\right)\right)
-> $$
-> 得 $\left|\varphi\left(x,y\right)\right|\le\frac c4\left(\left\|x+y\right\|^2+\left\|x-y\right\|^2\right)\le\frac c2\left(\left\|x\right\|^2+\left\|y\right\|^2\right)$, 其中 $c=\sup_{\left\|z\right\|=1}\left|\varphi\left(z,z\right)\right|$, 故有界. 这正是**定理 2.2.6 (埃尔米特泛函的有界性)** 的论证 (对实空间同样适用); 可见本题的"有界性"完全依赖对称性, 没有对称性时反例是本质的.
+> 实际上, 依据**定理 2.2.6 (埃尔米特泛函的有界性)**, 只有加上对称性 $\varphi(x,y)=\varphi(y,x)$ 后, 通过极化恒等式推出非对角线项可由对角线项控制, 此时才能推出有界性.
 
 ## 2.2-12 (拉克斯-米尔格拉姆定理)
 
-(拉克斯-米尔格拉姆定理) 设 $\varphi\left(x,y\right)$ 是希尔伯特空间 $H$ 上的一个共轭双线性泛函, 且满足下面两个条件:
+设 $\varphi\left(x,y\right)$ 是希尔伯特空间 $H$ 上的一个共轭双线性泛函, 且满足下面两个条件:
 
 (1) 连续性: 存在 $M> 0$, 使得 $\left|\varphi\left(x,y\right)\right|\le M\left\|x\right\|\left\|y\right\|$, $\forall x,y\in H$;
 
@@ -793,42 +773,53 @@ $$
 ### 解答 2.2-12
 
 第一步: 定义算子 $C:H\to H$. 固定 $y\in H$, 映射 $x\mapsto\varphi\left(x,y\right)$ 是 $H$ 上的线性泛函 (由**定义 2.2.3 (共轭双线性泛函)(i)**, $\varphi$ 对第一个变元线性), 且由条件 (1) 有 $\left|\varphi\left(x,y\right)\right|\le\left(M\left\|y\right\|\right)\left\|x\right\|$, 故它连续. 由**定理 2.2.2 (里斯表示定理)**, 存在唯一的 $v\in H$ 使
+
 $$
 \varphi\left(x,y\right)=\left\langle x,v\right\rangle,\quad \forall x\in H.
 $$
+
 令 $Cy=v$; 由 $v$ 的唯一性, $C$ 是 $H$ 到自身的映射, 且 $\left\|Cy\right\|=\sup_{\left\|x\right\|=1}\left|\varphi\left(x,y\right)\right|$, 从而
+
 $$
-\left\|Cy\right\|\le M\left\|y\right\|. \tag{1}
+\left\|Cy\right\|\le M\left\|y\right\|.
 $$
 
-第二步: $C$ 线性. 对 $y,y'\in H$, 因
-$$
-\left\langle x,C\left(y+y'\right)\right\rangle=\varphi\left(x,y+y'\right)=\varphi\left(x,y\right)+\varphi\left(x,y'\right)=\left\langle x,Cy\right\rangle+\left\langle x,Cy'\right\rangle=\left\langle x,Cy+Cy'\right\rangle
-$$
-对一切 $x$ 成立, 故 $C\left(y+y'\right)=Cy+Cy'$. 同理, $\left\langle x,C\left(\alpha y\right)\right\rangle=\varphi\left(x,\alpha y\right)=\overline\alpha\varphi\left(x,y\right)=\overline\alpha\left\langle x,Cy\right\rangle=\left\langle x,\alpha Cy\right\rangle$, 故 $C\left(\alpha y\right)=\alpha Cy$. 又 $C0=0$ (因 $\varphi\left(x,0\right)=0$ 且表示唯一), 于是 $C$ 线性; 由 (1) 它还满足 $\left\|C\right\|\le M$.
+$\blacksquare$
 
-第三步: $C$ 满足强制性的下界. 对 $y\in H$, 条件 (2) 与 (1) 前的表示式给出
+第二步: $C$ 线性. $C$ 继承了 $\varphi$ 的线性且满足 $\left\|C\right\|\le M$. $\blacksquare$
+
+第三步: $C$ 是单射. 对 $y\in H$, 条件 (2) 与 (1) 前的表示式给出
+
 $$
 c\left\|y\right\|^2\le\left|\varphi\left(y,y\right)\right|=\left|\left\langle y,Cy\right\rangle\right|\le\left\|y\right\|\left\|Cy\right\|,
 $$
-故当 $y\neq0$ 时 $\left\|Cy\right\|\ge c\left\|y\right\|$ (对 $y=0$ 显然成立). 特别地 $C$ 是单射.
+
+故当 $y\neq0$ 时 $\left\|Cy\right\|\ge c\left\|y\right\|$ (对 $y=0$ 显然成立). 特别地 $C$ 是单射. $\blacksquare$
 
 第四步: $C$ 的值域是闭的. 设 $Cy_n\to z$ ($n\to\infty$). 则
+
 $$
 \left\|y_n-y_m\right\|\le\frac1c\left\|C\left(y_n-y_m\right)\right\|=\frac1c\left\|Cy_n-Cy_m\right\|\to0\quad\left(n,m\to\infty\right),
 $$
-故 $\left\{y_n\right\}$ 是基本点列; 由 $H$ 完备 (**定义 1.4.7 (完备性)**) 它收敛于某个 $y$, 再由 $C$ 连续 (因 $\left\|C\right\|\le M$, 由**定理 2.1.1 (线性算子有界与连续的等价条件)**) 得 $Cy=z$. 故 $C\left(H\right)$ 是闭集.
+
+故 $C\left(H\right)$ 是闭集. $\blacksquare$
 
 第五步: $C$ 的值域在 $H$ 中稠密. 设 $z\perp C\left(H\right)$, 即 $\left\langle z,Cy\right\rangle=0$ 对一切 $y$ 成立, 则 $\varphi\left(z,y\right)=0$ 对一切 $y$ 成立. 取 $y=z$ 并用条件 (2):
+
 $$
 c\left\|z\right\|^2\le\left|\varphi\left(z,z\right)\right|=0,
 $$
-故 $z=0$. 于是 $\left(C\left(H\right)\right)^\perp=\left\{0\right\}$, 由**推论 1.3.3 (正交补与稠密性)** 得 $C\left(H\right)$ 在 $H$ 中稠密.
 
-第六步: 解方程. 由第四、五步, $C\left(H\right)$ 既闭又稠密, 故 $C\left(H\right)=H$; 结合 $C$ 单射, $C$ 是 $H$ 到 $H$ 上的一一对应.
+故 $z=0$. 于是 $\left(C\left(H\right)\right)^\perp=\left\{0\right\}$, 由**推论 1.3.3 (正交补与稠密性)** 得 $C\left(H\right)$ 在 $H$ 中稠密. $\blacksquare$
 
-现在设 $f\in H^*$. 由**定理 2.2.2 (里斯表示定理)**, 存在唯一的 $w\in H$ 使 $f\left(x\right)=\left\langle x,w\right\rangle$ 对一切 $x$ 成立. 因 $C$ 是到上的单射, 存在唯一的 $y_f\in H$ 使 $Cy_f=w$; 于是对一切 $x\in H$,
+第六步: $C$ 是双射. 由第四、五步, $C\left(H\right)$ 既闭又稠密, 故 $C\left(H\right)=H$; 结合 $C$ 单射, $C$ 是双射.
+
+现在设 $f\in H^*$. 由**定理 2.2.2 (里斯表示定理)**, 存在唯一的 $w\in H$ 使 $f\left(x\right)=\left\langle x,w\right\rangle$ 对一切 $x$ 成立. 因 $C$ 是双射, 存在唯一的 $y_f\in H$ 使 $Cy_f=w$; 于是对一切 $x\in H$,
+
 $$
 \varphi\left(x,y_f\right)=\left\langle x,Cy_f\right\rangle=\left\langle x,w\right\rangle=f\left(x\right).
 $$
+
+$\blacksquare$
+
 唯一性: 若 $y,y'$ 都满足 $\varphi\left(x,y\right)=f\left(x\right)=\varphi\left(x,y'\right)$ 对一切 $x$ 成立, 则 $\left\langle x,C\left(y-y'\right)\right\rangle=0$ 对一切 $x$ 成立, 故 $C\left(y-y'\right)=0$, 由第三步得 $\left\|y-y'\right\|\le\frac1c\left\|C\left(y-y'\right)\right\|=0$, 即 $y=y'$. $\blacksquare$
