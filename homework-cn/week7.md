@@ -32,7 +32,7 @@
 
 > **注 1.4.1 ($L^{p}$ 中的稠密子集)**
 > 
-> (i) $L^p\left(\mathbb{R}^n\right)$ ($1\le{p}<\infty$) 中的简单函数全体、阶梯函数全体以及 $C_c^\infty\left(\mathbb{R}^n\right)$ 均是稠密子集;
+> (i) $L^p\left(\mathbb{R}^n\right)$ ($1\le{p}<\infty$) 中的简单函数全体, 阶梯函数全体以及 $C_c^\infty\left(\mathbb{R}^n\right)$ 均是稠密子集;
 > 
 > (ii) 在 $L^\infty\left[a,b\right]$ 中只有简单函数全体稠密.
 
@@ -193,7 +193,7 @@ $$
 先证 $\ker{D}$ 是 $X$ 的闭集. 由 $Dx=0$ 当且仅当 $x'$ 在 $\left[a,b\right]$ 上恒为 $0$, 而闭区间上导数恒为 $0$ 的函数是常值函数, 故
 
 $$
-\ker{D}=\left\{x\in{X}:\,\exists\,c\in\mathbb{R},\,x\left(t\right)=c,\,\forall\,t\in\left[a,b\right]\right\}.
+\ker{D}=\left\{x\in{X}:\,\exists\,c\in\mathbb{R},x\left(t\right)=c,\forall\,t\in\left[a,b\right]\right\}.
 $$
 
 设 $\left\{x_n\right\}\subset\ker{D}$ 且 $x_n\to{x}$ 于 $X$, 则 $x_n\equiv{c}=x$, $\forall\,n\in\mathbb{N}$. 故 $x\in\ker{D}$, 即 $\ker{D}$ 闭. $\blacksquare$
@@ -206,7 +206,7 @@ $$
 
 设 $E$ 是希尔伯特空间 $H$ 的一个稠密的线性子空间, $T\in\mathfrak{B}\left(H\right)$. 证明:
 $$
-\left\|T\right\|=\sup\left\{\left|\left\langle{T}x,y\right\rangle\right|:\,x,y\in{E},\,\left\|x\right\|=\left\|y\right\|=1\right\}.
+\left\|T\right\|=\sup\left\{\left|\left\langle{T}x,y\right\rangle\right|:\,x,y\in{E},\left\|x\right\|=\left\|y\right\|=1\right\}.
 $$
 
 ### 解答 2.1-2
@@ -286,7 +286,7 @@ $$
 下界: 取指标 $j_0$ 使 $\sum_{i=1}^{n}\left|t_{j_0i}\right|^2=\max_{1\le{j}\le{n}}\sum_{i=1}^{n}\left|t_{ji}\right|^2$, 并令 $x_i=\overline{t_{j_0i}}$. 则
 
 $$
-\left\|x\right\|=\left(\sum_{i=1}^{n}\left|t_{j_0i}\right|^2\right)^{\frac12},\qquad\left(Tx\right)_{j_0}=\sum_{i=1}^{n}t_{j_0i}\overline{t_{j_0i}}=\sum_{i=1}^{n}\left|t_{j_0i}\right|^2,
+\left\|x\right\|=\left(\sum_{i=1}^{n}\left|t_{j_0i}\right|^2\right)^{\frac12},\quad\left(Tx\right)_{j_0}=\sum_{i=1}^{n}t_{j_0i}\overline{t_{j_0i}}=\sum_{i=1}^{n}\left|t_{j_0i}\right|^2,
 $$
 
 于是
@@ -557,7 +557,7 @@ $$
 则 $\left|g\right|=\left|\varphi\right|^{q-1}$, $g\overline\varphi=\left|\varphi\right|^{q-2}\varphi\overline\varphi=\left|\varphi\right|^{q}$. 由 $\left(q-1\right)p=q$ 得
 
 $$
-\left\|g\right\|_p^p=\int_a^b\left|\varphi\right|^{\left(q-1\right)p}\mathrm{d}t=\int_a^b\left|\varphi\right|^q\mathrm{d}t=\left\|\varphi\right\|_q^q,\qquad{F}\left(g\right)=\int_a^b\left|\varphi\right|^q\mathrm{d}t=\left\|\varphi\right\|_q^q.
+\left\|g\right\|_p^p=\int_a^b\left|\varphi\right|^{\left(q-1\right)p}\mathrm{d}t=\int_a^b\left|\varphi\right|^q\mathrm{d}t=\left\|\varphi\right\|_q^q,\quad{F}\left(g\right)=\int_a^b\left|\varphi\right|^q\mathrm{d}t=\left\|\varphi\right\|_q^q.
 $$
 
 由 $\left(q-1\right)p=q$ 得 $\left\|g\right\|_p=\left\|\varphi\right\|_q^{\frac{q}p}=\left\|\varphi\right\|_q^{q-1}$, 依据**定义 2.1.2 (算子范数)**,
@@ -668,14 +668,14 @@ $$
 
 $\blacksquare$
 
-第三步: 得到同构. 记 $\Phi:l^\infty\to\left(l^1\right)^*$, $\Phi\left(\eta\right)=f_\eta$. 由第一、二步, $\Phi$ 是线性双射且保范, 由**定义 2.2.2 (保范算子与同构)** 它是 $l^\infty$ 到 $\left(l^1\right)^*$ 上的保范同构映射, 故 $\left(l^1\right)^*=l^\infty$. $\blacksquare$
+第三步: 得到同构. 记 $\Phi:l^\infty\to\left(l^1\right)^*$, $\Phi\left(\eta\right)=f_\eta$. 由第一, 二步, $\Phi$ 是线性双射且保范, 由**定义 2.2.2 (保范算子与同构)** 它是 $l^\infty$ 到 $\left(l^1\right)^*$ 上的保范同构映射, 故 $\left(l^1\right)^*=l^\infty$. $\blacksquare$
 
 ## 2.2-7 (多项式在加权 $L^{2}$ 空间中稠密)
 
 令 $L^2\left(\mathbb{R},\mathrm{e}^{-t^2}\mathrm{d}t\right)$ 为希尔伯特空间:
 
 $$
-L^2\left(\mathbb{R},\mathrm{e}^{-t^2}\mathrm{d}t\right)\overset{\text{def}}{=}\left\{f\,\text{在}\,\mathbb{R}\,\text{上勒贝格可测}:\,\left\|f\right\|_2=\left(\int_{\mathbb{R}}\left|f\left(t\right)\right|^2\mathrm{e}^{-t^2}\mathrm{d}t\right)^{\frac12}<+\infty\right\}.
+L^2\left(\mathbb{R},\mathrm{e}^{-t^2}\mathrm{d}t\right)\overset{\text{def}}{=}\left\{f\;\text{在}\;\mathbb{R}\;\text{上勒贝格可测}:\,\left\|f\right\|_2=\left(\int_{\mathbb{R}}\left|f\left(t\right)\right|^2\mathrm{e}^{-t^2}\mathrm{d}t\right)^{\frac12}<+\infty\right\}.
 $$
 
 证明: 多项式全体在 $L^2\left(\mathbb{R},\mathrm{e}^{-t^2}\mathrm{d}t\right)$ 中稠密.
@@ -710,7 +710,7 @@ $$
 u_n=\frac{x_n}{\sqrt{n}},\quad{v}_n=\frac{y_n}{\sqrt{n}},
 $$
 
-则 $\left\|u_n\right\|=\left\|v_n\right\|=\frac{1}{\sqrt{n}}\to0$; 又 $\varphi$ 关于第一变元线性、关于第二变元共轭线性, 而 $\frac1{\sqrt{n}}$ 是实数, 故
+则 $\left\|u_n\right\|=\left\|v_n\right\|=\frac{1}{\sqrt{n}}\to0$; 又 $\varphi$ 关于第一变元线性, 关于第二变元共轭线性, 而 $\frac1{\sqrt{n}}$ 是实数, 故
 
 $$
 \left|\varphi\left(u_n,v_n\right)\right|=\frac{1}{n}\left|\varphi\left(x_n,y_n\right)\right|\ge1,
@@ -735,7 +735,7 @@ $$
 第一步: 构造无界线性泛函 $f$. 规定
 
 $$
-k_\lambda=\begin{cases}n,&\lambda=\lambda_n\,\left(b_{\lambda_n}=b_n\right),\\0,&\text{其他},\end{cases}\qquad{f}\left(x\right)=\sum_{\lambda\in{F}}c_\lambda\left(x\right)k_\lambda.
+k_\lambda=\begin{cases}n,&\lambda=\lambda_n\,\left(b_{\lambda_n}=b_n\right),\\0,&\text{其他},\end{cases}\quad{f}\left(x\right)=\sum_{\lambda\in{F}}c_\lambda\left(x\right)k_\lambda.
 $$
 
 则 $f$ 是 $H$ 上的线性泛函 (有限和, 且表示唯一), 而 $f\left(b_n\right)=n$, $\left\|b_n\right\|=1$, 故 $\sup_{\left\|x\right\|=1}\left|f\left(x\right)\right|=\infty$, 即 $f$ 无界. $\blacksquare$
@@ -812,7 +812,7 @@ $$
 
 故 $z=0$. 于是 $\left(C\left(H\right)\right)^\perp=\left\{0\right\}$, 由**推论 1.3.3 (正交补与稠密性)** 得 $C\left(H\right)$ 在 $H$ 中稠密. $\blacksquare$
 
-第六步: $C$ 是双射. 由第四、五步, $C\left(H\right)$ 既闭又稠密, 故 $C\left(H\right)=H$; 结合 $C$ 单射, $C$ 是双射.
+第六步: $C$ 是双射. 由第四, 五步, $C\left(H\right)$ 既闭又稠密, 故 $C\left(H\right)=H$; 结合 $C$ 单射, $C$ 是双射.
 
 现在设 $f\in{H}^*$. 由**定理 2.2.2 (里斯表示定理)**, 存在唯一的 $w\in{H}$ 使 $f\left(x\right)=\left\langle{x},w\right\rangle$ 对一切 $x$ 成立. 因 $C$ 是双射, 存在唯一的 $y_f\in{H}$ 使 $Cy_f=w$; 于是对一切 $x\in{H}$,
 

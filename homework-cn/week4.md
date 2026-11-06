@@ -50,7 +50,7 @@
 
 > **习题 1.2-13 (内积空间的可数直和)**
 > 
-> 设 $R_n$ 都是内积空间, $R=\left\{\left\{x_n\right\}:x_n\in{R}_n,\,\sum_n\left\|x_n\right\|^2<\infty\right\}$ 按 $\left\langle\left\{x_n\right\},\left\{y_n\right\}\right\rangle=\sum_n\left\langle{x}_n,y_n\right\rangle$ 成为内积空间; 若每个 $R_n$ 是希尔伯特空间, 则 $R$ 也是希尔伯特空间.
+> 设 $R_n$ 都是内积空间, $R=\left\{\left\{x_n\right\}:x_n\in{R}_n,\sum_n\left\|x_n\right\|^2<\infty\right\}$ 按 $\left\langle\left\{x_n\right\},\left\{y_n\right\}\right\rangle=\sum_n\left\langle{x}_n,y_n\right\rangle$ 成为内积空间; 若每个 $R_n$ 是希尔伯特空间, 则 $R$ 也是希尔伯特空间.
 
 > **定理 1.3.2 (标准正交基的等价条件)**
 > 
@@ -74,7 +74,7 @@
 > 
 > 令 $H_n\left(t\right)=\left(-1\right)^n\mathrm{e}^{t^2}\frac{\mathrm{d}^n}{\mathrm{d}t^n}\mathrm{e}^{-t^2}$ 为埃尔米特多项式, 则加权多项式族 $\psi_n\left(t\right)=\left(2^nn!\sqrt\pi\right)^{-1/2}\mathrm{e}^{-t^2/2}H_n\left(t\right)$ 组成 $L^2\left(\mathbb{R},\mathrm{e}^{-t^2}\mathrm{d}t\right)$ 中的完备标准正交系; 特别地, 多项式族关于权 $\mathrm{e}^{-t^2}$ 正交且完备.
 
-> **定义 1.4.1 (内点、内部与开集)**
+> **定义 1.4.1 (内点, 内部与开集)**
 > 
 > 设 $A$ 是度量空间 $\left(X,d\right)$ 的点集, $x_0\in{A}$. 若存在 $r>0$ 使 $\left\{x:d\left(x,x_0\right)<{}r\right\}\subset{A}$, 则称 $x_0$ 是 $A$ 的内点; $A$ 的内点全体称为 $A$ 的内部; 若 $A$ 中每点都是内点, 则称 $A$ 是开集.
 
@@ -108,7 +108,7 @@
 
 > **注 1.4.1 ($L^{p}$ 中的稠密子集)**
 > 
-> (i) $L^p\left(\mathbb{R}^n\right)$ ($1\le{p}<\infty$) 中的简单函数全体、阶梯函数全体以及 $C_c^\infty\left(\mathbb{R}^n\right)$ 均是稠密子集;
+> (i) $L^p\left(\mathbb{R}^n\right)$ ($1\le{p}<\infty$) 中的简单函数全体, 阶梯函数全体以及 $C_c^\infty\left(\mathbb{R}^n\right)$ 均是稠密子集;
 > 
 > (ii) 在 $L^\infty\left[a,b\right]$ 中只有简单函数全体稠密.
 
@@ -116,7 +116,7 @@
 > 
 > 度量空间中闭球 $B\left(x_0,r\right)=\left\{x:d\left(x,x_0\right)\le{r}\right\}$ 是闭集.
 
-> **定义 1.4.3 (极限点、导集、闭包与闭集)**
+> **定义 1.4.3 (极限点, 导集, 闭包与闭集)**
 > 
 > (i) 若存在异于 $x_0$ 的点列 $x_n\to{x}_0$, 则 $x_0$ 是 $A$ 的极限点;
 > 
@@ -196,7 +196,7 @@
 
 > **推论 1.6.3 (连续函数达到上下确界)**
 > 
-> 度量空间 $X$ 的紧子集 $K$ 上的连续函数 $f$ 有界, 且上、下确界在 $K$ 上达到.
+> 度量空间 $X$ 的紧子集 $K$ 上的连续函数 $f$ 有界, 且上, 下确界在 $K$ 上达到.
 
 ## 1.4.2 (定理: 有限维赋范线性空间与 $\mathbb{R}^{n}$ 的等价)
 
@@ -271,7 +271,7 @@ $$
 
 第二步: $\left\{O_n\right\}$ 递减且每个 $O_n$ 包含 $B$. 因 $\frac1{n+1}<\frac1n$, 故 $d\left(x,B\right)<\frac1{n+1}$ 蕴含 $d\left(x,B\right)<\frac1n$, 即 $O_{n+1}\subset{O}_n$, 故 $\left\{O_n\right\}$ 是递减开集列. 又对任意 $x\in{B}$, 由下确界定义 $d\left(x,B\right)=\inf_{z\in{B}}d\left(x,z\right)\le{d}\left(x,x\right)=0$, 故 $d\left(x,B\right)=0<\frac1n$, 从而 $x\in{O}_n$, 即 $B\subset{O}_n$ 对一切 $n$ 成立.
 
-第三步: 证明 $\bigcap_nO_n\subset{B}$. 设 $x\in\bigcap_{n=1}^{\infty}O_n$, 则 $d\left(x,B\right)<\frac1n$ 对一切 $n$ 成立, 令 $n\to\infty$ 得 $d\left(x,B\right)=0$. 由下确界定义, 对每个 $n$ 存在 $z_n\in{B}$ 使 $d\left(x,z_n\right)<\frac1n$, 故 $z_n\to{x}$. 依据**定义 1.4.3 (极限点、导集、闭包与闭集)**, $x$ 是 $B$ 的极限点, 故 $x\in{B}'$. 又 $B$ 是闭集, 依据**定义 1.4.3 (极限点、导集、闭包与闭集)** (iii), 闭集满足 $B'\subset{B}$, 故 $x\in{B}$. 于是 $\bigcap_nO_n\subset{B}$.
+第三步: 证明 $\bigcap_nO_n\subset{B}$. 设 $x\in\bigcap_{n=1}^{\infty}O_n$, 则 $d\left(x,B\right)<\frac1n$ 对一切 $n$ 成立, 令 $n\to\infty$ 得 $d\left(x,B\right)=0$. 由下确界定义, 对每个 $n$ 存在 $z_n\in{B}$ 使 $d\left(x,z_n\right)<\frac1n$, 故 $z_n\to{x}$. 依据**定义 1.4.3 (极限点, 导集, 闭包与闭集)**, $x$ 是 $B$ 的极限点, 故 $x\in{B}'$. 又 $B$ 是闭集, 依据**定义 1.4.3 (极限点, 导集, 闭包与闭集)** (iii), 闭集满足 $B'\subset{B}$, 故 $x\in{B}$. 于是 $\bigcap_nO_n\subset{B}$.
 
 综合第二步与第三步, $B\subset\bigcap_nO_n\subset{B}$, 故 $\bigcap_{n=1}^{\infty}O_n=B$. $\blacksquare$
 
@@ -318,9 +318,9 @@ $$
 \lim_{r\to0}\sup_{x\in{O}\left(x_0,r\right)}f\left(x\right)\le{f}\left(x_0\right)<{}a.
 $$
 
-由上式左端的极限严格小于 $a$, 存在 $r_0>0$ 使 $\sup_{x\in{O}\left(x_0,r_0\right)}f\left(x\right)<{}a$, 即对一切 $x\in{O}\left(x_0,r_0\right)$ 有 $f\left(x\right)<{}a$, 故 $O\left(x_0,r_0\right)\subset{X}\setminus{X}\left(f\ge{a}\right)$. 依据**例 1.4.1 (开球是开集)**, $O\left(x_0,r_0\right)$ 是开集, 故 $x_0$ 是其内点 (依据**定义 1.4.1 (内点、内部与开集)**). 由于 $x_0$ 任取, $X\setminus{X}\left(f\ge{a}\right)$ 是开集, 故 $X\left(f\ge{a}\right)$ 是闭集.
+由上式左端的极限严格小于 $a$, 存在 $r_0>0$ 使 $\sup_{x\in{O}\left(x_0,r_0\right)}f\left(x\right)<{}a$, 即对一切 $x\in{O}\left(x_0,r_0\right)$ 有 $f\left(x\right)<{}a$, 故 $O\left(x_0,r_0\right)\subset{X}\setminus{X}\left(f\ge{a}\right)$. 依据**例 1.4.1 (开球是开集)**, $O\left(x_0,r_0\right)$ 是开集, 故 $x_0$ 是其内点 (依据**定义 1.4.1 (内点, 内部与开集)**). 由于 $x_0$ 任取, $X\setminus{X}\left(f\ge{a}\right)$ 是开集, 故 $X\left(f\ge{a}\right)$ 是闭集.
 
-再证 $\Leftarrow$ (水平集对一切 $a$ 闭蕴含上半连续). 固定 $x_0\in{X}$. 对任意实数 $a>{}f\left(x_0\right)$, 因 $f\left(x_0\right)<{}a$, 故 $x_0\notin{X}\left(f\ge{a}\right)$. 由假设 $X\left(f\ge{a}\right)$ 是闭集, 依据闭集与补集开集, 其补集 $X\setminus{X}\left(f\ge{a}\right)$ 是开集; 而 $x_0$ 属于该开集, 依据**定义 1.4.1 (内点、内部与开集)**, 存在 $r_0>0$ 使 $O\left(x_0,r_0\right)\subset{X}\setminus{X}\left(f\ge{a}\right)$, 即对一切 $x\in{O}\left(x_0,r_0\right)$ 有 $f\left(x\right)<{}a$, 从而
+再证 $\Leftarrow$ (水平集对一切 $a$ 闭蕴含上半连续). 固定 $x_0\in{X}$. 对任意实数 $a>{}f\left(x_0\right)$, 因 $f\left(x_0\right)<{}a$, 故 $x_0\notin{X}\left(f\ge{a}\right)$. 由假设 $X\left(f\ge{a}\right)$ 是闭集, 依据闭集与补集开集, 其补集 $X\setminus{X}\left(f\ge{a}\right)$ 是开集; 而 $x_0$ 属于该开集, 依据**定义 1.4.1 (内点, 内部与开集)**, 存在 $r_0>0$ 使 $O\left(x_0,r_0\right)\subset{X}\setminus{X}\left(f\ge{a}\right)$, 即对一切 $x\in{O}\left(x_0,r_0\right)$ 有 $f\left(x\right)<{}a$, 从而
 
 $$
 \sup_{x\in{O}\left(x_0,r_0\right)}f\left(x\right)\le{a}.
@@ -342,7 +342,7 @@ $$
 
 第一步: 取可数稠密子集. 因 $X$ 可分, 依据**定义 1.4.6 (可分性)**, 存在可数子集 $D=\left\{x_1,x_2,\cdots\right\}$ 在 $X$ 中稠密, 即依据**定义 1.4.5 (稠密性)**, $\overline{D}=X$.
 
-第二步: 证明可数开球族构成开基. 断言: 对任意开集 $G\subset{X}$ 及任意 $x\in{G}$, 存在 $x_n\in{D}$ 与正有理数 $r$ 使 $x\in{O}\left(x_n,r\right)\subset{G}$. 事实上, 由 $G$ 是开集及**定义 1.4.1 (内点、内部与开集)**, 存在 $\varepsilon>0$ 使 $O\left(x,\varepsilon\right)\subset{G}$. 由 $\overline{D}=X$ 及 $x\in{X}$, $x$ 是 $D$ 的闭包中的点, 故存在 $x_n\in{D}$ 使 $d\left(x,x_n\right)<\frac{\varepsilon}{2}$. 依据有理数在实数中稠密, 可取有理数 $r$ 使 $d\left(x,x_n\right)<{}r<\frac{\varepsilon}{2}$. 对任意 $y\in{O}\left(x_n,r\right)$, 依据**定义 1.1.1 (度量空间)** (iii) 的三角不等式,
+第二步: 证明可数开球族构成开基. 断言: 对任意开集 $G\subset{X}$ 及任意 $x\in{G}$, 存在 $x_n\in{D}$ 与正有理数 $r$ 使 $x\in{O}\left(x_n,r\right)\subset{G}$. 事实上, 由 $G$ 是开集及**定义 1.4.1 (内点, 内部与开集)**, 存在 $\varepsilon>0$ 使 $O\left(x,\varepsilon\right)\subset{G}$. 由 $\overline{D}=X$ 及 $x\in{X}$, $x$ 是 $D$ 的闭包中的点, 故存在 $x_n\in{D}$ 使 $d\left(x,x_n\right)<\frac{\varepsilon}{2}$. 依据有理数在实数中稠密, 可取有理数 $r$ 使 $d\left(x,x_n\right)<{}r<\frac{\varepsilon}{2}$. 对任意 $y\in{O}\left(x_n,r\right)$, 依据**定义 1.1.1 (度量空间)** (iii) 的三角不等式,
 
 $$
 d\left(y,x\right)\le{d}\left(y,x_n\right)+d\left(x_n,x\right)<{}r+\frac{\varepsilon}{2}<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon,
@@ -353,7 +353,7 @@ $$
 第三步: 构造至多可列子覆盖. 考虑可数族
 
 $$
-\mathscr{B}=\left\{O\left(x_n,r\right):n=1,2,\cdots;\,r\in\mathbb{Q},\,r>0\right\}.
+\mathscr{B}=\left\{O\left(x_n,r\right):n=1,2,\cdots;r\in\mathbb{Q},r>0\right\}.
 $$
 
 因 $\mathbb{N}$ 与 $\mathbb{Q}$ 皆可数, 故 $\mathscr{B}$ 可数. 对每个 $B\in\mathscr{B}$, 若存在 $\lambda\in\Lambda$ 使 $B\subset{O}_\lambda$ 且 $B\cap{A}\ne\varnothing$, 则任取一个这样的 $\lambda$, 记为 $\lambda_B$. 令 $\mathscr{B}'=\left\{B\in\mathscr{B}:\text{存在这样的~}\lambda_B\right\}$, 则 $\left\{O_{\lambda_B}:B\in\mathscr{B}'\right\}$ 是至多可列集.
@@ -406,7 +406,7 @@ $$
 
 设 $C_{2\pi}=\left\{f\in{C}\left[0,2\pi\right]:f\left(0\right)=f\left(2\pi\right)\right\}$, 并按范数 $\left\|f\right\|=\max_{0\le{t}\le2\pi}\left|f\left(t\right)\right|$ 成一赋范空间. 证明:
 
-(i) 令 $\mathcal{P}=\left\{f\in{C}_{2\pi}:\text{存在多项式}\;P\;\text{使得}\;f\left(t\right)=P\left(t\right),\,\forall0\le{t}\le2\pi\right\}$, 则 $\mathcal{P}$ 在 $C_{2\pi}$ 中稠密.
+(i) 令 $\mathcal{P}=\left\{f\in{C}_{2\pi}:\text{存在多项式}\;P\;\text{使得}\;f\left(t\right)=P\left(t\right),\forall0\le{t}\le2\pi\right\}$, 则 $\mathcal{P}$ 在 $C_{2\pi}$ 中稠密.
 
 (ii) $C_{2\pi}$ 在 $L^p\left[0,2\pi\right]$ ($1\le{p}<\infty$) 中稠密, 但不在 $L^\infty\left[0,2\pi\right]$ 中稠密.
 
@@ -491,7 +491,7 @@ $$
 先证 $\Leftarrow$ (存在可数正交基蕴含 $H$ 可分). 设 $\left\{e_n:n=1,2,\cdots\right\}$ 是 $H$ 的一组可数标准正交基. 依据**定理 1.3.2 (标准正交基的等价条件)** (ii), $\overline{\mathrm{span}\left\{e_n\right\}}=H$. 令
 
 $$
-D=\left\{\sum_{k=1}^m\left(a_k+\mathrm{i}b_k\right)e_k:m\ge1,\,a_k,b_k\in\mathbb{Q}\right\}.
+D=\left\{\sum_{k=1}^m\left(a_k+\mathrm{i}b_k\right)e_k:m\ge1,a_k,b_k\in\mathbb{Q}\right\}.
 $$
 
 因 $\mathbb{Q}$ 可数而 $m$ 可数, 故 $D$ 可数. 对任意 $x\in{H}$ 与 $\varepsilon>0$, 由 $\mathrm{span}\left\{e_n\right\}$ 在 $H$ 中稠密 (依据**定义 1.4.5 (稠密性)**), 存在有限线性组合 $y=\sum_{k=1}^mc_ke_k$ 使 $\left\|x-y\right\|<\frac{\varepsilon}{2}$. 依据有理数在实数中稠密, 可取 $c'_k=a_k+\mathrm{i}b_k$ ($a_k,b_k\in\mathbb{Q}$) 使 $\left|c_k-c'_k\right|$ 充分小, 从而
@@ -725,7 +725,7 @@ $$
 证明. 取 $h>0$ 充分小, 考虑空间
 
 $$
-C_D=\left\{y=\left(y_1,\cdots,y_n\right)\in{C}\left(\left[x_0-h,x_0+h\right],\mathbb{R}^n\right):\left|y_k\left(x\right)-y_k^0\right|\le\lambda,\,\forall{x},\,y\left(x_0\right)=y_0\right\},
+C_D=\left\{y=\left(y_1,\cdots,y_n\right)\in{C}\left(\left[x_0-h,x_0+h\right],\mathbb{R}^n\right):\left|y_k\left(x\right)-y_k^0\right|\le\lambda,\forall{x},y\left(x_0\right)=y_0\right\},
 $$
 
 其中范数 $\left\|y\right\|=\max_{1\le{k}\le{n}}\max_{x\in\left[x_0-h,x_0+h\right]}\left|y_k\left(x\right)\right|$, $y_0=\left(y_1^0,\cdots,y_n^0\right)$.
@@ -739,7 +739,7 @@ $$
 第二步: 在 $C_D$ 上构造压缩映射. 依据**定理 1.5.3 (初值问题解的存在唯一性)** 的思路, 记
 
 $$
-M=\max\left\{\left|f_k\left(x,y\right)\right|:1\le{k}\le{n},\,\left|x-x_0\right|\le{h},\,\left|y_k-y_k^0\right|\le\lambda\right\},
+M=\max\left\{\left|f_k\left(x,y\right)\right|:1\le{k}\le{n},\left|x-x_0\right|\le{h},\left|y_k-y_k^0\right|\le\lambda\right\},
 $$
 
 因 $f_k$ 连续故在紧集上有界, $M<\infty$. 定义
@@ -763,7 +763,7 @@ $$
 设从完备度量空间 $X$ 到自身的映射 $T$ 满足如下条件: 在开球 $O\left(x_0,r\right)$ ($r>0$) 内成立
 
 $$
-d\left(Tx,Tx'\right)<\theta{d}\left(x,x'\right),\quad0<\theta<1,\,x\ne{x}',
+d\left(Tx,Tx'\right)<\theta{d}\left(x,x'\right),\quad0<\theta<1,x\ne{x}',
 $$
 
 并且

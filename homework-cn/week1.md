@@ -68,7 +68,7 @@ $$
 
 第二步: 验证 $d''$ 是 $X$ 上的度量. 同样依据**定义 1.1.1 (度量空间)** 逐条验证.
 
-(i) 由 $d\left(x,y\right)\ge0$ 及 $\psi$ 严格递增、$\psi\left(0\right)=0$, $\psi\left(t\right)\ge0$ 且 $\psi\left(t\right)=0$ 当且仅当 $t=0$, 故 $d''\left(x,y\right)=\psi\left(d\left(x,y\right)\right)\ge0$, 且 $d''\left(x,y\right)=0\Leftrightarrow{d}\left(x,y\right)=0\Leftrightarrow{x}=y$. (i) 成立.
+(i) 由 $d\left(x,y\right)\ge0$ 及 $\psi$ 严格递增, $\psi\left(0\right)=0$, $\psi\left(t\right)\ge0$ 且 $\psi\left(t\right)=0$ 当且仅当 $t=0$, 故 $d''\left(x,y\right)=\psi\left(d\left(x,y\right)\right)\ge0$, 且 $d''\left(x,y\right)=0\Leftrightarrow{d}\left(x,y\right)=0\Leftrightarrow{x}=y$. (i) 成立.
 
 (ii) 由 $d\left(x,y\right)=d\left(y,x\right)$, $d''\left(x,y\right)=\psi\left(d\left(x,y\right)\right)=\psi\left(d\left(y,x\right)\right)=d''\left(y,x\right)$. (ii) 成立.
 
@@ -192,7 +192,7 @@ $$
 
 (i) 对 $a,b>0$, 证明 $\left(a+b\right)^p\le{a}^p+b^p$. 令 $f\left(t\right)=t^p$ ($t\ge0$). 由 $0<{}p<1$, $\left(t^p\right)''=p\left(p-1\right)t^{p-2}<0$ ($t>0$), 且 $f\left(0\right)=0$, 故 $f$ 是 $\left[0,\infty\right)$ 上的凹函数 (幂函数的单调性). 由凹函数过原点的次可加性, $f\left(a+b\right)\le{f}\left(a\right)+f\left(b\right)$, 即 $\left(a+b\right)^p\le{a}^p+b^p$ 对 $a,b\ge0$ 成立, 特别对 $a,b>0$ 成立.
 
-(ii) 验证 $d$ 是伪度量. 依据**定义 1.1.1 (度量空间)**, 验证非负性、(ii) 对称性与 (iii) 三角不等式 (不要求 (i) 中的正定性).
+(ii) 验证 $d$ 是伪度量. 依据**定义 1.1.1 (度量空间)**, 验证非负性, (ii) 对称性与 (iii) 三角不等式 (不要求 (i) 中的正定性).
 
 非负性: 对任意 $f,g$, 逐点有 $\left|f\left(t\right)-g\left(t\right)\right|^p\ge0$, 故 $d\left(f,g\right)=\int_0^1\left|f\left(t\right)-g\left(t\right)\right|^p\,\mathrm{d}t\ge0$.
 
@@ -218,20 +218,20 @@ $$
 
 (iii) 成立. 综上, $d$ 是非负的且满足 (ii)(iii), 即 $d$ 是伪度量.
 
-(iii) 商空间 $\left(L^p\left[a,b\right],d\right)$ 是度量空间. 由 (ii), 非负性、对称性与三角不等式在商空间 $L^p\left[a,b\right]=\mathcal{L}^p\left[a,b\right]/\sim$ 上仍然成立, 依据**定义 1.1.1 (度量空间)** 只需再验证正定性. 对等价类 $\left[f\right],\left[g\right]$,
+(iii) 商空间 $\left(L^p\left[a,b\right],d\right)$ 是度量空间. 由 (ii), 非负性, 对称性与三角不等式在商空间 $L^p\left[a,b\right]=\mathcal{L}^p\left[a,b\right]/\sim$ 上仍然成立, 依据**定义 1.1.1 (度量空间)** 只需再验证正定性. 对等价类 $\left[f\right],\left[g\right]$,
 
 $$
 d\left(\left[f\right],\left[g\right]\right)=0\Leftrightarrow\int_0^1\left|f\left(t\right)-g\left(t\right)\right|^p\,\mathrm{d}t=0.
 $$
 
-因被积函数 $\left|f\left(t\right)-g\left(t\right)\right|^p\ge0$ 且可测, 由非负可测函数积分为零的充要条件, 上式当且仅当 $\left|f\left(t\right)-g\left(t\right)\right|^p=0$ 几乎处处成立, 当且仅当 $f\left(t\right)=g\left(t\right)$ 几乎处处成立, 即 $f\overset{m}=g$, 亦即 $f\sim{g}$, 故 $\left[f\right]=\left[g\right]$. 这一"几乎处处相等作商、$d=0$ 当且仅当等价"的构造与**例 1.1.12 (可测函数等价类空间)** 相同. 于是正定性成立, $\left(L^p\left[a,b\right],d\right)$ 是度量空间. $\blacksquare$
+因被积函数 $\left|f\left(t\right)-g\left(t\right)\right|^p\ge0$ 且可测, 由非负可测函数积分为零的充要条件, 上式当且仅当 $\left|f\left(t\right)-g\left(t\right)\right|^p=0$ 几乎处处成立, 当且仅当 $f\left(t\right)=g\left(t\right)$ 几乎处处成立, 即 $f\overset{m}=g$, 亦即 $f\sim{g}$, 故 $\left[f\right]=\left[g\right]$. 这一"几乎处处相等作商, $d=0$ 当且仅当等价"的构造与**例 1.1.12 (可测函数等价类空间)** 相同. 于是正定性成立, $\left(L^p\left[a,b\right],d\right)$ 是度量空间. $\blacksquare$
 
 ## 1.1-7 (单位球面上的测地度量)
 
 在三维欧几里得空间 $\mathbb{R}^3$ 中, 考虑单位球面
 
 $$
-S^2=\left\{x\in\mathbb{R}^3:\,x=\left(x_1,x_2,x_3\right),\,x_1^2+x_2^2+x_3^2=1\right\}.
+S^2=\left\{x\in\mathbb{R}^3:\,x=\left(x_1,x_2,x_3\right),x_1^2+x_2^2+x_3^2=1\right\}.
 $$
 
 对于 $x,y\in{S}^2$, 规定 $d\left(x,y\right)$ 为过 $x,y$ 两点的大圆上以 $x,y$ 为端点的劣弧的弧长, 它在三维欧几里得空间的正交变换下是保持不变的.

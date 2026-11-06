@@ -80,7 +80,7 @@
 
 > **注 1.4.1 ($L^p\left(\mathbb{R}\right)$ 中的稠密子集)**
 > 
-> 类似地, 可得 $L^p\left(\mathbb{R}\right)$ ($1\le{p}<\infty$) 中的简单函数全体、阶梯函数全体以及 $C_c^\infty\left(\mathbb{R}\right)$ 均是稠密子集.
+> 类似地, 可得 $L^p\left(\mathbb{R}\right)$ ($1\le{p}<\infty$) 中的简单函数全体, 阶梯函数全体以及 $C_c^\infty\left(\mathbb{R}\right)$ 均是稠密子集.
 
 > **定义 1.4.5 (稠密性)**
 > 
@@ -88,7 +88,7 @@
 
 > **例 1.4.6 ($L^p$ 中的稠密子集)**
 > 
-> 对直线上有界闭区间 $\left[a,b\right]$ 及 $1\le{p}<\infty$, $L^p\left[a,b\right]$ 中的简单函数全体、阶梯函数全体、$C_c^\infty\left(a,b\right)$、$C\left[a,b\right]$ 以及多项式全体 $P$ 均是 $L^p\left[a,b\right]$ 的稠密子集.
+> 对直线上有界闭区间 $\left[a,b\right]$ 及 $1\le{p}<\infty$, $L^p\left[a,b\right]$ 中的简单函数全体, 阶梯函数全体, $C_c^\infty\left(a,b\right)$, $C\left[a,b\right]$ 以及多项式全体 $P$ 均是 $L^p\left[a,b\right]$ 的稠密子集.
 
 ## 1.4-8 ($C_c^\infty$ 在 $L^p$ 中稠密)
 
@@ -265,7 +265,7 @@ $$
 (v) 由题设 $L=\operatorname{span}\left(M\cup{N}\right)$ 是 $M\cup{N}$ 中元素的有限线性组合全体. 对任意 $z\in{H}$, 由内积对第一变元的线性性 (**定义 1.2.3 (内积空间)** (ii)), $\left\langle{z},\cdot\right\rangle$ 在有限线性组合上为零当且仅当它在每个基元上为零, 故
 
 $$
-z\in{L}^\perp\Leftrightarrow\left\langle{z},w\right\rangle=0\quad\left(\forall{w}\in{L}\right)\Leftrightarrow\left\langle{z},m\right\rangle=0\,\left(\forall{m}\in{M}\right)\,\text{且}\,\left\langle{z},n\right\rangle=0\,\left(\forall{n}\in{N}\right)\Leftrightarrow{z}\in{M}^\perp\,\text{且}\,z\in{N}^\perp\Leftrightarrow{z}\in{M}^\perp\cap{N}^\perp.
+z\in{L}^\perp\Leftrightarrow\left\langle{z},w\right\rangle=0\quad\left(\forall{w}\in{L}\right)\Leftrightarrow\left\langle{z},m\right\rangle=0\,\left(\forall{m}\in{M}\right)\;\text{且}\;\left\langle{z},n\right\rangle=0\,\left(\forall{n}\in{N}\right)\Leftrightarrow{z}\in{M}^\perp\;\text{且}\;z\in{N}^\perp\Leftrightarrow{z}\in{M}^\perp\cap{N}^\perp.
 $$
 
 故 $L^\perp=M^\perp\cap{N}^\perp$. $\blacksquare$
@@ -387,7 +387,7 @@ $$
 (ii) 对第一变元的线性性: 由积分的线性性, $\left\langle\alpha{f}+\beta{g},h\right\rangle=\alpha\left\langle{f},h\right\rangle+\beta\left\langle{g},h\right\rangle$. (iii) 正定性: $\left\langle{f},f\right\rangle=\int_{\mathbb{R}}\left|f\right|^2\omega\,\mathrm{d}t\ge0$, 且
 
 $$
-\left\langle{f},f\right\rangle=0\Leftrightarrow\int_{\mathbb{R}}\left|f\right|^2\omega\,\mathrm{d}t=0\Leftrightarrow\left|f\right|^2\omega=0\,\text{a.e.}\Leftrightarrow{f}=0\,\text{a.e.},
+\left\langle{f},f\right\rangle=0\Leftrightarrow\int_{\mathbb{R}}\left|f\right|^2\omega\,\mathrm{d}t=0\Leftrightarrow\left|f\right|^2\omega=0\;\text{a.e.}\Leftrightarrow{f}=0\;\text{a.e.},
 $$
 
 其中倒数第二步用勒贝格积分的性质. 故 $\left\langle\cdot,\cdot\right\rangle$ 是 $H$ 上的内积.

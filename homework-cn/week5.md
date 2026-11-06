@@ -81,7 +81,7 @@ $$
 其中 $\frac{\partial{F}}{\partial{y}}$ 是 $F$ 关于 $y$ 的雅可比矩阵. 对于 $r>0$, 令 $C\left(B\left(x_0,r\right),\mathbb{R}^{m}\right)$ 表示定义在闭球 $B\left(x_0,r\right)$ 上, 取值在 $\mathbb{R}^{m}$ 中的向量值连续函数空间, 它按范数
 
 $$
-\left\|\varphi\right\|=\max_{x\in{B}\left(x_0,r\right),\,1\le{i}\le{m}}\left|\varphi_i\left(x\right)\right|,\quad\varphi=\left(\varphi_1,\dots,\varphi_m\right),
+\left\|\varphi\right\|=\max_{x\in{B}\left(x_0,r\right),1\le{i}\le{m}}\left|\varphi_i\left(x\right)\right|,\quad\varphi=\left(\varphi_1,\dots,\varphi_m\right),
 $$
 
 构成了一个巴拿赫空间. 证明:
@@ -89,7 +89,7 @@ $$
 (i) 存在 $r>0$ 与 $\delta>0$, 使得在 $C\left(B\left(x_0,r\right),\mathbb{R}^{m}\right)$ 的子集
 
 $$
-E=\left\{\varphi\in{C}\left(B\left(x_0,r\right),\mathbb{R}^{m}\right):\,\varphi\left(x_0\right)=y_0,\,\left|\varphi\left(x\right)-y_0\right|\le\delta,\,\forall{x}\in{B}\left(x_0,r\right)\right\}
+E=\left\{\varphi\in{C}\left(B\left(x_0,r\right),\mathbb{R}^{m}\right):\,\varphi\left(x_0\right)=y_0,\left|\varphi\left(x\right)-y_0\right|\le\delta,\forall{x}\in{B}\left(x_0,r\right)\right\}
 $$
 
 中, $\left(T\varphi\right)\left(x\right)=\varphi\left(x\right)-\left(\frac{\partial{F}}{\partial{y}}\left(x_0,y_0\right)\right)^{-1}F\left(x,\varphi\left(x\right)\right)$ 是良定义的压缩映射;
@@ -97,7 +97,7 @@ $$
 (ii) 存在 $x_0$ 的邻域 $U_0\subset{U}$ 以及唯一的连续函数 $\varphi:U_0\to\mathbb{R}^{m}$, 满足
 
 $$
-F\left(x,\varphi\left(x\right)\right)=0,\,\forall{x}\in{U}_0,\quad\varphi\left(x_0\right)=y_0.
+F\left(x,\varphi\left(x\right)\right)=0,\forall{x}\in{U}_0,\quad\varphi\left(x_0\right)=y_0.
 $$
 
 ### 解答 1.5-8
@@ -107,7 +107,7 @@ $$
 由于 $F\left(x_0,y_0\right)=0$ 且 $F$ 在 $U\times{V}$ 中连续, 故对任意 $\varepsilon>0$, 存在 $r_1>0$, $\delta_1>0$, 使得 $B\left(x_0,r_1\right)\subset{U}$, $B\left(y_0,\delta_1\right)\subset{V}$, 并且当 $\left|x-x_0\right|\le{r}_1$, $\left|y-y_0\right|\le\delta_1$ 时有 $\left|F\left(x,y\right)\right|<\varepsilon$. 取 $\varepsilon=\frac{\delta_1}{2\left\|A^{-1}\right\|}$, 可找到 $r_1,\delta_1>0$ 使
 
 $$
-\left\|A^{-1}\right\|\cdot\left|F\left(x,y\right)\right|<\frac{\delta_1}{2},\quad\left|x-x_0\right|\le{r}_1,\,\left|y-y_0\right|\le\delta_1.\tag{1}
+\left\|A^{-1}\right\|\cdot\left|F\left(x,y\right)\right|<\frac{\delta_1}{2},\quad\left|x-x_0\right|\le{r}_1,\left|y-y_0\right|\le\delta_1.\tag{1}
 $$
 
 另一方面, 由于 $F\left(x,\cdot\right)$ 对每个 $x\in{U}$ 连续可微, $\frac{\partial{F}}{\partial{y}}$ 在 $U\times{V}$ 上连续, 且 $\frac{\partial{F}}{\partial{y}}\left(x_0,y_0\right)=A$, 故存在 $0<{}r\le{r}_1$, $0<\delta\le\delta_1$, 使得当 $\left|x-x_0\right|\le{r}$, $\left|y-y_0\right|\le\delta$ 时有
@@ -175,7 +175,7 @@ $$
 因 $E$ 有界, 故存在 $M>0$ 使 $E\subset\left[-M,M\right]^{n}$. 把 $\mathbb{R}^{n}$ 按平行于坐标轴的方向分割成边长为 $a=\frac{\varepsilon}{\sqrt{n}}$ 的小方体
 
 $$
-\left\{\prod_{i=1}^{n}\left[k_ia,\,\left(k_i+1\right)a\right]:\,k_i\in\mathbb{Z},\,i=1,\dots,n\right\}.
+\left\{\prod_{i=1}^{n}\left[k_ia,\left(k_i+1\right)a\right]:\,k_i\in\mathbb{Z},i=1,\dots,n\right\}.
 $$
 
 由$\mathbb{R}^{n}$ 中方体的直径与有界集的网格覆盖, 每个小方体的 (外接球的) 直径不超过 $\sqrt{n}\,a=\varepsilon$, 且与 $E$ 相交的小方体只有有限多个 (事实上至多 $\left(\left\lfloor\frac{2M}{a}\right\rfloor+2\right)^{n}$ 个). 对这有限多个小方体, 每个与 $E$ 相交的方体 $Q_j$ 中取一个点 $x_j\in{E}\cap{Q}_j$, 得到有限集 $\left\{x_1,\dots,x_N\right\}$. 对任意 $x\in{E}$, $x$ 属于某个与 $E$ 相交的方体 $Q_j$, 故 $\left|x-x_j\right|\le\operatorname{diam}Q_j\le\varepsilon$, 即 $x\in{U}\left(x_j,\varepsilon\right)$. 所以 $\left\{x_1,\dots,x_N\right\}$ 是 $E$ 的有限 $\varepsilon$-网. $\blacksquare$
@@ -201,7 +201,7 @@ $$
 设 $0<\alpha\le1$. $C_\alpha\left[a,b\right]$ 是由在 $\left[a,b\right]$ 上满足赫尔德条件 $\left|f\left(x\right)-f\left(x'\right)\right|\le{M}_f\left|x-x'\right|^{\alpha}$, 并且 $f\left(a\right)=0$ 的函数组成的线性空间, 其范数定义为
 
 $$
-\left\|f\right\|=\sup_{x,x'\in\left[a,b\right],\,x\neq{x}'}\frac{\left|f\left(x\right)-f\left(x'\right)\right|}{\left|x-x'\right|^{\alpha}}.
+\left\|f\right\|=\sup_{x,x'\in\left[a,b\right],x\neq{x}'}\frac{\left|f\left(x\right)-f\left(x'\right)\right|}{\left|x-x'\right|^{\alpha}}.
 $$
 
 试写出 $C_\alpha\left[a,b\right]$ 中的点集是完全有界集的一些条件.
@@ -303,7 +303,7 @@ $$
 设
 
 $$
-C_0\left(\mathbb{R}\right)=\left\{f:\,f\,\text{在}\,\mathbb{R}\,\text{上连续且}\,\lim_{\left|x\right|\to\infty}f\left(x\right)=0\right\}
+C_0\left(\mathbb{R}\right)=\left\{f:\,f\;\text{在}\;\mathbb{R}\;\text{上连续且}\;\lim_{\left|x\right|\to\infty}f\left(x\right)=0\right\}
 $$
 
 按范数 $\left\|f\right\|=\sup_{x\in\mathbb{R}}\left|f\left(x\right)\right|$ 构成巴拿赫空间. 证明 $A\subset{C}_0\left(\mathbb{R}\right)$ 是相对列紧集的充要条件是 $A$ 有界, 等度连续, 且对任意 $\varepsilon>0$ 存在 $N>0$, 使得 $\left|f\left(x\right)\right|\le\varepsilon$ ($\forall\left|x\right|>{}N$, $f\in{A}$).
@@ -360,7 +360,7 @@ $$
 
 故 $z\in\operatorname{co}\left\{a_1,\dots,a_N\right\}+B\left(0,\varepsilon\right)$.
 
-记 $K=\operatorname{co}\left\{a_1,\dots,a_N\right\}=\left\{\sum_{i=1}^{N}\lambda_ia_i:\lambda_i\ge0,\,\sum_{i=1}^{N}\lambda_i=1\right\}$. 由单 (纯) 形, 它是 $\mathbb{R}^{N}$ 中的单形 $\Delta_{N-1}=\left\{\lambda_i\ge0,\,\sum\lambda_i=1\right\}$ 在连续映射 $\left(\lambda_1,\dots,\lambda_N\right)\mapsto\sum\lambda_ia_i$ 下的像, 故 $K$ 是紧集, 由**例 1.6.3 ($\mathbb{R}^n$ 中有界集完全有界)** 知 $K$ 完全有界, 故对 $\varepsilon>0$, $K$ 有有限的 $\varepsilon$-网 $\left\{y_1,\dots,y_M\right\}\subset{K}$. 于是对任意 $z\in\operatorname{co}\left(A\right)$, 存在 $u\in{K}$ 使 $\left\|z-u\right\|<\varepsilon$, 且存在 $l$ 使 $\left\|u-y_l\right\|<\varepsilon$, 故 $\left\|z-y_l\right\|<2\varepsilon$. 所以 $\left\{y_1,\dots,y_M\right\}$ 是 $\operatorname{co}\left(A\right)$ 的有限 $2\varepsilon$-网. 由 $\varepsilon$ 的任意性, $\operatorname{co}\left(A\right)$ 完全有界, 再由**定理 1.6.3 (豪斯多夫定理)** ($X$ 完备) 得 $\operatorname{co}\left(A\right)$ 相对列紧. $\blacksquare$
+记 $K=\operatorname{co}\left\{a_1,\dots,a_N\right\}=\left\{\sum_{i=1}^{N}\lambda_ia_i:\lambda_i\ge0,\sum_{i=1}^{N}\lambda_i=1\right\}$. 由单 (纯) 形, 它是 $\mathbb{R}^{N}$ 中的单形 $\Delta_{N-1}=\left\{\lambda_i\ge0,\sum\lambda_i=1\right\}$ 在连续映射 $\left(\lambda_1,\dots,\lambda_N\right)\mapsto\sum\lambda_ia_i$ 下的像, 故 $K$ 是紧集, 由**例 1.6.3 ($\mathbb{R}^n$ 中有界集完全有界)** 知 $K$ 完全有界, 故对 $\varepsilon>0$, $K$ 有有限的 $\varepsilon$-网 $\left\{y_1,\dots,y_M\right\}\subset{K}$. 于是对任意 $z\in\operatorname{co}\left(A\right)$, 存在 $u\in{K}$ 使 $\left\|z-u\right\|<\varepsilon$, 且存在 $l$ 使 $\left\|u-y_l\right\|<\varepsilon$, 故 $\left\|z-y_l\right\|<2\varepsilon$. 所以 $\left\{y_1,\dots,y_M\right\}$ 是 $\operatorname{co}\left(A\right)$ 的有限 $2\varepsilon$-网. 由 $\varepsilon$ 的任意性, $\operatorname{co}\left(A\right)$ 完全有界, 再由**定理 1.6.3 (豪斯多夫定理)** ($X$ 完备) 得 $\operatorname{co}\left(A\right)$ 相对列紧. $\blacksquare$
 
 ## 1.6-10 (格罗滕迪克定理)
 
@@ -393,7 +393,7 @@ $$
 定义点列 $\left\{x_n\right\}$:
 
 $$
-x_1=z_1,\quad{x}_n=z_n-z_{n-1}\,\,\left(n\ge2\right).
+x_1=z_1,\quad{x}_n=z_n-z_{n-1}\,\left(n\ge2\right).
 $$
 
 由 (1), $\left\|x_n\right\|=\left\|z_n-z_{n-1}\right\|\to0$, 故 $\lim_{n\to\infty}x_n=0$; 且 $\sum_{n=1}^{\infty}\left\|x_n\right\|\le\left\|z_1\right\|+\sum_{n=2}^{\infty}\left\|z_n-z_{n-1}\right\|<\infty$, 即 $\left\{x_n\right\}$ 绝对可和.
@@ -415,7 +415,7 @@ $$
 最后说明 $\overline{\operatorname{co}}\left\{\pm{x}_n\right\}=\left\{\sum_{n=1}^{\infty}a_nx_n:\,\left|a_n\right|\le1\right\}$. 一方面, $\left\{\pm{x}_n\right\}$ 的每个有限凸组合 $\sum\varepsilon_i\lambda_ix_i$ ($\lambda_i\ge0,\sum\lambda_i=1,\varepsilon_i\in\left\{\pm1\right\}$) 满足 $\left|\varepsilon_i\lambda_i\right|\le1$, 且由绝对收敛级数必收敛, $\sum\left\|x_n\right\|<\infty$ 保证级数绝对收敛, 故 $\overline{\operatorname{co}}\left\{\pm{x}_n\right\}\subset\left\{\sum{a}_nx_n:\left|a_n\right|\le1\right\}$. 另一方面, $\left\{\sum{a}_nx_n:\left|a_n\right|\le1\right\}$ 是闭集 (若 $u^{\left(m\right)}=\sum{a}_n^{\left(m\right)}x_n\to{u}$, $\left|a_n^{\left(m\right)}\right|\le1$, 则由对角抽取与有界数列的收敛子列可选取子列 $m_k$ 使对每个 $n$, $a_n^{\left(m_k\right)}\to{a}_n$ ($\left|a_n\right|\le1$); 再由绝对收敛级数必收敛(级数被 $\sum\left\|x_n\right\|$ 一致控制) 逐项取极限得 $u=\sum{a}_nx_n$), 且含 $\left\{\pm{x}_n\right\}$ 的凸包, 故 $\overline{\operatorname{co}}\left\{\pm{x}_n\right\}\supset\left\{\sum{a}_nx_n:\left|a_n\right|\le1\right\}$. 两方向合起来得等号. 于是
 
 $$
-K\subset\overline{\operatorname{co}}\left\{\pm{x}_n\right\}=\left\{\sum_{n=1}^{\infty}a_nx_n:\,\left|a_n\right|\le1,\,n=1,2,\dots\right\},\quad\lim_{n\to\infty}x_n=0.
+K\subset\overline{\operatorname{co}}\left\{\pm{x}_n\right\}=\left\{\sum_{n=1}^{\infty}a_nx_n:\,\left|a_n\right|\le1,n=1,2,\dots\right\},\quad\lim_{n\to\infty}x_n=0.
 $$
 
 $\blacksquare$
