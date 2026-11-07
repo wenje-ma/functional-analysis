@@ -446,7 +446,7 @@ $$
 \left\|T_nx-T_mx\right\|\le\left\|T_n\left(x-z\right)\right\|+\left\|T_nz-T_mz\right\|+\left\|T_m\left(z-x\right)\right\|\le2M\left\|x-z\right\|+\left\|T_nz-T_mz\right\|.\tag{1}
 $$
 
-任给 $\varepsilon>0$. 由 $L$ 在 $X$ 中稠密 (**定义 1.4.5 (稠密性)**), 故 $2M\|x-z\|<\frac{\varepsilon}{2}$. 对 $z\in{L}$, $\left\{T_nz\right\}$ 收敛故 $\left\|T_nz-T_mz\right\|<\frac{\varepsilon}{2}$. 代入 (1) 得 $\left\|T_nx-T_mx\right\|<\varepsilon$, 即 $\left\{T_nx\right\}$ 是基本点列.
+任给 $\varepsilon>0$. 由 $L$ 在 $X$ 中稠密 (**定义 1.4.5 (稠密性)**), 故 $2M\left\|x-z\right\|<\frac{\varepsilon}{2}$. 对 $z\in{L}$, $\left\{T_nz\right\}$ 收敛故 $\left\|T_nz-T_mz\right\|<\frac{\varepsilon}{2}$. 代入 (1) 得 $\left\|T_nx-T_mx\right\|<\varepsilon$, 即 $\left\{T_nx\right\}$ 是基本点列.
 
 由 $Y$ 是巴拿赫空间 (**定义 1.4.7 (完备性)**), $\left\{T_nx\right\}$ 收敛; 定义
 
@@ -464,7 +464,7 @@ $$
 \left\|T_nx-Tx\right\|\le\left\|T_n\left(x-z\right)\right\|+\left\|T_nz-Tz\right\|+\left\|T\left(z-x\right)\right\|\le2M\left\|x-z\right\|+\left\|T_nz-Tz\right\|.\tag{2}
 $$
 
-任给 $\varepsilon>0$. 由 $L$ 在 $X$ 中稠密 (**定义 1.4.5 (稠密性)**), 故 $2M\|x-z\|<\frac{\varepsilon}{2}$. 对 $z\in{L}$, 由 (1) 知 $\left\|T_nz-Tz\right\|<\frac{\varepsilon}{2}$. 代入 (2) 得 $\left\|T_nx-Tx\right\|<\varepsilon$. 故 $\lim_{n\to\infty}\left\|T_nx-Tx\right\|=0$. $\blacksquare$
+任给 $\varepsilon>0$. 由 $L$ 在 $X$ 中稠密 (**定义 1.4.5 (稠密性)**), 故 $2M\left\|x-z\right\|<\frac{\varepsilon}{2}$. 对 $z\in{L}$, 由 (1) 知 $\left\|T_nz-Tz\right\|<\frac{\varepsilon}{2}$. 代入 (2) 得 $\left\|T_nx-Tx\right\|<\varepsilon$. 故 $\lim_{n\to\infty}\left\|T_nx-Tx\right\|=0$. $\blacksquare$
 
 ## 2.1-8 (阶梯函数的傅里叶变换与 $L^{2}$ 上的等距延拓)
 
@@ -758,7 +758,7 @@ $$
 
 所以题设条件不能保证 $\varphi$ 有界. $\blacksquare$
 
-> 实际上, 依据**定理 2.2.6 (埃尔米特泛函的有界性)**, 只有加上对称性 $\varphi(x,y)=\varphi(y,x)$ 后, 通过极化恒等式推出非对角线项可由对角线项控制, 此时才能推出有界性.
+> 实际上, 依据**定理 2.2.6 (埃尔米特泛函的有界性)**, 只有加上对称性 $\varphi\left(x,y\right)=\varphi\left(y,x\right)$ 后, 通过极化恒等式推出非对角线项可由对角线项控制, 此时才能推出有界性.
 
 ## 2.2-12 (拉克斯-米尔格拉姆定理)
 
