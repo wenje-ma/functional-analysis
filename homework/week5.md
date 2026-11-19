@@ -130,7 +130,7 @@ $$
 \varphi\left(x\right)-A^{-1}F\left(x,\varphi\left(x\right)\right)=\varphi\left(x\right)\,\Rightarrow\,A^{-1}F\left(x,\varphi\left(x\right)\right)=0\,\Rightarrow\,F\left(x,\varphi\left(x\right)\right)=0.
 $$
 
-其中, 最后一步由方阵可逆判据与算子范数, $A^{-1}F=0$ 蕴含 $F=0$, 且 $\varphi\left(x_0\right)=y_0$.
+其中, 最后一式用到方阵可逆判据与算子范数, $A^{-1}F=0$ 蕴含 $F=0$, 且 $\varphi\left(x_0\right)=y_0$.
 
 取 $U_0=B\left(x_0,r\right)\cap{U}$, 则 $U_0$ 是 $x_0$ 在 $U$ 中的邻域, $\varphi|_{U_0}$ 连续, 满足 $F\left(x,\varphi\left(x\right)\right)=0$ ($\forall{x}\in{U}_0$) 且 $\varphi\left(x_0\right)=y_0$. 唯一性: 若在 $U_0'\subset{U}$ 上还有连续解 $\psi$, 满足 $F\left(x,\psi\left(x\right)\right)=0$, $\psi\left(x_0\right)=y_0$, 则由 $\psi$ 的连续性和 $\psi\left(x_0\right)=y_0$, 适当缩小邻域可设 $B\left(x_0,r\right)\subset{U}_0\cap{U}_0'$ 且 $\left|\psi\left(x\right)-y_0\right|\le\delta$ 对 $x\in{B}\left(x_0,r\right)$ 成立, 于是 $\psi|_{B\left(x_0,r\right)}\in{E}$ 且 $T\psi=\psi$, 由不动点的唯一性得 $\psi=\varphi$ 于 $B\left(x_0,r\right)$, 进而于 $U_0\cap{U}_0'$.
 

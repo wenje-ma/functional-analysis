@@ -91,7 +91,7 @@ $$
 
 记右端为 $S$.
 
-第一步: $S\le\left\|T\right\|$. 任取 $x,y\in{E}$ 且 $\left\|x\right\|=\left\|y\right\|=1$. 由**引理 1.2.3 (柯西-施瓦茨不等式)**,
+先证 $S\le\left\|T\right\|$. 任取 $x,y\in{E}$ 且 $\left\|x\right\|=\left\|y\right\|=1$. 由**引理 1.2.3 (柯西-施瓦茨不等式)**,
 
 $$
 \left|\left\langle{T}x,y\right\rangle\right|\le\left\|Tx\right\|\left\|y\right\|=\left\|Tx\right\|,
@@ -101,7 +101,7 @@ $$
 
 $\blacksquare$
 
-第二步: $S\ge\left\|T\right\|$. 任给 $\varepsilon>0$. 由**例 2.2.2 (算子导出的共轭双线性泛函)**, $\left\|T\right\|=\sup_{\left\|x\right\|=\left\|y\right\|=1}\left|\left\langle{T}x,y\right\rangle\right|$, 故存在 $x_0,y_0\in{H}$ 满足 $\left\|x_0\right\|=\left\|y_0\right\|=1$ 且
+再证 $S\ge\left\|T\right\|$. 任给 $\varepsilon>0$. 由**例 2.2.2 (算子导出的共轭双线性泛函)**, $\left\|T\right\|=\sup_{\left\|x\right\|=\left\|y\right\|=1}\left|\left\langle{T}x,y\right\rangle\right|$, 故存在 $x_0,y_0\in{H}$ 满足 $\left\|x_0\right\|=\left\|y_0\right\|=1$ 且
 
 $$
 \left|\left\langle{T}x_0,y_0\right\rangle\right|>\left\|T\right\|-\varepsilon.\tag{1}
@@ -207,7 +207,7 @@ $$
 C=\sum_{\mu=1}^{\infty}\left(\sum_{\nu=1}^{\infty}\left|t_{\mu\nu}\right|^q\right)^{\frac{p}q}<\infty.
 $$
 
-第一步: $T$ 良定义且线性. 由 $C$ 有限可知, 对每个固定的 $\mu$, $\left(\left|t_{\mu\nu}\right|\right)_\nu$ 与 $\left(\left|x_\nu\right|\right)_\nu$ 正是 $l^q$ 与 $l^p$ 中的元素, 由赫尔德不等式,
+先证 $T$ 良定义且线性. 由 $C$ 有限可知, 对每个固定的 $\mu$, $\left(\left|t_{\mu\nu}\right|\right)_\nu$ 与 $\left(\left|x_\nu\right|\right)_\nu$ 正是 $l^q$ 与 $l^p$ 中的元素, 由赫尔德不等式,
 
 $$
 \left|y_\mu\right|\le\sum_{\nu=1}^{\infty}\left|t_{\mu\nu}\right|\left|x_\nu\right|\le\left(\sum_{\nu=1}^{\infty}\left|t_{\mu\nu}\right|^q\right)^{\frac1q}\left(\sum_{\nu=1}^{\infty}\left|x_\nu\right|^p\right)^{\frac1p}<\infty,
@@ -217,7 +217,7 @@ $$
 
 $\blacksquare$
 
-第二步: $T$ 有界. 记 $c_\mu=\left(\sum_{\nu}\left|t_{\mu\nu}\right|^q\right)^{\frac1q}$, 由上一步 $\left|y_\mu\right|\le{c}_\mu\left\|x\right\|_p$. 于是
+再证 $T$ 有界. 记 $c_\mu=\left(\sum_{\nu}\left|t_{\mu\nu}\right|^q\right)^{\frac1q}$, 由上面的赫尔德不等式 $\left|y_\mu\right|\le{c}_\mu\left\|x\right\|_p$. 于是
 
 $$
 \left\|Tx\right\|_p^p=\sum_{\mu=1}^{\infty}\left|y_\mu\right|^p\le\sum_{\mu=1}^{\infty}c_\mu^p\left\|x\right\|_p^p=C\left\|x\right\|_p^p,
@@ -227,7 +227,7 @@ $$
 
 $\blacksquare$
 
-第三步: 每个 $l^p$ 上的有界线性算子都有矩阵形式. 设 $T\in\mathfrak{B}\left(l^p\right)$, 记 $e_\nu$ 为第 $\nu$ 个标准单位向量, $t_{\mu\nu}=\left(Te_\nu\right)_\mu$. 因 $\sum_{\nu>N}\left|x_\nu\right|^p\to0$, 有 $x^{\left(N\right)}=\sum_{\nu\le{N}}x_\nu{e}_\nu\to{x}$ ($N\to\infty$); 由**定理 2.1.1 (线性算子有界与连续的等价条件)** $T$ 连续, 故
+最后回答第二问, 即证每个 $l^p$ 上的有界线性算子都有矩阵形式. 设 $T\in\mathfrak{B}\left(l^p\right)$, 记 $e_\nu$ 为第 $\nu$ 个标准单位向量, $t_{\mu\nu}=\left(Te_\nu\right)_\mu$. 因 $\sum_{\nu>N}\left|x_\nu\right|^p\to0$, 有 $x^{\left(N\right)}=\sum_{\nu\le{N}}x_\nu{e}_\nu\to{x}$ ($N\to\infty$); 由**定理 2.1.1 (线性算子有界与连续的等价条件)** $T$ 连续, 故
 
 $$
 Tx=\lim_{N\to\infty}Tx^{\left(N\right)}=\lim_{N\to\infty}\sum_{\nu=1}^{N}x_\nu{T}e_\nu.
@@ -241,7 +241,7 @@ $$
 
 $\blacksquare$
 
-第四步: 求和条件不一定都满足. 取恒等算子 $T=I$, 其矩阵为 $t_{\mu\nu}=\delta_{\mu\nu}$, 此时 $\sum_{\nu}\left|t_{\mu\nu}\right|^q=1$, 从而 $\sum_{\mu}\left(\sum_{\nu}\left|t_{\mu\nu}\right|^q\right)^{\frac{p}q}=\sum_{\mu}1=\infty$.
+求和条件不一定都满足. 取恒等算子 $T=I$, 其矩阵为 $t_{\mu\nu}=\delta_{\mu\nu}$, 此时 $\sum_{\nu}\left|t_{\mu\nu}\right|^q=1$, 从而 $\sum_{\mu}\left(\sum_{\nu}\left|t_{\mu\nu}\right|^q\right)^{\frac{p}q}=\sum_{\mu}1=\infty$.
 
 $\blacksquare$
 
@@ -337,7 +337,7 @@ $\blacksquare$
 
 若 $M=0$, 则 $\left\|T_n\right\|=0$, 由**定义 2.1.2 (算子范数)** 得 $T_n=0$, 取 $T=0$ 即可; 以下设 $M>0$.
 
-第一步: $\left\{T_nx\right\}$ 对每个 $x\in{X}$ 都是 $Y$ 中的基本点列. 对 $x\in{X}$ 与 $z\in{L}$,
+先证 $\left\{T_nx\right\}$ 对每个 $x\in{X}$ 都是 $Y$ 中的基本点列. 对 $x\in{X}$ 与 $z\in{L}$,
 
 $$
 \left\|T_nx-T_mx\right\|\le\left\|T_n\left(x-z\right)\right\|+\left\|T_nz-T_mz\right\|+\left\|T_m\left(z-x\right)\right\|\le2M\left\|x-z\right\|+\left\|T_nz-T_mz\right\|.\tag{1}
@@ -353,11 +353,11 @@ $$
 
 $\blacksquare$
 
-第二步: $T$ 线性且 $T\in\mathfrak{B}\left(X,Y\right)$. 线性由极限的线性性成立; 在 $\left\|T_nx\right\|\le{M}\left\|x\right\|$ 中令 $n\to\infty$ 得 $\left\|Tx\right\|\le{M}\left\|x\right\|$. 故 $T$ 有界, 且 $\left\|T\right\|\le{M}$.
+再证 $T$ 线性且 $T\in\mathfrak{B}\left(X,Y\right)$. 线性由极限的线性性成立; 在 $\left\|T_nx\right\|\le{M}\left\|x\right\|$ 中令 $n\to\infty$ 得 $\left\|Tx\right\|\le{M}\left\|x\right\|$. 故 $T$ 有界, 且 $\left\|T\right\|\le{M}$.
 
 $\blacksquare$
 
-第三步: $T_nx\to{T}x$ 对一切 $x\in{X}$ 成立. 对 $x\in{X}$ 与 $z\in{L}$,
+最后证 $T_nx\to{T}x$ 对一切 $x\in{X}$ 成立. 对 $x\in{X}$ 与 $z\in{L}$,
 
 $$
 \left\|T_nx-Tx\right\|\le\left\|T_n\left(x-z\right)\right\|+\left\|T_nz-Tz\right\|+\left\|T\left(z-x\right)\right\|\le2M\left\|x-z\right\|+\left\|T_nz-Tz\right\|.\tag{2}
@@ -383,11 +383,11 @@ $$
 \widehat{f}\left(t\right)=\int_{\mathbb{R}}f\left(x\right)\mathrm{e}^{-2\pi\mathrm{i}tx}\,\mathrm{d}x,
 $$
 
-(i) 第一步: $A$ 在 $L^2\left(\mathbb{R}\right)$ 中稠密. 由**注 1.4.1 ($L^{p}$ 中的稠密子集)(i)** (取 $n=1$, $p=2$), 阶梯函数全体在 $L^2\left(\mathbb{R}\right)$ 中稠密.
+(i) 先证 $A$ 在 $L^2\left(\mathbb{R}\right)$ 中稠密. 由**注 1.4.1 ($L^{p}$ 中的稠密子集)(i)** (取 $n=1$, $p=2$), 阶梯函数全体在 $L^2\left(\mathbb{R}\right)$ 中稠密.
 
 $\blacksquare$
 
-(i) 第二步: $f\mapsto\widehat{f}$ 在 $A$ 上线性且保范. 线性由积分对 $f$ 的线性性得到. 因 $A$ 中每个函数是有限个区间指示函数的线性组合, 因此保范性只需对 $f=\chi_{\left[\alpha,\beta\right]}$ 验证. 对 $t\neq0$,
+(i) 再证 $f\mapsto\widehat{f}$ 在 $A$ 上线性且保范. 线性由积分对 $f$ 的线性性得到. 因 $A$ 中每个函数是有限个区间指示函数的线性组合, 因此保范性只需对 $f=\chi_{\left[\alpha,\beta\right]}$ 验证. 对 $t\neq0$,
 
 $$
 \widehat{f}\left(t\right)=\int_\alpha^\beta\mathrm{e}^{-2\pi\mathrm{i}tx}\,\mathrm{d}x=\mathrm{e}^{-\pi\mathrm{i}t\left(\alpha+\beta\right)}\frac{\sin\left(\pi{t}\left(\beta-\alpha\right)\right)}{\pi{t}},
@@ -409,7 +409,7 @@ $$
 
 $\blacksquare$
 
-(i) 第三步: 延拓到 $L^2\left(\mathbb{R}\right)$. 任取 $f\in{L}^2\left(\mathbb{R}\right)$, 由第一步取 $\left\{f_n\right\}\subset{A}$ 使 $\left\|f_n-f\right\|_2\to0$. 由第二步,
+(i) 最后把 $f\mapsto\widehat{f}$ 延拓到 $L^2\left(\mathbb{R}\right)$. 任取 $f\in{L}^2\left(\mathbb{R}\right)$, 由 $A$ 的稠密性取 $\left\{f_n\right\}\subset{A}$ 使 $\left\|f_n-f\right\|_2\to0$. 由前面的保范性,
 
 $$
 \left\|\widehat{f}_n-\widehat{f}_m\right\|_2=\left\|\widehat{f_n-f_m}\right\|_2=\left\|f_n-f_m\right\|_2\le\left\|f_n-f\right\|_2+\left\|f-f_m\right\|_2,
@@ -557,7 +557,7 @@ $\blacksquare$
 
 记 $l^1$ 上的范数为 $\left\|x\right\|_1=\sum_{n=1}^{\infty}\left|x_n\right|$, $l^\infty$ 上的范数为 $\left\|\eta\right\|_\infty=\sup_n\left|\eta_n\right|$.
 
-第一步: 由 $l^\infty$ 中的元素作出 $\left(l^1\right)^*$ 中的元素. 对 $\eta=\left(\eta_n\right)\in{l}^\infty$, 令
+先由 $l^\infty$ 中的元素作出 $\left(l^1\right)^*$ 中的元素. 对 $\eta=\left(\eta_n\right)\in{l}^\infty$, 令
 
 $$
 f_\eta\left(x\right)=\sum_{n=1}^{\infty}x_n\eta_n,\quad{x}=\left(x_n\right)\in{l}^1.
@@ -581,7 +581,7 @@ $$
 
 $\blacksquare$
 
-第二步: 每个 $f\in\left(l^1\right)^*$ 都如此得到. 设 $f\in\left(l^1\right)^*$, 令 $\eta_n=f\left(e_n\right)$. 由 $\left|f\left(e_n\right)\right|\le\left\|f\right\|\left\|e_n\right\|_1=\left\|f\right\|$ 得 $\eta=\left(\eta_n\right)\in{l}^\infty$ 且 $\left\|\eta\right\|_\infty\le\left\|f\right\|$.
+再证每个 $f\in\left(l^1\right)^*$ 都如此得到. 设 $f\in\left(l^1\right)^*$, 令 $\eta_n=f\left(e_n\right)$. 由 $\left|f\left(e_n\right)\right|\le\left\|f\right\|\left\|e_n\right\|_1=\left\|f\right\|$ 得 $\eta=\left(\eta_n\right)\in{l}^\infty$ 且 $\left\|\eta\right\|_\infty\le\left\|f\right\|$.
 
 又因 $\left\|x-\sum_{n=1}^{N}x_ne_n\right\|_1=\sum_{n>N}\left|x_n\right|\to0$ ($N\to\infty$), 由 $f$ 连续 (**定理 2.1.1 (线性算子有界与连续的等价条件)**) 得
 
@@ -591,7 +591,7 @@ $$
 
 $\blacksquare$
 
-第三步: 得到同构. 记 $\Phi:l^\infty\to\left(l^1\right)^*$, $\Phi\left(\eta\right)=f_\eta$. 由第一, 二步, $\Phi$ 是线性双射且保范, 由**定义 2.2.2 (保范算子与同构)** 它是 $l^\infty$ 到 $\left(l^1\right)^*$ 上的保范同构映射, 故 $\left(l^1\right)^*=l^\infty$.
+最后得到同构. 记 $\Phi:l^\infty\to\left(l^1\right)^*$, $\Phi\left(\eta\right)=f_\eta$. 由上面两段, $\Phi$ 是线性双射且保范, 由**定义 2.2.2 (保范算子与同构)** 它是 $l^\infty$ 到 $\left(l^1\right)^*$ 上的保范同构映射, 故 $\left(l^1\right)^*=l^\infty$.
 
 $\blacksquare$
 
@@ -663,7 +663,7 @@ $$
 
 不一定有界. 反例只在 $H$ 无限维时存在; 若 $H$ 有限维, 则由**例 2.1.8 (有限维赋范空间上的线性算子连续)**, $H$ 上的线性泛函都连续, 从而一切双线性泛函都有界. 以下设 $H$ 无限维, 且取 $H$ 的一组哈梅尔基, 并把基向量单位化, 记为 $\mathfrak{B}$; 从中取出一列互不相同的向量 $b_1,b_2,\cdots$.
 
-第一步: 构造无界线性泛函 $f$. 规定
+先构造无界线性泛函 $f$. 规定
 
 $$
 k_\lambda=\begin{cases}n,&\lambda=\lambda_n\,\left(b_{\lambda_n}=b_n\right),\\0,&\text{其他},\end{cases}\quad{f}\left(x\right)=\sum_{\lambda\in{F}}c_\lambda\left(x\right)k_\lambda.
@@ -673,7 +673,7 @@ $$
 
 $\blacksquare$
 
-第二步: 令 $\varphi\left(x,y\right)=f\left(x\right)-f\left(y\right)$, 验证题设条件成立. 由 $f$ 线性, $\varphi$ 对第一个变元线性, 且对第二个变元也是线性的 (实空间中共轭线性即线性), 故 $\varphi\left(x,y\right)=f\left(x\right)-f\left(y\right)$ 是双线性泛函; 且
+再令 $\varphi\left(x,y\right)=f\left(x\right)-f\left(y\right)$, 则题设条件成立. 由 $f$ 线性, $\varphi$ 对第一个变元线性, 且对第二个变元也是线性的 (实空间中共轭线性即线性), 故 $\varphi\left(x,y\right)=f\left(x\right)-f\left(y\right)$ 是双线性泛函; 且
 
 $$
 \varphi\left(x,x\right)=f\left(x\right)-f\left(x\right)=0,\quad\forall{x}\in{H},
@@ -683,7 +683,7 @@ $$
 
 $\blacksquare$
 
-第三步: $\varphi$ 无界. 对每个 $n$, 由 $f$ 线性,
+但 $\varphi$ 无界. 对每个 $n$, 由 $f$ 线性,
 
 $$
 \left|\varphi\left(b_n,-b_n\right)\right|=\left|f\left(b_n\right)-f\left(-b_n\right)\right|=\left|n-\left(-n\right)\right|=2n,
@@ -709,7 +709,7 @@ $\blacksquare$
 
 ### 解答 2.2-12
 
-第一步: 定义算子 $C:H\to{H}$. 固定 $y\in{H}$, 映射 $x\mapsto\varphi\left(x,y\right)$ 是 $H$ 上的线性泛函 (由**定义 2.2.3 (共轭双线性泛函)(i)**, $\varphi$ 对第一个变元线性), 且由条件 (1) 有 $\left|\varphi\left(x,y\right)\right|\le\left(M\left\|y\right\|\right)\left\|x\right\|$, 故它连续. 由**定理 2.2.2 (里斯表示定理)**, 存在唯一的 $v\in{H}$ 使
+先定义算子 $C:H\to{H}$. 固定 $y\in{H}$, 映射 $x\mapsto\varphi\left(x,y\right)$ 是 $H$ 上的线性泛函 (由**定义 2.2.3 (共轭双线性泛函)(i)**, $\varphi$ 对第一个变元线性), 且由条件 (1) 有 $\left|\varphi\left(x,y\right)\right|\le\left(M\left\|y\right\|\right)\left\|x\right\|$, 故它连续. 由**定理 2.2.2 (里斯表示定理)**, 存在唯一的 $v\in{H}$ 使
 
 $$
 \varphi\left(x,y\right)=\left\langle{x},v\right\rangle,\quad\forall{x}\in{H}.
@@ -723,11 +723,11 @@ $$
 
 $\blacksquare$
 
-第二步: $C$ 线性. $C$ 继承了 $\varphi$ 的线性且满足 $\left\|C\right\|\le{M}$.
+再证 $C$ 线性. $C$ 继承了 $\varphi$ 的线性且满足 $\left\|C\right\|\le{M}$.
 
 $\blacksquare$
 
-第三步: $C$ 是单射. 对 $y\in{H}$, 条件 (2) 与 (1) 前的表示式给出
+接着证 $C$ 是单射. 对 $y\in{H}$, 条件 (2) 与 (1) 前的表示式给出
 
 $$
 c\left\|y\right\|^2\le\left|\varphi\left(y,y\right)\right|=\left|\left\langle{y},Cy\right\rangle\right|\le\left\|y\right\|\left\|Cy\right\|,
@@ -737,7 +737,7 @@ $$
 
 $\blacksquare$
 
-第四步: $C$ 的值域是闭的. 设 $Cy_n\to{z}$ ($n\to\infty$). 则
+然后证 $C$ 的值域是闭的. 设 $Cy_n\to{z}$ ($n\to\infty$). 则
 
 $$
 \left\|y_n-y_m\right\|\le\frac1c\left\|C\left(y_n-y_m\right)\right\|=\frac1c\left\|Cy_n-Cy_m\right\|\to0\quad\left(n,m\to\infty\right),
@@ -747,7 +747,7 @@ $$
 
 $\blacksquare$
 
-第五步: $C$ 的值域在 $H$ 中稠密. 设 $z\perp{C}\left(H\right)$, 即 $\left\langle{z},Cy\right\rangle=0$ 对一切 $y$ 成立, 则 $\varphi\left(z,y\right)=0$ 对一切 $y$ 成立. 取 $y=z$ 并用条件 (2):
+再证 $C$ 的值域在 $H$ 中稠密. 设 $z\perp{C}\left(H\right)$, 即 $\left\langle{z},Cy\right\rangle=0$ 对一切 $y$ 成立, 则 $\varphi\left(z,y\right)=0$ 对一切 $y$ 成立. 取 $y=z$ 并用条件 (2):
 
 $$
 c\left\|z\right\|^2\le\left|\varphi\left(z,z\right)\right|=0,
@@ -757,7 +757,7 @@ $$
 
 $\blacksquare$
 
-第六步: $C$ 是双射. 由第四, 五步, $C\left(H\right)$ 既闭又稠密, 故 $C\left(H\right)=H$; 结合 $C$ 单射, $C$ 是双射.
+最后证 $C$ 是双射. 由上面两段, $C\left(H\right)$ 既闭又稠密, 故 $C\left(H\right)=H$; 结合 $C$ 单射, $C$ 是双射.
 
 现在设 $f\in{H}^*$. 由**定理 2.2.2 (里斯表示定理)**, 存在唯一的 $w\in{H}$ 使 $f\left(x\right)=\left\langle{x},w\right\rangle$ 对一切 $x$ 成立. 因 $C$ 是双射, 存在唯一的 $y_f\in{H}$ 使 $Cy_f=w$; 于是对一切 $x\in{H}$,
 
@@ -767,6 +767,6 @@ $$
 
 $\blacksquare$
 
-唯一性: 若 $y,y'$ 都满足 $\varphi\left(x,y\right)=f\left(x\right)=\varphi\left(x,y'\right)$ 对一切 $x$ 成立, 则 $\left\langle{x},C\left(y-y'\right)\right\rangle=0$ 对一切 $x$ 成立, 故 $C\left(y-y'\right)=0$, 由第三步得 $\left\|y-y'\right\|\le\frac1c\left\|C\left(y-y'\right)\right\|=0$, 即 $y=y'$.
+唯一性: 若 $y,y'$ 都满足 $\varphi\left(x,y\right)=f\left(x\right)=\varphi\left(x,y'\right)$ 对一切 $x$ 成立, 则 $\left\langle{x},C\left(y-y'\right)\right\rangle=0$ 对一切 $x$ 成立, 故 $C\left(y-y'\right)=0$, 由单射时的估计 $\left\|Cy\right\|\ge{c}\left\|y\right\|$ 得 $\left\|y-y'\right\|\le\frac1c\left\|C\left(y-y'\right)\right\|=0$, 即 $y=y'$.
 
 $\blacksquare$

@@ -38,7 +38,7 @@ $$
 
 记 $\varphi\left(t\right)=\frac{t}{1+t}$, $\psi\left(t\right)=\ln\left(1+t\right)$ ($t\ge0$). 由函数 $\varphi,\psi$ 的单调与凹性, $\varphi,\psi$ 在 $\left[0,\infty\right)$ 上严格递增, $\varphi\left(0\right)=\psi\left(0\right)=0$, 且二者都是严格凹函数. 由凹函数过原点的次可加性, $\varphi$ 与 $\psi$ 都满足 $f\left(a+b\right)\le{f}\left(a\right)+f\left(b\right)$ ($a,b\ge0$).
 
-第一步: 验证 $d'$ 是 $X$ 上的度量. 依据**定义 1.1.1 (度量空间)**, 逐条验证 (i)(ii)(iii).
+验证 $d'$ 是 $X$ 上的度量. 依据**定义 1.1.1 (度量空间)**, 逐条验证 (i)(ii)(iii).
 
 (i) 非负性与正定性. 由 $d$ 是 $X$ 上的度量 (**定义 1.1.1 (度量空间)**(i)), 对任意 $x,y\in{X}$ 有 $d\left(x,y\right)\ge0$, 且 $d\left(x,y\right)=0$ 当且仅当 $x=y$. 因 $\varphi$ 的自变量非负, $\varphi\left(t\right)\ge0$ ($t\ge0$), 故 $d'\left(x,y\right)=\varphi\left(d\left(x,y\right)\right)\ge0$. 又因 $\varphi$ 严格递增且 $\varphi\left(0\right)=0$, $\varphi\left(t\right)=0$ 当且仅当 $t=0$, 故
 
@@ -60,7 +60,7 @@ $$
 
 $\blacksquare$
 
-第二步: 验证 $d''$ 是 $X$ 上的度量. 同样依据**定义 1.1.1 (度量空间)** 逐条验证.
+再验证 $d''$ 是 $X$ 上的度量, 同样依据**定义 1.1.1 (度量空间)** 逐条验证.
 
 (i) 由 $d\left(x,y\right)\ge0$ 及 $\psi$ 严格递增, $\psi\left(0\right)=0$, $\psi\left(t\right)\ge0$ 且 $\psi\left(t\right)=0$ 当且仅当 $t=0$, 故 $d''\left(x,y\right)=\psi\left(d\left(x,y\right)\right)\ge0$, 且 $d''\left(x,y\right)=0\Leftrightarrow{d}\left(x,y\right)=0\Leftrightarrow{x}=y$. (i) 成立.
 
@@ -70,7 +70,7 @@ $\blacksquare$
 
 $\blacksquare$
 
-第三步: 三种度量下收敛性一致. 依据**定义 1.1.2 (极限)**, 记 $\varepsilon_n=d\left(x_n,x_0\right)$, 则
+最后验证三种度量下收敛性一致. 依据**定义 1.1.2 (极限)**, 记 $\varepsilon_n=d\left(x_n,x_0\right)$, 则
 
 $$
 x_n\overset{d}\to{x}_0\Leftrightarrow\varepsilon_n\to0.

@@ -231,7 +231,7 @@ $$
 
 故 $\widetilde{T}\in\mathfrak{B}\left(X,l^{\infty}\right)$, $\left\|\widetilde{T}\right\|\le\left\|T\right\|$.
 
-对 $x\in{L}$, $\widetilde{T}x=\left(\varphi_1\left(x\right),\varphi_2\left(x\right),\cdots\right)=\left(\left(Tx\right)_1,\left(Tx\right)_2,\cdots\right)=Tx$, 故 $\widetilde{T}$ 延拓 $T$, 从而 $\left\|\widetilde{T}\right\|\ge\left\|T\right\|$. 结合上一步得 $\left\|\widetilde{T}\right\|=\left\|T\right\|$.
+对 $x\in{L}$, $\widetilde{T}x=\left(\varphi_1\left(x\right),\varphi_2\left(x\right),\cdots\right)=\left(\left(Tx\right)_1,\left(Tx\right)_2,\cdots\right)=Tx$, 故 $\widetilde{T}$ 延拓 $T$, 从而 $\left\|\widetilde{T}\right\|\ge\left\|T\right\|$. 结合上面的结果得 $\left\|\widetilde{T}\right\|=\left\|T\right\|$.
 
 $\blacksquare$
 
@@ -343,7 +343,7 @@ $$
 
 $\blacksquare$
 
-计算范数. 取 $g\equiv1$, 则 $g\in{B}_0$, 其解为 $u\equiv1$. 于是 $\left\|g\right\|=1$, $l_P\left(g\right)=1$, 故 $\left\|l_P\right\|\ge1$. 结合上一步得 $\left\|l_P\right\|=1$.
+计算范数. 取 $g\equiv1$, 则 $g\in{B}_0$, 其解为 $u\equiv1$. 于是 $\left\|g\right\|=1$, $l_P\left(g\right)=1$, 故 $\left\|l_P\right\|\ge1$. 结合上面的结果得 $\left\|l_P\right\|=1$.
 
 $\blacksquare$
 
@@ -609,6 +609,6 @@ $$
 p\left(x_n\right)=\left(1-\frac1n\right)p\left(x\right)\le1-\frac1n<1,
 $$
 
-故 $x_n\in{M}^{\circ}$; 又 $x_n\to{x}$, 故 $x\in\overline{M^{\circ}}$. 于是 $\overline{M}\subset\overline{M^{\circ}}$, 结合上一步得 $\overline{M^{\circ}}=\overline{M}$.
+故 $x_n\in{M}^{\circ}$; 又 $x_n\to{x}$, 故 $x\in\overline{M^{\circ}}$. 于是 $\overline{M}\subset\overline{M^{\circ}}$, 结合上面的结果得 $\overline{M^{\circ}}=\overline{M}$.
 
 $\blacksquare$

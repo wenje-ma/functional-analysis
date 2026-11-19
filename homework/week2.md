@@ -66,9 +66,9 @@
 
 ### 解答 1.4-8
 
-第一步: 化归为逼近简单函数. 由**定义 1.4.5 (稠密性)**, 只需证明: 对任意 $f\in{L}^p\left(\mathbb{R}\right)$ 与任意 $\varepsilon>0$, 存在 $\varphi\in{C}_c^\infty\left(\mathbb{R}\right)$ 使 $\left\|f-\varphi\right\|_p<\varepsilon$. 由**注 1.4.1 ($L^p\left(\mathbb{R}\right)$ 中的稠密子集)**, 简单函数全体在 $L^p\left(\mathbb{R}\right)$ 中稠密. 于是由稠密的传递性, 只需证明每个简单函数都能被 $C_c^\infty\left(\mathbb{R}\right)$ 中函数以任意 $L^p$ 精度逼近.
+先化归为逼近简单函数. 由**定义 1.4.5 (稠密性)**, 只需证明: 对任意 $f\in{L}^p\left(\mathbb{R}\right)$ 与任意 $\varepsilon>0$, 存在 $\varphi\in{C}_c^\infty\left(\mathbb{R}\right)$ 使 $\left\|f-\varphi\right\|_p<\varepsilon$. 由**注 1.4.1 ($L^p\left(\mathbb{R}\right)$ 中的稠密子集)**, 简单函数全体在 $L^p\left(\mathbb{R}\right)$ 中稠密. 于是由稠密的传递性, 只需证明每个简单函数都能被 $C_c^\infty\left(\mathbb{R}\right)$ 中函数以任意 $L^p$ 精度逼近.
 
-第二步: 用卷积磨光逼近特征函数. 设 $E\subset\mathbb{R}$ 是有限测度勒贝格可测集. 由可测集的紧-开逼近与卷积磨光, 存在紧集 $K\subset{E}$, 开集 $U\supset{E}$ 以及 $\psi\in{C}_c^\infty\left(\mathbb{R}\right)$, 使 $m\left(U\setminus{K}\right)<\left(\frac{\varepsilon}{2}\right)^p$, 且 $0\le\psi\le1$, $\psi\equiv1$ 于 $K$, $\operatorname{supp}\psi\subset{U}$. 于是 $\chi_E-\psi$ 只可能在 $U\setminus{K}$ 上非零, 且 $\left|\chi_E-\psi\right|\le1$, 故
+再用卷积磨光逼近特征函数. 设 $E\subset\mathbb{R}$ 是有限测度勒贝格可测集. 由可测集的紧-开逼近与卷积磨光, 存在紧集 $K\subset{E}$, 开集 $U\supset{E}$ 以及 $\psi\in{C}_c^\infty\left(\mathbb{R}\right)$, 使 $m\left(U\setminus{K}\right)<\left(\frac{\varepsilon}{2}\right)^p$, 且 $0\le\psi\le1$, $\psi\equiv1$ 于 $K$, $\operatorname{supp}\psi\subset{U}$. 于是 $\chi_E-\psi$ 只可能在 $U\setminus{K}$ 上非零, 且 $\left|\chi_E-\psi\right|\le1$, 故
 
 $$
 \left\|\chi_E-\psi\right\|_p^p=\int_{U\setminus{K}}\left|\chi_E-\psi\right|^p\,\mathrm{d}m\le{m}\left(U\setminus{K}\right)<\left(\frac{\varepsilon}{2}\right)^p,
@@ -76,7 +76,7 @@ $$
 
 即 $\left\|\chi_E-\psi\right\|_p<\frac{\varepsilon}{2}$. 故特征函数可被 $C_c^\infty$ 函数逼近.
 
-第三步: 用线性性逼近一般简单函数. 设 $\Phi=\sum_{i=1}^sc_i\chi_{E_i}$ 是简单函数, 其中每个 $E_i$ 有限测度. 对每个 $i$, 由第二步取 $\psi_i\in{C}_c^\infty\left(\mathbb{R}\right)$ 使 $\left\|\chi_{E_i}-\psi_i\right\|_p<\frac{\varepsilon}{2s\left(\left|c_i\right|+1\right)}$. 令 $\varphi=\sum_{i=1}^sc_i\psi_i$, 则 $\varphi\in{C}_c^\infty\left(\mathbb{R}\right)$ (有限个紧支集光滑函数的线性组合仍紧支光滑). 由**定义 1.2.2 (半范数与范数)** (iii) 范数的三角不等式,
+最后用线性性逼近一般简单函数. 设 $\Phi=\sum_{i=1}^sc_i\chi_{E_i}$ 是简单函数, 其中每个 $E_i$ 有限测度. 对每个 $i$, 按上面的逼近取 $\psi_i\in{C}_c^\infty\left(\mathbb{R}\right)$ 使 $\left\|\chi_{E_i}-\psi_i\right\|_p<\frac{\varepsilon}{2s\left(\left|c_i\right|+1\right)}$. 令 $\varphi=\sum_{i=1}^sc_i\psi_i$, 则 $\varphi\in{C}_c^\infty\left(\mathbb{R}\right)$ (有限个紧支集光滑函数的线性组合仍紧支光滑). 由**定义 1.2.2 (半范数与范数)** (iii) 范数的三角不等式,
 
 $$
 \left\|\Phi-\varphi\right\|_p=\left\|\sum_{i=1}^sc_i\left(\chi_{E_i}-\psi_i\right)\right\|_p\le\sum_{i=1}^s\left|c_i\right|\left\|\chi_{E_i}-\psi_i\right\|_p<\frac{\varepsilon}{2}.
@@ -304,7 +304,7 @@ $$
 
 ### 解答 1.3-3
 
-第一步: 证标准正交性. 对任意 $m,n,m',n'\in\mathbb{Z}$, 被积函数在乘积测度下绝对可积, 由富比尼定理,
+先证标准正交性. 对任意 $m,n,m',n'\in\mathbb{Z}$, 被积函数在乘积测度下绝对可积, 由富比尼定理,
 
 $$
 \left\langle{e}^{imx}e^{iny},e^{im'x}e^{in'y}\right\rangle=\frac{1}{4\pi^2}\int_0^{2\pi}\int_0^{2\pi}e^{i\left(m-m'\right)x}e^{i\left(n-n'\right)y}\,\mathrm{d}x\mathrm{d}y=\left(\frac{1}{2\pi}\int_0^{2\pi}e^{i\left(m-m'\right)x}\,\mathrm{d}x\right)\left(\frac{1}{2\pi}\int_0^{2\pi}e^{i\left(n-n'\right)y}\,\mathrm{d}y\right).
@@ -312,7 +312,7 @@ $$
 
 由**例 1.3.7 ($e^{inx}$ 构成标准正交基)**, $\left\{e^{ikx}\right\}_{k\in\mathbb{Z}}$ 是 $L^2\left[0,2\pi\right]$ 的标准正交系, 即 $\frac{1}{2\pi}\int_0^{2\pi}e^{ikx}\,\mathrm{d}x=\delta_{k0}$. 故上式 $=\delta_{mm'}\delta_{nn'}$. 由**定义 1.3.1 (正交系与标准正交系)**, $\left\{e^{imx}e^{iny}:m,n\in\mathbb{Z}\right\}$ 是 $L^2\left(\left[0,2\pi\right]\times\left[0,2\pi\right]\right)$ 的标准正交系.
 
-第二步: 证完全性. 设 $f\in{L}^2\left(\left[0,2\pi\right]\times\left[0,2\pi\right]\right)$ 且 $f\perp{e}^{imx}e^{iny}$ 对一切 $m,n\in\mathbb{Z}$ 成立. 由富比尼定理,
+再证完全性. 设 $f\in{L}^2\left(\left[0,2\pi\right]\times\left[0,2\pi\right]\right)$ 且 $f\perp{e}^{imx}e^{iny}$ 对一切 $m,n\in\mathbb{Z}$ 成立. 由富比尼定理,
 
 $$
 0=\left\langle{f},e^{imx}e^{iny}\right\rangle=\frac{1}{2\pi}\int_0^{2\pi}\left(\frac{1}{2\pi}\int_0^{2\pi}f\left(x,y\right)e^{-imx}\,\mathrm{d}x\right)e^{-iny}\,\mathrm{d}y.
@@ -368,7 +368,7 @@ $$
 
 以下按几乎处处相等的等价类讨论.
 
-第一步: $H$ 是线性空间. 对 $f,g\in{H}$ 与 $\alpha,\beta\in\mathbb{K}$, 由平方展开估计 $\left(\left|a\right|+\left|b\right|\right)^2\le2\left|a\right|^2+2\left|b\right|^2$,
+先验证 $H$ 是线性空间. 对 $f,g\in{H}$ 与 $\alpha,\beta\in\mathbb{K}$, 由平方展开估计 $\left(\left|a\right|+\left|b\right|\right)^2\le2\left|a\right|^2+2\left|b\right|^2$,
 
 $$
 \left|\alpha{f}+\beta{g}\right|^2\omega\le2\left|\alpha\right|^2\left|f\right|^2\omega+2\left|\beta\right|^2\left|g\right|^2\omega\in{L}^1\left(\mathbb{R}\right),
@@ -376,7 +376,7 @@ $$
 
 故 $\int_{\mathbb{R}}\left|\alpha{f}+\beta{g}\right|^2\omega\,\mathrm{d}t<\infty$, 即 $\alpha{f}+\beta{g}\in{H}$. 故 $H$ 是线性空间.
 
-第二步: $\left\langle\cdot,\cdot\right\rangle$ 是内积. 由**定义 1.2.3 (内积空间)** 逐条验证. (i) 共轭对称性:
+内积的三条公理由**定义 1.2.3 (内积空间)** 逐条验证. (i) 共轭对称性:
 
 $$
 \left\langle{f},g\right\rangle=\int_{\mathbb{R}}f\overline{g}\,\omega=\overline{\int_{\mathbb{R}}g\overline{f}\,\omega}=\overline{\left\langle{g},f\right\rangle}.
@@ -390,9 +390,9 @@ $$
 \left\langle{f},f\right\rangle=0\Leftrightarrow\int_{\mathbb{R}}\left|f\right|^2\omega\,\mathrm{d}t=0\Leftrightarrow\left|f\right|^2\omega=0\;\text{a.e.}\Leftrightarrow{f}=0\;\text{a.e.},
 $$
 
-其中倒数第二步用勒贝格积分的性质. 故 $\left\langle\cdot,\cdot\right\rangle$ 是 $H$ 上的内积.
+其中倒数第二个等价用勒贝格积分的性质. 故 $\left\langle\cdot,\cdot\right\rangle$ 是 $H$ 上的内积.
 
-第三步: 完备性. 设 $\left\{f_n\right\}$ 是 $H$ 中的基本点列, 即 $\left\|f_n-f_m\right\|_H^2=\int_{\mathbb{R}}\left|f_n-f_m\right|^2\omega\,\mathrm{d}t\to0$. 定义映射 $T:H\to{L}^2\left(\mathbb{R}\right)$, $Tf=f\sqrt{\omega}$. 则
+最后验证完备性. 设 $\left\{f_n\right\}$ 是 $H$ 中的基本点列, 即 $\left\|f_n-f_m\right\|_H^2=\int_{\mathbb{R}}\left|f_n-f_m\right|^2\omega\,\mathrm{d}t\to0$. 定义映射 $T:H\to{L}^2\left(\mathbb{R}\right)$, $Tf=f\sqrt{\omega}$. 则
 
 $$
 \left\|Tf_n-Tf_m\right\|_{L^2}^2=\int_{\mathbb{R}}\left|f_n-f_m\right|^2\omega\,\mathrm{d}t=\left\|f_n-f_m\right\|_H^2\to0,
@@ -420,7 +420,7 @@ $$
 
 记 $S_n=\sum_{k=1}^n\left\langle{x},e_k\right\rangle{e}_k$, $S_n'=\sum_{k=1}^n\left\langle{x},e_k'\right\rangle{e}_k'$.
 
-第一步: 证两个极限都存在. 由**定理 1.3.1 (贝塞尔不等式)**, $\sum_{k=1}^{\infty}\left|\left\langle{x},e_k\right\rangle\right|^2\le\left\|x\right\|^2<\infty$. 对 $m<{}n$, 由标准正交性 (**定义 1.3.1 (正交系与标准正交系)**) 与**定理 1.2.2 (勾股定理, 毕达哥拉斯定理)**,
+先证两个极限都存在. 由**定理 1.3.1 (贝塞尔不等式)**, $\sum_{k=1}^{\infty}\left|\left\langle{x},e_k\right\rangle\right|^2\le\left\|x\right\|^2<\infty$. 对 $m<{}n$, 由标准正交性 (**定义 1.3.1 (正交系与标准正交系)**) 与**定理 1.2.2 (勾股定理, 毕达哥拉斯定理)**,
 
 $$
 \left\|S_n-S_m\right\|^2=\left\|\sum_{k=m+1}^n\left\langle{x},e_k\right\rangle{e}_k\right\|^2=\sum_{k=m+1}^n\left|\left\langle{x},e_k\right\rangle\right|^2\to0\quad\left(m,n\to\infty\right).
@@ -428,7 +428,7 @@ $$
 
 故 $\left\{S_n\right\}$ 是 $H$ 中的基本点列. 由希尔伯特空间的定义 ($H$ 完备), $S_n$ 收敛, 记 $S=\lim_{n\to\infty}S_n$; 同理 $S_n'$ 收敛, 记 $S'=\lim_{n\to\infty}S_n'$.
 
-第二步: 证 $S=S'$. 对任意固定的 $j$, 由**引理 1.2.4 (内积的连续性)** 与标准正交性,
+再证 $S=S'$. 对任意固定的 $j$, 由**引理 1.2.4 (内积的连续性)** 与标准正交性,
 
 $$
 \left\langle{S},e_j\right\rangle=\lim_{n\to\infty}\sum_{k=1}^n\left\langle{x},e_k\right\rangle\left\langle{e}_k,e_j\right\rangle=\left\langle{x},e_j\right\rangle.
@@ -458,9 +458,9 @@ $$
 
 取 $\mathcal{E}=\left\{\sqrt2\cos{n}x,\sqrt2\sin{n}x:n=1,2,\cdots\right\}$.
 
-第一步: $\mathcal{E}$ 是 $H$ 中的标准正交系. 由**例 1.3.3 (三角多项式标准正交系)**, $\left\{1,\sqrt2\cos{n}x,\sqrt2\sin{n}x:n\ge1\right\}$ 是 $L^2\left[0,2\pi\right]$ 的标准正交系. 由**定义 1.3.1 (正交系与标准正交系)**, 标准正交系的子集仍是标准正交系, 故 $\mathcal{E}$ 是 $L^2\left[0,2\pi\right]$ 的标准正交系. 又 $\sqrt2\cos{n}x,\sqrt2\sin{n}x\in{H}$ (因为 $\cos{n}x,\sin{n}x\in{H}$ 且 $H$ 是线性子空间), 故 $\mathcal{E}$ 是 $H$ 中的标准正交系.
+先证 $\mathcal{E}$ 是 $H$ 中的标准正交系. 由**例 1.3.3 (三角多项式标准正交系)**, $\left\{1,\sqrt2\cos{n}x,\sqrt2\sin{n}x:n\ge1\right\}$ 是 $L^2\left[0,2\pi\right]$ 的标准正交系. 由**定义 1.3.1 (正交系与标准正交系)**, 标准正交系的子集仍是标准正交系, 故 $\mathcal{E}$ 是 $L^2\left[0,2\pi\right]$ 的标准正交系. 又 $\sqrt2\cos{n}x,\sqrt2\sin{n}x\in{H}$ (因为 $\cos{n}x,\sin{n}x\in{H}$ 且 $H$ 是线性子空间), 故 $\mathcal{E}$ 是 $H$ 中的标准正交系.
 
-第二步: $\mathcal{E}$ 在 $H$ 中完全. 设 $x\in{H}$ 且 $x\perp\mathcal{E}$. 由 $H=\operatorname{span}\left\{f_0,\cos{n}x,\sin{n}x:n\ge1\right\}$ 是有限线性组合全体, 存在 $c_0\in\mathbb{K}$ 与有限个 $c_k,d_k$ 使
+再证 $\mathcal{E}$ 在 $H$ 中完全. 设 $x\in{H}$ 且 $x\perp\mathcal{E}$. 由 $H=\operatorname{span}\left\{f_0,\cos{n}x,\sin{n}x:n\ge1\right\}$ 是有限线性组合全体, 存在 $c_0\in\mathbb{K}$ 与有限个 $c_k,d_k$ 使
 
 $$
 x=c_0f_0+\sum_{k=1}^{N}\left(c_k\cos{k}x+d_k\sin{k}x\right).
@@ -474,7 +474,7 @@ $$
 
 即 $c_k=-\frac{c_0}{k}$. 同理, $0=\left\langle{x},\sin{k}x\right\rangle$ 给出 $d_k=-\frac{c_0}{k}$. 由于 $x$ 是有限线性组合, 当 $k>N$ 时 $c_k=d_k=0$, 代入 $c_k=-c_0/k$ 得 $c_0=0$, 从而一切 $c_k=d_k=0$, 即 $x=0$. 由**定理 1.3.2 (标准正交基的等价条件)** (iii), $\mathcal{E}$ 在 $H$ 中完全.
 
-第三步: $\mathcal{E}$ 不完备. 取 $x=f_0\in{H}$. 由**例 1.3.3 (三角多项式标准正交系)** 计算得 $\left\langle1,1\right\rangle=1$, $\left\langle\cos{n}x,\cos{n}x\right\rangle=\left\langle\sin{n}x,\sin{n}x\right\rangle=\frac12$, 且不同项互相正交, 故
+最后证 $\mathcal{E}$ 不完备. 取 $x=f_0\in{H}$. 由**例 1.3.3 (三角多项式标准正交系)** 计算得 $\left\langle1,1\right\rangle=1$, $\left\langle\cos{n}x,\cos{n}x\right\rangle=\left\langle\sin{n}x,\sin{n}x\right\rangle=\frac12$, 且不同项互相正交, 故
 
 $$
 \left\|f_0\right\|^2=\left\langle1,1\right\rangle+\sum_{n=1}^{\infty}\frac{1}{n^2}\left(\left\langle\cos{n}x,\cos{n}x\right\rangle+\left\langle\sin{n}x,\sin{n}x\right\rangle\right)=1+\sum_{n=1}^{\infty}\frac{1}{n^2}.
