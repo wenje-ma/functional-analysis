@@ -74,7 +74,7 @@
 
 > **定义 2.2.3 (共轭双线性泛函)**
 > 
-> 设 $H$ 是内积空间, $\varphi\left(x,y\right)$ 是 $H$ 上的二元泛函. (i) 如果对于任何 $x,y,z\in{H}$ 及 $\alpha,\beta\in\mathbb{C}$, 都成立 $\varphi\left(\alpha{x}+\beta{y},z\right)=\alpha\varphi\left(x,z\right)+\beta\varphi\left(y,z\right),\quad\varphi\left(z,\alpha{x}+\beta{y}\right)=\overline\alpha\varphi\left(z,x\right)+\overline\beta\varphi\left(z,y\right)$, 那么称 $\varphi\left(\cdot,\cdot\right)$ 是 $H$ 上的共轭双线性泛函. (ii) 如果对于任何 $x,y\in{H}$ 成立 $\varphi\left(x,y\right)=\overline{\varphi\left(y,x\right)}$, 那么称 $\varphi\left(x,y\right)$ 是 $H$ 上的埃尔米特泛函. (iii) 对共轭双线性泛函 $\varphi$, 如果有正常数 $c$ 使得 $\left|\varphi\left(x,y\right)\right|\le{c}\left\|x\right\|\left\|y\right\|,\quad\forall{x},y\in{H}$, 那么称 $\varphi$ 是 $H$ 上有界的共轭双线性泛函, $\left\|\varphi\right\|=\sup_{\left\|x\right\|=\left\|y\right\|=1}\left|\varphi\left(x,y\right)\right|$ 称为泛函 $\varphi$ 的范数. ## 2.1-1 (零空间闭并不蕴含算子有界) 设 $T$ 是赋范线性空间 $X$ 到赋范线性空间 $Y$ 的线性算子. 如果零空间 $\ker\left(T\right)=\left\{x:Tx=0\right\}$ 是闭集, 问 $T$ 是否有界? 不一定. 反例取自**例 2.1.9 (微分算子的无界性)**: 取 $X=C^{\left(1\right)}\left[a,b\right]$ 按 $C\left[a,b\right]$ 的范数 $\left\|x\right\|=\max_{t\in\left[a,b\right]}\left|x\left(t\right)\right|$, $Y=C\left[a,b\right]$, $T=D$, 其中 $$ \left(Dx\right)\left(t\right)=\frac{\mathrm{d}}{\mathrm{d}t}x\left(t\right),\quad{x}\in{X}. $$ 先证 $\ker{D}$ 是 $X$ 的闭集. 由 $Dx=0$ 当且仅当 $x'$ 在 $\left[a,b\right]$ 上恒为 $0$, 而闭区间上导数恒为 $0$ 的函数是常值函数, 故 $$ \ker{D}=\left\{x\in{X}:\,\exists\,c\in\mathbb{R},x\left(t\right)=c,\forall\,t\in\left[a,b\right]\right\}. $$ 设 $\left\{x_n\right\}\subset\ker{D}$ 且 $x_n\to{x}$ 于 $X$, 则 $x_n\equiv{c}=x$, $\forall\,n\in\mathbb{N}$. 故 $x\in\ker{D}$, 即 $\ker{D}$ 闭. $\blacksquare$ 再证 $D$ 无界. 取 $x_n\left(t\right)=\mathrm{e}^{-n\left(t-a\right)}$, 则 $\left\|x_n\right\|=\max_t\mathrm{e}^{-n\left(t-a\right)}=1$, 而 $\left(Dx_n\right)\left(t\right)=-n\mathrm{e}^{-n\left(t-a\right)}$, 故 $\left\|Dx_n\right\|=n$ 无界. $\blacksquare$
+> 设 $H$ 是内积空间, $\varphi\left(x,y\right)$ 是 $H$ 上的二元泛函. (i) 如果对于任何 $x,y,z\in{H}$ 及 $\alpha,\beta\in\mathbb{C}$, 都成立 $\varphi\left(\alpha{x}+\beta{y},z\right)=\alpha\varphi\left(x,z\right)+\beta\varphi\left(y,z\right),\quad\varphi\left(z,\alpha{x}+\beta{y}\right)=\overline\alpha\varphi\left(z,x\right)+\overline\beta\varphi\left(z,y\right)$, 那么称 $\varphi\left(\cdot,\cdot\right)$ 是 $H$ 上的共轭双线性泛函. (ii) 如果对于任何 $x,y\in{H}$ 成立 $\varphi\left(x,y\right)=\overline{\varphi\left(y,x\right)}$, 那么称 $\varphi\left(x,y\right)$ 是 $H$ 上的埃尔米特泛函. (iii) 对共轭双线性泛函 $\varphi$, 如果有正常数 $c$ 使得 $\left|\varphi\left(x,y\right)\right|\le{c}\left\|x\right\|\left\|y\right\|,\quad\forall{x},y\in{H}$, 那么称 $\varphi$ 是 $H$ 上有界的共轭双线性泛函, $\left\|\varphi\right\|=\sup_{\left\|x\right\|=\left\|y\right\|=1}\left|\varphi\left(x,y\right)\right|$ 称为泛函 $\varphi$ 的范数. ## 2.1-1 (零空间闭并不蕴含算子有界) 设 $T$ 是赋范线性空间 $X$ 到赋范线性空间 $Y$ 的线性算子. 如果零空间 $\ker\left(T\right)=\left\{x:Tx=0\right\}$ 是闭集, 问 $T$ 是否有界? 不一定. 反例取自**例 2.1.9 (微分算子的无界性)**: 取 $X=C^{\left(1\right)}\left[a,b\right]$ 按 $C\left[a,b\right]$ 的范数 $\left\|x\right\|=\max_{t\in\left[a,b\right]}\left|x\left(t\right)\right|$, $Y=C\left[a,b\right]$, $T=D$, 其中 $$\left(Dx\right)\left(t\right)=\frac{\mathrm{d}}{\mathrm{d}t}x\left(t\right),\quad{x}\in{X}.$$ 先证 $\ker{D}$ 是 $X$ 的闭集. 由 $Dx=0$ 当且仅当 $x'$ 在 $\left[a,b\right]$ 上恒为 $0$, 而闭区间上导数恒为 $0$ 的函数是常值函数, 故 $$\ker{D}=\left\{x\in{X}:\,\exists\,c\in\mathbb{R},x\left(t\right)=c,\forall\,t\in\left[a,b\right]\right\}.$$ 设 $\left\{x_n\right\}\subset\ker{D}$ 且 $x_n\to{x}$ 于 $X$, 则 $x_n\equiv{c}=x$, $\forall\,n\in\mathbb{N}$. 故 $x\in\ker{D}$, 即 $\ker{D}$ 闭. $\blacksquare$ 再证 $D$ 无界. 取 $x_n\left(t\right)=\mathrm{e}^{-n\left(t-a\right)}$, 则 $\left\|x_n\right\|=\max_t\mathrm{e}^{-n\left(t-a\right)}=1$, 而 $\left(Dx_n\right)\left(t\right)=-n\mathrm{e}^{-n\left(t-a\right)}$, 故 $\left\|Dx_n\right\|=n$ 无界. $\blacksquare$
 
 > **定理 2.2.6 (埃尔米特泛函的有界性)**
 > 
@@ -91,13 +91,13 @@ $$
 
 记右端为 $S$.
 
-先证 $S\le\left\|T\right\|$. 任取 $x,y\in{E}$ 且 $\left\|x\right\|=\left\|y\right\|=1$. 由**引理 1.2.3 (柯西-施瓦茨不等式)**,
+先证 $S\le\left\|T\right\|$. 任取 $x,y\in{E}$ 且 $\left\|x\right\|=\left\|y\right\|=1$. 由**引理 1.2.3 (柯西-施瓦茨不等式)** 与**定义 2.1.2 (算子范数)**,
 
 $$
-\left|\left\langle{T}x,y\right\rangle\right|\le\left\|Tx\right\|\left\|y\right\|=\left\|Tx\right\|,
+\left|\left\langle{T}x,y\right\rangle\right|\le\left\|Tx\right\|\left\|y\right\|=\left\|Tx\right\|\le\left\|T\right\|\left\|x\right\|\le\left\|T\right\|.
 $$
 
-再由**定义 2.1.2 (算子范数)** 中的 $\left\|Tx\right\|\le\left\|T\right\|\left\|x\right\|$ 得 $\left|\left\langle{T}x,y\right\rangle\right|\le\left\|T\right\|$. 对这样的 $x,y$ 取上确界即得 $S\le\left\|T\right\|$.
+对这样的 $x,y$ 取上确界即得 $S\le\left\|T\right\|$.
 
 $\blacksquare$
 
