@@ -66,7 +66,7 @@
 
 > **定理 2.5.3 (典则映射的保范性)**
 > 
-> 设 $X$ 是赋范线性空间, 映射 $J:x\mapsto{x}^{**}$ 是从 $X$ 到 $X^{**}$ 的保范的线性算子, 即 (i) $\left(\alpha{x}+\beta{y}\right)^{**}=\alpha{x}^{**}+\beta{y}^{**}$; (ii) $\left\|x^{**}\right\|=\left\|x\right\|$.
+> 设 $X$ 是赋范线性空间, 则典范映射 $J:x\mapsto{x}^{**}$ 一定是从 $X$ 到 $X^{**}$ 的保范的线性算子, 即 (i) $\left(\alpha{x}+\beta{y}\right)^{**}=\alpha{x}^{**}+\beta{y}^{**}$; (ii) $\left\|x^{**}\right\|=\left\|x\right\|$.
 
 > **定义 3.1.1 (疏朗集)**
 > 
@@ -92,7 +92,7 @@ $$
 
 记 $\pi\left(x,y\right)=x$, 则 $B=\pi\left(A\right)$.
 
-先证 $B$ 是闭区间. 题设中的 $A$ 按**定义 2.4.1 (凸集)** 是凸集; $\pi$ 是线性映射, 故 $B=\pi\left(A\right)$ 是凸集. 又 $A$ 有界闭, 故 $A$ 紧, 而 $\pi$ 连续, 故 $B=\pi\left(A\right)$ 紧, 特别地 $B$ 闭且有界.
+$B$ 是闭区间. $A$ 是**定义 2.4.1 (凸集)**, $\pi$ 是线性映射, 故 $B=\pi\left(A\right)$ 是凸集. 又 $A$ 有界闭, 故 $A$ 紧, 而 $\pi$ 连续, 故 $B=\pi\left(A\right)$ 紧, 特别地 $B$ 闭且有界.
 
 $\blacksquare$
 
@@ -111,10 +111,10 @@ $$
 再证 $f_1$ 凹, $f_2$ 凸. 设 $x_1,x_2\in{B}$, $t\in\left[0,1\right]$, $x=tx_1+\left(1-t\right)x_2$. 取 $y_1=f_1\left(x_1\right)$, $y_2=f_1\left(x_2\right)$, 则 $\left(x_1,y_1\right),\left(x_2,y_2\right)\in{A}$; 由 $A$ 凸, $\left(x,ty_1+\left(1-t\right)y_2\right)\in{A}$, 故
 
 $$
-f_2\left(x\right)\le{t}f_2\left(x_1\right)+\left(1-t\right)f_2\left(x_2\right)\le{f}_1\left(x\right),
+f_1\left(x\right)\ge{t}f_1\left(x_1\right)+\left(1-t\right)f_1\left(x_2\right),
 $$
 
-即 $f_1$ 是 $B$ 上的凹函数, $f_2$ 是 $B$ 上的凸函数.
+即 $f_1$ 是 $B$ 上的凹函数. 同理, $f_2$ 是 $B$ 上的凸函数.
 
 $\blacksquare$
 
@@ -146,9 +146,9 @@ $$
 M=\left\{\left(u,v\right)\in\mathbb{R}^2:v\ge\varphi\left(u\right)\right\},
 $$
 
-并取单点集 $N=\left\{\left(x,\varphi\left(x\right)\right)\right\}$. 按**例 2.4.2 (凸函数的上方图是凸集)**, $M$ 是凸集; 按**定义 2.4.1 (凸集)**, $N$ 也是凸集, 因为 $\alpha\left(x,\varphi\left(x\right)\right)+\left(1-\alpha\right)\left(x,\varphi\left(x\right)\right)=\left(x,\varphi\left(x\right)\right)\in{N}$ 对一切 $\alpha\in\left[0,1\right]$ 成立, 且 $M^\circ\cap{N}=\emptyset$.
+并取单点集 $N=\left\{\left(x,\varphi\left(x\right)\right)\right\}$. 按**例 2.4.2 (凸函数的上方图是凸集)**, $M$ 是凸集; 按**定义 2.4.1 (凸集)**, $N$ 也是凸集, 且 $M^\circ\cap{N}=\emptyset$.
 
-由**定理 2.4.1 (凸集分离定理)** (取凸集 $M$ 与 $N$, 前者的内部非空且与后者不交), 存在 $\mathbb{R}^2$ 上非零的连续线性泛函 $f$, 使
+由**定理 2.4.1 (凸集分离定理)**, 存在 $\mathbb{R}^2$ 上非零的连续线性泛函 $f$, 使
 
 $$
 \sup_{\left(u,v\right)\in{M}}f\left(u,v\right)\le\inf_{\left(u,v\right)\in{N}}f\left(u,v\right)=f\left(x,\varphi\left(x\right)\right).
@@ -180,10 +180,10 @@ $$
 
 ### 解答 2.4-7
 
-按**定义 2.4.3 (分离与严格分离)**, 由**定理 2.4.1 (凸集分离定理)** 与题设 $M^\circ\cap{F}=\emptyset$, 存在非零的 $f\in{V}^*$ 与常数 $c$, 使
+按**定义 2.4.3 (分离与严格分离)**, 由**定理 2.4.1 (凸集分离定理)** 与题设 $M^\circ\cap{F}=\emptyset$, 存在非零的 $f\in{V}^*$ 使
 
 $$
-f\left(x\right)\le{c}\le{f}\left(y\right),\quad\forall{x}\in{M},\quad\forall{y}\in{F}.
+f\left(x\right)\le{f}\left(y\right),\quad\forall{x}\in{M},\quad\forall{y}\in{F}.
 $$
 
 记 $d=\inf_{y\in{F}}f\left(y\right)$. 因 $0\in{F}$, 有 $d\le{f}\left(0\right)=0$; 于是
@@ -194,7 +194,7 @@ $$
 
 $\blacksquare$
 
-再证 $f$ 在 $F$ 上恒为零. 任给 $y\in{F}$ 与正整数 $n$, 由 $ny\in{F}$ 得 $f\left(ny\right)=nf\left(y\right)\ge{d}$; 若 $f\left(y\right)<0$, 则当 $n$ 充分大时 $nf\left(y\right)<{d}$, 与 $nf\left(y\right)\ge{d}$ 矛盾. 故 $f\left(y\right)\ge0$. 同法, 由 $-y\in{F}$ 得 $f\left(-y\right)=-f\left(y\right)\ge{d}$, 同样得 $-f\left(y\right)\ge0$. 于是 $f\left(y\right)=0$.
+再证 $f$ 在 $F$ 上恒为零. 任给 $y\in{F}$ 与正整数 $n$, 由 $ny\in{F}$ 得 $f\left(ny\right)=nf\left(y\right)\ge{d}$; 若 $f\left(y\right)<0$, 则当 $n$ 充分大时 $nf\left(y\right)<{d}$, 与 $nf\left(y\right)\ge{d}$ 矛盾. 故 $f\left(y\right)\ge0$; 同样有 $-f\left(y\right)\ge0$. 于是 $f\left(y\right)=0$.
 
 $\blacksquare$
 
@@ -214,7 +214,7 @@ $$
 f\left(y\right)\le\beta<{f}\left(x\right),\quad\forall{y}\in{M}.
 $$
 
-令 $H=\left\{z:f\left(z\right)\le\beta\right\}$, 则 $H$ 是闭半空间, $M\subset{H}$, 而 $x\notin{H}$. 故 $x\notin\bigcap\mathcal{H}$, 即 $\bigcap\mathcal{H}\subset{M}$. 结合 $M\subset\bigcap\mathcal{H}$ 得 $M=\bigcap\mathcal{H}$.
+令 $H=\left\{z:f\left(z\right)\le\beta\right\}$, 则 $H$ 是闭半空间, 而 $x\notin{H}$. 故 $x\notin\bigcap\mathcal{H}$, 即 $\bigcap\mathcal{H}\subset{M}$. 结合 $M\subset\bigcap\mathcal{H}$ 得 $M=\bigcap\mathcal{H}$.
 
 $\blacksquare$
 
@@ -236,7 +236,7 @@ $$
 f\left(y\right)<{f}\left(x\right),\quad\forall{y}\in{M},
 $$
 
-即 $M$ 含于开半空间 $\left\{z:f\left(z\right)<{f}\left(x\right)\right\}$, 而 $x$ 不属于这个开半空间. 故 $x\notin\bigcap\mathcal{H}'$, 即 $\bigcap\mathcal{H}'\subset{M}$. 结合 $M\subset\bigcap\mathcal{H}'$ 得 $M=\bigcap\mathcal{H}'$.
+令 $H'=\left\{z:f\left(z\right)<{f}\left(x\right)\right\}$, 则 $H'$ 是闭半空间, 而 $x\notin{H'}$. 故 $x\notin\bigcap\mathcal{H'}$, 即 $\bigcap\mathcal{H'}\subset{M}$. 结合 $M\subset\bigcap\mathcal{H'}$ 得 $M=\bigcap\mathcal{H'}$.
 
 $\blacksquare$
 
@@ -266,7 +266,7 @@ $$
 \left|f\left(x\right)\right|=\sup_{\left|\lambda\right|=1}\operatorname{Re}\left(\lambda{f}\left(x\right)\right)=\sup_{\left|\lambda\right|=1}\operatorname{Re}f\left(\lambda{x}\right)\le{s},
 $$
 
-从而 $0\le{s}\le{c}$, 即 $\operatorname{Re}f$ 在 $A$ 的内点 $\lambda{x}$ 处取到上确界 $s$. 于是对任意 $u\in{V}$ 与充分小的 $t>0$, 有 $\lambda{x}\pm{t}u\in{A}$,
+从而 $0\le{s}\le{c}$, 即 $\operatorname{Re}f$ 在 $A$ 的内点 $\lambda{x}$ 处取到上确界 $s=c$. 于是对任意 $u\in{V}$ 与充分小的 $t>0$, 有 $\lambda{x}\pm{t}u\in{A}$,
 
 $$
 \operatorname{Re}f\left(\lambda{x}\pm{t}u\right)=s\pm{t}\operatorname{Re}f\left(u\right),
@@ -301,7 +301,7 @@ $$
 (ii) 当 $M$ 不是闭的时候, (i) 的结论是否成立? 考虑
 
 $$
-E=\left\{x\in{l}^2:\exists{N}\ge1,\quad{x}_N>0;\quad\forall{n}>{N},\quad{x}_n=0\right\},
+E=\left\{x\in{l}^2:\exists{N}\ge1,x_N>0;\forall{n}>{N},x_n=0\right\},
 $$
 
 我们承认: 不存在非零的 $f\in\left(l^2\right)^*$ 分离 $E$ 与 $\left\{0\right\}$.
@@ -320,7 +320,7 @@ $$
 
 $\blacksquare$
 
-再证 $s\ge\delta$. 令 $C=M-x=\left\{z-x:z\in{M}\right\}$, 它是 $X$ 中的闭凸集, 且 $d\left(0,C\right)=\delta$; 于是开球 $B\left(0,\delta\right)$ 与 $C$ 不交. 由**定理 2.4.1 (凸集分离定理)** (取凸集 $B\left(0,\delta\right)$ 与 $C$, 前者的内部非空), 存在非零的 $f\in{X}^*$, 使
+再证 $s\ge\delta$. 令 $C=M-x=\left\{z-x:z\in{M}\right\}$, 它是 $X$ 中的闭凸集, 且 $d\left(0,C\right)=\delta$; 于是开球 $B\left(0,\delta\right)$ 与 $C$ 不交. 由**定理 2.4.1 (凸集分离定理)**, 存在非零的 $f\in{X}^*$, 使
 
 $$
 \sup_{\left\|u\right\|<\delta}f\left(u\right)\le\inf_{c\in{C}}f\left(c\right).
@@ -344,19 +344,17 @@ $$
 g\left(x\right)-g\left(z\right)=\frac{f\left(z\right)-f\left(x\right)}{\left\|f\right\|}\ge\delta,
 $$
 
-故 $g\left(x\right)-\sup_{z\in{M}}g\left(z\right)\ge\delta$, 从而 $s\ge\delta$.
+对 $z\in{M}$ 取下确界得 $g\left(x\right)-\sup_{z\in{M}}g\left(z\right)\ge\delta$, 再对 $f$ 取上确界得 $s\ge\delta$.
 
 $\blacksquare$
 
 (ii) 结论不成立. 考虑
 
 $$
-E=\left\{x\in{l}^2:\exists{N}\ge1,\quad{x}_N>0;\quad\forall{n}>{N},\quad{x}_n=0\right\}.
+E=\left\{x\in{l}^2:\exists{N}\ge1,x_N>0;\forall{n}>{N},x_n=0\right\}.
 $$
 
-即 $l^2$ 中只有有限个坐标非零, 且最后一个非零坐标为正的点之全体.
-
-$E$ 是凸锥: 对 $\lambda>0$ 有 $\lambda{E}=E$, 且 $x,y\in{E}$ 蕴涵 $x+y\in{E}$. 又 $0\notin{E}$, 而 $x^{\left(n\right)}=\left(1/n,0,0,\cdots\right)\in{E}$ 且 $\left\|x^{\left(n\right)}\right\|=1/n\to0$, 故 $0\in\overline{E}$, 即 $E$ 不闭, 且 $d\left(0,E\right)=0$.
+即 $l^2$ 中只有有限个坐标非零, 且最后一个非零坐标为正的点之全体. 易知对 $\lambda>0$ 有 $\lambda{E}=E$. 又 $0\notin{E}$, $0\in\overline{E}$, 即 $E$ 不闭, 且 $d\left(0,E\right)=0$.
 
 由于不存在非零的 $f\in\left(l^2\right)^*$ 分离 $E$ 与 $\left\{0\right\}$; 按**定义 2.4.3 (分离与严格分离)**, 这等价于不存在非零的 $f$ 使 $f\le0$ 在 $E$ 上成立. 于是对每个 $f\ne0$ 都存在 $z\in{E}$ 使 $f\left(z\right)>0$; 又 $\lambda{z}\in{E}$ 对一切 $\lambda>0$ 成立, 故
 
@@ -370,7 +368,7 @@ $$
 f\left(0\right)-\sup_{z\in{E}}f\left(z\right)=-\infty,
 $$
 
-右端的上确界不等于 $d\left(0,E\right)=0$. 故 (i) 的结论在 $M$ 不闭时不成立.
+对 $f$ 取上确界时, 右侧并不等于 $d\left(0,E\right)=0$. 故 (i) 的结论在 $M$ 不闭时不成立.
 
 $\blacksquare$
 
@@ -394,13 +392,19 @@ $$
 
 $\blacksquare$
 
-再证这个对应是满的, 线性的, 保范的. 任给 $\beta\in{L}^q\left(\mathbb{R}\right)$, 令
+再证这个对应是同构 (单满线性保范). 任给 $\beta\in{L}^q\left(\mathbb{R}\right)$, 令
 
 $$
 F_\beta\left(f\right)=\int_{\mathbb{R}}f\left(t\right)\beta\left(t\right)\,\mathrm{d}t,\quad{f}\in{L}^p\left(\mathbb{R}\right).
 $$
 
-由赫尔德不等式, $\left|F_\beta\left(f\right)\right|\le\left\|f\right\|_p\left\|\beta\right\|_q$, 故 $F_\beta\in{L}^p\left(\mathbb{R}\right)^*$; 而 $\beta$ 正是 $F_\beta$ 的表示元, 由唯一性, $\beta$ 的原像就是 $F_\beta$, 即对应是满射, 且 $\left\|F_\beta\right\|=\left\|\beta\right\|_q$. 同一唯一性又给出线性与单射: 若 $F_i$ 对应 $\beta_i$ ($i=1,2$), 则 $\beta_1+\beta_2$ 表示 $F_1+F_2$; 又 $F=0$ 对应 $\beta=0$. 故 $F\mapsto\beta$ 是 $L^p\left(\mathbb{R}\right)^*$ 到 $L^q\left(\mathbb{R}\right)$ 的保范线性同构, 即在这个意义下 $L^p\left(\mathbb{R}\right)^*=L^q\left(\mathbb{R}\right)$.
+定义该映射为 $\Phi$:
+
+$$
+\Phi:L^p(\mathbb{R})^*\to{L}^q(\mathbb{R}),\quad\Phi(F)=\beta.
+$$
+
+从**注 2.5.1 (一般可测空间上 $L^p$ 的对偶)** 知其满射且保范; 积分的线性性易知 $\Phi$ 的线性性; 唯一性又给出其单射: 若 $\beta_1=\beta_2$, 即 $\Phi(F_1)=\Phi(F_2)$, 则由唯一性可知 $F_1(f)=F_2(f)$. 故 $F\mapsto\beta$ 是 $L^p\left(\mathbb{R}\right)^*$ 到 $L^q\left(\mathbb{R}\right)$ 的保范线性同构, 即在这个意义下 $L^p\left(\mathbb{R}\right)^*=L^q\left(\mathbb{R}\right)$.
 
 $\blacksquare$
 
@@ -436,25 +440,15 @@ $$
 
 $\blacksquare$
 
-(ii) 设 $\Lambda$ 是 $\left(S,d\right)$ 上的连续线性泛函. 由 $\Lambda$ 在 $0$ 处连续, 存在 $\delta>0$, 使
+(ii) 示性函数. 设 $\Lambda$ 是 $\left(S,d\right)$ 上的连续线性泛函. 由 $\Lambda$ 在 $0$ 处连续, 对于任意的 $\varepsilon>0$, 存在 $\delta>0$, 使
 
 $$
 d\left(g,0\right)<\delta\Rightarrow\left|\Lambda{g}\right|\le1.
 $$
 
-设 $A\subset\left[0,1\right]$ 可测, $m\left(A\right)<\delta$, $c$ 是常数. 因 $d\left(c\chi_A,0\right)<\delta$, 则 $\left|\Lambda\left(c\chi_A\right)\right|\le1$. 但线性有 $\Lambda\left(c\chi_A\right)=c\Lambda\left(\chi_A\right)$, 对任意的 $c$ 都有上界 $1$ 只能 $\Lambda\left(\chi_A\right)=0$.
+这里取 $\varepsilon=1$. 设 $A\subset\left[0,1\right]$ 可测, $m\left(A\right)<\delta$, $c$ 是常数. 取 $g=c\chi_A$, 因 $d\left(c\chi_A,0\right)<\delta$, 则 $\left|\Lambda\left(c\chi_A\right)\right|\le1$. 但线性有 $\Lambda\left(c\chi_A\right)=c\Lambda\left(\chi_A\right)$, 对任意的 $c$ 都有上界 $1$ 只能 $\Lambda\left(\chi_A\right)=0$.
 
-$\blacksquare$
-
-再设 $s=\sum_{j=1}^{L}c_j\chi_{A_j}$ 是阶梯函数, 故 $\Lambda\left(s\right)=0$.
-
-$\blacksquare$
-
-再设 $g\in{S}$ 有界, $\left|g\right|\le{M}$. 任给 $\eta>0$, 把 $g$ 的值域分成有限多个长度不超过 $\eta$ 的区间, 再把每个区间所对应的原像集分成有限多块, 使每块的测度小于 $\delta$; 这样就得到阶梯函数 $s$ 使 $\left|g-s\right|\le\eta$ 且每块的测度小于 $\delta$, 按上面阶梯函数的情形 $\Lambda\left(s\right)=0$, 故 $\Lambda{g}=0$.
-
-$\blacksquare$
-
-最后设 $g\in{S}$ 任意, $g_n=g\chi_{\left\{\left|g\right|\le{n}\right\}}$. 由 (i) 中的论证, $d\left(g,g_n\right)\to0$, 故 $\Lambda\left(g_n\right)\to\Lambda\left(g\right)$; 而 $g_n$ 有界, 故 $\Lambda\left(g_n\right)=0$. 于是 $\Lambda\left(g\right)=0$, 即 $\left(S,d\right)$ 上不存在非零的连续线性泛函.
+示性函数的线性组合即为简单 (阶梯) 函数, 将阶梯函数加和即为 $S$ 中有界函数, 由 (i) 知有界函数能逼近 $S$ 中任意函数, 因此对于任意的 $g(S)$, $\Lambda(g)=0$, 即 $\left(S,d\right)$ 上不存在非零的连续线性泛函.
 
 $\blacksquare$
 
@@ -468,39 +462,21 @@ $$
 
 ### 解答 2.5-4
 
-把 $\mathbb{R}$ 单点紧化为 $\overline{\mathbb{R}}=\left[-\infty,+\infty\right]$, 其上的度量取
+把 $\mathbb{R}$ 两端紧化为 $\overline{\mathbb{R}}=\left[-\infty,+\infty\right]$, 则 $\overline{\mathbb{R}}$ 是紧度量空间. 每个 $f\in{C}_0\left(\mathbb{R}\right)$ 按 $f\left(\pm\infty\right)=0$ 延拓后属于 $C\left(\overline{\mathbb{R}}\right)$, 且
 
 $$
-\tilde{d}\left(x,y\right)=\left|\arctan{x}-\arctan{y}\right|,
-$$
-
-其中约定 $\arctan\left(\pm\infty\right)=\pm\frac{\pi}{2}$; 则 $\overline{\mathbb{R}}$ 是紧度量空间. 每个 $f\in{C}_0\left(\mathbb{R}\right)$ 按 $f\left(\pm\infty\right)=0$ 延拓后属于 $C\left(\overline{\mathbb{R}}\right)$, 且
-
-$$
-C_0\left(\mathbb{R}\right)=\left\{g\in{C}\left(\overline{\mathbb{R}}\right):g\left(\pm\infty\right)=0\right\}
+C_0\left(\overline{\mathbb{R}}\right)=\left\{g\in{C}\left(\overline{\mathbb{R}}\right):g\left(\pm\infty\right)=0\right\}
 $$
 
 是 $C\left(\overline{\mathbb{R}}\right)$ 的闭线性子空间, 两者范数相同.
 
-对实赋范线性空间 $C\left(\overline{\mathbb{R}}\right)$ 上的实线性泛函 $\operatorname{Re}F$, 有 $\left\|\operatorname{Re}F\right\|=\left\|F\right\|$: 一方面 $\left\|\operatorname{Re}F\right\|\le\left\|F\right\|$; 另一方面
-
-$$
-\left\|F\right\|=\sup_{\left\|g\right\|=1}\left|F\left(g\right)\right|=\sup_{\left\|g\right\|=1}\sup_{\left|\lambda\right|=1}\operatorname{Re}\left(\lambda{F}\left(g\right)\right)\le\left\|\operatorname{Re}F\right\|.
-$$
-
-由**定理 2.3.1 (哈恩-巴拿赫延拓定理)**, 存在 $\widetilde{g}\in{C}\left(\overline{\mathbb{R}}\right)^*$, 使 $\widetilde{g}$ 延拓 $\operatorname{Re}F$ 且 $\left\|\widetilde{g}\right\|=\left\|F\right\|$. 令
+对实赋范线性空间 $C\left(\overline{\mathbb{R}}\right)$ 上的实线性泛函 $\operatorname{Re}F$, 有 $\left\|\operatorname{Re}F\right\|=\left\|F\right\|$. 由**定理 2.3.1 (哈恩-巴拿赫延拓定理)**, 存在 $\widetilde{g}\in{C}\left(\overline{\mathbb{R}}\right)^*$, 使 $\widetilde{g}$ 延拓 $\operatorname{Re}F$ 且 $\left\|\widetilde{g}\right\|=\left\|F\right\|$. 令
 
 $$
 \widetilde{F}\left(g\right)=\widetilde{g}\left(g\right)-\mathrm{i}\widetilde{g}\left(\mathrm{i}g\right),\quad{g}\in{C}\left(\overline{\mathbb{R}}\right),
 $$
 
-则 $\widetilde{F}$ 是复线性的, 在 $C_0\left(\mathbb{R}\right)$ 上与 $F$ 一致, 且
-
-$$
-\left|\widetilde{F}\left(g\right)\right|=\sup_{\left|\lambda\right|=1}\operatorname{Re}\left(\lambda\widetilde{F}\left(g\right)\right)=\sup_{\left|\lambda\right|=1}\widetilde{g}\left(\lambda{g}\right)\le\left\|\widetilde{g}\right\|\left\|g\right\|,
-$$
-
-故 $\left\|\widetilde{F}\right\|\le\left\|F\right\|$; 结合 $\widetilde{F}$ 延拓 $F$ 得 $\left\|\widetilde{F}\right\|=\left\|F\right\|$.
+则 $\widetilde{F}$ 是复线性的, 在 $C_0\left(\mathbb{R}\right)$ 上与 $F$ 一致, 且 $\left\|\widetilde{F}\right\|=\left\|F\right\|$.
 
 由**定理 2.5.2 (里斯表示定理)**, 存在 $\overline{\mathbb{R}}$ 上唯一的全有限广义测度 $\mu$, 使
 
@@ -542,9 +518,13 @@ $X$ 是有限维赋范线性空间, 证明: $X$ 是自反空间.
 
 ### 解答 2.5-8
 
-设 $\dim{X}=n$, $\left\{e_1,\cdots,e_n\right\}$ 是 $X$ 的一组基. 对每个 $i$ 令 $f_i\left(e_j\right)=\delta_{ij}$ 并按线性延拓, 则由 $X$ 有限维知 $f_i$ 有界, 即 $f_i\in{X}^*$. 若 $\sum_{i=1}^{n}c_if_i=0$, 用 $e_j$ 作用于两端得 $c_j=0$, 故 $f_1,\cdots,f_n$ 线性无关; 反之任一 $f\in{X}^*$ 由它在基上的值 $f\left(e_1\right),\cdots,f\left(e_n\right)$ 决定, 即 $f=\sum_{i=1}^{n}f\left(e_i\right)f_i$, 故 $\left\{f_1,\cdots,f_n\right\}$ 是 $X^*$ 的基. 于是 $\dim{X}^*=n$, 同法 $\dim{X}^{**}=n$.
+由**定理 2.5.3 (典则映射的保范性)**, 典则映射 $J:X\to{X}^{**}$ 是线性的且 $\left\|Jx\right\|=\left\|x\right\|$. 则核空间
 
-由**定理 2.5.3 (典则映射的保范性)**, 典则映射 $J:X\to{X}^{**}$ 是线性的且 $\left\|Jx\right\|=\left\|x\right\|$, 故 $J$ 是单射. $X$ 与 $X^{**}$ 都是 $n$ 维线性空间, 而从 $n$ 维空间到 $n$ 维空间的单射线性映射必为满射, 故 $J$ 是同构. 按**定义 2.5.1 (自反空间)**, $X$ 是自反的.
+$$
+\ker{J}=\{\|Jx\|=0\}=\{\|x\|=0\}=\{0\},
+$$
+
+故 $J$ 是单射. $X$ 与 $X^{**}$ 都是 $n$ 维线性空间, 而从 $n$ 维空间到 $n$ 维空间的单射线性映射必为满射, 故 $J$ 是同构. 按**定义 2.5.1 (自反空间)**, $X$ 是自反的.
 
 $\blacksquare$
 
