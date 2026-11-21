@@ -6,7 +6,17 @@
 
 > **定理 1.3.2 (标准正交基的等价条件)**
 > 
-> 设 $\mathfrak{F}=\left\{e_\lambda:\lambda\in\Lambda\right\}$ 是希尔伯特空间 $H$ 中的标准正交系, 下列命题等价: (i) 对任意 $x\in{H}$, $x=\sum_{\lambda\in\Lambda}\left\langle{x},e_\lambda\right\rangle{e}_\lambda$; (ii) $\overline{\operatorname{span}\left\{e_\lambda:\lambda\in\Lambda\right\}}=H$; (iii) $\mathfrak{F}$ 是完全的, 即若 $x\in{H}$ 满足 $x\perp{e}_\lambda$ ($\forall\lambda\in\Lambda$), 则 $x=0$; (iv) $\mathfrak{F}$ 是完备的, 即对任意 $x\in{H}$, 帕塞瓦尔等式 $\left\|x\right\|^2=\sum_{\lambda\in\Lambda}\left|\left\langle{x},e_\lambda\right\rangle\right|^2$ 成立. 满足上述条件之一的标准正交系称为 $H$ 中的标准正交基.
+> 设 $\mathfrak{F}=\left\{e_\lambda:\lambda\in\Lambda\right\}$ 是希尔伯特空间 $H$ 中的标准正交系, 下列命题等价:
+>
+> (i) 对任意 $x\in{H}$, $x=\sum_{\lambda\in\Lambda}\left\langle{x},e_\lambda\right\rangle{e}_\lambda$;
+>
+> (ii) $\overline{\operatorname{span}\left\{e_\lambda:\lambda\in\Lambda\right\}}=H$;
+>
+> (iii) $\mathfrak{F}$ 是完全的, 即若 $x\in{H}$ 满足 $x\perp{e}_\lambda$ ($\forall\lambda\in\Lambda$), 则 $x=0$;
+>
+> (iv) $\mathfrak{F}$ 是完备的, 即对任意 $x\in{H}$, 帕塞瓦尔等式 $\left\|x\right\|^2=\sum_{\lambda\in\Lambda}\left|\left\langle{x},e_\lambda\right\rangle\right|^2$ 成立.
+> 
+> 满足上述条件之一的标准正交系称为 $H$ 中的标准正交基.
 
 > **推论 1.3.3 (正交补与稠密性)**
 > 
@@ -18,7 +28,9 @@
 
 > **注 1.4.1 ($L^{p}$ 中的稠密子集)**
 > 
-> (i) $L^p\left(\mathbb{R}^n\right)$ ($1\le{p}<\infty$) 中的简单函数全体, 阶梯函数全体以及 $C_c^\infty\left(\mathbb{R}^n\right)$ 均是稠密子集; (ii) 在 $L^\infty\left[a,b\right]$ 中只有简单函数全体稠密.
+> (i) $L^p\left(\mathbb{R}^n\right)$ ($1\le{p}<\infty$) 中的简单函数全体, 阶梯函数全体以及 $C_c^\infty\left(\mathbb{R}^n\right)$ 均是稠密子集;
+> 
+> (ii) 在 $L^\infty\left[a,b\right]$ 中只有简单函数全体稠密.
 
 > **定义 1.4.5 (稠密性)**
 > 
@@ -26,7 +38,13 @@
 
 > **定义 1.4.7 (完备性)**
 > 
-> (i) 若 $\left\{x_n\right\}$ 满足: 对任意 $\varepsilon>0$, 存在 $N$, 使 $n,m\ge{N}$ 时 $d\left(x_n,x_m\right)<\varepsilon$, 则称 $\left\{x_n\right\}$ 是基本点列 (柯西点列); (ii) 若每个基本点列都收敛, 则称 $X$ 完备; (iii) 完备赋范线性空间称为巴拿赫空间; (iv) 完备内积空间称为希尔伯特空间.
+> (i) 若 $\left\{x_n\right\}$ 满足: 对任意 $\varepsilon>0$, 存在 $N$, 使 $n,m\ge{N}$ 时 $d\left(x_n,x_m\right)<\varepsilon$, 则称 $\left\{x_n\right\}$ 是基本点列 (柯西点列);
+> 
+> (ii) 若每个基本点列都收敛, 则称 $X$ 完备;
+> 
+> (iii) 完备赋范线性空间称为巴拿赫空间;
+> 
+> (iv) 完备内积空间称为希尔伯特空间.
 
 > **例 1.4.13 ($L^{p}\left(E\right)$ 是巴拿赫空间)**
 > 
@@ -34,7 +52,15 @@
 
 > **定理 2.1.1 (线性算子有界与连续的等价条件)**
 > 
-> 设 $\left(X,\left\|\cdot\right\|\right),\left(Y,\left\|\cdot\right\|\right)$ 是赋范线性空间, $T:X\to{Y}$ 是线性映射, 则下列命题等价: (i) $T$ 是连续映射; (ii) $T$ 在点 $0$ 连续; (iii) 存在 $M>0$, 使得 $\left\|Tx\right\|\le{M}\left\|x\right\|$. 如果算子 $T$ 满足定理中任一条件, 就称 $T$ 是有界算子; 否则就称 $T$ 为无界算子.
+> 设 $\left(X,\left\|\cdot\right\|\right),\left(Y,\left\|\cdot\right\|\right)$ 是赋范线性空间, $T:X\to{Y}$ 是线性映射, 则下列命题等价:
+> 
+> (i) $T$ 是连续映射;
+> 
+> (ii) $T$ 在点 $0$ 连续;
+> 
+> (iii) 存在 $M>0$, 使得 $\left\|Tx\right\|\le{M}\left\|x\right\|$.
+> 
+> 如果算子 $T$ 满足定理中任一条件, 就称 $T$ 是有界算子; 否则就称 $T$ 为无界算子.
 
 > **例 2.1.1 (矩阵表示的线性算子)**
 > 
@@ -62,7 +88,13 @@
 
 > **定义 2.2.2 (保范算子与同构)**
 > 
-> 设 $X,Y$ 是两个赋范线性空间, $U$ 是 $X$ 到 $Y$ 的映射. (i) 如果对一切 $x\in{X}$, 有 $\left\|Ux\right\|=\left\|x\right\|$, 那么称 $U$ 是 $X$ 到 $Y$ 的保范算子; (ii) 如果 $U$ 不但是保范的, 又是线性的, 而且还实现 $X$ 到 $Y$ 上的一一对应, 那么我们就称 $U$ 是 $X$ 到 $Y$ 上的 (保范) 同构映射; (iii) 若空间 $X,Y$ 之间存在一个从 $X$ 到 $Y$ 上的 (保范) 同构映射, 就称 $X$ 和 $Y$ 同构, 记为 $X\cong{Y}$.
+> 设 $X,Y$ 是两个赋范线性空间, $U$ 是 $X$ 到 $Y$ 的映射.
+>
+> (i) 如果对一切 $x\in{X}$, 有 $\left\|Ux\right\|=\left\|x\right\|$, 那么称 $U$ 是 $X$ 到 $Y$ 的保范算子;
+>
+> (ii) 如果 $U$ 不但是保范的, 又是线性的, 而且还实现 $X$ 到 $Y$ 上的一一对应, 那么我们就称 $U$ 是 $X$ 到 $Y$ 上的 (保范) 同构映射;
+>
+> (iii) 若空间 $X,Y$ 之间存在一个从 $X$ 到 $Y$ 上的 (保范) 同构映射, 就称 $X$ 和 $Y$ 同构, 记为 $X\cong{Y}$.
 
 > **定理 2.2.2 (里斯表示定理)**
 > 
@@ -74,11 +106,32 @@
 
 > **定义 2.2.3 (共轭双线性泛函)**
 > 
-> 设 $H$ 是内积空间, $\varphi\left(x,y\right)$ 是 $H$ 上的二元泛函. (i) 如果对于任何 $x,y,z\in{H}$ 及 $\alpha,\beta\in\mathbb{C}$, 都成立 $\varphi\left(\alpha{x}+\beta{y},z\right)=\alpha\varphi\left(x,z\right)+\beta\varphi\left(y,z\right),\quad\varphi\left(z,\alpha{x}+\beta{y}\right)=\overline\alpha\varphi\left(z,x\right)+\overline\beta\varphi\left(z,y\right)$, 那么称 $\varphi\left(\cdot,\cdot\right)$ 是 $H$ 上的共轭双线性泛函. (ii) 如果对于任何 $x,y\in{H}$ 成立 $\varphi\left(x,y\right)=\overline{\varphi\left(y,x\right)}$, 那么称 $\varphi\left(x,y\right)$ 是 $H$ 上的埃尔米特泛函. (iii) 对共轭双线性泛函 $\varphi$, 如果有正常数 $c$ 使得 $\left|\varphi\left(x,y\right)\right|\le{c}\left\|x\right\|\left\|y\right\|,\quad\forall{x},y\in{H}$, 那么称 $\varphi$ 是 $H$ 上有界的共轭双线性泛函, $\left\|\varphi\right\|=\sup_{\left\|x\right\|=\left\|y\right\|=1}\left|\varphi\left(x,y\right)\right|$ 称为泛函 $\varphi$ 的范数. ## 2.1-1 (零空间闭并不蕴含算子有界) 设 $T$ 是赋范线性空间 $X$ 到赋范线性空间 $Y$ 的线性算子. 如果零空间 $\ker\left(T\right)=\left\{x:Tx=0\right\}$ 是闭集, 问 $T$ 是否有界? 不一定. 反例取自**例 2.1.9 (微分算子的无界性)**: 取 $X=C^{\left(1\right)}\left[a,b\right]$ 按 $C\left[a,b\right]$ 的范数 $\left\|x\right\|=\max_{t\in\left[a,b\right]}\left|x\left(t\right)\right|$, $Y=C\left[a,b\right]$, $T=D$, 其中 $$\left(Dx\right)\left(t\right)=\frac{\mathrm{d}}{\mathrm{d}t}x\left(t\right),\quad{x}\in{X}.$$ 先证 $\ker{D}$ 是 $X$ 的闭集. 由 $Dx=0$ 当且仅当 $x'$ 在 $\left[a,b\right]$ 上恒为 $0$, 而闭区间上导数恒为 $0$ 的函数是常值函数, 故 $$\ker{D}=\left\{x\in{X}:\,\exists\,c\in\mathbb{R},x\left(t\right)=c,\forall\,t\in\left[a,b\right]\right\}.$$ 设 $\left\{x_n\right\}\subset\ker{D}$ 且 $x_n\to{x}$ 于 $X$, 则 $x_n\equiv{c}=x$, $\forall\,n\in\mathbb{N}$. 故 $x\in\ker{D}$, 即 $\ker{D}$ 闭. $\blacksquare$ 再证 $D$ 无界. 取 $x_n\left(t\right)=\mathrm{e}^{-n\left(t-a\right)}$, 则 $\left\|x_n\right\|=\max_t\mathrm{e}^{-n\left(t-a\right)}=1$, 而 $\left(Dx_n\right)\left(t\right)=-n\mathrm{e}^{-n\left(t-a\right)}$, 故 $\left\|Dx_n\right\|=n$ 无界. $\blacksquare$
+> 设 $H$ 是内积空间, $\varphi\left(x,y\right)$ 是 $H$ 上的二元泛函.
+>
+> (i) 如果对于任何 $x,y,z\in{H}$ 及 $\alpha,\beta\in\mathbb{C}$, 都成立 $\varphi\left(\alpha{x}+\beta{y},z\right)=\alpha\varphi\left(x,z\right)+\beta\varphi\left(y,z\right)$, $\varphi\left(z,\alpha{x}+\beta{y}\right)=\overline\alpha\varphi\left(z,x\right)+\overline\beta\varphi\left(z,y\right)$, 那么称 $\varphi\left(\cdot,\cdot\right)$ 是 $H$ 上的共轭双线性泛函.
+>
+> (ii) 如果对于任何 $x,y\in{H}$ 成立 $\varphi\left(x,y\right)=\overline{\varphi\left(y,x\right)}$, 那么称 $\varphi\left(x,y\right)$ 是 $H$ 上的埃尔米特泛函.
+>
+> (iii) 对共轭双线性泛函 $\varphi$, 如果有正常数 $c$ 使得 $\left|\varphi\left(x,y\right)\right|\le{c}\left\|x\right\|\left\|y\right\|$, $\forall{x},y\in{H}$, 那么称 $\varphi$ 是 $H$ 上有界的共轭双线性泛函, $\left\|\varphi\right\|=\sup_{\left\|x\right\|=\left\|y\right\|=1}\left|\varphi\left(x,y\right)\right|$ 称为泛函 $\varphi$ 的范数.
 
 > **定理 2.2.6 (埃尔米特泛函的有界性)**
 > 
 > 设 $\varphi\left(\cdot,\cdot\right)$ 是复希尔伯特空间 $H$ 上的共轭双线性埃尔米特泛函, 且存在常数 $c$ 使得 $\left|\varphi\left(x,x\right)\right|\le{c}\left\|x\right\|^2,\quad\forall{x}\in{H}$, 那么 $\varphi$ 是有界的, 且 $\left\|\varphi\right\|\le{c}$.
+
+## 2.1-1 (零空间闭并不蕴含算子有界)
+
+设 $T$ 是赋范线性空间 $X$ 到赋范线性空间 $Y$ 的线性算子. 如果零空间 $\ker\left(T\right)=\left\{x:Tx=0\right\}$ 是闭集, 问 $T$ 是否有界?
+
+### 解答 2.1-1
+
+不一定. 反例取自**例 2.1.9 (微分算子的无界性)**: 取 $X=C^{\left(1\right)}\left[a,b\right]$ 按 $C\left[a,b\right]$ 的范数 $\left\|x\right\|=\max_{t\in\left[a,b\right]}\left|x\left(t\right)\right|$, $Y=C\left[a,b\right]$, $T=D$, 其中 $$\left(Dx\right)\left(t\right)=\frac{\mathrm{d}}{\mathrm{d}t}x\left(t\right),\quad{x}\in{X}.$$ 先证 $\ker{D}$ 是 $X$ 的闭集. 由 $Dx=0$ 当且仅当 $x'$ 在 $\left[a,b\right]$ 上恒为 $0$, 而闭区间上导数恒为 $0$ 的函数是常值函数, 故 $$\ker{D}=\left\{x\in{X}:\,\exists\,c\in\mathbb{R},x\left(t\right)=c,\forall\,t\in\left[a,b\right]\right\}.$$ 设 $\left\{x_n\right\}\subset\ker{D}$ 且 $x_n\to{x}$ 于 $X$, 则 $x_n\equiv{c}=x$, $\forall\,n\in\mathbb{N}$. 故 $x\in\ker{D}$, 即 $\ker{D}$ 闭.
+
+$\blacksquare$
+
+再证 $D$ 无界. 取 $x_n\left(t\right)=\mathrm{e}^{-n\left(t-a\right)}$, 则 $\left\|x_n\right\|=\max_t\mathrm{e}^{-n\left(t-a\right)}=1$, 而 $\left(Dx_n\right)\left(t\right)=-n\mathrm{e}^{-n\left(t-a\right)}$, 故 $\left\|Dx_n\right\|=n$ 无界.
+
+$\blacksquare$
+
 ## 2.1-2 (稠密子空间上算子范数的双变量表示)
 
 设 $E$ 是希尔伯特空间 $H$ 的一个稠密的线性子空间, $T\in\mathfrak{B}\left(H\right)$. 证明:
@@ -104,10 +157,10 @@ $\blacksquare$
 再证 $S\ge\left\|T\right\|$. 任给 $\varepsilon>0$. 由**例 2.2.2 (算子导出的共轭双线性泛函)**, $\left\|T\right\|=\sup_{\left\|x\right\|=\left\|y\right\|=1}\left|\left\langle{T}x,y\right\rangle\right|$, 故存在 $x_0,y_0\in{H}$ 满足 $\left\|x_0\right\|=\left\|y_0\right\|=1$ 且
 
 $$
-\left|\left\langle{T}x_0,y_0\right\rangle\right|>\left\|T\right\|-\varepsilon.\tag{1}
+\left|\left\langle{T}x_0,y_0\right\rangle\right|>\left\|T\right\|-\varepsilon.\tag{2.1-2-1}
 $$
 
-由 $E$ 在 $H$ 中稠密, 依据**定义 1.4.5 (稠密性)**, 存在 $\left\{x_n\right\},\left\{y_n\right\}\subset{E}$ 使 $\left\|x_n-x_0\right\|\to0$, $\left\|y_n-y_0\right\|\to0$. 令 $\widetilde{x}_n=x_n/\left\|x_n\right\|$, $\widetilde{y}_n=y_n/\left\|y_n\right\|$; 则 $\widetilde{x}_n,\widetilde{y}_n\in{E}$, $\left\|\widetilde{x}_n\right\|=\left\|\widetilde{y}_n\right\|=1$, 得 $\left\langle{T}\widetilde{x}_n,\widetilde{y}_n\right\rangle\to\left\langle{T}x_0,y_0\right\rangle$. 结合 (1), 当 $n$ 充分大时 $\left|\left\langle{T}\widetilde{x}_n,\widetilde{y}_n\right\rangle\right|>\left\|T\right\|-\varepsilon$. 因 $\widetilde{x}_n,\widetilde{y}_n$ 是 $E$ 中的单位向量, 故左侧取上确界有 $S\ge\left\|T\right\|-\varepsilon$; 令 $\varepsilon\to0$ 得 $S\ge\left\|T\right\|$.
+由 $E$ 在 $H$ 中稠密, 依据**定义 1.4.5 (稠密性)**, 存在 $\left\{x_n\right\},\left\{y_n\right\}\subset{E}$ 使 $\left\|x_n-x_0\right\|\to0$, $\left\|y_n-y_0\right\|\to0$. 令 $\widetilde{x}_n=x_n/\left\|x_n\right\|$, $\widetilde{y}_n=y_n/\left\|y_n\right\|$; 则 $\widetilde{x}_n,\widetilde{y}_n\in{E}$, $\left\|\widetilde{x}_n\right\|=\left\|\widetilde{y}_n\right\|=1$, 得 $\left\langle{T}\widetilde{x}_n,\widetilde{y}_n\right\rangle\to\left\langle{T}x_0,y_0\right\rangle$. 结合 (2.1-2-1), 当 $n$ 充分大时 $\left|\left\langle{T}\widetilde{x}_n,\widetilde{y}_n\right\rangle\right|>\left\|T\right\|-\varepsilon$. 因 $\widetilde{x}_n,\widetilde{y}_n$ 是 $E$ 中的单位向量, 故左侧取上确界有 $S\ge\left\|T\right\|-\varepsilon$; 令 $\varepsilon\to0$ 得 $S\ge\left\|T\right\|$.
 
 $\blacksquare$
 
@@ -178,7 +231,7 @@ $$
 于是
 
 $$
-\left\|Tx\right\|\ge\left|\left(Tx\right)_{j_0}\right|=\sum_{i=1}^{n}\left|t_{j_0i}\right|^2=\left\|x\right\|\left(\sum_{i=1}^{n}\left|t_{j_0i}\right|^2\right)^{\frac12}.
+\left\|T\right\|\ge\frac{\left\|Tx\right\|}{\left\|x\right\|}\ge\frac{\left|\left(Tx\right)_{j_0}\right|}{\left\|x\right\|}=\frac{\sum_{i=1}^{n}\left|t_{j_0i}\right|^2}{\left\|x\right\|}=\left(\sum_{i=1}^{n}\left|t_{j_0i}\right|^2\right)^{\frac12}.
 $$
 
 $\blacksquare$
@@ -207,17 +260,13 @@ $$
 C=\sum_{\mu=1}^{\infty}\left(\sum_{\nu=1}^{\infty}\left|t_{\mu\nu}\right|^q\right)^{\frac{p}q}<\infty.
 $$
 
-先证 $T$ 良定义且线性. 由 $C$ 有限可知, 对每个固定的 $\mu$, $\left(\left|t_{\mu\nu}\right|\right)_\nu$ 与 $\left(\left|x_\nu\right|\right)_\nu$ 正是 $l^q$ 与 $l^p$ 中的元素, 由赫尔德不等式,
+$T$ 的线性性由矩阵乘法的线性性直接得到. 再证 $T$ 有界. 记 $c_\mu=\left(\sum_{\nu}\left|t_{\mu\nu}\right|^q\right)^{\frac1q}$, 由上面的赫尔德不等式
 
 $$
-\left|y_\mu\right|\le\sum_{\nu=1}^{\infty}\left|t_{\mu\nu}\right|\left|x_\nu\right|\le\left(\sum_{\nu=1}^{\infty}\left|t_{\mu\nu}\right|^q\right)^{\frac1q}\left(\sum_{\nu=1}^{\infty}\left|x_\nu\right|^p\right)^{\frac1p}<\infty,
+\left|y_\mu\right|=\left|\sum_{nu}t_{\mu\nu}x_\nu\right|\le\left(\sum_\nu\left|t_{\nu\mu}\right|^q\right)^{1/q}\left(\sum_\nu\left|x_\nu\right|^p\right)^{1/p}=c_\mu\left\|x\right\|_p.
 $$
 
-故每个 $y_\mu$ 都是有限数, $Tx$ 有意义. 线性性由数项级数逐项相加与数乘的运算律直接得到.
-
-$\blacksquare$
-
-再证 $T$ 有界. 记 $c_\mu=\left(\sum_{\nu}\left|t_{\mu\nu}\right|^q\right)^{\frac1q}$, 由上面的赫尔德不等式 $\left|y_\mu\right|\le{c}_\mu\left\|x\right\|_p$. 于是
+于是
 
 $$
 \left\|Tx\right\|_p^p=\sum_{\mu=1}^{\infty}\left|y_\mu\right|^p\le\sum_{\mu=1}^{\infty}c_\mu^p\left\|x\right\|_p^p=C\left\|x\right\|_p^p,
@@ -227,7 +276,7 @@ $$
 
 $\blacksquare$
 
-最后回答第二问, 即证每个 $l^p$ 上的有界线性算子都有矩阵形式. 设 $T\in\mathfrak{B}\left(l^p\right)$, 记 $e_\nu$ 为第 $\nu$ 个标准单位向量, $t_{\mu\nu}=\left(Te_\nu\right)_\mu$. 因 $\sum_{\nu>N}\left|x_\nu\right|^p\to0$, 有 $x^{\left(N\right)}=\sum_{\nu\le{N}}x_\nu{e}_\nu\to{x}$ ($N\to\infty$); 由**定理 2.1.1 (线性算子有界与连续的等价条件)** $T$ 连续, 故
+每个 $l^p$ 上的有界线性算子都有矩阵形式. 设 $T\in\mathfrak{B}\left(l^p\right)$, 记 $e_\nu$ 为第 $\nu$ 个标准单位向量, $t_{\mu\nu}=\left(Te_\nu\right)_\mu$. 因 $\sum_{\nu>N}\left|x_\nu\right|^p\to0$, 有 $x^{\left(N\right)}=\sum_{\nu\le{N}}x_\nu{e}_\nu\to{x}$ ($N\to\infty$); 由**定理 2.1.1 (线性算子有界与连续的等价条件)** $T$ 连续, 故
 
 $$
 Tx=\lim_{N\to\infty}Tx^{\left(N\right)}=\lim_{N\to\infty}\sum_{\nu=1}^{N}x_\nu{T}e_\nu.
@@ -261,9 +310,7 @@ $$
 
 ### 解答 2.1-5
 
-记 $M=\max_{a\le{s}\le{b}}\int_a^b\left|K\left(s,t\right)\right|\mathrm{d}t$; 因 $K$ 在紧集 $\left[a,b\right]\times\left[a,b\right]$ 上连续, 故对 $t$ 积分所得的 $\int_a^b\left|K\left(s,t\right)\right|\mathrm{d}t$ 关于 $s$ 连续, 从而该最大值存在.
-
-上界. 对任意 $\varphi\in{C}\left[a,b\right]$ 与 $s\in\left[a,b\right]$,
+记 $M=\max_{a\le{s}\le{b}}\int_a^b\left|K\left(s,t\right)\right|\mathrm{d}t$. 上界. 对任意 $\varphi\in{C}\left[a,b\right]$ 与 $s\in\left[a,b\right]$,
 
 $$
 \left|\left(T\varphi\right)\left(s\right)\right|\le\int_a^b\left|K\left(s,t\right)\right|\left|\varphi\left(t\right)\right|\mathrm{d}t\le\left\|\varphi\right\|\int_a^b\left|K\left(s,t\right)\right|\mathrm{d}t\le{M}\left\|\varphi\right\|,
@@ -284,7 +331,7 @@ $$
 由于被积函数被可积函数 $\left|K\left(s_0,t\right)\right|$ 控制, 由控制收敛定理,
 
 $$
-\left(T\varphi_n\right)\left(s_0\right)=\int_a^bK\left(s_0,t\right)\varphi_n\left(t\right)\mathrm{d}t\to\int_a^b\left|K\left(s_0,t\right)\right|\mathrm{d}t=M.
+\left(T\varphi_n\right)\left(s_0\right)=\int_a^bK\left(s_0,t\right)\varphi_n\left(t\right)\mathrm{d}t\to\int_a^b\left|K\left(s_0,t\right)\right|\mathrm{d}t=M,\quad{n}\to\infty.
 $$
 
 由**定义 2.1.2 (算子范数)**
@@ -335,41 +382,29 @@ $\blacksquare$
 
 ### 解答 2.1-7
 
-若 $M=0$, 则 $\left\|T_n\right\|=0$, 由**定义 2.1.2 (算子范数)** 得 $T_n=0$, 取 $T=0$ 即可; 以下设 $M>0$.
-
-先证 $\left\{T_nx\right\}$ 对每个 $x\in{X}$ 都是 $Y$ 中的基本点列. 对 $x\in{X}$ 与 $z\in{L}$,
-
-$$
-\left\|T_nx-T_mx\right\|\le\left\|T_n\left(x-z\right)\right\|+\left\|T_nz-T_mz\right\|+\left\|T_m\left(z-x\right)\right\|\le2M\left\|x-z\right\|+\left\|T_nz-T_mz\right\|.\tag{1}
-$$
-
-任给 $\varepsilon>0$. 由 $L$ 在 $X$ 中稠密 (**定义 1.4.5 (稠密性)**), 故 $2M\left\|x-z\right\|<\frac{\varepsilon}{2}$. 对 $z\in{L}$, $\left\{T_nz\right\}$ 收敛故 $\left\|T_nz-T_mz\right\|<\frac{\varepsilon}{2}$. 代入 (1) 得 $\left\|T_nx-T_mx\right\|<\varepsilon$, 即 $\left\{T_nx\right\}$ 是基本点列.
-
-由 $Y$ 是巴拿赫空间 (**定义 1.4.7 (完备性)**), $\left\{T_nx\right\}$ 收敛; 定义
+由 $L$ 在 $X$ 中稠密 (**定义 1.4.5 (稠密性)**), $\left\{T_nx\right\}$ 对每个 $x\in{X}$ 都是 $Y$ 中的基本点列. 由 $Y$ 是巴拿赫空间 (**定义 1.4.7 (完备性)**), $\left\{T_nx\right\}$ 收敛; 定义
 
 $$
 Tx=\lim_{n\to\infty}T_nx,\quad{x}\in{X}.
 $$
 
-$\blacksquare$
-
-再证 $T$ 线性且 $T\in\mathfrak{B}\left(X,Y\right)$. 线性由极限的线性性成立; 在 $\left\|T_nx\right\|\le{M}\left\|x\right\|$ 中令 $n\to\infty$ 得 $\left\|Tx\right\|\le{M}\left\|x\right\|$. 故 $T$ 有界, 且 $\left\|T\right\|\le{M}$.
+$T$ 线性且 $T\in\mathfrak{B}\left(X,Y\right)$. 线性由极限的线性性成立; 在 $\left\|T_nx\right\|\le{M}\left\|x\right\|$ 中令 $n\to\infty$ 得 $\left\|Tx\right\|\le{M}\left\|x\right\|$. 故 $T$ 有界, 且 $\left\|T\right\|\le{M}$.
 
 $\blacksquare$
 
-最后证 $T_nx\to{T}x$ 对一切 $x\in{X}$ 成立. 对 $x\in{X}$ 与 $z\in{L}$,
+$T_nx\to{T}x$ 对一切 $x\in{X}$ 成立. 对 $x\in{X}$ 与 $z\in{L}$,
 
 $$
-\left\|T_nx-Tx\right\|\le\left\|T_n\left(x-z\right)\right\|+\left\|T_nz-Tz\right\|+\left\|T\left(z-x\right)\right\|\le2M\left\|x-z\right\|+\left\|T_nz-Tz\right\|.\tag{2}
+\left\|T_nx-Tx\right\|\le\left\|T_n\left(x-z\right)\right\|+\left\|T_nz-Tz\right\|+\left\|T\left(z-x\right)\right\|\le2M\left\|x-z\right\|+\left\|T_nz-Tz\right\|.\tag{2.1-7-2}
 $$
 
-任给 $\varepsilon>0$. 由 $L$ 在 $X$ 中稠密 (**定义 1.4.5 (稠密性)**), 故 $2M\left\|x-z\right\|<\frac{\varepsilon}{2}$. 对 $z\in{L}$, 由 (1) 知 $\left\|T_nz-Tz\right\|<\frac{\varepsilon}{2}$. 代入 (2) 得 $\left\|T_nx-Tx\right\|<\varepsilon$. 故 $\lim_{n\to\infty}\left\|T_nx-Tx\right\|=0$.
+任给 $\varepsilon>0$. 由 $L$ 在 $X$ 中稠密 (**定义 1.4.5 (稠密性)**), 故 $2M\left\|x-z\right\|<\frac{\varepsilon}{2}$. 对 $z\in{L}$, 由 (1) 知 $\left\|T_nz-Tz\right\|<\frac{\varepsilon}{2}$. 代入 (2.1-7-2) 得 $\left\|T_nx-Tx\right\|<\varepsilon$. 故 $\lim_{n\to\infty}\left\|T_nx-Tx\right\|=0$.
 
 $\blacksquare$
 
 ## 2.1-8 (阶梯函数的傅里叶变换与 $L^{2}$ 上的等距延拓)
 
-令 $A$ 为 $L^2\left(\mathbb{R}\right)$ 中阶梯函数全体, 那么 $A$ 中的函数也是 $L^1\left(\mathbb{R}\right)$ 的, 它们的傅里叶变换可以使用**例 2.1.6 (傅里叶变换)** 中给出的定义.
+令 $A$ 为 $L^2\left(\mathbb{R}\right)$ 中阶梯函数全体. 对 $f\in{L}^1\left(\mathbb{R}\right)$, 定义它的傅里叶变换 $T\left(f\right)$ (或记作 $\widehat{f}$) 为 $T\left(f\right)\left(t\right)=\int_{\mathbb{R}}f\left(x\right)\mathrm{e}^{-2\pi\mathrm{i}tx}\,\mathrm{d}x,\quad{f}\in{L}^1\left(\mathbb{R}\right)$. 则 $\widehat{f}$ 是 $\mathbb{R}$ 上的连续函数, 且当 $\left|t\right|\to\infty$ 时 $\widehat{f}\left(t\right)\to0$; 因此 $T:f\mapsto\widehat{f}$ 是 $L^1\left(\mathbb{R}\right)$ 到 $c_0\left(\mathbb{R}\right)$ 的线性算子.
 
 (i) 证明: 存在有界线性算子 $T:L^2\left(\mathbb{R}\right)\to{L}^2\left(\mathbb{R}\right)$, 使得 $T$ 是等距的: 即 $\left\|Tf\right\|=\left\|f\right\|$, 且对于 $f\in{A}$ 有 $T\left(f\right)=\widehat{f}$.
 
@@ -377,17 +412,7 @@ $\blacksquare$
 
 ### 解答 2.1-8
 
-预备. 阶梯函数有界且支在有限区间上, 故 $A\subset{L}^1\left(\mathbb{R}\right)\cap{L}^2\left(\mathbb{R}\right)$; 由**例 2.1.6 (傅里叶变换)**, 对 $f\in{A}$ 可定义
-
-$$
-\widehat{f}\left(t\right)=\int_{\mathbb{R}}f\left(x\right)\mathrm{e}^{-2\pi\mathrm{i}tx}\,\mathrm{d}x,
-$$
-
-(i) 先证 $A$ 在 $L^2\left(\mathbb{R}\right)$ 中稠密. 由**注 1.4.1 ($L^{p}$ 中的稠密子集)(i)** (取 $n=1$, $p=2$), 阶梯函数全体在 $L^2\left(\mathbb{R}\right)$ 中稠密.
-
-$\blacksquare$
-
-(i) 再证 $f\mapsto\widehat{f}$ 在 $A$ 上线性且保范. 线性由积分对 $f$ 的线性性得到. 因 $A$ 中每个函数是有限个区间指示函数的线性组合, 因此保范性只需对 $f=\chi_{\left[\alpha,\beta\right]}$ 验证. 对 $t\neq0$,
+(i) $f\mapsto\widehat{f}$ 在 $A$ 上线性且保范. 线性由积分对 $f$ 的线性性得到. 因 $A$ 中每个函数是有限个区间指示函数的线性组合, 因此保范性只需对 $f=\chi_{\left[\alpha,\beta\right]}$ 验证. 对 $t\neq0$,
 
 $$
 \widehat{f}\left(t\right)=\int_\alpha^\beta\mathrm{e}^{-2\pi\mathrm{i}tx}\,\mathrm{d}x=\mathrm{e}^{-\pi\mathrm{i}t\left(\alpha+\beta\right)}\frac{\sin\left(\pi{t}\left(\beta-\alpha\right)\right)}{\pi{t}},
@@ -409,22 +434,10 @@ $$
 
 $\blacksquare$
 
-(i) 最后把 $f\mapsto\widehat{f}$ 延拓到 $L^2\left(\mathbb{R}\right)$. 任取 $f\in{L}^2\left(\mathbb{R}\right)$, 由 $A$ 的稠密性取 $\left\{f_n\right\}\subset{A}$ 使 $\left\|f_n-f\right\|_2\to0$. 由前面的保范性,
-
-$$
-\left\|\widehat{f}_n-\widehat{f}_m\right\|_2=\left\|\widehat{f_n-f_m}\right\|_2=\left\|f_n-f_m\right\|_2\le\left\|f_n-f\right\|_2+\left\|f-f_m\right\|_2,
-$$
-
-故 $\left\{\widehat{f}_n\right\}$ 是 $L^2\left(\mathbb{R}\right)$ 中的基本点列; 由**例 1.4.13 ($L^{p}\left(E\right)$ 是巴拿赫空间)**, $L^2\left(\mathbb{R}\right)$ 完备, 故它收敛. 定义
+把 $f\mapsto\widehat{f}$ 延拓到 $L^2\left(\mathbb{R}\right)$. 由**注 1.4.1 ($L^{p}$ 中的稠密子集)(i)** (取 $n=1$, $p=2$), 阶梯函数全体在 $L^2\left(\mathbb{R}\right)$ 中稠密. 任取 $f\in{L}^2\left(\mathbb{R}\right)$, 由**例 1.4.13 ($L^{p}\left(E\right)$ 是巴拿赫空间)**, $L^2\left(\mathbb{R}\right)$ 完备, 故它收敛. 定义
 
 $$
 Tf=\lim_{n\to\infty}\widehat{f}_n\quad\text{于~}L^2\left(\mathbb{R}\right).
-$$
-
-这个极限与 $\left\{f_n\right\}$ 的取法无关: 对于任意的 $n$, 都有
-
-$$
-\left\|\widehat{f}_n-\widehat{f}\right\|_2=\left\|\widehat{f_n-f}\right\|_2=\left\|f_n-f\right\|_2\le\left\|f_n-f\right\|_2+\left\|f-f\right\|_2.
 $$
 
 由极限的线性性可知 $T$ 线性; 又
@@ -437,13 +450,13 @@ $$
 
 $\blacksquare$
 
-(ii) 定义方式. 对 $f\in{L}^2\left(\mathbb{R}\right)$, 定义 $\widehat{f}:=Tf$, 即取 $\left\{f_n\right\}\subset{A}$ 使 $\left\|f_n-f\right\|_2\to0$ 后令 $\widehat{f}$ 为 $\widehat{f}_n$ 在 $L^2\left(\mathbb{R}\right)$ 中的极限.
+(ii) 对 $f\in{L}^2\left(\mathbb{R}\right)$, 定义 $\widehat{f}:=Tf$, 即取 $\left\{f_n\right\}\subset{A}$ 使 $\left\|f_n-f\right\|_2\to0$ 后令 $\widehat{f}$ 为 $\widehat{f}_n$ 在 $L^2\left(\mathbb{R}\right)$ 中的极限.
 
 $\blacksquare$
 
 ## 2.2-1 ($L^{q}$ 诱导的有界线性泛函的范数)
 
-对**例 2.2.1 (线性泛函的核 (iv))**, 证明 $\left\|F_\varphi\right\|=\left\|\varphi\right\|_q$.
+设 $1\le{q}\le\infty$, $\frac1q+\frac1p=1$. 对于 $\varphi\in{L}^q\left[a,b\right]$, 令 $F_\varphi\left(\psi\right)=\int_{\left[a,b\right]}\psi\left(t\right)\overline{\varphi\left(t\right)}\,\mathrm{d}t$, 由赫尔德不等式, $F_\varphi$ 为 $L^p\left[0,1\right]$ 上的有界线性泛函. 证明 $\left\|F_\varphi\right\|=\left\|\varphi\right\|_q$.
 
 ### 解答 2.2-1
 
@@ -462,19 +475,19 @@ $\blacksquare$
 下界: 若 $\left\|\varphi\right\|_q=0$, 则 $\varphi=0$ a.e., $F=0$, 等式平凡; 以下设 $\left\|\varphi\right\|_q>0$. 令
 
 $$
-g\left(t\right)=\left|\varphi\left(t\right)\right|^{q-2}\varphi\left(t\right)\quad\left(\text{在~}\varphi\left(t\right)=0\text{~处取~}0\right).
+\psi\left(t\right)=\left|\varphi\left(t\right)\right|^{q-2}\varphi\left(t\right)\quad\left(\text{在~}\varphi\left(t\right)=0\text{~处取~}0\right).
 $$
 
-则 $\left|g\right|=\left|\varphi\right|^{q-1}$, $g\overline\varphi=\left|\varphi\right|^{q-2}\varphi\overline\varphi=\left|\varphi\right|^{q}$. 由 $\left(q-1\right)p=q$ 得
+则 $\left|\psi\right|=\left|\varphi\right|^{q-1}$, $g\overline\varphi=\left|\varphi\right|^{q-2}\varphi\overline\varphi=\left|\varphi\right|^{q}$. 由 $\left(q-1\right)p=q$ 得
 
 $$
-\left\|g\right\|_p^p=\int_a^b\left|\varphi\right|^{\left(q-1\right)p}\mathrm{d}t=\int_a^b\left|\varphi\right|^q\mathrm{d}t=\left\|\varphi\right\|_q^q,\quad{F}\left(g\right)=\int_a^b\left|\varphi\right|^q\mathrm{d}t=\left\|\varphi\right\|_q^q.
+\left\|\psi\right\|_p^p=\int_a^b\left|\varphi\right|^{\left(q-1\right)p}\mathrm{d}t=\int_a^b\left|\varphi\right|^q\mathrm{d}t=\left\|\varphi\right\|_q^q,\quad{F}\left(\psi\right)=\int_a^b\left|\varphi\right|^q\mathrm{d}t=\left\|\varphi\right\|_q^q.
 $$
 
-由 $\left(q-1\right)p=q$ 得 $\left\|g\right\|_p=\left\|\varphi\right\|_q^{\frac{q}p}=\left\|\varphi\right\|_q^{q-1}$, 依据**定义 2.1.2 (算子范数)**,
+由 $\left(q-1\right)p=q$ 得 $\left\|\psi\right\|_p=\left\|\varphi\right\|_q^{\frac{q}p}=\left\|\varphi\right\|_q^{q-1}$, 依据**定义 2.1.2 (算子范数)**,
 
 $$
-\left\|F\right\|\ge\frac{\left|F\left(g\right)\right|}{\left\|g\right\|_p}=\frac{\left\|\varphi\right\|_q^q}{\left\|\varphi\right\|_q^{q-1}}=\left\|\varphi\right\|_q.
+\left\|F\right\|\ge\frac{\left|F\left(\psi\right)\right|}{\left\|\psi\right\|_p}=\frac{\left\|\varphi\right\|_q^q}{\left\|\varphi\right\|_q^{q-1}}=\left\|\varphi\right\|_q.
 $$
 
 结合上界得 $\left\|F\right\|=\left\|\varphi\right\|_q$.
@@ -488,7 +501,7 @@ $\blacksquare$
 下界: 令
 
 $$
-\psi\left(t\right)=\begin{cases}\overline{\varphi\left(t\right)}/\left|\varphi\left(t\right)\right|,&\varphi\left(t\right)\neq0,\\0,&\varphi\left(t\right)=0,\end{cases}
+\psi\left(t\right)=\begin{cases}\varphi\left(t\right)/\left|\varphi\left(t\right)\right|,&\varphi\left(t\right)\neq0,\\0,&\varphi\left(t\right)=0,\end{cases}
 $$
 
 则 $\left|\psi\right|\le1$, 故 $\left\|\psi\right\|_\infty\le1$, 且 $\psi\overline\varphi=\left|\varphi\right|$, 于是 $F\left(\psi\right)=\int_a^b\left|\varphi\right|\mathrm{d}t=\left\|\varphi\right\|_1$, 从而 $\left\|F\right\|\ge\left\|\varphi\right\|_1$.
@@ -502,7 +515,7 @@ $\blacksquare$
 下界: 对 $\varepsilon>0$, 由 $\left\|\varphi\right\|_\infty$ 是本质上确界, 集合 $E_\varepsilon=\left\{t\in\left[a,b\right]:\left|\varphi\left(t\right)\right|>\left\|\varphi\right\|_\infty-\varepsilon\right\}$ 有正测度. 令
 
 $$
-\psi\left(t\right)=\frac{1}{m\left(E_\varepsilon\right)}\chi_{E_\varepsilon}\left(t\right)\frac{\overline{\varphi\left(t\right)}}{\left|\varphi\left(t\right)\right|},
+\psi\left(t\right)=\frac{1}{m\left(E_\varepsilon\right)}\chi_{E_\varepsilon}\left(t\right)\frac{\varphi\left(t\right)}{\left|\varphi\left(t\right)\right|},
 $$
 
 则 $\left\|\psi\right\|_1=1$, 且
@@ -581,12 +594,10 @@ $$
 
 $\blacksquare$
 
-再证每个 $f\in\left(l^1\right)^*$ 都如此得到. 设 $f\in\left(l^1\right)^*$, 令 $\eta_n=f\left(e_n\right)$. 由 $\left|f\left(e_n\right)\right|\le\left\|f\right\|\left\|e_n\right\|_1=\left\|f\right\|$ 得 $\eta=\left(\eta_n\right)\in{l}^\infty$ 且 $\left\|\eta\right\|_\infty\le\left\|f\right\|$.
-
-又因 $\left\|x-\sum_{n=1}^{N}x_ne_n\right\|_1=\sum_{n>N}\left|x_n\right|\to0$ ($N\to\infty$), 由 $f$ 连续 (**定理 2.1.1 (线性算子有界与连续的等价条件)**) 得
+再证每个 $f\in\left(l^1\right)^*$ 都如此得到. 设 $f\in\left(l^1\right)^*$, 令 $\eta_n=f\left(e_n\right)$. 由 $f$ 连续 (**定理 2.1.1 (线性算子有界与连续的等价条件)**) 得
 
 $$
-f\left(x\right)=\lim_{N\to\infty}\sum_{n=1}^{N}x_nf\left(e_n\right)=\sum_{n=1}^{\infty}x_n\eta_n=f_\eta\left(x\right),
+f\left(x\right)=\sum_{n=1}^{\infty}x_nf\left(e_n\right)=\sum_{n=1}^{\infty}x_n\eta_n=f_\eta\left(x\right),
 $$
 
 $\blacksquare$
@@ -645,7 +656,7 @@ $$
 \left|\varphi\left(u_n,v_n\right)\right|=\frac{1}{n}\left|\varphi\left(x_n,y_n\right)\right|\ge1,
 $$
 
-这与 "$x_n\to0$, $y_n\to0$ 时 $\varphi\left(x_n,y_n\right)\to0$" 矛盾. 故 $\varphi$ 有界.
+这与 $x_n\to0$, $y_n\to0$ 时 $\varphi\left(x_n,y_n\right)\to0$ 矛盾. 故 $\varphi$ 有界.
 
 $\blacksquare$
 
@@ -661,19 +672,9 @@ $$
 
 ### 解答 2.2-10
 
-不一定有界. 反例只在 $H$ 无限维时存在; 若 $H$ 有限维, 则由**例 2.1.8 (有限维赋范空间上的线性算子连续)**, $H$ 上的线性泛函都连续, 从而一切双线性泛函都有界. 以下设 $H$ 无限维, 且取 $H$ 的一组哈梅尔基, 并把基向量单位化, 记为 $\mathfrak{B}$; 从中取出一列互不相同的向量 $b_1,b_2,\cdots$.
+不一定有界. 不妨设 $H$ 无限维 (否则由**例 2.1.8 (有限维赋范空间上的线性算子连续)**, $H$ 上的线性泛函都连续, 从而一切双线性泛函都有界), 取 $H$ 的一组哈梅尔基, 并把基向量单位化, 记为 $\mathfrak{B}$; 从中取出一列互不相同的向量 $b_1,b_2,\cdots$.
 
-先构造无界线性泛函 $f$. 规定
-
-$$
-k_\lambda=\begin{cases}n,&\lambda=\lambda_n\,\left(b_{\lambda_n}=b_n\right),\\0,&\text{其他},\end{cases}\quad{f}\left(x\right)=\sum_{\lambda\in{F}}c_\lambda\left(x\right)k_\lambda.
-$$
-
-则 $f$ 是 $H$ 上的线性泛函 (有限和, 且表示唯一), 而 $f\left(b_n\right)=n$, $\left\|b_n\right\|=1$, 故 $\sup_{\left\|x\right\|=1}\left|f\left(x\right)\right|=\infty$, 即 $f$ 无界.
-
-$\blacksquare$
-
-再令 $\varphi\left(x,y\right)=f\left(x\right)-f\left(y\right)$, 则题设条件成立. 由 $f$ 线性, $\varphi$ 对第一个变元线性, 且对第二个变元也是线性的 (实空间中共轭线性即线性), 故 $\varphi\left(x,y\right)=f\left(x\right)-f\left(y\right)$ 是双线性泛函; 且
+定义 $f\left(b_n\right)=n$, 再令 $\varphi\left(x,y\right)=f\left(x\right)-f\left(y\right)$, 则题设条件成立. 由 $f$ 线性, $\varphi$ 对第一个变元线性, 且对第二个变元也是线性的 (实空间中共轭线性即线性), 故 $\varphi\left(x,y\right)=f\left(x\right)-f\left(y\right)$ 是双线性泛函; 且
 
 $$
 \varphi\left(x,x\right)=f\left(x\right)-f\left(x\right)=0,\quad\forall{x}\in{H},
@@ -727,13 +728,13 @@ $\blacksquare$
 
 $\blacksquare$
 
-接着证 $C$ 是单射. 对 $y\in{H}$, 条件 (2) 与 (1) 前的表示式给出
+接着证 $C$ 的下界估计. 对 $y\in{H}$, 条件 (2) 与 (1) 前的表示式给出
 
 $$
 c\left\|y\right\|^2\le\left|\varphi\left(y,y\right)\right|=\left|\left\langle{y},Cy\right\rangle\right|\le\left\|y\right\|\left\|Cy\right\|,
 $$
 
-故当 $y\neq0$ 时 $\left\|Cy\right\|\ge{c}\left\|y\right\|$ (对 $y=0$ 显然成立). 特别地 $C$ 是单射.
+故当 $y\neq0$ 时 $\left\|Cy\right\|\ge{c}\left\|y\right\|$ (对 $y=0$ 显然成立).
 
 $\blacksquare$
 
@@ -743,7 +744,7 @@ $$
 \left\|y_n-y_m\right\|\le\frac1c\left\|C\left(y_n-y_m\right)\right\|=\frac1c\left\|Cy_n-Cy_m\right\|\to0\quad\left(n,m\to\infty\right),
 $$
 
-故 $C\left(H\right)$ 是闭集.
+故 $\{y_n\}$ 是柯西列, $H$ 是希尔伯特空间故极限存在. $C$ 连续故 $C(H)$ 的极限也存在, 即 $z\in{C}(H)$, $C\left(H\right)$ 是闭集.
 
 $\blacksquare$
 
@@ -757,16 +758,10 @@ $$
 
 $\blacksquare$
 
-最后证 $C$ 是双射. 由上面两段, $C\left(H\right)$ 既闭又稠密, 故 $C\left(H\right)=H$; 结合 $C$ 单射, $C$ 是双射.
-
-现在设 $f\in{H}^*$. 由**定理 2.2.2 (里斯表示定理)**, 存在唯一的 $w\in{H}$ 使 $f\left(x\right)=\left\langle{x},w\right\rangle$ 对一切 $x$ 成立. 因 $C$ 是双射, 存在唯一的 $y_f\in{H}$ 使 $Cy_f=w$; 于是对一切 $x\in{H}$,
+最后证 $C$ 是满射. 由上面两段, $C\left(H\right)$ 既闭又稠密, 故 $C\left(H\right)=H$, 即对任意 $f\in{H}^*$, 存在唯一的 $y_f\in{H}$ 使 $Cy_f=v$; 于是对一切 $x\in{H}$,
 
 $$
-\varphi\left(x,y_f\right)=\left\langle{x},Cy_f\right\rangle=\left\langle{x},w\right\rangle=f\left(x\right).
+\varphi\left(x,y_f\right)=\left\langle{x},Cy_f\right\rangle=\left\langle{x},v\right\rangle=f\left(x\right).
 $$
-
-$\blacksquare$
-
-唯一性: 若 $y,y'$ 都满足 $\varphi\left(x,y\right)=f\left(x\right)=\varphi\left(x,y'\right)$ 对一切 $x$ 成立, 则 $\left\langle{x},C\left(y-y'\right)\right\rangle=0$ 对一切 $x$ 成立, 故 $C\left(y-y'\right)=0$, 由单射时的估计 $\left\|Cy\right\|\ge{c}\left\|y\right\|$ 得 $\left\|y-y'\right\|\le\frac1c\left\|C\left(y-y'\right)\right\|=0$, 即 $y=y'$.
 
 $\blacksquare$
