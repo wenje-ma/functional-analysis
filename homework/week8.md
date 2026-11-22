@@ -38,7 +38,7 @@
 
 ## 2.3-1 (有限个给定值的线性泛函与范数估计)
 
-设 $E$ 是赋范线性空间, $x_1,x_2,\cdots,x_k\in{E}$, $\alpha_1,\alpha_2,\cdots,\alpha_k$ 是一组数. 证明: 在 $E$ 上存在线性泛函 $f$, 使得 $f\left(x_\nu\right)=\alpha_\nu$, $\nu=1,2,\cdots,k$, 且 $\left\|f\right\|\le{M}$ 的充要条件是: 对于任意的一组数 $t_1,t_2,\cdots,t_k$, 成立
+设 $E$ 是赋范线性空间, $x_1,x_2,\cdots,x_k\in{E}$, $\alpha_1,\alpha_2,\cdots,\alpha_k$ 是一组数. 在 $E$ 上存在线性泛函 $f$, 使得 $f\left(x_\nu\right)=\alpha_\nu$, $\nu=1,2,\cdots,k$, 证明: $\left\|f\right\|\le{M}$ 的充要条件是: 对于任意的一组数 $t_1,t_2,\cdots,t_k$, 成立
 
 $$
 \left|\sum_{\nu=1}^{k}t_\nu\alpha_\nu\right|\le{M}\left\|\sum_{\nu=1}^{k}t_\nu{x}_\nu\right\|.
@@ -76,11 +76,7 @@ $$
 0=\left(\sum_{i=1}^{n}c_if_{\alpha_i}\right)\left(x_{\alpha_j}\right)=\sum_{i=1}^{n}c_i\delta_{\alpha_i\alpha_j}=c_j,
 $$
 
-故 $c_1=\cdots=c_n=0$, 即 $\left\{f_\alpha\right\}$ 中任意有限个向量线性无关, $\left\{f_\alpha\right\}$ 是 $X^{*}$ 中的线性无关组.
-
-$\blacksquare$
-
-再设 $\sum_{i=1}^{n}c_ix_{\alpha_i}=0$. 对每个 $j$, 用 $f_{\alpha_j}$ 作用于该等式两端,
+故 $c_1=\cdots=c_n=0$, 即 $\left\{f_\alpha\right\}$ 中任意有限个向量线性无关, $\left\{f_\alpha\right\}$ 是 $X^{*}$ 中的线性无关组; 同理, 设 $\sum_{i=1}^{n}c_ix_{\alpha_i}=0$. 对每个 $j$, 用 $f_{\alpha_j}$ 作用于该等式两端,
 
 $$
 0=f_{\alpha_j}\left(\sum_{i=1}^{n}c_ix_{\alpha_i}\right)=\sum_{i=1}^{n}c_if_{\alpha_j}\left(x_{\alpha_i}\right)=\sum_{i=1}^{n}c_i\delta_{\alpha_j\alpha_i}=c_j,
@@ -94,11 +90,7 @@ $\blacksquare$
 
 $\blacksquare$
 
-(iii) 由**定义 1.2.1 (哈梅尔基)**, 线性无关组 $\left\{x_\alpha:\alpha\in\Lambda\right\}$ 可用佐恩引理扩充为 $X$ 的一组哈梅尔基 $\left\{x_\alpha:\alpha\in\Lambda\right\}\cup\left\{y_\gamma:\gamma\in\Gamma\right\}$. 对每个 $\alpha$, 令 $f_\alpha\left(x_\beta\right)=\delta_{\alpha\beta}$ ($\forall\beta\in\Lambda$), $f_\alpha\left(y_\gamma\right)=0$ ($\forall\gamma\in\Gamma$), 再按线性延拓到 $X$. 则 $f_\alpha$ 是 $X$ 上的线性泛函, 且 $f_\alpha\left(x_\beta\right)=\delta_{\alpha\beta}$.
-
-$\blacksquare$
-
-设 $c_1,\cdots,c_n$ 与 $\alpha_1,\cdots,\alpha_n$ 使 $\sum_{i=1}^{n}c_if_{\alpha_i}=0$. 与 (i) 中对 $\left\{f_\alpha\right\}$ 的论证相同, $\left\{f_\alpha\right\}$ 线性无关.
+(iii) 由**定义 1.2.1 (哈梅尔基)**, 线性无关组 $\left\{x_\alpha:\alpha\in\Lambda\right\}$ 可用扩充为 $X$ 的一组哈梅尔基 $\left\{x_\alpha:\alpha\in\Lambda\right\}\cup\left\{y_\gamma:\gamma\in\Gamma\right\}$. 对每个 $\alpha$, 令 $f_\alpha\left(x_\beta\right)=\delta_{\alpha\beta}$ ($\forall\beta\in\Lambda$), $f_\alpha\left(y_\gamma\right)=0$ ($\forall\gamma\in\Gamma$), 再按线性延拓到 $X$, 仍用符号 $f_a$ 表示. 则 $f_\alpha$ 是 $X$ 上的线性泛函, 且 $f_\alpha\left(x_\beta\right)=\delta_{\alpha\beta}$. 设 $c_1,\cdots,c_n$ 与 $\alpha_1,\cdots,\alpha_n$ 使 $\sum_{i=1}^{n}c_if_{\alpha_i}=0$. 与 (i) 中对 $\left\{f_\alpha\right\}$ 的论证相同, 得出 $\left\{f_\alpha\right\}$ 线性无关.
 
 $\blacksquare$
 
@@ -110,13 +102,7 @@ $\blacksquare$
 
 ### 解答 2.3-3
 
-(i) 存在性. 令 $f\left(x\right)=F\left(x,0\right)$ ($x\in{X}$), $g\left(y\right)=F\left(0,y\right)$ ($y\in{Y}$). 由 $F$ 的线性, $f$ 与 $g$ 都是线性的; 且
-
-$$
-\left|f\left(x\right)\right|=\left|F\left(x,0\right)\right|\le\left\|F\right\|\left\|\left(x,0\right)\right\|=\left\|F\right\|\left\|x\right\|,
-$$
-
-故 $f\in{X}^{*}$, $\left\|f\right\|\le\left\|F\right\|$; 同理 $g\in{Y}^{*}$, $\left\|g\right\|\le\left\|F\right\|$. 又由 $F$ 的线性,
+(i) 存在性. 令 $f\left(x\right)=F\left(x,0\right)$ ($x\in{X}$), $g\left(y\right)=F\left(0,y\right)$ ($y\in{Y}$). 由 $F$ 的线性,
 
 $$
 F\left(x,y\right)=F\left(\left(x,0\right)+\left(0,y\right)\right)=F\left(x,0\right)+F\left(0,y\right)=f\left(x\right)+g\left(y\right).
@@ -131,10 +117,10 @@ $\blacksquare$
 保范性. 一方面,
 
 $$
-\left|F\left(x,y\right)\right|\le\left|f\left(x\right)\right|+\left|g\left(y\right)\right|\le\left(\left\|f\right\|+\left\|g\right\|\right)\max\left(\left\|x\right\|,\left\|y\right\|\right),
+\left|F\left(x,y\right)\right|\le\left|f\left(x\right)\right|+\left|g\left(y\right)\right|\le\left\|f\right\|+\left\|g\right\|,
 $$
 
-故 $\left\|F\right\|\le\left\|f\right\|+\left\|g\right\|$. 另一方面任给 $\varepsilon>0$: 若 $f\neq0$, 取向量 $u\in{X}$ 满足 $\left\|u\right\|=1$, 使 $f\left(u\right)>\left\|f\right\|-\varepsilon$; 同法取 $v\in{Y}$ 使 $g\left(v\right)>\left\|g\right\|-\varepsilon$. 于是
+故 $\left\|F\right\|\le\left\|f\right\|+\left\|g\right\|$. 另一方面任给 $\varepsilon>0$: 若 $f\neq0$, 取向量 $u\in{X}$ 满足 $\left\|u\right\|=1$, 使 $|f\left(u\right)|>\left\|f\right\|-\varepsilon$; 同法取 $v\in{Y}$ 使 $|g\left(v\right)|>\left\|g\right\|-\varepsilon$. 于是
 
 $$
 \left\|F\right\|\ge\left|F\left(u,v\right)\right|=\left|f\left(u\right)+g\left(v\right)\right|>\left\|f\right\|+\left\|g\right\|-2\varepsilon,
@@ -157,7 +143,7 @@ $$
 \end{aligned}
 $$
 
-故 $F\in\left(X,\left\|\cdot\right\|\right)^{*}$.
+易证 $F$ 线性, 上式知 $F$ 有界, 故 $F\in\left(X,\left\|\cdot\right\|\right)^{*}$.
 
 $\blacksquare$
 
@@ -182,6 +168,8 @@ $$
 故 $c_1=0$; 再用 $x_2$ 作用于两端, 由 $c_1=0$ 与 $f_j\left(x_2\right)=0$ ($j\ge3$) 得 $0=c_2f_2\left(x_2\right)$, 故 $c_2=0$; 如此下去得 $c_1=\cdots=c_n=0$. 因此 $f_1,\cdots,f_n$ 线性无关. 因 $n$ 任意, $X^{*}$ 是无穷维空间.
 
 $\blacksquare$
+
+> 线性空间 $Y$ 无穷维的等价定义: 对任意正整数 $n$, 都能在 $Y$ 里找到至少 $n$ 个线性无关的向量.
 
 ## 2.3-5 (算子空间的完备性传递给值域)
 
@@ -215,23 +203,7 @@ $\blacksquare$
 
 ### 解答 2.3-6
 
-对每个 $n\ge1$, 令 $\varphi_n\left(x\right)=\left(Tx\right)_n$ ($x\in{L}$). 由 $T$ 的线性, $\varphi_n$ 是 $L$ 上的线性泛函, 且
-
-$$
-\left|\varphi_n\left(x\right)\right|\le\left\|Tx\right\|_{l^\infty}=\sup_{m\ge1}\left|\left(Tx\right)_m\right|\le\left\|T\right\|\left\|x\right\|,
-$$
-
-故 $\varphi_n\in{L}^{*}$, $\left\|\varphi_n\right\|\le\left\|T\right\|$.
-
-由**定理 2.3.1 (哈恩-巴拿赫延拓定理)**, 存在 $f_n\in{X}^{*}$, 使 $f_n|_L=\varphi_n$ 且 $\left\|f_n\right\|=\left\|\varphi_n\right\|\le\left\|T\right\|$. 定义 $\widetilde{T}x=\left(f_1\left(x\right),f_2\left(x\right),\cdots\right)$ ($x\in{X}$). 各分量泛函线性, 故 $\widetilde{T}$ 线性; 且
-
-$$
-\left\|\widetilde{T}x\right\|_{l^\infty}=\sup_{n\ge1}\left|f_n\left(x\right)\right|\le\sup_{n\ge1}\left\|f_n\right\|\left\|x\right\|\le\left\|T\right\|\left\|x\right\|,
-$$
-
-故 $\widetilde{T}\in\mathfrak{B}\left(X,l^{\infty}\right)$, $\left\|\widetilde{T}\right\|\le\left\|T\right\|$.
-
-对 $x\in{L}$, $\widetilde{T}x=\left(\varphi_1\left(x\right),\varphi_2\left(x\right),\cdots\right)=\left(\left(Tx\right)_1,\left(Tx\right)_2,\cdots\right)=Tx$, 故 $\widetilde{T}$ 延拓 $T$, 从而 $\left\|\widetilde{T}\right\|\ge\left\|T\right\|$. 结合上面的结果得 $\left\|\widetilde{T}\right\|=\left\|T\right\|$.
+将 $l^\infty$ 中每个元 $y$ 中的第 $i$ 个元素看作 $\mathbb{K}$ 中的元素, 则对每个 $L\to\mathbb{K}$ 使用**定理 2.3.1 (哈恩-巴拿赫延拓定理)**, 再拼接得到 $l^\infty$ 中元素, 则的确存在线性延拓 $\widetilde{T}\in\mathfrak{B}\left(X,l^{\infty}\right)$, 使得 $\widetilde{T}|_L=T$ 且 $\left\|\widetilde{T}\right\|=\left\|T\right\|$.
 
 $\blacksquare$
 
@@ -247,7 +219,7 @@ $$
 
 ### 解答 2.3-11
 
-先说明 $f$ 有定义. 对每个 $n$, $\left|x_n\alpha_n\right|\le\left\|x\right\|_{l^\infty}\left|\alpha_n\right|$, 而 $\sum_{n=1}^{\infty}\left|\alpha_n\right|=\left\|\alpha\right\|_1<\infty$, 故级数 $\sum_{n=1}^{\infty}x_n\alpha_n$ 绝对收敛. 由级数的线性运算, $f$ 是 $l^{\infty}$ 上的线性泛函; 且
+对每个 $n$, $\left|x_n\alpha_n\right|\le\left\|x\right\|_{l^\infty}\left|\alpha_n\right|$, 而 $\sum_{n=1}^{\infty}\left|\alpha_n\right|=\left\|\alpha\right\|_1<\infty$, 故级数 $\sum_{n=1}^{\infty}x_n\alpha_n$ 绝对收敛. 由级数的线性运算, $f$ 是 $l^{\infty}$ 上的线性泛函; 且
 
 $$
 \left|f\left(x\right)\right|\le\sum_{n=1}^{\infty}\left|x_n\right|\left|\alpha_n\right|\le\left\|x\right\|_{l^\infty}\left\|\alpha\right\|_1,
@@ -257,11 +229,7 @@ $$
 
 $\blacksquare$
 
-再举例. 令 $M=\left\{x\in{l}^{\infty}:\lim_{n\to\infty}x_n=0\right\}$, $x_0=\left(1,1,\cdots\right)$.
-
-先证 $M$ 是 $l^{\infty}$ 的闭线性子空间: $M$ 对线性运算封闭是显然的. 设 $x^{\left(k\right)}\in{M}$, $x^{\left(k\right)}\to{x}$ 于 $l^{\infty}$, 任给 $\varepsilon>0$, 取 $k$ 使 $\left\|x^{\left(k\right)}-x\right\|_{l^\infty}<\varepsilon/2$, 再取 $N$ 使 $n>N$ 时 $\left|x_n^{\left(k\right)}\right|<\varepsilon/2$, 则 $n>N$ 时 $\left|x_n\right|\le\left|x_n-x_n^{\left(k\right)}\right|+\left|x_n^{\left(k\right)}\right|<\varepsilon$, 故 $x\in{M}$, 即 $M$ 闭. 又 $x_0\notin{M}$.
-
-对任意 $x\in{M}$,
+令 $M=\left\{x\in{l}^{\infty}:\lim_{n\to\infty}x_n=0\right\}$, $x_0=\left(1,1,\cdots\right)$, 则 $M$ 是 $l^{\infty}$ 的闭线性子空间. 对任意 $x\in{M}$,
 
 $$
 \left\|x_0-x\right\|_{l^\infty}=\sup_{n\ge1}\left|1-x_n\right|\ge\lim_{n\to\infty}\left|1-x_n\right|=1,
@@ -272,8 +240,6 @@ $$
 若存在 $\alpha\in{l}^1$ 使 $f\left(x\right)=\sum_{n=1}^{\infty}x_n\alpha_n$ ($\forall{x}\in{l}^{\infty}$), 则在该式中取 $x=e_n$ 得 $\alpha_n=f\left(e_n\right)=0$ ($\forall{n}$), 故 $\alpha=0$, 从而 $f=0$, 与 $f\left(x_0\right)=1$ 矛盾. 所以这个 $f$ 不能表示成上述形式.
 
 $\blacksquare$
-
-> $l^1$ 上的级数泛函的信息来源被限制在各个单点分量, 而哈恩-巴拿赫泛函拥有更丰富的信息来源, 它可以编码序列的渐近, 整体信息, 不受单点求和的限制.
 
 ## 2.3-12 (格林函数)
 
@@ -299,7 +265,9 @@ $$
 
 (i) 证明: $l_P$ 是一个有界线性泛函, 计算其范数.
 
-(ii) 证明: $l_P$ 可以保范地延拓到整个 $B$ 上. 我们仍然用 $l_P$ 来表示这个延拓. 对任意一点 $\left(a,b\right)\notin\partial\Omega$, 考虑 $B$ 中的函数
+(ii) 证明: $l_P$ 可以保范地延拓到整个 $B$ 上.
+
+我们仍然用 $l_P$ 来表示这个延拓. 对任意一点 $\left(a,b\right)\notin\partial\Omega$, 考虑 $B$ 中的函数
 
 $$
 \psi_{\left(a,b\right)}\left(x,y\right)=\ln{d}\left(\left(a,b\right),\left(x,y\right)\right).
@@ -323,7 +291,9 @@ $$
 
 (vi) 证明: 当 $Q$ 到边界的距离趋于 $0$ 时, $\left\|\psi_Q-\psi_{Q'}\right\|$ 趋于 $0$, 且 $k_P\left(Q\right)-k_P\left(Q'\right)$ 趋于 $0$.
 
-(vii) 证明: $k_P\left(Q\right)$ 是一个 $\Omega$ 上的调和函数, 并且在 $\overline{\Omega}$ 上连续, 在边界上的值为 $\frac{1}{2\pi}\ln{d}\left(P,Q\right)$. 实际上, 由边界的光滑性我们能得到 $k_P\left(Q\right)$ 在 $\overline{\Omega}$ 上二阶连续可微. 记 $g_0\left(P,Q\right)=k_P\left(Q\right)$, 令
+(vii) 证明: $k_P\left(Q\right)$ 是一个 $\Omega$ 上的调和函数, 并且在 $\overline{\Omega}$ 上连续, 在边界上的值为 $\frac{1}{2\pi}\ln{d}\left(P,Q\right)$.
+
+实际上, 由边界的光滑性我们能得到 $k_P\left(Q\right)$ 在 $\overline{\Omega}$ 上二阶连续可微. 记 $g_0\left(P,Q\right)=k_P\left(Q\right)$, 令
 
 $$
 G\left(P,Q\right)=-\frac{1}{2\pi}\ln{d}\left(P,Q\right)+g_0\left(P,Q\right).
@@ -487,13 +457,7 @@ $$
 
 易证 $A$ 闭.
 
-下证 $\left(0,1\right)\in\overline{\operatorname{co}\left(A\right)}$, 但 $\left(0,1\right)\not\in\operatorname{co}\left(A\right)$. 对 $t\in\left(0,1\right]$, $t\left(t,\frac1t\right)+\left(1-t\right)\left(0,0\right)=\left(t^2,1\right)\in\operatorname{co}\left(A\right)$, 令 $t\to0^+$ 得 $\left(0,1\right)$ 是 $\operatorname{co}\left(A\right)$ 的聚点, 故 $\left(0,1\right)\in\overline{\operatorname{co}\left(A\right)}$; $\operatorname{co}\left(A\right)$ 中任一元素形如
-
-$$
-\sum_{j=1}^{m}\lambda_j\left(x_j,y_j\right)+\lambda_0\left(0,0\right),\quad{x}_j>0,\;y_j\ge\frac1{x_j},\;\lambda_j\ge0,\;\sum_{j=0}^{m}\lambda_j=1.
-$$
-
-其横坐标为 $\sum_{j=1}^{m}\lambda_jx_j$. 若该横坐标为 $0$, 由 $x_j>0$ 与 $\lambda_j\ge0$ 得 $\lambda_j=0$ ($j\ge1$), 从而元素为 $\left(0,0\right)$, 其纵坐标为 $0$. 故 $\operatorname{co}\left(A\right)$ 中没有横坐标为 $0$ 而纵坐标为 $1$ 的点, $\left(0,1\right)\notin\operatorname{co}\left(A\right)$. 于是 $\operatorname{co}\left(A\right)$ 不是闭集.
+下证 $\left(0,1\right)\in\overline{\operatorname{co}\left(A\right)}$, 但 $\left(0,1\right)\not\in\operatorname{co}\left(A\right)$. 对 $t\in\left(0,1\right]$, $t\left(t,\frac1t\right)+\left(1-t\right)\left(0,0\right)=\left(t^2,1\right)\in\operatorname{co}\left(A\right)$, 令 $t\to0^+$ 得 $\left(0,1\right)$ 是 $\operatorname{co}\left(A\right)$ 的聚点, 故 $\left(0,1\right)\in\overline{\operatorname{co}\left(A\right)}$; 若 $x=0$, 则 $y=0\ne1$. 故 $\left(0,1\right)\notin\operatorname{co}\left(A\right)$, $\operatorname{co}\left(A\right)$ 不是闭集.
 
 $\blacksquare$
 
@@ -531,7 +495,7 @@ $$
 
 $\blacksquare$
 
-对 $\left\{x:f\left(x\right)\le{c}\right\}$ 有内点的情形, 把 $f$ 换成 $-f$ 归结为上一情形; 对 $\left\{x:f\left(x\right)>c\right\}$ 有内点的情形, 由 $x_0\pm{u}$ 属于该半空间得 $f\left(x_0\right)+f\left(u\right)>c$ 与 $f\left(x_0\right)-f\left(u\right)>c$, 同样得 $\left|f\left(u\right)\right|\le{f}\left(x_0\right)-c$ ($\left\|u\right\|<\rho$), 故 $f$ 连续; 对 $\left\{x:f\left(x\right)<{}c\right\}$ 有内点的情形再用 $-f$ 归结.
+对 $\left\{x:f\left(x\right)\le{c}\right\}$ 有内点的情形, 把 $f$ 换成 $-f$ 即可; 对 $\left\{x:f\left(x\right)>c\right\}$ 有内点的情形, 由 $x_0\pm{u}$ 属于该半空间得 $f\left(x_0\right)+f\left(u\right)>c$ 与 $f\left(x_0\right)-f\left(u\right)>c$, 同样得 $\left|f\left(u\right)\right|\le{f}\left(x_0\right)-c$ ($\left\|u\right\|<\rho$), 故 $f$ 连续; 对 $\left\{x:f\left(x\right)<{}c\right\}$ 有内点的情形再用 $-f$ 归结.
 
 $\blacksquare$
 
@@ -571,11 +535,11 @@ $\blacksquare$
 
 $\blacksquare$
 
-$M=\left\{x:p\left(x\right)\le1\right\}$: 由 $\left\{x:p\left(x\right)\le\lambda\right\}=\lambda{M}$ 取 $\lambda=1$.
+$M=\left\{x:p\left(x\right)\le1\right\}$. 由 $\left\{x:p\left(x\right)\le\lambda\right\}=\lambda{M}$ 取 $\lambda=1$.
 
 $\blacksquare$
 
-设 $M$ 有界, 则存在 $R>0$ 使 $M\subset{B}\left(0,R\right)$. 若 $p\left(x\right)=0$, 则由 $x\in\lambda{M}$ 对一切 $\lambda>0$ 成立得 $\left\|x\right\|\le\lambda{R}$ 对一切 $\lambda>0$ 成立, 故 $x=0$; 反之 $p\left(0\right)=0$. 于是 $p\left(x\right)=0\Leftrightarrow{x}=0$.
+设 $M$ 有界, 则存在 $R>0$ 使 $M\subset{B}\left(0,R\right)$. 若 $p\left(x\right)=0$, 则 $\inf\left\{\alpha:\alpha>0,\alpha^{-1}x\in{M}\right\}=0$, 说明对任意的 $\alpha$, $\alpha^{-1}x\in{M}$ 均成立, 故 $x=0$; 反之 $p\left(0\right)=0$ 显然. 于是 $p\left(x\right)=0\Leftrightarrow{x}=0$.
 
 $\blacksquare$
 
@@ -593,20 +557,14 @@ $\blacksquare$
 
 $\blacksquare$
 
-反之设 $p\left(x\right)=\lambda<1$. 取 $\mu$ 使 $\lambda<\mu<1$. 由 $p\left(x/\mu\right)=\lambda/\mu<1$ 与**命题 2.4.3 (吸收凸集的闵可夫斯基泛函)** 中 $\left\{x:p\left(x\right)<1\right\}\subset{M}$, 得 $x/\mu\in{M}$. 又 $0\in{M}^{\circ}$, 存在 $\rho>0$ 使 $B\left(0,\rho\right)\subset{M}$; 由 $M$ 凸,
-
-$$
-\mu{B}\left(\frac{x}{\mu},\rho\right)=B\left(x,\mu\rho\right)\subset\mu{M}\subset{M},
-$$
-
-故 $B\left(x,\mu\rho\right)\subset{M}$, 即 $x\in{M}^{\circ}$.
+反之设 $p\left(x\right)=\lambda<1$. 取 $\mu$ 使 $\lambda<\mu<1$. 由 $p\left(x/\mu\right)\le\lambda/\mu<1$ 与**命题 2.4.3 (吸收凸集的闵可夫斯基泛函)** 中 $\left\{x:p\left(x\right)<1\right\}\subset{M}$, 得 $x/\mu\in{M}$. 由于 $x$ 放大了还在 $M$ 中, 故 $x\in{M}^{\circ}$.
 
 $\blacksquare$
 
 (ii) 由 $M^{\circ}\subset{M}$ 得 $\overline{M^{\circ}}\subset\overline{M}$. 反之设 $x\in{M}$. 由 (i), 对 $n\ge2$, 取 $x_n=\left(1-\frac1n\right)x$, 则
 
 $$
-p\left(x_n\right)=\left(1-\frac1n\right)p\left(x\right)\le1-\frac1n<1,
+p\left(x_n\right)\le\left(1-\frac1n\right)p\left(x\right)\le1-\frac1n<1,
 $$
 
 故 $x_n\in{M}^{\circ}$; 又 $x_n\to{x}$, 故 $x\in\overline{M^{\circ}}$. 于是 $\overline{M}\subset\overline{M^{\circ}}$, 结合上面的结果得 $\overline{M^{\circ}}=\overline{M}$.
