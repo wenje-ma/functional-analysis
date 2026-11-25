@@ -401,10 +401,10 @@ $$
 定义该映射为 $\Phi$:
 
 $$
-\Phi:L^p(\mathbb{R})^*\to{}L^q(\mathbb{R}),\quad\Phi(F)=\beta.
+\Phi:L^p\left(\mathbb{R}\right)^*\to{}L^q\left(\mathbb{R}\right),\quad\Phi\left(F\right)=\beta.
 $$
 
-从**注 2.5.1 (一般可测空间上 $L^p$ 的对偶)** 知其满射且保范; 积分的线性性易知 $\Phi$ 的线性性; 唯一性又给出其单射: 若 $\beta_1=\beta_2$, 即 $\Phi(F_1)=\Phi(F_2)$, 则由唯一性可知 $F_1(f)=F_2(f)$. 故 $F\mapsto\beta$ 是 $L^p\left(\mathbb{R}\right)^*$ 到 $L^q\left(\mathbb{R}\right)$ 的保范线性同构, 即在这个意义下 $L^p\left(\mathbb{R}\right)^*=L^q\left(\mathbb{R}\right)$.
+从**注 2.5.1 (一般可测空间上 $L^p$ 的对偶)** 知其满射且保范; 积分的线性性易知 $\Phi$ 的线性性; 唯一性又给出其单射: 若 $\beta_1=\beta_2$, 即 $\Phi\left(F_1\right)=\Phi\left(F_2\right)$, 则由唯一性可知 $F_1\left(f\right)=F_2\left(f\right)$. 故 $F\mapsto\beta$ 是 $L^p\left(\mathbb{R}\right)^*$ 到 $L^q\left(\mathbb{R}\right)$ 的保范线性同构, 即在这个意义下 $L^p\left(\mathbb{R}\right)^*=L^q\left(\mathbb{R}\right)$.
 
 $\blacksquare$
 
@@ -448,7 +448,7 @@ $$
 
 这里取 $\varepsilon=1$. 设 $A\subset\left[0,1\right]$ 可测, $m\left(A\right)<\delta$, $c$ 是常数. 取 $g=c\chi_A$, 因 $d\left(c\chi_A,0\right)<\delta$, 则 $\left|\Lambda\left(c\chi_A\right)\right|\le1$. 但线性有 $\Lambda\left(c\chi_A\right)=c\Lambda\left(\chi_A\right)$, 对任意的 $c$ 都有上界 $1$ 只能 $\Lambda\left(\chi_A\right)=0$.
 
-示性函数的线性组合即为简单 (阶梯) 函数, 将阶梯函数加和即为 $S$ 中有界函数, 由 (i) 知有界函数能逼近 $S$ 中任意函数, 因此对于任意的 $g(S)$, $\Lambda(g)=0$, 即 $\left(S,d\right)$ 上不存在非零的连续线性泛函.
+示性函数的线性组合即为简单 (阶梯) 函数, 将阶梯函数加和即为 $S$ 中有界函数, 由 (i) 知有界函数能逼近 $S$ 中任意函数, 因此对于任意的 $g\left(S\right)$, $\Lambda\left(g\right)=0$, 即 $\left(S,d\right)$ 上不存在非零的连续线性泛函.
 
 $\blacksquare$
 
@@ -521,7 +521,7 @@ $X$ 是有限维赋范线性空间, 证明: $X$ 是自反空间.
 由**定理 2.5.3 (典则映射的保范性)**, 典则映射 $J:X\to{}X^{**}$ 是线性的且 $\left\|Jx\right\|=\left\|x\right\|$. 则核空间
 
 $$
-\ker{}J=\{\|Jx\|=0\}=\{\|x\|=0\}=\{0\},
+\ker{}J=\left\{\left\|Jx\right\|=0\right\}=\left\{\left\|x\right\|=0\right\}=\left\{0\right\},
 $$
 
 故 $J$ 是单射. $X$ 与 $X^{**}$ 都是 $n$ 维线性空间, 而从 $n$ 维空间到 $n$ 维空间的单射线性映射必为满射, 故 $J$ 是同构. 按**定义 2.5.1 (自反空间)**, $X$ 是自反的.

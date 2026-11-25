@@ -120,7 +120,7 @@ $$
 \left|F\left(x,y\right)\right|\le\left|f\left(x\right)\right|+\left|g\left(y\right)\right|\le\left\|f\right\|+\left\|g\right\|,
 $$
 
-故 $\left\|F\right\|\le\left\|f\right\|+\left\|g\right\|$. 另一方面任给 $\varepsilon>0$: 若 $f\neq0$, 取向量 $u\in{}X$ 满足 $\left\|u\right\|=1$, 使 $|f\left(u\right)|>\left\|f\right\|-\varepsilon$; 同法取 $v\in{}Y$ 使 $|g\left(v\right)|>\left\|g\right\|-\varepsilon$. 于是
+故 $\left\|F\right\|\le\left\|f\right\|+\left\|g\right\|$. 另一方面任给 $\varepsilon>0$: 若 $f\neq0$, 取向量 $u\in{}X$ 满足 $\left\|u\right\|=1$, 使 $\left|f\left(u\right)\right|>\left\|f\right\|-\varepsilon$; 同法取 $v\in{}Y$ 使 $\left|g\left(v\right)\right|>\left\|g\right\|-\varepsilon$. 于是
 
 $$
 \left\|F\right\|\ge\left|F\left(u,v\right)\right|=\left|f\left(u\right)+g\left(v\right)\right|>\left\|f\right\|+\left\|g\right\|-2\varepsilon,

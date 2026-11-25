@@ -744,7 +744,7 @@ $$
 \left\|y_n-y_m\right\|\le\frac1c\left\|C\left(y_n-y_m\right)\right\|=\frac1c\left\|Cy_n-Cy_m\right\|\to0\quad\left(n,m\to\infty\right),
 $$
 
-故 $\{y_n\}$ 是柯西列, $H$ 是希尔伯特空间故极限存在. $C$ 连续故 $C(H)$ 的极限也存在, 即 $z\in{}C(H)$, $C\left(H\right)$ 是闭集.
+故 $\left\{y_n\right\}$ 是柯西列, $H$ 是希尔伯特空间故极限存在. $C$ 连续故 $C\left(H\right)$ 的极限也存在, 即 $z\in{}C\left(H\right)$, $C\left(H\right)$ 是闭集.
 
 $\blacksquare$
 
